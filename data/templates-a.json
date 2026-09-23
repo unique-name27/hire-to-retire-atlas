@@ -1,0 +1,2105 @@
+{
+  "templates": [
+    {
+      "id": "T-JD",
+      "name": "Job description template",
+      "category": "Recruit",
+      "format": "document",
+      "purpose": "The standard structure and approved text blocks for every job description and external posting, so one document can be leveled in the job architecture and posted lawfully in every location where the role could be filled. It ties requirements to essential functions, carries the pay-transparency, EEO, accommodation, export-control and AI disclosures, and ends with a pre-posting check.",
+      "audience": "Hiring managers (role content), recruiters (posting), Total Rewards (level and pay range), Trade Compliance (export flag), TA Operations (Greenhouse job and posting setup).",
+      "when": "Drafted once the requisition is approved (PL-02) and before any internal or external posting; re-checked whenever the level, location, range, export flag or screening tools change.",
+      "owner": "Talent Acquisition (template and posting compliance); Total Rewards (level and range); Hiring manager (role content)",
+      "sections": [
+        {
+          "title": "Header fields",
+          "intro": "Complete every field in Greenhouse. Internal fields (level, job code, export flag) never appear in the external posting.",
+          "items": [
+            {
+              "id": "i1",
+              "type": "field",
+              "text": "Job title (external)",
+              "detail": "Use the job-architecture title for the level (e.g., 'Senior Design Verification Engineer'). No internal level codes, inflated titles or gendered or age-coded words. Germany: add '(m/w/d)'. India: the title and duties must match the worker or managerial classification."
+            },
+            {
+              "id": "i2",
+              "type": "field",
+              "text": "Level and job code (internal only)",
+              "detail": "From the job architecture (PL-03), confirmed by Total Rewards. The level sets the pay range and the years-of-experience band used in the qualifications."
+            },
+            {
+              "id": "i3",
+              "type": "field",
+              "text": "Job family and sub-family",
+              "detail": "e.g., Hardware Engineering > Design Verification; Firmware Engineering > Embedded Firmware; Systems Engineering > Platform Architecture."
+            },
+            {
+              "id": "i4",
+              "type": "field",
+              "text": "Location(s) where the role may be filled",
+              "detail": "List every city, state or province and country. For remote roles, list the eligible states or provinces. This list decides which posting laws apply: a 'remote US' posting is covered by the Colorado, Washington, California and New York range laws at once."
+            },
+            {
+              "id": "i5",
+              "type": "field",
+              "text": "Work arrangement",
+              "detail": "Onsite / Hybrid ([x] days a week at [site]) / Remote ([eligible locations]). Say if the role needs regular lab or cleanroom presence."
+            },
+            {
+              "id": "i6",
+              "type": "field",
+              "text": "Reports to",
+              "detail": "The manager's title and team, not their name (e.g., 'Director, SoC Verification')."
+            },
+            {
+              "id": "i7",
+              "type": "field",
+              "text": "Employment type",
+              "detail": "Regular full-time / regular part-time / fixed-term ([duration], with the lawful reason where required, e.g., Germany, Taiwan, Vietnam) / intern."
+            },
+            {
+              "id": "i8",
+              "type": "field",
+              "text": "Vacancy status",
+              "detail": "Existing vacancy / Not an existing vacancy (pipeline). Required in Ontario public postings; use the matching statement block in the required statements section."
+            },
+            {
+              "id": "i9",
+              "type": "field",
+              "text": "Pay range and pay basis for each location",
+              "detail": "From the approved salary structure: annual or hourly, currency, minimum and maximum. No open-ended ranges ('up to', '$150,000+'). Ontario: spread of no more than C$50,000 unless the pay exceeds C$200,000."
+            },
+            {
+              "id": "i10",
+              "type": "field",
+              "text": "Export-control flag (internal only)",
+              "detail": "Set by Trade Compliance with the hiring manager (TA-06): Not flagged / Flagged, license may be needed. Flagged roles use the export-control statement; the flag is never turned into a citizenship requirement."
+            },
+            {
+              "id": "i11",
+              "type": "field",
+              "text": "Screening tools, application deadline and how to apply",
+              "detail": "List any AI or automated tool used to screen, assess or select applicants (it must be approved under POL-50), the closing date and the application link. The deadline is required in Colorado and good practice elsewhere."
+            }
+          ]
+        },
+        {
+          "title": "About the role",
+          "intro": "Plain, specific and honest about the work. Three short paragraphs are enough.",
+          "items": [
+            {
+              "id": "i12",
+              "type": "para",
+              "text": "About [Company]: [Company] designs [product area, e.g., high-speed connectivity and power-management] semiconductors used in [markets]. Our [number] engineers in [sites] take chips from architecture through tape-out, bring-up and customer production."
+            },
+            {
+              "id": "i13",
+              "type": "para",
+              "text": "About the role: As a [Job title] on the [Team] team, you will [primary purpose in one sentence, e.g., own verification of the PCIe controller subsystem from test plan to tape-out sign-off]. You will work with [architecture, design, firmware and validation] teams in [sites] and report to the [Manager title]."
+            },
+            {
+              "id": "i14",
+              "type": "para",
+              "text": "What success looks like: In your first year you will [measurable outcome 1, e.g., close functional coverage on two subsystems for the [product] tape-out], [measurable outcome 2] and [measurable outcome 3]."
+            },
+            {
+              "id": "i15",
+              "type": "note",
+              "text": "Write for the candidate in plain, gender-neutral language. Avoid superlatives ('rockstar', 'ninja', 'world-class') and age-coded phrases ('young and dynamic', 'digital native', 'recent graduate' outside early-career programs), and run the Greenhouse inclusive-language check before posting."
+            }
+          ]
+        },
+        {
+          "title": "Essential functions",
+          "intro": "List 5-8 functions, most important first, each starting with an action verb and stating the outcome. They drive the interview plan (TA-03) and any accommodation analysis.",
+          "items": [
+            {
+              "id": "i16",
+              "type": "para",
+              "text": "Essential functions: [Action verb] [object] [to achieve outcome]. Examples: 'Define and execute verification plans for [block or subsystem] using SystemVerilog/UVM and formal methods, and drive functional and code coverage to sign-off.' 'Develop and debug bare-metal and RTOS firmware for [peripheral or subsystem], including drivers, boot and power management.' 'Lead post-silicon bring-up and characterization of [product] with validation, test and customer engineering teams in [sites].'"
+            },
+            {
+              "id": "i17",
+              "type": "para",
+              "text": "Working with others: [Share tape-out and bring-up support across [sites] and time zones, including occasional early or late meetings with colleagues in [site].]"
+            },
+            {
+              "id": "i18",
+              "type": "para",
+              "text": "Physical requirements and work environment: [Work in a lab with ESD controls and equipment such as oscilloscopes, logic analyzers and thermal chambers; lift equipment of up to [x] kg with or without assistance.] Include only requirements that are real for this role."
+            },
+            {
+              "id": "i19",
+              "type": "para",
+              "text": "Travel: [Up to [x]% travel, including to [sites / customer locations / foundry and OSAT partners].]"
+            },
+            {
+              "id": "i20",
+              "type": "note",
+              "text": "Mark a function as essential only if the role exists to perform it or it can't reasonably be reassigned; leave marginal duties out. The essential-functions list is the first document reviewed in an accommodation or disability claim (ADA, FEHA, Ontario Human Rights Code, India RPwD Act), so overstated physical or availability requirements create risk."
+            },
+            {
+              "id": "i21",
+              "type": "note",
+              "text": "Require a driver's license only if driving is an essential function (California SB 1100; Washington SB 5501). Don't write 'able to work long hours' or 'flexible availability'; state the real schedule or on-call expectation instead."
+            }
+          ]
+        },
+        {
+          "title": "Qualifications",
+          "intro": "Required means a candidate without it can't do the job from day one. Everything else is preferred.",
+          "items": [
+            {
+              "id": "i22",
+              "type": "para",
+              "text": "Required qualifications: [Degree in electrical engineering, computer engineering, computer science or a related field, or equivalent practical experience]; [N]+ years of experience in [specific area, within the level guide's band]; [specific skill, e.g., hands-on SystemVerilog and UVM testbench development]; [specific skill]."
+            },
+            {
+              "id": "i23",
+              "type": "para",
+              "text": "Preferred qualifications: [Advanced degree in [field]]; experience with [protocol, tool, process node or domain, e.g., PCIe Gen5/6, DDR5, formal property verification, Arm Cortex-M, Zephyr]; [experience working across sites or with external partners such as foundries or customers]."
+            },
+            {
+              "id": "i24",
+              "type": "note",
+              "text": "Avoid degree inflation: require a degree only when the work needs knowledge normally gained through it, and always add 'or equivalent practical experience'. Move advanced degrees to preferred unless the role is genuinely research-level."
+            },
+            {
+              "id": "i25",
+              "type": "note",
+              "text": "State years of experience as a minimum within the level guide's band, never a maximum. 'No more than [x] years' is an age-discrimination risk under the ADEA, the German AGG and similar laws."
+            },
+            {
+              "id": "i26",
+              "type": "note",
+              "text": "Never require 'Canadian experience' (prohibited in Ontario postings and application forms), 'local experience', 'native speaker' or a nationality. Where a language is job-related, write 'professional working proficiency in [language]'."
+            },
+            {
+              "id": "i27",
+              "type": "note",
+              "text": "Don't list citizenship, 'U.S. person' or 'green card required' as a qualification. Only Legal can approve a citizenship requirement, and only where a law, regulation, executive order or government contract requires it (e.g., a security-clearance role)."
+            }
+          ]
+        },
+        {
+          "title": "Pay, benefits and required statements",
+          "intro": "Copy the blocks that apply to the posting's locations. Replace the bracketed text only; the legal wording is changed by TA Operations and Legal.",
+          "items": [
+            {
+              "id": "i28",
+              "type": "para",
+              "text": "Pay: The base salary range for this role in [location] is [$minimum]-[$maximum] per [year / hour]. This range reflects what [Company] in good faith expects to pay at hire; the final offer depends on job-related factors such as skills, experience, level and work location. This role is eligible for [an annual bonus with a target of [x]% of base salary / a sales incentive plan], new-hire and annual equity awards in the form of restricted stock units (subject to plan terms and Compensation Committee approval), and the benefits described below.",
+              "detail": "Required in California, Colorado, Washington and other range states, including remote postings open to them; use it on every US posting. Give the hourly rate for non-exempt roles."
+            },
+            {
+              "id": "i29",
+              "type": "para",
+              "text": "If the role is filled in a different location, the base salary range is: [Location A]: [$min]-[$max]; [Location B]: [$min]-[$max]; [Remote, [eligible states]]: [$min]-[$max]."
+            },
+            {
+              "id": "i30",
+              "type": "para",
+              "text": "Benefits: medical, dental and vision coverage; a 401(k) plan with company match; an employee stock purchase plan; [x] days of paid vacation [or flexible time off], paid sick leave and [x] paid holidays; paid parental leave; life and disability insurance; and [other benefits, e.g., tuition assistance]. Details: [link].",
+              "detail": "Colorado and Washington require a general description of benefits and other compensation (and Connecticut from 1 Oct 2026). Keep it accurate for the posting's country."
+            },
+            {
+              "id": "i31",
+              "type": "para",
+              "text": "Pay (Canada): The expected pay range for this role is C$[minimum]-C$[maximum] per year[, plus eligibility for an annual bonus, equity awards and benefits].",
+              "detail": "Ontario public postings (25+ employees): spread of no more than C$50,000 unless the pay exceeds C$200,000. BC: expected pay or a range in every public posting."
+            },
+            {
+              "id": "i32",
+              "type": "para",
+              "text": "Application deadline: We will accept applications for this role until [date]. To apply, visit [link].",
+              "detail": "Required in Colorado postings; update the date if the posting stays open longer. Colorado also requires announcing the opportunity to all Colorado employees on the same day."
+            },
+            {
+              "id": "i33",
+              "type": "para",
+              "text": "Vacancy status: [This posting is for an existing vacancy.] / [This posting is not for an existing vacancy; we are accepting applications for anticipated future openings in [role family].]",
+              "detail": "Required in Ontario public postings (ESA 2000, since 1 Jan 2026)."
+            },
+            {
+              "id": "i34",
+              "type": "para",
+              "text": "Use of artificial intelligence: [Company] uses [an AI-enabled tool / automated software] to [screen / assess / select] applicants for this role, specifically to [e.g., compare applications with the listed qualifications / score a coding assessment]. A member of our recruiting team reviews applications before any decision is made. To ask for an alternative process or an accommodation, contact [email].",
+              "detail": "Required in Ontario public postings whenever AI is used to screen, assess or select. Use it in every posting where the tool runs: NYC LL 144 also needs a bias audit and notice 10 business days before use, Illinois HB 3773 a notice, and Colorado and California ADMT notices start 1 Jan 2027."
+            },
+            {
+              "id": "i35",
+              "type": "para",
+              "text": "Equal opportunity: [Company] is an equal opportunity employer. We make employment decisions based on qualifications, merit and business needs, and we do not discriminate on the basis of race, color, religion, sex (including pregnancy), sexual orientation, gender identity or expression, national origin, ancestry, age, disability, genetic information, marital status, veteran or military status, citizenship or immigration status, or any other characteristic protected by law.",
+              "detail": "Use this neutral statement worldwide, adding local grounds where required. Don't add wording that suggests a preference for any group (e.g., 'diverse candidates strongly preferred')."
+            },
+            {
+              "id": "i36",
+              "type": "para",
+              "text": "Fair chance: We will consider qualified applicants with arrest and conviction records in a manner consistent with applicable law, including [the California Fair Chance Act, the Washington Fair Chance Act and local ordinances such as [San Francisco / Los Angeles / Seattle]]. Any background check takes place only after a conditional offer.",
+              "detail": "Required wording varies by city; confirm for each posting location (verify)."
+            },
+            {
+              "id": "i37",
+              "type": "para",
+              "text": "Accommodation: If you need an accommodation for any part of the application or interview process because of a disability, pregnancy, religious practice or another reason protected by law, contact [accommodations email] or [phone] and we will work with you to provide it. [Ontario: Accommodation is available on request for candidates taking part in all aspects of the selection process.]"
+            },
+            {
+              "id": "i38",
+              "type": "para",
+              "text": "Export control: This role requires access to technology or software subject to U.S. export control laws. For some candidates, [Company] may need to obtain an export license or other government authorization before the candidate can start work or receive that access, and an offer may be conditioned on that authorization. [Company] does not make hiring decisions based on citizenship or immigration status unless a law, regulation or government contract requires it. Any questions needed to assess export authorization are asked only for that purpose, [after a conditional offer where possible,] and separately from employment eligibility verification.",
+              "detail": "Flagged roles only. Never write 'U.S. citizens only', 'must be a U.S. person' or 'no visa holders' without Legal's written approval citing a legal or contract requirement (8 U.S.C. 1324b; DOJ IER export-control guidance; Ontario Human Rights Code; Washington WLAD)."
+            },
+            {
+              "id": "i39",
+              "type": "para",
+              "text": "Your information: We handle applicant information as described in our Candidate Privacy Notice at [link], which explains what we collect, why, how long we keep it and how to exercise your rights."
+            },
+            {
+              "id": "i40",
+              "type": "para",
+              "text": "E-Verify: [Company] participates in E-Verify [in [states]]. After you accept an offer and complete Form I-9, we will provide the Social Security Administration and, if needed, the Department of Homeland Security with information from your Form I-9 to confirm your authorization to work.",
+              "detail": "E-Verify participants must display the E-Verify and Right to Work notices, including on the careers site. North Carolina requires E-Verify at 25+ NC employees; never use it before an offer."
+            }
+          ]
+        },
+        {
+          "title": "Pre-posting checklist",
+          "intro": "The recruiter completes this in Greenhouse before the posting goes live; TA Operations spot-checks 10% of postings each month.",
+          "items": [
+            {
+              "id": "i41",
+              "type": "check",
+              "text": "Level, job code and title match the job architecture, and the title fits the duties and level (PL-03).",
+              "owner": "Total Rewards"
+            },
+            {
+              "id": "i42",
+              "type": "check",
+              "text": "A good-faith range from the approved structure appears for every location where the role may be filled, including remote locations, with no open-ended ranges.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i43",
+              "type": "check",
+              "text": "Benefits and other compensation (bonus, equity, 401(k)) are described where required (Colorado, Washington, Connecticut from Oct 2026 and similar).",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i44",
+              "type": "check",
+              "text": "Every required qualification maps to an essential function, and any degree requirement is justified or reads 'or equivalent practical experience'.",
+              "owner": "Hiring manager"
+            },
+            {
+              "id": "i45",
+              "type": "check",
+              "text": "No age-coded, gendered or national-origin language; no 'Canadian experience', 'native speaker' or nationality requirement; German titles carry '(m/w/d)'; no photo requests.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i46",
+              "type": "check",
+              "text": "The Greenhouse application form has no salary-history, date-of-birth, graduation-year or criminal-history questions, and any knockout questions are approved by TA Operations.",
+              "owner": "TA Operations"
+            },
+            {
+              "id": "i47",
+              "type": "check",
+              "text": "Export flag confirmed by Trade Compliance; flagged roles use the approved export statement, and no citizenship restriction appears without Legal's written approval.",
+              "owner": "Trade Compliance"
+            },
+            {
+              "id": "i48",
+              "type": "check",
+              "text": "Any AI or automated screening tool is approved under POL-50 and disclosed in the posting (Ontario), with the NYC LL 144 bias audit and notice if the role could be filled in New York City.",
+              "owner": "TA Operations"
+            },
+            {
+              "id": "i49",
+              "type": "check",
+              "text": "Ontario postings state vacancy status; Colorado postings state the application deadline and how to apply.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i50",
+              "type": "check",
+              "text": "EEO, fair-chance (where required), accommodation and privacy-notice blocks are included.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i51",
+              "type": "check",
+              "text": "Local-language version prepared where needed (French for Quebec, Chinese for China, Traditional Chinese for Taiwan, Vietnamese for Vietnam, gender-neutral Hebrew for Israel), naming the local entity as employer.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i52",
+              "type": "check",
+              "text": "Internal notice duties met before or with the external posting: Colorado same-day notice to all Colorado employees; Germany internal posting if the works council requires it (§93 BetrVG) and the severely-disabled check with the Agentur für Arbeit (§164 SGB IX); India National Career Service vacancy report.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i53",
+              "type": "check",
+              "text": "Agencies and job boards receive the same range and statements; no third-party posting goes live without them.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i54",
+              "type": "check",
+              "text": "A dated copy of the posting, with its range, is archived for at least 3 years (Ontario) or 4 years (California), and longer while a claim is pending.",
+              "owner": "TA Operations"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "One JD, many postings: the internal JD holds level, job code and export flag, and each external posting is generated from it with the location's range and statements, so ranges never drift between job boards.",
+        "A range is 'good faith' only if it comes from the approved structure and the company would genuinely pay anywhere in it. Very wide ranges posted to avoid disclosure, or narrow ones routinely exceeded, create pay-transparency and pay-equity risk.",
+        "Treat 'remote' as every place the role could be filled: a remote US posting triggers Colorado, Washington, California and New York rules at once, and a remote Canada posting pulls in Ontario and BC.",
+        "Qualifications are the most challenged part of a JD. Degree and years requirements that screen out protected groups need a job-related basis (Title VII 703(k)), so tie each one to an essential function.",
+        "The export-control statement describes a licensing process, not an eligibility rule. Recruiters must not screen out candidates by nationality or visa status because of it.",
+        "Keep AI disclosures accurate: if Greenhouse ranking or an assessment vendor is switched on after posting, update the posting before the tool is used.",
+        "Archive every version with its posting dates; Ontario, California and Washington claims turn on what the posting said on the day an applicant saw it."
+      ],
+      "countryNotes": {
+        "us": "Put a range and benefits summary on every US posting: ranges are required in CO, WA, NY, HI, DC, MD, IL, MN, NJ, VT, MA and Cleveland, plus VA (Jul 1, 2026), ME (Jul 29, 2026) and CT (Oct 1, 2026), with DE following in Sept 2027. Keep essential functions accurate for the ADA, and state no citizenship requirement without a legal basis (8 U.S.C. 1324b).",
+        "us-ca": "Employers with 15+ employees must show a good-faith pay scale in every posting for a role that may be filled in California, including third-party and remote postings (LC 432.3; SB 642), with penalties of $100-$10,000 per violation. Require a driver's license only where driving is reasonably expected (SB 1100), and link the CCPA notice at collection.",
+        "us-co": "Every posting for work that could be done in Colorado must show a good-faith range (not 'up to'), a general description of bonuses, commissions and benefits, the application deadline and how to apply, and each opportunity must be announced to all Colorado employees the same day (C.R.S. 8-5-201; fines $500-$10,000). No age, date-of-birth or graduation-date fields (JAFA) or criminal-history questions on the initial application.",
+        "us-nc": "No state pay-transparency, salary-history or private ban-the-box rules, but postings open to remote workers in range states still need ranges. Durham, Charlotte and other local ordinances add protected classes, so keep the standard EEO statement, and show E-Verify notices (mandatory at 25+ NC employees).",
+        "us-tx": "No Texas range or salary-history rule, and HB 2127 preempts city ordinances, so Austin-only postings need no range, but 'Austin or remote-US' postings do. Keep grooming and appearance requirements neutral on hair texture and protective hairstyles (Labor Code 21.1095).",
+        "us-wa": "Employers with 15+ employees must show the wage scale or salary range and a general description of benefits and other compensation in any posting that could be filled in Washington, including remote postings (RCW 49.58.110), with statutory damages of $100-$5,000 and a 5-business-day cure right until 27 July 2027. Citizenship and immigration status are WLAD-protected, so use the export statement, not a citizenship rule.",
+        "ca": "Ontario (25+ employees, since Jan 1, 2026): public postings need pay or a range (spread of no more than C$50,000; exempt above C$200,000), a vacancy-status statement, disclosure of AI used to screen, assess or select, and no 'Canadian experience' requirement, with 3-year record retention. BC public postings must show expected pay or a range, and Quebec postings need French.",
+        "de": "Ads must be AGG-neutral ('(m/w/d)', no age limits or 'young team', no 'native German' unless justified, no photos), because a discriminatory ad creates a presumption in any rejected applicant's claim (§§11, 22 AGG). The works council can require internal posting first (§93 BetrVG), vacancies must be checked for severely disabled applicants (§164 SGB IX), and ranges will be needed once the Pay Transparency Directive is transposed (bill expected early 2027).",
+        "il": "No pay-range duty, but ads must be gender-neutral (Hebrew ads should say they are addressed to all genders), set no age limits and not mention reserve duty or military unit unless genuinely job-related (Employment (Equal Opportunities) Law 1988). Keep ad copies at least 3 years to cover applicants' limitation period.",
+        "in": "No pay-range rule, but vacancies must be reported to the National Career Service before they are filled under the Social Security Code rules. Describe duties accurately, because they decide whether the role is a 'worker' under the labour codes, and keep wording gender-neutral, including for transgender persons.",
+        "tw": "Postings for roles with regular pay under NT$40,000/month must show a salary range (Employment Services Act Art. 5), and criteria on marital status, pregnancy, horoscope, blood type or age risk fines of NT$300,000-1,500,000. Publish a Traditional Chinese version.",
+        "cn": "Remove gender, marital or childbearing status, ethnicity, religion and health-status criteria and hard age caps (Employment Promotion Law; Women's Rights Law 2022 Art. 43). Post in Chinese and link the PIPL candidate privacy notice.",
+        "vn": "No pay-range rule, but ads may not state sex, age, marital-status, pregnancy or appearance preferences (Labor Code 2019 Art. 8; Law on Gender Equality), and candidates may never be charged recruitment fees (Art. 11). Post in Vietnamese (English alongside is common) and link the PDPL candidate notice."
+      },
+      "processes": [
+        "PL-02",
+        "PL-03",
+        "TA-01"
+      ],
+      "policies": [
+        "POL-16",
+        "POL-24",
+        "POL-08",
+        "POL-18",
+        "POL-50",
+        "POL-57",
+        "POL-36",
+        "POL-46"
+      ]
+    },
+    {
+      "id": "T-INTERVIEW-KIT",
+      "name": "Engineering interview kit and question bank",
+      "category": "Recruit",
+      "format": "guide",
+      "purpose": "The question bank behind the structured loop for hardware, firmware, design verification and systems engineering roles: six competencies, each with standard questions, probes and anchored ratings, plus the questions interviewers must never ask. It gives every candidate for a role the same questions, and gives interviewers evidence they can score and defend.",
+      "audience": "Interviewers, hiring managers, recruiters and interview-plan owners in Engineering.",
+      "when": "When the hiring manager builds the Greenhouse interview plan (TA-03), and before each interview; interviewers use it with the structured interview scorecard (T-SCORECARD).",
+      "owner": "Talent Acquisition (kit and interviewer training); Engineering hiring managers (role modules and exercises)",
+      "sections": [
+        {
+          "title": "How to use this kit",
+          "intro": "The hiring manager assigns 2-3 competencies to each interviewer in the Greenhouse plan. Interviewers take the assigned questions from this kit and ask them as written.",
+          "items": [
+            {
+              "id": "i1",
+              "type": "note",
+              "text": "Ask each core question word for word to every candidate for the same role and level. Probes can follow the candidate's answer; the core question can't change."
+            },
+            {
+              "id": "i2",
+              "type": "note",
+              "text": "Rate each assigned competency from 1 to 5 using the anchors. Anchors 1, 3 and 5 are described; score 2 or 4 when the evidence falls between them. Record the rating and the evidence (what the candidate said or did) in the Greenhouse scorecard."
+            },
+            {
+              "id": "i3",
+              "type": "note",
+              "text": "Convert to the T-SCORECARD rating as follows: 1 = Strong no, 2 = No, 3-4 = Yes, 5 = Strong yes. Calibrate to the level: a 3 for a senior engineer needs broader scope and independence than a 3 for a new graduate."
+            },
+            {
+              "id": "i4",
+              "type": "check",
+              "text": "Before the interview: read the résumé and the interview plan, confirm your assigned competencies, and check that any exercise is the approved, company-owned material for this level."
+            },
+            {
+              "id": "i5",
+              "type": "check",
+              "text": "You have completed structured-interview training in the last 24 months and have read the prohibited-topics section of this kit."
+            },
+            {
+              "id": "i6",
+              "type": "note",
+              "text": "Leave 5 minutes for the candidate's questions. Refer questions about pay, benefits, equity or immigration sponsorship to the recruiter; don't answer them yourself."
+            }
+          ]
+        },
+        {
+          "title": "Technical depth",
+          "intro": "Use the role-family variant in brackets. Look for the candidate's own decisions, numbers and trade-offs, not the team's.",
+          "items": [
+            {
+              "id": "i7",
+              "type": "prompt",
+              "text": "'Walk me through the architecture of the most complex [block you designed / firmware subsystem you wrote / testbench you built / system you defined]. What were the key design decisions, and which ones were yours?'",
+              "detail": "Probes: What were the requirements and constraints? What alternatives did you reject, and why? What would you change now? Anchors: 1 = describes the work only at a high level and can't explain their own decisions or the constraints. 3 = explains the architecture and their decisions clearly, with some quantitative reasoning. 5 = explains decisions with numbers, alternatives and consequences, and shows insight beyond their own piece (system impact, reuse, scaling)."
+            },
+            {
+              "id": "i8",
+              "type": "prompt",
+              "text": "'Tell me about a trade-off you made in that work. [Hardware: timing, area and power. Firmware: latency, memory footprint, power and code size. Verification: coverage depth versus schedule; simulation versus formal versus emulation. Systems: partitioning between hardware, firmware and software; cost versus performance.] How did you decide?'",
+              "detail": "Probes: What data did you use? Who else was involved? How did the result compare with the target? Anchors: 1 = can't identify a real trade-off, or decided without data. 3 = names the trade-off, used relevant data and explains the outcome. 5 = frames the trade-off quantitatively, involved the right people, and shows how the decision held up in silicon, in the field or on later projects."
+            },
+            {
+              "id": "i9",
+              "type": "prompt",
+              "text": "Role module (the interview plan picks one): [Hardware: 'How would you pass a multi-bit bus between two asynchronous clock domains, and how would you verify it?'] [Firmware: 'Design an interrupt-driven driver for a UART or SPI peripheral with DMA. What can go wrong, and how would you handle it?'] [Verification: 'How would you build a coverage model and checker for a FIFO or an AXI interface?'] [Systems: 'How would you set the power and thermal budget for a new reference design?']",
+              "detail": "Probes: What are the failure modes? How would you test it? What changes at higher speed, lower power or larger scale? Anchors: 1 = the core concept is wrong or incomplete (e.g., a single-flop synchronizer on a bus, no handling of ISR and DMA races, coverage treated as a test count). 3 = a correct standard solution with the main failure modes and a sensible test approach. 5 = a correct solution plus edge cases, a verification or measurement strategy and trade-offs between alternatives (e.g., async FIFO versus handshake, gray coding, formal CDC checks)."
+            },
+            {
+              "id": "i10",
+              "type": "prompt",
+              "text": "'How did you decide your work was ready to [tape out / release / sign off / hand to a customer]? What criteria did you use, and what did you do about the gaps?'",
+              "detail": "Probes: Which metrics (coverage, timing closure, static analysis, regression pass rate, power targets)? Who signed off? What escaped, and why? Anchors: 1 = no clear criteria; relies on 'it worked' or on others. 3 = used defined criteria, knew the gaps and managed the risk. 5 = defined or improved the criteria, quantified the residual risk, and can say what escaped and how the process changed."
+            }
+          ]
+        },
+        {
+          "title": "Problem solving and debugging",
+          "intro": "Use the standard exercise for the level where the interview plan calls for one, and score the approach, not only the answer.",
+          "items": [
+            {
+              "id": "i11",
+              "type": "prompt",
+              "text": "Problem solving: 'Here is a [specification excerpt / block diagram / requirements list]. Talk me through how you would approach [designing / implementing / verifying / architecting] it. What would you ask first?'",
+              "detail": "Probes: What are you assuming? What would you do first? How would you know you're on track? Anchors: 1 = jumps to a solution without clarifying requirements, or can't structure the problem. 3 = clarifies the key requirements, breaks the problem into parts and proposes a workable plan. 5 = surfaces hidden requirements and risks, prioritizes, and proposes a plan with checkpoints and alternatives."
+            },
+            {
+              "id": "i12",
+              "type": "prompt",
+              "text": "Problem solving: 'Tell me about the hardest technical problem you solved in the last two years. What made it hard, and what did you personally do?'",
+              "detail": "Probes: What options did you consider? What didn't work? What would you do differently? Anchors: 1 = vague, team-level account with no clear personal contribution. 3 = a clear problem, a logical approach and an evident personal contribution. 5 = a complex problem solved with an original or unusually rigorous approach, and the lesson applied elsewhere."
+            },
+            {
+              "id": "i13",
+              "type": "prompt",
+              "text": "Problem solving: 'Estimate [the simulation hours for a full regression / the memory bandwidth for [use case] / the power of [block] at [frequency]]. Talk me through your reasoning.'",
+              "detail": "Probes: Which assumptions matter most? How would you check the estimate? Anchors: 1 = no structure, or an unreasonable result with no sanity check. 3 = sensible structure and assumptions, within an order of magnitude. 5 = clear structure, identifies the dominant terms, sanity-checks the result and explains how to confirm it with data."
+            },
+            {
+              "id": "i14",
+              "type": "prompt",
+              "text": "Debugging (standard artifact): 'Here is a failing [simulation log / waveform / timing report / crash dump / lab capture]. Talk me through how you would find the root cause.'",
+              "detail": "Use the same artifact for every candidate at the level. Probes: What do you look at first? What are your hypotheses? How would you confirm one? Anchors: 1 = random changes, no hypothesis. 3 = systematic narrowing (reproduce, isolate, bisect) to a plausible root cause. 5 = fast, hypothesis-driven narrowing that spots the key clue, with a fix and a check that stops it recurring."
+            },
+            {
+              "id": "i15",
+              "type": "prompt",
+              "text": "Debugging: 'Tell me about the hardest bug you found [during silicon bring-up / in field firmware / in a regression / during system integration]. How did you find it?'",
+              "detail": "Probes: How long did it take? Which tools did you use? What did you rule out, and how? Anchors: 1 = can't describe the method, or someone else found it. 3 = a clear, methodical account using the right tools. 5 = a hard, intermittent or cross-domain bug found through creative instrumentation or analysis, with a lasting process fix."
+            },
+            {
+              "id": "i16",
+              "type": "prompt",
+              "text": "Debugging: 'A failure shows up only on some parts, or only at [temperature / voltage / one customer's board]. How would you approach it?'",
+              "detail": "Probes: What data would you collect? How would you separate design, process, firmware and board causes? Who would you involve? Anchors: 1 = no plan for part-dependent or intermittent failures. 3 = a sensible plan for data (lots, corners, shmoo plots, logs) and isolation. 5 = a structured plan across design, test, firmware and customer teams, with statistical thinking and clear hand-offs."
+            },
+            {
+              "id": "i17",
+              "type": "prompt",
+              "text": "Debugging: 'Tell me about a bug that escaped to a later stage [silicon, customer or production]. Why did it escape, and what changed afterwards?'",
+              "detail": "Probes: What was your role? Did the fix change the check or only the bug? Anchors: 1 = blames others or can't explain the escape. 3 = explains the escape honestly, with the fix. 5 = drove a systemic change (a new check, coverage point, test or process step) and measured that it worked."
+            }
+          ]
+        },
+        {
+          "title": "Collaboration across sites, ownership and communication",
+          "intro": "Behavioral questions in STAR form: ask for one specific situation, then probe for the candidate's own actions and the result.",
+          "items": [
+            {
+              "id": "i18",
+              "type": "prompt",
+              "text": "Collaboration: 'Tell me about a project where the team was split across sites or time zones. What did you do to make it work?'",
+              "detail": "Probes: Where did hand-offs go wrong? How did you share status and decisions? Anchors: 1 = no concrete example, or blames the other site. 3 = used clear practices (overlap hours, written hand-offs, shared dashboards) and built working relationships. 5 = improved how the sites worked together in ways others adopted, and handled cultural or language differences with care."
+            },
+            {
+              "id": "i19",
+              "type": "prompt",
+              "text": "Collaboration: 'Tell me about a time you disagreed with an architect, designer or another team about a specification or interface. What did you do, and what happened?'",
+              "detail": "Probes: How did you make your case? What did you learn from their view? Anchors: 1 = avoided the disagreement, or escalated without trying to resolve it. 3 = raised the issue with data, listened and reached a decision. 5 = resolved it in a way that improved the design and the relationship, and documented the decision."
+            },
+            {
+              "id": "i20",
+              "type": "prompt",
+              "text": "Collaboration: 'Describe a time you needed help from a team with other priorities. How did you get it?'",
+              "detail": "Anchors: 1 = no approach beyond escalation. 3 = explained the need and its impact, and negotiated timing. 5 = built lasting goodwill, offered help in return and aligned priorities at the right level."
+            },
+            {
+              "id": "i21",
+              "type": "prompt",
+              "text": "Ownership: 'Tell me about something you owned that slipped or failed. What happened, and what did you change afterwards?'",
+              "detail": "Probes: When did you first see the risk? Who did you tell? Anchors: 1 = no ownership; blames others or circumstances. 3 = owns the outcome and explains the recovery and a personal lesson. 5 = raised the risk early, led the recovery and changed a process so it didn't happen again."
+            },
+            {
+              "id": "i22",
+              "type": "prompt",
+              "text": "Ownership: 'Tell me about a problem outside your assigned scope that you took on. Why, and what happened?'",
+              "detail": "Anchors: 1 = stays strictly within scope. 3 = stepped into a clear gap and followed through. 5 = found a gap others missed, drove it to closure and handed it off so it stayed fixed."
+            },
+            {
+              "id": "i23",
+              "type": "prompt",
+              "text": "Ownership: 'Walk me through a commitment that turned out to be harder than you expected. How did you manage it?'",
+              "detail": "Anchors: 1 = missed it silently, or overcommitted without telling anyone. 3 = re-planned and told people early. 5 = renegotiated scope or schedule with data, protected quality and kept stakeholders' trust."
+            },
+            {
+              "id": "i24",
+              "type": "prompt",
+              "text": "Communication: 'Explain [a concept from your recent work] as you would to a product manager or a customer.'",
+              "detail": "Anchors: 1 = jargon-heavy or inaccurate, with no check of understanding. 3 = clear, accurate and suited to the audience. 5 = crisp, uses a good analogy or sketch, checks understanding and links it to business impact."
+            },
+            {
+              "id": "i25",
+              "type": "prompt",
+              "text": "Communication: 'Tell me about a time you had to deliver bad news, such as a schedule slip or a silicon bug, to a manager or customer. How did you do it?'",
+              "detail": "Anchors: 1 = delayed or softened it until it caused harm. 3 = delivered it promptly, with facts and a plan. 5 = delivered it early, with options and a recommendation, and kept confidence in the team."
+            },
+            {
+              "id": "i26",
+              "type": "prompt",
+              "text": "Communication: 'Describe a design document, test plan or review you wrote, without sharing any confidential content. Who was it for, and how did you make sure it was used?'",
+              "detail": "Anchors: 1 = little written communication, or documents nobody used. 3 = clear, structured documents fit for the audience. 5 = documents that became a team standard or changed a decision."
+            }
+          ]
+        },
+        {
+          "title": "Behavioral questions (all roles)",
+          "intro": "Use one or two of these to fill gaps in the plan. Score them against the most relevant competency's anchors.",
+          "items": [
+            {
+              "id": "i27",
+              "type": "question",
+              "text": "'Tell me about a new tool, flow, language or domain you had to learn quickly. How did you get up to speed, and how long did it take?'",
+              "detail": "Learning agility."
+            },
+            {
+              "id": "i28",
+              "type": "question",
+              "text": "'Tell me about feedback you received that changed how you work.'",
+              "detail": "Self-awareness and coachability."
+            },
+            {
+              "id": "i29",
+              "type": "question",
+              "text": "'Describe a decision you made with incomplete data. How did you decide, and how did it turn out?'",
+              "detail": "Judgment under uncertainty."
+            },
+            {
+              "id": "i30",
+              "type": "question",
+              "text": "'Tell me about a time you raised a concern about quality, safety or compliance. What did you do, and what happened?'",
+              "detail": "Integrity. Don't press for details that would reveal a prior employer's confidential or privileged information."
+            },
+            {
+              "id": "i31",
+              "type": "question",
+              "text": "'Tell me about a time you had to balance several urgent priorities, such as a tape-out and a customer escalation. How did you decide?'",
+              "detail": "Prioritization."
+            },
+            {
+              "id": "i32",
+              "type": "question",
+              "text": "'Tell me about a time you helped someone on your team grow or succeed.'",
+              "detail": "For lead and manager roles, also ask: 'Tell me about a time you dealt with an underperforming team member. What did you do, and what was the outcome?'"
+            }
+          ]
+        },
+        {
+          "title": "Questions interviewers must not ask",
+          "intro": "These rules apply everywhere. If a candidate volunteers protected information, don't follow up, don't record it, and move on.",
+          "items": [
+            {
+              "id": "i33",
+              "type": "note",
+              "text": "Age, date of birth or graduation years, or questions such as 'How long do you plan to keep working?'. Colorado bans age and graduation dates on initial applications (JAFA); age is protected under the ADEA (40+), the German AGG, and in Canada, Israel, Vietnam and elsewhere."
+            },
+            {
+              "id": "i34",
+              "type": "note",
+              "text": "Marital status, pregnancy, family or childcare plans, fertility treatment or a partner's job. Expressly barred in Taiwan (Employment Services Act Art. 5), China (no questions to women about marriage or childbearing, Women's Rights Law Art. 43), Vietnam (Labor Code Art. 8) and Israel (including fertility treatment and parenthood); in Germany candidates may answer such questions untruthfully."
+            },
+            {
+              "id": "i35",
+              "type": "note",
+              "text": "National origin, accent, place of birth, citizenship or immigration status. Interviewers never ask about citizenship or visas; for export-flagged roles the recruiter asks only the single approved question. Ontario protects citizenship and place of origin, and Washington protects citizenship and immigration status (WLAD)."
+            },
+            {
+              "id": "i36",
+              "type": "note",
+              "text": "Disability, health, medical history, medication, sick leave or workers' compensation claims. No disability-related questions or medical exams before a conditional offer (ADA; FEHA); Germany and Israel limit health questions to fitness for the specific role."
+            },
+            {
+              "id": "i37",
+              "type": "note",
+              "text": "Religion, religious holidays, caste, race, ethnicity, or hair texture and style. Caste is a live issue in India and Seattle (SMC 14.04), and hair texture and protective hairstyles are protected in California, Colorado, Washington, Texas and several North Carolina cities."
+            },
+            {
+              "id": "i38",
+              "type": "note",
+              "text": "Military service, reserve duty or unit. In Israel, questions about the candidate's or a spouse's reserve duty, upcoming rotations or unit are prohibited; in the US, USERRA protects applicants who serve."
+            },
+            {
+              "id": "i39",
+              "type": "note",
+              "text": "Current or past pay. Banned in California, Colorado, Washington, BC and 20+ other US states and cities, and coming in the EU. Only the recruiter asks about pay expectations; apply the rule globally, including Texas and North Carolina where it isn't legally required."
+            },
+            {
+              "id": "i40",
+              "type": "note",
+              "text": "Criminal history, arrests or convictions. Deferred until after a conditional offer in California, Washington (15+ employees from July 2026), NYC and elsewhere; never ask about expunged records (North Carolina), and Israel bars requests for police record extracts."
+            },
+            {
+              "id": "i41",
+              "type": "note",
+              "text": "Union membership or activity, political views, horoscope or blood type, HIV status, and off-duty cannabis, tobacco or alcohol use. Taiwan bars horoscope and blood-type questions; India, Vietnam and North Carolina protect HIV status; California and Washington protect off-duty cannabis use; North Carolina protects lawful off-duty tobacco and alcohol use."
+            },
+            {
+              "id": "i42",
+              "type": "note",
+              "text": "Passwords or access to personal social media accounts (barred in Colorado, Washington and elsewhere). Don't research candidates' personal social media; rely on the résumé and the interview."
+            },
+            {
+              "id": "i43",
+              "type": "note",
+              "text": "Recording: don't record interviews or use AI note-takers unless TA and Legal have approved the tool and the candidate has been told and has consented. California and Washington require all-party consent (Penal Code 632; RCW 9.73.030), and German works councils co-determine such tools."
+            }
+          ]
+        },
+        {
+          "title": "Candidate accommodation",
+          "intro": "The interview invitation offers accommodation to every candidate (T-CANDIDATE-COMMS). The recruiter handles requests; interviewers apply the agreed adjustment.",
+          "items": [
+            {
+              "id": "i44",
+              "type": "note",
+              "text": "Pass every accommodation request, including one made to you during the interview, to the recruiter. Don't ask about a diagnosis or evaluate the request, and don't mention it on the scorecard."
+            },
+            {
+              "id": "i45",
+              "type": "check",
+              "text": "Agreed adjustments are in place before the interview, for example: extra time for exercises, breaks, captioning or a sign language interpreter, a screen-reader-compatible coding environment, a shared document instead of a whiteboard, written copies of spoken questions, or a different slot for religious observance."
+            },
+            {
+              "id": "i46",
+              "type": "note",
+              "text": "Score the competency, not the format: when a candidate uses an adjusted format, apply the same anchors to the evidence they produce."
+            },
+            {
+              "id": "i47",
+              "type": "note",
+              "text": "Germany: the representative of severely disabled employees (SBV) may see applications from severely disabled candidates and attend their interviews (§178(2) SGB IX). Ontario: accommodation must be available throughout the selection process (AODA IASR s.22). Israel and India require reasonable accommodation in admission tests (Equal Rights for Persons with Disabilities Law s.8; RPwD Act)."
+            },
+            {
+              "id": "i48",
+              "type": "note",
+              "text": "Pregnancy and religion: the Pregnant Workers Fairness Act and Title VII cover applicants in the US, so offer alternative times or formats on request without asking why."
+            }
+          ]
+        },
+        {
+          "title": "Prior employers' confidential information",
+          "intro": "We hire people for their skills, not their former employer's secrets. Say this at the start of every technical interview.",
+          "items": [
+            {
+              "id": "i49",
+              "type": "say",
+              "text": "Before we start: please don't share anything confidential from your current or previous employers, such as designs, source code, schematics, test data, yields, customer names or roadmaps. Talk about your work at the level you'd use in a public paper or conference talk."
+            },
+            {
+              "id": "i50",
+              "type": "say",
+              "text": "Let me stop you there. That sounds like it may be confidential to [employer], so please keep it general. We're interested in how you approached the problem, not the specifics.",
+              "detail": "Use this as soon as a candidate starts to share something that sounds confidential."
+            },
+            {
+              "id": "i51",
+              "type": "note",
+              "text": "Never ask for, accept or open work samples, code, documents or files from a prior employer, and don't ask candidates how a competitor did something. Take-home and live exercises use only company-owned synthetic problems."
+            },
+            {
+              "id": "i52",
+              "type": "note",
+              "text": "If confidential material is shared anyway: stop, don't copy or forward it, note on the scorecard that it happened (not the content), and tell the recruiter, who informs Legal. Legal decides whether it affects the candidate's process."
+            },
+            {
+              "id": "i53",
+              "type": "note",
+              "text": "Candidates from direct competitors carry extra risk: Taiwan's National Security Act protects national core key technologies (e.g., candidates from TSMC or MediaTek), Texas and other states enforce non-competes the recruiter should collect, and China's LCL Art. 91 makes a new employer jointly liable for hiring someone still bound elsewhere."
+            },
+            {
+              "id": "i54",
+              "type": "note",
+              "text": "Asking about general experience with a tool, protocol or public standard is fine. Asking about a former employer's unreleased products, customers, pricing, yields or process details is not. When in doubt, don't ask."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Structure is the bias control: the same core questions, independent scoring before the debrief and evidence-based ratings make decisions defensible under Title VII, the German AGG burden shift and similar rules.",
+        "Role modules keep one kit usable across hardware, firmware, verification and systems roles. The hiring manager picks one variant per question in the interview plan and keeps it the same for every candidate at the level.",
+        "Anchors describe evidence, not personality. 'Smart', 'good fit' or 'not senior enough' without evidence are not ratings.",
+        "Standard exercises must be company-owned, calibrated to the level and reviewed every year; a leaked exercise is replaced, not reused.",
+        "Interview content can be a release of controlled technology: don't show unreleased designs, source code or lab setups to candidates unless Trade Compliance has cleared it (deemed exports).",
+        "Completed scorecards are candidate data: they are subject to access requests (CCPA, GDPR, PIPL, DPDP) and to the retention rules in TA-11.",
+        "In Germany, standard questionnaires and selection guidelines need works council consent before this kit is used (§§94, 95 BetrVG)."
+      ],
+      "countryNotes": {
+        "us": "No disability-related questions before a conditional offer (ADA), no salary-history questions where banned (20+ states and cities), and criminal history deferred under fair-chance laws. AI scoring or note-taking tools need NYC LL 144 bias audits and notices and Illinois HB 3773 notice where those laws reach the role.",
+        "us-ca": "No salary history (LC 432.3), criminal history before a conditional offer (Gov Code 12952) or cannabis-use questions (Gov Code 12954). Recording needs all-party consent (Penal Code 632), and ADS used in interviews falls under CRD rules with 4-year record retention.",
+        "us-co": "Avoid age, date-of-birth and graduation-year questions (JAFA), marital status (CADA) and salary history (C.R.S. 8-5-102). From 1 Jan 2027, AI that materially influences hiring needs SB 26-189 notice and an explanation within 30 days of an adverse decision.",
+        "us-nc": "Don't ask about expunged records (G.S. 15A-153), lawful off-duty tobacco or alcohol use (G.S. 95-28.2), genetic information, sickle-cell trait or HIV status. Durham, Charlotte and other local ordinances add sexual orientation, gender identity and protected hairstyles.",
+        "us-tx": "TCHRA mirrors Title VII and adds hair texture and protective hairstyles; keep Title VII's sexual-orientation and gender-identity protections in practice. Video tools that analyze face geometry or voiceprints need CUBI notice and consent, and the recruiter should collect any non-compete a candidate from an Austin or Dallas competitor has signed before the loop.",
+        "us-wa": "WLAD protects citizenship and immigration status, and Seattle adds caste and political ideology (SMC 14.04), so export questions stay in the recruiter's approved script. No salary-history (RCW 49.58.100) or pre-offer criminal-history questions (RCW 49.94), and recording needs all-party consent (RCW 9.73.030).",
+        "ca": "Ask only human-rights-compliant questions (no age, family status or place of origin; in Ontario also no citizenship or record of offences), and offer accommodation throughout recruitment (AODA IASR s.22). Ontario employers must tell interviewed candidates the outcome within 45 days; BC bars pay-history questions.",
+        "de": "Questions on pregnancy, family plans, religion, union membership, sexual identity or health beyond fitness for the job are prohibited, and candidates may answer them untruthfully. Standard interview forms need works council consent (§§94, 95 BetrVG), and the SBV may attend interviews of severely disabled candidates (§178(2) SGB IX).",
+        "il": "Don't ask about pregnancy, fertility treatment, parenthood, age, place of residence, political views, or the candidate's or a spouse's reserve service or unit. A rejected candidate can be awarded compensation without proving damage, and candidates must be told what screening procedures are used.",
+        "in": "Avoid questions on caste, religion, marital or pregnancy status and HIV status, keep gender (including transgender) neutrality, and provide disability accommodation in interviews and tests (RPwD Act). Remind candidates from competitors' Indian design centres not to discuss confidential work.",
+        "tw": "Employment Services Act Art. 5 bars questions on marital status, pregnancy plans, horoscope, blood type and non-job-related private information (fines NT$300,000-1,500,000). Tell candidates from TSMC, MediaTek or UMC not to disclose prior-employer technical details, since national core key technology rules apply.",
+        "cn": "Don't ask women about marriage or childbearing plans, or screen on health status, ethnicity or religion. Record written, measurable hiring criteria at selection, because they become the probation criteria needed for any probation dismissal (LCL Art. 39(1)).",
+        "vn": "Ask job-related questions only: nothing on marriage, pregnancy, family plans, age, religion, union membership or HIV status (Labor Code 2019 Art. 8). Disclose any automated screening, and keep scorecards as the main evidence if discrimination is alleged (PDPL Art. 25)."
+      },
+      "processes": [
+        "TA-03"
+      ],
+      "policies": [
+        "POL-16",
+        "POL-08",
+        "POL-50",
+        "POL-57",
+        "POL-36",
+        "POL-18",
+        "POL-48"
+      ]
+    },
+    {
+      "id": "T-CANDIDATE-COMMS",
+      "name": "Candidate communication templates",
+      "category": "Recruit",
+      "format": "letter",
+      "purpose": "Approved emails, letters and a call script for every step of the candidate journey, from application acknowledgment to offer, rejection and the data-retention notice. They keep messages consistent, accurate and respectful, meet notice rules such as Ontario's 45-day response duty, and avoid wording that creates legal risk.",
+      "audience": "Recruiters, recruiting coordinators and hiring managers; TA Operations maintains the Greenhouse email templates.",
+      "when": "At each stage of TA-03 and TA-04: application, interview scheduling, rejection, offer and close-out, with the retention notice at the end of every unsuccessful candidacy (TA-11).",
+      "owner": "Talent Acquisition (content and Greenhouse templates); Legal (offer withdrawal and retention wording)",
+      "sections": [
+        {
+          "title": "Application acknowledgment",
+          "intro": "Sent automatically from Greenhouse on submission, in the language of the posting.",
+          "items": [
+            {
+              "id": "i1",
+              "type": "para",
+              "text": "Subject: We've received your application for [Job title] at [Company]"
+            },
+            {
+              "id": "i2",
+              "type": "para",
+              "text": "Dear [First name], thank you for applying for the [Job title] role ([Requisition ID]) in [location]. We've received your application, and our recruiting team will review it against the qualifications in the posting. If your background is a match, a recruiter will contact you, usually within [x] business days. If we don't move forward, we'll let you know."
+            },
+            {
+              "id": "i3",
+              "type": "para",
+              "text": "[If an AI or automated tool is used:] We use [description of the tool] to help [screen / assess] applications for this role, and a member of our recruiting team reviews applications before any decision is made. If you would prefer an alternative process, reply to this email.",
+              "detail": "Must match the AI statement in the posting (Ontario), and any NYC LL 144 or Illinois HB 3773 notice."
+            },
+            {
+              "id": "i4",
+              "type": "para",
+              "text": "If you need an accommodation at any stage of our hiring process, reply to this email or contact [accommodations email]. You can read how we use and protect your information in our Candidate Privacy Notice: [link]."
+            }
+          ]
+        },
+        {
+          "title": "Interview invitation",
+          "intro": "Sent by the coordinator once the loop is scheduled, at least 3 business days before the interview where possible.",
+          "items": [
+            {
+              "id": "i5",
+              "type": "para",
+              "text": "Subject: Interview invitation: [Job title] at [Company]"
+            },
+            {
+              "id": "i6",
+              "type": "para",
+              "text": "Dear [First name], thank you for your interest in the [Job title] role. We'd like to invite you to [a [45]-minute video interview / an onsite interview loop] with [interviewer names and titles] on [date and time, with time zone] [at [address] / via [video link]]."
+            },
+            {
+              "id": "i7",
+              "type": "para",
+              "text": "What to expect: The conversations will cover [technical depth, problem solving, debugging and collaboration] [and include a technical exercise using a problem we provide]. You don't need to prepare slides. [If you choose to talk through past work, please use only public or personal material.]"
+            },
+            {
+              "id": "i8",
+              "type": "para",
+              "text": "Please don't bring or share any confidential information from current or former employers, such as designs, code, schematics, test data or customer details. We're interested in how you think and work, not in anyone else's confidential information."
+            },
+            {
+              "id": "i9",
+              "type": "para",
+              "text": "Accommodation: If you need an accommodation for your interview, such as extra time, captioning, a sign language interpreter, an accessible room, breaks or a different format, let me know by [date] and we will arrange it. You don't need to tell us why. [Ontario: Accommodation is available on request for all parts of the selection process.]"
+            },
+            {
+              "id": "i10",
+              "type": "para",
+              "text": "[Onsite:] For security and export-control reasons, your visit will be limited to meeting areas and you'll be accompanied throughout; please bring photo ID for the visitor desk. [We don't record interviews. / We will ask for your consent before using a note-taking tool.]",
+              "detail": "No lab tours, demos or screen shares of controlled technology unless Trade Compliance has cleared them."
+            }
+          ]
+        },
+        {
+          "title": "Rejection after screen",
+          "intro": "Send within 5 business days of the decision. Keep it short, kind and free of reasons that could suggest a protected ground.",
+          "items": [
+            {
+              "id": "i11",
+              "type": "para",
+              "text": "Subject: Your application for [Job title] at [Company]"
+            },
+            {
+              "id": "i12",
+              "type": "para",
+              "text": "Dear [First name], thank you for taking the time to speak with us about the [Job title] role. After careful consideration, we've decided not to move forward with your application for this position."
+            },
+            {
+              "id": "i13",
+              "type": "para",
+              "text": "We appreciate your interest in [Company] and encourage you to apply for other roles that match your experience at [careers link]. [Retention and talent-community paragraphs, if applicable.]"
+            },
+            {
+              "id": "i14",
+              "type": "note",
+              "text": "Ontario: treat recruiter and hiring-manager phone or video screens as interviews for the 45-day rule, so screened candidates for Ontario postings get this message (or an update) within 45 days of the screen (verify scope with Legal)."
+            },
+            {
+              "id": "i15",
+              "type": "note",
+              "text": "Don't give reasons in writing unless the recruiting lead approves them. If a candidate asks for feedback, give brief, job-related points by phone, and never mention age, family, nationality, accent, health or 'fit'. In Germany any stated reason can support an AGG claim, and in Colorado AI-influenced adverse decisions need an explanation on request from 1 Jan 2027."
+            }
+          ]
+        },
+        {
+          "title": "Rejection after final round",
+          "intro": "The recruiter calls finalists first; the email follows the call on the same day.",
+          "items": [
+            {
+              "id": "i16",
+              "type": "say",
+              "text": "Thank you again for the time you spent with the team. I wanted to call you personally: we've decided to move forward with another candidate for this role. It was a close decision, and the team enjoyed meeting you."
+            },
+            {
+              "id": "i17",
+              "type": "say",
+              "text": "If it would be helpful, I can share some brief feedback from the interviews.",
+              "detail": "Only job-related points drawn from the scorecards and agreed with the hiring manager. Stop if the conversation turns into a debate about the decision."
+            },
+            {
+              "id": "i18",
+              "type": "para",
+              "text": "Subject: Update on your application for [Job title] at [Company]. Dear [First name], thank you for the time and effort you put into your interviews for the [Job title] role. As we discussed [today], we've decided to move forward with another candidate. We were impressed by [a specific, job-related strength, e.g., your approach to the debugging exercise], and we'd welcome your application for future roles. [Retention and talent-community paragraphs, if applicable.]"
+            },
+            {
+              "id": "i19",
+              "type": "check",
+              "text": "Ontario 45-day rule: every candidate interviewed for a publicly advertised Ontario posting is told, in person, in writing or electronically, whether a hiring decision has been made within 45 days of their last interview, and a copy of the notice is kept for 3 years.",
+              "owner": "Recruiter",
+              "when": "By day 45 after the last interview; Greenhouse flags open candidates at day 30"
+            },
+            {
+              "id": "i20",
+              "type": "note",
+              "text": "If there is no decision by day 45, the Ontario notice can say so: 'We haven't yet made a hiring decision for this role, and we expect to update you by [date].' Send the final outcome once the decision is made."
+            },
+            {
+              "id": "i21",
+              "type": "note",
+              "text": "Where possible, send final-round rejections once the chosen candidate has accepted, but never past the Ontario deadline, and don't leave finalists more than 2 weeks without an update."
+            }
+          ]
+        },
+        {
+          "title": "Offer call script",
+          "intro": "The recruiter (or the hiring manager with the recruiter) calls once the offer is approved in Greenhouse (T-OFFER-APPROVAL). Say only what has been approved.",
+          "items": [
+            {
+              "id": "i22",
+              "type": "say",
+              "text": "Hi [First name], thanks for making time. I have good news: the team would like to offer you the [Job title] role on the [Team] team, reporting to [Manager title]."
+            },
+            {
+              "id": "i23",
+              "type": "say",
+              "text": "I'll walk you through the main terms now, and I'll send everything in writing right after our call."
+            },
+            {
+              "id": "i24",
+              "type": "say",
+              "text": "Your starting base salary would be [amount] per [year / hour], paid [semi-monthly / monthly].",
+              "detail": "US: also say whether the role is exempt or non-exempt. Outside the US, quote the pay basis used in the local contract (e.g., gross monthly salary and any 13th-month or statutory bonus)."
+            },
+            {
+              "id": "i25",
+              "type": "say",
+              "text": "You'd be eligible for our annual bonus plan, with a target of [x]% of your base salary. Actual payouts depend on company and individual performance under the plan."
+            },
+            {
+              "id": "i26",
+              "type": "say",
+              "text": "We'll also recommend a new-hire equity award with a target value of [amount] in restricted stock units, vesting over four years. The award is subject to approval by the Compensation Committee of our Board, or its delegate, and to the terms of our equity plan; the number of units is set on the grant date.",
+              "detail": "Never quote a share count or a guaranteed value, and never promise refresh grants."
+            },
+            {
+              "id": "i27",
+              "type": "say",
+              "text": "[If approved:] There's also a one-time sign-on bonus of [amount]. It comes with a short separate agreement, which I'll send so you can review it before deciding.",
+              "detail": "California: the agreement must be separate, give at least 5 business days to consult a lawyer and offer the option to defer receipt (AB 692). Don't describe repayment terms as standard or non-negotiable."
+            },
+            {
+              "id": "i28",
+              "type": "say",
+              "text": "The offer depends on a few standard steps: [a background check / verification of your right to work / any export authorization the role requires / signing our confidentiality and invention assignment agreement] [and, outside the US, signing your employment contract]."
+            },
+            {
+              "id": "i29",
+              "type": "say",
+              "text": "We're proposing a start date of [date]. What questions do you have, and is there anything else that would help you decide?"
+            },
+            {
+              "id": "i30",
+              "type": "say",
+              "text": "Take some time to think it over. Could we speak again by [date, at least 2 business days away]?"
+            },
+            {
+              "id": "i31",
+              "type": "note",
+              "text": "Don't ask about current or past pay (banned in California, Colorado, Washington, BC and 20+ other US states and cities); ask what matters to the candidate in the offer instead. Record any competing offer the candidate volunteers, and route counteroffers through T-OFFER-APPROVAL."
+            },
+            {
+              "id": "i32",
+              "type": "note",
+              "text": "Don't promise anything outside the approved offer: titles, promotion timing, remote work, relocation, visa sponsorship, share counts or bonus amounts. Oral promises can bind (promissory estoppel in the US; pre-contract liability in China, Germany and Israel)."
+            },
+            {
+              "id": "i33",
+              "type": "note",
+              "text": "If the candidate mentions a non-compete, non-solicit, notice period or garden leave with their current employer, note it and route it to Legal before agreeing a start date. Never suggest ignoring it, and remind them not to bring anything with them."
+            }
+          ]
+        },
+        {
+          "title": "Verbal offer follow-up email",
+          "intro": "Sent the same day as the offer call, from Greenhouse.",
+          "items": [
+            {
+              "id": "i34",
+              "type": "para",
+              "text": "Subject: Your offer from [Company]: [Job title]"
+            },
+            {
+              "id": "i35",
+              "type": "para",
+              "text": "Dear [First name], it was great to speak with you today. As promised, here is a summary of the offer we discussed. Position: [Job title], [Team], reporting to [Manager title], based in [location / remotely from [state or province]]. Start date: [date]. Base salary: [amount] per [period]. Annual bonus target: [x]% of base salary under the plan. New-hire equity: restricted stock units with a target value of [amount], vesting over four years, subject to Compensation Committee approval and plan terms. [Sign-on bonus: [amount], under a separate agreement.] Benefits: [summary or link]."
+            },
+            {
+              "id": "i36",
+              "type": "para",
+              "text": "This email is a summary for your convenience and is not itself an offer or contract of employment. Your formal [offer letter / employment contract] will follow [today / within [x] business days] and will set out the full terms, which govern if anything differs. The offer depends on [contingencies].",
+              "detail": "China: an accepted offer letter is a binding pre-contract commitment, so send this summary only once the formal offer is approved. Germany: acceptance of an offer forms the contract, so use the German contract as the offer."
+            },
+            {
+              "id": "i37",
+              "type": "para",
+              "text": "Please let me know by [date] whether you'd like to accept, or if you have any questions. We're excited about the possibility of you joining the team."
+            }
+          ]
+        },
+        {
+          "title": "Withdrawing an offer",
+          "intro": "Once made, an offer is withdrawn only with Legal's approval. Work through this before any conversation with the candidate.",
+          "items": [
+            {
+              "id": "i38",
+              "type": "check",
+              "text": "Legal has approved the withdrawal and the reason is documented in Greenhouse: a contingency not met (after the required process), material misrepresentation, an export license denied with no workable alternative, or a documented business change such as a hiring freeze.",
+              "owner": "Legal"
+            },
+            {
+              "id": "i39",
+              "type": "note",
+              "text": "Never withdraw because of information learned after the offer that relates to a protected characteristic or activity: pregnancy, disability or an accommodation request, religion, age, family status, union activity, citizenship or immigration status (beyond a legal export or sponsorship requirement), or a request for the pay range."
+            },
+            {
+              "id": "i40",
+              "type": "note",
+              "text": "Background-check withdrawals follow the FCRA and fair-chance steps in T-FCRA-NOTICES (pre-adverse notice with the report, at least 5 business days, then the final notice) and use that final notice, not this letter."
+            },
+            {
+              "id": "i41",
+              "type": "note",
+              "text": "If an export license is denied or delayed, consider a later start date, a role or project without controlled access, or a license exception with Trade Compliance before withdrawing, and document the business reason (DOJ IER guidance)."
+            },
+            {
+              "id": "i42",
+              "type": "note",
+              "text": "Consider reliance costs: a candidate who has resigned, relocated or turned down other offers may claim damages (promissory estoppel in the US; inducement and reasonable-notice claims in Canada; good-faith negotiation duties in Israel; pre-contract liability in China). In Germany an accepted offer is already a contract, so withdrawal is a dismissal before the start date. Legal decides whether to offer compensation."
+            },
+            {
+              "id": "i43",
+              "type": "para",
+              "text": "Dear [First name], we're writing about the offer of employment for the [Job title] position dated [date]. [Company] is withdrawing this offer because [reason approved by Legal, e.g., 'the contingency in your offer letter relating to [x] has not been met' / 'the position has been eliminated because of [business reason]']. We're sorry for the disappointment this causes. [We will reimburse [documented expenses] / pay [amount], as described in the enclosed letter.] If you have questions, please contact [name, title, email].",
+              "detail": "Legal approves the final text before it is sent."
+            }
+          ]
+        },
+        {
+          "title": "Data retention notice for unsuccessful candidates",
+          "intro": "Added to the final rejection, and sent automatically to open candidates when a requisition closes.",
+          "items": [
+            {
+              "id": "i44",
+              "type": "para",
+              "text": "How we handle your information: We will keep your application, interview notes and related records for [period for the jurisdiction, e.g., 4 years in California, 3 years in Ontario, about 6 months in Germany, at least 1 year elsewhere in the US] so that we can meet our legal obligations and respond to questions about our hiring decision. After that, we will delete or anonymize it unless the law requires us to keep it longer."
+            },
+            {
+              "id": "i45",
+              "type": "para",
+              "text": "[Talent community, where used:] We'd like to keep your profile in our talent community for [12] months so we can contact you about future roles that match your experience. We'll do this only if you agree: [consent link]. You can withdraw your consent at any time, and we'll delete your profile at the end of the period unless you renew it.",
+              "detail": "Consent must be separate, specific and not pre-ticked (PIPL, Vietnam PDPL, DPDP, GDPR). No talent pool in China, Vietnam or Germany without it."
+            },
+            {
+              "id": "i46",
+              "type": "para",
+              "text": "Your rights: You can ask to access, correct or delete your information, or [where local law provides] object to or restrict how we use it, by contacting [privacy email]. If we need to keep some information for legal reasons, we'll tell you why. [California: see our CCPA Notice at Collection at [link].]"
+            },
+            {
+              "id": "i47",
+              "type": "note",
+              "text": "Greenhouse sets retention by the requisition's location; for multi-location roles the longest applicable period applies unless Legal sets another rule. Legal holds (charges, lawsuits, investigations) suspend deletion (TA-11)."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Send from Greenhouse templates, not personal email: the send date is the evidence for Ontario's 45-day rule, AB 692 review periods and FCRA timelines.",
+        "Rejections are prompt, kind and reason-free by default. Written reasons become evidence in discrimination claims (the AGG presumption in Germany; compensation without proof of damage in Israel).",
+        "Every written summary of an offer says it isn't the offer itself; only the approved offer letter or local contract sets terms.",
+        "Accommodation is offered in every invitation, so candidates never have to disclose a disability or a reason to get it.",
+        "Send candidate messages in the posting's language (French in Quebec; Chinese, Traditional Chinese or Vietnamese for local postings), with English alongside where useful.",
+        "Silence after interviews is the most common candidate complaint in a tight chip-talent market; Greenhouse flags candidates without an update at 14 and 30 days."
+      ],
+      "countryNotes": {
+        "us": "Keep applicant communications at least 1 year (29 CFR 1602.14), longer if a charge is filed. Withdrawing an offer can support a promissory-estoppel claim when the candidate has resigned or relocated, and NYC LL 144 and Illinois HB 3773 notices must reach candidates before AI tools are used.",
+        "us-ca": "Give the CCPA notice at collection before collecting applicant data, and keep applications and ADS data 4 years; applicants may request the role's pay scale (LC 432.3). Sign-on bonus repayment terms go only in a separate agreement with at least 5 business days to consult a lawyer (AB 692).",
+        "us-co": "Postings list the application deadline, and after a selection Colorado employees who will work with the new hire must be told within 30 days (C.R.S. 8-5-201). From 1 Jan 2027, AI-influenced adverse decisions need a plain-language explanation within 30 days (SB 26-189), and any non-compete notice goes with the offer before acceptance.",
+        "us-nc": "The follow-up and offer must state promised wages and the day and place of payment in writing (G.S. 95-25.13), and any non-compete should be signed with the offer so that new employment is the consideration.",
+        "us-tx": "No state rules on candidate notices or retention, so keep the federal 1-year minimum. Offers use the Texas template (at-will, Texas law and venue, payday schedule), and biometric video-interview tools need CUBI notice and consent.",
+        "us-wa": "Any noncompete must be disclosed in writing no later than offer acceptance (RCW 49.62.020), and none will be enforceable from 30 June 2027. Don't record offer or feedback calls without all-party consent (RCW 9.73.030).",
+        "ca": "Ontario (25+ employees): tell every interviewed applicant within 45 days of their last interview whether a hiring decision has been made, keep postings, forms and notices 3 years, and give the new-hire information statement before Day 1. Quebec candidates receive communications in French.",
+        "de": "Keep rejection letters neutral and reason-free: rejected applicants have 2 months to claim under the AGG, and any stated reason can support a presumption. Delete applicant data about 6 months after rejection unless the candidate consents to a talent pool, and remember that an accepted offer is already a binding contract.",
+        "il": "Candidates must be told what screening procedures are used and may ask for their results (Notice to Employee and Job Candidate Law 2002); give the Amendment 13 privacy notice at collection. Keep hiring records 3 years to cover applicants' limitation period.",
+        "in": "Give a privacy notice and get consent for background verification now, and build DPDP-ready notice and erasure before the main duties start on 13 May 2027. The offer letter is followed by the statutory appointment letter at joining.",
+        "tw": "Give a PDPA notice at collection, keep offers consistent with the Enforcement Rules Art. 7 contract terms, and provide a Traditional Chinese version. Never ask for or hold identity documents.",
+        "cn": "An accepted offer letter is a binding pre-contract commitment, so withdrawal can create liability; send offers only after full approval. Talent pools and transfers to the US-hosted ATS need PIPL separate consent, and communications should be in Chinese.",
+        "vn": "Delete unsuccessful candidates' data unless they give specific, verifiable consent to a talent pool (PDPL Art. 25), and give the privacy notice before collection. Communicate in Vietnamese, and make sure the offer mirrors the labour contract terms."
+      },
+      "processes": [
+        "TA-03",
+        "TA-04",
+        "TA-11"
+      ],
+      "policies": [
+        "POL-16",
+        "POL-46",
+        "POL-49",
+        "POL-50",
+        "POL-36",
+        "POL-57",
+        "POL-23",
+        "POL-31"
+      ]
+    },
+    {
+      "id": "T-OFFER-LETTER",
+      "name": "Offer letter template with country clauses",
+      "category": "Recruit",
+      "format": "letter",
+      "purpose": "The standard US at-will offer letter, a sign-on bonus agreement drafted to fit California's AB 692 limits, and a clause library with the terms each other jurisdiction needs in its offer or contract. It makes sure every offer states only approved terms, lists the right contingencies and never carries US at-will terms into countries where they don't work.",
+      "audience": "Recruiters and TA Operations (drafting in Greenhouse), HRBPs and Legal (country clauses), Total Rewards and Stock Administration (pay and equity wording).",
+      "when": "After the offer is approved (T-OFFER-APPROVAL, TA-04) and before it is sent; local contracts and agreements are signed before Day 1 (ON-01).",
+      "owner": "Talent Acquisition (template); Legal (clause library and any deviation); Total Rewards (pay, bonus and equity wording)",
+      "sections": [
+        {
+          "title": "Before you draft",
+          "items": [
+            {
+              "id": "i1",
+              "type": "check",
+              "text": "The offer is approved in Greenhouse at the right level (T-OFFER-APPROVAL), and base pay is within the posted range for the work location or an approved exception."
+            },
+            {
+              "id": "i2",
+              "type": "check",
+              "text": "The template matches the work location and employing entity, not the candidate's current location or citizenship: the US letter with state inserts, or the local-entity contract for Canada, Germany, Israel, India, Taiwan, China and Vietnam."
+            },
+            {
+              "id": "i3",
+              "type": "check",
+              "text": "Exempt roles meet the state salary threshold as well as the duties test (California $70,304 in 2026 and $72,384 in 2027; Washington $80,168.40 in 2026)."
+            },
+            {
+              "id": "i4",
+              "type": "check",
+              "text": "No salary-history reference; no non-compete for California or other banned states (Washington from 30 June 2027); no non-California law or forum for California employees; no repayment terms in the offer letter itself."
+            },
+            {
+              "id": "i5",
+              "type": "check",
+              "text": "Contingencies match the role: background check only after the conditional offer, the export-license contingency only for flagged roles, and immigration contingencies only for sponsored hires."
+            },
+            {
+              "id": "i6",
+              "type": "note",
+              "text": "Only Legal may change the at-will, contingency, equity, protected-rights or country clauses. Recruiters fill in the bracketed fields only."
+            }
+          ]
+        },
+        {
+          "title": "US offer letter (at-will)",
+          "intro": "Standard text for every US state. Add the state inserts from the clause library for Colorado, Washington, North Carolina and Texas.",
+          "items": [
+            {
+              "id": "i7",
+              "type": "para",
+              "text": "[Date] | [Candidate name] | [Address or email] | Dear [First name]: [Company], Inc. (the 'Company') is pleased to offer you the position of [Job title] in the [Department] organization, reporting to [Manager title]. This is a full-time, [exempt / non-exempt] position based [at our [city] office / on a hybrid schedule at our [city] office / remotely from [state]]."
+            },
+            {
+              "id": "i8",
+              "type": "para",
+              "text": "Start date. Your anticipated start date is [date], subject to the contingencies below. If a contingency is not completed by then, the Company may change your start date."
+            },
+            {
+              "id": "i9",
+              "type": "para",
+              "text": "Compensation. Your starting base salary will be [$amount] per year [or [$amount] per hour], less applicable withholdings and deductions, paid in accordance with the Company's regular payroll practices [on a semi-monthly basis]. [Non-exempt: You will be paid overtime as required by law.]"
+            },
+            {
+              "id": "i10",
+              "type": "para",
+              "text": "Annual bonus. You will be eligible to participate in the [Company] Annual Incentive Plan, with a target award of [x]% of your eligible base salary earnings, prorated for the part of the plan year in which you are employed. Actual awards depend on Company and individual performance, are determined under and subject to the terms of the plan, and are not guaranteed."
+            },
+            {
+              "id": "i11",
+              "type": "para",
+              "text": "Equity. Subject to approval by the Company's Board of Directors or its Compensation Committee (or an authorized delegate), you will be granted restricted stock units ('RSUs') with a target grant value of [$amount]. The number of RSUs will be determined by dividing the target value by the average closing price of the Company's common stock over the [30] trading days before the grant date, and the award will be granted on the Company's regular new-hire grant date after your start date. The RSUs will vest over four years, with 25% vesting on the first anniversary of the vesting commencement date and the remainder in equal quarterly installments, subject to your continued service on each vesting date. The award will be governed by the [Company] [Year] Equity Incentive Plan and your award agreement, which control if they differ from this letter.",
+              "detail": "State a target value, never a share count (POL-27). Inducement awards outside the plan need independent director or Committee approval and a press release."
+            },
+            {
+              "id": "i12",
+              "type": "para",
+              "text": "Benefits and time off. You will be eligible to participate in the Company's employee benefit programs, including medical, dental and vision coverage, the 401(k) plan and the Employee Stock Purchase Plan, subject to the terms of those plans, which the Company may change. You will [accrue [x] days of vacation per year / be eligible for flexible time off] and receive paid sick leave and holidays under Company policy and applicable law."
+            },
+            {
+              "id": "i13",
+              "type": "para",
+              "text": "Sign-on bonus. [If approved:] You are also eligible for a one-time sign-on bonus of [$amount] under a separate Sign-On Bonus Agreement, enclosed for your review. Accepting this offer does not require you to accept the sign-on bonus."
+            },
+            {
+              "id": "i14",
+              "type": "para",
+              "text": "Contingencies. This offer and your employment are contingent on: (a) satisfactory completion of a background check after you accept this offer, conducted in accordance with the Fair Credit Reporting Act and applicable state and local law, including fair-chance laws; (b) your providing, within three business days of your start date, documents that establish your identity and authorization to work in the United States, as required for Form I-9; (c) [for roles requiring access to export-controlled technology:] the Company obtaining any export license or other U.S. government authorization required for you to perform the role, which may affect your start date; and (d) your signing, on or before your start date, the Company's Employee Confidential Information and Invention Assignment Agreement (enclosed).",
+              "detail": "Contingency (c) describes a licensing requirement for the role, not a citizenship requirement: include it only for flagged roles and never request citizenship documents under it. Remove (a) if the role has no check."
+            },
+            {
+              "id": "i15",
+              "type": "para",
+              "text": "Prior obligations. By accepting this offer, you confirm that you are not bound by any agreement that would prevent you from performing this role, or that you have told us about any such agreement in writing. You agree not to bring to the Company, use or disclose any confidential information or property belonging to a former employer or anyone else, and to return any such information before you start."
+            },
+            {
+              "id": "i16",
+              "type": "para",
+              "text": "At-will employment. Your employment with the Company is 'at will.' This means that you or the Company may end the employment relationship at any time, with or without cause or advance notice. [Any introductory period does not change the at-will nature of your employment.] Only the [Chief Executive Officer / Chief People Officer] may change the at-will nature of your employment, and only in a written agreement signed by that officer and by you."
+            },
+            {
+              "id": "i17",
+              "type": "para",
+              "text": "Protected rights. Nothing in this letter or in any Company agreement or policy prevents you from filing a charge or complaint with, communicating with or providing information to any government agency, including the Securities and Exchange Commission, the Equal Employment Opportunity Commission or the National Labor Relations Board; from discussing or disclosing your wages or information about unlawful acts in the workplace; or from receiving a whistleblower award."
+            },
+            {
+              "id": "i18",
+              "type": "para",
+              "text": "Entire agreement. This letter, together with the Employee Confidential Information and Invention Assignment Agreement [and the Sign-On Bonus Agreement], sets out the terms of your offer and replaces any earlier discussions or representations about it. It is governed by the laws of the state where you primarily work.",
+              "detail": "California: California law and forum only (LC 925). North Carolina: no out-of-state forum or jury waiver (G.S. 22B-3, 22B-10). Texas: Texas law and venue."
+            },
+            {
+              "id": "i19",
+              "type": "para",
+              "text": "To accept, please sign and return this letter by [date]. We're excited about the possibility of you joining [Company]. Sincerely, [Name], [Title] | Accepted: ____________________ [Candidate name] Date: __________"
+            }
+          ]
+        },
+        {
+          "title": "Sign-on bonus agreement (California AB 692)",
+          "intro": "For California workers, agreements entered on or after 1 Jan 2026 may not require repayment of training, relocation or other debts on separation (B&P 16608; LC 926). A sign-on bonus may carry repayment only under the discretionary-payment exception. This agreement is built to fit it and is used in every US state.",
+          "items": [
+            {
+              "id": "i20",
+              "type": "note",
+              "text": "Exception conditions, all of which must be met (verify against the statute before each use): the terms are in an agreement separate from the offer letter and employment contract; the worker is told of the right to consult an attorney and has at least 5 business days to do so; repayment is prorated for the unfinished retention period and carries no interest; the retention period is no longer than 2 years; and the worker may defer receipt to the end of the retention period with no repayment obligation. Repayment may be triggered only by a voluntary separation or a termination for misconduct."
+            },
+            {
+              "id": "i21",
+              "type": "note",
+              "text": "AB 1697, an urgency bill with Governor action due by 30 Sep 2026, would move AB 692's start date to 1 Jan 2027 and extend the exception to retention bonuses. Keep using this agreement until Legal updates the template; violations carry minimum damages of $5,000 per worker plus attorney fees."
+            },
+            {
+              "id": "i22",
+              "type": "para",
+              "text": "Sign-On Bonus Agreement. [Company] will pay you a one-time sign-on bonus of [$amount], less applicable withholdings, within [30] days after your start date. This Agreement is separate from your offer letter and any employment agreement, and accepting the bonus is not a condition of your employment."
+            },
+            {
+              "id": "i23",
+              "type": "para",
+              "text": "Option to defer. You may instead choose to receive the bonus at the end of the retention period described below, in which case no repayment obligation applies. Please mark your choice: [ ] Pay the bonus after my start date, subject to the repayment terms below. [ ] Defer the bonus to the end of the retention period, with no repayment obligation."
+            },
+            {
+              "id": "i24",
+              "type": "para",
+              "text": "Repayment. If, within [12] months after your start date (the 'retention period'), you resign voluntarily or your employment is terminated for misconduct, you agree to repay the unearned portion of the bonus, reduced pro rata for each full month you remained employed during the retention period. No interest, fees or other charges apply. No repayment is owed if [Company] ends your employment for any other reason, including a reduction in force, or if you resign because of [Company]'s material breach."
+            },
+            {
+              "id": "i25",
+              "type": "para",
+              "text": "Method of repayment. [Company] will not deduct any repayment from your wages or final pay. Any amount due will be invoiced, and you may pay it in instalments over up to [12] months without interest."
+            },
+            {
+              "id": "i26",
+              "type": "para",
+              "text": "Right to consult an attorney. You have the right to consult an attorney about this Agreement, and you have at least five business days to do so before signing. If applicable law does not permit a repayment obligation for you, the repayment paragraph does not apply."
+            },
+            {
+              "id": "i27",
+              "type": "check",
+              "text": "The agreement is sent at least 5 business days before the signature deadline and signed before any payment, the deferral choice is recorded, and the retention period is no more than 12 months without Total Rewards approval (never more than 24).",
+              "owner": "Recruiter"
+            }
+          ]
+        },
+        {
+          "title": "Country clause library",
+          "intro": "Non-US hires are employed by the local entity under a local-law contract, and some US states need inserts. These blocks give what each jurisdiction's offer or contract must contain; Legal holds the full local templates.",
+          "items": [
+            {
+              "id": "i28",
+              "type": "note",
+              "text": "Canada termination clause caution: in Ontario, one ESA-non-compliant sentence, including the for-cause clause, voids every termination provision (Waksdale, 2020 ONCA 391). Dufault v. Ignace (2024 ONCA 915; SCC leave denied June 2025) voided a clause over 'sole discretion ... at any time' wording, its cause definition and its benefits wording. Baker v. Van Dolder's Home Team / Li v. Wayfair (2026 ONCA 568, Aug 2026) held that 'at any time' and 'for any reason' can survive where the contract, read as a whole, repeatedly guarantees ESA minimums; watch for an SCC leave application. Use only the Legal-approved clause, avoid 'sole discretion', and never edit it for an individual offer."
+            },
+            {
+              "id": "i29",
+              "type": "para",
+              "text": "Canada (Ontario / BC) termination clause [Legal-approved text; do not edit]: 'Termination without cause. [Company] may end your employment without cause by providing you with the minimum notice of termination or pay in lieu of notice, severance pay or compensation for length of service (if applicable), continuation of your benefits during the statutory notice period, and any other entitlements required by the [Employment Standards Act, 2000 (Ontario) / Employment Standards Act (British Columbia)], as amended. You agree that these statutory entitlements satisfy in full any notice or pay in lieu of notice you would otherwise be entitled to at common law. Termination for cause. [Company] may end your employment without notice or pay in lieu only in circumstances in which the employment standards legislation requires no notice or severance. Minimum standards. If the employment standards legislation requires any greater notice, payment or benefit than this agreement provides, you will receive the statutory minimum instead; nothing in this agreement is intended to provide less.'"
+            },
+            {
+              "id": "i30",
+              "type": "para",
+              "text": "Canada, other required clauses: 'This offer is conditional on your signing this agreement before your start date.' 'You assign to [Company] all rights in inventions and works you create in the course of your employment and waive your moral rights in them to the extent permitted by law.' 'Equity awards are governed by the plan and award agreement; unvested awards will not continue to vest during any period of notice or pay in lieu beyond the minimum period required by the employment standards legislation.'",
+              "detail": "Signed before Day 1, or changes need fresh consideration. Equity forfeiture wording must be clear and unambiguous (Matthews). No Ontario non-compete below the C-suite (ESA s.67.2). Ontario (25+): give the new-hire information statement before Day 1."
+            },
+            {
+              "id": "i31",
+              "type": "para",
+              "text": "Colorado non-compete notice [separate document, only if a non-compete or customer non-solicit is used]: 'Notice of Restrictive Covenant. The [agreement name] that [Company] is asking you to sign contains a covenant not to compete [and a covenant not to solicit customers] that could restrict your options for subsequent employment following your separation from [Company]. The covenant is in section[s] [x] of the enclosed agreement. Please sign below to confirm that you received this notice before accepting our offer.' Employee signature: __________ Date: __________",
+              "detail": "Give it with the offer so the candidate receives it before accepting, as a separate, signed document in clear terms (C.R.S. 8-2-113(4)). The covenant is valid only for highly compensated workers ($130,014 in 2026; customer non-solicits $78,008.40), to protect trade secrets, with Colorado law and venue; non-compliant covenants carry $5,000 penalties per worker. Company default: no non-competes."
+            },
+            {
+              "id": "i32",
+              "type": "para",
+              "text": "Washington noncompetition disclosure [only if a noncompete is used before 30 June 2027]: 'The terms of the noncompetition covenant [Company] will require you to sign are set out in section [x] of the enclosed [agreement name]. [Company] is disclosing these terms to you in writing before you accept this offer. The covenant is enforceable only if your annualized earnings exceed the threshold set under RCW 49.62 ($126,858.83 in 2026).'",
+              "detail": "Written disclosure no later than initial acceptance of the offer (RCW 49.62.020); if the covenant may become enforceable later, say so. All Washington noncompetes become void on 30 June 2027 (ESHB 1155), so the default is none. The PIIA needs the RCW 49.44.140 invention notice."
+            },
+            {
+              "id": "i33",
+              "type": "para",
+              "text": "North Carolina wage insert: 'Your salary will be paid [semi-monthly on the 15th and last day of each month] by direct deposit [or at [location]]. The Company's vacation/PTO and bonus policies are enclosed, including the conditions under which unused vacation or an unearned bonus is forfeited.'",
+              "detail": "Written wages, payday and place of payment are required (G.S. 95-25.13). Have any non-compete signed with the offer, when new employment is the consideration."
+            },
+            {
+              "id": "i34",
+              "type": "note",
+              "text": "Texas: use the Texas package (at-will, Texas law and venue, payday schedule, written bonus and vacation-payout terms). Any non-compete or non-solicit must be ancillary to confidential information or equity (Bus. & Com. Code 15.50); offers may not require COVID-19 vaccination (SB 7); repayments can be deducted from wages only with written authorization (Labor Code 61.018)."
+            },
+            {
+              "id": "i35",
+              "type": "note",
+              "text": "California: no non-compete (B&P 16600) and no non-California law or forum (LC 925). The PIIA carries the LC 2870 invention notice and the DTSA immunity notice, and non-exempt hires also get the LC 2810.5 wage notice."
+            },
+            {
+              "id": "i36",
+              "type": "para",
+              "text": "Germany: particulars of employment (NachwG §2), in the German-law contract (bilingual recommended): 'Parties: [Company GmbH], [address], and [employee name], [address]. Start date: [date]. [Fixed term until [date].] Place of work: [office] [; mobile work under company policy]. Position and duties: [job title and description]. Probation: [up to 6] months, with two weeks' notice during probation. Pay: gross annual salary EUR [amount], paid in 12 monthly instalments at the end of each month by bank transfer; [overtime compensated by [time off / payment at [rate]]]; [variable pay under the [plan]]. Working time: [40] hours a week, with rest breaks and rest periods under the Working Hours Act; [flextime / shift system]; overtime may be ordered within legal limits. Annual leave: [30] working days (including the 20-day statutory minimum on a 5-day week). Training: [any employer-provided training entitlement]. Company pension: [provider name and address, if applicable]. Termination: notice periods under §622 BGB [or [x] months to month-end]; notice must be in writing with a handwritten signature (§623 BGB); an employee who wishes to challenge a dismissal must file a claim with the labour court within three weeks of receiving it (§4 KSchG). Collective and works agreements: [references / none].'"
+            },
+            {
+              "id": "i37",
+              "type": "note",
+              "text": "Germany timing: parties, pay and working time by day 1; start date, fixed-term end, place, duties, probation and overtime by day 7; the rest within 1 month (§2 NachwG). Text form is allowed since 2025 if the employee can store and print it and is asked to confirm receipt, with paper on request; fines up to EUR 2,000 per breach. A fixed-term clause needs wet-ink (or qualified e-signature) signatures before the start (§14(4) TzBfG); with more than 20 employees the works council must consent to the hire (§99 BetrVG); non-competes need at least 50% Karenzentschädigung (§74 HGB); invention terms follow the ArbnErfG. No US at-will or US governing-law terms."
+            },
+            {
+              "id": "i38",
+              "type": "para",
+              "text": "Israel: notice of employment terms (Notice to Employee and Job Candidate Law 2002), which may be combined with the signed agreement if it covers every item: 'Employer: [Company Israel Ltd.], [address], company no. [x]. Employee: [name], ID no. [x], [address]. Start date: [date]; term: [indefinite / until [date]]. Position and main duties: [x]. Direct supervisor: [title]. Pay: total monthly salary NIS [amount], comprising base salary NIS [x] [and global overtime of NIS [x] for up to [y] overtime hours a month], paid by the [9th] of the following month. Working hours: [x] hours a week over [5] days; weekly rest day: [Saturday / other]. Social benefits: pension at [6]% employee and [6.5]% employer contributions, plus [8.33]% employer severance contributions under a Section 14 arrangement, to [fund]; study fund (keren hishtalmut) at [2.5]% employee and [7.5]% employer. Employers' organization or collective agreement: [none / name].'"
+            },
+            {
+              "id": "i39",
+              "type": "note",
+              "text": "Israel: deliver within 30 days of the start date and give later changes in writing. The agreement also needs the Section 14 annex, an invention assignment with an explicit waiver of royalties under Patents Law s.134, confidentiality and notice terms, and (for equity) the Section 102 trustee route. Use special-trust status or global overtime only where genuine; check minimum pension rates against the current extension order (verify)."
+            },
+            {
+              "id": "i40",
+              "type": "para",
+              "text": "India: appointment letter (OSH Code s.6(1)(f)), issued at joining after the offer letter: 'You are appointed as [designation] in [department] of [Company India Pvt. Ltd.] at [work location], with effect from [date of joining]. For the purposes of the labour codes you are classified as [a worker / an employee employed mainly in a managerial or administrative capacity / a supervisor earning above the prescribed limit]. Your annual cost to company is INR [amount], of which wages (basic pay, dearness allowance and retaining allowance) are INR [amount], not less than 50% of total remuneration, as shown in Annexure A. You will be enrolled in the Employees' Provident Fund [and ESI, if eligible] and will be eligible for gratuity under the Code on Social Security, 2020. Probation: [6] months. Working hours: [x] hours a day and [y] a week. Notice: [x] months' written notice or pay in lieu[, subject to the Industrial Relations Code for workers]. You are bound by the enclosed confidentiality and intellectual property assignment agreement and the Code of Conduct.'"
+            },
+            {
+              "id": "i41",
+              "type": "note",
+              "text": "India: record the worker or non-worker category accurately (it drives retrenchment compensation, standing orders and grievance rights), check whether state rules prescribe a form (verify for Karnataka and Telangana), and pay e-stamp duty on the employment agreement at execution. Post-employment non-competes are void (Contract Act s.27), and joining-bonus clawbacks must be reasonable, pro-rated liquidated damages."
+            },
+            {
+              "id": "i42",
+              "type": "para",
+              "text": "China: labour contract terms (LCL Art. 17), bilingual with Chinese prevailing: 'Employer: [Company (Shanghai) Co., Ltd.], address [x], legal representative [x]. Employee: [name], ID no. [x], address [x]. Term: [fixed term of [3] years from [date] / open-ended]. Probation: [up to 6] months at not less than 80% of the agreed salary. Position and work location: [x], [city]. Working hours: [standard working hours / comprehensive or flexible system approved by the labour bureau]; rest and leave per law and the employee handbook. Remuneration: monthly salary RMB [amount], paid on the [x] day of each month [; 13th-month salary: [contractual / discretionary]]. Social insurance and housing fund: per local regulations. Labour protection, working conditions and occupational hazard protection: per law and company rules. [Confidentiality; non-compete only for senior management, senior technical and confidential staff, with monthly compensation.]'"
+            },
+            {
+              "id": "i43",
+              "type": "note",
+              "text": "China: sign the written contract on or before Day 1 and never later than one month after the start, or double wages accrue from month 2 for up to 11 months and an open-ended contract is deemed after a year (LCL Arts. 10, 14, 82). The accepted offer letter is itself binding. Probation is capped by term (1 month for terms under a year, 2 months for 1-3 years, 6 months for 3+ years or open-ended), and non-compete compensation must be at least 30% of prior average monthly pay."
+            },
+            {
+              "id": "i44",
+              "type": "para",
+              "text": "Taiwan: employment contract terms (LSA Enforcement Rules Art. 7), with a Traditional Chinese version: 'Term: non-fixed (indefinite). Work location and duties: [x], [city]; any transfer will follow the five principles in LSA Art. 10-1. Working hours: [8] hours a day and [40] a week [, flexible start between [x] and [y]]; overtime requires prior approval and is paid under LSA Art. 24 [or taken as compensatory leave if you choose]. Wages: monthly wage NT$[amount], comprising [base salary and fixed allowances], paid on the [x] of each month; [year-end bonus: [discretionary / guaranteed [x] months]]. Leave: annual leave, holidays and other leave per the LSA and the work rules. Pension: at least 6% employer contribution to your Labor Pension individual account. Termination and severance: per the LSA and the Labor Pension Act. Safety and health, training, welfare, occupational-injury compensation, and rewards and discipline: per the work rules.'"
+            },
+            {
+              "id": "i45",
+              "type": "note",
+              "text": "Taiwan: don't use fixed-term contracts for ongoing roles (LSA Art. 9). Name the employer as author of works made for hire (Copyright Act Art. 11), address service-invention remuneration (Patent Act Art. 7), and make any post-employment non-compete meet LSA Art. 9-1 (in writing, at most 2 years, compensation of at least 50% of average monthly wage)."
+            },
+            {
+              "id": "i46",
+              "type": "para",
+              "text": "Vietnam: labour contract content (Labor Code 2019 Art. 21; Circular 10/2020), in Vietnamese (bilingual for foreigners), two originals or a registered e-contract: 'Employer: [Company Vietnam LLC], [address], represented by [name, title]. Employee: [name], date of birth [x], sex [x], residence [x], personal ID no. [x] [; work permit no. [x]]. Job and workplace: [title and duties], [address]. Term: [indefinite / definite term of [x] months, not more than 36]. Salary: VND [amount] gross per month plus allowances [list], paid by bank transfer on the [x] of each month; salary review [annually]. Working hours and rest: [8] hours a day, [40] hours a week; annual leave of [12+] days. Probation: [up to 60] days at [at least 85]% of salary [in this contract / a separate probation agreement]. Social, health and unemployment insurance: per law. Training: [x]. Protective equipment: [as required]. Annex: confidentiality, trade secrets and IP assignment (Art. 21(2)).'",
+              "detail": "Sign before work starts; an offer letter doesn't replace the contract. E-contracts go through a licensed provider and the national platform (Decree 337/2025), and a foreign employee's contract can't outlast the work permit."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Choose the template by work location and employing entity. A US at-will letter used for a Canadian, German, Israeli or Asian hire is the costliest drafting mistake in this library (e.g., uncapped common-law notice in Canada).",
+        "Offer letters give a target equity value subject to Board or Committee approval and plan terms, never a share count; grants follow the equity grant calendar (POL-27).",
+        "Repayment terms never go in the offer letter: sign-on repayment sits only in the standalone agreement, and relocation, training or immigration-cost repayment isn't used for California workers (AB 692).",
+        "Contingencies are listed, time-bound and lawful: background check after the conditional offer, I-9 within three business days of the start, export authorization only for flagged roles, and the PIIA signed by Day 1.",
+        "Every letter and PIIA includes protected-rights wording (SEC Rule 21F-17, NLRA, California Silenced No More) so that no term can be read as blocking reports to regulators.",
+        "Local contracts are signed before Day 1 almost everywhere (Canada for enforceability, Vietnam before work starts, Germany for fixed terms, China within one month at the latest); Greenhouse holds the start date until the signed copy is uploaded.",
+        "Clause library text is controlled by Legal. Recruiters fill in brackets only, and requested changes go through the deviation workflow in T-OFFER-APPROVAL."
+      ],
+      "countryNotes": {
+        "us": "Offer letters state at-will status, exempt or non-exempt classification and the contingencies, and the PIIA carries the DTSA immunity notice and state invention notices. Don't use non-competes in MN, ND, OK, WY or California, or in Washington from 30 June 2027, and check income thresholds in other states.",
+        "us-ca": "Use California law and forum (LC 925), no non-compete (B&P 16600), the LC 2870 invention notice, and no repayment terms except a standalone sign-on bonus agreement that fits the AB 692 exception. Exempt pay must be at least $70,304 in 2026 ($72,384 in 2027), and non-exempt hires get the LC 2810.5 wage notice.",
+        "us-co": "Any non-compete or customer non-solicit needs the separate signed notice before acceptance, the 2026 pay threshold ($130,014 or $78,008.40), a trade-secret purpose and Colorado law and venue (C.R.S. 8-2-113). Training-cost repayment is allowed only for non-routine training, prorated.",
+        "us-nc": "State the promised wages and the day and place of payment in writing, and attach the PTO and bonus forfeiture policies (G.S. 95-25.13). Have non-competes signed with the offer; out-of-state forum and jury-waiver clauses are void (G.S. 22B-3, 22B-10).",
+        "us-tx": "Use the Texas template: at-will, Texas law and venue, the payday schedule and written bonus and vacation terms, with any non-compete ancillary to confidential information or equity (Bus. & Com. Code 15.50). Repayments can be deducted from wages only with written authorization (Labor Code 61.018).",
+        "us-wa": "Disclose any noncompete in writing by offer acceptance and meet the $126,858.83 threshold (2026); all noncompetes become void on 30 June 2027 (ESHB 1155). Exempt offers must meet $80,168.40 (2026), and the PIIA needs the RCW 49.44.140 invention notice.",
+        "ca": "Use a Canadian contract with the Legal-approved ESA-compliant termination clause (Waksdale; Dufault; Baker, 2026 ONCA 568), IP assignment with a moral-rights waiver and Matthews-compliant equity wording, signed before the start date. Ontario non-competes are void below the C-suite, and Ontario employers with 25+ employees give the new-hire information statement before Day 1.",
+        "de": "Issue a German-law contract that covers the NachwG particulars on the statutory timeline, with probation of up to 6 months, ArbnErfG-compliant invention terms and any non-compete only with 50% Karenzentschädigung. Fixed-term clauses need wet-ink signatures before the start, and hires need works council consent above 20 employees.",
+        "il": "Use an Israeli-law agreement with the Section 14 annex, pension and study-fund rates, an invention assignment with an explicit s.134 waiver, and special-trust or global-overtime terms only where genuine. Deliver the statutory notice of terms within 30 days of the start date.",
+        "in": "Issue the offer letter, then the statutory appointment letter at joining with the worker or non-worker category and a pay structure meeting the 50% 'wages' rule. Stamp the employment agreement, and don't rely on post-employment non-competes (Contract Act s.27).",
+        "tw": "Put the Enforcement Rules Art. 7 terms in writing with a Traditional Chinese version, use indefinite-term contracts for ongoing roles, and meet LSA Art. 9-1 for any non-compete. Name the employer as author of works made for hire and address service-invention remuneration.",
+        "cn": "Sign the Chinese or bilingual labour contract with the LCL Art. 17 terms on or before Day 1, and never later than one month, or double wages accrue. Probation must match the contract term at 80%+ pay, and non-competes are limited to senior and confidential staff with monthly compensation.",
+        "vn": "Sign the Vietnamese (or bilingual) labour contract with the Art. 21 content and the confidentiality and IP annex before work starts. Definite terms run at most 36 months, probation for degree-level roles is at most 60 days at 85%+ pay, and a foreigner's contract can't outlast the work permit."
+      },
+      "processes": [
+        "TA-04",
+        "ON-01"
+      ],
+      "policies": [
+        "POL-23",
+        "POL-24",
+        "POL-27",
+        "POL-31",
+        "POL-48",
+        "POL-16",
+        "POL-17",
+        "POL-18",
+        "POL-21"
+      ]
+    },
+    {
+      "id": "T-REFERENCE-CHECK",
+      "name": "Reference check guide",
+      "category": "Recruit",
+      "format": "guide",
+      "purpose": "A structured, consent-based reference call that tests the same competencies as the interview loop and produces evidence the hiring team can weigh. It keeps reference checks lawful across countries, avoids prohibited topics, and flags when a reference becomes a regulated consumer report.",
+      "audience": "Recruiters and hiring managers who conduct references; TA Operations and the background-check vendor for vendor-run references.",
+      "when": "For the preferred finalist after the final-round debrief, or after the conditional offer where Legal requires it; always completed before the start date (TA-05).",
+      "owner": "Talent Acquisition (guide and process); Legal (country rules and adverse decisions)",
+      "sections": [
+        {
+          "title": "Consent and set-up",
+          "intro": "No call is made until every item is complete.",
+          "items": [
+            {
+              "id": "i1",
+              "type": "check",
+              "text": "The candidate has consented in writing (Greenhouse e-signature) to reference checks, naming the referees we may contact and acknowledging the candidate privacy notice.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i2",
+              "type": "check",
+              "text": "The candidate chose the referees: 2-3 people, including at least one former manager. A current-employer reference is taken only if the candidate agrees, normally after they have accepted the offer.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i3",
+              "type": "check",
+              "text": "No backdoor references: we don't contact anyone the candidate hasn't agreed to, including mutual connections or former colleagues found online.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i4",
+              "type": "check",
+              "text": "Timing agreed: references for the preferred finalist only, after the final debrief [or after the conditional offer where Legal requires it], completed within 5 business days.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i5",
+              "type": "check",
+              "text": "Each referee's identity and relationship are confirmed through a company email address, switchboard or professional profile, not only a mobile number supplied by the candidate.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i6",
+              "type": "note",
+              "text": "References run by a third-party vendor are consumer reports in the US (investigative consumer reports when the vendor interviews people), so the FCRA disclosure, authorization and adverse action steps apply, and California needs the separate ICRAA disclosure (T-FCRA-NOTICES)."
+            },
+            {
+              "id": "i7",
+              "type": "note",
+              "text": "Use the same questions for every finalist for the role so that references can be compared fairly, and have one person (recruiter or hiring manager) run all of a candidate's references."
+            }
+          ]
+        },
+        {
+          "title": "Who to call",
+          "items": [
+            {
+              "id": "i8",
+              "type": "field",
+              "text": "Referee name, title and company"
+            },
+            {
+              "id": "i9",
+              "type": "field",
+              "text": "Relationship to the candidate",
+              "detail": "Manager / skip-level manager / peer (same or another site) / direct report / customer or partner. Aim for one former manager and one cross-site peer; for people managers, add a former direct report."
+            },
+            {
+              "id": "i10",
+              "type": "field",
+              "text": "Period of working together and projects in common",
+              "detail": "References with less than 6 months' overlap, or from more than 7 years ago, carry less weight."
+            },
+            {
+              "id": "i11",
+              "type": "field",
+              "text": "Consent record and date",
+              "detail": "Link to the candidate's signed consent listing this referee."
+            },
+            {
+              "id": "i12",
+              "type": "note",
+              "text": "Avoid personal friends and relatives. If a referee's employer allows them to confirm only dates and title, thank them and ask the candidate for another referee; don't press."
+            }
+          ]
+        },
+        {
+          "title": "Opening script",
+          "items": [
+            {
+              "id": "i13",
+              "type": "say",
+              "text": "Hello [Referee name], this is [your name], [title] at [Company]. [Candidate name] has applied for a [Job title] role with us and gave us your name as a reference. Is this still a good time for about 20 minutes?"
+            },
+            {
+              "id": "i14",
+              "type": "say",
+              "text": "[Candidate name] has consented to this call. I'll ask about your experience of working with them, and my notes go only to our hiring team."
+            },
+            {
+              "id": "i15",
+              "type": "say",
+              "text": "We keep your comments confidential within our hiring process as far as the law allows. In some countries the candidate can ask to see the information we hold about them.",
+              "detail": "Don't promise absolute confidentiality: access rights exist under the GDPR, PIPL, CCPA, Israeli privacy law and others."
+            },
+            {
+              "id": "i16",
+              "type": "say",
+              "text": "Please don't share anything confidential about your company, its products or its customers. I'm only interested in how [Candidate name] worked."
+            },
+            {
+              "id": "i17",
+              "type": "say",
+              "text": "Could you start by describing how you worked with [Candidate name]: your role, their role, and roughly when?"
+            }
+          ]
+        },
+        {
+          "title": "Structured questions",
+          "intro": "Ask each question as written and in this order. Record specific examples, in the referee's words where possible.",
+          "items": [
+            {
+              "id": "i18",
+              "type": "question",
+              "text": "What were [Candidate]'s main responsibilities, and what was the scope of their work (team size, products, sites)?",
+              "detail": "Check that the scope matches the level we're hiring at."
+            },
+            {
+              "id": "i19",
+              "type": "question",
+              "text": "How would you describe the depth of their technical expertise in [area from the role]? Where were they the person others went to?"
+            },
+            {
+              "id": "i20",
+              "type": "question",
+              "text": "Tell me about a difficult technical problem or bug they worked on. What was their personal contribution?"
+            },
+            {
+              "id": "i21",
+              "type": "question",
+              "text": "How did they work with teams in other sites, time zones or functions? Can you give me an example?"
+            },
+            {
+              "id": "i22",
+              "type": "question",
+              "text": "Tell me about a time something they owned went wrong or slipped. How did they respond?"
+            },
+            {
+              "id": "i23",
+              "type": "question",
+              "text": "How did they communicate status, risks and bad news to you and to others?"
+            },
+            {
+              "id": "i24",
+              "type": "question",
+              "text": "What feedback did you give them most often, and how did they act on it?"
+            },
+            {
+              "id": "i25",
+              "type": "question",
+              "text": "In a role like [brief description], where would they be strongest, and where would they benefit from support?"
+            },
+            {
+              "id": "i26",
+              "type": "question",
+              "text": "For people managers: How did they build and develop their team, and how did they handle a performance problem?"
+            },
+            {
+              "id": "i27",
+              "type": "question",
+              "text": "On a scale of 1 to 10, how would you rate their overall performance compared with others you've worked with at the same level? What would have made it a 10?"
+            },
+            {
+              "id": "i28",
+              "type": "question",
+              "text": "Would you work with them again, or hire them if you could? Why or why not?"
+            },
+            {
+              "id": "i29",
+              "type": "question",
+              "text": "Is there anything else we should know that would help them succeed here?"
+            }
+          ]
+        },
+        {
+          "title": "Probes and red flags",
+          "items": [
+            {
+              "id": "i30",
+              "type": "prompt",
+              "text": "Probes for any answer: 'Can you give me a specific example?' 'What did [Candidate] do personally, as opposed to the team?' 'What was the result?' 'How did that compare with others at the same level?'"
+            },
+            {
+              "id": "i31",
+              "type": "prompt",
+              "text": "If answers are vague or very short: 'It sounds as though some of this may be hard to talk about. Is there anything you're not able to share, or would you prefer we move on?'",
+              "detail": "Some employers restrict references. Accept that without drawing conclusions."
+            },
+            {
+              "id": "i32",
+              "type": "note",
+              "text": "Red flag: the referee can't confirm the candidate's role, level, dates or the projects the candidate described, or describes a materially different scope."
+            },
+            {
+              "id": "i33",
+              "type": "note",
+              "text": "Red flag: consistent faint praise, long pauses or a qualified answer to the 'work with them again' question, especially from a former manager. Probe once, then record what was said."
+            },
+            {
+              "id": "i34",
+              "type": "note",
+              "text": "Red flag: the referee appears to be a friend or relative, seems coached, or can't give a single specific example."
+            },
+            {
+              "id": "i35",
+              "type": "note",
+              "text": "Red flag: the referee suggests the candidate took, shared or offered an employer's confidential information or code. Stop that line of questioning, don't ask for details, and escalate to Legal."
+            },
+            {
+              "id": "i36",
+              "type": "note",
+              "text": "One negative reference isn't decisive. Weigh it against the interview evidence and the other references; if it could change the decision, discuss it with the hiring manager and consider letting the candidate respond, without naming the referee unless they agree."
+            }
+          ]
+        },
+        {
+          "title": "What not to ask",
+          "items": [
+            {
+              "id": "i37",
+              "type": "note",
+              "text": "Health, disability, sick or medical leave, workers' compensation claims or accommodations; pregnancy, maternity or parental leave; family or childcare arrangements."
+            },
+            {
+              "id": "i38",
+              "type": "note",
+              "text": "Age, national origin, citizenship, religion, caste, race, sexual orientation, gender identity, marital status, union membership or activity, political views, and (Israel) reserve duty."
+            },
+            {
+              "id": "i39",
+              "type": "note",
+              "text": "Pay history, including base, bonus or equity at the referee's company. Banned in California, Colorado, Washington, BC and many other US states and cities, and the bans cover questions through third parties."
+            },
+            {
+              "id": "i40",
+              "type": "note",
+              "text": "Criminal history, arrests or legal disputes, and whether the candidate filed complaints, took part in investigations, blew the whistle or sued an employer. Asking can itself be evidence of retaliation."
+            },
+            {
+              "id": "i41",
+              "type": "note",
+              "text": "Confidential information about the referee's company, its products, customers or roadmaps, and requests for performance ratings or HR documents."
+            },
+            {
+              "id": "i42",
+              "type": "say",
+              "text": "Thanks; that's not something we take into account. Could you tell me more about [work topic]?",
+              "detail": "Use this if a referee volunteers protected information. Don't follow up and don't record it."
+            }
+          ]
+        },
+        {
+          "title": "Recording and decision",
+          "items": [
+            {
+              "id": "i43",
+              "type": "field",
+              "text": "Reference summary for each referee",
+              "detail": "Relationship and overlap; answers by question with specific examples; overall assessment against the competencies; any red flags, with the evidence. Facts and quotes, not impressions."
+            },
+            {
+              "id": "i44",
+              "type": "field",
+              "text": "Overall reference outcome",
+              "detail": "Supports hire / Supports hire with development points / Concerns requiring discussion. Recorded in the Greenhouse reference form within 1 business day of the last call."
+            },
+            {
+              "id": "i45",
+              "type": "check",
+              "text": "No protected information, pay history or confidential employer information is recorded, even if the referee volunteered it."
+            },
+            {
+              "id": "i46",
+              "type": "check",
+              "text": "Only the recruiter, hiring manager and approvers can see the reference form; it is kept on the TA-11 retention schedule and never filed in the personnel file."
+            },
+            {
+              "id": "i47",
+              "type": "note",
+              "text": "If a vendor-run reference contributes to withdrawing a US offer, follow the FCRA pre-adverse and adverse action steps in T-FCRA-NOTICES. For recruiter-run references, Legal decides what notice to give."
+            },
+            {
+              "id": "i48",
+              "type": "note",
+              "text": "Candidates may ask to see what we recorded (GDPR, PIPL, CCPA, DPDP, Israeli privacy law, Vietnam PDPL), so write every summary as if the candidate and the referee will read it."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "References test evidence, not reputation: the questions mirror the interview competencies so the hiring manager can compare them with the scorecards.",
+        "Consent comes first everywhere: in the US for fairness and, for vendor checks, the FCRA; under the GDPR, PIPL, PDPL, DPDP and Israeli law because contacting referees processes the candidate's personal data.",
+        "Never call a current employer without the candidate's clear agreement; an unauthorized call can cost the candidate their job and expose the company to claims.",
+        "A reference that changes a hiring decision must be documented with job-related evidence, never 'fit' or hearsay.",
+        "Keep notes factual: they can be disclosed to candidates on request and may be discoverable in litigation.",
+        "For hires from direct competitors, references also test clean-hire risk; any hint of trade-secret misuse goes to Legal, not into the debrief."
+      ],
+      "countryNotes": {
+        "us": "Recruiter-run references aren't regulated by the FCRA, but vendor-run references are consumer reports (investigative reports when the vendor interviews people) and need disclosure, authorization and adverse action steps. Don't ask about pay history where banned, or about disability or medical leave (ADA, FMLA).",
+        "us-ca": "Vendor-run references need the separate ICRAA disclosure and a box to request a copy (Civ. Code 1786), and pay-history questions are banned, including through agents (LC 432.3). Truthful references are privileged (Civil Code 47(c)), and reference notes fall under CCPA access rights.",
+        "us-co": "Colorado presumes good faith for employers who disclose job-performance information (C.R.S. 8-2-114), so former employers may say more. Don't ask about salary history, age or graduation dates, or sealed records.",
+        "us-nc": "Accurate, good-faith references on performance and reasons for separation have qualified immunity (G.S. 1-539.12), so referees may answer more fully. Don't ask about expunged records (G.S. 15A-153).",
+        "us-tx": "Performance references are immune unless knowingly false or reckless (Labor Code 103.003-103.004), and a truthful discharge reason may be requested; blacklisting is prohibited. Ask candidates from Texas competitors about any non-compete or non-solicit before calling their references.",
+        "us-wa": "Good-faith performance references are immune (RCW 4.24.730), but don't ask about salary history (RCW 49.58.100), criminal history before a conditional offer or cannabis use. Recording a reference call needs the referee's consent (RCW 9.73.030).",
+        "ca": "Get written consent and give notice of the purpose (BC PIPA; Ontario Consumer Reporting Act notice where an agency is used), and don't ask about protected grounds, including record of offences in Ontario. Quebec's Law 25 requires consent for disclosure, so referees there may decline.",
+        "de": "References need the candidate's consent (GDPR Art. 6; BDSG §26) and must stay job-related; contacting a current employer without consent is unlawful. Ask the candidate for their written Arbeitszeugnis, and delete reference notes about 6 months after a rejection.",
+        "il": "Contact referees only with the candidate's consent and give the Amendment 13 privacy notice; candidates may ask for their screening results. Don't ask about reserve duty, pregnancy, fertility treatment or place of residence, and keep notes factual (Prohibition of Defamation Law 1965).",
+        "in": "Use written consent that names the referees and covers vendor verification; former employers need the ex-employee's consent to answer (SPDI Rules now, DPDP Act from May 2027). Relieving and experience letters verify dates and designation.",
+        "tw": "Get written consent under the PDPA before contacting referees, and keep questions job-related. Former employers issue a certificate of service on request (LSA Art. 19), which confirms dates and position.",
+        "cn": "PIPL requires the candidate's consent for reference calls and a notice covering vendors, and former employers answer only with the employee's consent. Always collect the termination certificate and ask about non-compete and confidentiality obligations, since hiring someone still bound creates joint liability (LCL Art. 91).",
+        "vn": "References and verifications need the candidate's consent under the PDPL, and criminal-record or health information must not be sought through referees. Former employers provide working-history documents on request (Labor Code Art. 48(3)), which can replace detailed questions."
+      },
+      "processes": [
+        "TA-05"
+      ],
+      "policies": [
+        "POL-17",
+        "POL-46",
+        "POL-16",
+        "POL-08",
+        "POL-56"
+      ]
+    },
+    {
+      "id": "T-FCRA-NOTICES",
+      "name": "Background check disclosure and adverse action notices",
+      "category": "Recruit",
+      "format": "letter",
+      "purpose": "The US forms and letters for background checks run through a consumer reporting agency: the stand-alone FCRA disclosure, the authorization, the pre-adverse and final adverse action letters and the California Fair Chance Act individualized assessment. With the timeline checklist and state and city variations, they keep every check and every adverse decision procedurally correct.",
+      "audience": "Recruiters and TA Operations (sending), Legal (assessments and adverse decisions), the background-check vendor (reports and disputes).",
+      "when": "After a conditional offer is accepted (TA-05): disclosure and authorization before any report is ordered; the pre-adverse and final notices only when a report may lead to withdrawing the offer.",
+      "owner": "Talent Acquisition Operations (forms and timeline); Legal (individualized assessment and final decision); Background-check vendor (reports and disputes)",
+      "sections": [
+        {
+          "title": "Stand-alone disclosure",
+          "intro": "Shown on its own screen or page before any other form in the vendor portal. It may contain nothing else.",
+          "items": [
+            {
+              "id": "i1",
+              "type": "para",
+              "text": "DISCLOSURE REGARDING BACKGROUND INVESTIGATION. [Company] (the 'Company') may obtain information about you from a third-party consumer reporting agency for employment purposes. As a result, you may be the subject of a 'consumer report' [and an 'investigative consumer report'] prepared by [Vendor name], which may include information about your [identity, employment history, education, professional licenses, criminal history, motor vehicle record (driving roles only), credit history (only for roles where the law allows it)]."
+            },
+            {
+              "id": "i2",
+              "type": "para",
+              "text": "[Only if investigative consumer reports, such as vendor-run reference interviews, will be obtained:] An investigative consumer report may include information about your character, general reputation, personal characteristics and mode of living, obtained through personal interviews with people who know you, such as former employers and references. You have the right, on written request made within a reasonable time, to a complete and accurate disclosure of the nature and scope of the investigation.",
+              "detail": "Answer any such request within 5 days (15 U.S.C. 1681d)."
+            },
+            {
+              "id": "i3",
+              "type": "para",
+              "text": "The consumer reporting agency is [Vendor legal name], [address], [toll-free phone], [website]. Its privacy practices are described at [link]."
+            },
+            {
+              "id": "i4",
+              "type": "note",
+              "text": "The disclosure must be clear and conspicuous and in a document that consists solely of the disclosure (15 U.S.C. 1681b(b)(2)(A)). Don't add liability releases, state notices, at-will acknowledgments or other extra text: courts have allowed class claims over a single extra sentence (Syed v. M-I, 9th Cir. 2017; Gilberg v. California Check Cashing Stores, 9th Cir. 2019)."
+            },
+            {
+              "id": "i5",
+              "type": "note",
+              "text": "Present the disclosure only after a conditional offer (the company-wide standard, which meets California, Washington and other fair-chance laws), and put state notices on separate pages."
+            }
+          ]
+        },
+        {
+          "title": "Authorization",
+          "intro": "May appear on the same screen as the disclosure only if nothing else is added; the vendor portal keeps them as separate steps.",
+          "items": [
+            {
+              "id": "i6",
+              "type": "para",
+              "text": "AUTHORIZATION. I have read the Disclosure Regarding Background Investigation and 'A Summary of Your Rights Under the Fair Credit Reporting Act'. I authorize [Company] to obtain consumer reports [and investigative consumer reports] about me from [Vendor name] for employment purposes in connection with my application [and, where the law allows, during my employment].",
+              "detail": "Delete the ongoing-employment wording unless Legal has approved periodic re-checks and the state allows them."
+            },
+            {
+              "id": "i7",
+              "type": "field",
+              "text": "Full name and any other names used",
+              "detail": "Needed for accurate record matching."
+            },
+            {
+              "id": "i8",
+              "type": "field",
+              "text": "Date of birth and Social Security number",
+              "detail": "Collected in the vendor's secure portal after the conditional offer, never by the hiring team or on the application (Colorado JAFA; age-discrimination risk)."
+            },
+            {
+              "id": "i9",
+              "type": "field",
+              "text": "Addresses for the last 7 years, and the education and employment history to be verified"
+            },
+            {
+              "id": "i10",
+              "type": "field",
+              "text": "Signature and date",
+              "detail": "Electronic signatures are valid under the E-SIGN Act; keep the timestamp."
+            },
+            {
+              "id": "i11",
+              "type": "para",
+              "text": "California applicants [and applicants in other states that require it]: [ ] Check this box to receive a free copy of any consumer report or investigative consumer report obtained about you.",
+              "detail": "California's ICRAA disclosure (Civ. Code 1786.16) goes on its own page with the nature and scope of the investigation, the agency's contact details and privacy practices, and the right to inspect the agency's files."
+            }
+          ]
+        },
+        {
+          "title": "Individualized assessment (California Fair Chance Act and similar laws)",
+          "intro": "Complete in writing, before any pre-adverse notice, whenever a conviction may affect the decision. Legal signs it.",
+          "items": [
+            {
+              "id": "i12",
+              "type": "field",
+              "text": "Conviction(s) considered",
+              "detail": "Convictions only. Never consider arrests that didn't lead to conviction, referral to or participation in diversion, sealed, dismissed, expunged or statutorily eradicated records, juvenile records or (California) certain cannabis convictions more than 2 years old (LC 432.7, 432.8)."
+            },
+            {
+              "id": "i13",
+              "type": "field",
+              "text": "Nature and gravity of the offense or conduct",
+              "detail": "The harm caused, how it relates to the job's duties, and any aggravating or mitigating circumstances."
+            },
+            {
+              "id": "i14",
+              "type": "field",
+              "text": "Time since the offense and since completion of the sentence"
+            },
+            {
+              "id": "i15",
+              "type": "field",
+              "text": "Nature of the job held or sought",
+              "detail": "The specific duties and setting, e.g., access to trade secrets or controlled technology, financial authority, or unsupervised access to others' property."
+            },
+            {
+              "id": "i16",
+              "type": "field",
+              "text": "Evidence of rehabilitation or mitigating circumstances considered",
+              "detail": "e.g., education or training completed, work history since the offense, references, age at the time of the offense, and anything the candidate provided."
+            },
+            {
+              "id": "i17",
+              "type": "field",
+              "text": "Preliminary decision, reasons, reviewer and date",
+              "detail": "Kept in the screening file, separate from the personnel file. California doesn't require sending the assessment to the candidate, but it may be shared."
+            }
+          ]
+        },
+        {
+          "title": "Pre-adverse action notice",
+          "intro": "Sent before any decision is final, with a copy of the report and the CFPB 'A Summary of Your Rights Under the Fair Credit Reporting Act'.",
+          "items": [
+            {
+              "id": "i18",
+              "type": "para",
+              "text": "Dear [Candidate name], thank you for your interest in the [Job title] position. As part of our hiring process, and with your authorization, [Company] obtained a background check report about you from [Vendor name]. Based on information in that report, [Company] has made a preliminary decision to withdraw its conditional offer of employment. This decision is not final."
+            },
+            {
+              "id": "i19",
+              "type": "para",
+              "text": "[California and other fair-chance jurisdictions:] The conviction(s) that are the basis for this preliminary decision are: [list]. [Optional: a copy of our individualized assessment is enclosed.]"
+            },
+            {
+              "id": "i20",
+              "type": "para",
+              "text": "Enclosed are a copy of the report and 'A Summary of Your Rights Under the Fair Credit Reporting Act'. You have [5] business days from receiving this letter to respond before we make a final decision. You may tell us, in writing or by contacting [name, email, phone], if you believe the report is inaccurate or incomplete, and you may send any information you would like us to consider, including evidence of rehabilitation or mitigating circumstances."
+            },
+            {
+              "id": "i21",
+              "type": "para",
+              "text": "[California:] If, within those 5 business days, you tell us that you dispute the accuracy of the report and are taking specific steps to obtain evidence supporting that, you will have at least 5 additional business days to respond."
+            },
+            {
+              "id": "i22",
+              "type": "para",
+              "text": "You may also dispute the accuracy or completeness of the report directly with [Vendor name] at [contact details]. No final decision will be made before the response period ends. [Seattle: we will hold the position open while you respond, as SMC 14.17 requires (verify period).]"
+            }
+          ]
+        },
+        {
+          "title": "Final adverse action notice",
+          "intro": "Sent only after the response period has ended and any response has been reviewed and documented.",
+          "items": [
+            {
+              "id": "i23",
+              "type": "para",
+              "text": "Dear [Candidate name], on [date] we sent you notice of our preliminary decision to withdraw your conditional offer of employment for the [Job title] position, with a copy of your background check report. [We reviewed the information you provided on [date].] [Company] has now made a final decision to withdraw the offer. This decision was based in whole or in part on information in the consumer report provided by [Vendor name]."
+            },
+            {
+              "id": "i24",
+              "type": "para",
+              "text": "[Vendor name] did not make this decision and cannot explain why it was made. You have the right to obtain a free copy of your report from [Vendor name] if you ask within 60 days of receiving this notice, and to dispute with [Vendor name] the accuracy or completeness of any information in the report. [Vendor name], [address], [toll-free phone], [website]."
+            },
+            {
+              "id": "i25",
+              "type": "para",
+              "text": "[California and fair-chance jurisdictions:] The conviction(s) that were the basis for this decision are: [list]. [Any procedure [Company] has for you to challenge the decision or ask for reconsideration: [describe].] You have the right to file a complaint with the California Civil Rights Department at calcivilrights.ca.gov."
+            },
+            {
+              "id": "i26",
+              "type": "para",
+              "text": "[If a credit score was used:] Your credit score was [score] (possible range [x]-[y]), obtained on [date] from [source]. The key factors that adversely affected the score were: [factors].",
+              "detail": "Credit-score disclosure under 15 U.S.C. 1681m(a)(2). Credit reports only for roles where state law allows them."
+            },
+            {
+              "id": "i27",
+              "type": "para",
+              "text": "If you have questions, please contact [name, title, email]. We appreciate your interest in [Company]."
+            }
+          ]
+        },
+        {
+          "title": "Timeline checklist",
+          "intro": "Greenhouse tasks mirror these steps; a notice sent out of order is a reportable control failure (TA-05 C2).",
+          "items": [
+            {
+              "id": "i28",
+              "type": "check",
+              "text": "Conditional offer accepted; disclosure, authorization and any state forms (e.g., ICRAA on a separate page) sent through the vendor portal.",
+              "owner": "Recruiter",
+              "when": "Day 0-1"
+            },
+            {
+              "id": "i29",
+              "type": "check",
+              "text": "Signed authorization received before the report is ordered; order placed within 1 business day of signature.",
+              "owner": "Recruiter",
+              "when": "Day 1-2"
+            },
+            {
+              "id": "i30",
+              "type": "check",
+              "text": "Report reviewed by TA Operations: clear reports released to People Ops; any record, discrepancy or unverifiable item routed to Legal. Nothing is decided automatically.",
+              "owner": "TA Operations",
+              "when": "On receipt"
+            },
+            {
+              "id": "i31",
+              "type": "check",
+              "text": "Individualized assessment completed and signed by Legal before any notice is sent.",
+              "owner": "Legal",
+              "when": "Within 2 business days of the report"
+            },
+            {
+              "id": "i32",
+              "type": "check",
+              "text": "Pre-adverse notice sent with the report and the Summary of Rights by tracked email (and by mail if the candidate asks); the date of receipt is recorded.",
+              "owner": "Recruiter"
+            },
+            {
+              "id": "i33",
+              "type": "check",
+              "text": "Response window counted in business days from receipt (add 5 days if sent only by mail): at least 5 business days, plus at least 5 more in California if the candidate disputes the report and is getting evidence.",
+              "owner": "Recruiter",
+              "when": "Receipt + 5 (+5) business days"
+            },
+            {
+              "id": "i34",
+              "type": "check",
+              "text": "Any response and new evidence reviewed; the final decision and reasons documented by Legal.",
+              "owner": "Legal"
+            },
+            {
+              "id": "i35",
+              "type": "check",
+              "text": "Final notice sent, or clearance recorded and the start date released. The file (consent, report, assessment, notices, response) is kept outside the personnel file for at least 4 years for California and at least 1 year elsewhere, and longer under a legal hold.",
+              "owner": "TA Operations"
+            }
+          ]
+        },
+        {
+          "title": "State and city variations",
+          "intro": "Apply the rules for the work location, and for remote roles the employee's home state.",
+          "items": [
+            {
+              "id": "i36",
+              "type": "note",
+              "text": "California: separate ICRAA disclosure with a copy box; Fair Chance Act (5+ employees) with no criminal inquiry before a conditional offer, a written individualized assessment, 5 + 5 business days and CRD language in the final notice (Gov Code 12952; 2 CCR 11017.1); credit reports only for LC 1024.5 roles such as access to trade secrets or $10,000+ in cash; no questions about cannabis use (Gov Code 12954). Los Angeles and San Francisco ordinances add notice and posting steps (verify for each work location)."
+            },
+            {
+              "id": "i37",
+              "type": "note",
+              "text": "Colorado: no criminal-history questions on the initial application or in ads (Chance to Compete Act, C.R.S. 8-2-130), no questions about sealed records, and credit reports only where substantially related to the job, with written disclosure if used in the decision (C.R.S. 8-2-126). Collect date of birth only after the initial application (JAFA)."
+            },
+            {
+              "id": "i38",
+              "type": "note",
+              "text": "Washington: from 1 July 2026 (15+ employees), no criminal-history inquiry until the applicant is otherwise qualified and has a conditional offer, no blanket exclusions, and before adverse action identify the record, allow time to respond and document the legitimate business reason (RCW 49.94). Seattle roles also follow SMC 14.17, and credit reports need a substantially job-related reason disclosed in writing (RCW 19.182.020)."
+            },
+            {
+              "id": "i39",
+              "type": "note",
+              "text": "Texas: FCRA only. Texas consumer reporting agencies may not report arrests or convictions more than 7 years old unless the salary is $75,000 or more (Bus. & Com. Code 20.05), which matters for interns and technicians. Austin's fair-chance ordinance is treated as preempted (HB 2127), so the company's post-offer standard applies."
+            },
+            {
+              "id": "i40",
+              "type": "note",
+              "text": "North Carolina: no private-sector ban-the-box law, but never ask about or use expunged records (G.S. 15A-153; up to $500 per violation after an NCDOL warning), and have the vendor screen them out. Applicant drug-test positives must be confirmed by GC/MS at an approved lab before an offer is withdrawn (G.S. 95-232)."
+            },
+            {
+              "id": "i41",
+              "type": "note",
+              "text": "Other US locations: NYC (Fair Chance Act process with the Fair Chance Notice and Article 23-A analysis), Illinois (IHRA 2-103.1 preliminary notice and 5 business days) and other cities and states add steps. TA Operations keeps the location matrix current in the vendor portal."
+            },
+            {
+              "id": "i42",
+              "type": "note",
+              "text": "These forms are not used outside the US. Each country's limits are in the country notes, and the vendor runs only the checks on Legal's screening matrix for that country and role."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "FCRA procedure drives most background-check class actions: a disclosure with one extra sentence, a missing Summary of Rights or a final notice sent on the same day as the pre-adverse notice can each bring statutory damages of $100-$1,000 per applicant for willful violations.",
+        "Always two steps: the pre-adverse notice, with the report, must reach the candidate before the decision is final, and the final notice goes only after the response window closes.",
+        "The individualized assessment is the company standard in every US state, not just California: Washington also requires it, and it is the approach the EEOC's 2012 arrest-and-conviction guidance recommends under Title VII.",
+        "Order only the checks on Legal's screening matrix for the role and location; a vendor 'full package' can break California's credit limits, Texas's 7-year rule and Colorado's credit rules.",
+        "Keep consent forms, reports, assessments and notices in the restricted screening file, never in the personnel file or in the hiring team's view in Greenhouse.",
+        "Version the templates: the CFPB updates the Summary of Rights and state forms change, so TA Operations reviews them with the vendor every year."
+      ],
+      "countryNotes": {
+        "us": "The FCRA requires a stand-alone disclosure and written authorization before a report is ordered, a pre-adverse action notice with the report and Summary of Rights, a reasonable wait (commonly 5 business days) and a final adverse action notice (15 U.S.C. 1681b(b), 1681m). Fair-chance laws in NYC, Illinois, Washington, California and elsewhere delay criminal inquiries until after a conditional offer.",
+        "us-ca": "Add the separate ICRAA disclosure and copy box, follow the Fair Chance Act (written individualized assessment, 5 + 5 business days, CRD rights in the final notice), limit credit checks to LC 1024.5 roles and keep the file 4 years. Never consider cannabis use, arrests without conviction, diversion or sealed records.",
+        "us-co": "No criminal-history questions on initial applications (C.R.S. 8-2-130), no sealed records, credit reports only where substantially job-related with written disclosure (C.R.S. 8-2-126), and no date of birth on initial applications (JAFA). Otherwise the FCRA steps apply.",
+        "us-nc": "The FCRA governs and there is no private-sector ban-the-box, but expunged records must never be requested or used (G.S. 15A-153), and drug-test positives must be confirmed before an offer is withdrawn (G.S. 95-232).",
+        "us-tx": "FCRA only; Texas agencies can't report convictions older than 7 years unless the salary is $75,000+ (Bus. & Com. Code 20.05). Austin's fair-chance ordinance is treated as preempted, so the company's post-offer standard governs.",
+        "us-wa": "From 1 July 2026, employers with 15+ employees may make criminal inquiries only after a conditional offer, with no blanket exclusions and a documented legitimate business reason after the applicant has had a chance to respond (RCW 49.94); Seattle adds SMC 14.17. Credit reports only where substantially job-related (RCW 19.182.020).",
+        "ca": "The FCRA forms don't apply. Get written consent and show a legitimate job requirement for criminal and credit checks, give the Ontario Consumer Reporting Act notice where an agency is used, and have the candidate obtain any police check; record of offences (Ontario) and unrelated convictions (BC) are protected grounds.",
+        "de": "Checks are limited to what the role needs: a certificate of good conduct (Führungszeugnis) only for trust-sensitive roles, supplied by the candidate, and no credit or deep social-media checks. Standard screening questionnaires need works council consent (§94 BetrVG), and results are deleted once the decision is made.",
+        "il": "Employers may not ask candidates for a police record extract unless a law authorizes it for the role (Criminal Register and Rehabilitation of Offenders Law 1981), and genetic tests are banned. Verify education and employment with consent, and give candidates their screening results on request.",
+        "in": "Use written BGV consent covering education, employment, address and criminal checks through court records or police verification. Aadhaar must be voluntary and masked, and original certificates are returned the same day (Karnataka); keep consent even where DPDP s.7(i) may apply.",
+        "tw": "Criminal records and health data are sensitive under the PDPA and need written consent or a statutory basis. Checks must be job-related and proportionate, and pre-employment medical results are handled as sensitive data.",
+        "cn": "Private employers can't obtain official criminal-record checks, so rely on candidate declarations and permitted vendor verification under a PIPL notice, separate consent and entrusted-processing agreements. Collect the prior employer's termination certificate; pre-employment medicals may not test for hepatitis B or pregnancy.",
+        "vn": "Employers can't pull criminal records. Ask the candidate for a Judicial Record Certificate No. 1 only where the role justifies it, with separate consent because the data is sensitive (Decree 356/2025), verify degrees and employment with consent, and never keep original documents."
+      },
+      "processes": [
+        "TA-05"
+      ],
+      "policies": [
+        "POL-17",
+        "POL-46",
+        "POL-08",
+        "POL-49",
+        "POL-16"
+      ]
+    }
+  ]
+}

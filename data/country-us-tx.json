@@ -1,0 +1,947 @@
+{
+ "id": "us-tx",
+ "name": "Texas",
+ "shortName": "Texas",
+ "region": "Americas",
+ "parent": "us",
+ "lastVerified": "2026-09",
+ "summary": "Texas is a strongly at-will, right-to-work state that adds little to federal law on wages, leave and pay transparency: no state income tax, no paid sick leave, no PFML, no pay-range rule, and HB 2127 (2023) bars cities such as Austin, Dallas and San Antonio from adopting their own labor ordinances. The distinctive Texas rules sit elsewhere: the Payday Law (pay within 6 calendar days of a discharge; vacation payout only if a written policy provides it), optional workers' compensation with real consequences for non-subscribers, sexual-harassment liability that reaches employers of 1+ and individual supervisors, enforceable but carefully drafted non-competes (Bus. & Com. Code 15.50), and heavy Attorney General enforcement of the biometric law (CUBI) plus the new AI statute (TRAIGA, from 1 Jan 2026). Federal courts in Texas and the Fifth Circuit also set national employment rules (FTC non-compete rule, 2024 overtime rule, EEOC harassment guidance). California-HQ employers most often go wrong by applying California templates in Austin (losing enforceable covenants, or keeping California choice-of-law), missing the Texas-specific workers' comp filings and notices, collecting badge or timeclock biometrics without CUBI notice and consent, and failing to plan for grid and flood emergencies.",
+ "ratings": {
+  "termination": 2,
+  "representation": 1,
+  "privacy": 2,
+  "payTransparency": 1,
+  "workingTime": 2,
+  "leave": 1,
+  "immigration": 2,
+  "changeVelocity": 3
+ },
+ "ratingNotes": {
+  "termination": "Strong at-will doctrine, no state WARN or severance and TCHRA damages capped as in Title VII; the main state-specific risks are the 6-day final-pay rule, Sabine Pilot claims and negligence suits against non-subscribers.",
+  "representation": "Right-to-work state (Labor Code 101.052) with very low private-sector union density and no state labor board; the NLRA governs, and the Fifth Circuit (SpaceX v. NLRB, 2025) lets employers seek injunctions against NLRB proceedings.",
+  "privacy": "No HR privacy statute (the TDPSA excludes employee and applicant data), but CUBI biometric consent and retention rules carry up to $25,000 per violation with record AG settlements, plus a 60-day breach-notice law and TRAIGA from 2026.",
+  "payTransparency": "No pay-range, salary-history or pay-data law, and HB 2127 preempts city ordinances; only remote postings reaching other states need ranges.",
+  "workingTime": "FLSA only: $7.25 minimum wage, weekly overtime and federal exempt tests, with no daily overtime or meal and rest rules; the Payday Law adds pay-frequency, deduction and final-pay rules.",
+  "leave": "No state paid sick leave, PFML or family leave; municipal sick-leave ordinances were enjoined and are now preempted. Only jury, voting, state military and evacuation protections apply on top of federal law.",
+  "immigration": "Federal rules apply; E-Verify is mandatory only for state agencies and state contracting (SB 324 for all private employers died in 2025), and DACA litigation in Texas courts may affect Texas-resident work permits (verify).",
+  "changeVelocity": "The Legislature meets in odd years only (next regular session Jan 2027), but the AG's privacy and AI enforcement and national rulings from Texas federal courts make change steady."
+ },
+ "keyFacts": [
+  {
+   "label": "Employment model",
+   "value": "At-will, strictly applied (Montgomery County Hospital Dist. v. Brown, 1998); the only common-law exception is discharge for refusing to commit an illegal act (Sabine Pilot, 1985). Texas is a right-to-work state (Labor Code 101.052). Statutory claims: TCHRA (Labor Code Ch. 21), workers' comp retaliation (Labor Code 451.001), jury, voting, military and evacuation protections."
+  },
+  {
+   "label": "Contracts & offer letters",
+   "value": "No written contract or wage notice is required. Offer letters should keep an at-will disclaimer, state exempt status and the payday schedule, and put any vacation-payout, commission and bonus terms in writing, because the Payday Law only enforces vacation or severance pay 'owed under a written agreement or written policy' (Labor Code 61.001(7)(B)). Non-competes must be ancillary to an otherwise enforceable agreement (Bus. & Com. Code 15.50)."
+  },
+  {
+   "label": "Probation",
+   "value": "No statutory probation. An 'introductory period' should say it does not change at-will status; Texas courts reject implied for-cause promises unless the employer unequivocally limits its right to terminate."
+  },
+  {
+   "label": "Notice (employer)",
+   "value": "No state notice requirement and no Texas mini-WARN. Federal WARN notices (100+ employees) go to affected employees, the Texas Workforce Commission as the state dislocated-worker unit, and the local chief elected official."
+  },
+  {
+   "label": "Notice (employee)",
+   "value": "None required. A resigning employee's final pay is due by the next regularly scheduled payday (Labor Code 61.014), regardless of the notice given."
+  },
+  {
+   "label": "Statutory severance",
+   "value": "None. Severance is contractual or plan-based and is enforceable as 'wages' under the Payday Law only if owed under a written agreement or policy. Market practice for tech employers mirrors the rest of the US (see terminationDeepDive)."
+  },
+  {
+   "label": "Working hours & overtime",
+   "value": "FLSA only: 1.5x after 40 hours in a workweek, with no daily overtime, no meal or rest-break mandate for adults and no state exempt salary floor. The exempt threshold is the federal $684/week (the 2024 increase was vacated by the E.D. Tex. in Texas v. DOL, Nov 2024); the computer-employee hourly test is $27.63/hr."
+  },
+  {
+   "label": "Minimum wage",
+   "value": "$7.25/hr under the Texas Minimum Wage Act (Labor Code Ch. 62), tied to the federal rate. Cities cannot set private-sector minimum wages (Labor Code 62.0515; HB 2127). Austin's higher 'living wage' applies only to city employees and some city contractors."
+  },
+  {
+   "label": "Annual leave",
+   "value": "No vacation mandate. Accrued vacation is payable at separation only if a written policy or agreement says so; 'use-it-or-lose-it' and forfeiture-at-exit rules are lawful if written (Labor Code 61.001(7)(B); 40 TAC 821.25)."
+  },
+  {
+   "label": "Public holidays",
+   "value": "No private-sector holiday or holiday-premium requirement. Employees must be allowed time off to vote on election day without pay deduction unless they have 2 consecutive hours outside working hours while polls are open (Election Code 276.004)."
+  },
+  {
+   "label": "Sick leave",
+   "value": "No state paid sick leave. Austin's (2018), San Antonio's and Dallas's paid sick leave ordinances were enjoined, and HB 2127 (Texas Regulatory Consistency Act, effective 1 Sep 2023; upheld on appeal Jul 2025) preempts municipal labor regulation. Federal FMLA and ADA apply."
+  },
+  {
+   "label": "Parental leave",
+   "value": "No state parental, pregnancy or family leave law; federal FMLA (50+), PWFA and PUMP Act apply. Pregnancy discrimination is barred by TCHRA (Labor Code 21.106). Lactation accommodation duties in Texas statutes cover public employers only."
+  },
+  {
+   "label": "Social insurance / mandatory benefits",
+   "value": "No state income tax, SDI or PFML. State UI through TWC: taxable wage base $9,000; 2026 rates 0.32%-6.32%; new employers pay the greater of 2.7% or their NAICS industry average. Workers' comp is optional (Labor Code 406.002), but non-subscribers lose common-law defenses and must file DWC Form-005 each year and notify employees."
+  },
+  {
+   "label": "Payroll frequency & final pay",
+   "value": "Exempt employees at least monthly, others at least twice a month; paydays must be posted, defaulting to the 1st and 15th (Labor Code 61.011-61.012). Final pay: discharge, by the 6th calendar day after discharge; resignation, by the next regular payday (61.014). Wage claims to TWC within 180 days; bad-faith penalty up to the lesser of the wages or $1,000 (61.053)."
+  },
+  {
+   "label": "Employee representation",
+   "value": "NLRA only; no works councils or consultation duties. Right-to-work (Labor Code 101.052) bars union-security clauses. Union density in Austin tech and semiconductor workforces is very low."
+  },
+  {
+   "label": "Data privacy law",
+   "value": "The TDPSA (Bus. & Com. Code Ch. 541, since 1 Jul 2024) excludes applicant, employee and contractor data used in that role. Employer duties come from CUBI (biometrics: notice, consent, no sale, destruction; up to $25,000 per violation), breach notice (Bus. & Com. Code 521.053: individuals within 60 days, AG within 30 days if 250+ Texans), SSN protections and TRAIGA (AI, from 1 Jan 2026). Recording needs one-party consent (Penal Code 16.02)."
+  },
+  {
+   "label": "Record retention",
+   "value": "No Texas personnel-file access statute. Follow federal periods (FLSA 3 years, Title VII 1 year or until final disposition, I-9, OSHA 5 years) plus TWC unemployment payroll records (4 years; verify). CUBI requires destroying biometric identifiers within a reasonable time and no later than 1 year after the purpose expires, and employer security-purpose biometrics are presumed to expire at termination."
+  },
+  {
+   "label": "Non-competes & IP",
+   "value": "Enforceable if ancillary to an otherwise enforceable agreement (e.g., the employer actually provides confidential information or stock-based consideration) and reasonable in time, area and scope (Bus. & Com. Code 15.50); courts must reform overbroad covenants (15.51). Healthcare-practitioner limits (SB 1318, 2025) do not reach engineers. There is no invention-assignment carve-out statute; trade secrets are protected under TUTSA (Civ. Prac. & Rem. Code Ch. 134A) and the DTSA."
+  },
+  {
+   "label": "Language requirements",
+   "value": "No general translation duty. Workers' comp coverage notices must be posted in English, Spanish and any other language common to the workforce (28 TAC 110.101). Deduction authorizations and policies should be in a language the employee understands."
+  },
+  {
+   "label": "Regulator(s)",
+   "value": "Texas Workforce Commission (Payday Law, minimum wage, UI tax and claims, and TCHRA through its Civil Rights Division); Texas Department of Insurance, Division of Workers' Compensation (TDI-DWC); Office of the Attorney General (CUBI, TDPSA, TRAIGA, breach notices, child support and new-hire reporting); federal OSHA (no state plan); DSHS Radiation Control for X-ray equipment."
+  }
+ ],
+ "mandatoryPolicies": [
+  {
+   "name": "Payday schedule & posted payday notice",
+   "requirement": "Pay exempt employees at least monthly and others at least twice a month, with pay periods as equal as feasible, and post notices of the paydays in conspicuous places (otherwise paydays default to the 1st and 15th). Include the TWC Payday Law poster.",
+   "source": "Labor Code 61.011-61.012 (Texas Payday Law)",
+   "level": "required"
+  },
+  {
+   "name": "Written wage-deduction authorizations",
+   "requirement": "Deduct only when ordered by a court, authorized by state or federal law, or authorized in writing by the employee for a lawful purpose; the authorization should state a specific amount or a formula. Covers equipment, advances, relocation or sign-on repayment, parking and voluntary benefits. Never take non-exempt pay below the minimum wage.",
+   "source": "Labor Code 61.018; 40 TAC 821.28",
+   "level": "required"
+  },
+  {
+   "name": "Written PTO/vacation, sick pay and severance policy",
+   "requirement": "Vacation, holiday, sick, parental and severance pay are wages only if owed under a written agreement or written policy, so the policy must state accrual, caps, forfeiture and whether balances are paid at separation. Unwritten practices create disputes before TWC.",
+   "source": "Labor Code 61.001(7)(B); 40 TAC 821.25",
+   "level": "required"
+  },
+  {
+   "name": "Workers' compensation coverage election & notices",
+   "requirement": "Decide whether to subscribe (coverage is optional). Every employer must post the DWC notice of its coverage status in English, Spanish and other common languages (Notice 5 for non-subscribers), give written notice to each new hire when the W-4/I-9 is completed, and notify employees within 15 days if coverage ends. Non-subscribers file DWC Form-005 each year between 1 Feb and 30 Apr.",
+   "source": "Labor Code 406.002, 406.004-406.005; 28 TAC 110.1, 110.101",
+   "level": "required"
+  },
+  {
+   "name": "Non-subscriber injury benefit plan & injury reporting (if opting out)",
+   "requirement": "Non-subscribers lose contributory-negligence, assumption-of-risk and fellow-servant defenses, and pre-injury waivers are void; market practice is an ERISA occupational injury benefit plan with an arbitration program. Report lost-time injuries, occupational diseases and deaths on DWC Form-007 by the 7th day of the following month (5+ employees).",
+   "source": "Labor Code 406.033; TDI-DWC Form-007 instructions",
+   "level": "expected"
+  },
+  {
+   "name": "Drug-free workplace policy (workers' comp subscribers)",
+   "requirement": "Subscribing employers with 15+ employees have been required to adopt and distribute a written policy to eliminate drug abuse in the workplace (verify current status; TWC guidance says the statute was repealed in 2005, TDI adopted rules in 2009). Texas otherwise places almost no limits on private-employer drug testing.",
+   "source": "Labor Code 411.091; 28 TAC 169.2 (verify)",
+   "level": "expected"
+  },
+  {
+   "name": "EEO & anti-harassment policy (TCHRA)",
+   "requirement": "TCHRA covers employers with 15+ employees, but for sexual harassment any employer of 1+ and any person acting directly in the employer's interests (individual supervisors) is liable if it knew or should have known and failed to take immediate and appropriate corrective action. Sexual-harassment charges may be filed within 300 days (others 180). Include hair texture and protective hairstyles (CROWN).",
+   "source": "Labor Code 21.051, 21.106, 21.1095, 21.141-21.142, 21.202 (SB 45, HB 21 of 2021; HB 567 of 2023)",
+   "level": "required"
+  },
+  {
+   "name": "Biometric notice, consent & retention (CUBI)",
+   "requirement": "Before capturing fingerprints, hand or face geometry, retina, iris or voiceprints (timeclocks, lab and badge access, video-interview analytics), inform the individual and obtain consent. Do not sell or disclose except as the statute allows, use reasonable care, and destroy identifiers within a reasonable time and no later than 1 year after the purpose expires; employer security-purpose data is presumed to expire at termination.",
+   "source": "Bus. & Com. Code 503.001 (amended by HB 149, 2025)",
+   "level": "required"
+  },
+  {
+   "name": "AI governance for employment tools (TRAIGA)",
+   "requirement": "From 1 Jan 2026, do not develop or deploy an AI system with intent to unlawfully discriminate against a protected class (disparate impact alone is not enough to show intent). The AG enforces exclusively, with a 60-day cure period, civil investigative demands and penalties of $10,000-$200,000 per violation plus up to $40,000 a day. Keep an AI inventory, purpose statements and testing records; aligning with the NIST AI RMF supports a statutory defense.",
+   "source": "HB 149 (Texas Responsible Artificial Intelligence Governance Act), Bus. & Com. Code Title 11, Subtitle D (verify chapter numbers)",
+   "level": "required"
+  },
+  {
+   "name": "Data security & breach response",
+   "requirement": "Keep reasonable procedures to protect sensitive personal information (including employee SSNs, bank and health data), notify affected individuals within 60 days of determining a breach, notify the AG within 30 days if 250+ Texas residents are affected (online form), and notify consumer reporting agencies if 10,000+ are affected.",
+   "source": "Bus. & Com. Code 521.052-521.053",
+   "level": "required"
+  },
+  {
+   "name": "Firearms in employee parking areas",
+   "requirement": "Weapons policies may ban guns inside buildings, but must not bar employees who lawfully possess firearms or ammunition from storing them in their locked, privately owned vehicles in employer-provided parking. Narrow exceptions cover employer vehicles, schools, certain chemical and refinery sites and places where federal or state law prohibits possession. Use Penal Code 30.06/30.07 signage to exclude licensed carry from buildings.",
+   "source": "Labor Code 52.061-52.062; Penal Code 30.06, 30.07",
+   "level": "required"
+  },
+  {
+   "name": "No COVID-19 vaccine mandates",
+   "requirement": "Private employers may not adopt or enforce COVID-19 vaccination requirements for employees, contractors or applicants, including through site-access rules (limited healthcare exceptions). Enforced through TWC complaints and administrative penalties (up to $50,000; verify).",
+   "source": "SB 7 (88th Leg., 3rd C.S.), Health & Safety Code Ch. 81D; effective 6 Feb 2024",
+   "level": "required"
+  },
+  {
+   "name": "Jury, voting, state military and evacuation protections",
+   "requirement": "Do not discharge or threaten permanent employees for jury service, and reinstate them (Civ. Prac. & Rem. Code 122.001); allow time to vote without pay deduction (Election Code 276.004); reemploy members of the Texas military forces after state training or duty (Gov Code 437.204); and do not discharge employees who leave to comply with a general public evacuation order (Labor Code 22.002).",
+   "source": "CPRC 122.001; Election Code 276.004; Gov Code 437.204; Labor Code 22.002",
+   "level": "required"
+  },
+  {
+   "name": "Workers' comp anti-retaliation",
+   "requirement": "Do not discharge or discriminate against employees who file a workers' comp claim in good faith, hire a lawyer to do so, start a proceeding or testify. Train managers to separate injury claims from attendance and performance decisions.",
+   "source": "Labor Code 451.001",
+   "level": "required"
+  },
+  {
+   "name": "Restrictive covenant standard (Texas)",
+   "requirement": "Use Texas-law non-competes and non-solicits only for roles with real access to trade secrets or goodwill, tie them to consideration the company actually delivers (confidential information, specialized training or equity), and keep time, geography and activity reasonable. Consider the California B&P 16600.5 risk for employees who may relocate to California.",
+   "source": "Bus. & Com. Code 15.50-15.52; Alex Sheshunoff v. Johnson (2006); Marsh USA v. Cook (2011)",
+   "level": "expected"
+  },
+  {
+   "name": "Background screening procedure",
+   "requirement": "Follow FCRA disclosure and adverse-action steps. Texas consumer reporting agencies may not report arrests, indictments or convictions more than 7 years old unless the job pays $75,000+ a year. Austin's Fair Chance Hiring Ordinance is treated as preempted by HB 2127, and there is no state ban-the-box for private employers.",
+   "source": "15 U.S.C. 1681b, 1681m; Bus. & Com. Code 20.05",
+   "level": "expected"
+  },
+  {
+   "name": "New-hire reporting & income withholding",
+   "requirement": "Report new and rehired employees to the OAG within 20 calendar days of the date they start earning wages. For child support orders, start withholding no later than the first pay period after delivery, remit on each pay date (by EFT within 2 business days if 50+ employees), and notify the OAG within 7 days of the employee's termination.",
+   "source": "Family Code Ch. 234; Family Code 158.202-158.211",
+   "level": "required"
+  },
+  {
+   "name": "Settlement and NDA carve-outs",
+   "requirement": "Since 1 Sep 2025, confidentiality provisions are void to the extent they bar disclosing an act of sexual abuse, including in pre-existing agreements. Add this carve-out alongside the federal Speak Out Act, Rule 21F-17 and NLRA language in separation and settlement templates.",
+   "source": "SB 835 (2025)",
+   "level": "required"
+  },
+  {
+   "name": "Required workplace postings",
+   "requirement": "TWC combined Payday Law and Unemployment Compensation Act poster, Texas Minimum Wage Act poster, TCHRA/employment discrimination poster, the DWC workers' comp coverage notice, the payday notice and federal posters. Remote Texas employees should get electronic copies.",
+   "source": "Labor Code 61.012, Ch. 62; 28 TAC 110.101; TWC poster rules",
+   "level": "required"
+  },
+  {
+   "name": "Emergency action & severe-weather plan",
+   "requirement": "Written emergency action plan for sites with more than 10 employees, covering winter storms and grid outages (ERCOT), flash floods, heat, evacuation and active threats, plus pay rules for closures (exempt salary basis) and remote-work fallback.",
+   "source": "29 CFR 1910.38; OSH Act General Duty Clause",
+   "level": "expected"
+  },
+  {
+   "name": "Unemployment tax registration & claim response",
+   "requirement": "Register with TWC, file quarterly wage reports and pay UI tax on the first $9,000 per employee, and answer each Notice of Application for Unemployment Benefits within 14 days with documented separation reasons (policy, warnings, acknowledgment).",
+   "source": "Texas Unemployment Compensation Act (Labor Code Title 4); Labor Code 208.004",
+   "level": "required"
+  }
+ ],
+ "stages": {
+  "hiring": [
+   {
+    "req": "No pay-range or salary-history rules for Texas roles",
+    "detail": "Texas has no pay-transparency or salary-history statute, and HB 2127 bars cities from adding one. Postings open to remote candidates in CO, WA, NY, IL, CA and other range states still need ranges, so tag 'Austin or remote-US' postings accordingly.",
+    "cite": "HB 2127 (2023); state pay-transparency laws"
+   },
+   {
+    "req": "TCHRA-compliant selection",
+    "detail": "TCHRA covers race, color, disability, religion, sex (including pregnancy), national origin, age 40+, genetic information and hair texture or protective hairstyles. Texas does not list sexual orientation or gender identity, and HB 229 (2025) defines 'sex' biologically for state-law purposes, but Title VII (Bostock) still protects them at 15+ employees, so keep the global standard.",
+    "cite": "Labor Code 21.051, 21.1095, 21.401-21.405; HB 229 (2025); Title VII"
+   },
+   {
+    "req": "Background checks",
+    "detail": "Use FCRA disclosure, authorization and adverse-action steps. Texas CRAs may not report criminal records more than 7 years old unless the salary is $75,000+ (most engineering roles qualify; interns and technicians may not). Austin's Fair Chance ordinance is unenforceable after HB 2127, so criminal-history timing follows company policy and federal EEOC guidance.",
+    "cite": "FCRA; Bus. & Com. Code 20.05; HB 2127"
+   },
+   {
+    "req": "AI and biometric tools in recruiting",
+    "detail": "TRAIGA (from 1 Jan 2026) bars deploying AI with intent to discriminate and requires no applicant notice, but the AG can demand documentation of purpose, data and safeguards. Video-interview tools that analyze face geometry or voiceprints need CUBI notice and consent before capture. Title VII disparate impact still applies.",
+    "cite": "HB 149 (TRAIGA); Bus. & Com. Code 503.001"
+   },
+   {
+    "req": "E-Verify and work authorization",
+    "detail": "Private employers are not required to use E-Verify; the mandate covers state agencies and state contracting. SB 324 (2025) would have extended it to all private employers and passed the Senate but died in the House. E-Verify still applies under the FAR clause and for STEM OPT hires.",
+    "cite": "Gov Code Ch. 673; SB 324 (89th Leg., not enacted); FAR 52.222-54"
+   },
+   {
+    "req": "Drug and COVID-19 screening",
+    "detail": "Pre-employment drug testing is lawful with few limits (no off-duty cannabis protection), subject to ADA rules on medical inquiries. Applicants may not be required to be vaccinated against COVID-19 (SB 7).",
+    "cite": "Health & Safety Code Ch. 81D (SB 7); ADA"
+   },
+   {
+    "req": "Clean hiring from Texas competitors",
+    "detail": "Samsung, TI, NXP, AMD, Apple and other Austin and Dallas employers use enforceable Texas non-competes and non-solicits, so collect copies of candidates' covenants, screen for conflicts, and use no-bring certifications. Texas courts can enjoin or reform restrictive covenants, and TUTSA covers threatened misappropriation.",
+    "cite": "Bus. & Com. Code 15.50-15.51; Civ. Prac. & Rem. Code Ch. 134A"
+   },
+   {
+    "req": "Texas offer letter and covenant package",
+    "detail": "Use a Texas template: at-will language, Texas choice of law and venue, the payday schedule, written vacation and bonus terms, and (for eligible roles) a non-compete or non-solicit supported by confidential information or equity. Do not reuse California templates that disclaim non-competes or choose California law.",
+    "cite": "Bus. & Com. Code 15.50; Labor Code 61.001(7)(B)"
+   }
+  ],
+  "onboarding": [
+   {
+    "req": "New-hire reporting",
+    "detail": "Report each new or rehired employee to the OAG Employer portal within 20 calendar days of the date they start earning wages; employees completing a W-4 must be reported.",
+    "cite": "Family Code Ch. 234; 42 U.S.C. 653a"
+   },
+   {
+    "req": "Workers' comp notice at hire",
+    "detail": "Give written notice of coverage status (subscriber or non-subscriber) at hire, when the W-4 and I-9 are completed. For subscribers, employees may keep common-law rights by written notice within 5 days of hire or of notification of coverage, so file any such election. Non-subscribers should enroll the employee in the injury benefit plan and arbitration program at the same time.",
+    "cite": "Labor Code 406.005, 406.034; 28 TAC 110.101"
+   },
+   {
+    "req": "Postings and payday notice",
+    "detail": "Display the TWC Payday Law/Unemployment Compensation poster, Minimum Wage poster, TCHRA poster, DWC coverage notice and posted paydays at the Austin office, and send electronic copies to Texas remote workers.",
+    "cite": "Labor Code 61.012; 28 TAC 110.101"
+   },
+   {
+    "req": "Covenant consideration delivered",
+    "detail": "For a non-compete tied to confidential information, the promise becomes enforceable only when the information is actually provided, so grant access to confidential design data or give equity promptly after signing and document it. Non-solicits of customers or employees are analyzed under the same statute.",
+    "cite": "Alex Sheshunoff v. Johnson (Tex. 2006); Marsh USA v. Cook (Tex. 2011); Bus. & Com. Code 15.50"
+   },
+   {
+    "req": "PIIA with federal notices",
+    "detail": "Texas has no invention-assignment carve-out statute, so the global PIIA works as-is; keep the DTSA immunity notice, Rule 21F-17 language and the SB 835 sexual-abuse disclosure carve-out in confidentiality clauses.",
+    "cite": "18 U.S.C. 1833(b); SB 835 (2025)"
+   },
+   {
+    "req": "Biometric enrollment consent",
+    "detail": "Get documented notice and consent before enrolling fingerprints or face templates for badge, lab-access or timekeeping systems; record the purpose and the destruction trigger (termination).",
+    "cite": "Bus. & Com. Code 503.001"
+   },
+   {
+    "req": "Deduction authorizations",
+    "detail": "Collect written, specific authorizations for any deductions not required by law (equipment, parking, ESPP, voluntary benefits, repayment agreements) at onboarding, so later recovery is lawful.",
+    "cite": "Labor Code 61.018; 40 TAC 821.28"
+   },
+   {
+    "req": "Exempt classification check",
+    "detail": "Texas follows the FLSA: $684/week salary plus the duties test, or $27.63/hr for computer employees. Lab technicians and test operators are usually non-exempt.",
+    "cite": "29 CFR 541; Labor Code Ch. 62"
+   },
+   {
+    "req": "Harassment training (recommended)",
+    "detail": "No private-sector training mandate, but because supervisors can be personally liable for sexual harassment and the employer is liable if it 'should have known', train managers at hire or promotion and on a regular cycle.",
+    "cite": "Labor Code 21.141-21.142"
+   }
+  ],
+  "payAndPayroll": [
+   {
+    "req": "Pay frequency and paydays",
+    "detail": "At least monthly for FLSA-exempt employees and twice monthly for everyone else, with posted paydays; if none are designated, paydays default to the 1st and 15th.",
+    "cite": "Labor Code 61.011-61.012"
+   },
+   {
+    "req": "No state income tax withholding",
+    "detail": "There is no Texas income tax, so no state W-4 or withholding account is needed. Employees relocating from California remain subject to California tax on RSUs and options partly earned while working there (California sources equity by workdays), so keep mobility sourcing in payroll.",
+    "cite": "Tex. Const. art. VIII, sec. 24-a; California FTB sourcing rules (verify method)"
+   },
+   {
+    "req": "Minimum wage and overtime",
+    "detail": "$7.25/hr (Texas Minimum Wage Act) and FLSA weekly overtime; no daily overtime, meal or rest premiums, and no local minimum wages for private employers.",
+    "cite": "Labor Code Ch. 62, 62.0515; 29 U.S.C. 207"
+   },
+   {
+    "req": "Lawful deductions",
+    "detail": "Only court-ordered, legally required or employee-authorized (in writing, for a lawful purpose) deductions; TWC rules expect the authorization to be specific. Deductions cannot cut non-exempt pay below minimum wage or break the exempt salary basis.",
+    "cite": "Labor Code 61.018; 40 TAC 821.28"
+   },
+   {
+    "req": "Commissions and bonuses",
+    "detail": "Commissions and bonuses are paid according to the written agreement, so plan documents must define when they are earned and what happens at termination; TWC enforces only what the agreement provides.",
+    "cite": "Labor Code 61.015"
+   },
+   {
+    "req": "Payment methods",
+    "detail": "Pay by cash, negotiable check, electronic transfer or payroll card account under Labor Code 61.016 and TWC rules; get written consent for any in-kind or other form of payment.",
+    "cite": "Labor Code 61.016"
+   },
+   {
+    "req": "State unemployment tax",
+    "detail": "Register with TWC and file quarterly wage reports and payments by the last day of the month after each quarter. 2026 rates run 0.32%-6.32% on the first $9,000 per employee; new employers pay the greater of 2.7% or the NAICS average.",
+    "cite": "Texas Unemployment Compensation Act; TWC 2026 rate notice"
+   },
+   {
+    "req": "Child support withholding",
+    "detail": "Start withholding by the first pay period after an order is delivered, remit on each pay date (EFT within 2 business days of payday at 50+ employees), and a fee of up to $10 a month may be deducted. Fines of up to $200 per occurrence apply for knowing violations.",
+    "cite": "Family Code 158.202-158.204, 158.210"
+   },
+   {
+    "req": "Wage claims and penalties",
+    "detail": "Employees may file a TWC wage claim within 180 days of the date wages were due; TWC can assess a bad-faith penalty of up to the lesser of the wages or $1,000, and intentional non-payment with intent to avoid payment is a felony.",
+    "cite": "Labor Code 61.019, 61.051, 61.053"
+   }
+  ],
+  "timeAndLeave": [
+   {
+    "req": "No state paid sick leave",
+    "detail": "Do not apply Austin, Dallas or San Antonio sick-leave ordinances: all were enjoined, and HB 2127 now preempts municipal labor regulation. A single company PTO or sick policy applies, and FMLA/ADA govern longer absences.",
+    "cite": "HB 2127 (2023); Texas Ass'n of Business v. City of Austin (Tex. App. 2018)"
+   },
+   {
+    "req": "Vacation rules must be written",
+    "detail": "Accrual caps, use-it-or-lose-it and forfeiture at exit are lawful if stated in a written policy; if the policy promises payout, unpaid balances are wages due within 6 days of discharge or by the next payday after a resignation.",
+    "cite": "Labor Code 61.001(7)(B), 61.014; 40 TAC 821.25"
+   },
+   {
+    "req": "Jury service",
+    "detail": "No discharge, threats or coercion of permanent employees for jury service, and reinstatement if the employee promptly notifies intent to return; damages range from 1 to 5 years' compensation. Pay is not required for non-exempt staff, but exempt salary rules apply.",
+    "cite": "Civ. Prac. & Rem. Code 122.001-122.002"
+   },
+   {
+    "req": "Voting time",
+    "detail": "Allow employees to vote on election day without penalty or pay deduction unless they have 2 consecutive hours outside working hours while polls are open; violation is a Class C misdemeanor.",
+    "cite": "Election Code 276.004"
+   },
+   {
+    "req": "Military leave",
+    "detail": "USERRA for federal service; Texas adds reemployment rights for members of the Texas military forces (State Guard, National Guard on state duty) called to training or duty.",
+    "cite": "Gov Code 437.204; 38 U.S.C. 4301 et seq."
+   },
+   {
+    "req": "Evacuation orders",
+    "detail": "Do not discharge or discriminate against an employee who leaves to comply with a general public evacuation order in a declared emergency (limited exceptions for essential services).",
+    "cite": "Labor Code 22.002"
+   },
+   {
+    "req": "Federal leaves carry the load",
+    "detail": "FMLA (50+ employees within 75 miles), PWFA and ADA accommodations, and PUMP Act lactation breaks apply; there is no Texas PFML, pregnancy or bereavement leave.",
+    "cite": "29 U.S.C. 2601; 42 U.S.C. 2000gg; 29 U.S.C. 218d"
+   },
+   {
+    "req": "Holidays and closures",
+    "detail": "No required holidays. For weather or grid closures, exempt employees who work any part of the week get the full salary, while non-exempt pay follows written policy.",
+    "cite": "29 CFR 541.602; Labor Code 61.001(7)(B)"
+   }
+  ],
+  "benefits": [
+   {
+    "req": "Workers' comp: subscriber or non-subscriber",
+    "detail": "Coverage is optional. Subscribing keeps the exclusive-remedy bar (except gross-negligence death claims). Non-subscribers face negligence suits without common-law defenses and must file DWC-005 annually, post Notice 5 and report injuries on DWC-007. For a small Austin office inside a national program, subscribing through a Texas endorsement is usually simpler.",
+    "cite": "Labor Code 406.002, 406.033; 28 TAC 110.1"
+   },
+   {
+    "req": "Non-subscriber ERISA injury plan",
+    "detail": "Most non-subscribers adopt an ERISA occupational injury benefit plan (medical, wage replacement, death and dismemberment) with an SPD, claims procedures and Form 5500. Post-injury waivers are valid only if signed at least 10 business days after the injury is reported, after a medical evaluation, knowingly and in a conspicuous writing.",
+    "cite": "Labor Code 406.033(e)-(f); ERISA"
+   },
+   {
+    "req": "No state-mandated disability, PFML or retirement program",
+    "detail": "No SDI, PFML premiums or state auto-IRA; federal ACA, COBRA and ERISA rules govern the plans.",
+    "cite": "ERISA; ACA; COBRA"
+   },
+   {
+    "req": "Insured-plan state mandates",
+    "detail": "Fully insured Texas plans follow Insurance Code mandates, including SB 1257 (2025) coverage of follow-up care and treatment related to gender transition or detransition; self-funded ERISA plans are not subject to state mandates.",
+    "cite": "SB 1257 (2025); ERISA 514"
+   },
+   {
+    "req": "COVID-19 vaccination incentives",
+    "detail": "Wellness programs may not require COVID-19 vaccination as a condition of employment; keep any wellness incentives voluntary and ACA/ADA-compliant.",
+    "cite": "Health & Safety Code Ch. 81D (SB 7)"
+   },
+   {
+    "req": "Unemployment claims",
+    "detail": "Respond to TWC's Notice of Application within 14 days with evidence; misconduct denials based on drug tests need an acknowledged written policy, chain of custody and confirmed results. HB 3699 (from 1 Jan 2026) ties the separation review to the claimant's actual last employer.",
+    "cite": "Labor Code 207.044, 208.004; HB 3699 (2025)"
+   }
+  ],
+  "performanceAndConduct": [
+   {
+    "req": "At-will, with narrow exceptions",
+    "detail": "Texas enforces at-will strictly: handbooks with disclaimers are not contracts, and the main common-law exception is discharge for refusing to do an illegal act (Sabine Pilot). The risks are statutory retaliation and discrimination claims.",
+    "cite": "Sabine Pilot Service v. Hauck (Tex. 1985); Montgomery County Hospital Dist. v. Brown (Tex. 1998)"
+   },
+   {
+    "req": "Sexual harassment response duty",
+    "detail": "Any employer of 1+ and individuals acting in its interest are liable if they knew or should have known of sexual harassment and failed to take immediate and appropriate corrective action, so escalate complaints to HR within a day and document interim measures.",
+    "cite": "Labor Code 21.141-21.142 (SB 45, 2021)"
+   },
+   {
+    "req": "TCHRA retaliation and damages",
+    "detail": "Retaliation for opposing discrimination or filing a charge is unlawful. Compensatory and punitive damages are capped at $300,000 for 501+ employees, and suits must be filed within 2 years of the complaint.",
+    "cite": "Labor Code 21.055, 21.256, 21.2585"
+   },
+   {
+    "req": "Workers' comp retaliation",
+    "detail": "Keep injury claims out of attendance points and performance ratings; neutral absence-control policies uniformly applied are the usual defense.",
+    "cite": "Labor Code 451.001"
+   },
+   {
+    "req": "Firearms and workplace searches",
+    "detail": "Discipline cannot be based on lawful storage of firearms in a locked personal vehicle in company parking, and weapons policies and search procedures must reflect that.",
+    "cite": "Labor Code 52.061-52.062"
+   },
+   {
+    "req": "Recording and monitoring",
+    "detail": "Texas is a one-party-consent state for recording, and there is no employee-monitoring notice statute; disclose monitoring in the acceptable-use policy and get CUBI consent before any biometric monitoring.",
+    "cite": "Penal Code 16.02; Bus. & Com. Code 503.001"
+   },
+   {
+    "req": "Drug and alcohol testing",
+    "detail": "Reasonable-suspicion, post-incident and random testing are lawful; use a written policy with acknowledgment, a certified lab and confirmation testing, because TWC needs these to find misconduct for UI purposes.",
+    "cite": "TWC 'Especially for Texas Employers' guidance; ADA"
+   },
+   {
+    "req": "Voting and election-day absences",
+    "detail": "Employers may not refuse time off to vote or penalize, or threaten to penalize, an employee for attending the polls; build this into attendance rules for election days.",
+    "cite": "Election Code 276.004"
+   }
+  ],
+  "termination": [
+   {
+    "req": "Final pay after discharge",
+    "detail": "All wages owed, including earned commissions per the plan and vacation if the written policy provides payout, are due by the 6th calendar day after discharge (layoffs count as discharges).",
+    "cite": "Labor Code 61.014(a)(1)"
+   },
+   {
+    "req": "Final pay after resignation",
+    "detail": "Due by the next regularly scheduled payday. If the company accepts a resignation early, treat it as a resignation for pay timing only if the employee initiated it; otherwise apply the 6-day rule.",
+    "cite": "Labor Code 61.014(a)(2)"
+   },
+   {
+    "req": "No Texas WARN",
+    "detail": "Only federal WARN applies (100+ employees; 60 days); send the state notice to TWC and the local chief elected official (Austin mayor or Travis County judge). TWC Rapid Response supports affected workers.",
+    "cite": "29 U.S.C. 2101 et seq.; 20 CFR 639"
+   },
+   {
+    "req": "Deductions from final pay",
+    "detail": "Recover unreturned equipment, advances or repayment amounts only with a prior written authorization for a lawful purpose, and not below minimum wage for non-exempt staff.",
+    "cite": "Labor Code 61.018"
+   },
+   {
+    "req": "Child support and garnishment notices",
+    "detail": "Notify the OAG/court and obligee within 7 days after an employee with a withholding order leaves, with last known address and new employer if known.",
+    "cite": "Family Code 158.211"
+   },
+   {
+    "req": "Covenant enforcement review",
+    "detail": "Before sending reminder letters or suing, confirm the covenant was ancillary to delivered consideration and is reasonable; courts reform overbroad covenants, but an employer that knew a covenant was unreasonable can owe the employee's attorney fees.",
+    "cite": "Bus. & Com. Code 15.50-15.51"
+   },
+   {
+    "req": "Unemployment claims",
+    "detail": "Document the separation reason, prior warnings and policy acknowledgments; respond to TWC within 14 days to protect the tax account.",
+    "cite": "Labor Code 207.044-207.045, 208.004"
+   },
+   {
+    "req": "Protected-activity check",
+    "detail": "Screen for TCHRA complaints (300-day window for sexual harassment), workers' comp claims, jury service, military duty and refusals to act illegally before approving an exit.",
+    "cite": "Labor Code 21.055, 21.202, 451.001; CPRC 122.001"
+   }
+  ],
+  "exit": [
+   {
+    "req": "Deliver final pay on time",
+    "detail": "Pay by the 6-day or next-payday deadline via the usual method or as agreed; keep evidence of the payment date for TWC claims.",
+    "cite": "Labor Code 61.014, 61.016"
+   },
+   {
+    "req": "Releases that name the claims",
+    "detail": "Texas requires a release to mention the claims released, so list TCHRA, Labor Code Ch. 21 and 451, Payday Law and common-law claims alongside federal statutes, and follow OWBPA for 40+. Carve out sexual-abuse disclosures (SB 835).",
+    "cite": "Victoria Bank & Trust v. Brady (Tex. 1991); SB 835 (2025); 29 U.S.C. 626(f)"
+   },
+   {
+    "req": "References and blacklisting",
+    "detail": "Employers are immune for disclosing information about a current or former employee's job performance unless knowingly false or reckless; blacklisting a discharged employee is prohibited, but a truthful statement of the reason for discharge may be given on request.",
+    "cite": "Labor Code 103.003-103.004; Labor Code 52.031"
+   },
+   {
+    "req": "Biometric deletion",
+    "detail": "Delete security and timekeeping biometric templates promptly after termination and within 1 year at the latest, and keep a deletion log.",
+    "cite": "Bus. & Com. Code 503.001(c)"
+   },
+   {
+    "req": "Trade-secret exit steps",
+    "detail": "Exit certification, device return, DLP review and, for covenant holders, a copy of the non-compete or non-solicit with the new employer's details; Texas courts grant TROs under TUTSA.",
+    "cite": "Civ. Prac. & Rem. Code Ch. 134A; 18 U.S.C. 1836"
+   },
+   {
+    "req": "Federal exit notices",
+    "detail": "COBRA (20+), 402(f), H-1B LCA withdrawal and return-fare offer apply as in the US Federal note; Texas adds no separation-notice form (verify).",
+    "cite": "29 U.S.C. 1161 et seq.; 20 CFR 655.731"
+   }
+  ],
+  "recordsAndPrivacy": [
+   {
+    "req": "HR data is outside the TDPSA",
+    "detail": "The Texas Data Privacy and Security Act excludes data processed about applicants, employees, agents and contractors in that role, so employees have no Texas access or deletion rights; respond to requests under company policy and other states' laws (e.g., California) where they apply.",
+    "cite": "Bus. & Com. Code Ch. 541 (TDPSA)"
+   },
+   {
+    "req": "CUBI compliance and AG enforcement",
+    "detail": "The AG has secured $1.4B from Meta (Jul 2024) and $1.375B from Google (announced May 2025, finalized 31 Oct 2025) in privacy cases including biometric claims. Inventory every biometric use (badges, timeclocks, lab access, interview analytics, AI training) and document consent and deletion.",
+    "cite": "Bus. & Com. Code 503.001; Texas AG releases"
+   },
+   {
+    "req": "Breach notification",
+    "detail": "Notify affected individuals within 60 days of determining a breach, the AG within 30 days if 250+ Texans are affected (online form), and CRAs if 10,000+ are affected. Employee SSNs, bank data and medical information are covered.",
+    "cite": "Bus. & Com. Code 521.053"
+   },
+   {
+    "req": "TRAIGA documentation",
+    "detail": "Keep records of each AI system's purpose, data, outputs, testing and human oversight so the company can answer an AG civil investigative demand; no private right of action exists.",
+    "cite": "HB 149 (TRAIGA)"
+   },
+   {
+    "req": "Retention schedule",
+    "detail": "Texas has no personnel-file access law; use federal minimums, keep TWC unemployment payroll records (4 years; verify) and TCHRA-relevant records per TWC rules, and preserve everything once a TWC or EEOC charge is filed.",
+    "cite": "Labor Code 21.301; 29 CFR 1602.14; TWC rules (verify)"
+   },
+   {
+    "req": "SSN and sensitive data handling",
+    "detail": "Do not print full SSNs on badges or mailings, and apply reasonable security procedures to sensitive personal information.",
+    "cite": "Bus. & Com. Code 501.001, 521.052"
+   }
+  ],
+  "healthSafety": [
+   {
+    "req": "Federal OSHA jurisdiction",
+    "detail": "Texas has no state OSHA plan, so federal OSHA rules (recordkeeping, EAP, HazCom, Lab Standard) apply directly to the Austin office and labs.",
+    "cite": "29 CFR 1904, 1910.38, 1910.1200, 1910.1450"
+   },
+   {
+    "req": "Injury reporting to TDI-DWC",
+    "detail": "Subscribers file DWC Form-001 with the carrier within 8 days of an injury causing more than 1 day of lost time (and give the employee a copy); non-subscribers with 5+ employees file DWC Form-007 by the 7th day of the following month.",
+    "cite": "TDI-DWC Employer FAQ; Labor Code 409.005"
+   },
+   {
+    "req": "Extreme weather and grid emergencies",
+    "detail": "Winter Storm Uri (Feb 2021) caused multi-day ERCOT outages, water failures and more than 200 deaths. Plans should cover remote-work triggers, check-ins, lab shutdown for power loss (gas cabinets, lasers, chillers), generator and UPS testing, travel restrictions and pay rules. Central Texas flash floods (Jul 2025) and heat also belong in the plan.",
+    "cite": "29 CFR 1910.38; OSH Act 5(a)(1)"
+   },
+   {
+    "req": "Heat illness",
+    "detail": "No Texas heat standard, and HB 2127 preempted Austin's and Dallas's construction water-break ordinances; apply the OSHA heat NEP and General Duty Clause for outdoor and hot-lab work (federal heat rule pending; verify).",
+    "cite": "OSHA CPL 03-00-024; HB 2127"
+   },
+   {
+    "req": "Firearms and workplace violence",
+    "detail": "No state workplace-violence standard. Weapons policies must respect the parking-lot law and use Penal Code 30.06/30.07 notices to exclude handguns from buildings; threat assessment follows the global process.",
+    "cite": "Labor Code 52.061-52.062; Penal Code 30.06, 30.07"
+   },
+   {
+    "req": "Radiation-producing equipment",
+    "detail": "Register X-ray and other radiation machines used in failure analysis with the Texas DSHS Radiation Control Program and follow its operator and safety rules.",
+    "cite": "25 TAC Ch. 289"
+   }
+  ]
+ },
+ "terminationDeepDive": {
+  "voluntary": "Employees may resign at any time without notice; two weeks is customary. Final pay is due by the next regularly scheduled payday (Labor Code 61.014), including vacation only if the written policy provides payout. Paid garden leave during a notice period is lawful, and a Texas non-compete or non-solicit can follow if it was ancillary to delivered consideration and is reasonable. If the company releases the employee before the end of the notice period, document that the resignation stands; converting it into a termination changes the pay deadline to 6 days and can affect UI charging.",
+  "involuntary": "Strict at-will: no cause, notice or process is required, and handbooks with disclaimers are not contracts. Exposures are TCHRA discrimination and retaliation (15+ employees; sexual harassment reaches employers of 1+ and individual supervisors, with a 300-day filing window), federal claims, workers' comp retaliation (Labor Code 451.001), Sabine Pilot claims for refusing to commit an illegal act, jury, military and evacuation protections, and negligence suits from injured employees of non-subscribers. Good practice: documented reasons, comparator review, Legal review of timing near protected activity, and final pay scheduled within 6 calendar days.",
+  "redundancy": "No Texas mini-WARN, no statutory redundancy pay and no consultation. Federal WARN applies at 100+ employees: 60 days' notice of a plant closing or mass layoff to affected employees, the Texas Workforce Commission (state dislocated-worker unit) and the local chief elected official (for Austin, the mayor and the Travis County judge). TWC's Rapid Response teams can run on-site sessions on UI and retraining. Group releases for workers 40+ need OWBPA 45/7-day periods and decisional-unit disclosures. Layoffs are discharges for Payday Law purposes, so final pay is due within 6 days of the separation date, not with the next cycle.",
+  "finalPayTiming": "Discharge (including layoff): all wages owed by the 6th calendar day after discharge (Labor Code 61.014(a)(1)). Resignation: by the next regularly scheduled payday (61.014(a)(2)). Commissions and bonuses are due as the written plan provides (61.015), and vacation, sick or severance pay only if a written policy or agreement promises it (61.001(7)(B)). Employees may file a TWC wage claim within 180 days; TWC can order payment and a bad-faith administrative penalty of up to the lesser of the wages claimed or $1,000 (61.051, 61.053), and intentional non-payment after demand with intent to avoid payment is a third-degree felony (61.019). There are no California-style waiting-time penalties.",
+  "requiredDocuments": [
+   "Final paycheck by the 6-day (discharge) or next-payday (resignation) deadline (Labor Code 61.014)",
+   "COBRA notices via the administrator (20+ employees) and 402(f) rollover notice (federal)",
+   "Notice to the OAG, court and obligee within 7 days for employees with child support withholding orders (Family Code 158.211)",
+   "Federal WARN notices to employees, TWC and local officials where triggered (29 U.S.C. 2102)",
+   "OWBPA disclosures and 21/45-day and 7-day periods for releases from workers aged 40+",
+   "Response to any TWC Notice of Application for Unemployment Benefits within 14 days (Labor Code 208.004)",
+   "H-1B LCA withdrawal, USCIS notice and return-fare offer for sponsored employees (20 CFR 655.731)",
+   "Biometric template deletion record (Bus. & Com. Code 503.001)"
+  ],
+  "releaseAgreements": "Texas enforces releases supported by new consideration, but the release must mention the claims being released (Victoria Bank & Trust v. Brady, 1991), so list TCHRA (Labor Code Ch. 21), Labor Code 451, the Payday Law, jury-service and common-law claims as well as federal statutes. For employees 40+, OWBPA requires 21 days (45 for group programs), 7 days to revoke, an ADEA reference and written advice to consult a lawyer. Since 1 Sep 2025 (SB 835), confidentiality provisions are void to the extent they bar disclosure of an act of sexual abuse, including in older agreements; also respect the Speak Out Act, Rule 21F-17 and McLaren Macomb limits. Pay undisputed final wages unconditionally by the Payday Law deadline, not only after the release. Workers' comp benefits cannot be released privately for subscribers; non-subscriber post-injury waivers need the Labor Code 406.033(f) conditions (10 business days after the injury report, medical evaluation, conspicuous writing). Non-competes can be reaffirmed in the release if the original covenant was enforceable.",
+  "typicalPackage": "Market practice (not statutory) for Austin tech and semiconductor employers mirrors US norms: individual contributors typically 2-4 weeks' base pay per year of service with a 4-8 week minimum; directors and VPs 3-6 months; executives 6-12+ months under a severance plan. Packages usually add 2-6 months of COBRA subsidy and outplacement, and WARN-covered RIFs often pay 60 days in lieu of notice. Because Texas non-competes are enforceable, some employers pay garden leave or a covenant payment during the restricted period for key design engineers, though Texas law does not require it."
+ },
+ "recentChanges": [
+  {
+   "date": "2026-02",
+   "title": "FTC removes vacated non-compete rule; TSIF grant to Arm Austin",
+   "detail": "After abandoning its appeals in Ryan LLC v. FTC (N.D. Tex.) in Sept 2025, the FTC formally removed the Non-Compete Clause Rule from the CFR (Federal Register, 12 Feb 2026), so Texas covenants remain governed by Bus. & Com. Code 15.50. The same month the Governor announced a $4.16M Texas Semiconductor Innovation Fund grant for Arm's Austin failure-analysis lab (320+ jobs).",
+   "impact": "medium"
+  },
+  {
+   "date": "2026-01",
+   "title": "Texas Responsible AI Governance Act (HB 149) in force",
+   "detail": "From 1 Jan 2026, developing or deploying AI with intent to unlawfully discriminate against a protected class is prohibited (disparate impact alone does not show intent). There is no applicant or employee notice duty for private employers. The AG has exclusive enforcement, a 60-day cure period, civil investigative demands and penalties of $10,000-$12,000 (curable), $80,000-$200,000 (uncurable) and $2,000-$40,000 per day; NIST AI RMF alignment supports a defense. HB 149 also amended CUBI.",
+   "impact": "high"
+  },
+  {
+   "date": "2026-01",
+   "title": "HB 3699 unemployment 'last work' definition",
+   "detail": "From 1 Jan 2026, the separation review for a UI claim looks at the employer for whom the claimant actually last worked, removing the earlier rule that let claimants point to a different prior employer. Expect TWC separation inquiries to track the most recent employer more closely.",
+   "impact": "low"
+  },
+  {
+   "date": "2026-01",
+   "title": "EEOC rescinds 2024 harassment guidance after Texas ruling",
+   "detail": "The N.D. Tex. vacated the gender-identity portions of the EEOC's 2024 harassment guidance (Texas v. EEOC, 15 May 2025), and the EEOC rescinded the guidance on 22 Jan 2026. Title VII and Bostock still apply; TCHRA does not list sexual orientation or gender identity, and HB 229 (2025) defines sex biologically for state-law purposes.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-10",
+   "title": "Google's $1.375B privacy settlement finalized",
+   "detail": "The AG finalized the $1.375B settlement with Google (announced May 2025) over location, incognito and biometric data, following Meta's $1.4B CUBI settlement (Jul 2024). Both were consumer cases, but they show the AG enforces CUBI's $25,000-per-violation penalty at scale, and the same statute governs employee biometrics.",
+   "impact": "high"
+  },
+  {
+   "date": "2025-09",
+   "title": "2025 session laws take effect (SB 835, SB 1318, HB 229, SB 17, SB 2610)",
+   "detail": "From 1 Sep 2025: SB 835 voids confidentiality terms that bar disclosure of sexual abuse (retroactive); SB 1318 limits non-competes for physicians and other healthcare practitioners (not engineers); HB 229 defines sex biologically for state law; SB 17 bars certain individuals and entities tied to designated countries (e.g., China, Iran, North Korea, Russia) from acquiring Texas real property, with exceptions for US citizens and permanent residents; SB 2610 limits punitive damages in breach suits for businesses under 250 employees.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-09",
+   "title": "FTC drops Ryan LLC v. FTC appeal",
+   "detail": "On 5 Sep 2025 the FTC voted to dismiss its Fifth Circuit appeal and accept the N.D. Tex. vacatur (20 Aug 2024) of the nationwide non-compete ban. The FTC may still act case by case under Section 5, but Texas covenants are governed by state law.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-08",
+   "title": "Fifth Circuit: NLRB structure likely unconstitutional (SpaceX v. NLRB)",
+   "detail": "The Fifth Circuit affirmed injunctions halting NLRB proceedings because the removal protections for Board members and ALJs are likely unconstitutional. Employers in Texas, Louisiana and Mississippi can seek to enjoin unfair-labor-practice cases while the issue is resolved nationally.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-07",
+   "title": "HB 2127 (Regulatory Consistency Act) upheld on appeal",
+   "detail": "On 18 Jul 2025 the Third Court of Appeals reversed the 2023 Travis County ruling that had declared HB 2127 unconstitutional, holding the cities lacked standing. City labor ordinances exceeding state law (Austin's Fair Chance Hiring and construction rest-break ordinances, local sick leave) remain preempted, though cities may bring future as-applied challenges.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-06",
+   "title": "Private-employer E-Verify mandate fails; SB 6 large-load law signed",
+   "detail": "SB 324 (E-Verify for all private employers) passed the Senate but died in the House, so only state agencies and state contracting remain covered. SB 6 (signed 20 Jun 2025) sets ERCOT rules for large loads of 75 MW+, including remote disconnection in grid emergencies and backup-generation reporting, which matters for Texas fabs and data centers.",
+   "impact": "low"
+  },
+  {
+   "date": "2024-11",
+   "title": "2024 FLSA overtime rule vacated in Texas v. DOL",
+   "detail": "The E.D. Tex. vacated the DOL's 2024 salary-threshold increases nationwide on 15 Nov 2024, restoring the $684/week exempt minimum that Texas follows.",
+   "impact": "medium"
+  },
+  {
+   "date": "2024-07",
+   "title": "TDPSA in force; Meta $1.4B CUBI settlement",
+   "detail": "The Texas Data Privacy and Security Act took effect 1 Jul 2024 with an employment-data exclusion. On 30 Jul 2024 the AG announced a $1.4B settlement with Meta over facial-recognition data under CUBI, the largest single-state privacy settlement at the time.",
+   "impact": "high"
+  },
+  {
+   "date": "2024-02",
+   "title": "Ban on private-employer COVID-19 vaccine mandates",
+   "detail": "SB 7 (3rd called session, 2023) took effect 6 Feb 2024: private employers may not require COVID-19 vaccination of employees, contractors or applicants, subject to narrow healthcare exceptions; complaints go to TWC (verify enforcement details).",
+   "impact": "low"
+  }
+ ],
+ "watchlist": [
+  {
+   "title": "90th Legislature (regular session)",
+   "detail": "Convenes in January 2027. Expect renewed private-employer E-Verify bills (successors to SB 324), non-compete and AI follow-ups, and possible TRAIGA amendments; most new laws take effect 1 Sep 2027.",
+   "expected": "Session Jan-Jun 2027; effective dates from 1 Sep 2027"
+  },
+  {
+   "title": "TRAIGA enforcement and guidance",
+   "detail": "First AG civil investigative demands and actions under HB 149, the DIR regulatory sandbox and Texas AI Council guidance. Keep AI-in-HR documentation ready for a CID.",
+   "expected": "Ongoing from 2026"
+  },
+  {
+   "title": "AG biometric and privacy enforcement",
+   "detail": "After the Meta and Google settlements, the AG continues privacy suits under CUBI, the DTPA and TDPSA; watch for actions involving workplace biometrics or AI training on images.",
+   "expected": "Ongoing"
+  },
+  {
+   "title": "DACA litigation in Texas courts",
+   "detail": "The Fifth Circuit (Jan 2025) held DACA unlawful but limited relief to Texas; implementation for Texas-resident recipients' work authorization is being worked out in the S.D. Tex. (verify status). Track I-9 reverification impacts.",
+   "expected": "2026-2027 (verify)"
+  },
+  {
+   "title": "HB 2127 as-applied challenges",
+   "detail": "Cities kept the right to challenge HB 2127 in concrete cases after the July 2025 standing ruling; a revived local labor ordinance is unlikely but possible.",
+   "expected": "Uncertain"
+  },
+  {
+   "title": "Federal heat rule and NLRB structure",
+   "detail": "OSHA's proposed heat injury and illness prevention rule (verify status) would fill the gap left by preempted city water-break ordinances; Supreme Court review of NLRB removal protections could reshape SpaceX-type injunctions.",
+   "expected": "2026-2027 (verify)"
+  },
+  {
+   "title": "Semiconductor talent demand",
+   "detail": "Samsung Taylor moves from prototype to mass production for Tesla AI5 chips (shipments expected 2027), TI's Sherman fabs ramp, and TSIF-funded expansions (Arm, Silicon Labs) add Austin design and failure-analysis roles, which pushes up pay and covenant disputes.",
+   "expected": "2026-2027"
+  }
+ ],
+ "calendar": [
+  {
+   "month": 1,
+   "title": "Q4 UI wage report; Legislature convenes (odd years)",
+   "detail": "31 Jan: TWC quarterly wage report and UI tax payment for Q4. In odd years the Legislature convenes on the second Tuesday of January (12 Jan 2027). Review TWC's new UI tax rate notice and the TRAIGA AI inventory."
+  },
+  {
+   "month": 2,
+   "title": "Non-subscriber DWC Form-005 window opens; OSHA 300A",
+   "detail": "1 Feb-30 Apr: non-subscribers file DWC Form-005 with TDI-DWC. Post the OSHA 300A from 1 Feb to 30 Apr."
+  },
+  {
+   "month": 3,
+   "title": "OSHA ITA upload; bill-filing deadline (odd years)",
+   "detail": "2 Mar: OSHA electronic injury data where covered. In odd years, mid-March is the bill-filing deadline, so track employer bills (E-Verify, AI, non-competes)."
+  },
+  {
+   "month": 4,
+   "title": "DWC Form-005 due; Q1 UI report",
+   "detail": "30 Apr: last day for the non-subscriber annual DWC Form-005 filing and the TWC Q1 wage report and payment."
+  },
+  {
+   "month": 5,
+   "title": "Session ends; storm and flood season",
+   "detail": "In odd years the regular session ends in late May or early June (day 140). Refresh flash-flood and severe-storm procedures for Central Texas sites."
+  },
+  {
+   "month": 6,
+   "title": "Governor veto deadline; ERCOT summer readiness",
+   "detail": "About 20 days after sine die (around 20 June in odd years): final bill signings. Check lab cooling, UPS and heat procedures ahead of ERCOT summer peaks."
+  },
+  {
+   "month": 7,
+   "title": "Q2 UI report; heat",
+   "detail": "31 Jul: TWC Q2 wage report. Apply OSHA heat guidance for outdoor and hot-lab work."
+  },
+  {
+   "month": 9,
+   "title": "New Texas laws effective (odd years)",
+   "detail": "1 Sep: most new Texas statutes take effect in odd years (e.g., SB 835, SB 1318 in 2025). Update the Texas offer letter, handbook addendum and separation templates."
+  },
+  {
+   "month": 10,
+   "title": "Q3 UI report; open enrollment",
+   "detail": "31 Oct: TWC Q3 wage report. Benefits open enrollment; check insured-plan mandate changes and, for non-subscribers, the injury benefit plan SPD."
+  },
+  {
+   "month": 11,
+   "title": "Winter readiness",
+   "detail": "Test emergency notification, remote-work and lab shutdown procedures for ice storms and ERCOT emergencies; confirm generator and UPS maintenance."
+  },
+  {
+   "month": 12,
+   "title": "Year-end privacy and biometric review; TWC rate notice",
+   "detail": "Purge biometric templates of former employees and log deletions (CUBI), review breach-response contacts, and budget next year's UI tax from TWC's rate notice (typically issued in December)."
+  }
+ ],
+ "gotchas": [
+  "Missing the 6-calendar-day final-pay deadline after a layoff or firing because the Texas exit is run on the next regular payroll, or paying out vacation inconsistently because the PTO policy is silent on payout (Labor Code 61.001(7)(B), 61.014).",
+  "Using California offer letters and PIIAs in Austin: disclaiming non-competes and choosing California law leaves no enforceable covenant for key design engineers, while Texas non-competes need consideration that is actually delivered and reasonable scope (Bus. & Com. Code 15.50).",
+  "Ignoring the California angle of Texas covenants: an Austin engineer who moves to California can invoke B&P 16600.5, so decide deliberately which roles get Texas non-competes and use Texas law and venue.",
+  "Assuming workers' comp is automatic: failing to buy Texas coverage or, if opting out, missing the annual DWC Form-005, the Notice 5 posting, written new-hire notice and DWC-007 reports, while running without an ERISA injury plan and facing negligence suits without common-law defenses.",
+  "Enrolling fingerprints or face templates for badges, timeclocks or lab access without CUBI notice and consent, keeping them after termination, or sharing them with vendors without a statutory basis.",
+  "Treating HR data as covered by the TDPSA and building consumer-style rights processes, while missing the laws that do apply: CUBI, the 60-day breach rule with 30-day AG notice, and TRAIGA documentation.",
+  "Applying Austin, Dallas or San Antonio sick-leave, fair-chance or rest-break ordinances that are enjoined or preempted, or copying California's harassment-training cycle as if it were a Texas mandate, while overlooking that Texas supervisors can be personally liable for sexual harassment.",
+  "Adopting a 'no weapons anywhere on company property' rule that reaches employees' locked cars in the parking lot (Labor Code 52.061), or requiring COVID-19 vaccination for site access (SB 7).",
+  "Deducting unreturned laptops, relocation or sign-on repayments from final pay without a prior written authorization (Labor Code 61.018).",
+  "Treating Texas like California on emergencies: no grid-outage or flood playbook, no remote-work trigger, and docking exempt salaries for storm closures."
+ ],
+ "semiconductorNotes": [
+  "Austin talent market: design, verification, validation and failure-analysis talent competes with Samsung Austin Semiconductor, Apple, AMD, NXP, Infineon, Arm, Silicon Labs, Cirrus Logic and Tesla. TSIF grants add roles (Silicon Labs $23.25M R&D expansion, Feb 2025; Arm $4.16M failure-analysis lab and 320+ jobs, Feb 2026), and Samsung Taylor began 2nm prototype production for Tesla in Sept 2026, which intensifies competition for yield, test and process engineers.",
+  "North Texas manufacturing: TI began production at its first Sherman 300mm fab (SM1) on 17 Dec 2025, with up to four fabs and about 3,000 direct jobs planned, and GlobalWafers operates a 300mm wafer plant in Sherman. These pull technicians and equipment engineers from Austin and raise pay for hardware roles.",
+  "Texas CHIPS Act (2023) and the Texas Semiconductor Innovation Fund (TSIF), run by the Texas CHIPS Office in the Governor's economic development office, fund research, workforce and expansion projects. Grant agreements carry job and capital commitments, so HR must track headcount, wages and location data for compliance reporting and possible clawbacks. University pipelines include UT Austin's Texas Institute for Electronics, Texas A&M, UT Dallas and Austin Community College technician programs.",
+  "Trade secrets and covenants: unlike California, Texas enforces reasonable non-competes and non-solicits (Bus. & Com. Code 15.50), and TUTSA allows injunctions for threatened misappropriation. Hiring from Samsung, TI or NXP needs covenant review and clean-room onboarding, and departures to competitors can be restrained if the covenant was properly supported.",
+  "Deemed exports and export control are federal and unchanged in Texas, but Austin labs with EAR-controlled test data need the same person-based screening and technology control plans as California sites. SB 17 (2025) limits real-property purchases by individuals domiciled in, and entities controlled from, designated countries including China, so check relocation home-purchase assistance for affected assignees with counsel.",
+  "Grid and weather risk: ERCOT emergencies (Winter Storm Uri, Feb 2021) and SB 6 (2025) curtailment rules for 75 MW+ loads affect foundry and packaging partners such as Samsung Taylor more than a fabless office, but Austin labs still need UPS, generator and safe-shutdown plans for chillers, gas cabinets and lasers, plus remote-work continuity for tape-out schedules.",
+  "Biometric access control in labs and secure areas is common in semiconductor facilities; under CUBI each capture needs notice and consent, vendor sharing must fit a statutory exception, and templates must be destroyed after termination (security-purpose presumption).",
+  "AI productivity and code-quality analytics for engineers fall under TRAIGA's intent standard rather than California-style ADS rules, but Title VII disparate impact and CUBI still apply, and the AG can demand documentation of purpose, data and safeguards."
+ ],
+ "sources": [
+  {
+   "title": "Texas Labor Code Ch. 61 (Payday Law)",
+   "url": "https://statutes.capitol.texas.gov/Docs/LA/htm/LA.61.htm"
+  },
+  {
+   "title": "Texas Labor Code Ch. 21 (Employment Discrimination / TCHRA)",
+   "url": "https://tcss.legis.texas.gov/resources/LA/htm/LA.21.htm"
+  },
+  {
+   "title": "Texas Labor Code Ch. 406 (Workers' Compensation coverage)",
+   "url": "https://tcss.legis.texas.gov/resources/LA/htm/LA.406.htm"
+  },
+  {
+   "title": "Texas Bus. & Com. Code Ch. 503 (Biometric Identifiers / CUBI)",
+   "url": "https://tcss.legis.texas.gov/resources/bc/htm/bc.503.htm"
+  },
+  {
+   "title": "FindLaw: Texas Bus. & Com. Code 15.50 (covenants not to compete)",
+   "url": "https://codes.findlaw.com/tx/business-and-commerce-code/bus-com-sect-15-50/"
+  },
+  {
+   "title": "FindLaw: Texas Bus. & Com. Code 521.053 (breach notification)",
+   "url": "https://codes.findlaw.com/tx/business-and-commerce-code/bus-com-sect-521-053/"
+  },
+  {
+   "title": "FindLaw: Texas Family Code 158.203 (remitting withheld child support)",
+   "url": "https://codes.findlaw.com/tx/family-code/fam-sect-158-203/"
+  },
+  {
+   "title": "Texas OAG: New hire reporting",
+   "url": "https://www.texasattorneygeneral.gov/child-support/employers/new-hire-reporting"
+  },
+  {
+   "title": "TDI-DWC Form-005: Employer notice of no coverage",
+   "url": "https://www.tdi.texas.gov/forms/dwc/dwc005nocovst.pdf"
+  },
+  {
+   "title": "TDI-DWC Employer FAQ (coverage, DWC-001 and DWC-007 reporting)",
+   "url": "https://www.tdi.texas.gov/wc/employer/employerfaq.html"
+  },
+  {
+   "title": "28 TAC 110.101: Covered and non-covered employer notices",
+   "url": "https://www.law.cornell.edu/regulations/texas/28-Tex-Admin-Code-SS-110-101"
+  },
+  {
+   "title": "Bloomberg Tax: Texas publishes 2026 unemployment insurance tax rates",
+   "url": "https://news.bloombergtax.com/payroll/texas-publishes-2026-unemployment-insurance-tax-rates"
+  },
+  {
+   "title": "Littler: Texas Governor signs host of bills impacting employment (2025)",
+   "url": "https://www.littler.com/news-analysis/asap/texas-governor-signs-host-bills-impacting-employment"
+  },
+  {
+   "title": "Baker Botts: Texas enacts Responsible AI Governance Act",
+   "url": "https://www.bakerbotts.com/thought-leadership/publications/2025/july/texas-enacts-responsible-ai-governance-act-what-companies-need-to-know"
+  },
+  {
+   "title": "K&L Gates: Pared-back TRAIGA signed into law",
+   "url": "https://www.klgates.com/Pared-Back-Version-of-the-Texas-Responsible-Artificial-Intelligence-Governance-Act-Signed-Into-Law-6-24-2025"
+  },
+  {
+   "title": "Texas AG: Google $1.375B settlement finalized",
+   "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-finalizes-historic-settlement-google-and-secures-1375-billion-big-tech"
+  },
+  {
+   "title": "Bracewell: Meta's $1.4B settlement and CUBI obligations",
+   "url": "https://www.bracewell.com/resources/billion-dollar-liability-understanding-your-obligations-under-the-texas-capture-or-use-of-biometric-identifier-act/"
+  },
+  {
+   "title": "Fisher Phillips: FAQs on the Texas Data Privacy and Security Act",
+   "url": "https://www.fisherphillips.com/en/news-insights/faqs-businesses-texas-data-privacy-law.html"
+  },
+  {
+   "title": "Texas Tribune: Texas won't force private companies to use E-Verify (2025)",
+   "url": "https://www.texastribune.org/2025/06/05/texas-e-verify-requirements-immigration/"
+  },
+  {
+   "title": "Texas Tribune: Appeals court upholds HB 2127 (Jul 2025)",
+   "url": "https://www.texastribune.org/2025/07/18/texas-legislature-death-star-law-city-ordinances-limits/"
+  },
+  {
+   "title": "Epstein Becker Green: HB 2127 and the Texas CROWN Act",
+   "url": "https://www.ebglaw.com/workforce-bulletin/legislative-update-texas-limits-local-governments-authority-to-regulate-and-passes-the-crown-act"
+  },
+  {
+   "title": "FTC: Commission accedes to vacatur of Non-Compete Clause Rule (Sept 2025)",
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/federal-trade-commission-files-accede-vacatur-non-compete-clause-rule"
+  },
+  {
+   "title": "Holland & Knight: Fifth Circuit on NLRB removal protections (SpaceX)",
+   "url": "https://www.hklaw.com/en/insights/publications/2025/08/fifth-circuit-dual-removal-protections-for-nlrb-aljs-board-members"
+  },
+  {
+   "title": "Office of the Governor: TSIF grant to Arm Inc. (Feb 2026)",
+   "url": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-arm-inc"
+  },
+  {
+   "title": "TI: Production begins at Sherman 300mm fab (Dec 2025)",
+   "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas.html"
+  }
+ ]
+}

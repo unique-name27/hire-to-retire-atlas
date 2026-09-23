@@ -1,0 +1,590 @@
+{
+ "jurisdiction": "il",
+ "processes": {
+  "PL-01": "Budget Israeli headcount at fully loaded cost: employer NII of 4.51%/7.6% up to the NIS 51,910 ceiling, pension of 6.5% plus 8.33% (Section 14), keren hishtalmut at 7.5%, convalescence pay (NIS 451.50/day for 2026) and travel. Add a reserve-duty absence assumption to engineering capacity. Israeli headcount also triggers duties: a gender pay-gap report above 518 employees and 3% disability representation at 100+ employees.",
+  "PL-02": "Record on each req whether the role will be hours-tracked, on global overtime, or genuinely management/special-trust (Hours of Work and Rest Law s.30(a)(5)), because this drives both cost and litigation risk. Flag roles that need a B-1/HIT foreign expert (salary floor NIS 27,132/month from 1 Jan 2026) and roles that touch EAR-controlled technology or Israel Innovation Authority-funded projects.",
+  "PL-03": "Give each job code an hours-law status: covered, global overtime, or s.30(a)(5) management/special trust. Courts test real authority (budget, hiring, independence), not titles, so reserve the exemption for genuine senior managers. Keep job-evaluation data to defend 'equal value' claims under the Equal Pay Law and to support the gender pay-gap report required above 518 employees.",
+  "PL-04": "Reorganizations need no statutory consultation. But where a union is representative or organizing, changes need good-faith consultation and must not be aimed at deterring organizing (Collective Agreements Law s.33J; Pelephone 2013). Without a permit, you cannot cut the role or pay of a reservist during duty or the protection period that follows, or reduce the job of a mother within 60 days of her return from maternity leave.",
+  "PL-05": "Workers placed by a manpower agency for more than 9 months are generally deemed the client's employees (Manpower Contractors Law 1996 s.12A). The Labor Courts apply a substance test to 'freelance' engineers, which creates retroactive pension, severance and social-benefit exposure. Clients of guarding, cleaning and catering contractors are liable for the contractors' wage violations (Increased Enforcement of Labor Laws Law 2011 s.25).",
+  "TA-01": "There is no pay-range posting duty, but ads must not discriminate (Employment (Equal Opportunities) Law 1988 ss.2, 4): use gender-neutral wording, set no age limits, and do not refer to reserve duty. Ask for military service only if it is genuinely job-related, because it can indirectly discriminate. Keep ad copies for at least 3 years, the limitation period for applicants.",
+  "TA-02": "Referral programmes are lawful, but watch for indirect discrimination if referrals reproduce a homogeneous workforce. Agency agreements should include Privacy Law Amendment 13 processing and security terms. Recruiters must not solicit or use competitors' confidential information (Commercial Torts Law 1999).",
+  "TA-03": "Protected grounds include pregnancy, fertility treatment, parenthood, age, place of residence, political views, and the candidate's or a spouse's reserve service, so questions about military unit, upcoming reserve rotations or family plans are high-risk. A rejected candidate can be awarded compensation without proving damage (Employment (Equal Opportunities) Law s.10). Candidates must be told about the screening procedures used (Notice to Employee and Job Candidate Law 2002).",
+  "TA-04": "Issue an Israeli-law employment agreement containing: a Section 14 annex (8.33% severance), pension and keren hishtalmut rates, a global-overtime or special-trust clause only where it is genuine, an invention assignment with an explicit s.134 royalty waiver, and notice terms. The statutory written notice of terms is due within 30 days of the start date. Equity offers should refer to the Section 102 trustee sub-plan.",
+  "TA-05": "Do not ask candidates for a police record certificate (Criminal Register and Rehabilitation of Offenders Law 1981), and do not require genetic tests (Genetic Information Law 2000). Verify education and employment with consent, limit medical questions to fitness for the job, treat polygraph as voluntary only, and give an Amendment 13 privacy notice covering the screening vendor.",
+  "TA-06": "Releasing US-origin controlled technology to Israeli nationals in Israel is a reexport to Israel, and releasing it to third-country or dual nationals may be a deemed reexport. Israel is not in the most favourable EAR country groups, so check licence needs for advanced-computing and semiconductor ECCNs (verify current status). Collect nationality data only for export control, never for selection (national origin is a protected ground), and check Israel's own dual-use export controls.",
+  "TA-07": "Foreign engineers come in on the B-1 expert permit or the HIT high-tech track (about 6-10 working days). Pay at least twice the average wage (NIS 27,132/month from 1 Jan 2026), pay the employer fees, and provide health insurance and housing. Stays are generally capped at 63 months, and HIT spouses can get open work authorisation.",
+  "TA-08": "Working students and interns are employees: pay at least the minimum wage (NIS 35.40/hour from 1 Apr 2026), record their hours, and enrol them in pension after the waiting period. Placements that are part of an academic programme may be treated differently (verify). Many graduates still have reserve obligations, so do not ask about service timing.",
+  "TA-09": "A genuine senior executive can be excluded from the hours rules under the management/special-trust exemption, but still gets statutory severance (usually through Section 14), notice, pension and a pre-dismissal hearing. A non-compete needs a legitimate interest and ideally specific consideration (Checkpoint v. Frenkel). Grant parent equity through the Section 102 trustee route.",
+  "TA-10": "A former employer's non-compete binds only where it protects a legitimate interest (trade secrets, special training, specific consideration), so focus clean-hire checks on confidentiality and trade-secret exposure (Commercial Torts Law 1999). Israeli bribery offences (Penal Law ss.290-291A) cover offering jobs to officials' relatives. For rehires, decide whether prior service counts for severance, leave and convalescence seniority.",
+  "TA-11": "Amendment 13 (in force 14 Aug 2025) requires fuller notice at collection. Keep candidate data only as long as needed, and 3 years is defensible given applicants' limitation period for discrimination claims. Transfer data to the US ATS under the Transfer of Data Abroad Regulations 2001, and secure it under the Data Security Regulations 2017.",
+  "ON-01": "Before day 1, collect Form 101, bank details, the pension-fund choice and study-fund forms, and the signed agreement with its Section 14 annex, invention assignment and confidentiality terms. Do not request police certificates. Verify the ID card (teudat zehut), or for a foreign expert the B-1 permit, before start, and give the Amendment 13 privacy notice.",
+  "ON-02": "Israeli citizens and permanent residents need no permit, so the check is identity (teudat zehut). Foreign nationals need a B-1 permit and visa tied to the sponsoring employer and must be paid at least NIS 27,132/month from Jan 2026. Employing a foreign worker without a permit is an offence under the Foreign Workers Law 1991 and carries fines.",
+  "ON-03": "Set up Israeli payroll with the Form 101 data, the pension, Section 14 and keren rates and their salary base, any global-overtime component (shown separately), travel, the seniority date for convalescence pay, and reserve-duty tracking for NII claims. Payslips for non-exempt employees must show hours worked (Wage Protection Law s.24).",
+  "ON-04": "There is no statutory probation. Notice accrues from day 1 (1 day per month of service in months 1-6), and a hearing is still expected before a probation exit. In the first weeks, deliver the sexual-harassment bylaw and commissioner details, the privacy and monitoring policies, and safety and Home Front Command induction. Pension starts within the extension-order waiting period (3-6 months).",
+  "ON-05": "Relocation benefits are generally taxable income (verify any exemptions). Clawbacks must be reasonable and can be deducted from final pay only with clear written authority (Wage Protection Law s.25). For inbound foreign experts, budget for B-1 obligations (health insurance, housing); for Israelis moving abroad, plan pension, NII and tax-residence continuity.",
+  "PY-01": "Pay monthly salary by the 9th of the following month (Wage Protection Law s.9). File Form 102 and remit income tax, NII and health tax by the 15th, and deposit pension, severance and keren contributions through the clearing house by the regulatory deadline (verify). NII for 2026 is 4.27%/12.17% for the employee and 4.51%/7.6% for the employer up to NIS 51,910, and payslips must itemise hours, pension and leave balances (s.24).",
+  "PY-02": "Final salary is due on the regular payday. Severance is due on the termination date, with late-payment compensation after 15 days (Severance Pay Law s.20), and late wages carry steep late-payment compensation. Pay a reservist's salary on the normal payday even while the NII reimbursement claim (Form 3010) is pending.",
+  "PY-03": "Record hours for everyone who is not validly exempt. The week is 42 hours; overtime is paid at 125% for the first 2 hours a day and 150% after that, within the permit caps (verify), and work on the weekly rest day at 150% or more needs a Ministry permit. Engineers on global overtime still need attendance records and a reconciliation, because without records the employer bears the burden for up to 15 h/week and 60 h/month (Wage Protection Law s.26B). The special-trust exemption (Hours of Work and Rest Law s.30(a)(5)) is read narrowly.",
+  "PY-04": "Issue Form 106 annual payroll statements by the end of March (verify) and file the Form 126 annual withholding report by its deadline (verify). Collect a new Form 101 from every employee each January and load the new NII thresholds on 1 January. File the Section 102 equity reports under the 2025 electronic regime: quarterly within 120 days of quarter-end, and annually by 30 Apr.",
+  "PY-05": "Fix underpayments at once, because late-wage compensation runs from the 10th of the following month. Recover overpayments only by a deduction the Wage Protection Law permits (s.25 allows limited recovery of mistaken overpayments; verify the conditions) or under a written repayment agreement. Never offset against severance beyond what the law allows.",
+  "CO-01": "There is no pay-range posting duty. Price chip-design roles against Israeli high-tech surveys and include keren hishtalmut, car benefits and Section 102 equity in total pay. Show any global overtime component separately and keep it defensible, and pay men and women equally for work of equal value (Equal Pay Law 1996).",
+  "CO-02": "Notify salary changes to the employee in writing (Notice to Employee Law 2002) and update the pension and Section 14 salary base. Keep merit and promotion decisions reserve-neutral: reserve service, the employee's or a spouse's, is a protected ground, and returning mothers are also protected. Include Israel in the pay equity review and in the gender pay-gap report required above 518 employees.",
+  "CO-03": "Bonuses are subject to income tax and NII. They are excluded from the pension and severance base unless the contract says otherwise (verify for fixed or recurring bonuses). Prorating for reserve duty or maternity leave carries discrimination risk, and reserve service counts as service for seniority-based rights, so define leave treatment in the plan rules and follow them. Courts enforce written plan terms and established practice.",
+  "CO-04": "Commissions can form part of the base for the overtime hourly rate (Castro, Tel Aviv Regional Labor Court 2025), and recovering overpaid commission is limited by the deduction rules in Wage Protection Law s.25. Field sales staff are covered by the hours rules unless their hours genuinely cannot be supervised (s.30(a)(6)).",
+  "CO-05": "Record a counteroffer as a written change to the terms (Notice to Employee Law). Retention bonuses with clawbacks are enforceable if the clawback is reasonable and pro-rated. Any deduction from final pay needs clear written authority and must stay within Wage Protection Law s.25.",
+  "CO-06": "Employers with more than 518 employees in Israel must prepare an annual gender pay-gap report by gender and employee group and share it with employees (Equal Pay Law, 2020 amendment). Courts increasingly require employers to justify gaps between men and women in parallel roles (Tel Aviv Regional Labor Court, Sep 2025), so keep the privileged audit and the remediation records.",
+  "CO-07": "Israeli employees count in the worldwide pay-ratio population unless they fall within the de minimis exclusion. Grant equity for an Israel-based officer under the Section 102 trustee sub-plan, and model the 3% surtax plus the 2% capital-income surtax above NIS 721,560 a year.",
+  "EQ-01": "The trustee files the Israeli Section 102 sub-plan with the Israel Tax Authority at least 30 days before the first grant. The resolution must designate each award as a capital-gains-track trustee grant, and awards must be deposited with or controlled by the trustee within the regulatory period. Offers to more than 35 Israeli employees may need an Israel Securities Authority exemption (Securities Law s.15D; verify). Since 2025, grants are reported electronically each quarter (within 120 days) and each year (by 30 Apr).",
+  "EQ-02": "On the s.102 capital-gains track there is no tax at vesting. Tax is withheld by the trustee at sale: the grant-date value (the 30-trading-day average before grant for listed shares) is taxed as salary, and the rest at 25% if the shares were held 24 months from grant. Do not use sell-to-cover for s.102 RSUs, because an early sale loses capital-gains treatment. Non-trustee (s.3(i)) awards are taxed as salary with NII at sale or, with an ITA ruling, at vesting or exercise.",
+  "EQ-03": "An ESPP gets s.102 trustee treatment only through a specific Israel Tax Authority ruling. Otherwise the discount and gain are taxed as employment income with NII (taxable event per the ITA's position; verify). Payroll contributions need the employee's written consent to the deduction (Wage Protection Law s.25), and offers to more than 35 employees need an ISA exemption.",
+  "EQ-04": "The insider-trading provisions of the Israeli Securities Law 1968 also apply if employees trade TASE-listed customers' or suppliers' shares on company inside information. Sales of shares held by the s.102 trustee go through the trustee's broker and remain subject to blackouts and pre-clearance.",
+  "EQ-05": "No Israel-specific variation. For an Israel-based officer, shares held by the s.102 trustee are still beneficially owned and must be reported on Forms 3 and 4, and trustee sales need pre-clearance like any other.",
+  "EQ-06": "Recover by repayment agreement or by cancelling unvested awards. Deductions from wages are limited to those Wage Protection Law s.25 permits, and severance cannot be offset beyond what the law allows. Tax already withheld by the trustee or through payroll may need a refund claim to the Israel Tax Authority (verify).",
+  "BN-01": "Enrol the employee in pension on the extension-order timeline: after 3 months if they already have a fund, otherwise after 6 months (verify retroactivity). Rates are 6% employee, 6.5% employer, and 6% or 8.33% employer severance. Open the keren hishtalmut as the contract provides. Residents are covered by national health insurance (their chosen kupat holim, funded through the health tax), so group supplementary health is a market benefit, not a legal requirement.",
+  "BN-02": "There is no statutory open enrollment. Employees may switch pension and study funds at any time (Supervision of Financial Services (Provident Funds) Law 2005). Renew group supplementary health and life policies each year and review the group-negotiated pension management fees.",
+  "BN-03": "Update Form 101 tax credits after marriage or a birth. During paid maternity leave, the employer must keep making pension and keren contributions if the employee pays her share (Women's Employment Law). Record reserve-duty periods so pension and fund contributions continue, since NII reimburses 20% of the daily benefit toward these costs from Apr 2026.",
+  "BN-04": "Oversee compliance with the pension extension order: deposits and clearing-house reports on time, the correct salary base, Section 14 on full salary and the employee's freedom to choose a fund. Late deposits carry interest and supervisory penalties, and disability cover can lapse. Check that pension deposits continue during reserve duty and maternity leave.",
+  "BN-05": "Renew group supplementary health, life and disability insurance, and negotiate management fees with pension fund managers. Vendor contracts need Amendment 13 processing terms and the outsourcing controls of the Data Security Regulations 2017.",
+  "BN-06": "There is no COBRA equivalent: national health insurance through the kupat holim continues regardless of employment. Group supplementary and life policies can usually be converted to individual policies within a set window (verify with the insurer). Pension and disability cover continue in the individual's fund after the employer releases it with Form 161.",
+  "LV-01": "Several regimes overlap. Maternity leave is 26 weeks (15 if under 12 months' seniority), with up to 15 weeks paid by the NII maternity allowance, and the partner can share from week 6. Reserve duty is paid by the employer and reimbursed by NII via Form 3010. Sick pay and absences under Home Front Command instructions also apply. No dismissal or role cut is allowed during maternity leave and for 60 days after, or during reserve duty and its protection window, and pension and keren contributions continue during paid maternity leave if the employee pays her share.",
+  "LV-02": "Reasonable accommodation is required unless it imposes an excessive burden (Equal Rights for Persons with Disabilities Law s.8), and the employer must show a genuine effort (National Labor Court 7843-10-24, 2025). Government funding for accommodations may be available (verify the Ministry of Labor programme). Pregnant employees may be absent for pregnancy checks and are protected from hazardous work, nursing mothers get a daily nursing hour for 4 months after leave, and weekly rest follows the employee's religion.",
+  "LV-03": "A returning mother cannot be dismissed or have her role or hours cut for 60 days, and gets the daily nursing hour for 4 months. A returning reservist is protected for 30 days (60 days with 60+ cumulative reserve days in the year, under the 2026 extension order), and their role and income cannot be cut. Reintegrate reservists deliberately, and do not let the reserve absence count against them in ratings or bonuses.",
+  "LV-04": "Complete the employer's section of the NII work-injury claim (Form 250) promptly so the employee can claim injury allowance, and notify serious accidents to the Occupational Safety and Health Administration (Accident and Occupational Disease Notification Ordinance 1945). Commuting accidents and injuries while working from home can count as work injuries.",
+  "LV-05": "Annual Leave Law 1951: 12 working days for a 5-day week in years 1-5, rising with seniority, including a block of 7 consecutive days, with carry-over into the next 2 years and payout on exit. Publish the holiday calendar (Rosh Hashanah, Yom Kippur, Sukkot, Simchat Torah, the first and seventh days of Pesach, Shavuot, Independence Day). Let non-Jewish employees choose their own religion's holidays, and treat election day as a paid rest day. Under the extension order, hourly staff get 9 paid holidays after 3 months.",
+  "PD-01": "No statutory goal-setting process. But documented goals and dated check-ins are the evidence the Labor Courts look for when a performance dismissal is challenged on good faith or hearing grounds. Adjust goals pro rata for reserve duty and parental leave so the absence does not count against the employee.",
+  "PD-02": "Ratings must not penalise reserve duty (the employee's or, since 2024, a spouse's), pregnancy, maternity leave or fertility treatment (Employment (Equal Opportunities) Law 1988). Rate reservists on their performance while present and document the method. Discrimination claims now have a 5-year limitation period, so keep calibration records at least that long.",
+  "PD-03": "There is no statutory PIP, but any resulting dismissal needs a legitimate reason and a pre-dismissal hearing, and a PIP helps show good faith. Before issuing one, check protected status: pregnancy (a permit is needed after 6 months' seniority), fertility treatment, 60 days after maternity leave, reserve duty and its protection window, and paid sick leave. Pause the PIP clock during reserve absences.",
+  "PD-04": "Confirm the promotion in writing (Notice to Employee Law) and update the pension and Section 14 salary base. Reassess hours-law status: a move into management supports a special-trust exemption only if real authority comes with it. Keep promotion decisions reserve-neutral and gender-equal.",
+  "PD-05": "No statutory requirement. Build reserve call-up risk into key-person and succession plans for roles critical to tape-out. Talent assessments are personal data that employees can request under the access right in Protection of Privacy Law s.13, so write them accordingly.",
+  "PD-06": "Run sexual-harassment prevention training for employees and managers (the regulations expect the employer to let employees attend during working hours; verify) and train the commissioner. Add Israeli privacy (Amendment 13, Isakov monitoring limits), anti-bribery (Penal Law s.291A), export control, and the hazard-specific safety instruction required by the 1999 Provision of Information and Training Regulations.",
+  "PD-07": "A clawback of training costs (a service commitment) is enforceable if it is reasonable and pro-rated. Special training at the employer's expense is also one of the legitimate interests that can support a non-compete (Checkpoint v. Frenkel). The keren hishtalmut often funds studies, and direct reimbursements are generally taxable unless job-related (verify).",
+  "MV-01": "A transfer that materially worsens the employee's conditions (location, role or pay) can entitle them to resign and still receive severance (Severance Pay Law s.11(a)), and changes must be notified in writing (Notice to Employee Law). A permit is needed to change the role of a reservist during duty or the protection window, and a returning mother's role cannot be cut within 60 days.",
+  "MV-02": "An inbound assignee needs a B-1 expert permit with a salary of at least NIS 27,132/month. Israel and the US have no totalization agreement (verify), so check for NII and US social security double coverage. For Israeli engineers going abroad, keep pension and keren continuity, plan around reserve call-up obligations, and track Section 102 trustee holdings through any change in tax residence.",
+  "MV-03": "When an employee localizes out of Israel, release the Section 14 funds (or pay severance), pay unused leave and the convalescence balance, file Form 161, and decide in writing whether Israeli service will be recognized. Section 102 awards stay with the trustee, and ceasing Israeli residence may have tax consequences for held or unvested awards (verify the ITA position).",
+  "MV-04": "There is no remote-work statute. The hours rules, overtime recording and privacy limits (Isakov) still apply at home. Under the travel extension order, travel is reimbursed only for days actually commuted. Moving a work location abroad needs tax, NII and export-control review, and injuries in a home office can be NII work injuries.",
+  "MV-05": "Moving an engineer from global overtime to special-trust status requires genuine management authority; a new label alone will not hold (Hours of Work and Rest Law s.30(a)(5)). Converting a contractor to an employee raises retroactive pension, severance and social-benefit exposure, and agency workers are generally deemed the client's employees after 9 months.",
+  "MV-06": "Track B-1 expert permit renewals (generally annual, up to 63 months in total) and the salary floor that updates each 1 January (NIS 27,132 in 2026). Israel has no employer-sponsored permanent-residence route, so for Israeli engineers the main task is supporting their US immigration status and green-card timing.",
+  "EN-01": "A survey is personal-data processing that needs an Amendment 13 notice. Keep responses confidential, and do not collect reserve-service, health or union views in identifiable form. Avoid any survey that probes union sentiment during an organizing campaign (Collective Agreements Law s.33J).",
+  "EN-02": "Recognition awards and gifts are taxable employment income (verify any exemption for small holiday gifts) and are reported through payroll. Holiday gifts at Rosh Hashanah and Pesach are strong market practice; give non-Jewish employees the same gift or an equivalent at their own holidays.",
+  "EN-03": "Retention risk rises after reserve rotations and during escalations. Keep stay interviews with returning reservists supportive, and do not ask about future service plans. Interview notes are personal data that the employee can request under the Privacy Protection Law.",
+  "ER-01": "Route sexual-harassment complaints from any channel, including the hotline, to the commissioner designated in the employer's bylaw, who must investigate promptly (Prevention of Sexual Harassment Law s.7; Regulations 1998). Reports of offences or improper conduct are protected under the Protection of Workers (Exposure of Offences) Law 1997. Complaints linked to union activity need labour counsel because of s.33J.",
+  "ER-02": "A sexual-harassment investigation follows the Regulations: the commissioner investigates without delay and gives written recommendations, and the employer decides and informs the parties within short regulatory time limits (verify the days), with no retaliation. Hold a hearing before any disciplinary outcome. Review electronic evidence only within the written monitoring policy and Isakov limits (no private webmail), or the evidence may be excluded.",
+  "ER-03": "Israel has no statutory complaints committee. The commissioner appointed under the Regulations handles complaints, and the employer must act on the findings. Employers with 25+ employees must adopt and post the bylaw. Complainants can also go to the Labor Court or the police, and the employer is liable if it failed to take reasonable measures (ss.7-8).",
+  "ER-04": "Any serious disciplinary step and any dismissal needs a hearing: written notice of the allegations, time to prepare and the right to respond. Where a collective agreement or company rules set a disciplinary procedure, follow it strictly. Unpaid suspension needs a contractual or rules basis (verify).",
+  "ER-05": "The Protection of Workers (Exposure of Offences of Unethical Conduct and Improper Administration) Law 1997 bars retaliation against good-faith reporters, and the Labor Court can order reinstatement and punitive damages. Employers with 25+ employees must post the prescribed rights notice (verify). Hotline data needs an Amendment 13 notice and data-security controls.",
+  "ER-06": "Outside work during employment can be restricted by the contract and the duty of loyalty. Post-employment conflicts fall under the Checkpoint v. Frenkel legitimate-interest test. Collect financial and family details only with an Amendment 13 notice, and use them only for the stated purpose.",
+  "ER-07": "There is no specific workplace-violence statute: the employer's safety and good-faith duties apply, and threats should be reported to the police. During rocket and missile fire, follow Home Front Command instructions, and do not penalise employees who are absent under those instructions.",
+  "ER-08": "A union representing one-third of the employees in a bargaining unit is representative, and the employer must bargain in good faith (Collective Agreements Law 1957). Employer interference in organizing is prohibited (s.33J; Pelephone, National Labor Court 2013), and courts grant injunctions quickly. Strikes and lockouts need 15 days' notice (Settlement of Labor Disputes Law s.5A). Histadrut organizing at tech multinationals is active (Nokia 2025, SAP 2026).",
+  "ER-09": "The general limitation period is 7 years (Prescription Law 1958). Discrimination claims can be brought for 5 years by employees and 3 years by applicants. Labor Court disclosure can reach HR records and email, but the Isakov privacy limits apply to employee mailboxes.",
+  "ER-10": "A non-compete is enforceable only to protect a legitimate interest (Checkpoint v. Frenkel, 1999). Rely instead on trade-secret protection under the Commercial Torts Law 1999 (injunctions, plus statutory compensation without proof of damage; verify the cap), paid garden leave during notice, and confidentiality. Run DLP lookbacks and device forensics under the written monitoring policy, and stay out of private content (Isakov).",
+  "HS-01": "Notify serious accidents to the Ministry of Labor's Occupational Safety and Health Administration (Accident and Occupational Disease Notification Ordinance 1945) and complete the NII work-injury form (Form 250). Investigate with the safety trustees or committee where they exist, and record near misses in the safety management plan.",
+  "HS-02": "Follow Home Front Command activity levels (gathering limits, school closures, remote work) and maintain protected spaces. Employees absent under Home Front Command instructions are protected from dismissal (Protection of Employees in Emergency Law 2006; verify the title). Government wage-compensation schemes differ by event (from Oct 2023, June 2025), so check eligibility each time, and plan cover for reserve call-ups.",
+  "HS-03": "Hardware labs must meet the Work Safety Ordinance 1970 and its regulations (electrical work, lasers, chemical agents with environmental and medical monitoring where exposure applies). Have a safety management plan and safety trustees or a committee at the prescribed thresholds (verify for R&D sites), and appoint a safety officer where required. Give employees hazard information and training at least annually (1999 Regulations).",
+  "DS-01": "Keep salary components, hours status, the pension and Section 14 base and reserve-duty periods accurate: errors become payslip violations (Wage Protection Law s.24) and pension shortfalls. Notify changes to terms in writing (Notice to Employee Law 2002).",
+  "DS-02": "Protection of Privacy Law ss.13-14 give rights to access and correct personal data. Respond within the regulatory period (30 days, extendable; verify). Amendment 13 adds statutory damages of up to NIS 10,000 for some failures, including failures on correction requests. Employees can also obtain payroll and attendance records through Labor Court proceedings.",
+  "DS-03": "Keep payroll, attendance and leave records at least 7 years (Prescription Law 1958), recruitment and promotion records 5 years (the employee discrimination limitation since Dec 2024), and tax records as the Income Tax Ordinance requires (verify the period). Delete anything held beyond these needs, in line with the Privacy Law's purpose limitation.",
+  "DS-04": "The Data Security Regulations 2017 require role-based access control, authentication, access logging for medium- and high-level databases, periodic access reviews and audits (verify the audit frequency for the database's level), and reporting of severe security incidents to the PPA. Amendment 13 gave the PPA larger fines for security failures.",
+  "DS-05": "Employers with more than 518 employees must produce the annual gender pay-gap report. The Equal Employment Opportunities Commission may ask for data such as the disability representation figures (duty at 100+ employees). There are no other statutory human-capital disclosures for the Israeli subsidiary (verify).",
+  "DS-06": "Assess new HR vendors and AI tools against Amendment 13 (processing on the controller's behalf, notices), the outsourcing rules in the Data Security Regulations, and the Transfer Abroad Regulations 2001. The PPA's draft AI guidance confirms that privacy law applies in full to AI systems. Monitoring tools must pass the Isakov proportionality test, and automated screening must not discriminate on protected grounds.",
+  "DS-07": "On request, provide the NII employment and wage confirmation needed for unemployment claims, and give Forms 106 and 161 at exit. Release other employment data to third parties only with the employee's consent (Protection of Privacy Law), and keep references factual.",
+  "DS-08": "Israeli documents that must be posted or distributed include the sexual-harassment bylaw (25+ employees), the whistleblower rights notice (verify), statutory postings such as the Women's Employment Law (verify the current list), and Amendment 13 privacy notices. Make policies available in Hebrew. Where a collective agreement applies, policy changes affecting employment conditions must be negotiated.",
+  "OF-01": "The employee gives written notice under the Advance Notice Law (1 month after 12 months' service) or any longer contractual period. If the company releases them early it generally pays for the notice period, and it may use paid garden leave. Resignation usually carries no statutory severance, but Section 14 fund balances are released with Form 161 anyway, and resignations for health, relocation, deterioration of conditions or within 9 months of childbirth do qualify for severance. Final salary, unused leave and the convalescence balance are due on the regular payday. Non-competes hold only for legitimate interests (Checkpoint v. Frenkel), so rely on confidentiality and trade-secret controls.",
+  "OF-02": "No at-will: every dismissal needs a legitimate reason and a documented pre-dismissal hearing (written invitation stating the reasons, time to prepare, right to a representative, decision only after the hearing), or the Labor Court will award compensation. Permits are needed for pregnant employees with 6+ months' service and those in fertility treatment (Commissioner for Women's Employment Law), and for reservists during duty and 30/60 days after, some reservists' spouses and bereaved family members (Employment Committee). Dismissal is barred during maternity leave and for 60 days after. Pay notice or pay in lieu and severance (1 month per year, net of Section 14 funds), and file Form 161; severance can be withheld for serious misconduct only under Severance Pay Law ss.16-17.",
+  "OF-03": "Israel has no statutory collective-redundancy or WARN regime, but each employee still needs an individual hearing, notice and severance. Selection must be objective and screened for protected status: reservists and their protection windows, pregnancy and parents, disability, age. Where a union is representative or organizing, consult and bargain in good faith before layoffs (the union can strike on 15 days' notice; see the SAP Israel dispute, 2026), and never time layoffs to defeat organizing (s.33J). Market practice adds 1-3 months' ex gratia, extended equity exercise windows and outplacement.",
+  "OF-04": "Statutory rights (severance, notice, leave payout, overtime) cannot be waived in advance, and courts read waiver letters (kitav vitur) narrowly. Use a settlement agreement with added consideration, itemised payments and time to take advice, and for finality have the Labor Court approve it. Never make statutory dues conditional on signing, and carve protected whistleblower reports out of the confidentiality clause.",
+  "OF-05": "Pay final salary, unused leave, the convalescence balance and notice pay on the regular payday (by the 9th of the following month). Severance is due at termination, with late-payment compensation after 15 days (Severance Pay Law s.20). Release the pension, Section 14 and keren balances with Form 161 and release letters, issue Form 106, and tell s.102 grantees their exercise windows and that trustee-held shares stay with the trustee until sold.",
+  "OF-06": "Recover devices and access on the last day, but do not hold back final wages or severance until equipment is returned; only deductions permitted by Wage Protection Law s.25 are allowed. Forensic review of devices and mailboxes must follow the written monitoring policy and the Isakov limits (no private webmail). Close the leaver's export-control records.",
+  "OF-07": "An exit survey is voluntary processing that needs an Amendment 13 notice (purposes, voluntary nature, rights). Refer any sexual-harassment allegation raised at exit to the commissioner, and send retaliation or discrimination allegations (including reserve-service ones) to ER for triage. Report results only in groups of at least 5.",
+  "OF-08": "The compulsory retirement age is 67 for men and women (Retirement Age Law 2004). Women's eligibility age for an old-age pension is rising gradually toward 65. The employer may retire an employee at 67 but must handle requests to keep working through an individual, documented process (Shaare Zedek, National Labor Court 2025). Retirement at retirement age carries severance (the Section 14 release or a payment), and Form 161 lets the employee plan the tax on pension and severance.",
+  "OF-09": "On an employee's death, severance is payable to the survivors (Severance Pay Law s.5) together with final wages and the leave payout. Survivors claim pension-fund survivor benefits through the fund, and NII survivors' benefits may also apply. If the death is work-related, report it to the Occupational Safety and Health Administration and NII. If an employee's relative falls in military service, the 2025 Families of Fallen Soldiers amendment protects that employee's job.",
+  "OF-10": "References are not mandatory, and inaccurate negative references risk defamation and discrimination claims, so disclose data only with the former employee's consent. Rehire codes must not reflect reserve service, pregnancy or union activity. On rehire, decide in writing whether prior service counts for severance, leave and convalescence seniority."
+ },
+ "policies": {
+  "POL-01": "Make the Code part of the employment terms by referencing it in the employment agreement and delivering it with the statutory notice of terms, so a breach can support discipline after a hearing. Provide a Hebrew version. Add the Israeli bribery offences (Penal Law ss.290-291A) and the protection for reporters under the Protection of Workers (Exposure of Offences) Law 1997.",
+  "POL-02": "Add the protections of the Protection of Workers (Exposure of Offences of Unethical Conduct and Improper Administration) Law 1997, under which the Labor Court can order reinstatement and punitive damages for retaliation, and post the prescribed notice (25+ employees; verify). Route sexual-harassment reports to the commissioner named in the bylaw, and give hotline users an Amendment 13 privacy notice.",
+  "POL-03": "State that outside work during employment needs approval under the duties of loyalty and good faith, while post-employment restrictions are limited by Checkpoint v. Frenkel. Collect disclosures of relatives and investments under an Amendment 13 notice. Reserve service is not an outside activity and must never be restricted or penalised.",
+  "POL-04": "Add Penal Law ss.290-291A (bribery of Israeli and foreign public officials, with corporate liability). Treat jobs, internships or referrals for relatives of Israeli officials, including defence and Israel Innovation Authority officials, as high-risk and needing pre-approval.",
+  "POL-05": "Add that the insider-trading offences of the Israeli Securities Law 1968 apply to TASE-listed and dual-listed securities (such as customers or peers), and that sales of Section 102 trustee-held shares remain subject to blackouts and pre-clearance.",
+  "POL-06": "Recovery from Israeli wages is limited to deductions permitted by Wage Protection Law s.25, so rely on repayment agreements and forfeiture of unvested awards. Tax already withheld through the s.102 trustee or payroll may need a refund claim to the Israel Tax Authority (verify). Get a signed acknowledgment of the policy from covered executives.",
+  "POL-07": "Restricting relatives in the same reporting line is lawful, but personal status is a protected ground (Employment (Equal Opportunities) Law), so apply the rules neutrally. Align the relationship rules with the Prevention of Sexual Harassment Law, which treats sexual advances that exploit a relationship of authority or dependency as harassment even if the recipient did not show a lack of interest (s.3).",
+  "POL-08": "List Israel's protected grounds: sex, sexual orientation, personal status, pregnancy, fertility treatment, parenthood, age, race, religion, nationality, country of origin, place of residence, views, party, and the employee's or a spouse's reserve service (Employment (Equal Opportunities) Law 1988 s.2). Note that the burden shifts to the employer once a prima facie case is shown, that employees now have 5 years to claim, and that disability duties include 3% representation at 100+ employees.",
+  "POL-09": "The Israeli addendum is the statutory bylaw (takanon) required for employers with 25+ employees (Prevention of Sexual Harassment Law s.7; Regulations 1998). It sets out the definitions (including exploitation of authority), the commissioner's name and contacts, the complaint and investigation procedure, interim measures and anti-retaliation. Post it and give a copy to every employee, in Hebrew and any other language employees need. Cover service contractors' employees (Amendment 16, 2025) and company social events.",
+  "POL-10": "Israel has no bullying statute (verify pending bills), but the courts apply duties of good faith and dignity. Cover bullying in the conduct policy with an HR complaint route, and route any sexual-harassment element to the commissioner.",
+  "POL-11": "No specific statute applies. Add Home Front Command emergency procedures (alerts, protected spaces, headcounts) and police reporting of threats, and set a rule on licensed or service firearms carried by employees on site, consistent with the law and site security.",
+  "POL-12": "Drug and alcohol testing is highly restricted: it needs genuine consent and a clear safety justification (the constitutional right to privacy and the Protection of Privacy Law). Limit testing to safety-critical lab roles. Assess medical cannabis use case by case as a possible accommodation for non-safety roles.",
+  "POL-13": "Add the mandatory pre-dismissal hearing and a hearing before any serious sanction, and follow any disciplinary procedure in a collective agreement. Denying severance for misconduct is possible only in serious cases under Severance Pay Law ss.16-17, so do not promise it in the policy.",
+  "POL-14": "Employees' private social media is protected by privacy and freedom-of-expression principles, and monitoring private accounts is not allowed (Isakov). Discipline for posts must be proportionate and follow a hearing. Communications about union organizing are protected (Collective Agreements Law s.33J).",
+  "POL-15": "Map the RBA commitments to Israeli law: minimum wage, hours and weekly rest, freedom of association (Collective Agreements Law) and non-discrimination. For guarding, cleaning and catering contractors, client liability under the Increased Enforcement of Labor Laws Law 2011 (ss.25-26) supports wage-compliance checks.",
+  "POL-16": "There is no pay-range posting duty. Ads must not discriminate (Employment (Equal Opportunities) Law s.4), and candidates must be told about screening procedures (Notice to Employee and Job Candidate Law 2002). Prohibit questions about reserve service, family plans, fertility treatment and place of residence, and keep applicant records for 3 years.",
+  "POL-17": "Prohibit requests for police record extracts (Criminal Register and Rehabilitation of Offenders Law 1981) and for genetic tests (Genetic Information Law 2000). Run credit checks only with consent and where the role justifies them, and treat polygraph as voluntary only. Give an Amendment 13 notice, and provide screening results to candidates on request.",
+  "POL-18": "Add that EAR deemed-reexport rules apply to non-Israeli nationals, including dual nationals, working in Israel, and that Israel is outside the most favourable EAR country groups for advanced-computing items (verify). Cover Israel's own controls: the Defense Export Control Law 2007 and the Dual-Purpose Order 2006. Ask about nationality only for export purposes, to avoid national-origin discrimination claims.",
+  "POL-19": "Add the B-1 expert and HIT tracks: a salary of at least twice the average wage (NIS 27,132/month from Jan 2026), employer fees, health insurance and housing, and annual renewals up to 63 months. The employer bears the permit costs (verify the Foreign Workers Law limits on charging workers).",
+  "POL-20": "Add the Israeli substance test for employment, the 9-month rule for manpower-agency workers (Manpower Contractors Law s.12A), client liability for guarding, cleaning and catering contractors (Increased Enforcement of Labor Laws Law 2011 ss.25-26), and the Amendment 16 harassment duties toward contractors' employees.",
+  "POL-21": "There is no statutory probation. A contractual probation is allowed, but notice accrues from day 1 and a (lighter) hearing is still needed before termination. A pregnant employee with 6+ months' service needs a permit before dismissal, so decisions near the 6-month mark get close scrutiny.",
+  "POL-22": "Interns who work are employees: they get minimum wage (NIS 35.40/hour from Apr 2026), overtime and pension after the waiting period. Placements for academic credit may differ (verify). Do not ask about military service timing, and remember that students on reserve duty are protected.",
+  "POL-23": "Describe the Israeli pay mix: base salary, any global overtime component, keren hishtalmut, pension on full salary, car or allowances, bonus and Section 102 equity. State which components form the pension and Section 14 base. Men and women must receive equal pay for work of equal value (Equal Pay Law 1996).",
+  "POL-24": "Add the Equal Pay for Female and Male Employees Law 1996: equal pay for equal or equal-value work, the employee's right to pay information when bringing a claim, and the annual gender pay-gap report for employers with more than 518 employees (2020 amendment). There is no pay-range posting duty.",
+  "POL-25": "State how bonuses treat reserve duty and maternity leave: prorating risks discrimination claims, and reserve service counts toward seniority rights. State whether the bonus forms part of the pension and severance base (generally not, unless it is fixed or recurring; verify). Put payment conditions in writing, because courts enforce established practice.",
+  "POL-26": "Commissions are wages: pay them on time (Wage Protection Law), include them in the overtime hourly rate where applicable (Castro, 2025), and recover overpayments only within the s.25 limits. Notify plan changes to employees in writing.",
+  "POL-27": "Add the Israeli Section 102 sub-plan: filing with the Israel Tax Authority 30 days before the first grant, designation under the capital-gains trustee track, deposit with the trustee, a 24-month holding period from grant, and electronic quarterly and annual reporting since 2025. Cover the ISA prospectus exemption for employee offers (verify). An ESPP needs a tax ruling to get s.102 treatment.",
+  "POL-28": "Pay salary by the 9th of the following month with a detailed payslip showing hours and balances (Wage Protection Law s.24), and make only s.25 deductions. Withhold income tax, NII and health tax (2026: employee 4.27%/12.17%, employer 4.51%/7.6% up to NIS 51,910), file Form 102 by the 15th, and make pension deposits on time. Late wages carry late-payment compensation.",
+  "POL-29": "Replace the FLSA exempt logic with the Hours of Work and Rest Law: a 42-hour week, overtime at 125% then 150%, and 36 hours' weekly rest, with permits for Shabbat and holiday work. Exemptions apply only to genuine management/special-trust roles or roles whose hours cannot be supervised (s.30(a)(5)-(6)). Global overtime must be stated separately and reconciled against recorded hours, and attendance records are required (Wage Protection Law s.26B).",
+  "POL-30": "Add the travel extension order: reimburse commuting for days actually worked, up to NIS 22.60/day (taxable). There is no statutory home-office reimbursement (verify), and agreed remote stipends are taxable unless an ITA rule exempts them. Reimbursing business expenses against receipts is not wages.",
+  "POL-31": "Repayment obligations must be in writing, reasonable and pro-rated. Deducting them from final pay needs clear written authority within Wage Protection Law s.25, and severance cannot be offset. Courts may reduce excessive amounts, so tie the retention period to a legitimate interest.",
+  "POL-32": "Referral bonuses are taxable wages reported through payroll. Check that referrals do not produce indirect discrimination, and exclude referrals involving relatives of public officials (Penal Law bribery provisions).",
+  "POL-33": "Add the Annual Leave Law minimums (12 working days for a 5-day week in years 1-5, rising with seniority), the 7-consecutive-day block, carry-over into the next 2 years and payout on exit. List the Israeli holidays, let non-Jewish employees choose their own religion's holidays, and treat election days as paid rest days. Reservists may carry leave forward without employer consent under the extension orders.",
+  "POL-34": "Add the Sick Pay Law: 1.5 days a month up to 90. Day 1 is unpaid, days 2-3 are paid at 50% and day 4 onward at 100%, against a medical certificate. The balance also covers family illness (8 days for a child, 6 for a parent or spouse), and dismissal during paid sick leave is barred. Many high-tech employers pay from day 1 as a company benefit.",
+  "POL-35": "Add the Women's Employment Law: 26 weeks' maternity leave (15 for under 12 months' service), NII-paid for up to 15 weeks, partner sharing, and protection during pregnancy, fertility treatment, the leave and 60 days after. Add reserve duty (salary continued and reimbursed by NII, protection for 30/60 days after duty, 2-8 days' spouse leave), the father's 5-day absence at birth, and bereavement practice (verify the basis). Unpaid leave for reservists during protected periods is restricted.",
+  "POL-36": "Add Equal Rights for Persons with Disabilities Law s.8 (accommodation unless the burden is excessive, with the burden of proof on the employer), and the 3% representation duty and responsible officer at 100+ employees. Add the pregnancy protections (no hazardous work, absence for check-ups), the daily nursing hour for 4 months, and weekly rest according to religion.",
+  "POL-37": "Pension follows the extension order (starting after 3 or 6 months). Keren hishtalmut follows the contract (market practice is from day 1 or after a short wait), convalescence pay starts after 1 year, and travel reimbursement from day 1. National health insurance covers all residents, so group health cover is supplementary. Foreign experts may need private health insurance as a permit condition.",
+  "POL-38": "There is no remote-work statute. The addendum must keep hours recording and overtime rules for remote staff, limit monitoring to the Isakov standards, reimburse travel only for days actually commuted, cover home-office safety (NII work-injury coverage) and meet the 2017 Data Security Regulations. Also cover Home Front Command remote-work instructions during emergencies.",
+  "POL-39": "Israel has no statutory right to disconnect (verify pending bills). Still, out-of-hours work by non-exempt employees is overtime that must be recorded and paid, and weekly rest (Shabbat for Jewish employees) is protected. The Israeli week runs Sunday-Thursday, so set expectations for Friday-Saturday and late-evening calls with the US.",
+  "POL-40": "Add the B-1 requirements for inbound moves. For outbound moves, cover NII and pension continuity (no US-Israel totalization agreement; verify), Section 102 trustee holdings through a change in tax residence, and the reserve-duty obligations of Israeli assignees abroad, since a call-up may require them to return.",
+  "POL-41": "Israeli citizens may not travel to designated enemy states without a permit, and some countries refuse entry to Israeli passport holders. Follow National Security Council travel warnings for staff travelling abroad. Visitors to Israel need a Home Front Command and shelter briefing. The global restricted-travel rules on design data still apply.",
+  "POL-42": "Documented performance management is the evidence the courts review for good faith and a proper hearing in any dismissal. Keep ratings neutral to reserve duty, pregnancy, maternity leave and fertility treatment, and tell managers not to mention these absences in reviews.",
+  "POL-43": "There is no internal posting duty. Promotion decisions are covered by the Employment (Equal Opportunities) Law and must be reserve-neutral. Update the written terms and the pension base, and reassess hours-law status on moves into management.",
+  "POL-44": "Repayment clauses must be reasonable and pro-rated. The keren hishtalmut is a separate vehicle employees can use for studies. Special training at the employer's expense is a legitimate interest that can support post-employment restrictions (Checkpoint v. Frenkel).",
+  "POL-45": "Add sexual-harassment prevention training (the employer must enable participation, and the commissioner must be trained), safety information and training under the 1999 Regulations (at hire and at least annually for hazards), privacy and data-security training for users of HR databases (Data Security Regulations 2017), and Home Front Command emergency drills.",
+  "POL-46": "Add the Protection of Privacy Law 1981 as amended by Amendment 13 (in force 14 Aug 2025): notice content, sensitive-data categories, the DPO assessment, PPA fines and statutory damages. Add the Data Security Regulations 2017 (security level, procedures, severe-incident reporting), the Transfer Abroad Regulations 2001 for data flows to the US parent, and the access and correction rights in ss.13-14.",
+  "POL-47": "Implement Isakov (National Labor Court 2011): a clear written policy given in advance; a legitimate purpose, proportionality, transparency and minimisation; separate work and personal mailboxes; and no access to private webmail, even with consent, except in exceptional cases with a court order. Place cameras only after a documented assessment (National Labor Court 2025) and never in rest areas. Employee consent alone does not make excessive monitoring lawful.",
+  "POL-48": "Add Patents Law s.132 (service inventions belong to the employer absent agreement) with an explicit waiver of s.134 compensation to limit Compensation and Royalties Committee claims, the prompt-disclosure duty in s.131, and employer copyright under Copyright Act 2007 s.34. Moral rights are personal to the author, so obtain a consent (verify the scope). Back confidentiality with the Commercial Torts Law 1999, limit non-competes per Checkpoint v. Frenkel, and add transfer restrictions for IIA-funded know-how.",
+  "POL-49": "The Israeli schedule: payroll, attendance and leave records 7 years (Prescription Law 1958); records relevant to discrimination 5 years for employees and 3 years for applicants; tax records as the Income Tax Ordinance requires. Delete once the purpose is served under the Privacy Law, and keep security logs as the Data Security Regulations require (verify the periods).",
+  "POL-50": "There is no AI-specific employment statute. The PPA's draft AI guidance applies the Privacy Law in full to AI (legal basis, notice, accuracy), and discrimination law covers the outcomes of automated screening. Analytics and monitoring tools need Isakov proportionality, and introducing them in a unionized workplace may need negotiation.",
+  "POL-51": "Add the Organization of Supervision of Work Law 1954 framework: a safety management plan and safety trustees or committee at the prescribed thresholds, a safety officer where required, hazard information and training (1999 Regulations), accident notification, and the lab-specific regulations. Add Home Front Command preparedness (protected spaces, alerts) and the protection for employees absent in emergencies.",
+  "POL-52": "Add the Advance Notice Law periods (1 month after 1 year), the rule that an employer that releases the employee early pays for the notice period, the offset for unserved notice (s.7) and paid garden leave. Add the resignations that still qualify for severance (health, relocation, deterioration of conditions, after childbirth), the Section 14 release on resignation, and non-compete limits under Checkpoint.",
+  "POL-53": "Add the mandatory pre-dismissal hearing, statutory notice and severance, and the permit requirements: the Commissioner for pregnancy and fertility treatment, and the Employment Committee for reservists (30/60 days), certain spouses and bereaved families. Dismissal is barred during maternity leave and 60 days after, during paid sick leave, and for emergency absences. Severance can be denied only under Severance Pay Law ss.16-17.",
+  "POL-54": "There is no statutory collective-redundancy procedure. Add individual hearings, objective selection with protected-status screening, and union consultation where a union is representative or organizing (strikes need 15 days' notice, and s.33J limits action during organizing). Pay statutory severance through the Section 14 release, plus the market ex gratia of 1-3 months, and have settlements approved by the court for finality.",
+  "POL-55": "Recover property and remind leavers of their continuing obligations, but do not withhold final pay or severance pending return beyond s.25 deductions. Confidentiality and the s.134 waiver survive exit, and non-competes are enforceable only under the Checkpoint v. Frenkel test.",
+  "POL-56": "There is no duty to give references. Provide the NII employment and wage confirmation for unemployment claims and Forms 106 and 161. Disclose information only with the former employee's consent (Protection of Privacy Law), and keep references factual to avoid claims under the Prohibition of Defamation Law 1965.",
+  "POL-57": "Add the Equal Rights for Persons with Disabilities Law 1998 duties: accommodation, 3% representation of employees with significant disabilities and a responsible officer at 100+ employees (extension order), and the accessibility regulations for workplace premises (verify how they apply to existing buildings)."
+ },
+ "templates": {
+  "T-EXIT-SURVEY": "Add an Amendment 13 privacy notice (controller identity, purpose, that participation is voluntary, rights), keep the survey optional, and offer a Hebrew version. Route any sexual-harassment disclosure to the commissioner. Do not ask about reserve-service plans or union views in identifiable form, and report only in groups of 5 or more.",
+  "T-EXIT-INTERVIEW": "Add prompts to capture unreported sexual harassment (refer it to the commissioner under the bylaw) and any retaliation linked to reserve service, pregnancy or whistleblowing. Do not probe union activity. Interview notes are personal data the leaver can request under Protection of Privacy Law s.13.",
+  "T-OFFBOARD-CHECKLIST": "Add the Israeli items: hearing minutes and any permit for a protected employee; final pay on the regular payday; severance and Section 14 release letters; Form 161 filing and Form 106; payout of unused leave and convalescence; keren release; the NII employment and wage confirmation for unemployment claims; and a notice of s.102 trustee holdings and exercise windows. Never delay pay pending asset return.",
+  "T-TERM-SCRIPT": "In Israel the termination meeting comes after a pre-dismissal hearing. The hearing script must not present the decision as already made, and the dismissal notice is given only after the employee's response has been considered. Cover the notice period, severance or the Section 14 release, and final pay timing, and avoid any reference to reserve service, pregnancy or other protected grounds.",
+  "T-RIF-SELECTION": "Add Israeli protected-status screens: reservists on duty or within their 30/60-day protection windows, reservists' spouses under the temporary provisions, pregnancy and fertility treatment, 60 days after maternity leave, paid sick leave, bereaved families, disability and age. Record an individual hearing for each selected employee, and union consultation where a union is representative or organizing.",
+  "T-SEP-TERMS": "Separate the statutory dues (severance, notice, leave, convalescence, Section 14 release) from the added consideration. Courts read waivers of statutory rights narrowly, so itemise the payments, allow time for advice and consider asking the Labor Court to approve the settlement. Cover Form 161 tax handling (severance exemption up to the per-year cap) and whistleblower carve-outs.",
+  "T-INVESTIGATION": "For sexual-harassment complaints, follow the statutory route: the commissioner investigates and gives written recommendations, the employer decides within the regulatory timelines (verify), and complainants and witnesses are protected from retaliation (Prevention of Sexual Harassment Law; 1998 Regulations). Evidence from mailboxes and devices must comply with the monitoring policy and Isakov. Hold a hearing before any discipline.",
+  "T-PIP": "Add a note that any dismissal after a PIP needs a pre-dismissal hearing. Check protected status before issuing: pregnancy after 6 months' service, fertility treatment, 60 days after maternity leave, and reservists and their protection windows. Pause PIP timelines during reserve duty, and offer the document in Hebrew.",
+  "T-ONBOARD-PLAN": "Add the Israeli items: the signed agreement with its Section 14 annex and s.134 waiver, the statutory notice of terms within 30 days, Form 101, pension and keren enrolment, the sexual-harassment bylaw and commissioner details, the privacy and monitoring policies, safety and Home Front Command induction, and the B-1 permit check for foreign experts.",
+  "T-ONBOARD-PULSE": "Give an Amendment 13 notice, keep the pulse voluntary and confidential, and leave out questions on health, reserve duty, family plans or union views.",
+  "T-SCORECARD": "Remove any criterion or question about military unit, reserve obligations (the candidate's or a spouse's), pregnancy, fertility treatment, family plans, age, place of residence or political views (Employment (Equal Opportunities) Law). Keep scorecards for 3 years to cover applicant claims.",
+  "T-OFFER-APPROVAL": "Add Israeli items that need approval: global overtime versus special-trust status, Section 14 on full salary, the keren hishtalmut rate and base, car or car allowance, s.102 equity, and B-1 sponsorship cost and the NIS 27,132 salary floor. Also add specific consideration for any non-compete.",
+  "T-POLICY": "Include a Hebrew version for Israel, and check whether a collective agreement requires negotiation before a change. List the required Israeli postings (sexual-harassment bylaw for 25+ employees, whistleblower rights notice; verify the list), and refer to the Amendment 13 privacy notice where a policy involves personal data.",
+  "T-STAY-INTERVIEW": "Do not ask about future reserve service or family plans, because returning reservists and parents are protected. Retention bonuses with clawbacks must be reasonable and pro-rated, and interview notes are open to the employee under Protection of Privacy Law s.13.",
+  "T-ACCOMMODATION": "Record the analysis under Equal Rights for Persons with Disabilities Law s.8 (the excessive-burden test, with the burden of proof on the employer) and any government funding sought. Add pregnancy requests (avoiding hazards, absence for check-ups) and nursing-hour requests. Health data is sensitive, so restrict access under the Data Security Regulations.",
+  "T-REQ": "Add fields for hours-law status (covered, global overtime or s.30(a)(5) special trust), B-1/HIT sponsorship (NIS 27,132 floor), export-control classification for non-Israeli nationals, and Israel Innovation Authority funding. Budget the Israeli on-costs: NII, pension, Section 14, keren and convalescence pay."
+ },
+ "register": [
+  {
+   "id": "R-IL-01",
+   "name": "Sexual-harassment bylaw (takanon) and commissioner",
+   "type": "Program",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Employers with 25+ employees adopt a bylaw based on the regulations' template, post it and give it to every employee. Appoint and train a commissioner to receive and investigate complaints without delay, and act on the findings. Since Jan 2025 the duties extend to service contractors' employees.",
+   "owner": "HR / Employee Relations + Legal",
+   "cadence": "On hire; bylaw review annually; commissioner change as needed",
+   "cite": "Prevention of Sexual Harassment Law 1998 s.7; Prevention of Sexual Harassment (Employer Obligations) Regulations 1998; Amendment 16 (2025)",
+   "processes": [
+    "ER-01",
+    "ER-02",
+    "ER-03",
+    "ON-04",
+    "PD-06"
+   ]
+  },
+  {
+   "id": "R-IL-02",
+   "name": "Written notice of employment terms",
+   "type": "Notice",
+   "domain": "Onboard",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Give each employee written notice of the prescribed terms within 30 days of starting, and written notice of any change. Candidates must be informed about the screening procedures used.",
+   "owner": "HR Operations",
+   "cadence": "Per hire and per change of terms",
+   "cite": "Notice to Employee and Job Candidate (Terms of Employment and Screening and Admission Procedures) Law 2002",
+   "processes": [
+    "TA-04",
+    "ON-01",
+    "ON-04",
+    "CO-02"
+   ]
+  },
+  {
+   "id": "R-IL-03",
+   "name": "Mandatory pension enrolment and Section 14 arrangement",
+   "type": "Program",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Enrol employees in pension within 3-6 months of hire at 6% employee, 6.5% employer and 6% or 8.33% severance. Make deposits and clearing-house reports on time, adopt the Section 14 general approval in writing, and release the funds at exit.",
+   "owner": "Payroll + Benefits",
+   "cadence": "Monthly deposits; per hire and exit",
+   "cite": "Comprehensive Pension Extension Order (2008, as amended); Severance Pay Law 1963 s.14",
+   "processes": [
+    "BN-01",
+    "BN-04",
+    "PY-01",
+    "OF-05"
+   ]
+  },
+  {
+   "id": "R-IL-04",
+   "name": "Attendance records and global-overtime reconciliation",
+   "type": "Control",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Record hours for every employee not validly exempt, show hours on payslips, and reconcile global overtime against actual hours at least annually. Document the basis for each special-trust exemption. Without records, the burden of proof shifts to the employer (presumption of up to 60 overtime hours a month).",
+   "owner": "Payroll + HR Operations + Employment Legal",
+   "cadence": "Monthly; annual classification review",
+   "cite": "Hours of Work and Rest Law 1951 ss.16, 30(a)(5); Wage Protection Law 1958 ss.24, 26B",
+   "processes": [
+    "PY-03",
+    "PL-03",
+    "MV-05",
+    "PY-01"
+   ]
+  },
+  {
+   "id": "R-IL-05",
+   "name": "Weekly-rest and holiday work permits",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Obtain a Ministry of Labor permit before employing Jewish employees on Shabbat or Jewish holidays (e.g., for lab bring-up or tape-out support), and pay the weekly-rest premium. Non-Jewish employees' weekly rest follows their religion.",
+   "owner": "HR Operations + Site Operations",
+   "cadence": "Per recurring schedule; renew per permit term",
+   "cite": "Hours of Work and Rest Law 1951 ss.7, 9, 12; Law and Administration Ordinance s.18A",
+   "processes": [
+    "PY-03",
+    "LV-05"
+   ]
+  },
+  {
+   "id": "R-IL-06",
+   "name": "Reservist protection tracker and NII reimbursement",
+   "type": "Control",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Track each employee's reserve days per calendar year. Block dismissal, role or pay cuts and unpaid leave during duty and for 30 days after (60 days after 60+ cumulative days under the 2026 extension order) unless the Employment Committee grants a permit. Pay salary on time, claim NII reimbursement on Form 3010, and grant spouses 2-8 paid absence days.",
+   "owner": "HR Operations + Payroll + Employment Legal",
+   "cadence": "Continuous; annual reset per calendar year",
+   "cite": "Discharged Soldiers (Reinstatement in Employment) Law 1949; Reserve Service Law 2008; Reservists Extension Order 2026; National Insurance Law (Amendment 265)",
+   "processes": [
+    "LV-01",
+    "LV-03",
+    "OF-02",
+    "OF-03",
+    "PY-01"
+   ]
+  },
+  {
+   "id": "R-IL-07",
+   "name": "Permit to dismiss pregnant or fertility-treatment employees",
+   "type": "Filing",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Before dismissing, or cutting the role or pay of, an employee who is pregnant (6+ months' service) or in fertility treatment, apply to the Commissioner for Women's Employment Law and wait for a decision. Dismissal during maternity leave and for 60 days after is barred.",
+   "owner": "Employment Legal + HRBP",
+   "cadence": "Per case",
+   "cite": "Women's Employment Law 1954 s.9",
+   "processes": [
+    "OF-02",
+    "OF-03",
+    "PD-03",
+    "LV-01"
+   ]
+  },
+  {
+   "id": "R-IL-08",
+   "name": "Annual gender pay-gap report",
+   "type": "Filing",
+   "domain": "Reward",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Employers with more than 518 employees in Israel prepare an annual report of average pay gaps by gender and employee group and share it with employees (commonly by 1 June; verify).",
+   "owner": "Total Rewards + People Analytics + Legal",
+   "cadence": "Annual",
+   "cite": "Equal Pay for Female and Male Employees Law 1996 (Amendment 2020)",
+   "processes": [
+    "CO-06",
+    "DS-05"
+   ]
+  },
+  {
+   "id": "R-IL-09",
+   "name": "Disability representation and responsible officer",
+   "type": "Program",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Employers with 100+ employees work toward 3% representation of employees with significant disabilities and appoint a person responsible for their employment (verify the extension-order terms). All employers make reasonable accommodations in hiring and employment.",
+   "owner": "Talent Acquisition + HR / DEI",
+   "cadence": "Annual review; per request for accommodations",
+   "cite": "Equal Rights for Persons with Disabilities Law 1998 ss.8-9; Extension Order for Increasing Employment of Persons with Disabilities (2014)",
+   "processes": [
+    "LV-02",
+    "TA-03",
+    "DS-05"
+   ]
+  },
+  {
+   "id": "R-IL-10",
+   "name": "Section 102 plan filing, trustee and ITA reporting",
+   "type": "Filing",
+   "domain": "Equity",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "File the Israeli sub-plan with the Israel Tax Authority through the trustee at least 30 days before the first grant, and deposit awards with the trustee. From 2025, file electronic quarterly award reports within 120 days of quarter-end and annual reports by 30 Apr.",
+   "owner": "Stock Administration + Tax + Israeli trustee",
+   "cadence": "Per plan or amendment; quarterly; annual",
+   "cite": "Income Tax Ordinance s.102; Income Tax Rules (Tax Benefits in Share Issuance to Employees) 2003; ITA reporting rules (1 Jan 2025)",
+   "processes": [
+    "EQ-01",
+    "EQ-02",
+    "EQ-03",
+    "PY-04"
+   ]
+  },
+  {
+   "id": "R-IL-11",
+   "name": "Payroll tax and NII filings (Forms 101/102/106/126/161)",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Collect Form 101 at hire and each January, file Form 102 and remit tax and NII by the 15th monthly, issue Form 106 annually, file the Form 126 annual report (verify the deadline), and file Form 161 at each termination.",
+   "owner": "Payroll",
+   "cadence": "Monthly / annual / per exit",
+   "cite": "Income Tax Ordinance and Deductions Regulations; National Insurance Law 1995; Income Tax Ordinance s.9(7a)",
+   "processes": [
+    "PY-01",
+    "PY-04",
+    "OF-05",
+    "ON-03"
+   ]
+  },
+  {
+   "id": "R-IL-12",
+   "name": "HR database security documentation and incident reporting",
+   "type": "Control",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Keep a database definitions document and a data security procedure for the HR databases at their security level. Apply role-based access, logging, periodic reviews and audits, report severe security incidents to the PPA, and document the DPO assessment under Amendment 13.",
+   "owner": "HRIS + Information Security + Privacy Counsel",
+   "cadence": "Annual review; audits per security level; per incident",
+   "cite": "Protection of Privacy Law 1981 (Amendment 13, 2025); Protection of Privacy (Data Security) Regulations 2017",
+   "processes": [
+    "DS-04",
+    "DS-06",
+    "DS-02"
+   ]
+  },
+  {
+   "id": "R-IL-13",
+   "name": "Employee privacy notice and monitoring policy",
+   "type": "Notice",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Give employees and candidates an Amendment 13 privacy notice, plus a written IT, email and camera monitoring policy before any monitoring, meeting the Isakov principles (purpose, proportionality, transparency, no access to private mailboxes).",
+   "owner": "Privacy Counsel + HR + IT Security",
+   "cadence": "On hire; on material change; annual review",
+   "cite": "Protection of Privacy Law 1981 s.11; Isakov-Inbar v. State of Israel (National Labor Court 2011); National Labor Court 41179-01-24 (2025)",
+   "processes": [
+    "DS-06",
+    "ER-02",
+    "ER-10",
+    "OF-06",
+    "ON-01"
+   ]
+  },
+  {
+   "id": "R-IL-14",
+   "name": "Whistleblower rights notice and anti-retaliation",
+   "type": "Notice",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Post the prescribed notice of employees' rights under the whistleblower law (employers with 25+ employees; verify), and protect good-faith reporters from retaliation. Labor Court remedies include reinstatement and punitive damages.",
+   "owner": "Ethics & Compliance + HR",
+   "cadence": "Ongoing posting; per report",
+   "cite": "Protection of Workers (Exposure of Offences of Unethical Conduct and Improper Administration) Law 1997",
+   "processes": [
+    "ER-05",
+    "ER-01"
+   ]
+  },
+  {
+   "id": "R-IL-15",
+   "name": "Occupational safety programme (plan, trustees, training)",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Maintain a safety management plan and risk survey where required (verify the thresholds for R&D and lab sites), appoint safety trustees or a safety committee and a safety officer as prescribed, train employees on hazards at hire and annually, and notify serious accidents.",
+   "owner": "EHS + Site Operations",
+   "cadence": "Annual plan review; annual training; per incident",
+   "cite": "Organization of Supervision of Work Law 1954; Safety Management Plan Regulations 2013; Provision of Information and Training Regulations 1999; Accident and Occupational Disease Notification Ordinance 1945",
+   "processes": [
+    "HS-01",
+    "HS-03",
+    "PD-06"
+   ]
+  },
+  {
+   "id": "R-IL-16",
+   "name": "Home Front Command emergency preparedness",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Maintain protected spaces and alert procedures, follow Home Front Command activity levels (gatherings, remote work), and do not dismiss or penalise employees absent under Home Front Command instructions. Check government wage-compensation schemes for each emergency.",
+   "owner": "Security + EHS + HR",
+   "cadence": "Continuous; drills at least annually; per emergency",
+   "cite": "Civil Defence Law 1951; Protection of Employees in Emergency Law 2006 (verify title)",
+   "processes": [
+    "HS-02",
+    "ER-07",
+    "LV-01"
+   ]
+  },
+  {
+   "id": "R-IL-17",
+   "name": "Extension-order entitlements (convalescence pay and travel)",
+   "type": "Control",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Pay convalescence pay after 1 year of service by seniority, at NIS 451.50/day for 2026 (with differences paid after the 18 Aug 2026 update), and reimburse commuting up to NIS 22.60 per day worked. Include both in final pay.",
+   "owner": "Payroll + Total Rewards",
+   "cadence": "Annual rate check; monthly travel",
+   "cite": "Convalescence pay extension order (private sector, 2026 update); Extension order on employer participation in travel expenses (2016)",
+   "processes": [
+    "PY-01",
+    "OF-05"
+   ]
+  },
+  {
+   "id": "R-IL-18",
+   "name": "Foreign-expert work permits (B-1 / HIT)",
+   "type": "Filing",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Obtain a B-1 expert permit (standard or HIT track) before a foreign national starts work. Pay at least twice the average wage (NIS 27,132/month from 1 Jan 2026), renew annually up to 63 months, and track expiries.",
+   "owner": "Global Mobility / Immigration",
+   "cadence": "Per hire; annual renewal; 1 Jan salary-floor update",
+   "cite": "Foreign Workers Law 1991; Entry into Israel Law 1952; Population and Immigration Authority expert procedures",
+   "processes": [
+    "TA-07",
+    "MV-06",
+    "ON-02"
+   ]
+  },
+  {
+   "id": "R-IL-19",
+   "name": "Pre-dismissal hearing (shimua) record",
+   "type": "Record",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "Before any dismissal (including redundancy and probation), send a written hearing invitation stating the reasons, allow time to prepare and a representative, keep minutes, and issue a reasoned decision. Keep the file for the limitation period.",
+   "owner": "HRBP + Employment Legal",
+   "cadence": "Per dismissal",
+   "cite": "National Labor Court case law (duty of good faith; natural justice)",
+   "processes": [
+    "OF-02",
+    "OF-03",
+    "ER-04",
+    "PD-03"
+   ]
+  },
+  {
+   "id": "R-IL-20",
+   "name": "Union-organizing neutrality protocol",
+   "type": "Control",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Israel",
+   "countries": [
+    "il"
+   ],
+   "requirement": "When organizing activity is detected, stop anti-union messaging, new benefit changes and restructuring that could deter organizing. Route all communications through labour counsel, and bargain in good faith once a union reaches one-third representation.",
+   "owner": "Employment Legal + HR Leadership",
+   "cadence": "Per organizing event; annual manager briefing",
+   "cite": "Collective Agreements Law 1957 s.33J; Pelephone (National Labor Court 2013); Settlement of Labor Disputes Law 1957",
+   "processes": [
+    "ER-08",
+    "PL-04",
+    "OF-03"
+   ]
+  }
+ ]
+}

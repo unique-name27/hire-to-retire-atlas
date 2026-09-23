@@ -1,0 +1,3692 @@
+{
+  "processes": [
+    {
+      "id": "CO-01",
+      "name": "Salary structures & market pricing",
+      "stage": "Reward",
+      "depth": "standard",
+      "summary": "Maintains the global salary structure (job-based ranges by job family, level and geo zone) and reprices it every year against semiconductor-specific survey data such as Radford/Aon, with local cuts for Bengaluru, Taipei/Hsinchu and Shanghai/Shenzhen. Scope covers benchmark matching, range and geo-differential construction, the good-faith posting ranges that pay-transparency laws require, and loading ranges to Darwinbox and Greenhouse. Good looks like ranges refreshed before the annual review opens, defensible match quality, and posting ranges that match what the company actually pays.",
+      "owner": "Total Rewards (process and ranges), HR Analytics (survey data), Legal (pay-transparency and antitrust review)",
+      "trigger": "Annual survey release on the comp calendar (typically Q3, ahead of annual review budgeting), or a new job family, new location or material market movement for a critical skill",
+      "outputs": [
+        "Benchmark match file with survey source and match quality for each job",
+        "Salary range tables by job family, level and geo zone, in local currency",
+        "Geo differential table and zone assignment by work location",
+        "Posting-range table for each pay-transparency jurisdiction",
+        "CHRO-approved range change memo with cost and below-minimum impact",
+        "Updated range tables in Darwinbox and Greenhouse"
+      ],
+      "systems": [
+        "Darwinbox (HRIS)",
+        "Greenhouse (ATS)",
+        "Comp planning tool",
+        "BI / people analytics",
+        "Document management"
+      ],
+      "sla": "Annual refresh approved and loaded 6 weeks before annual review planning opens; new-job pricing within 10 business days of request",
+      "lanes": [
+        "HR Analytics",
+        "Total Rewards",
+        "HRBP",
+        "Legal",
+        "CHRO",
+        "People Ops"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Total Rewards",
+          "type": "start",
+          "label": "Launch annual market pricing cycle",
+          "detail": "Confirm survey participation and deadlines (e.g., Radford/Aon semiconductor cut for US and Canada, plus local technology cuts for India, Taiwan and China) and the market reference policy (e.g., P50 base, P60-P75 for critical design skills). Fix the range effective date to match the annual review calendar.",
+          "sla": "Q3",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "HR Analytics",
+          "type": "task",
+          "label": "Submit and validate survey census",
+          "detail": "Extract job, level, location and pay from Darwinbox as of the survey effective date, map to survey job codes and submit only through the survey vendor. Send China employee data de-identified or with PIPL notice and separate consent for the cross-border transfer (verify with privacy counsel).",
+          "sla": "Per vendor deadline",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Match benchmark jobs and age data",
+          "detail": "Match at least 60-70% of employees to benchmark jobs, record match quality (exact, close or blended), and age survey data to the common effective date using projected movement. Blend sources where a single survey has thin samples, e.g., analog/mixed-signal, RF or DFT roles.",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Build ranges and geo differentials",
+          "detail": "Set midpoints from the market reference, apply level-based spreads (e.g., 40% for early-career, 60% for senior levels) and geo zones by work location in local currency. Check range minimums against legal floors: California exempt salary ($70,304 in 2026, $72,384 in 2027; $122,573.13 for salaried computer professionals in 2026) and local minimum wages for support and intern roles.",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "HRBP",
+          "type": "task",
+          "label": "Review impact with HRBPs",
+          "detail": "HRBPs review who would fall below the new minimums, compression between levels and between managers and reports, and cost by org. Below-minimum cases are routed to the annual review (CO-02) or to CO-05 market adjustments.",
+          "next": [
+            "s6"
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Review posting ranges and data use",
+          "detail": "Legal confirms posting ranges are the good-faith range the company expects to pay at hire (not the full structural range) for each pay-transparency jurisdiction. It also confirms benchmarking used only vendor-aggregated data and no direct wage exchanges with competitors (wage-fixing has been a criminal offence in Canada since June 2023).",
+          "control": "Legal sign-off on posting-range table before load",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "CHRO",
+          "type": "decision",
+          "label": "Approve range changes?",
+          "detail": "The CHRO approves range movement, the cost of lifting employees to new minimums and the posting ranges. If movement exceeds budget tolerance, the CHRO may phase increases over two cycles.",
+          "branches": [
+            {
+              "to": "s8",
+              "label": "Approve"
+            },
+            {
+              "to": "s4",
+              "label": "Rework"
+            }
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "People Ops",
+          "type": "task",
+          "label": "Load ranges to Darwinbox and ATS",
+          "detail": "Load approved tables with the agreed effective date to Darwinbox and Greenhouse. A second person compares loaded values to the approved file before release.",
+          "sla": "5 bd",
+          "control": "Dual review of loaded range tables against the approved file",
+          "next": [
+            "s9"
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "Total Rewards",
+          "type": "end",
+          "label": "Publish ranges and guidance",
+          "detail": "Publish ranges to recruiters, HRBPs and managers with role-based access. Give employees a documented way to request the pay scale for their own role where law requires it (e.g., California)."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Survey census submission",
+          "R": "HR Analytics",
+          "A": "Total Rewards",
+          "C": "Legal",
+          "I": "HRBP"
+        },
+        {
+          "activity": "Benchmark matching and range build",
+          "R": "Total Rewards",
+          "A": "Total Rewards",
+          "C": "HR Analytics, HRBP",
+          "I": "CHRO"
+        },
+        {
+          "activity": "Posting-range and antitrust review",
+          "R": "Legal",
+          "A": "Legal",
+          "C": "Total Rewards",
+          "I": "Recruiter"
+        },
+        {
+          "activity": "Range approval",
+          "R": "Total Rewards",
+          "A": "CHRO",
+          "C": "FP&A, HRBP",
+          "I": "Recruiter, Manager"
+        },
+        {
+          "activity": "System load and publication",
+          "R": "People Ops",
+          "A": "Total Rewards",
+          "C": "HR Analytics",
+          "I": "Recruiter, Manager"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Posting ranges reviewed against the approved structure and each jurisdiction's rules before they reach Greenhouse",
+          "type": "preventive",
+          "evidence": "Legal sign-off on the posting-range table"
+        },
+        {
+          "id": "C2",
+          "control": "Loaded range tables compared with the CHRO-approved file by a second reviewer",
+          "type": "preventive",
+          "evidence": "Load comparison report with reviewer sign-off"
+        },
+        {
+          "id": "C3",
+          "control": "Market data obtained only through third-party survey vendors; no direct exchange of pay plans with competitors",
+          "type": "preventive",
+          "evidence": "Survey participation log and Legal-approved benchmarking protocol"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Benchmark coverage",
+          "target": ">= 65% of employees matched to a benchmark job with documented match quality",
+          "why": "Thin matching makes ranges hard to defend in pay-equity and transparency challenges"
+        },
+        {
+          "name": "Offers within range",
+          "target": ">= 95% of offers inside the approved range",
+          "why": "Offers outside range signal stale ranges or weak governance and undercut good-faith posting claims"
+        },
+        {
+          "name": "Range currency",
+          "target": "100% of ranges refreshed within 12 months",
+          "why": "Design-skill markets move fast; stale ranges drive failed offers and counteroffers"
+        }
+      ],
+      "considerations": [
+        "Price roles by skill family, not title: analog/mixed-signal, RF, physical design, DFT and verification often need a premium or separate range from generic 'hardware engineer' benchmarks.",
+        "Keep the structural range and the posting range separate. The posting range must be what you reasonably expect to pay at hire (California SB 642); the structural range can be wider to cover long-tenured employees.",
+        "Geo zones follow work location, not HQ. A remote engineer in Colorado or Washington brings that state's pay-transparency rules even if the manager sits in San Jose.",
+        "Treat survey submissions as antitrust-sensitive: use third-party vendors with aged, aggregated data and never share current or future pay plans with competitors.",
+        "Refresh range minimums every January for legal floors (California exempt threshold, local minimum wages) even in years when the market refresh is light."
+      ],
+      "variations": [
+        {
+          "when": "New job family or location (e.g., opening a Hsinchu validation lab)",
+          "how": "Price ad hoc within 10 business days using the closest benchmark and local survey cut; the CHRO approves an interim range until the next annual refresh."
+        },
+        {
+          "when": "Mid-year market spike for a named skill",
+          "how": "Total Rewards issues a temporary market premium for that skill with CHRO approval and reviews it at the next refresh instead of moving the whole structure."
+        },
+        {
+          "when": "Acquisition integration",
+          "how": "Map acquired jobs to the job architecture (PL-03), then price and decide whether to red-circle, green-circle or phase employees to the new ranges over one to two cycles."
+        }
+      ],
+      "countries": {
+        "us": "Maintain good-faith posting ranges for every pay-transparency jurisdiction (CO, WA, NY, IL, MN, MD, HI, DC, NJ, VT, MA and CA, plus VA from Jul 1, 2026, ME from Jul 29, 2026 and CT from Oct 1, 2026) and treat 'remote - US' roles as covered. Keep exempt ranges above the federal $684/week floor and higher state thresholds.",
+        "us-ca": "Postings must show a good-faith estimate of the range the company reasonably expects to pay (SB 642, 15+ employees), employees may request the pay scale for their current role, and job title and wage history must be kept for employment plus 3 years. Set exempt range minimums at or above $70,304 (2026) / $72,384 (2027), and $122,573.13 for salaried computer professionals (2026).",
+        "ca": "Ontario postings (25+ employees, since Jan 1, 2026) need a pay figure or range no wider than C$50,000 (roles above C$200,000 exempt) and BC postings need the expected pay or range. Benchmarking must avoid direct competitor wage exchanges, which are criminal under the Competition Act since June 23, 2023.",
+        "in": "There is no posting-range mandate, but build ranges on CTC with basic + DA at 50% or more of remuneration (Code on Wages 'wages' rule, since 21 Nov 2025) or PF, gratuity and leave-encashment costs rise. Price VLSI, verification and physical design separately from generic IT because Bengaluru chip-design GCCs move faster.",
+        "tw": "Salary ranges must be posted only for roles paying under NT$40,000/month (Employment Services Act Art. 5), which rarely hits engineering roles. Price total cash including year-end bonus and profit-sharing months, because engineers compare against TSMC and MediaTek profit-sharing.",
+        "cn": "No posting-range requirement; price Shanghai and Shenzhen separately and model employer social insurance and housing fund on top of cash (Shanghai contribution base cap RMB 37,731 from 1 Jul 2026). Submit China census data to survey vendors de-identified or with PIPL notice and separate consent."
+      },
+      "templates": [],
+      "policies": [
+        "POL-23",
+        "POL-24",
+        "POL-16"
+      ],
+      "related": [
+        "CO-02",
+        "CO-05",
+        "CO-06",
+        "PL-03",
+        "TA-01",
+        "TA-04"
+      ]
+    },
+    {
+      "id": "CO-02",
+      "name": "Annual compensation review",
+      "stage": "Reward",
+      "depth": "deep",
+      "summary": "Runs the annual merit, promotion and equity refresh cycle for all eligible employees, from budget setting with FP&A through manager planning in the comp tool, calibration, a privileged pay equity check before lock, approvals up to the CEO and Comp Committee, and a reconciled load to Darwinbox and payroll. It is one of the largest pay-change events of the year, so it is run with SOX-grade data controls. Good looks like spend within budget, clear pay-for-performance differentiation, no unexplained pay gaps, zero payroll load errors and letters delivered on time in every country.",
+      "owner": "Total Rewards (process), HRBP (manager enablement and calibration), FP&A (budget), Payroll (load and reconciliation); Comp Committee approves officer pay and the equity pool",
+      "trigger": "Annual comp calendar: budget approval in Q4, final performance ratings from PD-02, and country effective dates (e.g., 1 April for US, Canada and India)",
+      "outputs": [
+        "Approved merit, promotion and equity refresh budgets by country and org",
+        "Guidelines matrix, eligibility rules and country effective-date calendar",
+        "Approved manager recommendations with justification for exceptions",
+        "Privileged pre-lock pay equity memo and adjustment log (held by Legal)",
+        "Comp Committee resolutions for officer pay and the refresh pool",
+        "Reconciled HRIS/payroll load and equity grant list; employee comp letters"
+      ],
+      "systems": [
+        "Comp planning tool",
+        "Darwinbox (HRIS)",
+        "Performance module (Darwinbox)",
+        "Payroll provider",
+        "Equity platform",
+        "BI / people analytics"
+      ],
+      "sla": "About 12 weeks from budget approval to letters; pay changes reconciled on the first payroll after each country's effective date",
+      "lanes": [
+        "Manager",
+        "HRBP",
+        "Total Rewards",
+        "FP&A",
+        "Payroll",
+        "CEO",
+        "Comp Committee"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "FP&A",
+          "type": "start",
+          "label": "Set merit, promo and equity budgets",
+          "detail": "FP&A and Total Rewards set country merit budgets from survey salary-increase projections (India and China usually run above the US), a promotion pool and an equity refresh pool in shares and dollars within the burn-rate and share-reserve limits the Comp Committee approved. Budgets are built into the operating plan and accruals.",
+          "sla": "Q4 (Day -90)",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Publish guidelines and eligibility",
+          "detail": "Build the merit matrix (rating x compa-ratio), promotion increase guidance, refresh grant guidelines by level and rating, and eligibility rules (hire-date cutoff, leaves, notice periods, recent off-cycle increases). Publish one calendar of country effective dates and payroll cut-offs.",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Extract and validate comp tool data",
+          "detail": "Snapshot Darwinbox (job, level, base, range, FTE, currency, manager hierarchy) and final ratings from the Performance module, then load the comp tool. Reconcile headcount and total base payroll by entity to the payroll register before opening the tool.",
+          "control": "SOX data extract integrity: IPE completeness and accuracy check; headcount and base payroll reconciled to payroll by entity, signed by preparer and independent reviewer",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "HRBP",
+          "type": "task",
+          "label": "Train managers and open planning",
+          "detail": "HRBPs brief managers on guidelines, pay-for-performance expectations, equal-pay rules and what may not be said before approval (no promises, no discussion of others' outcomes). Planning opens with a 2-3 week deadline.",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Manager",
+          "type": "task",
+          "label": "Plan merit, promotion and equity",
+          "detail": "Managers enter recommendations in the comp tool within budget and guidelines. Increases outside the matrix, zero increases for solid performers and promotions above guideline need a written justification; promotions must be approved through PD-04 or flagged for approval in the tool.",
+          "sla": "2-3 weeks",
+          "next": [
+            "s6"
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "HRBP",
+          "type": "task",
+          "label": "Calibrate with dept heads",
+          "detail": "HRBPs and dept heads review each org's budget use, differentiation between rating groups, compa-ratio outliers, promotion consistency and retention of critical skills (e.g., analog, physical design, verification). Changes are made in the tool so the audit trail is kept.",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Run pre-lock pay equity check",
+          "detail": "At Legal's direction and under privilege, HR Analytics regresses proposed post-cycle pay (base, bonus target and refresh grant value) by gender globally and by race/ethnicity in the US, within job family, level and location. Unexplained gaps above threshold go back to HRBPs with suggested fixes funded from the cycle budget.",
+          "control": "Privileged pay equity review completed before lock; memo held by Legal",
+          "next": [
+            "s8"
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Total Rewards",
+          "type": "decision",
+          "label": "Within budget and equity-clean?",
+          "detail": "Total Rewards confirms each org is within budget tolerance (e.g., +/-0.1 point of payroll), exceptions are justified and flagged gaps are fixed or documented. Orgs that fail go back to managers with specific fixes.",
+          "branches": [
+            {
+              "to": "s9",
+              "label": "Yes"
+            },
+            {
+              "to": "s5",
+              "label": "No - rework"
+            }
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "CEO",
+          "type": "task",
+          "label": "Approve org totals and exceptions",
+          "detail": "The CEO, with the CHRO and CFO, approves org-level spend, above-guideline exceptions and VP-level outcomes, and recommends pay for Section 16 officers other than the CEO to the Comp Committee. The CEO takes no part in decisions on their own pay.",
+          "next": [
+            "s10"
+          ]
+        },
+        {
+          "id": "s10",
+          "lane": "Comp Committee",
+          "type": "task",
+          "label": "Approve officer pay and equity pool",
+          "detail": "The Comp Committee approves Section 16 officer increases, bonus targets and refresh grants, the aggregate non-officer refresh pool and any delegation, and sets CEO pay in executive session without the CEO (Nasdaq 5605(d); see CO-07). Grants are made on the fixed grant date under EQ-01, never before approval.",
+          "control": "Committee minutes and resolutions; approved grant list signed before the grant date",
+          "next": [
+            "s11"
+          ]
+        },
+        {
+          "id": "s11",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Lock cycle and generate load files",
+          "detail": "Lock the tool and generate the HRIS pay-change file (effective date, reason code, new range) and the approved refresh grant list for Stock Admin. Check each country's effective date against its payroll cut-off; where a load misses cut-off, schedule retro pay in the next regular payroll rather than off-cycle runs.",
+          "next": [
+            "s12"
+          ]
+        },
+        {
+          "id": "s12",
+          "lane": "Payroll",
+          "type": "task",
+          "label": "Load and reconcile pay changes",
+          "detail": "People Ops loads the file to Darwinbox, which feeds the payroll provider. Payroll reconciles count, total dollar change and effective dates between the locked tool, Darwinbox and the first payroll register after the effective date; retro pay for non-exempt employees includes recalculated overtime.",
+          "sla": "First payroll after effective date",
+          "control": "SOX: locked tool = Darwinbox = payroll register, independently reviewed; refresh grants reconciled approved list = equity platform = accounting",
+          "next": [
+            "s13"
+          ]
+        },
+        {
+          "id": "s13",
+          "lane": "Manager",
+          "type": "task",
+          "label": "Deliver conversations and letters",
+          "detail": "Managers hold conversations once letters are released in Darwinbox: new base, increase %, bonus target and any refresh grant ('subject to approval and grant on the scheduled date'). Country formats apply: India increment letter with revised CTC annexure, China bilingual salary adjustment notice acknowledged by the employee, Taiwan notice in Traditional Chinese.",
+          "sla": "Within 10 bd of lock",
+          "next": [
+            "s14"
+          ]
+        },
+        {
+          "id": "s14",
+          "lane": "Total Rewards",
+          "type": "end",
+          "label": "Close cycle and review outcomes",
+          "detail": "Report spend against budget, differentiation, promotion rates and post-cycle gap results to the CHRO and Comp Committee. Archive approvals, reconciliations and letters for SOX and records retention, and feed lessons into next year's guidelines."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Budget setting",
+          "R": "FP&A, Total Rewards",
+          "A": "CHRO (with CFO)",
+          "C": "CEO",
+          "I": "HRBP"
+        },
+        {
+          "activity": "Guidelines, eligibility and calendar",
+          "R": "Total Rewards",
+          "A": "CHRO",
+          "C": "Legal, HRBP, FP&A, Payroll",
+          "I": "Manager"
+        },
+        {
+          "activity": "Data extract and comp tool load",
+          "R": "Total Rewards",
+          "A": "Total Rewards",
+          "C": "Payroll, HR Analytics",
+          "I": "Internal Audit"
+        },
+        {
+          "activity": "Manager recommendations",
+          "R": "Manager",
+          "A": "Dept Head",
+          "C": "HRBP",
+          "I": "Total Rewards"
+        },
+        {
+          "activity": "Calibration",
+          "R": "HRBP",
+          "A": "Dept Head",
+          "C": "Total Rewards",
+          "I": "CHRO"
+        },
+        {
+          "activity": "Pre-lock pay equity check",
+          "R": "HR Analytics",
+          "A": "Legal",
+          "C": "Total Rewards",
+          "I": "CHRO"
+        },
+        {
+          "activity": "Officer pay and refresh pool approval",
+          "R": "Total Rewards",
+          "A": "Comp Committee",
+          "C": "CEO, Legal, compensation consultant",
+          "I": "Board"
+        },
+        {
+          "activity": "HRIS/payroll load and reconciliation",
+          "R": "Payroll, People Ops",
+          "A": "Finance (Controller)",
+          "C": "Total Rewards",
+          "I": "Internal Audit"
+        },
+        {
+          "activity": "Letters and conversations",
+          "R": "Manager",
+          "A": "HRBP",
+          "C": "Total Rewards, Legal",
+          "I": "Employee"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Comp tool extract reconciled to Darwinbox and payroll (headcount and base payroll by entity) before planning opens",
+          "type": "preventive",
+          "evidence": "Signed reconciliation and IPE query evidence"
+        },
+        {
+          "id": "C2",
+          "control": "Above-guideline and over-budget recommendations blocked without documented approval in the tool workflow",
+          "type": "preventive",
+          "evidence": "Comp tool approval audit trail"
+        },
+        {
+          "id": "C3",
+          "control": "Privileged pay equity review of proposed outcomes before lock",
+          "type": "detective",
+          "evidence": "Counsel memo and adjustment log held by Legal"
+        },
+        {
+          "id": "C4",
+          "control": "Officer pay and the refresh pool approved by the Comp Committee before effective and grant dates; CEO absent for CEO pay",
+          "type": "preventive",
+          "evidence": "Minutes and signed resolutions"
+        },
+        {
+          "id": "C5",
+          "control": "Locked tool = Darwinbox = payroll register (count, dollar change, effective date) after load",
+          "type": "detective",
+          "evidence": "Reconciliation workpaper signed by preparer and independent reviewer"
+        },
+        {
+          "id": "C6",
+          "control": "Refresh grants reconciled: approved list = equity platform = ASC 718 expense",
+          "type": "detective",
+          "evidence": "Three-way reconciliation per grant date"
+        },
+        {
+          "id": "C7",
+          "control": "Comp tool access limited by hierarchy; planners cannot load payroll",
+          "type": "preventive",
+          "evidence": "Quarterly user-access review"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Budget adherence",
+          "target": "Spend within +/-0.2 point of approved budget in every country",
+          "why": "Overspend compounds into base payroll for years"
+        },
+        {
+          "name": "Pay-for-performance differentiation",
+          "target": "Top-rated employees receive >= 1.5x the average merit % of solid performers",
+          "why": "Flat increases waste budget and lose top engineers"
+        },
+        {
+          "name": "Load accuracy",
+          "target": "Zero pay changes needing off-cycle correction",
+          "why": "Errors mean off-cycle payments, SOX exceptions and lost trust"
+        },
+        {
+          "name": "Letters on time",
+          "target": "100% of letters released within 10 business days of lock and before the effective-date payroll",
+          "why": "Late letters undercut the message and, in India, the April payroll"
+        },
+        {
+          "name": "Post-cycle pay equity",
+          "target": "No cohort with a statistically significant unexplained gap after lock",
+          "why": "Fixing gaps inside the cycle is cheaper than separate remediation"
+        }
+      ],
+      "considerations": [
+        "Choose one or two global effective dates and document exceptions; India's April-March financial year makes 1 April natural, while Taiwan and China often tie raises to the year-end bonus and Lunar New Year period.",
+        "Set budgets by country from survey projections, not a global average; India and China salary movement usually exceeds the US and Canada.",
+        "Keep the matrix simple (rating x range position) and give managers discretion with justification; complex matrices get gamed.",
+        "Run the pay equity check before lock so fixes come out of the merit budget; keep it privileged (HR Analytics works at counsel's direction) and never circulate raw regression outputs.",
+        "Include equity refresh and bonus targets in the equity check: California now treats stock, options and bonuses as wages under the Equal Pay Act.",
+        "Avoid retro pay where possible by setting effective dates after the load; retro increases for non-exempt staff require overtime recalculation.",
+        "Treat the comp tool as a SOX system: auditors test completeness of the population and the reconciliation to payroll, so keep IPE evidence.",
+        "Moving China employee data into a US-hosted comp tool needs PIPL notice and separate consent; limit visibility by hierarchy for all countries.",
+        "Use refresh grants deliberately for critical design talent; in 2027 very large grants to non-officers can also bring engineers into the expanded 162(m) group."
+      ],
+      "variations": [
+        {
+          "when": "Promotion outside the cycle",
+          "how": "Handled through PD-04 and CO-05; employees promoted within a set window before lock (e.g., 3 months) get merit only on the new base."
+        },
+        {
+          "when": "Hired after the eligibility cutoff",
+          "how": "Excluded from merit (or prorated per guidelines) and reviewed at the next cycle; still eligible for a refresh grant if the offer said so."
+        },
+        {
+          "when": "Employee on protected leave",
+          "how": "Remains eligible and is reviewed on pre-leave performance; do not exclude or reduce because of leave (e.g., FMLA/CFRA, Taiwan parental leave, China maternity)."
+        },
+        {
+          "when": "Employee under notice or on a PIP",
+          "how": "Increase deferred or excluded per guidelines; in China and Taiwan no pay reduction without written agreement."
+        },
+        {
+          "when": "Pay freeze or reduced budget year",
+          "how": "Zero or reduced merit with focus on equity refresh and below-minimum fixes; India CTC restructuring for the 50% wages rule still proceeds."
+        },
+        {
+          "when": "Section 16 officers",
+          "how": "Follow CO-07: Comp Committee approval, CEO pay set in executive session, and CD&A disclosure."
+        },
+        {
+          "when": "Acquired population",
+          "how": "Separate budget and a lagged cycle until mapped to job architecture and ranges."
+        }
+      ],
+      "countries": {
+        "us": "Retroactive increases for non-exempt employees must be applied to overtime hours in the retro period at the new regular rate. Keep exempt salaries above the federal $684/week floor and higher state thresholds, and apply the employee's work-state rules for remote staff, including posting ranges on internal promotion notices in pay-transparency states.",
+        "us-ca": "SB 642 counts bonuses, stock/options and benefits as wages under the Equal Pay Act (sex, race, ethnicity), with a 3-year limitation period and recovery back up to 6 years, so the pre-lock check must cover bonus targets and refresh grants, not base alone. Non-exempt employees need written notice of a pay-rate change within 7 calendar days unless it appears on the next wage statement (LC 2810.5). Exempt pay must meet $72,384 (2027) and the DIR computer-professional rate each 1 January.",
+        "ca": "Ontario employers with 10+ employees must maintain pay equity between female and male job classes (Pay Equity Act), so recheck job-class rates after the cycle. BC employers with 50+ employees publish gender pay-gap reports (first due Nov 1, 2026, covering hourly pay, overtime and bonus gaps), so cycle outcomes flow into the next report. Pay reductions or restructuring risk constructive dismissal and need written agreement.",
+        "in": "The cycle follows the April-March financial year: issue increment letters with a revised CTC annexure effective 1 April so April pay (due before 7 May) carries the change. Use the cycle to keep basic + DA at 50% or more of remuneration (Code on Wages 'wages' rule, since 21 Nov 2025) and collect new-regime tax elections. Code on Wages s.3 bars gender discrimination in pay.",
+        "tw": "Engineers compare total cash (12 months' base plus year-end bonus and profit-sharing months) with TSMC and MediaTek, so guidelines should show total-cash impact. Year-end bonuses are paid before Lunar New Year, and raises are commonly aligned to January or the post-Lunar New Year period (market practice, verify local benchmark). Update Labor Insurance, NHI and pension insured salary grades after increases (verify filing timing).",
+        "cn": "Raises are commonly effective in January or April, with year-end bonuses paid before Spring Festival (market practice). Any reduction or structural change needs written agreement (LCL Art. 35) or supports an Art. 38 resignation with severance. Social insurance and housing fund bases reset each July on prior-year average wage (Shanghai from 1 Jul 2026: RMB 7,546-37,731)."
+      },
+      "templates": [],
+      "policies": [
+        "POL-23",
+        "POL-24",
+        "POL-27",
+        "POL-42",
+        "POL-43",
+        "POL-28",
+        "POL-46"
+      ],
+      "related": [
+        "CO-01",
+        "CO-03",
+        "CO-05",
+        "CO-06",
+        "CO-07",
+        "EQ-01",
+        "PD-02",
+        "PD-04",
+        "PY-01"
+      ]
+    },
+    {
+      "id": "CO-03",
+      "name": "Annual bonus / variable pay",
+      "stage": "Reward",
+      "depth": "standard",
+      "summary": "Governs the company-wide annual cash bonus plan for non-sales employees: metric and funding design, quarterly accrual, year-end funding certification, individual allocation, payout and leaver rules by country. Executive officer payouts are certified by the Comp Committee and stay subject to the clawback policy. Good looks like a formula employees understand, accruals that true up within tolerance, on-time payouts in every country and leaver rules that hold up under local law.",
+      "owner": "Total Rewards (design and calculation), Finance (accrual and funding certification), Comp Committee (plan approval and officer payouts)",
+      "trigger": "Comp Committee approval of the fiscal-year plan; quarterly close for accruals; fiscal year-end results for payout",
+      "outputs": [
+        "Plan document with country addenda and leaver rules",
+        "Quarterly bonus accrual memo and journal support",
+        "Certified funding calculation tied to audited results",
+        "Comp Committee certification minutes for officer payouts",
+        "Approved individual payout file",
+        "Payout reconciliation to each country's payroll register"
+      ],
+      "systems": [
+        "Comp planning tool",
+        "Darwinbox (HRIS)",
+        "Performance module (Darwinbox)",
+        "Payroll provider",
+        "BI / people analytics"
+      ],
+      "sla": "Funding certified within 45 days of fiscal year-end; global plan paid by March 15 of the following year (US short-term deferral), with local customary year-end bonuses paid before Lunar New Year",
+      "lanes": [
+        "Comp Committee",
+        "Total Rewards",
+        "Finance",
+        "Manager",
+        "Payroll"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Comp Committee",
+          "type": "start",
+          "label": "Approve plan metrics and targets",
+          "detail": "The committee approves funding metrics (e.g., revenue and non-GAAP operating margin, optionally a product milestone such as tape-outs or design wins), threshold/target/maximum curves (e.g., 50/100/200%) and the individual modifier range. Metrics must not be demographic-linked; APAC leadership may carry an export-compliance modifier.",
+          "sla": "Q4-Q1",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Publish plan document and addenda",
+          "detail": "Publish the plan with eligibility, proration, leaver rules, discretion and clawback language, plus country addenda (Canada notice-period wording, China adoption through democratic procedure, Taiwan LSA Art. 29 interplay). Communicate individual targets in Darwinbox and capture acknowledgments.",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Finance",
+          "type": "task",
+          "label": "Accrue bonus quarterly",
+          "detail": "Accrue each quarter on forecast attainment and eligible headcount; the Controller reviews assumptions and true-ups.",
+          "control": "Quarterly accrual review by the Controller with documented assumptions",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Finance",
+          "type": "task",
+          "label": "Certify year-end funding",
+          "detail": "Calculate funding from audited results with an independent recalculation, apply only committee-approved adjustments with documented rationale, and issue the funding certificate.",
+          "control": "Independent recalculation tied to audited results before certification",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Comp Committee",
+          "type": "task",
+          "label": "Certify results and officer payouts",
+          "detail": "The committee certifies funding and approves executive officer payouts. Calculation records are kept at least three years because payouts tied to financial measures fall under the Rule 10D-1 clawback.",
+          "next": [
+            "s6"
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Manager",
+          "type": "task",
+          "label": "Allocate individual awards",
+          "detail": "Managers allocate within the funded pool in the comp tool using final PD-02 ratings and the modifier range; zero awards for eligible employees need a documented reason.",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "Total Rewards",
+          "type": "decision",
+          "label": "Pool balanced and eligibility clean?",
+          "detail": "Total Rewards checks pool balance by org and applies eligibility rules for new hires, leaves (protected leave cannot be penalized beyond what law permits), transfers and leavers by country.",
+          "branches": [
+            {
+              "to": "s8",
+              "label": "Yes"
+            },
+            {
+              "to": "s6",
+              "label": "No - rebalance"
+            }
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Payroll",
+          "type": "task",
+          "label": "Pay and reconcile by country",
+          "detail": "Pay through each country payroll: US supplemental withholding (22%, 37% above $1M), Taiwan 2.11% NHI supplementary premium above 4x monthly insured salary, and China separate annual-bonus taxation where better for the employee. Reconcile the approved file to each payroll register.",
+          "sla": "By March 15",
+          "control": "Approved payout file = payroll register by country, independently reviewed",
+          "next": [
+            "s9"
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "Total Rewards",
+          "type": "end",
+          "label": "Archive records and review plan",
+          "detail": "Archive calculations, approvals and reconciliations for at least three years, and review the funding curve, differentiation and employee understanding before next year's design."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Plan design and metrics",
+          "R": "Total Rewards",
+          "A": "Comp Committee",
+          "C": "Finance, Legal, CEO",
+          "I": "HRBP"
+        },
+        {
+          "activity": "Accrual and funding certification",
+          "R": "Finance",
+          "A": "Finance (Controller)",
+          "C": "Total Rewards",
+          "I": "Comp Committee"
+        },
+        {
+          "activity": "Individual allocation",
+          "R": "Manager",
+          "A": "Dept Head",
+          "C": "HRBP",
+          "I": "Total Rewards"
+        },
+        {
+          "activity": "Payout and reconciliation",
+          "R": "Payroll",
+          "A": "Total Rewards",
+          "C": "Finance",
+          "I": "Manager"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Funding calculation independently recomputed and tied to audited results before committee certification",
+          "type": "preventive",
+          "evidence": "Signed calculation and committee minutes"
+        },
+        {
+          "id": "C2",
+          "control": "Quarterly accrual reviewed against forecast attainment",
+          "type": "detective",
+          "evidence": "Accrual memo and journal entry support"
+        },
+        {
+          "id": "C3",
+          "control": "Approved payout file reconciled to each payroll register",
+          "type": "detective",
+          "evidence": "Payout reconciliation with reviewer sign-off"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Payout accuracy",
+          "target": ">= 99.9% of payments correct first time",
+          "why": "Corrections create off-cycle cost and erode trust"
+        },
+        {
+          "name": "Accrual true-up",
+          "target": "Year-end true-up within 5% of accrued amount",
+          "why": "Large true-ups signal weak forecasting and draw audit attention"
+        },
+        {
+          "name": "Differentiation",
+          "target": "Top-rated employees receive >= 1.5x the average payout % of solid performers",
+          "why": "Undifferentiated bonuses do not retain top talent"
+        },
+        {
+          "name": "On-time payment",
+          "target": "100% paid by each country's payout date",
+          "why": "Late payment breaches local wage timing and US short-term deferral"
+        }
+      ],
+      "considerations": [
+        "Label the plan carefully: a formula-driven bonus is non-discretionary, so it enters the overtime regular rate for US non-exempt staff and vacationable wages in Canada.",
+        "Draft leaver rules country by country. 'Employed on payment date' works in much of the US, but Canadian plans must expressly exclude the common-law notice period, and China and Taiwan leaver rules need local review (verify).",
+        "Avoid double-dipping in Taiwan and China, where customary year-end bonuses (13th month) coexist with the global plan; state which payment satisfies LSA Art. 29 or local contract promises.",
+        "Keep financial-measure calculations audit-ready: any officer payout based on revenue, margin or TSR is recoverable after a restatement, so the recalculation must be reproducible three years later.",
+        "Do not tie bonuses to demographic outcomes; DOJ's 2026 IBM False Claims Act settlement cited demographic-linked bonuses."
+      ],
+      "variations": [
+        {
+          "when": "New hire during the year",
+          "how": "Prorate from start date; hires after the eligibility cutoff (e.g., 1 October) join next year's plan."
+        },
+        {
+          "when": "Transfer between countries or plans mid-year",
+          "how": "Prorate by days in each plan and pay in the currency of the employing country at payout; Payroll reviews tax sourcing."
+        },
+        {
+          "when": "Leaver by RIF, retirement or death",
+          "how": "Pay prorated target or actual per plan and separation terms (OF-03, OF-08, OF-09); voluntary leavers and for-cause terminations follow country addenda."
+        },
+        {
+          "when": "Protected leave during the year",
+          "how": "Prorate only where law permits and never lower the individual modifier because of the leave."
+        }
+      ],
+      "countries": {
+        "us": "A formula bonus is non-discretionary, so for non-exempt employees it must be allocated back into the overtime regular rate for the periods earned (29 CFR 778); federal supplemental withholding is 22% (37% above $1M). Whether an 'employed on payment date' condition defeats a leaver's claim depends on state wage law and plan wording (verify by state).",
+        "us-ca": "Non-discretionary bonuses feed the daily-overtime regular rate and, from 2026, count as wages under the Equal Pay Act (SB 642). Earned bonuses are due with final pay, and AB 692 limits clauses requiring repayment of bonuses at departure outside the standalone discretionary-bonus exception.",
+        "ca": "Common-law notice damages include the bonus that would have been earned during the notice period unless plan wording unambiguously removes it (Matthews v. Ocean Nutrition, 2020 SCC 26). Non-discretionary bonuses are vacationable wages for 4%/6% vacation pay.",
+        "in": "The statutory bonus (8.33%-20% for employees earning up to INR 21,000/month, paid by 30 Nov) is separate from the performance bonus and mainly affects support roles. The performance bonus is taxed as salary with TDS under s.392 of the Income-tax Act 2025.",
+        "tw": "LSA Art. 29 requires a bonus or profit share for fault-free employees in a profit year, and the Taiwan entity's articles must set an employee-compensation percentage of profit decided by the board (Company Act Art. 235-1). Pay before Lunar New Year and withhold the 2.11% NHI supplementary premium on bonuses above 4x the monthly insured salary.",
+        "cn": "Bonus rules bind leavers only if adopted through democratic procedure and publicized, and courts may award a pro-rata year-end bonus to employees who left after the performance year (verify local case law). The annual one-off bonus can be taxed separately from monthly salary once a year through 31 Dec 2027, and bonuses count in the 12-month average wage used for economic compensation."
+      },
+      "templates": [],
+      "policies": [
+        "POL-25",
+        "POL-06",
+        "POL-23",
+        "POL-28"
+      ],
+      "related": [
+        "CO-02",
+        "CO-07",
+        "EQ-06",
+        "PD-02",
+        "PY-01",
+        "OF-05"
+      ]
+    },
+    {
+      "id": "CO-04",
+      "name": "Sales incentive compensation",
+      "stage": "Reward",
+      "depth": "standard",
+      "summary": "Designs, documents and pays incentive compensation for sales, field applications engineers and business development staff selling chips and IP to OEM/ODM customers. Covers plan documents with signed acknowledgments, quota and crediting rules, SPIFF approval, an export-compliance gate on order credit, calculation, ASC 340-40 capitalization, disputes and leavers. Good looks like every plan signed before the first payout, accurate statements, and no commission ever paid on an order that failed screening.",
+      "owner": "Total Rewards - Sales Compensation (design and administration), Sales leadership (quotas), Finance (calculation review and accounting), Trade Compliance (order gate)",
+      "trigger": "Fiscal-year plan launch; hire, promotion or transfer into an incentive role; monthly or quarterly commission close",
+      "outputs": [
+        "Plan document and individual quota/target letters",
+        "Signed plan acknowledgments (e-signature records)",
+        "SPIFF approvals with written terms",
+        "Commission statements and calculation workpapers",
+        "ASC 340-40 capitalization and amortization schedule",
+        "Dispute log with decisions"
+      ],
+      "systems": [
+        "Comp planning tool",
+        "E-signature",
+        "Darwinbox (HRIS)",
+        "Payroll provider",
+        "Export-control screening tool",
+        "BI / people analytics"
+      ],
+      "sla": "Plans signed within 30 days of fiscal-year start or role change; commissions paid within 30 days of period close; disputes resolved within 15 business days",
+      "lanes": [
+        "Manager",
+        "Employee",
+        "Total Rewards",
+        "Trade Compliance",
+        "Finance",
+        "Payroll"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Total Rewards",
+          "type": "start",
+          "label": "Design plan, quotas and crediting",
+          "detail": "With Sales leadership and Finance, set pay mix (e.g., 50/50 for account managers, 70/30 or 80/20 for FAEs), measures (bookings, revenue, design wins), accelerators, caps, draws and crediting for multi-region customers (design-win site versus ship-to). Include recovery of commissions on cancelled or returned orders.",
+          "sla": "Before FY start",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Issue plan and target letters",
+          "detail": "Send each participant the plan document and individual target letter through e-signature, stating how commissions are computed, when they are earned and paid, and treatment on termination.",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Employee",
+          "type": "task",
+          "label": "Sign plan acknowledgment",
+          "detail": "Participants sign and receive a signed copy. Unsigned participants are escalated to their manager and no payout is released until signature.",
+          "sla": "30 days",
+          "control": "No payout released without a signed acknowledgment on file",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Manager",
+          "type": "task",
+          "label": "Request SPIFFs within governance",
+          "detail": "In-year SPIFFs need written terms and pre-approval by the Sales VP, Total Rewards and Finance before launch. No SPIFFs to distributor or customer employees without Legal anti-bribery review.",
+          "control": "SPIFF pre-approval record before launch",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Trade Compliance",
+          "type": "task",
+          "label": "Clear orders before credit",
+          "detail": "Orders earn credit only after restricted-party screening and any required export license clear. Orders on hold or later found non-compliant are excluded or clawed back.",
+          "control": "Crediting blocked for orders without screening-cleared status",
+          "next": [
+            "s6"
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Finance",
+          "type": "task",
+          "label": "Calculate, accrue and capitalize",
+          "detail": "Calculate commissions from booked and billed data, accrue expense, and capitalize incremental costs of obtaining contracts under ASC 340-40 with amortization over the benefit period. An independent reviewer checks the calculation before statements go out.",
+          "control": "Independent review of calculations and the ASC 340-40 schedule (SOX)",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "Employee",
+          "type": "decision",
+          "label": "Statement disputed?",
+          "detail": "Participants review statements and may dispute crediting or calculation within the plan window (e.g., 30 days).",
+          "branches": [
+            {
+              "to": "s8",
+              "label": "Yes"
+            },
+            {
+              "to": "s9",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Resolve dispute and document",
+          "detail": "Sales Comp investigates with Sales Ops and Finance, decides under plan terms and records the outcome in the dispute log. Exceptions need Sales VP and Total Rewards approval.",
+          "sla": "15 bd",
+          "next": [
+            "s9"
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "Payroll",
+          "type": "task",
+          "label": "Pay commissions and reconcile",
+          "detail": "Pay through payroll on the plan date, including earned commissions in final pay for leavers by local deadlines, and reconcile the approved file to the payroll register.",
+          "next": [
+            "s10"
+          ]
+        },
+        {
+          "id": "s10",
+          "lane": "Total Rewards",
+          "type": "end",
+          "label": "Close period and analyze plan",
+          "detail": "Archive statements and approvals and track cost of sales, attainment distribution and windfall deals for plan redesign."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Plan design and quotas",
+          "R": "Total Rewards",
+          "A": "Dept Head (Sales)",
+          "C": "Finance, Legal",
+          "I": "Manager"
+        },
+        {
+          "activity": "Plan documents and acknowledgments",
+          "R": "Total Rewards",
+          "A": "Total Rewards",
+          "C": "Legal",
+          "I": "Manager"
+        },
+        {
+          "activity": "Order credit export gate",
+          "R": "Trade Compliance",
+          "A": "Trade Compliance",
+          "C": "Finance",
+          "I": "Manager"
+        },
+        {
+          "activity": "Calculation and ASC 340-40",
+          "R": "Finance",
+          "A": "Finance (Controller)",
+          "C": "Total Rewards",
+          "I": "Internal Audit"
+        },
+        {
+          "activity": "Disputes and exceptions",
+          "R": "Total Rewards",
+          "A": "Dept Head (Sales)",
+          "C": "Finance",
+          "I": "Employee"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Signed plan acknowledgment on file before any payout",
+          "type": "preventive",
+          "evidence": "E-signature records matched to payout file"
+        },
+        {
+          "id": "C2",
+          "control": "Order credit only after export screening and license clearance",
+          "type": "preventive",
+          "evidence": "Crediting system hold report and Trade Compliance clearance log"
+        },
+        {
+          "id": "C3",
+          "control": "Independent review of commission calculations and ASC 340-40 capitalization",
+          "type": "detective",
+          "evidence": "Reviewer sign-off and capitalization reconciliation"
+        },
+        {
+          "id": "C4",
+          "control": "SPIFFs launched only with written terms and pre-approval",
+          "type": "preventive",
+          "evidence": "SPIFF approval records"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Plans signed on time",
+          "target": "100% signed within 30 days of FY start or role change",
+          "why": "Unsigned plans breach California and New York rules and weaken the company's position in disputes"
+        },
+        {
+          "name": "Calculation accuracy",
+          "target": "< 1% of payout value adjusted after statements are issued",
+          "why": "Errors are the main source of disputes and wage claims"
+        },
+        {
+          "name": "Dispute resolution",
+          "target": "90% resolved within 15 business days",
+          "why": "Slow resolution distracts sellers and escalates to claims"
+        }
+      ],
+      "considerations": [
+        "Semiconductor sales cycles are long (design win to production revenue often takes 12-36 months), so blend revenue credit with design-win milestones or the plan pays people who have left and nothing to those who won the socket.",
+        "Define exactly when a commission is earned (booking, shipment or cash): that choice decides what must go in final pay in California and other states.",
+        "Treat export controls as a comp design issue: regulators credit plans that deny credit for unscreened orders and claw back pay for violations, as the Cadence (2025) and Applied Materials (2026) cases showed.",
+        "SPIFFs paid to non-exempt inside sales staff enter the overtime regular rate; SPIFFs to channel partners are an anti-corruption risk.",
+        "Changes to earning events or clawback terms change the ASC 340-40 capitalization; involve Finance before plan changes."
+      ],
+      "variations": [
+        {
+          "when": "Mid-year hire, promotion or territory change",
+          "how": "Issue a new target letter and signed acknowledgment; prorate quota and use split-credit rules for transferred accounts."
+        },
+        {
+          "when": "Participant leaves",
+          "how": "Pay commissions earned under plan terms by the local final-pay deadline; unearned pipeline follows the plan, and Canadian notice-period treatment is reviewed."
+        },
+        {
+          "when": "Windfall deal",
+          "how": "If the signed plan has a windfall clause, deals above a threshold (e.g., 150% of annual quota) are reviewed by the Sales VP and Total Rewards before crediting."
+        }
+      ],
+      "countries": {
+        "us": "Several states require written, signed commission agreements covering earning, draws and post-termination payment (e.g., NY Labor Law 191(1)(c), MN), and unclear plans risk multiple damages under state wage laws. Commissions paid to non-exempt staff are part of the regular rate.",
+        "us-ca": "LC 2751 requires a written commission contract stating how commissions are computed and paid, with a signed copy to the employee and a signed receipt returned. Earned commissions are due immediately on discharge or within 72 hours of resignation without notice, with waiting-time penalties of up to 30 days' wages (LC 203).",
+        "ca": "Commissions are vacationable wages for 4%/6% vacation pay, and common-law notice damages include commissions that would have been earned during the notice period unless the plan clearly excludes them.",
+        "in": "Commission is excluded from 'wages' for PF and gratuity but counts toward the 50% exclusion cap, and recovering overpaid commission through payroll is limited to authorised deductions within the 50% cap (Code on Wages s.18).",
+        "tw": "Regular sales incentives are likely 'wages' under the LSA, raising the average wage used for severance and pension (verify), and overpayments cannot be pre-deducted from wages without agreement (LSA Art. 22, 26).",
+        "cn": "Commission rules must be adopted through democratic procedure and publicized to bind employees, and payroll deductions to recover losses are capped at 20% of monthly wage. Hold credit on China-customer orders until export screening clears; the Cadence plea involved China-subsidiary sales staff selling to an Entity-Listed university."
+      },
+      "templates": [],
+      "policies": [
+        "POL-26",
+        "POL-18",
+        "POL-04",
+        "POL-28",
+        "POL-06"
+      ],
+      "related": [
+        "CO-03",
+        "EQ-06",
+        "PY-01",
+        "PY-02",
+        "OF-05"
+      ]
+    },
+    {
+      "id": "CO-05",
+      "name": "Off-cycle adjustments & counteroffers",
+      "stage": "Reward",
+      "depth": "standard",
+      "summary": "Handles pay changes outside the annual review: market and internal-equity adjustments, counteroffers to employees who resign or are at high flight risk, and targeted retention awards for critical skills. It balances speed (a counteroffer made after the employee has mentally left is wasted) with budget, pay-equity and approval control. Good looks like decisions within two business days, no new unexplained gaps and tracked retention outcomes.",
+      "owner": "HRBP (process and flight-risk judgement), Total Rewards (pricing), Dept Head and CHRO (approval authority)",
+      "trigger": "Resignation with a competing offer, documented flight risk for critical talent, an employee below range minimum, or an internal-equity issue raised by a manager, HRBP or pay equity audit",
+      "outputs": [
+        "Request with justification and competing-offer summary",
+        "Range and peer-equity analysis",
+        "Approval record under the authority matrix",
+        "Counteroffer or adjustment letter, plus retention award agreement if used",
+        "Pay change in Darwinbox and equity request to Stock Admin",
+        "Retention outcome log at 6 and 12 months"
+      ],
+      "systems": [
+        "Darwinbox (HRIS)",
+        "Comp planning tool",
+        "Equity platform",
+        "E-signature",
+        "Payroll provider",
+        "BI / people analytics"
+      ],
+      "sla": "Counteroffer decision within 2 business days of resignation; other off-cycle adjustments within 10 business days",
+      "lanes": [
+        "Manager",
+        "HRBP",
+        "Total Rewards",
+        "Dept Head",
+        "Payroll"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Manager",
+          "type": "start",
+          "label": "Request adjustment or counteroffer",
+          "detail": "The manager submits the request in Darwinbox with reason code, current and proposed pay, and for counteroffers the competing role and package as described by the employee (do not require a copy of the offer letter).",
+          "sla": "Day 0",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "HRBP",
+          "type": "task",
+          "label": "Assess criticality and flight risk",
+          "detail": "The HRBP assesses performance, scarcity of the skill (e.g., analog, SerDes, physical design), succession cover and whether pay is really the driver, using a stay conversation. Resignations to PRC-linked or direct competitors are flagged to Security under the trade-secret protocol.",
+          "sla": "1 bd",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "HRBP",
+          "type": "decision",
+          "label": "Counteroffer or adjust?",
+          "detail": "Proceed only for regrettable losses or documented pay issues where pay is a real driver; otherwise the resignation proceeds under OF-01.",
+          "branches": [
+            {
+              "to": "s4",
+              "label": "Yes"
+            },
+            {
+              "to": "s9",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Price against range and peers",
+          "detail": "Check compa-ratio, range position and pay of peers in the same job, level and location so the change does not create a new unexplained gap. Prefer time-vested RSUs or deferred cash over large base jumps and fund from the off-cycle pool (e.g., 0.5% of payroll).",
+          "control": "Peer-equity check before approval",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Dept Head",
+          "type": "task",
+          "label": "Approve within authority",
+          "detail": "The dept head approves within budget; increases above range maximum or above a threshold (e.g., 15%) go to the CHRO, and Section 16 officers go to the Comp Committee (CO-07).",
+          "sla": "1 bd",
+          "control": "Approval matrix enforced in the Darwinbox workflow",
+          "next": [
+            "s6"
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Manager",
+          "type": "task",
+          "label": "Deliver offer and document",
+          "detail": "The manager delivers the counteroffer or adjustment with a written letter. Retention awards use forward-vesting terms and no repayment clause that local law prohibits; equity is stated as subject to approval and the scheduled grant date.",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "Payroll",
+          "type": "task",
+          "label": "Process pay and equity changes",
+          "detail": "People Ops loads the change in Darwinbox for the next payroll cut-off and sends any equity request to Stock Admin under EQ-01; Payroll confirms the change on the register.",
+          "next": [
+            "s8"
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "HRBP",
+          "type": "end",
+          "label": "Track retention at 6 and 12 months",
+          "detail": "The HRBP records whether the employee stayed at 6 and 12 months and shares results with Total Rewards to test whether ranges or refresh guidelines need to change."
+        },
+        {
+          "id": "s9",
+          "lane": "HRBP",
+          "type": "end",
+          "label": "Close request; route to offboarding",
+          "detail": "If no counteroffer is made, the HRBP closes the request and starts OF-01, including the departing-employee trade-secret protocol."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Request and justification",
+          "R": "Manager",
+          "A": "Dept Head",
+          "C": "HRBP",
+          "I": "Total Rewards"
+        },
+        {
+          "activity": "Pricing and peer-equity check",
+          "R": "Total Rewards",
+          "A": "Total Rewards",
+          "C": "HRBP, Legal",
+          "I": "Manager"
+        },
+        {
+          "activity": "Approval",
+          "R": "HRBP",
+          "A": "Dept Head (CHRO above threshold)",
+          "C": "Total Rewards, FP&A",
+          "I": "Payroll"
+        },
+        {
+          "activity": "Letter, load and retention tracking",
+          "R": "Manager, People Ops",
+          "A": "HRBP",
+          "C": "Total Rewards",
+          "I": "Employee"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Off-cycle changes approved according to the authority matrix before load",
+          "type": "preventive",
+          "evidence": "Darwinbox workflow approval trail"
+        },
+        {
+          "id": "C2",
+          "control": "Peer-equity comparison documented before approval",
+          "type": "preventive",
+          "evidence": "Pricing worksheet attached to the request"
+        },
+        {
+          "id": "C3",
+          "control": "Quarterly review of off-cycle spend, approvals and retention outcomes against budget",
+          "type": "detective",
+          "evidence": "Quarterly off-cycle report reviewed by Total Rewards and FP&A"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Decision speed",
+          "target": "90% of counteroffer decisions within 2 business days",
+          "why": "Counteroffers made late rarely work"
+        },
+        {
+          "name": "12-month retention of countered employees",
+          "target": ">= 70%",
+          "why": "Shows whether counteroffers buy real retention or only delay exits"
+        },
+        {
+          "name": "Off-cycle spend",
+          "target": "Within the approved pool (e.g., 0.5% of payroll)",
+          "why": "Uncontrolled off-cycle spend undermines the annual review"
+        }
+      ],
+      "considerations": [
+        "Counteroffers reward resigning; set criteria (regrettable, critical skill, pay is the driver) so managers do not use them as a routine raise route.",
+        "Anchor the new pay on the range and peer comparison, not the other company's number; in California, voluntarily disclosed pay history cannot justify a pay gap.",
+        "Prefer forward-vesting RSUs or deferred cash over upfront bonuses with repayment clauses: California AB 692 restricts stay-or-pay terms and India enforces clawbacks only as reasonable liquidated damages.",
+        "Watch compression: one engineer jumped above peers triggers a queue of requests, so fix the range or peer group at the same time where needed."
+      ],
+      "variations": [
+        {
+          "when": "Section 16 officer or NEO",
+          "how": "Comp Committee approval (CO-07); a material new arrangement may require an 8-K Item 5.02(e) within four business days."
+        },
+        {
+          "when": "Group retention (M&A, RIF survivors, critical tape-out program)",
+          "how": "Run as a program with a pooled budget, standard retention agreement and CHRO approval instead of one-off requests."
+        },
+        {
+          "when": "Pay equity remediation",
+          "how": "Adjustments identified in CO-06 follow its privileged process and are loaded through this workflow with a neutral reason code."
+        }
+      ],
+      "countries": {
+        "us": "Mid-period increases for non-exempt employees must be prorated and any retro overtime recalculated. Retention bonuses with repayment terms need state-law review because many states restrict deductions to recover them (e.g., NY Labor Law 193).",
+        "us-ca": "AB 692 bars requiring departing workers to repay retention and similar amounts under agreements from 1 Jan 2026, except discretionary upfront bonuses under standalone agreements; a bill presented 3 Sep 2026 would delay this to 1 Jan 2027 and extend the exception to retention bonuses (verify outcome). Document the range and peer basis for the new pay, since voluntarily disclosed pay history cannot justify a gap.",
+        "ca": "Retention letters should confirm that the existing termination clause and equity terms continue to apply, because new terms without fresh consideration may be unenforceable. BC prohibits reprisal for discussing pay, so assume counteroffer terms will circulate.",
+        "in": "Counteroffers are routine in Bengaluru design centers with 60-90 day notice periods; retention clawbacks are enforceable only as reasonable, pro-rated liquidated damages and payroll recovery is capped at 50% of wages. Keep revised CTC at 50%+ basic + DA.",
+        "tw": "Flag resignations of core engineers to PRC-linked employers to Security given MJIB poaching investigations (17 firms questioned in Jul-Aug 2026). Update Labor Insurance, NHI and pension insured salary after increases (verify timing).",
+        "cn": "Raises are easy but later reductions need written consent (LCL Art. 35), so put retention money in a separate conditional bonus rather than base. Higher pay also raises any post-employment non-compete compensation, which is set as a share of prior 12-month average pay."
+      },
+      "templates": [
+        "T-STAY-INTERVIEW"
+      ],
+      "policies": [
+        "POL-23",
+        "POL-24",
+        "POL-31",
+        "POL-27"
+      ],
+      "related": [
+        "CO-01",
+        "CO-02",
+        "CO-06",
+        "EQ-01",
+        "EN-03",
+        "OF-01",
+        "PD-04",
+        "ER-10"
+      ]
+    },
+    {
+      "id": "CO-06",
+      "name": "Pay equity audit & remediation",
+      "stage": "Reward",
+      "depth": "standard",
+      "summary": "Annual privileged statistical audit of base, bonus and equity pay by gender globally and by race/ethnicity in the US, directed by counsel, with root-cause review, a remediation budget and adjustments. It also lines up with statutory reporting (California pay data, BC pay transparency report, Ontario pay equity). Good looks like no statistically significant unexplained gap in any major cohort, remediation effective before the annual review locks, and root causes fixed upstream in offers and promotions.",
+      "owner": "Legal (privilege, scope and advice), HR Analytics (analysis), Total Rewards (remediation), CHRO (budget approval)",
+      "trigger": "Annual calendar (Q3, before annual review budgeting), acquisition integration, a pay complaint or claim, or a statutory report deadline",
+      "outputs": [
+        "Counsel engagement letter and privileged scope memo",
+        "Privileged regression results and outlier list",
+        "Root-cause findings (starting pay, promotion timing, acquisitions)",
+        "Approved remediation list and budget",
+        "Adjustments loaded in Darwinbox with neutral reason codes",
+        "Non-privileged summary for leadership and statutory reports"
+      ],
+      "systems": [
+        "BI / people analytics",
+        "Darwinbox (HRIS)",
+        "Equity platform",
+        "Payroll provider",
+        "Document management"
+      ],
+      "sla": "Analysis to remediation load within 12 weeks; adjustments effective before the annual review lock",
+      "lanes": [
+        "Legal",
+        "HR Analytics",
+        "HRBP",
+        "Total Rewards",
+        "CHRO",
+        "Payroll"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Legal",
+          "type": "start",
+          "label": "Engage counsel and set scope",
+          "detail": "Counsel commissions the audit in writing to give legal advice, defines populations, pay elements and groups, and limits distribution. Statutory reports are prepared in a separate, non-privileged workstream.",
+          "sla": "Q3",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "HR Analytics",
+          "type": "task",
+          "label": "Build dataset and comparator groups",
+          "detail": "Assemble base, target and actual bonus, equity grant value and benefits where material, plus legitimate factors (job family, level, location, tenure, time in level). Group employees doing substantially similar work, not just the same title.",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "HR Analytics",
+          "type": "task",
+          "label": "Run regressions and outlier review",
+          "detail": "Run multivariate regressions by gender (all countries) and race/ethnicity (US), test significance by cohort, and list individuals well below predicted pay (e.g., residual below -5%). Label results privileged and share only with counsel and named reviewers.",
+          "control": "Privileged labeling and restricted access list",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "HRBP",
+          "type": "task",
+          "label": "Investigate root causes with counsel",
+          "detail": "At counsel's direction, HRBPs review flagged cases for legitimate explanations (performance, recent hire, acquisition) and systemic causes such as starting pay, promotion timing or retention grants.",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Legal",
+          "type": "decision",
+          "label": "Unexplained gap to remediate?",
+          "detail": "Counsel advises which cohorts and individuals need adjustment, considering statistical and legal significance.",
+          "branches": [
+            {
+              "to": "s6",
+              "label": "Yes"
+            },
+            {
+              "to": "s9",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Size remediation and budget",
+          "detail": "Calculate individual adjustments to predicted pay or peer median, model California back-pay exposure over the look-back window, and prepare the budget request.",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "CHRO",
+          "type": "task",
+          "label": "Approve remediation budget",
+          "detail": "The CHRO (with the CFO if outside the merit budget) approves the budget and timing. Adjustments are made whether or not employees have asked.",
+          "next": [
+            "s8"
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Payroll",
+          "type": "task",
+          "label": "Load adjustments",
+          "detail": "People Ops loads adjustments with a neutral reason code and effective date, Payroll reconciles the approved list to the register, and letters use counsel-approved wording.",
+          "control": "Approved remediation list = Darwinbox = payroll register",
+          "next": [
+            "s9"
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "Total Rewards",
+          "type": "end",
+          "label": "Fix root causes and report",
+          "detail": "Update offer approval, promotion and refresh guidelines to address root causes, feed non-privileged results into required reports (BC report, California pay data), and re-test flagged individuals next year."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Scope and privilege",
+          "R": "Legal",
+          "A": "Legal (General Counsel)",
+          "C": "CHRO, HR Analytics",
+          "I": "Total Rewards"
+        },
+        {
+          "activity": "Statistical analysis",
+          "R": "HR Analytics",
+          "A": "Legal",
+          "C": "Total Rewards",
+          "I": "CHRO"
+        },
+        {
+          "activity": "Remediation sizing and approval",
+          "R": "Total Rewards",
+          "A": "CHRO",
+          "C": "Legal, FP&A",
+          "I": "HRBP"
+        },
+        {
+          "activity": "Load and root-cause fixes",
+          "R": "Payroll, People Ops",
+          "A": "Total Rewards",
+          "C": "HRBP, Recruiter",
+          "I": "Manager"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Analysis commissioned by counsel with privileged labeling and restricted access",
+          "type": "preventive",
+          "evidence": "Engagement letter and access list"
+        },
+        {
+          "id": "C2",
+          "control": "Approved remediation list reconciled to Darwinbox and payroll",
+          "type": "detective",
+          "evidence": "Signed reconciliation"
+        },
+        {
+          "id": "C3",
+          "control": "Prior-year flagged individuals and new-hire offers re-tested each year",
+          "type": "detective",
+          "evidence": "Privileged re-test results held by Legal"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Unexplained gap",
+          "target": "No cohort with a statistically significant unexplained gap; adjusted gender gap under 1%",
+          "why": "The core measure of pay-equity risk"
+        },
+        {
+          "name": "Remediation completion",
+          "target": "100% of approved adjustments effective before the annual review lock",
+          "why": "Late fixes get diluted by merit increases"
+        },
+        {
+          "name": "Recurrence",
+          "target": "< 10% of remediated individuals flagged again the next year",
+          "why": "Recurrence means root causes are not fixed"
+        }
+      ],
+      "considerations": [
+        "Privilege is fragile: the analysis must be requested by counsel for legal advice with limited circulation; do not paste regression outputs into leadership decks or statutory reports.",
+        "Include every pay element counted as wages: after SB 642, a clean base-pay model with skewed equity refresh grants still leaves California exposure.",
+        "Performance ratings used as a control variable can hide bias; test rating distributions by group before accepting them as an explanation.",
+        "Starting pay is the usual root cause; fix it upstream in TA-04 offer approval (range-based offers, no salary history questions).",
+        "Remediate individuals based on the analysis rather than running demographic-targeted pay programs; after Ames and the DOJ Civil Rights Fraud Initiative, programs must be open to all and tied to identified gaps."
+      ],
+      "variations": [
+        {
+          "when": "Acquisition",
+          "how": "Run a pre-close or day-100 analysis of the acquired population and budget integration adjustments separately."
+        },
+        {
+          "when": "Individual pay complaint or claim",
+          "how": "Route through ER-02 with Legal, run a targeted privileged analysis of the comparator group and consider a legal hold (ER-09)."
+        },
+        {
+          "when": "Statutory report year (BC by Nov 1; California in May)",
+          "how": "Reconcile report job groupings with audit cohorts so published gaps can be explained, without disclosing the privileged analysis."
+        }
+      ],
+      "countries": {
+        "us": "The federal Equal Pay Act covers equal work, while states such as NY, MA, IL, CO, WA, NJ, MD and OR use 'substantially similar' or broader comparators; Illinois requires an Equal Pay Registration Certificate at 100+ IL employees. Keep the audit privileged.",
+        "us-ca": "SB 642 extends the Equal Pay Act to 'another sex', race and ethnicity, counts bonuses, stock/options and benefits as wages, and allows recovery back up to 6 years within a 3-year limitation period, so size back-pay exposure over that window. The CRD pay data report (100+ employees; due 12 May 2027 with 23 SOC-based categories) is non-privileged and should reconcile to audit groupings.",
+        "ca": "Ontario's Pay Equity Act (10+ employees) requires maintaining pay equity between female and male job classes of equal or comparable value, alongside ESA s.42 equal pay. BC employers with 50+ employees must publish a gender pay-gap report by Nov 1, 2026 covering hourly pay, overtime and bonus gaps, and non-compliant employers may be publicly named.",
+        "in": "Code on Wages s.3 bars gender discrimination (including against transgender persons) in pay for the same or similar work; there is no reporting duty, but include Bengaluru in the global gender analysis.",
+        "tw": "The Gender Equality in Employment Act Art. 10 requires equal pay for work of equal value, with complaints heard by local gender equality committees; there is no pay-gap reporting duty.",
+        "cn": "Equal pay for equal work (LCL Art. 63) and the Women's Rights Law (2022) apply. Moving employee-level pay and gender data to US analytics needs PIPL notice, separate consent and a cross-border transfer mechanism, so consider running the China cut locally or de-identified."
+      },
+      "templates": [],
+      "policies": [
+        "POL-24",
+        "POL-08",
+        "POL-46",
+        "POL-23"
+      ],
+      "related": [
+        "CO-01",
+        "CO-02",
+        "CO-05",
+        "TA-04",
+        "DS-05",
+        "ER-02"
+      ]
+    },
+    {
+      "id": "CO-07",
+      "name": "Executive compensation cycle",
+      "stage": "Reward",
+      "depth": "deep",
+      "summary": "The Comp Committee's annual cycle for Section 16 officers and NEOs: advisor independence, peer group and benchmarking, tally sheets, incentive and PSU design and certification, CEO and officer pay decisions, and proxy disclosure (CD&A, compensation tables, pay ratio, pay versus performance, say-on-pay). It also covers event-driven work: 8-K Item 5.02, 162(m) and 280G modeling, clawback readiness and Item 402(x) grant timing, while tracking the SEC's May 2026 disclosure proposal. Good looks like decisions that are minuted and defensible, filings on time, strong say-on-pay support and no comment letters.",
+      "owner": "Comp Committee (decisions), Total Rewards - Executive Compensation (process), Legal - Securities/Corporate Secretary (disclosure and filings), CHRO (management accountability)",
+      "trigger": "Comp Committee annual calendar tied to the fiscal year, plus events: officer hire, promotion or departure, change in control, or accounting restatement",
+      "outputs": [
+        "Committee calendar, charter review and minutes",
+        "Advisor independence assessments",
+        "Peer group, benchmarking report and tally sheets",
+        "CEO and officer pay decisions with incentive and PSU certifications",
+        "Proxy (CD&A, compensation tables, pay ratio, pay versus performance) and 8-K Items 5.02 and 5.07",
+        "162(m) covered-employee list and 280G estimates"
+      ],
+      "systems": [
+        "Equity platform",
+        "Payroll provider",
+        "Darwinbox (HRIS)",
+        "BI / people analytics",
+        "Document management"
+      ],
+      "sla": "Proxy within 120 days of fiscal year-end; 8-K Items 5.02 and 5.07 within 4 business days; Form 4 within 2 business days of grants",
+      "lanes": [
+        "Comp Committee",
+        "Vendor",
+        "CEO",
+        "Total Rewards",
+        "Finance",
+        "Stock Admin",
+        "Legal"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Comp Committee",
+          "type": "start",
+          "label": "Adopt annual committee calendar",
+          "detail": "At the Q3 meeting the committee adopts next year's calendar: Q4 (peer group, incentive design, tally sheets), Q1 (certify results, set officer pay, grant on the fixed date), Q2 (proxy and say-on-pay), mid-year (burn rate, share reserve, 162(m) and 280G modeling). It also reviews its charter annually.",
+          "sla": "Q3",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "Comp Committee",
+          "type": "task",
+          "label": "Assess advisor independence",
+          "detail": "Before retaining or renewing the compensation consultant and outside counsel, the committee considers the six Rule 10C-1 / Nasdaq 5605(d) independence factors using annual questionnaires. Fees for other services above $120,000 and any conflicts are captured for Item 407(e)(3) disclosure.",
+          "control": "Six-factor questionnaires and minuted conclusion before engagement",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Vendor",
+          "type": "task",
+          "label": "Refresh peer group and benchmarks",
+          "detail": "The independent consultant proposes a peer group of roughly 15-20 semiconductor and adjacent companies screened on revenue, market cap and talent overlap, reconciled to ISS-selected peers and the TSR peer group used for pay versus performance. It benchmarks base, target bonus, long-term incentives and total direct compensation for each officer role.",
+          "sla": "Q4",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Build tally sheets; model 162(m)/280G",
+          "detail": "Produce tally sheets per officer (realized and realizable pay, outstanding equity, severance and change-in-control walkaway), annual 280G estimates (3x base amount; best-net cutback preferred to gross-ups) and the 162(m) covered-employee list, including the five additional highest-paid employees for tax years after Dec 31, 2026.",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Design annual incentive and PSU metrics",
+          "detail": "With the consultant and Finance, propose annual bonus metrics (e.g., revenue, non-GAAP operating margin, strategic design-win or tape-out milestones) and PSU metrics (e.g., relative TSR against a semiconductor index plus a financial metric over three years) with threshold/target/maximum curves. The committee approves the design at its Q4 meeting; no demographic-linked metrics, and every financial measure is covered by the clawback policy.",
+          "next": [
+            "s6"
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Finance",
+          "type": "task",
+          "label": "Compute results and PSU attainment",
+          "detail": "After fiscal year-end, Finance calculates bonus funding and PSU attainment from audited results and market TSR data, with an independent recalculation reviewed by Internal Audit. Workpapers are kept at least three years for Rule 10D-1 recovery.",
+          "sla": "Within 45 days of FYE",
+          "control": "Independent recalculation before certification; workpapers retained 3+ years",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "CEO",
+          "type": "task",
+          "label": "Recommend other officers' pay",
+          "detail": "The CEO presents performance assessments and pay recommendations for the other executive officers, using the benchmarks and tally sheets. The CEO leaves the meeting for any discussion of CEO pay.",
+          "next": [
+            "s8"
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Comp Committee",
+          "type": "task",
+          "label": "Certify results; set officer pay",
+          "detail": "The committee certifies incentive and PSU results, approves officer base, payouts, targets and LTI values, and sets CEO pay in executive session with the consultant but without the CEO (Nasdaq 5605(d)). Minutes record the rationale that will support the CD&A.",
+          "control": "CEO recusal minuted; signed certification resolution",
+          "next": [
+            "s9"
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "Comp Committee",
+          "type": "task",
+          "label": "Approve grants on fixed grant date",
+          "detail": "Officer grants are approved on or before the scheduled grant date by the committee of non-employee directors (Rule 16b-3). NEO options are not granted from four business days before to one business day after a 10-Q, 10-K or MNPI 8-K (Item 402(x)), and the same calendar is applied to RSUs and PSUs.",
+          "control": "Grant calendar and Item 402(x) window check signed by Legal",
+          "next": [
+            "s10"
+          ]
+        },
+        {
+          "id": "s10",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Record grants; feed Form 4 data",
+          "detail": "Stock Admin records grants in the equity platform the same day and sends grant and withholding data to Legal within one business day so Forms 4 are filed within two business days (EQ-05).",
+          "sla": "1 bd",
+          "next": [
+            "s11"
+          ]
+        },
+        {
+          "id": "s11",
+          "lane": "Legal",
+          "type": "task",
+          "label": "File 8-K Item 5.02 when triggered",
+          "detail": "File within four business days of the decision (not the effective date) for officer appointments and departures, and for new or materially amended compensatory arrangements with the PEO, PFO or an NEO (5.02(e)) unless consistent with previously disclosed plans. Use Item 5.02(f) for salary or bonus omitted from the Summary Compensation Table once determined.",
+          "sla": "4 bd",
+          "next": [
+            "s12"
+          ]
+        },
+        {
+          "id": "s12",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Draft CD&A and compensation tables",
+          "detail": "With the consultant and Legal, draft the CD&A, Summary Compensation Table (3 years), grants of plan-based awards, outstanding equity, vested/exercised, termination and change-in-control payments, director pay, compensation-risk statement (402(s)), clawback (402(w)) and 402(x) narratives. Perquisites are tracked at aggregate incremental cost, disclosed at $10,000 or more, and itemized above the greater of $25,000 or 10% of total perks.",
+          "control": "Tables tied out to payroll, equity platform and ASC 718 values; Disclosure Committee review",
+          "next": [
+            "s13"
+          ]
+        },
+        {
+          "id": "s13",
+          "lane": "Finance",
+          "type": "task",
+          "label": "Compute pay ratio and pay vs performance",
+          "detail": "With Payroll and HR Analytics, identify the median employee from all worldwide employees (US, Canada, India, Taiwan, China) on a date in the last three months of the fiscal year using a consistently applied measure (re-usable up to three years; non-US de minimis exclusion up to 5%). Compute compensation actually paid for five years using year-end and vest-date fair values, and tag in Inline XBRL.",
+          "next": [
+            "s14"
+          ]
+        },
+        {
+          "id": "s14",
+          "lane": "Legal",
+          "type": "task",
+          "label": "File proxy; report vote on 8-K 5.07",
+          "detail": "File the DEF 14A within 120 days of fiscal year-end with say-on-pay (and frequency or equity plan proposals when due), then report vote results on 8-K Item 5.07 within four business days of the annual meeting.",
+          "sla": "120 days after FYE",
+          "next": [
+            "s15"
+          ]
+        },
+        {
+          "id": "s15",
+          "lane": "Comp Committee",
+          "type": "decision",
+          "label": "Say-on-pay support adequate?",
+          "detail": "The committee reviews support levels and investor and proxy-advisor feedback. Weak support (ISS scrutinizes below 70%, Glass Lewis below 80% - verify current thresholds) triggers off-season shareholder outreach with IR and Legal and a responsiveness section in the next CD&A.",
+          "branches": [
+            {
+              "to": "s16",
+              "label": "Yes"
+            },
+            {
+              "to": "s3",
+              "label": "No - outreach and redesign"
+            }
+          ]
+        },
+        {
+          "id": "s16",
+          "lane": "Total Rewards",
+          "type": "end",
+          "label": "Close cycle; feed next-year design",
+          "detail": "Archive minutes, workpapers and filings, update the SEC-rule watchlist (including the May 2026 filer-status proposal) and roll lessons into the next committee calendar."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Committee calendar and charter review",
+          "R": "Total Rewards",
+          "A": "Comp Committee",
+          "C": "Legal (Corporate Secretary)",
+          "I": "Board"
+        },
+        {
+          "activity": "Advisor independence assessment",
+          "R": "Legal (Corporate Secretary)",
+          "A": "Comp Committee",
+          "C": "Vendor (compensation consultant)",
+          "I": "Total Rewards"
+        },
+        {
+          "activity": "Peer group and benchmarking",
+          "R": "Vendor (compensation consultant)",
+          "A": "Comp Committee",
+          "C": "Total Rewards, CEO",
+          "I": "CHRO"
+        },
+        {
+          "activity": "Incentive and PSU design",
+          "R": "Total Rewards",
+          "A": "Comp Committee",
+          "C": "Finance, Vendor, CEO",
+          "I": "Board"
+        },
+        {
+          "activity": "Incentive and PSU certification",
+          "R": "Finance",
+          "A": "Comp Committee",
+          "C": "Internal Audit, Total Rewards",
+          "I": "CEO"
+        },
+        {
+          "activity": "CEO pay decision",
+          "R": "Vendor (compensation consultant)",
+          "A": "Comp Committee",
+          "C": "Board (independent directors)",
+          "I": "CEO"
+        },
+        {
+          "activity": "Other executive officers' pay",
+          "R": "CEO",
+          "A": "Comp Committee",
+          "C": "CHRO, Vendor",
+          "I": "Total Rewards"
+        },
+        {
+          "activity": "CD&A, tables, pay ratio and pay versus performance",
+          "R": "Total Rewards, Finance",
+          "A": "Legal (General Counsel)",
+          "C": "Vendor, Payroll, Stock Admin",
+          "I": "Comp Committee"
+        },
+        {
+          "activity": "8-K Items 5.02/5.07 and Section 16 filings",
+          "R": "Legal",
+          "A": "Legal (General Counsel)",
+          "C": "Total Rewards, Stock Admin",
+          "I": "Board"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Six-factor independence assessment of consultant and counsel before engagement and annually",
+          "type": "preventive",
+          "evidence": "Questionnaires and committee minutes"
+        },
+        {
+          "id": "C2",
+          "control": "CEO absent from deliberation and voting on CEO pay",
+          "type": "preventive",
+          "evidence": "Executive-session minutes"
+        },
+        {
+          "id": "C3",
+          "control": "Incentive and PSU attainment independently recalculated before certification and kept 3+ years",
+          "type": "preventive",
+          "evidence": "Calculation workpapers with Internal Audit review"
+        },
+        {
+          "id": "C4",
+          "control": "Officer grants approved on or before fixed grant dates and checked against Item 402(x) windows and blackouts",
+          "type": "preventive",
+          "evidence": "Grant calendar, resolutions and Legal checklist"
+        },
+        {
+          "id": "C5",
+          "control": "Proxy compensation tables tied out to payroll, the equity platform and ASC 718 values",
+          "type": "detective",
+          "evidence": "Tie-out binder and Disclosure Committee sign-off"
+        },
+        {
+          "id": "C6",
+          "control": "HR notifies Legal the same day of officer appointments, promotions and departures",
+          "type": "preventive",
+          "evidence": "Notification log matched to 8-K and Form 3 dates"
+        },
+        {
+          "id": "C7",
+          "control": "Perquisites tracked year-round at aggregate incremental cost",
+          "type": "detective",
+          "evidence": "Perquisite log reconciled to AP and payroll"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Say-on-pay support",
+          "target": ">= 90% (never below 70%)",
+          "why": "Low support triggers proxy-advisor 'against' recommendations for committee members"
+        },
+        {
+          "name": "Filing timeliness",
+          "target": "100% of proxy, 8-K and Form 4 filings on time",
+          "why": "Late filings are disclosed and can cost S-3 eligibility"
+        },
+        {
+          "name": "CEO pay positioning",
+          "target": "Target total direct compensation within +/-15% of peer median unless the committee documents a reason",
+          "why": "Keeps pay defensible to investors and proxy advisors"
+        },
+        {
+          "name": "Disclosure quality",
+          "target": "Zero SEC comment letters or corrections on compensation disclosure",
+          "why": "Errors in compensation actually paid and tables are hard to correct publicly"
+        },
+        {
+          "name": "Certification timeliness",
+          "target": "Results certified within 60 days of fiscal year-end",
+          "why": "Late certification delays payouts, grants and the proxy"
+        }
+      ],
+      "considerations": [
+        "The SEC's May 19, 2026 proposal (Rel. 33-11419) would keep full disclosure only for large accelerated filers with a public float of $2B or more; others would drop CD&A, pay ratio, pay versus performance and say-on-pay. Comments closed July 20, 2026 and adoption for the 2027 proxy season is unconfirmed (verify), so estimate the company's likely category, plan the 2027 proxy both ways and keep pay ratio and pay versus performance data processes running until a final rule.",
+        "Section 162(m) expands for tax years beginning after Dec 31, 2026: the five highest-paid employees beyond the named officers are added each year, and large RSU vests or sign-on awards to non-officer engineers can qualify. Model the lost deduction with Tax for the 2027 budget.",
+        "Public companies cannot use the shareholder cleansing vote for 280G, so rely on best-net cutbacks (ISS treats excise-tax gross-ups as problematic) and refresh estimates annually and before any deal.",
+        "Semiconductor results are cyclical; relative TSR against a semiconductor index plus a financial metric balances cycle noise, but pre-agree how TSR-based awards would be recalculated for clawback purposes.",
+        "Keep the talent peer group (who you hire from) and the performance peer group consistent or explain differences; pay versus performance TSR uses the disclosed peer group.",
+        "Track perquisites such as personal security and aircraft use year-round; the SEC chair has signaled perquisite reform, but current rules apply until changed.",
+        "Apply the Item 402(x) calendar to RSUs and PSUs too, and schedule off-cycle executive new-hire grants away from earnings and MNPI 8-Ks.",
+        "Do not use demographic-linked incentive metrics; they create legal risk after 2025-26 federal DEI enforcement.",
+        "Confirm every executive has signed the clawback acknowledgment and that offer letters, plans and severance agreements reference the policy filed as Exhibit 97."
+      ],
+      "variations": [
+        {
+          "when": "New executive officer hired from outside",
+          "how": "TA-09 offer approved by the committee; inducement grants under Nasdaq 5635(c)(4) need independent-director approval and a press release; 8-K Item 5.02 within four business days and Form 3 within 10 days."
+        },
+        {
+          "when": "Executive officer departure",
+          "how": "8-K Item 5.02(b) within four business days of notice or decision; separation agreement drafted for public filing, with 409A six-month delay for specified employees and whistleblower carve-outs (OF-04)."
+        },
+        {
+          "when": "Change in control or merger",
+          "how": "Refresh 280G calculations, prepare the golden-parachute disclosure (Item 402(t)) and vote, and design retention consistent with CIC plans."
+        },
+        {
+          "when": "Accounting restatement",
+          "how": "Trigger the clawback process (EQ-06) and recalculate affected incentive awards."
+        },
+        {
+          "when": "Say-on-pay support below 70%",
+          "how": "Committee-led shareholder outreach, documented changes and a responsiveness section in the next CD&A."
+        },
+        {
+          "when": "Executive officer based outside the US",
+          "how": "Deliver pay through local payroll with tax equalization as needed; plan clawback collection within local wage-deduction limits; Section 16 reporting still applies."
+        },
+        {
+          "when": "Final SEC rule adopted and company is a non-accelerated filer",
+          "how": "Switch to scaled disclosure only after the rule is effective, and decide with the committee which voluntary disclosures investors still expect."
+        }
+      ],
+      "countries": {
+        "us": "Full Item 402 disclosure (CD&A, tables, pay ratio, pay versus performance, 402(x)), annual say-on-pay with results on 8-K Item 5.07, and 8-K Item 5.02 for officer changes and material NEO arrangements, each within four business days. Section 162(m) caps the deduction at $1M per covered employee and adds five more employees from 2027; 280G applies a 20% excise tax and lost deduction at 3x the base amount; 409A requires a six-month delay on separation payments to specified employees. The May 2026 proposal would scale disclosure back if the public float is below $2B (verify final rule).",
+        "us-ca": "California executives cannot be bound by non-competes (B&P 16600, including agreements signed elsewhere), so condition severance and change-in-control benefits on releases, confidentiality and cooperation rather than non-competition. AB 692 limits repayment demands at separation beyond the mandated clawback, and SB 642's equal-pay rules cover executives' bonus and equity as wages.",
+        "ca": "For any Canada-based executive officer, bonus and equity forfeiture wording must expressly exclude the common-law notice period (Matthews), which can reach about 24 months for senior leaders. Canadian employees are in the pay-ratio population, and equity income is reported on the T4.",
+        "in": "Indian employees are part of the worldwide pay-ratio population (unless within the up-to-5% non-US de minimis exclusion), with payroll data pulled from the Indian entity as of the determination date. Any India-based officer's equity creates perquisite TDS at vest and Schedule FA reporting.",
+        "tw": "Taiwan leaders are LSA-covered unless they are genuine mandated managers appointed under the Company Act, which changes severance and termination design. Include Taiwan pay (including year-end bonus and profit-sharing months) in the pay-ratio measure consistently.",
+        "cn": "China employees are in the pay-ratio population unless a documented privacy-law exclusion or de minimis exclusion applies; moving employee-level pay data to the US requires PIPL notice, separate consent and a cross-border transfer mechanism, so consider local aggregation. Any China-based officer's equity must be covered by the SAFE Circular 7 registration."
+      },
+      "templates": [],
+      "policies": [
+        "POL-23",
+        "POL-06",
+        "POL-27",
+        "POL-05",
+        "POL-01"
+      ],
+      "related": [
+        "CO-02",
+        "CO-03",
+        "EQ-01",
+        "EQ-05",
+        "EQ-06",
+        "TA-09",
+        "DS-05",
+        "OF-04"
+      ]
+    },
+    {
+      "id": "EQ-01",
+      "name": "Equity grant administration",
+      "stage": "Equity",
+      "depth": "deep",
+      "summary": "End-to-end administration of new-hire, promotion, refresh and retention grants under the stock plan and the Equity Grant Policy: grants on a fixed calendar, Comp Committee approval for officers and delegated approval for everyone else, award agreements with country appendices, securities and exchange-control checks, and SOX reconciliation to ASC 718 accounting. Good looks like every grant approved before its grant date, a clean three-way reconciliation each quarter, and no grant made in a country before its legal set-up is complete.",
+      "owner": "Stock Admin (process), Total Rewards (guidelines and requests), Legal (plan, securities and country feasibility), Finance (ASC 718), Comp Committee (approval and delegation)",
+      "trigger": "Accepted offer with equity (TA-04), promotion (PD-04), annual refresh (CO-02) or retention award (CO-05), batched to the next scheduled grant date",
+      "outputs": [
+        "Approved grant list (committee resolution or delegate consent)",
+        "Awards recorded in the equity platform",
+        "Award agreements with country appendices and acceptance records",
+        "ASC 718 valuation and expense schedule",
+        "Three-way reconciliation (approved list, equity platform, accounting)",
+        "Form 4 and country filings (e.g., SAFE Circular 7 updates)"
+      ],
+      "systems": [
+        "Equity platform",
+        "Darwinbox (HRIS)",
+        "Greenhouse (ATS)",
+        "Comp planning tool",
+        "E-signature",
+        "Document management"
+      ],
+      "sla": "Grants made on the first scheduled grant date after start or approval; recorded within 1 business day; Form 4 within 2 business days; agreements accepted within 90 days",
+      "lanes": [
+        "Total Rewards",
+        "Legal",
+        "Stock Admin",
+        "CEO",
+        "Comp Committee",
+        "Finance",
+        "Employee"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Total Rewards",
+          "type": "start",
+          "label": "Compile grant requests by cutoff",
+          "detail": "Collect new-hire grants from accepted Greenhouse offers, promotion grants, annual refresh and retention grants into the batch for the next scheduled grant date (cutoff typically 10 business days before; new hires must have started). Value-based awards are converted to shares using the policy's averaging method (e.g., 30-trading-day average price).",
+          "sla": "Grant date -10 bd",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Validate against guidelines and pool",
+          "detail": "Check each request against level guidelines, approved exceptions, per-person plan limits, the available share reserve and the annual burn-rate budget. Confirm award type: RSUs globally, ISOs only for US employees within the $100,000 first-exercisable limit, PSUs only as the committee approved.",
+          "control": "Share reserve and burn-rate check before approval",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Confirm country and securities feasibility",
+          "detail": "Confirm the grant can be made in the employee's country: securities-law exemption for the offer, exchange control (China SAFE Circular 7 registration must cover the grantee before participation), data-privacy consent wording, and whether a cash-settled alternative is needed. A country matrix keeps routine grants from needing case-by-case review.",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Confirm grant date and MNPI timing",
+          "detail": "Confirm the batch is on the committee-approved grant calendar and that Legal has no MNPI hold in place (e.g., a pending major design win, acquisition or earnings surprise). Flag any NEO option falling from four business days before to one business day after a 10-Q, 10-K or MNPI 8-K for Item 402(x).",
+          "control": "402(x)/MNPI timing checklist signed by Legal",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Stock Admin",
+          "type": "decision",
+          "label": "Officer grant or above delegation?",
+          "detail": "Grants to Section 16 officers and directors, and any grant above the per-employee or aggregate limits in the committee's written delegation, go to the Comp Committee; all others go to the delegate.",
+          "branches": [
+            {
+              "to": "s6",
+              "label": "Yes"
+            },
+            {
+              "to": "s7",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Comp Committee",
+          "type": "task",
+          "label": "Approve officer and large grants",
+          "detail": "The committee of non-employee directors (Rule 16b-3) approves grants at a meeting or by unanimous written consent effective on or before the grant date. Approvals are never retroactive; if approval slips, the grant moves to the next scheduled date.",
+          "control": "Signed resolution dated on or before the grant date",
+          "next": [
+            "s8"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "CEO",
+          "type": "task",
+          "label": "Approve non-officer grants (delegated)",
+          "detail": "The CEO or equity award committee approves the non-officer list under the Comp Committee's written delegation (share and value caps, no grants to the delegate or to officers) by signed consent dated on or before the grant date. Delegated grants are reported to the committee each quarter.",
+          "control": "Delegation limits checked; signed delegate consent",
+          "next": [
+            "s8"
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Record awards in equity platform",
+          "detail": "Enter each award from the signed approved list only: grant date, type, shares, vesting schedule, exercise price (closing price on the grant date for options), country and tax status. A second Stock Admin reviewer checks every record before release.",
+          "sla": "1 bd",
+          "next": [
+            "s9"
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "Legal",
+          "type": "task",
+          "label": "File Form 4 and country filings",
+          "detail": "File Forms 4 for officer and director grants within two business days of the grant date, update the China SAFE Circular 7 registration for new participants through the WFOE agent, and confirm the Form S-8 reserve covers the shares. Other country filings follow the country matrix.",
+          "sla": "2 bd",
+          "next": [
+            "s10"
+          ]
+        },
+        {
+          "id": "s10",
+          "lane": "Finance",
+          "type": "task",
+          "label": "Value and expense under ASC 718",
+          "detail": "Finance sets grant-date fair value (RSUs at grant-date price adjusted for dividends, options by Black-Scholes, TSR-based PSUs by Monte Carlo), applies the forfeiture policy and books expense from the equity platform's expense report.",
+          "next": [
+            "s11"
+          ]
+        },
+        {
+          "id": "s11",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Reconcile approved list, platform, GL",
+          "detail": "Stock Admin and Finance reconcile the approved grant list, the equity platform and ASC 718 expense and cap table for every grant date and at quarter-end; exceptions are cleared before the quarterly close.",
+          "control": "SOX key control: approved grant list = equity platform = accounting, signed and retained",
+          "next": [
+            "s12"
+          ]
+        },
+        {
+          "id": "s12",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Release agreements and appendices",
+          "detail": "Publish the award agreement with the relevant country appendix (tax, exchange control, securities, data privacy and, for Canada, termination wording that excludes the common-law notice period) on the equity platform and notify the grantee.",
+          "next": [
+            "s13"
+          ]
+        },
+        {
+          "id": "s13",
+          "lane": "Employee",
+          "type": "task",
+          "label": "Review and accept award agreement",
+          "detail": "The grantee reviews and electronically accepts the agreement, which records proof of acceptance (important in Canada) and any required PIPL or other consents.",
+          "next": [
+            "s14"
+          ]
+        },
+        {
+          "id": "s14",
+          "lane": "Stock Admin",
+          "type": "decision",
+          "label": "Accepted by deadline?",
+          "detail": "Acceptance is tracked against the policy deadline (e.g., 90 days or before the first vest). Non-acceptance is escalated through the manager; plan terms decide whether the award is forfeited or deemed accepted.",
+          "branches": [
+            {
+              "to": "s15",
+              "label": "Yes"
+            },
+            {
+              "to": "s13",
+              "label": "No - remind and escalate"
+            }
+          ]
+        },
+        {
+          "id": "s15",
+          "lane": "Stock Admin",
+          "type": "end",
+          "label": "Hand off to vesting administration",
+          "detail": "The award is live and handed to EQ-02 for vesting, release and tax withholding; grant records and approvals are archived."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Grant guidelines, pool and delegation",
+          "R": "Total Rewards",
+          "A": "Comp Committee",
+          "C": "Finance, Legal",
+          "I": "HRBP"
+        },
+        {
+          "activity": "Grant request compilation and validation",
+          "R": "Total Rewards",
+          "A": "Total Rewards",
+          "C": "Recruiter, HRBP",
+          "I": "Stock Admin"
+        },
+        {
+          "activity": "Country and securities feasibility",
+          "R": "Legal",
+          "A": "Legal (General Counsel)",
+          "C": "Stock Admin, Tax",
+          "I": "Total Rewards"
+        },
+        {
+          "activity": "Officer and above-delegation approval",
+          "R": "Total Rewards",
+          "A": "Comp Committee",
+          "C": "Legal",
+          "I": "Board"
+        },
+        {
+          "activity": "Non-officer approval under delegation",
+          "R": "Stock Admin",
+          "A": "CEO (delegate)",
+          "C": "Total Rewards",
+          "I": "Comp Committee"
+        },
+        {
+          "activity": "Recording awards",
+          "R": "Stock Admin",
+          "A": "Stock Admin",
+          "C": "Total Rewards",
+          "I": "Finance"
+        },
+        {
+          "activity": "ASC 718 valuation and reconciliation",
+          "R": "Finance, Stock Admin",
+          "A": "Finance (Controller)",
+          "C": "Total Rewards",
+          "I": "Internal Audit"
+        },
+        {
+          "activity": "Agreements and acceptance",
+          "R": "Stock Admin",
+          "A": "Legal",
+          "C": "Total Rewards",
+          "I": "Employee, Manager"
+        },
+        {
+          "activity": "Form 4 and country filings",
+          "R": "Legal",
+          "A": "Legal (General Counsel)",
+          "C": "Stock Admin",
+          "I": "Comp Committee"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Grants made only on fixed calendar dates, with approval dated on or before the grant date (no backdating)",
+          "type": "preventive",
+          "evidence": "Grant calendar, signed resolutions and delegate consents"
+        },
+        {
+          "id": "C2",
+          "control": "Three-way reconciliation of approved list, equity platform and ASC 718 expense",
+          "type": "detective",
+          "evidence": "Signed reconciliation per grant date and quarter-end"
+        },
+        {
+          "id": "C3",
+          "control": "Item 402(x) and MNPI timing check before each grant date",
+          "type": "preventive",
+          "evidence": "Legal-signed timing checklist"
+        },
+        {
+          "id": "C4",
+          "control": "Delegated approvals within share and value caps; no delegate grants to officers or to the delegate",
+          "type": "preventive",
+          "evidence": "Delegation resolution and exception log"
+        },
+        {
+          "id": "C5",
+          "control": "Country feasibility and exchange-control registration complete before participation (e.g., China SAFE)",
+          "type": "preventive",
+          "evidence": "Country matrix and SAFE filing receipts"
+        },
+        {
+          "id": "C6",
+          "control": "Equity platform access reviewed quarterly; recorder and approver roles separated; SOC 1 Type II report reviewed",
+          "type": "detective",
+          "evidence": "Access review sign-off and SOC 1 bridge review"
+        },
+        {
+          "id": "C7",
+          "control": "Share reserve and burn rate monitored against plan limits and the committee's budget",
+          "type": "detective",
+          "evidence": "Quarterly share reserve report to the committee"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Reconciliation exceptions",
+          "target": "0 open exceptions at quarter-end",
+          "why": "Unreconciled grants are a SOX deficiency and misstate expense"
+        },
+        {
+          "name": "Recording timeliness",
+          "target": "100% of grants recorded within 1 business day of the grant date",
+          "why": "Late records delay Form 4s and agreements"
+        },
+        {
+          "name": "Acceptance rate",
+          "target": ">= 98% accepted within 90 days",
+          "why": "Unaccepted terms weaken enforceability (notably in Canada)"
+        },
+        {
+          "name": "Form 4 timeliness",
+          "target": "100% within 2 business days",
+          "why": "Late filings are publicly disclosed under Item 405"
+        },
+        {
+          "name": "Burn rate",
+          "target": "Within the committee-approved annual budget",
+          "why": "Overspending the pool forces an early share request to shareholders"
+        }
+      ],
+      "considerations": [
+        "Convert value-based guidelines to shares with a trailing average price to reduce volatility, and make offer letters say the value is approximate and shares are set at grant.",
+        "Use a fixed calendar (e.g., monthly for new hires, annual for refresh) inside open windows; fixed dates are the best defense against spring-loading or backdating allegations.",
+        "Put delegation in writing with share and value caps and no officer grants; grants to Section 16 officers need committee approval to keep the Rule 16b-3 exemption.",
+        "Limit ISOs to US employees and watch the $100,000 limit; RSUs are simpler for a global workforce.",
+        "Country appendices carry real legal weight: PIPL consent for China, exchange-control and tax notices, and Canadian termination wording that excludes the notice period.",
+        "MNPI in a chip company often sits in engineering (tape-out results, major design wins); Legal needs a way to hear about it before a grant date.",
+        "Share reserve increases need shareholder approval (Nasdaq 5635(c)) and a current S-8; model burn rate and overhang against proxy-advisor scorecards a year ahead.",
+        "In 2027 very large grants to non-officer engineers can put them in the expanded 162(m) group, so flag outsized awards to Tax."
+      ],
+      "variations": [
+        {
+          "when": "Inducement grant to a new executive",
+          "how": "Granted under Nasdaq 5635(c)(4) with independent-director or committee approval and a press release announcing material terms; usually from a separate inducement plan."
+        },
+        {
+          "when": "Section 16 officer grant",
+          "how": "Committee approval, Form 4 within two business days, and Item 402(x) timing check for options."
+        },
+        {
+          "when": "China participant",
+          "how": "SAFE Circular 7 registration must cover the grantee before participation; proceeds flow through the special FX account."
+        },
+        {
+          "when": "Canada participant",
+          "how": "Agreement wording excludes the common-law notice period and acceptance is recorded; track the C$200,000 stock-option deduction limit."
+        },
+        {
+          "when": "Country where offering is not feasible",
+          "how": "Grant cash-settled RSUs or a cash retention award with equivalent vesting after Legal review."
+        },
+        {
+          "when": "Acquisition with assumed or substitute awards",
+          "how": "Convert awards at the deal ratio under the assumed plan and reconcile the converted population separately."
+        },
+        {
+          "when": "Grantee on leave at the grant date",
+          "how": "Grant proceeds if approved; vesting follows the plan's leave rules (EQ-02)."
+        }
+      ],
+      "countries": {
+        "us": "ISOs may go only to employees, with only the first $100,000 (grant-date FMV) becoming exercisable each year qualifying and a 10-year maximum term; options must be priced at least at grant-date FMV (also a 409A condition for NSOs). Officer grants need Rule 16b-3-compliant committee approval and a Form 4 within two business days, and NEO option timing near MNPI is disclosed under Item 402(x).",
+        "us-ca": "From 2026 stock and options count as wages under the California Equal Pay Act (SB 642), so apply grant guidelines and exceptions consistently across comparable roles and document the reasons. Forfeiture of unvested equity on departure is generally allowed, but repayment of vested or paid amounts at departure may be caught by AB 692 and needs counsel review.",
+        "ca": "Award terms must clearly and unambiguously exclude the common-law notice period from vesting on termination (Matthews v. Ocean Nutrition, 2020 SCC 26), and the company must be able to prove the employee accepted the terms (Battiston v. Microsoft, 2021 ONCA 727). RSUs are taxed at vesting, and the 50% stock-option deduction is capped at C$200,000 of annual vesting value for large non-CCPC employers.",
+        "in": "RSUs and options create a salary perquisite at vest or exercise (FMV minus price paid) that the Indian entity must withhold through payroll (TDS under s.392, Income-tax Act 2025) and report on Form 123. Employees must report foreign shares in Schedule FA, and the recharge arrangement with the US parent affects deductibility and transfer pricing.",
+        "tw": "US-parent RSUs are a key differentiator against TSMC and MediaTek cash profit-sharing, so present grant value in total-compensation terms. Confirm Taiwan tax treatment of vesting income, NHI obligations and any securities or FX filing for offering parent shares with local advisors before first grants (verify).",
+        "cn": "The plan must be registered with SAFE under Circular 7 through a domestic agent (usually the WFOE) before PRC employees participate, with change registrations, quarterly filings and a special FX account for proceeds. The WFOE withholds IIT at vest or exercise (listed-company equity income can be taxed separately through 31 Dec 2027), and sending grantee data to the US equity platform needs PIPL notice and separate consent."
+      },
+      "templates": [],
+      "policies": [
+        "POL-27",
+        "POL-05",
+        "POL-46"
+      ],
+      "related": [
+        "TA-04",
+        "CO-02",
+        "CO-05",
+        "CO-07",
+        "EQ-02",
+        "EQ-04",
+        "EQ-05"
+      ]
+    },
+    {
+      "id": "EQ-02",
+      "name": "Vesting, release & tax withholding",
+      "stage": "Equity",
+      "depth": "standard",
+      "summary": "Processes each RSU/PSU vest and option exercise: confirm employment and leave status, calculate taxable income, fund taxes by sell-to-cover or net settlement, report income and remit tax through each country's payroll, and deliver shares to the broker. Good looks like zero releases to terminated employees, payroll reporting within one business day in every country and withholding that reconciles to the equity platform.",
+      "owner": "Stock Admin (release process), Payroll (income reporting and tax remittance), Tax (withholding rules), Legal (insider rules for sales)",
+      "trigger": "A scheduled RSU/PSU vest date or an option exercise request",
+      "outputs": [
+        "Pre-vest status exception report",
+        "Release report with taxable income by country",
+        "Sell-to-cover or share-withholding record",
+        "Payroll equity income import files by country",
+        "Release-to-payroll-to-GL reconciliation",
+        "Year-end equity income reporting (W-2, T4, Form 130/123, Taiwan and China filings)"
+      ],
+      "systems": [
+        "Equity platform",
+        "Payroll provider",
+        "Darwinbox (HRIS)"
+      ],
+      "sla": "Equity income to each country payroll within 1 business day of vest; taxes remitted by local deadlines; shares in brokerage accounts within 3 business days",
+      "lanes": [
+        "Stock Admin",
+        "People Ops",
+        "Legal",
+        "Payroll",
+        "Employee"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Stock Admin",
+          "type": "start",
+          "label": "Run pre-vest status check",
+          "detail": "Five business days before each vest date, compare the equity platform with Darwinbox for terminations, leaves of absence, transfers and deaths so vesting is stopped, suspended or accelerated under plan terms.",
+          "sla": "Vest -5 bd",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "People Ops",
+          "type": "task",
+          "label": "Confirm exits, leaves and moves",
+          "detail": "People Ops confirms termination dates, leave types and dates, and cross-border moves with workday data for tax sourcing (MV-02), and corrects Darwinbox before the vest.",
+          "control": "Pre-vest exception report cleared and signed",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Apply blackout and 10b5-1 rules",
+          "detail": "Sell-to-cover under a non-discretionary instruction or a 10b5-1-compliant election may proceed during a blackout (the overlapping-plan exception covers sell-to-cover), while discretionary sales wait for an open window. Section 16 officers' share withholding is reported on Form 4 (EQ-05).",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Stock Admin",
+          "type": "decision",
+          "label": "Sell-to-cover or net settle?",
+          "detail": "The plan and country matrix decide the method: sell-to-cover is the default for most employees; net settlement is used for Section 16 officers or where market sales are impractical.",
+          "branches": [
+            {
+              "to": "s5",
+              "label": "Sell-to-cover"
+            },
+            {
+              "to": "s6",
+              "label": "Net settlement"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Instruct broker sell-to-cover",
+          "detail": "The broker sells enough shares to cover estimated tax and fees and remits proceeds to the employing entity so local payroll can deposit the tax.",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Withhold shares; company funds tax",
+          "detail": "The company withholds shares up to the maximum statutory rate (to keep equity accounting treatment) and funds the tax in cash from the employing entity; Treasury is told the cash need in advance.",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "Payroll",
+          "type": "task",
+          "label": "Report income and remit taxes",
+          "detail": "Each country payroll loads equity income and tax withheld, applies local rules (US supplemental rates, Canada T4 codes, India perquisite TDS, Taiwan and China individual income tax), remits tax and trues up over- or under-withholding in the next payroll.",
+          "sla": "1 bd",
+          "next": [
+            "s8"
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Employee",
+          "type": "task",
+          "label": "Receive shares and statements",
+          "detail": "Shares land in the employee's brokerage account with a release confirmation. Any later sale follows the insider trading policy and local reporting (e.g., India Schedule FA, China FX repatriation).",
+          "next": [
+            "s9"
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "Stock Admin",
+          "type": "end",
+          "label": "Reconcile release to payroll and GL",
+          "detail": "Reconcile the release report, payroll imports and GL entries by country for each vest cycle and clear differences before month-end close.",
+          "control": "Release report = payroll import = GL, reviewed by Finance"
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Pre-vest status check",
+          "R": "Stock Admin",
+          "A": "Stock Admin",
+          "C": "People Ops",
+          "I": "Payroll"
+        },
+        {
+          "activity": "Settlement method and broker instructions",
+          "R": "Stock Admin",
+          "A": "Finance (Treasury)",
+          "C": "Tax, Legal",
+          "I": "Payroll"
+        },
+        {
+          "activity": "Payroll reporting and tax remittance",
+          "R": "Payroll",
+          "A": "Payroll",
+          "C": "Tax, Stock Admin",
+          "I": "Employee"
+        },
+        {
+          "activity": "Release reconciliation",
+          "R": "Stock Admin",
+          "A": "Finance (Controller)",
+          "C": "Payroll",
+          "I": "Internal Audit"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Pre-vest reconciliation of equity platform status against HRIS terminations, leaves and transfers",
+          "type": "preventive",
+          "evidence": "Signed exception report per vest date"
+        },
+        {
+          "id": "C2",
+          "control": "Release report reconciled to payroll imports and GL by country",
+          "type": "detective",
+          "evidence": "Reconciliation with Finance review"
+        },
+        {
+          "id": "C3",
+          "control": "Withholding rates and country matrix reviewed by Tax each year and on law changes",
+          "type": "preventive",
+          "evidence": "Tax sign-off on platform rate tables"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Erroneous releases",
+          "target": "0 releases to terminated employees",
+          "why": "Recovering shares from leavers is slow and often impossible across borders"
+        },
+        {
+          "name": "Payroll reporting timeliness",
+          "target": "100% of vest events reported to payroll within 1 business day",
+          "why": "Late reporting causes late tax deposits and penalties"
+        },
+        {
+          "name": "Withholding accuracy",
+          "target": "< 1% of events need a true-up beyond rounding",
+          "why": "True-ups create employee confusion and extra payroll work"
+        }
+      ],
+      "considerations": [
+        "Sell-to-cover saves company cash but puts shares on the market; net settlement conserves the share reserve but uses cash. Choose by population and revisit when the stock price or share reserve changes.",
+        "Structure standing sell-to-cover elections to fit the Rule 10b5-1 overlapping-plan exception, or releases during blackouts become a problem for insiders.",
+        "Leave-of-absence vesting rules (e.g., suspension after 6 months of unpaid leave) must be written in the plan and applied only where local law permits; protected leave such as CFRA/FMLA, Taiwan parental leave or China maternity leave needs Legal review before tolling.",
+        "Mobile employees create multi-state and multi-country tax sourcing; capture workday location at the time of the move, not at vest."
+      ],
+      "variations": [
+        {
+          "when": "Retirement-eligible employee with continued vesting",
+          "how": "FICA is due when the award is no longer subject to a substantial risk of forfeiture (at retirement eligibility), not at settlement, so Payroll reports FICA separately (verify plan terms)."
+        },
+        {
+          "when": "Death or disability",
+          "how": "Apply plan acceleration and release to the estate or beneficiary with OF-09; tax reporting follows local rules."
+        },
+        {
+          "when": "Termination on or near the vest date",
+          "how": "Vesting stops on the termination date per plan; Canadian awards follow the agreement's notice-period wording."
+        }
+      ],
+      "countries": {
+        "us": "Federal supplemental withholding is 22%, with a mandatory 37% on supplemental wages over $1M in a year, and Social Security applies up to the $184,500 wage base (2026). Officers report withheld shares on Form 4 within two business days.",
+        "us-ca": "Withhold California income tax at the supplemental rate for stock and bonus income (10.23%, verify) and SDI at 1.3% on all wages with no wage cap (2026), which applies in full to RSU income.",
+        "ca": "RSUs are employment income at vesting and options are taxed at exercise; withhold income tax, CPP/CPP2 and EI up to annual maximums and report on the T4 with the correct codes.",
+        "in": "The perquisite (FMV at vest or exercise minus price paid) is taxed as salary with TDS through Indian payroll under s.392 of the Income-tax Act 2025 and reported on Form 123 and Form 130; remind employees to disclose foreign shares in Schedule FA.",
+        "tw": "Vesting income is taxable for Taiwan individual income tax and may attract the NHI supplementary premium; confirm withholding versus self-reporting treatment with tax advisors (verify).",
+        "cn": "The WFOE withholds IIT at vest or exercise as wages, with listed-company equity income taxable separately from other wages through 31 Dec 2027, and sale proceeds must be repatriated through the SAFE-registered special FX account."
+      },
+      "templates": [],
+      "policies": [
+        "POL-27",
+        "POL-05",
+        "POL-28",
+        "POL-35"
+      ],
+      "related": [
+        "EQ-01",
+        "EQ-04",
+        "EQ-05",
+        "PY-01",
+        "LV-01",
+        "MV-02",
+        "OF-05"
+      ]
+    },
+    {
+      "id": "EQ-03",
+      "name": "ESPP enrollment & purchase",
+      "stage": "Equity",
+      "depth": "standard",
+      "summary": "Runs the Employee Stock Purchase Plan: an IRC 423 component for US employees and a non-423 component for participating non-US entities. Covers offering periods, enrollment, payroll contributions in local currency, discounted purchases, the $25,000 limit, share delivery, disposition tracking and Form 3922. Good looks like high participation, contributions that reconcile to purchases in every country, and no country launched before exchange-control and securities checks.",
+      "owner": "Stock Admin (plan administration), Payroll (contributions and refunds), Total Rewards (plan design), Legal (country feasibility and securities)",
+      "trigger": "Offering-period enrollment window (e.g., every six months) and each purchase date",
+      "outputs": [
+        "Offering terms and participating-country list",
+        "Enrollment elections and payroll deduction authorizations",
+        "Contribution reports by country with FX conversion record",
+        "Purchase report and broker share deposit",
+        "Refunds of excess or leavers' contributions",
+        "Forms 3922 and disqualifying-disposition income reporting"
+      ],
+      "systems": [
+        "Equity platform",
+        "Payroll provider",
+        "Darwinbox (HRIS)"
+      ],
+      "sla": "Enrollment opens 2-3 weeks before each offering; contributions transmitted within 3 business days of the purchase date; Forms 3922 by January 31",
+      "lanes": [
+        "Total Rewards",
+        "Legal",
+        "Stock Admin",
+        "Employee",
+        "Payroll"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Total Rewards",
+          "type": "start",
+          "label": "Confirm offering terms",
+          "detail": "Confirm offering and purchase periods (e.g., 24-month offering with four 6-month purchases and a reset if the price falls), 15% discount with lookback, eligibility exclusions, contribution limits and remaining share reserve.",
+          "sla": "Offering -6 weeks",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Confirm non-US participation",
+          "detail": "Confirm each participating entity: Canada (non-423 component, taxable discount), India (FEMA ODI/LRS), Taiwan (securities and FX filings, verify) and China (SAFE Circular 7 registration covering the ESPP before any contributions are remitted).",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Open enrollment window",
+          "detail": "Send the eligibility file from Darwinbox to the equity platform, publish translated materials and open enrollment; designated insiders may enroll or change elections only in an open trading window.",
+          "control": "Eligibility file reconciled to Darwinbox before enrollment opens",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Employee",
+          "type": "task",
+          "label": "Enroll and elect contribution %",
+          "detail": "Eligible employees elect a contribution rate (e.g., 1-15% of eligible pay) and accept plan terms and data-privacy consents, which also serve as the written payroll deduction authorization.",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Payroll",
+          "type": "task",
+          "label": "Deduct contributions each payroll",
+          "detail": "Each country payroll deducts contributions in local currency and holds them in the employing entity; deductions stop on termination or withdrawal.",
+          "next": [
+            "s6"
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Stock Admin",
+          "type": "decision",
+          "label": "Limits exceeded?",
+          "detail": "Before purchase, the platform tests the $25,000 annual accrual limit (423 component) and per-period share caps.",
+          "branches": [
+            {
+              "to": "s7",
+              "label": "Yes"
+            },
+            {
+              "to": "s8",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "Payroll",
+          "type": "task",
+          "label": "Refund excess contributions",
+          "detail": "Payroll refunds excess contributions to the employee in the next payroll cycle.",
+          "next": [
+            "s8"
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Purchase and deposit shares",
+          "detail": "Purchase at 85% of the lower of the offering-date and purchase-date price, convert non-US contributions at the documented FX rate, deposit shares with the broker and send purchase data to country payrolls and Legal.",
+          "sla": "3 bd",
+          "control": "Contributions per payroll register = funds transmitted = shares purchased x price, by country",
+          "next": [
+            "s9"
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "Stock Admin",
+          "type": "end",
+          "label": "Track dispositions; issue 3922",
+          "detail": "Track qualifying and disqualifying dispositions for W-2 reporting, issue Forms 3922 by January 31, and provide non-US tax reporting data."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Plan design and share reserve",
+          "R": "Total Rewards",
+          "A": "Comp Committee",
+          "C": "Legal, Finance",
+          "I": "Stock Admin"
+        },
+        {
+          "activity": "Country feasibility",
+          "R": "Legal",
+          "A": "Legal (General Counsel)",
+          "C": "Tax, Stock Admin",
+          "I": "Payroll"
+        },
+        {
+          "activity": "Enrollment and purchase",
+          "R": "Stock Admin",
+          "A": "Stock Admin",
+          "C": "Payroll",
+          "I": "Employee"
+        },
+        {
+          "activity": "Contributions and refunds",
+          "R": "Payroll",
+          "A": "Payroll",
+          "C": "Stock Admin",
+          "I": "Finance"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Eligibility file reconciled to Darwinbox before each enrollment",
+          "type": "preventive",
+          "evidence": "Reconciliation report"
+        },
+        {
+          "id": "C2",
+          "control": "Contributions reconciled to funds transmitted and shares purchased, by country",
+          "type": "detective",
+          "evidence": "Purchase reconciliation with reviewer sign-off"
+        },
+        {
+          "id": "C3",
+          "control": "$25,000 accrual limit and share caps enforced in the platform before purchase",
+          "type": "preventive",
+          "evidence": "Limit test report and refund log"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Participation",
+          "target": ">= 50% of eligible employees",
+          "why": "Low participation means the plan's cost is not buying engagement"
+        },
+        {
+          "name": "Purchase reconciliation",
+          "target": "100% of countries reconciled each purchase date",
+          "why": "Unreconciled contributions are an audit finding and employee money at risk"
+        },
+        {
+          "name": "Form 3922 timeliness",
+          "target": "100% furnished by January 31",
+          "why": "Late forms bring IRS penalties and employee complaints"
+        }
+      ],
+      "considerations": [
+        "The lookback and reset features make the plan valuable but raise ASC 718 expense; model cost before changing offering terms.",
+        "Non-US participation is where the risk sits: China needs SAFE registration before contributions leave the country and India's FEMA rules apply, so launch a country only after Legal signs off.",
+        "Decide who bears FX risk on accumulated non-US contributions and say so in plan materials.",
+        "Plan rules must say when contributions stop on leave; under 423 rules a leave longer than 3 months ends the employment relationship unless reemployment is guaranteed by statute or contract."
+      ],
+      "variations": [
+        {
+          "when": "Termination during an offering",
+          "how": "Automatic withdrawal and refund of accumulated contributions through payroll; no purchase."
+        },
+        {
+          "when": "Transfer between participating entities or countries",
+          "how": "Continue in the offering where plan terms allow, switching payroll and deduction currency; 423 status depends on the new employer's participation."
+        },
+        {
+          "when": "New country joins the plan",
+          "how": "Complete the Legal feasibility checklist, translate materials, and set up payroll deduction and remittance before the next enrollment."
+        }
+      ],
+      "countries": {
+        "us": "IRC 423 requires shareholder approval within 12 months, broad eligibility (permitted exclusions: under 2 years' service, 20 hours/week or less, 5 months/year or less, highly compensated employees), a price of at least 85% of FMV, a $25,000 annual accrual limit and offering periods up to 27 months; furnish Form 3922 by January 31.",
+        "us-ca": "Payroll deductions need the employee's written authorization (LC 224), which the enrollment election provides; refund accumulated contributions promptly after termination in line with final-pay timing (verify).",
+        "ca": "Canadian employees participate through the non-423 component; the purchase discount is taxable employment income reported on the T4.",
+        "in": "ESPP purchases by resident employees fall under FEMA ODI/LRS rules, the discount is a salary perquisite with TDS through Indian payroll, and employees must report the shares in Schedule FA.",
+        "tw": "Before enrolling Taiwan employees, confirm with local counsel any securities filing for offering parent shares, FX reporting for remitting contributions and the tax treatment of the discount (verify).",
+        "cn": "ESPP payroll contributions cannot be remitted abroad without SAFE Circular 7 registration, and the WFOE withholds IIT on the discount (listed-company equity income taxed separately through 31 Dec 2027)."
+      },
+      "templates": [],
+      "policies": [
+        "POL-27",
+        "POL-05",
+        "POL-28",
+        "POL-37"
+      ],
+      "related": [
+        "EQ-02",
+        "EQ-04",
+        "BN-01",
+        "PY-01",
+        "OF-05"
+      ]
+    },
+    {
+      "id": "EQ-04",
+      "name": "Insider trading pre-clearance & blackouts",
+      "stage": "Equity",
+      "depth": "standard",
+      "summary": "Prevents insider trading by maintaining designated insider lists, running quarterly trading windows and event-specific blackouts, pre-clearing trades and reviewing Rule 10b5-1 plans, and captures the data needed for Item 408 disclosure. In a chip company MNPI often sits with engineers and sales staff (design wins, tape-out results, customer forecasts), not just Finance. Good looks like accurate lists, one-day pre-clearance, broker-enforced blocks and zero violations.",
+      "owner": "Legal (Securities) - insider trading compliance officer, Stock Admin (broker controls), People Ops (list feeds and acknowledgments)",
+      "trigger": "Quarterly calendar; a project that creates MNPI (major design win, M&A, material customer event); a pre-clearance or 10b5-1 plan request",
+      "outputs": [
+        "Designated insider and project-specific lists",
+        "Blackout and open-window notices",
+        "Pre-clearance decision log",
+        "Rule 10b5-1 plan register with cooling-off end dates",
+        "Item 408(a) data for officers and directors",
+        "Policy acknowledgments and annual certifications"
+      ],
+      "systems": [
+        "Equity platform",
+        "Darwinbox (HRIS)",
+        "LMS",
+        "Document management"
+      ],
+      "sla": "Pre-clearance decision within 1 business day; approvals valid for 2 trading days inside an open window",
+      "lanes": [
+        "Legal",
+        "People Ops",
+        "Stock Admin",
+        "Employee"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Legal",
+          "type": "start",
+          "label": "Maintain designated insider lists",
+          "detail": "Each quarter Legal refreshes the lists: directors, officers, finance and legal staff, plus role-based insiders such as program managers, design leads who see tape-out results and sales staff with customer forecasts or design-win news. Project lists are opened for deals or material customer events.",
+          "sla": "Quarterly",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "People Ops",
+          "type": "task",
+          "label": "Feed hires, moves and exits",
+          "detail": "Darwinbox triggers notify Legal of hires, role changes and exits in listed roles, and People Ops collects policy acknowledgments at onboarding through the LMS.",
+          "control": "Quarterly reconciliation of insider lists to Darwinbox roles",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Issue window and blackout notices",
+          "detail": "Send quarterly blackout notices (typically starting about two weeks before quarter-end until results are public) and confidential event-specific blackouts to project lists without stating the reason.",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Apply broker trading blocks",
+          "detail": "Set broker and equity platform restrictions so designated insiders cannot sell without a pre-clearance code in open windows, or at all during blackouts.",
+          "control": "Broker-enforced blocks for designated insiders",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Employee",
+          "type": "task",
+          "label": "Request pre-clearance or 10b5-1 plan",
+          "detail": "Designated insiders submit trade requests (including gifts) or proposed 10b5-1 plans and certify they hold no MNPI; plans may be adopted only in an open window.",
+          "next": [
+            "s6"
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Legal",
+          "type": "decision",
+          "label": "Approve request?",
+          "detail": "Legal checks window status, list membership, MNPI in live projects, Section 16(b) matchable trades and 10b5-1 conditions.",
+          "branches": [
+            {
+              "to": "s7",
+              "label": "Approve"
+            },
+            {
+              "to": "s9",
+              "label": "Deny"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Log approval; track cooling-off",
+          "detail": "Log the approval and its validity. For 10b5-1 plans record the cooling-off end (officers and directors: later of 90 days or 2 business days after the 10-Q/10-K, maximum 120 days; others 30 days), check for overlapping or repeat single-trade plans, and capture officer and director adoptions for Item 408(a).",
+          "sla": "1 bd",
+          "control": "10b5-1 plan checklist and register",
+          "next": [
+            "s8"
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Employee",
+          "type": "end",
+          "label": "Trade within approved window",
+          "detail": "The insider trades within the approval validity; brokers of Section 16 insiders notify Legal the same day for Form 4."
+        },
+        {
+          "id": "s9",
+          "lane": "Employee",
+          "type": "end",
+          "label": "Denied; no trade",
+          "detail": "The insider is told the request is denied without the reason and must not trade or tip others."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Insider lists",
+          "R": "Legal",
+          "A": "Legal (General Counsel)",
+          "C": "People Ops, Dept Head",
+          "I": "Stock Admin"
+        },
+        {
+          "activity": "Windows and blackouts",
+          "R": "Legal",
+          "A": "Legal (General Counsel)",
+          "C": "Finance",
+          "I": "Employee"
+        },
+        {
+          "activity": "Pre-clearance and 10b5-1 review",
+          "R": "Legal",
+          "A": "Legal (General Counsel)",
+          "C": "Stock Admin",
+          "I": "Employee"
+        },
+        {
+          "activity": "Broker trading controls",
+          "R": "Stock Admin",
+          "A": "Legal",
+          "C": "Vendor (broker)",
+          "I": "Employee"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Designated insiders can trade only with a pre-clearance code, enforced at the broker",
+          "type": "preventive",
+          "evidence": "Pre-clearance log and broker restriction reports"
+        },
+        {
+          "id": "C2",
+          "control": "Insider lists reconciled quarterly to Darwinbox roles and the Section 16 list",
+          "type": "detective",
+          "evidence": "Signed quarterly reconciliation"
+        },
+        {
+          "id": "C3",
+          "control": "10b5-1 plans reviewed for cooling-off, overlap and single-trade limits before adoption",
+          "type": "preventive",
+          "evidence": "Completed plan checklist and register"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Pre-clearance turnaround",
+          "target": ">= 95% decided within 1 business day",
+          "why": "Slow decisions push insiders to trade around the process"
+        },
+        {
+          "name": "List accuracy",
+          "target": "0 missed role changes at quarterly reconciliation",
+          "why": "An insider missing from the list is not blocked at the broker"
+        },
+        {
+          "name": "Certification completion",
+          "target": "100% of designated insiders certify annually",
+          "why": "Evidence that insiders know and accept the policy"
+        },
+        {
+          "name": "Violations",
+          "target": "0 trades outside policy",
+          "why": "Outcome measure of the whole control set"
+        }
+      ],
+      "considerations": [
+        "Build lists by role and project, not title: in a chip company the people who know about a socket win or a failed tape-out are engineers and FAEs.",
+        "Cover shadow trading in policy and training: the SEC v. Panuwat verdict (2024) supports liability for trading a customer's, supplier's or competitor's stock on company MNPI.",
+        "Keep event-specific blackouts confidential; the notice itself can be MNPI.",
+        "If the proposed optional semiannual reporting (Form 10-S) is adopted and elected, windows and 10b5-1 cooling-off periods keyed to 10-Q filings must be redesigned.",
+        "Translate policy and training for Taiwan, China and India staff and collect local-language acknowledgments."
+      ],
+      "variations": [
+        {
+          "when": "Section 16 officers and directors",
+          "how": "Pre-clear every transaction including gifts; broker notifies Legal the same day; Form 4 within two business days (EQ-05)."
+        },
+        {
+          "when": "Departing employee who held MNPI",
+          "how": "The policy continues to apply until the information is public or stale; exit reminders are given in OF-01."
+        },
+        {
+          "when": "10b5-1 plan modification",
+          "how": "Treated as termination and adoption of a new plan with a new cooling-off period."
+        }
+      ],
+      "countries": {
+        "us": "The policy is filed as Form 10-K Exhibit 19, officer and director 10b5-1 adoptions and terminations are disclosed quarterly under Item 408(a), and hedging policy is disclosed under Item 407(i).",
+        "us-ca": "No material variation from global standard; make sure the policy's confidentiality wording does not restrict discussing wages or reporting to regulators.",
+        "ca": "No material variation from global standard for trading parent shares on Nasdaq; confirm with counsel whether Canadian securities rules reach trading in Canadian-listed customers or suppliers on company MNPI (verify).",
+        "in": "Resident employees hold parent shares under FEMA ODI rules and report them in Schedule FA; trading Indian-listed customers' or suppliers' shares on company MNPI may also breach SEBI insider trading rules (verify).",
+        "tw": "Provide the policy in Traditional Chinese; trading Taiwan-listed foundry, packaging or customer shares on company MNPI may breach Securities and Exchange Act insider trading provisions (verify).",
+        "cn": "Provide the policy in Chinese with signed acknowledgment; employees trade parent shares only through the SAFE-registered plan broker, and trading A-share partners on company MNPI may breach the PRC Securities Law (verify)."
+      },
+      "templates": [],
+      "policies": [
+        "POL-05",
+        "POL-01",
+        "POL-14",
+        "POL-45"
+      ],
+      "related": [
+        "EQ-05",
+        "EQ-02",
+        "EQ-03",
+        "PD-06",
+        "ON-03",
+        "OF-01"
+      ]
+    },
+    {
+      "id": "EQ-05",
+      "name": "Section 16 reporting",
+      "stage": "Equity",
+      "depth": "standard",
+      "summary": "Files Section 16(a) reports (Forms 3, 4 and 5) for directors and Section 16 officers on time under EDGAR Next, supported by powers of attorney, broker pre-clearance and same-day data feeds from HR, Stock Admin and brokers. Good looks like zero late filings disclosed under Item 405 and current EDGAR access for every insider.",
+      "owner": "Legal (Securities) / Corporate Secretary (filings), Stock Admin (transaction data), People Ops (officer status changes)",
+      "trigger": "Appointment or promotion into Section 16 status; any reportable transaction (grant, share withholding, exercise, open-market trade, gift, 10b5-1 trade); fiscal year-end",
+      "outputs": [
+        "Section 16 officer and director list",
+        "EDGAR Next credentials, account administrators and delegations",
+        "Signed powers of attorney",
+        "Filed Forms 3, 4 and 5 with confirmations",
+        "Transaction tracker and late-filing log for Item 405",
+        "Year-end holdings reconciliation for the proxy ownership table"
+      ],
+      "systems": [
+        "Equity platform",
+        "Darwinbox (HRIS)",
+        "Document management"
+      ],
+      "sla": "Form 3 within 10 days of becoming an insider; Form 4 within 2 business days; Form 5 within 45 days after fiscal year-end",
+      "lanes": [
+        "People Ops",
+        "Legal",
+        "Stock Admin",
+        "Employee"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "People Ops",
+          "type": "start",
+          "label": "Notify Legal of officer change",
+          "detail": "People Ops notifies Legal the same day a person is appointed or promoted into a Rule 16a-1(f) officer role, a director joins, or an insider leaves.",
+          "sla": "Same day",
+          "control": "Same-day notification log",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Set up EDGAR Next access and POA",
+          "detail": "Legal arranges the insider's individual Login.gov-based EDGAR Next credentials, account administrators and delegation to the company filer, obtains a signed power of attorney, and briefs the insider on Section 16(b), Rule 144 and pre-clearance.",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Legal",
+          "type": "task",
+          "label": "File Form 3 within 10 days",
+          "detail": "File the initial holdings report within 10 days of becoming an insider, using equity platform and broker data confirmed by the insider.",
+          "sla": "10 days",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Employee",
+          "type": "task",
+          "label": "Pre-clear every transaction",
+          "detail": "The insider pre-clears all transactions, including gifts, and instructs brokers to notify Legal the same day of any execution, including 10b5-1 trades.",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Stock Admin",
+          "type": "task",
+          "label": "Send transaction data in 1 bd",
+          "detail": "Stock Admin sends grants, share withholding (code F), exercises and ESPP data to Legal within one business day; brokers send open-market trade confirmations.",
+          "sla": "1 bd",
+          "next": [
+            "s6"
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Prepare and file Form 4",
+          "detail": "Prepare the Form 4 with the right transaction codes and, where relevant, the 10b5-1 checkbox and plan adoption date; confirm with the insider and file within two business days.",
+          "sla": "2 bd",
+          "control": "Filing tracker with due date and filed timestamp per transaction",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "Legal",
+          "type": "decision",
+          "label": "Filed on time and accurate?",
+          "detail": "Legal compares the filed time to the deadline and checks reported holdings against the equity platform.",
+          "branches": [
+            {
+              "to": "s9",
+              "label": "Yes"
+            },
+            {
+              "to": "s8",
+              "label": "Late or error"
+            }
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Amend and log for Item 405",
+          "detail": "File any amendment, log the late filing for proxy disclosure under Item 405, and fix the root cause (data feed, broker notice or access).",
+          "next": [
+            "s9"
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "Legal",
+          "type": "end",
+          "label": "Form 5 and year-end reconciliation",
+          "detail": "Within 45 days after fiscal year-end, file any Forms 5 and reconcile each insider's reported holdings to equity platform and broker statements for the proxy ownership table."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Officer status determination",
+          "R": "People Ops",
+          "A": "Legal (General Counsel)",
+          "C": "CHRO, Board",
+          "I": "Stock Admin"
+        },
+        {
+          "activity": "EDGAR access and powers of attorney",
+          "R": "Legal",
+          "A": "Legal (Corporate Secretary)",
+          "C": "Employee (insider)",
+          "I": "Stock Admin"
+        },
+        {
+          "activity": "Transaction data",
+          "R": "Stock Admin",
+          "A": "Stock Admin",
+          "C": "Vendor (broker)",
+          "I": "Legal"
+        },
+        {
+          "activity": "Forms 3, 4 and 5",
+          "R": "Legal",
+          "A": "Legal (General Counsel)",
+          "C": "Employee (insider)",
+          "I": "Comp Committee"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Same-day HR notice to Legal of Section 16 status changes",
+          "type": "preventive",
+          "evidence": "Notification log matched to Form 3 dates"
+        },
+        {
+          "id": "C2",
+          "control": "Transaction feeds from the equity platform and brokers tracked to filing deadlines",
+          "type": "preventive",
+          "evidence": "Filing tracker"
+        },
+        {
+          "id": "C3",
+          "control": "Year-end reconciliation of reported holdings to equity platform and broker statements",
+          "type": "detective",
+          "evidence": "Signed reconciliation per insider"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Form 4 timeliness",
+          "target": "100% within 2 business days",
+          "why": "Late filings are disclosed in the proxy and can draw SEC enforcement"
+        },
+        {
+          "name": "Item 405 delinquencies",
+          "target": "0 per year",
+          "why": "Public signal of weak controls"
+        },
+        {
+          "name": "EDGAR access currency",
+          "target": "100% of insiders with working credentials and delegations",
+          "why": "Missing access is the most common cause of late filings under EDGAR Next"
+        }
+      ],
+      "considerations": [
+        "Most late Forms 4 come from share withholding at vest and gifts; automate the equity platform feed and remind insiders that bona fide gifts have been Form 4 items since 2023.",
+        "Check Section 16(b) matchable transactions at pre-clearance; any purchase and sale within six months can lead to strict-liability disgorgement demands from firms that monitor Forms 4.",
+        "EDGAR Next makes access individual; keep at least two account administrators so departures or lost credentials do not stop filings.",
+        "Coordinate Form 144 for affiliate sales over 5,000 shares or $50,000 in three months with the Form 4."
+      ],
+      "variations": [
+        {
+          "when": "New director or officer hired from outside",
+          "how": "Start EDGAR Next setup before the start date; Form 3 within 10 days; inducement grants reported on Form 4."
+        },
+        {
+          "when": "Officer departs",
+          "how": "Update the officer list; transactions after departure may still be reportable if matched with pre-departure transactions within six months (verify)."
+        },
+        {
+          "when": "Officer based outside the US",
+          "how": "Deadlines run on US business days; set up credentials and broker notice channels in advance for Taiwan, China or India time zones."
+        }
+      ],
+      "countries": {
+        "us": "Rules 16a-1 to 16a-13 apply: Form 3 within 10 days, Form 4 within two business days (including bona fide gifts since 2023) and Form 5 within 45 days after fiscal year-end; EDGAR Next, mandatory since Sept 2025, requires individual Login.gov credentials and delegations.",
+        "us-ca": "No material variation from global standard.",
+        "ca": "No material variation from global standard for Nasdaq reporting; Canadian insider reporting would apply only if the company became a Canadian reporting issuer (verify).",
+        "in": "No material variation from global standard; shares withheld for an India-based officer's TDS at vest are still reported on Form 4 (code F).",
+        "tw": "No material variation from global standard; plan around time zones because the two-business-day clock runs on US business days.",
+        "cn": "No material variation in US reporting; a China-based officer's sale proceeds must also flow through the SAFE Circular 7 special FX account."
+      },
+      "templates": [],
+      "policies": [
+        "POL-05",
+        "POL-27"
+      ],
+      "related": [
+        "EQ-04",
+        "EQ-01",
+        "EQ-02",
+        "CO-07",
+        "TA-09"
+      ]
+    },
+    {
+      "id": "EQ-06",
+      "name": "Clawback administration",
+      "stage": "Equity",
+      "depth": "standard",
+      "summary": "Administers the Compensation Recovery Policy: keeps the executive officer register and incentive calculation records, and when an accounting restatement is required, identifies, calculates (pre-tax), recovers and discloses erroneously awarded incentive compensation. Also runs discretionary misconduct clawbacks where the policy provides them. Good looks like records ready for any three-year lookback, no indemnification, and recovery methods that work under each country's wage-deduction limits.",
+      "owner": "Comp Committee (policy administrator), Legal (determination and recovery), Total Rewards (calculation), Finance (restatement and financial measures)",
+      "trigger": "The date the board, audit committee or authorized officers conclude (or reasonably should have concluded) that an accounting restatement is required, Big R or little r; or a misconduct finding under discretionary provisions",
+      "outputs": [
+        "Trigger memo with restatement date and lookback years",
+        "Covered executive and award list",
+        "Pre-tax recovery calculation with TSR/stock-price methodology",
+        "Comp Committee resolution and any impracticability determination",
+        "Demand letters, repayment agreements or award cancellations",
+        "Item 402(w) disclosure and 10-K cover checkbox support"
+      ],
+      "systems": [
+        "Equity platform",
+        "Payroll provider",
+        "Darwinbox (HRIS)",
+        "Document management"
+      ],
+      "sla": "Recovery calculation within 60 days of the restatement determination; recovery completed reasonably promptly (target 90 days)",
+      "lanes": [
+        "Finance",
+        "Legal",
+        "Total Rewards",
+        "Comp Committee",
+        "Payroll",
+        "Employee"
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "lane": "Finance",
+          "type": "start",
+          "label": "Determine restatement is required",
+          "detail": "Finance and the audit committee document the date a restatement to correct a material error (Big R), or an error that would be material if left uncorrected (little r), was or should have been determined; that date fixes the three completed fiscal years in the lookback.",
+          "next": [
+            "s2"
+          ]
+        },
+        {
+          "id": "s2",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Identify covered executives and awards",
+          "detail": "List current and former executive officers (Rule 16a-1(f)) and all incentive compensation they received in the lookback that was based wholly or partly on a financial reporting measure, including stock price and TSR; compensation is 'received' when the measure is attained.",
+          "next": [
+            "s3"
+          ]
+        },
+        {
+          "id": "s3",
+          "lane": "Total Rewards",
+          "type": "task",
+          "label": "Recalculate erroneous amounts",
+          "detail": "Recompute each award on restated results, pre-tax; for stock-price or TSR awards use the reasonable-estimate method pre-agreed with the compensation consultant and document it.",
+          "control": "Independent Finance and consultant review of each calculation",
+          "next": [
+            "s4"
+          ]
+        },
+        {
+          "id": "s4",
+          "lane": "Comp Committee",
+          "type": "task",
+          "label": "Approve recovery amounts",
+          "detail": "The committee approves the amounts owed; its only discretion is the narrow impracticability exceptions.",
+          "next": [
+            "s5"
+          ]
+        },
+        {
+          "id": "s5",
+          "lane": "Comp Committee",
+          "type": "decision",
+          "label": "Impracticability exception applies?",
+          "detail": "Exceptions are limited: enforcement cost exceeds the amount after a documented reasonable attempt, recovery would violate home-country law adopted before Nov 28, 2022 (with a legal opinion), or it would disqualify a tax-qualified retirement plan.",
+          "branches": [
+            {
+              "to": "s9",
+              "label": "Yes - document"
+            },
+            {
+              "to": "s6",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "lane": "Legal",
+          "type": "task",
+          "label": "Issue recovery demand",
+          "detail": "Send a demand stating the amount and method: direct repayment, cancellation of unvested or unpaid awards, offset against future incentive pay (subject to 409A) or forfeiture of deferred compensation. Confirm no indemnification, insurance or separation-agreement term covers the amount.",
+          "control": "Legal check that no indemnification, D&O coverage or gross-up applies",
+          "next": [
+            "s7"
+          ]
+        },
+        {
+          "id": "s7",
+          "lane": "Payroll",
+          "type": "task",
+          "label": "Apply offsets within local limits",
+          "detail": "Where offset is used, Payroll applies it only within local deduction rules and with any required written authorization; otherwise it records repayments received.",
+          "next": [
+            "s8"
+          ]
+        },
+        {
+          "id": "s8",
+          "lane": "Employee",
+          "type": "task",
+          "label": "Repay or sign repayment plan",
+          "detail": "The executive repays or signs a repayment agreement; unpaid amounts go to Legal for enforcement.",
+          "sla": "Target 90 days",
+          "next": [
+            "s9"
+          ]
+        },
+        {
+          "id": "s9",
+          "lane": "Legal",
+          "type": "end",
+          "label": "Disclose under Item 402(w)",
+          "detail": "Disclose the recovery analysis under Item 402(w), including amounts outstanding 180 days or more, check the 10-K cover-page boxes and keep Exhibit 97 current."
+        }
+      ],
+      "raci": [
+        {
+          "activity": "Restatement determination",
+          "R": "Finance",
+          "A": "Board (Audit Committee)",
+          "C": "Legal",
+          "I": "Comp Committee"
+        },
+        {
+          "activity": "Recovery calculation",
+          "R": "Total Rewards",
+          "A": "Comp Committee",
+          "C": "Finance, Vendor (compensation consultant)",
+          "I": "Legal"
+        },
+        {
+          "activity": "Recovery and collection",
+          "R": "Legal",
+          "A": "Comp Committee",
+          "C": "Payroll, Stock Admin",
+          "I": "Employee"
+        },
+        {
+          "activity": "Disclosure",
+          "R": "Legal",
+          "A": "Legal (General Counsel)",
+          "C": "Finance, Total Rewards",
+          "I": "Board"
+        }
+      ],
+      "controls": [
+        {
+          "id": "C1",
+          "control": "Executive officer register maintained, acknowledgments signed and incentive calculations kept for at least three years",
+          "type": "preventive",
+          "evidence": "Register, signed acknowledgments and calculation archive"
+        },
+        {
+          "id": "C2",
+          "control": "No indemnification, insurance or gross-up covers recovered amounts",
+          "type": "preventive",
+          "evidence": "Legal review of separation agreements, indemnity terms and D&O policy"
+        },
+        {
+          "id": "C3",
+          "control": "Recovery calculations independently reviewed before committee approval",
+          "type": "detective",
+          "evidence": "Finance and consultant review memo"
+        },
+        {
+          "id": "C4",
+          "control": "Annual check that Exhibit 97, 10-K cover checkboxes and award documents reference the current policy",
+          "type": "detective",
+          "evidence": "Annual Legal checklist"
+        }
+      ],
+      "kpis": [
+        {
+          "name": "Acknowledgments",
+          "target": "100% of executive officers signed within 30 days of appointment",
+          "why": "Signed terms make recovery enforceable across countries"
+        },
+        {
+          "name": "Record readiness",
+          "target": "100% of incentive calculations retrievable for the last three fiscal years",
+          "why": "Recovery must be calculated years after the payout"
+        },
+        {
+          "name": "Recovery completion",
+          "target": "100% recovered or documented as impracticable within 90 days",
+          "why": "Nasdaq 5608 requires recovery reasonably promptly"
+        }
+      ],
+      "considerations": [
+        "Recovery is mandatory and no-fault: an executive who did nothing wrong still repays, so say this at appointment and in every award agreement.",
+        "Calculate pre-tax and do not gross up, indemnify or insure the loss, including through a release in a separation agreement.",
+        "Agree the TSR and stock-price estimation method before you need it; building it during a restatement looks results-driven.",
+        "Prefer recovery by cancelling unvested awards or direct repayment; payroll offsets run into wage-deduction limits in California, Canada, India, Taiwan and China and into 409A limits on deferred compensation.",
+        "Keep discretionary misconduct clawbacks (e.g., export-control or fraud violations) separate from the mandatory Rule 10D-1 policy; regulators credit pay clawbacks tied to compliance failures."
+      ],
+      "variations": [
+        {
+          "when": "Former executive officer",
+          "how": "No payroll offset: demand letter and repayment agreement, escalating to litigation if unpaid."
+        },
+        {
+          "when": "Discretionary misconduct clawback (no restatement)",
+          "how": "The committee acts under POL-06 for covered employees after a documented investigation (ER-02), within local law limits."
+        },
+        {
+          "when": "Executive paid outside the US",
+          "how": "Use award cancellation and direct repayment, with local counsel advice on deduction limits and tax on amounts already taxed."
+        }
+      ],
+      "countries": {
+        "us": "Rule 10D-1 and Nasdaq 5608 require recovery, without regard to fault and reasonably promptly, of incentive compensation received by current and former executive officers in the three completed fiscal years before the restatement date, calculated pre-tax; the policy is filed as Exhibit 97, and failure to adopt, disclose or enforce it can lead to delisting.",
+        "us-ca": "Payroll offsets are limited to lawful, authorized deductions (LC 221, 224), and AB 692 restricts repayment demands at separation under agreements from 1 Jan 2026, so confirm with counsel how it interacts with the mandated policy (verify) and recover by cancellation or direct repayment.",
+        "ca": "Deductions from wages need written authorization and statutory permission in Ontario and BC, so recover by direct repayment or award cancellation, and have clawback terms acknowledged in writing with consideration.",
+        "in": "Deductions are limited to authorised items and capped at 50% of wages (Code on Wages s.18), so recover by repayment agreement or cancellation of unvested RSUs, with tax advice on perquisites already taxed (verify).",
+        "tw": "LSA Art. 26 bars pre-deduction of damages or penalties from wages, so recover through a separate repayment agreement or award cancellation, and confirm whether the executive is LSA-covered or a mandated manager.",
+        "cn": "Deductions for employee-caused losses are capped at 20% of monthly wage and cannot take pay below minimum wage, so use repayment agreements or award cancellation backed by contract terms or rules adopted through democratic procedure."
+      },
+      "templates": [],
+      "policies": [
+        "POL-06",
+        "POL-25",
+        "POL-27",
+        "POL-26"
+      ],
+      "related": [
+        "CO-03",
+        "CO-07",
+        "EQ-01",
+        "EQ-02",
+        "PY-05",
+        "OF-04",
+        "ER-02"
+      ]
+    }
+  ]
+}

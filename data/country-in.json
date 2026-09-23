@@ -1,0 +1,999 @@
+{
+  "id": "in",
+  "name": "India",
+  "shortName": "India",
+  "region": "APAC",
+  "parent": null,
+  "lastVerified": "2026-09",
+  "summary": "India has no at-will employment. Its labour law was rebuilt when the four Labour Codes took effect on 21 Nov 2025. Central rules were finalised on 8 May 2026, but Karnataka's and Telangana's rules under the Codes remain largely in draft, so the Codes sit on top of state Shops Acts, the POSH Act and a privacy regime (DPDP) whose main duties start on 13 May 2027. Most protections turn on whether a person is a 'worker' or an 'employee'. Statutory retrenchment compensation, standing orders, grievance committees, OSH leave and overtime protect 'workers', and many individual-contributor engineers can qualify whatever their salary, because the definition excludes only managerial or administrative staff and supervisors earning over INR 18,000 a month. The mistakes US-HQ employers make most often are running US-style same-day layoffs, keeping salary structures with a low basic that now break the 50% 'wages' rule (and understate PF, gratuity and leave encashment), paying the final settlement on a 30-60 day cycle instead of within 2 working days, and relying on post-employment non-competes, which are void.",
+  "ratings": {
+    "termination": 4,
+    "representation": 2,
+    "privacy": 3,
+    "payTransparency": 1,
+    "workingTime": 3,
+    "leave": 3,
+    "immigration": 3,
+    "changeVelocity": 5
+  },
+  "ratingNotes": {
+    "termination": "No at-will. 'Workers' get statutory notice, retrenchment compensation, a re-skilling fund payment and access to the Industrial Tribunal, where reinstatement is possible. Misconduct dismissals need a domestic enquiry. Managers can be let go on contractual notice.",
+    "representation": "Unions are rare in tech. Even so, the Codes require a Grievance Redressal Committee (20+ workers), works committees (100+ when directed) and standing orders (300+ workers), and the Karnataka IT/ITeS union (KITU) is politically active.",
+    "privacy": "The DPDP Act and Rules phase in, with main duties from 13 May 2027. The SPDI Rules apply until then, and CERT-In's 6-hour incident reporting rule already applies. Employee data can mostly be processed under the s.7(i) employment legitimate use.",
+    "payTransparency": "No pay-range or pay-gap reporting law. There is a gender-neutral equal-remuneration duty (Code on Wages s.3), and wage slips are mandatory.",
+    "workingTime": "The OSH Code sets 8 h/day and 48 h/week for workers, with overtime at double pay. The Karnataka Shops Act adds a 10-hour daily cap including overtime and 50 overtime hours per quarter. Managerial staff are largely outside the hours rules.",
+    "leave": "26 weeks' maternity leave, a creche at 50+ employees, OSH leave accrual and encashment for workers, about 10 state-mandated paid holidays in Karnataka, and a possible state menstrual-leave mandate. There is no statutory paternity leave.",
+    "immigration": "Employment visas require a salary floor (generally USD 25,000/yr) and FRRO registration. The Immigration and Foreigners Act 2025 replaced the older foreigners laws in 2025.",
+    "changeVelocity": "The Labour Codes (Nov 2025), central rules (May 2026), pending state rules, the EPF ceiling rise (Sep 2026), the Income-tax Act 2025 (Apr 2026), the DPDP phases and Karnataka Shops Act amendments (Sep 2026) all landed within about 12 months."
+  },
+  "keyFacts": [
+    {
+      "label": "Employment model",
+      "value": "No at-will employment. The Labour Codes separate 'employees' (everyone, including managers) from 'workers', which excludes people employed mainly in managerial or administrative roles and supervisors earning over INR 18,000/month. The test is the dominant nature of the duties, not job title or pay, so individual-contributor engineers are often 'workers'. Fixed-term employment is allowed and must be on parity with permanent staff."
+    },
+    {
+      "label": "Contracts & offer letters",
+      "value": "An appointment letter is mandatory for every employee under OSH Code s.6(1)(f) and must state designation, wages/category and social security details. Market practice is an offer letter plus an employment agreement with confidentiality and IP assignment terms. Agreements attract nominal state stamp duty (e-stamp in Karnataka; verify the current figure)."
+    },
+    {
+      "label": "Probation",
+      "value": "No statutory limit. Market practice is 3-6 months, sometimes extendable once, with a written confirmation letter. Where standing orders apply (300+ workers), their probation terms govern workers. Most contracts set 7-30 days' notice during probation."
+    },
+    {
+      "label": "Notice (employer)",
+      "value": "As set in the contract or standing orders. Workers with 1+ year's service who are retrenched need 1 month's written notice with reasons (or pay in lieu) plus notice to the government (IR Code s.70). The Karnataka Shops Act (s.39) requires 1 month's notice or pay for staff with 6+ months' service, except for misconduct. Verify how it applies to managerial staff."
+    },
+    {
+      "label": "Notice (employee)",
+      "value": "Contractual. Market practice for engineers is 60-90 days (30 for junior staff). The employer can waive the notice or accept a buyout. It cannot compel continued work, but it may recover pay in lieu if the contract allows. Notice-pay recovery is not subject to GST (CBIC Circular 178/10/2022)."
+    },
+    {
+      "label": "Statutory severance",
+      "value": "Only 'workers' get retrenchment compensation: 15 days' average pay per completed year of continuous service (a part-year over 6 months counts as a year). The employer also pays 15 days' last-drawn wages into the Worker Re-skilling Fund. Gratuity is separate. Non-workers have no statutory severance beyond contractual notice."
+    },
+    {
+      "label": "Working hours & overtime",
+      "value": "Workers: 8 h/day and 48 h/week, with overtime at twice the ordinary rate only with consent. Central rules cap overtime at 144 h per quarter, and the Karnataka draft rules set their own thresholds. The Karnataka Shops Act regime (24x7 notification, Sep 2024) allows 8 h/day and 48 h/week, 10 h/day including overtime, and 50 overtime hours per quarter."
+    },
+    {
+      "label": "Minimum wage",
+      "value": "States set minimum wages by zone and skill under the Code on Wages. Karnataka and Telangana revise them periodically (verify current figures; they matter for support staff and contractors). The statutory national floor wage (CoW s.9) had not been fixed as of the May 2026 rules."
+    },
+    {
+      "label": "Annual leave",
+      "value": "OSH Code s.32 (workers): 1 day for every 20 days worked, if the worker worked 180+ days in the calendar year. Up to 30 days carry forward, and excess or unused leave is encashed. The Karnataka Shops Act also applies (verify the accrual and sick-leave terms). Market practice is 18-24 days of paid leave plus 6-12 days of sick or casual leave."
+    },
+    {
+      "label": "Public holidays",
+      "value": "Karnataka (Industrial Establishments (National & Festival Holidays) Act 1963) requires about 10 paid holidays: 26 Jan, 1 May, 15 Aug, 2 Oct, 1 Nov (Kannada Rajyotsava) and 5 festival holidays chosen by the employer (verify the current list). Telangana has national holidays plus a state festival list (verify). Polling days are paid holidays. Market practice is 10-12 holidays."
+    },
+    {
+      "label": "Sick leave",
+      "value": "No central statutory sick leave for non-workers. The Karnataka Shops Act provides about 12 days a year for sickness or casual reasons (verify). ESI covers sickness cash benefits for employees earning INR 21,000/month or less. Market practice is 6-12 days of sick leave plus medical insurance."
+    },
+    {
+      "label": "Parental leave",
+      "value": "Maternity (SS Code Ch. VI): 26 weeks for the first two children (8 of them before delivery), 12 weeks from the third child, 12 weeks for adoption of a child under 3 months or for a commissioning mother, nursing breaks, work-from-home by agreement, and a creche at 50+ employees. There is no statutory paternity leave in the private sector. Market practice is 1-2 weeks, and many GCCs offer 4+ weeks."
+    },
+    {
+      "label": "Social insurance / mandatory benefits",
+      "value": "EPF (12% employee + 12% employer on 'wages'): mandatory up to INR 25,000/month from 17 Sep 2026, up from 15,000. ESI applies up to INR 21,000 (3.25% employer + 0.75% employee). Also gratuity, statutory bonus (up to INR 21,000 wages), employee compensation, Labour Welfare Fund and professional tax. International workers have separate PF rules."
+    },
+    {
+      "label": "Payroll frequency & final pay",
+      "value": "Monthly pay is due before the 7th of the following month (CoW s.17(1)). On resignation, dismissal, retrenchment or closure, wages must be paid within 2 working days (s.17(2)). Gratuity is due within 30 days of becoming payable. Deductions are limited to authorised items and capped at 50% of wages."
+    },
+    {
+      "label": "Employee representation",
+      "value": "Trade unions are registered under the IR Code, and negotiating-union recognition rules apply. Required bodies: a Grievance Redressal Committee (20+ workers), a works committee (100+ workers, when directed), a POSH Internal Committee (10+ employees) and standing orders (300+ workers). The Karnataka IT standing-orders exemption conditions add a GRC and reporting duties."
+    },
+    {
+      "label": "Data privacy law",
+      "value": "Under the DPDP Act 2023 and Rules 2025 (notified 13-14 Nov 2025), the Board exists now, consent managers start on 13 Nov 2026, and notice, consent, security, breach and data-principal-rights duties start on 13 May 2027. Until then, the IT Act s.43A and SPDI Rules 2011 apply, and CERT-In requires cyber incidents to be reported within 6 hours."
+    },
+    {
+      "label": "Record retention",
+      "value": "Keep labour registers electronically in the unified formats (e.g., employee, wage and attendance registers and wage slips under the central rules), for the period prescribed by state rules (verify, typically 3+ years). Tax records must be kept for 6+ years. Under DPDP, erase personal data once its purpose is served, but keep processing logs for at least 1 year."
+    },
+    {
+      "label": "Non-competes & IP",
+      "value": "Post-employment non-competes are void (Indian Contract Act s.27). Restrictions during employment, garden leave and confidentiality are enforceable, and employee non-solicits are more defensible than customer non-solicits. The employer owns copyright in works made in the course of employment (Copyright Act s.17(c)). Patents and non-copyright IP need an express assignment that states perpetual, worldwide scope (s.19)."
+    },
+    {
+      "label": "Language requirements",
+      "value": "English is standard for contracts and policies. Statutory notices and abstracts must be displayed in English and the local language (Kannada or Telugu). Bengaluru enforces the rule that office signage be 60% Kannada. The POSH policy and IC details should be displayed in both languages."
+    },
+    {
+      "label": "Regulator(s)",
+      "value": "Ministry of Labour & Employment (Shram Suvidha portal); Karnataka Labour Department (Labour Commissioner, Karmika Spandana/eKarmika portals); Telangana Labour Department; EPFO; ESIC; CBDT/Income Tax Department; POSH District Officers (Women & Child Development); Data Protection Board of India; CERT-In; Bureau of Immigration/FRRO."
+    }
+  ],
+  "mandatoryPolicies": [
+    {
+      "name": "POSH policy and Internal Committee (IC)",
+      "requirement": "Every workplace with 10+ employees needs a written anti-sexual-harassment policy and an IC. The IC has a senior woman as Presiding Officer, 2+ employee members and 1 external member from an NGO or with relevant expertise, at least half its members must be women, and it serves 3-year terms. Display IC details, train members and staff, and file an annual report. The fine is up to INR 50,000, and repeat breaches risk registration.",
+      "source": "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act 2013 ss.4, 19, 21-22, 26; POSH Rules 2013 r.14",
+      "level": "required"
+    },
+    {
+      "name": "Appointment letters",
+      "requirement": "Issue a letter of appointment in the prescribed form to every employee at hire, stating designation, wages/category and social security details. Issue compliant letters to existing staff who lack one.",
+      "source": "OSH Code 2020 s.6(1)(f); OSH (Central) Rules 2026 / state rules",
+      "level": "required"
+    },
+    {
+      "name": "Grievance Redressal Committee (GRC)",
+      "requirement": "Required for 20+ workers. Up to 10 members, split equally between employer and workers, with women represented in proportion to the workforce. Grievances can be raised within 1 year and must be resolved within 30 days, and a worker can then go to conciliation. A GRC is also a condition of the Karnataka IT standing-orders exemption.",
+      "source": "Industrial Relations Code 2020 s.4; IR (Central) Rules 2026",
+      "level": "required"
+    },
+    {
+      "name": "Standing orders (service rules)",
+      "requirement": "Industrial establishments with 300+ workers, including commercial and IT offices, must certify standing orders or adopt the model standing orders; the central rules include a services-sector model with WFH provisions. The Karnataka IT/ITeS exemption was issued under the repealed 1946 Act, so verify its status under the IR Code.",
+      "source": "IR Code 2020 Ch. IV (standing orders, from s.28); Karnataka notification LD 328 LET 2023 (10 Jun 2024)",
+      "level": "required"
+    },
+    {
+      "name": "Wage payment, deductions and wage-slip policy",
+      "requirement": "Build wage structures that meet the 50% 'wages' rule, pay monthly wages by the 7th, issue wage slips (electronic is allowed), make only authorised deductions within the 50% cap, and settle final dues within 2 working days of separation.",
+      "source": "Code on Wages 2019 ss.2(y), 17, 18; CoW (Central) Rules 2026",
+      "level": "required"
+    },
+    {
+      "name": "Equal remuneration / non-discrimination in recruitment",
+      "requirement": "No gender discrimination (including against transgender persons) in wages for the same or similar work, or in recruitment and conditions of employment.",
+      "source": "Code on Wages 2019 s.3",
+      "level": "required"
+    },
+    {
+      "name": "Equal opportunity policy (persons with disabilities)",
+      "requirement": "Every establishment must publish an equal opportunity policy (preferably on its website) and provide reasonable accommodation. Private establishments with 20+ employees appoint a liaison officer.",
+      "source": "Rights of Persons with Disabilities Act 2016 s.21; RPwD Rules 2017",
+      "level": "required"
+    },
+    {
+      "name": "Transgender equal opportunity policy and complaint officer",
+      "requirement": "Adopt an equal opportunity policy for transgender persons covering infrastructure, facilities and grievance handling, and designate a complaint officer.",
+      "source": "Transgender Persons (Protection of Rights) Act 2019 ss.9-11; Rules 2020",
+      "level": "required"
+    },
+    {
+      "name": "HIV/AIDS non-discrimination and complaints officer",
+      "requirement": "Establishments keeping 100+ persons must designate a complaints officer and keep HIV status confidential. Discrimination in hiring, employment or termination is prohibited.",
+      "source": "HIV and AIDS (Prevention and Control) Act 2017 (non-discrimination; complaints officer)",
+      "level": "required"
+    },
+    {
+      "name": "Maternity benefit policy and written intimation",
+      "requirement": "Inform every woman in writing and electronically of her maternity benefits at appointment. Provide 26 weeks' leave, nursing breaks, WFH where the work allows, and a creche (or pooled creche) at 50+ employees with 4 visits a day. The central rules provide a creche allowance (at least INR 500/child/month) where no creche is available.",
+      "source": "Code on Social Security 2020 Ch. VI (formerly Maternity Benefit Act 1961 s.11A); SS (Central) Rules 2026",
+      "level": "required"
+    },
+    {
+      "name": "Night work for women",
+      "requirement": "Women can work 7pm-6am (OSH Code) or 8pm-6am (Karnataka Shops Act) only with prior written consent, safe transport and security. The Karnataka Sep 2026 amendment removed the detailed transport rules (driver checks, route monitoring, escort, first-pickup/last-drop), but the general duty to provide protection remains.",
+      "source": "OSH Code s.43; Karnataka Shops & Commercial Establishments Act 1961 s.25 (as amended 2026); Karnataka 24x7 notification (27 Sep 2024)",
+      "level": "required"
+    },
+    {
+      "name": "Leave and holiday policy with displayed holiday list",
+      "requirement": "Grant OSH Code leave to workers (180-day eligibility, 1 day per 20 worked, 30-day carry-forward, encashment) and Shops Act leave. Display the annual national and festival holiday list and weekly-off roster before the year starts.",
+      "source": "OSH Code s.32; Karnataka Shops Act; Karnataka Industrial Establishments (National & Festival Holidays) Act 1963",
+      "level": "required"
+    },
+    {
+      "name": "Working hours, overtime and 24x7 operations policy",
+      "requirement": "Document working hours, overtime consent and double-rate pay for workers, weekly off by rotation, and the conditions of the Karnataka 24x7 notification, which is valid to Sep 2027.",
+      "source": "OSH Code ss.25-27 (hours, weekly holiday, overtime); Karnataka 24x7 notification (27 Sep 2024)",
+      "level": "required"
+    },
+    {
+      "name": "Employee privacy notice / data protection policy",
+      "requirement": "Until May 2027, the SPDI Rules require a published privacy policy and written consent for sensitive personal data such as health, biometrics and financial details. From 13 May 2027, DPDP requires notices, security safeguards, breach response, a published grievance contact and handling of data-principal rights.",
+      "source": "IT Act 2000 s.43A and SPDI Rules 2011 r.4-5; DPDP Act 2023 ss.5-8, 7(i); DPDP Rules 2025",
+      "level": "required"
+    },
+    {
+      "name": "Cyber incident response (CERT-In)",
+      "requirement": "Report specified cyber incidents to CERT-In within 6 hours, keep ICT logs for 180 days in India, and name a point of contact.",
+      "source": "CERT-In Directions under IT Act s.70B(6) (28 Apr 2022)",
+      "level": "required"
+    },
+    {
+      "name": "Code of conduct and disciplinary procedure",
+      "requirement": "Set out a list of misconduct, suspension and subsistence-allowance rules, and a domestic-enquiry procedure (charge sheet, hearing, enquiry report, show cause, reasoned order). Karnataka IT exemption users must report disciplinary actions to the Deputy Labour Commissioner.",
+      "source": "IR Code standing orders/model standing orders; principles of natural justice; Karnataka exemption notification (2024)",
+      "level": "expected"
+    },
+    {
+      "name": "Whistleblower / vigil mechanism",
+      "requirement": "Required for listed companies and for companies with public deposits or borrowings over INR 50 crore. Otherwise it is expected, and the US parent needs it anyway for SOX/SEC.",
+      "source": "Companies Act 2013 s.177(9)-(10); Companies (Meetings of Board) Rules 2014 r.7",
+      "level": "expected"
+    },
+    {
+      "name": "Anti-bribery and anti-corruption",
+      "requirement": "The corporate offence of giving an undue advantage to a public servant has an 'adequate procedures' defence, so keep a policy, training and a gifts register (alongside the FCPA).",
+      "source": "Prevention of Corruption Act 1988 s.9 (2018 amendment)",
+      "level": "expected"
+    },
+    {
+      "name": "Background verification and Aadhaar handling",
+      "requirement": "Get informed consent for background checks, never make Aadhaar authentication a condition of employment, accept masked or offline Aadhaar only if the employee volunteers it, and limit criminal and credit checks to what the role justifies.",
+      "source": "Aadhaar Act 2016 (as amended 2019); Puttaswamy (2018); DPDP Act s.7(i)",
+      "level": "expected"
+    },
+    {
+      "name": "IT acceptable use, monitoring and BYOD",
+      "requirement": "Disclose monitoring (email, DLP, CCTV) and its purposes. Most of it can rely on the DPDP s.7(i) employment use (preventing corporate espionage, protecting trade secrets), but keep it proportionate.",
+      "source": "DPDP Act 2023 s.7(i); SPDI Rules",
+      "level": "expected"
+    },
+    {
+      "name": "Health and safety policy and annual health check-ups",
+      "requirement": "Register the establishment (10+ workers) and provide first aid, drinking water, washrooms and welfare facilities. Arrange free annual health check-ups for employees aged 40+ where the rules prescribe them: the central rules cover docks and construction, and the Karnataka draft rules are broader (verify when final).",
+      "source": "OSH Code ss.3, 6(1)(c) and welfare provisions; OSH (Central) Rules 2026",
+      "level": "required"
+    },
+    {
+      "name": "Menstrual leave (Karnataka)",
+      "requirement": "Karnataka announced a 2025 policy of 1 day of paid menstrual leave a month for women, including in the private sector. Its legal status has been contested, so verify the current Government Order and any court orders before rolling it out.",
+      "source": "Karnataka Menstrual Leave Policy 2025 (Government Order); verify status",
+      "level": "expected"
+    }
+  ],
+  "stages": {
+    "hiring": [
+      {
+        "req": "Classify each role: 'worker' or managerial/supervisory",
+        "detail": "Record the dominant duties of each job (does it hire, discipline or approve spend, or supervise and earn over INR 18,000?). Individual-contributor engineers are often 'workers', which brings in retrenchment compensation, standing orders, the GRC, OSH hours and leave, and Tribunal reinstatement. Use accurate job descriptions, not inflated titles.",
+        "cite": "Code on Wages s.2(z) (supervisor ceiling INR 18,000 per S.O. 454(E), 30 Jan 2026); IR Code s.2(zr); OSH Code s.2 (definition of worker)"
+      },
+      {
+        "req": "Non-discrimination in recruitment",
+        "detail": "Gender (including transgender) neutrality in hiring and pay. Offer disability accommodation, and ask no HIV-status questions. India has no general private-sector anti-discrimination statute beyond these, but avoid questions on caste, religion, marital or pregnancy status.",
+        "cite": "Code on Wages s.3; RPwD Act 2016; Transgender Persons Act 2019; HIV/AIDS Act 2017"
+      },
+      {
+        "req": "Vacancy notification",
+        "detail": "Report vacancies to the career centre (National Career Service) before filling them, as the Social Security Code rules require (this replaced the 1959 Employment Exchanges Act). Build it into the ATS workflow.",
+        "cite": "Code on Social Security 2020 (employment information & vacancy reporting); SS (Central) Rules 2026"
+      },
+      {
+        "req": "Background verification with consent",
+        "detail": "Use a written BGV consent and notice covering education, employment, address, and criminal checks by court records or police verification. Aadhaar must be voluntary and masked. DPDP s.7(i) arguably covers recruitment, but keep consent until the case law settles.",
+        "cite": "DPDP Act s.7(i); Aadhaar Act (as amended 2019); SPDI Rules"
+      },
+      {
+        "req": "Offer letter and appointment letter",
+        "detail": "Issue an offer letter, then a statutory appointment letter at joining: designation, category (worker or non-worker), wages broken down to show 50%+ 'wages', PF/ESI/gratuity entitlements, notice, probation and hours. Attach confidentiality, IP assignment and code-of-conduct terms.",
+        "cite": "OSH Code s.6(1)(f); Code on Wages s.2(y)"
+      },
+      {
+        "req": "Stamp the employment agreement",
+        "detail": "Pay state stamp duty (Karnataka e-stamp) before or at execution. An unstamped agreement cannot be used in evidence until the duty and penalty are paid, which matters when enforcing IP, confidentiality or bond clauses (verify the current Karnataka and Telangana rates).",
+        "cite": "Karnataka Stamp Act 1957; Indian Stamp Act 1899 s.35 (principle)"
+      },
+      {
+        "req": "Foreign nationals",
+        "detail": "Hire on an Employment (E) visa, which generally requires salary over USD 25,000/yr (some exceptions). Register with the FRRO (e-FRRO) within 14 days of arrival if staying 180+ days. The Immigration and Foreigners Act 2025, in force Sep 2025, now governs (verify employer reporting duties).",
+        "cite": "Immigration and Foreigners Act 2025; MHA visa manual"
+      },
+      {
+        "req": "Local-hiring quota (Karnataka) not in force",
+        "detail": "Karnataka's 2024 Bill on reserving private-sector jobs for local candidates was put on hold in July 2024 and has not been enacted. Karnataka policy still encourages hiring Kannadigas, so watch for revival.",
+        "cite": "Karnataka State Employment of Local Candidates in Industries, Factories and Other Establishments Bill 2024 (on hold)"
+      },
+      {
+        "req": "Joining bonus and relocation clawbacks",
+        "detail": "Clawbacks and minimum-service bonds are enforceable only as reasonable liquidated damages, not as penalties. In 2025 the Supreme Court upheld a reasonable minimum-service bond (Vijaya Bank v. Prashant Narnaware). Keep amounts tied to the actual cost and pro-rated.",
+        "cite": "Indian Contract Act ss.27, 74"
+      }
+    ],
+    "onboarding": [
+      {
+        "req": "PF enrolment (UAN) and Form 11",
+        "detail": "From 17 Sep 2026, enrol everyone earning up to INR 25,000/month in EPF (previously INR 15,000). Higher earners who are existing members stay covered. Take the Form 11 declaration, seed Aadhaar/KYC and generate or link the UAN. International workers are covered from day one, regardless of salary, unless they hold a certificate of coverage from an SSA country.",
+        "cite": "EPF & MP Act 1952 / SS Code Ch. III; EPF Scheme para 26, 83; S.O. 5109(E) (17 Sep 2026)"
+      },
+      {
+        "req": "ESI registration for eligible staff",
+        "detail": "Register employees earning up to INR 21,000/month (INR 25,000 for persons with disability) in establishments with 10+ employees. Since Dec 2025, eligibility uses the Code definition of 'wages'.",
+        "cite": "SS Code Ch. IV; ESIC guidance on uniform wage definition (Dec 2025)"
+      },
+      {
+        "req": "Nominations: gratuity, PF, insurance",
+        "detail": "Collect gratuity nomination (under the SS Code rules) and PF e-nomination at joining. Update them on marriage.",
+        "cite": "SS Code s.53 (gratuity) and rules; EPF Scheme"
+      },
+      {
+        "req": "Maternity benefit intimation",
+        "detail": "Give every woman employee written and electronic information on her maternity benefits at appointment, including creche and WFH options.",
+        "cite": "SS Code Ch. VI (formerly Maternity Benefit Act 1961 s.11A)"
+      },
+      {
+        "req": "Tax regime and declarations",
+        "detail": "The new regime is the default. The employee may choose the old regime for payroll TDS each year. From tax year 2026-27, collect claims on Form 124 (formerly 12BB) and prior-employer income on Form 122 (formerly 12B).",
+        "cite": "Income-tax Act 2025 s.392; Income-tax Rules 2026 Forms 122, 124"
+      },
+      {
+        "req": "POSH, code of conduct and privacy notice acknowledgment",
+        "detail": "Deliver POSH awareness training (at induction and annually), a copy of the standing orders or service rules, the employee privacy notice, the IT acceptable-use policy and the confidentiality/IP agreement, and keep signed or e-acknowledgments.",
+        "cite": "POSH Act s.19; IR Code Ch. IV (standing orders); SPDI Rules r.4"
+      },
+      {
+        "req": "Establishment registration and displays",
+        "detail": "Register the establishment under the OSH Code (Shram Suvidha or state portal) and Shops Act. The Karnataka 2026 amendment gives registration lifetime validity and exempts 10+ worker establishments already registered under the OSH Code from separate registration. Display statutory abstracts, IC details, the holiday list and working hours in English and the local language.",
+        "cite": "OSH Code s.3; Karnataka Shops & Commercial Establishments (Amendment) Act 2026"
+      },
+      {
+        "req": "Do not retain original certificates",
+        "detail": "Karnataka now prohibits employers from keeping employees' original educational or experience certificates during employment. Verify originals and return them the same day.",
+        "cite": "Karnataka Shops Act ss.6-B, 6-C (inserted 2026)"
+      }
+    ],
+    "payAndPayroll": [
+      {
+        "req": "Apply the 50% 'wages' rule",
+        "detail": "'Wages' means basic + DA + retaining allowance. If the excluded items (HRA, conveyance, statutory bonus, employer PF, overtime, commission, and similar) together exceed 50% of total remuneration, the excess counts as wages. This has applied since 21 Nov 2025 and is prospective only. Restructure CTC so basic+DA is 50% or more, or accept higher PF, gratuity, leave-encashment and retrenchment liabilities.",
+        "cite": "Code on Wages s.2(y); SS Code s.2(88); MoLE FAQs (16 Mar 2026)"
+      },
+      {
+        "req": "Pay on time, with wage slips",
+        "detail": "Monthly pay is due before the 7th of the next month, and this applies to all employees now that there is no wage ceiling. Issue electronic wage slips in the prescribed form and keep wage registers.",
+        "cite": "Code on Wages s.17(1); CoW (Central) Rules 2026 (Forms I, IV, V, IX)"
+      },
+      {
+        "req": "Authorised deductions only",
+        "detail": "Deductions are limited to statutory, consented and specified items (taxes, PF/ESI, advances, loans, and so on), with a total cap of 50% of wages. Recovering notice shortfall or clawbacks from final pay needs clear contract terms, and litigation risk remains.",
+        "cite": "Code on Wages s.18"
+      },
+      {
+        "req": "Overtime for workers",
+        "detail": "Workers get twice the ordinary rate for work beyond 8 h/day or 48 h/week (or the state-rule thresholds), and overtime needs consent. Round per the rules (15-30 minutes counts as 30). Most engineering GCCs keep IC engineers salaried with no overtime, which is a risk for anyone who is a 'worker'.",
+        "cite": "OSH Code s.27; Code on Wages s.14; OSH (Central) Rules 2026"
+      },
+      {
+        "req": "Statutory bonus",
+        "detail": "Covers employees earning up to INR 21,000/month (the old threshold applies until a new one is notified). Pay 8.33%-20% of wages, calculated on the higher of INR 7,000 or the minimum wage, within 8 months of the financial year end (by 30 Nov).",
+        "cite": "Code on Wages Ch. IV (bonus) (formerly Payment of Bonus Act 1965)"
+      },
+      {
+        "req": "Payroll tax withholding under the new Act",
+        "detail": "From 1 Apr 2026, withhold TDS on salary under s.392 of the Income-tax Act 2025 (formerly s.192), deposit it by the 7th of the next month (30 Apr for March), and file quarterly Form 138 (formerly 24Q). Issue Form 130 (formerly Form 16) by 15 June and Form 123 (formerly 12BA) for perquisites. FY 2025-26 amounts stay under the 1961 Act.",
+        "cite": "Income-tax Act 2025 ss.392-395; Income-tax Rules 2026; CBDT transition FAQs"
+      },
+      {
+        "req": "New vs old tax regime",
+        "detail": "The new regime is the default: nil tax up to INR 12 lakh of taxable income via rebate, a INR 75,000 standard deduction, and employer NPS contributions up to 14% deductible. The old regime allows HRA, LTA, 80C and similar claims. Verify the tax-year 2026-27 slabs before each year's payroll setup.",
+        "cite": "Finance Act 2025; Income-tax Act 2025"
+      },
+      {
+        "req": "Professional tax and Labour Welfare Fund",
+        "detail": "Karnataka PT: INR 200/month on salary of INR 25,000+ and INR 300 in February (annual cap INR 2,500), remitted by the 20th. Telangana PT: INR 150 (15,001-20,000) or INR 200 (over 20,000), remitted by the 10th. Karnataka LWF: INR 20 employee + INR 40 employer a year, due 15 Jan. Telangana LWF: INR 2 + INR 5, due 31 Jan (verify the current figures).",
+        "cite": "Karnataka Tax on Professions, Trades, Callings and Employments Act 1976; Karnataka Labour Welfare Fund Act 1965; Telangana equivalents"
+      },
+      {
+        "req": "ESOP/RSU taxation",
+        "detail": "The perquisite equals FMV at exercise (or at vesting and allotment for RSUs) minus the price paid, taxed as salary with TDS through payroll. A later sale is a capital gain; foreign listed shares are treated as unlisted, with 12.5% LTCG after 24 months. Employees must report foreign shares in Schedule FA of their ITR.",
+        "cite": "Income-tax Act 2025 (perquisite provisions carried over from 1961 Act s.17(2)(vi)); Black Money Act 2015"
+      }
+    ],
+    "timeAndLeave": [
+      {
+        "req": "Hours limits and weekly off",
+        "detail": "Workers: 8 h/day and 48 h/week (OSH Code). Karnataka Shops Act: 9 h/day and 48 h/week, with a rest interval after 5 hours and a 12-hour spread-over; the 24x7 notification sets 8/48 with a 10 h/day overtime ceiling and 50 overtime hours per quarter. Give one full day off a week, rotated if needed. Karnataka withdrew its proposed 12-hour IT workday in July 2025.",
+        "cite": "OSH Code ss.25-26; Karnataka Shops Act (hours provisions); Karnataka 24x7 notification (27 Sep 2024)"
+      },
+      {
+        "req": "Annual leave accrual (OSH Code)",
+        "detail": "A worker who works 180+ days in a calendar year earns 1 day of leave for every 20 days worked, can carry forward up to 30 days and can encash excess at year end. There is no statutory encashment cap. Leave is encashed on separation. Apply whichever of the OSH Code and Shops Act terms is more beneficial.",
+        "cite": "OSH Code s.32; MoLE FAQs (16 Mar 2026)"
+      },
+      {
+        "req": "State Shops Act leave",
+        "detail": "Karnataka Shops Act: 1 day for every 20 days worked plus about 12 days of sickness/casual leave (verify the eligibility and accumulation caps). Telangana Shops Act: earned, casual and sick leave per state law (verify). Most GCCs exceed the statutory minimums.",
+        "cite": "Karnataka Shops & Commercial Establishments Act 1961; Telangana Shops & Establishments Act 1988"
+      },
+      {
+        "req": "National, festival and polling-day holidays",
+        "detail": "Karnataka requires about 10 paid holidays, including 26 Jan, 1 May, 15 Aug, 2 Oct and 1 Nov, plus 5 festival holidays chosen after consulting employees (verify). Holiday work earns double pay or a substitute day. Polling days for Lok Sabha, Assembly and local elections are paid holidays.",
+        "cite": "Karnataka Industrial Establishments (National & Festival Holidays) Act 1963; Representation of the People Act 1951 s.135B"
+      },
+      {
+        "req": "Maternity leave",
+        "detail": "26 weeks (at most 8 before delivery) for the first two children, 12 weeks from the third, 12 weeks for adoption (child under 3 months) or a commissioning mother, 6 weeks for miscarriage, and 1 additional month for related illness. Eligibility needs 80 days worked in the prior 12 months. Pay is the average daily wage.",
+        "cite": "SS Code Ch. VI (ss.59-83)"
+      },
+      {
+        "req": "Night shifts for women",
+        "detail": "Get written consent and provide transport and security for work at night (after 7pm under OSH / 8pm under the Karnataka Shops Act, and before 6am). Include POSH compliance, CCTV and emergency contacts. Karnataka's detailed transport safeguards were dropped in Sep 2026, but keep them as good practice.",
+        "cite": "OSH Code s.43; OSH (Central) Rules 2026; Karnataka Shops Act s.25 (amended 2026)"
+      },
+      {
+        "req": "Paternity, menstrual and other leave (market/state practice)",
+        "detail": "No statutory paternity leave in the private sector. Market practice is 1-2 weeks, and competitive GCCs offer 4-12+ weeks gender-neutral. Karnataka's 2025 menstrual leave policy (1 day/month) is contested, so check its status. Bereavement and marriage leave are market practice.",
+        "cite": "Market practice; Karnataka Menstrual Leave Policy 2025 (verify)"
+      }
+    ],
+    "benefits": [
+      {
+        "req": "Employees' Provident Fund",
+        "detail": "12% employee + 12% employer on 'wages'. Of the employer share, 8.33% goes to EPS capped at the wage ceiling, now INR 2,083/month on INR 25,000 from 17 Sep 2026, and the rest to EPF. EDLI is 0.5% and admin charges 0.5%. Contributing on full basic above the ceiling is optional unless the scheme rules require it. Deposit by the 15th.",
+        "cite": "EPF & MP Act 1952 (continued under SS Code); S.O. 5109(E) 17 Sep 2026"
+      },
+      {
+        "req": "International workers (IW) in PF",
+        "detail": "Foreign nationals (including US citizens, since there is no India-US SSA) contribute on full salary with no ceiling, and withdrawals are restricted. In 2024 the Karnataka High Court held the IW provisions unconstitutional, and the matter is under appeal (verify before relying on it).",
+        "cite": "EPF Scheme para 83; EPS para 43A"
+      },
+      {
+        "req": "Gratuity",
+        "detail": "15 days' wages (15/26 of last monthly wages) for each completed year (a part over 6 months counts) after 5 years' continuous service. Death or disablement needs no minimum. Fixed-term employees qualify after 1 year. The ceiling stays INR 20 lakh (S.O. 1420(E), 2018). Pay within 30 days, and fund through a trust or insurer.",
+        "cite": "SS Code Ch. V (ss.53-58); MoLE FAQs 2026"
+      },
+      {
+        "req": "ESI and employee compensation",
+        "detail": "ESI covers employees earning up to INR 21,000 for medical, sickness, maternity and disablement benefits. For everyone else, the employer is liable for workplace injury compensation under the SS Code, so buy employee compensation or group personal accident insurance.",
+        "cite": "SS Code Ch. IV, VII"
+      },
+      {
+        "req": "Creche and maternity support",
+        "detail": "At 50+ employees, provide a creche within a set distance (it can be shared or pooled) with 4 visits a day, or a creche allowance as the rules provide (at least INR 500/child/month under the central rules). Also provide nursing breaks until the child is 15 months old.",
+        "cite": "SS Code s.67; SS (Central) Rules 2026"
+      },
+      {
+        "req": "Group medical insurance and wellness (market practice)",
+        "detail": "Not statutory above ESI levels, but universal in GCCs: family floater cover of INR 5-10 lakh with parents optional, plus term life and accident cover, top-ups and annual health check-ups. Processing dependants' health data needs consent and DPDP-compliant handling.",
+        "cite": "Market practice"
+      },
+      {
+        "req": "Tax-efficient flexible benefits",
+        "detail": "Under the new regime most allowances are taxable. The main tax-efficient options are the employer NPS contribution (up to 14%), car lease and a few perquisites. Old-regime employees also use HRA, LTA and meal cards. Check whether each item counts toward the 50% wages rule.",
+        "cite": "Income-tax Act 2025; Code on Wages s.2(y)"
+      },
+      {
+        "req": "Gig and platform workers (if used)",
+        "detail": "Aggregators contribute 1-2% of annual turnover, capped at 5% of payments to gig workers, to the social security fund. Workers register on e-Shram. This rarely affects a GCC unless it engages platforms directly.",
+        "cite": "SS Code Ch. IX, s.114; SS (Central) Rules 2026"
+      }
+    ],
+    "performanceAndConduct": [
+      {
+        "req": "Standing orders / service rules",
+        "detail": "With 300+ workers, have certified or model standing orders covering classification, hours, leave, misconduct, suspension and termination. Below that threshold, publish equivalent HR policies so termination for misconduct has a documented basis.",
+        "cite": "IR Code Ch. IV (standing orders, from s.28); IR (Central) Rules 2026 model standing orders"
+      },
+      {
+        "req": "Domestic enquiry before misconduct dismissal",
+        "detail": "Issue a charge sheet with specific allegations, allow a reply, appoint an impartial enquiry officer, hold a hearing with evidence and cross-examination, issue a report, give a second show-cause on the penalty, and make a reasoned order. Defects can lead to reinstatement with back wages for workers.",
+        "cite": "Principles of natural justice; IR Code standing orders; case law"
+      },
+      {
+        "req": "Suspension pending enquiry",
+        "detail": "Pay subsistence allowance as the standing orders provide (traditionally 50% for the first 90 days, then 75%; verify under the applicable model orders). Keep suspensions short and documented.",
+        "cite": "IR Code / model standing orders (formerly IESO Act s.10A)"
+      },
+      {
+        "req": "Karnataka IT exemption reporting conditions",
+        "detail": "IT/ITeS establishments using the 2024-2029 standing-orders exemption must report suspensions, discharges, terminations, demotions and dismissals to the jurisdictional Deputy Labour Commissioner, and must run a GRC and a POSH IC.",
+        "cite": "Karnataka notification LD 328 LET 2023 (10 Jun 2024)"
+      },
+      {
+        "req": "POSH complaint handling",
+        "detail": "A complaint is due within 3 months of the incident, extendable by 3 months. Conciliation is available if the complainant requests it, but there can be no monetary settlement. The inquiry must finish within 90 days, the report is due within 10 days, and the employer acts within 60 days. Interim relief (transfer, leave) is available, and confidentiality applies (s.16).",
+        "cite": "POSH Act ss.9-13, 16"
+      },
+      {
+        "req": "Performance management and PIPs",
+        "detail": "There is no statutory PIP process. For non-workers, termination on contractual notice ('termination simpliciter') is lawful if it is not stigmatic or disguised punishment. For workers, poor-performance exits are retrenchment-like risks, so document fair process and consider mutual separation.",
+        "cite": "Case law; Indian Contract Act"
+      },
+      {
+        "req": "Monitoring and investigations",
+        "detail": "Email, device and DLP monitoring and forensic investigations can rely on DPDP s.7(i) (protecting trade secrets, preventing corporate espionage). Give notice through policy, minimise data and control access. Keep the IC or investigation file confidential.",
+        "cite": "DPDP Act s.7(i); IT Act"
+      },
+      {
+        "req": "Moonlighting and conflicts of interest",
+        "detail": "Exclusivity and anti-moonlighting clauses during employment are enforceable, since s.27 does not bar in-term restraints. Require disclosure of outside work, directorships and start-up investments.",
+        "cite": "Indian Contract Act s.27 (in-term restraints valid)"
+      }
+    ],
+    "termination": [
+      {
+        "req": "No at-will; valid reason and contractual notice",
+        "detail": "Terminate under the contract or standing orders, with notice or pay in lieu. For non-workers without misconduct, use 'termination simpliciter' with a neutral letter. For misconduct, hold a domestic enquiry first.",
+        "cite": "Contract law; IR Code; case law"
+      },
+      {
+        "req": "Retrenchment of workers (any size establishment)",
+        "detail": "For workers with 1+ year's continuous service: 1 month's written notice with reasons (or pay in lieu), retrenchment compensation of 15 days' average pay per completed year, notice to the appropriate government and the prescribed authority, last-in-first-out within each category unless reasons are recorded, and preference for re-employment for 1 year.",
+        "cite": "IR Code ss.70-72"
+      },
+      {
+        "req": "Worker Re-skilling Fund",
+        "detail": "On retrenchment, also pay 15 days' last-drawn wages into the Worker Re-skilling Fund within 10 days (central rules). The fund credits the worker within 45 days.",
+        "cite": "IR Code s.83; IR (Central) Rules 2026"
+      },
+      {
+        "req": "Prior-permission thresholds (factories/mines/plantations)",
+        "detail": "Chapter X government permission for lay-off, retrenchment or closure applies to industrial establishments (factories, mines, plantations) with 300+ workers. A pure software or design office is outside it, but a hardware lab registered as a factory with 300+ workers is not. Closure of an industrial establishment with 50+ workers needs 60 days' notice.",
+        "cite": "IR Code ss.74, 77-80"
+      },
+      {
+        "req": "Karnataka Shops Act notice of dismissal",
+        "detail": "Employees with 6+ months' continuous service need a reasonable cause and 1 month's notice or wages in lieu, except for misconduct. The employee can appeal to the prescribed authority. Telangana's Shops Act has a similar rule (verify).",
+        "cite": "Karnataka Shops & Commercial Establishments Act 1961 s.39"
+      },
+      {
+        "req": "Fixed-term expiry",
+        "detail": "Non-renewal at the end of a fixed term is not retrenchment, but repeated sham renewals are challengeable. Fixed-term employees get pro-rata gratuity after 1 year.",
+        "cite": "IR Code s.2 (definitions of fixed term employment and retrenchment); SS Code s.53"
+      },
+      {
+        "req": "Protected situations",
+        "detail": "No dismissal during maternity leave (SS Code). Retaliation against POSH complainants or witnesses is prohibited. Protected workmen in union office are protected during pending disputes, and changing conditions during conciliation or adjudication is barred.",
+        "cite": "SS Code Ch. VI (no dismissal during maternity absence); POSH Act; IR Code (protected workers; no change in service conditions during pending proceedings)"
+      },
+      {
+        "req": "Mutual separation as the default tool",
+        "detail": "Most GCC exits are negotiated mutual separations with an ex gratia payment and a release. This avoids Tribunal risk for borderline 'workers'. Keep it voluntary, with no coercion.",
+        "cite": "Market practice; Indian Contract Act"
+      }
+    ],
+    "exit": [
+      {
+        "req": "Full & final settlement within 2 working days",
+        "detail": "Wages due (salary, leave encashment and other items within 'wages') must be paid within 2 working days of removal, dismissal, retrenchment, resignation or closure. Treat the last working day as the trigger. Move clearance processes to run in parallel, not as a precondition.",
+        "cite": "Code on Wages s.17(2)"
+      },
+      {
+        "req": "Gratuity within 30 days",
+        "detail": "Calculate on last-drawn 'wages' under the new definition, covering all service including service before Nov 2025. Pay within 30 days of it becoming payable, or simple interest accrues. The tax exemption is capped (verify the limit under the Income-tax Act 2025).",
+        "cite": "SS Code s.53-56"
+      },
+      {
+        "req": "Service/experience certificate and relieving letter",
+        "detail": "In Karnataka, issue a service certificate within 7 days of the employee's request (2026 amendment). Relieving and experience letters are market-standard, and withholding them to force notice-period service is legally risky. Return any original documents.",
+        "cite": "Karnataka Shops Act (as amended Sep 2026); OSH/standing orders"
+      },
+      {
+        "req": "Notice buyout and recovery",
+        "detail": "Accept a buyout or waive notice in writing. Recover shortfall only as the contract provides and within s.18 deduction limits. GST does not apply to notice-pay recovery.",
+        "cite": "Code on Wages s.18; CBIC Circular 178/10/2022-GST"
+      },
+      {
+        "req": "Tax and PF exit documents",
+        "detail": "Issue Form 130 (formerly Form 16) for the tax year and a TDS computation, support PF transfer to the new employer's UAN or withdrawal, and pay leave encashment with correct TDS treatment.",
+        "cite": "Income-tax Rules 2026; EPF Scheme"
+      },
+      {
+        "req": "IP, confidentiality and equipment return",
+        "detail": "Hold an exit interview, collect devices and badges, get written confirmation that confidential information has been returned, remind the employee of continuing duties, and revoke access on the last day.",
+        "cite": "Employment agreement; Copyright Act s.17"
+      },
+      {
+        "req": "Garden leave and non-solicit",
+        "detail": "Garden leave during the notice period, on full pay, is enforceable. Post-exit non-competes are void. Non-solicit of employees is often upheld, while non-solicit of customers is judged case by case. Rely on trade-secret and confidentiality injunctions.",
+        "cite": "Indian Contract Act s.27; Percept D'Mark v. Zaheer Khan (SC 2006)"
+      }
+    ],
+    "recordsAndPrivacy": [
+      {
+        "req": "DPDP phased compliance",
+        "detail": "The Act and Rules were notified 13-14 Nov 2025. The Data Protection Board is operational now. Consent managers start on 13 Nov 2026. Notice, consent, security safeguards, breach reporting and data-principal rights start on 13 May 2027. A proposal to pull Significant Data Fiduciary duties forward to Nov 2026 had not been notified as of Sep 2026.",
+        "cite": "DPDP Act 2023; DPDP Rules 2025"
+      },
+      {
+        "req": "Legitimate use for employment (s.7(i))",
+        "detail": "Processing for employment purposes, and to protect the employer from loss or liability (trade secrets, IP, corporate espionage) or to provide benefits the employee asks for, does not need consent. Use consent for non-employment uses such as marketing, voluntary wellness apps and some dependant data.",
+        "cite": "DPDP Act s.7(i)"
+      },
+      {
+        "req": "Interim SPDI Rules compliance",
+        "detail": "Until the DPDP substantive provisions start, get written consent for sensitive personal data (health, biometrics, financial, passwords), publish a privacy policy, appoint a grievance officer and maintain reasonable security practices (ISO 27001 counts).",
+        "cite": "IT Act s.43A; SPDI Rules 2011"
+      },
+      {
+        "req": "Breach and cyber incident reporting",
+        "detail": "CERT-In: report within 6 hours now. DPDP (from May 2027): notify the Board without delay with a detailed report within 72 hours, and notify affected individuals promptly. Build one playbook that also covers US SEC/state duties.",
+        "cite": "CERT-In Directions 2022; DPDP Rules 2025 r.7"
+      },
+      {
+        "req": "Cross-border transfers",
+        "detail": "Transfers to the US parent are allowed unless the government restricts a country (a negative-list approach). No restrictions had been notified as of the latest verification. Significant Data Fiduciaries may face stricter rules. Sector rules (e.g., RBI) can override.",
+        "cite": "DPDP Act s.16; DPDP Rules 2025 r.15"
+      },
+      {
+        "req": "Aadhaar restrictions",
+        "detail": "Do not make Aadhaar authentication mandatory, store masked Aadhaar only, and never store biometrics. Use Aadhaar for PF/UAN KYC where EPFO requires it.",
+        "cite": "Aadhaar Act 2016 (as amended 2019); K.S. Puttaswamy v. Union of India (2018)"
+      },
+      {
+        "req": "Data-principal rights and retention",
+        "detail": "From May 2027, answer access, correction, erasure and grievance requests within 90 days. Erase personal data when its purpose ends, keep processing logs for at least 1 year, and keep labour and tax records for their statutory periods.",
+        "cite": "DPDP Act ss.8, 11-14; DPDP Rules 2025"
+      },
+      {
+        "req": "Electronic statutory registers",
+        "detail": "Keep the Codes' unified registers (employee register, wages, attendance/muster roll, overtime, deductions, leave) electronically and make them available for web-based inspection. Replace the legacy forms once state rules are final.",
+        "cite": "Code on Wages / OSH Code rules (Central 2026; Karnataka draft 2026)"
+      }
+    ],
+    "healthSafety": [
+      {
+        "req": "OSH Code registration and duties",
+        "detail": "Establishments with 10+ workers register electronically under the OSH Code. The general duty is a workplace free from hazards, with first aid, drinking water, washrooms, lighting and ventilation, and a canteen, rest rooms and a welfare officer where the thresholds apply.",
+        "cite": "OSH Code s.3 (registration), s.6 (employer duties) and welfare provisions"
+      },
+      {
+        "req": "Annual health check-up (40+)",
+        "detail": "Where the rules prescribe it, provide a free annual health examination for employees aged 40+. The central rules cover dock and construction work, and the Karnataka draft rules include annual health examinations (verify the scope when final). Many GCCs offer check-ups to everyone anyway.",
+        "cite": "OSH Code s.6(1)(c); OSH (Central) Rules 2026 (Form VIII certificate)"
+      },
+      {
+        "req": "Labs and hardware facilities",
+        "detail": "Validation, test or reliability labs with 20+ workers using power (40+ without) count as a 'factory'. That brings licensing, a safety officer or committee, hazardous-process rules (chemicals, lasers, ESD, high voltage) and stricter hours rules.",
+        "cite": "OSH Code s.2 (definition of factory) and hazardous-process provisions"
+      },
+      {
+        "req": "Accident reporting and employee compensation",
+        "detail": "Report fatal and serious accidents to the inspector and authorities within the timelines in the rules, and keep an accident register. Pay compensation for work injuries under the SS Code, or claim it through ESI for covered staff.",
+        "cite": "OSH Code s.10; SS Code Ch. VII; OSH (Central) Rules 2026"
+      },
+      {
+        "req": "Night-shift, transport and security",
+        "detail": "For night shifts: written consent from women employees, safe transport, well-lit premises, CCTV where appropriate, displayed emergency contacts and a POSH IC. Bengaluru GCCs generally keep cab security measures (GPS, escort) despite the 2026 Karnataka deregulation.",
+        "cite": "OSH Code s.43; Karnataka Shops Act s.25"
+      },
+      {
+        "req": "Workplace wellbeing (expected)",
+        "detail": "No statutory mental-health or remote-work safety duty exists. Market practice is an employee assistance programme, ergonomic support for WFH, and heat and air-quality measures on campus.",
+        "cite": "Market practice"
+      }
+    ]
+  },
+  "terminationDeepDive": {
+    "voluntary": "The employee resigns in writing under the contract's notice period, usually 60-90 days for engineers. The employer may accept early release, a buyout (the employee pays notice in lieu) or garden leave. It cannot refuse to accept the resignation indefinitely or force work, and withholding a relieving letter to coerce is risky. Once the last working day is fixed, final wages are due within 2 working days (CoW s.17(2)), and in Karnataka a service certificate is due within 7 days of request. A counter-offer, or the employee withdrawing the resignation before its effective date, is common, so have a policy on accepting withdrawals.",
+    "involuntary": "Non-workers (managerial or administrative staff, and supervisors above INR 18,000) can be terminated on contractual notice or pay in lieu without cause ('termination simpliciter'), provided the letter is non-stigmatic and not punitive. State Shops Act notice rules still apply, such as Karnataka s.39 (1 month for 6+ months' service). A misconduct dismissal needs a domestic enquiry that follows natural justice. Workers can challenge a discharge directly before the Industrial Tribunal (conciliation first). Remedies include reinstatement with back wages or compensation in lieu, and courts increasingly award lump-sum compensation. Document performance and conduct thoroughly, and use mutual separation for borderline cases.",
+    "redundancy": "Individual or collective retrenchment of workers (1+ year's service) needs 1 month's notice with reasons or pay in lieu, 15 days' average pay per completed year, notice to the appropriate government, 15 days' last-drawn wages into the Worker Re-skilling Fund, last-in-first-out by category unless reasons are recorded, and 1 year's re-employment preference. Prior government permission (Chapter X) applies only to factories, mines and plantations with 300+ workers, so engineering offices generally do not need it. There is no general collective-consultation duty for non-union tech offices, but notify any recognised union and the GRC where relevant, and expect labour department and union scrutiny of large Bengaluru layoffs. Managers are exited contractually, usually through negotiated packages.",
+    "finalPayTiming": "Wages must be paid within 2 working days of removal, dismissal, retrenchment, resignation or closure (Code on Wages s.17(2)). This covers salary, leave encashment and other 'wages' components, and applies to all employees whatever their pay. Gratuity is due within 30 days of becoming payable, with simple interest if late. Retrenchment compensation is due at the time of retrenchment. Delays can lead to claims before the wage authority and fines under the Code on Wages (up to INR 50,000 for a first offence, higher for repeats). Separate ex gratia payments are not bound by the 2-day rule, but pay them promptly against the release.",
+    "requiredDocuments": [
+      "Termination, retrenchment or acceptance-of-resignation letter stating the effective date (with reasons for retrenchment)",
+      "Retrenchment notice to the appropriate government/authority (workers) and proof of the re-skilling fund transfer",
+      "Full & final settlement statement with pay proof (within 2 working days)",
+      "Gratuity calculation and payment (within 30 days); nomination records",
+      "Service/experience certificate (Karnataka: within 7 days of request) and relieving letter (market standard)",
+      "Form 130 (formerly Form 16) and Form 123 perquisite statement, where applicable",
+      "PF exit date update on the EPFO portal and transfer/withdrawal support",
+      "Return of original documents and a signed confidentiality/IP reminder"
+    ],
+    "releaseAgreements": "Separation agreements and general releases are enforceable if they are voluntary, supported by consideration beyond statutory dues, and not obtained by coercion or undue influence. Courts scrutinise releases signed as a condition of receiving undisputed dues. Statutory entitlements (gratuity, PF, final wages, leave encashment, retrenchment compensation for workers) cannot be waived and must be paid in full. For workers, a settlement reached in conciliation binds more firmly than a private settlement, which binds only the parties. There is no mandatory review period, but giving 3-7 days and advising the employee to take advice strengthens enforceability. Include confidentiality, non-disparagement, return of property and cooperation terms, and state the gross and net amounts and tax treatment.",
+    "typicalPackage": "Market practice for tech/semiconductor GCCs: pay in lieu of the full notice period (60-90 days of fixed pay), plus ex gratia of about 0.5-1 month's base per year of service, typically with a floor of 2-3 months. Packages also commonly include pro-rated variable pay, 3-6 months of continued group medical cover, outplacement, accelerated or continued RSU vesting at the parent's discretion, and leave encashment and gratuity as statute requires. Senior leaders often negotiate 3-6+ months."
+  },
+  "recentChanges": [
+    {
+      "date": "2026-09",
+      "title": "EPF mandatory wage ceiling raised to INR 25,000/month",
+      "detail": "The Cabinet approved the change on 16 Sep 2026 and the gazette notification (S.O. 5109(E)) took effect on 17 Sep 2026. It is the first change since 2014 and brings about 51 lakh more employees into mandatory EPF, EPS and EDLI. The maximum EPS diversion rises to INR 2,083/month. Update payroll caps, new-joiner eligibility and CTC templates.",
+      "impact": "high"
+    },
+    {
+      "date": "2026-09",
+      "title": "Karnataka Shops & Commercial Establishments (Amendment) Act 2026",
+      "detail": "Assented 3 Sep and notified 4 Sep 2026. Registration is digital with lifetime validity, and 10+ worker establishments registered under the OSH Code are exempt from separate registration. Service certificates are due within 7 days of request, keeping employees' original certificates is banned, detailed night-shift transport safeguards were deleted, offences are decriminalised with higher fines (from INR 10,000) and compounding, and a 30-day appeal was added. Working hours are unchanged.",
+      "impact": "medium"
+    },
+    {
+      "date": "2026-05",
+      "title": "Final central rules under all four Labour Codes notified",
+      "detail": "The Code on Wages, IR, SS and OSH (Central) Rules 2026 were notified on 8 May 2026. They include model standing orders (manufacturing, mining, services with WFH), GRC procedures, re-skilling fund mechanics, overtime at double pay (144 h/quarter cap), registers and forms, fixed-term gratuity, gig-worker registration and vacancy reporting. They apply directly only where the Centre is the appropriate government. Karnataka and Telangana private offices follow state rules.",
+      "impact": "high"
+    },
+    {
+      "date": "2026-04",
+      "title": "Income-tax Act 2025 in force",
+      "detail": "Replaces the 1961 Act from 1 Apr 2026 (assent 21 Aug 2025) and uses a 'tax year' concept. Salary TDS moves to s.392, and forms are renumbered under the Income-tax Rules 2026: Form 130 (formerly 16), 124 (formerly 12BB), 122 (formerly 12B), 123 (formerly 12BA) and 138 (formerly 24Q). Rates and thresholds carry over. Amounts paid by 31 Mar 2026 stay under the 1961 Act.",
+      "impact": "high"
+    },
+    {
+      "date": "2026-03",
+      "title": "Ministry of Labour FAQs clarify the Codes",
+      "detail": "The additional FAQs (16 Mar 2026) confirm the wages definition applies from 21 Nov 2025 (prospectively), only statutory components count toward the 50% test, the gratuity base follows SS Code s.2(88), fixed-term gratuity applies after 1 year, workers can carry forward 30 days of leave with no cap on encashment, and timely-payment rules cover all employees.",
+      "impact": "medium"
+    },
+    {
+      "date": "2026-01",
+      "title": "Code on Wages supervisor ceiling set at INR 18,000",
+      "detail": "S.O. 454(E) (30 Jan 2026) raises the pay above which supervisors are excluded from 'worker' under the Code on Wages from INR 15,000 to INR 18,000, matching the IR and OSH Codes.",
+      "impact": "medium"
+    },
+    {
+      "date": "2026-01",
+      "title": "Karnataka publishes draft state rules under all four Codes",
+      "detail": "Karnataka released draft Wages, IR and OSH rules for comment by 9 Mar 2026 and SS rules by 15 Mar 2026, including overtime thresholds by workweek pattern, annual health examinations, GRC for 20+ workers and Karmika Spandana registration. Final notification had not been confirmed as of the latest verification. Telangana's rules are also still in draft.",
+      "impact": "medium"
+    },
+    {
+      "date": "2025-11",
+      "title": "Four Labour Codes brought into force (21 Nov 2025)",
+      "detail": "The Code on Wages 2019, IR Code 2020, SS Code 2020 and OSH Code 2020 replaced 29 central laws. They bring a uniform 50% 'wages' definition, full & final settlement within 2 working days, mandatory appointment letters, 1-year gratuity for fixed-term employees, standing orders and Chapter X permission at 300 workers, the re-skilling fund, the GRC at 20+, consent-based women's night work and gig-worker social security. Old rules continue where not inconsistent. ESIC and EPFO applied the new wages definition from Dec 2025.",
+      "impact": "high"
+    },
+    {
+      "date": "2025-11",
+      "title": "DPDP Rules 2025 notified; DPDP Act commenced in phases",
+      "detail": "Notified 13-14 Nov 2025. The Board was set up immediately, consent managers start on 13 Nov 2026, and the main obligations (notice, consent, security, breach reporting with a 72-hour detailed report, rights) start on 13 May 2027. MeitY's early-2026 proposal to accelerate Significant Data Fiduciary duties was still pending.",
+      "impact": "high"
+    },
+    {
+      "date": "2025-09",
+      "title": "Immigration and Foreigners Act 2025 commenced",
+      "detail": "Replaced the Foreigners Act 1946, the Registration of Foreigners Act 1939 and related laws, with new rules and orders. Review expatriate hiring, FRRO registration and reporting workflows (verify employer-specific duties).",
+      "impact": "medium"
+    },
+    {
+      "date": "2025-07",
+      "title": "Karnataka withdraws 12-hour IT workday proposal",
+      "detail": "After union opposition, on 29 Jul 2025 the state dropped draft Shops Act changes that would have raised the daily limit to 10 hours (12 with overtime) and overtime to 144 h/quarter. The current 9-10 hour limits remain.",
+      "impact": "low"
+    },
+    {
+      "date": "2025-07",
+      "title": "Board's report disclosures on POSH and maternity benefit",
+      "detail": "The Companies (Accounts) Rules were amended (effective 14 Jul 2025) so board reports disclose POSH complaint statistics and state compliance with maternity-benefit law. This applies to the Indian subsidiary's annual report (verify the exact scope).",
+      "impact": "low"
+    },
+    {
+      "date": "2025-04",
+      "title": "New tax regime: nil tax up to INR 12 lakh",
+      "detail": "The Finance Act 2025 revised new-regime slabs and the rebate for FY 2025-26, so salaried employees pay effectively no tax up to INR 12.75 lakh with the INR 75,000 standard deduction. Most engineers now choose the new regime, which reduces the value of old-regime allowance structuring.",
+      "impact": "medium"
+    },
+    {
+      "date": "2024-09",
+      "title": "Karnataka 24x7 operations notification (3 years)",
+      "detail": "Establishments with 10+ employees may operate 24x7 until Sep 2027 on conditions: 8 h/day and 48 h/week, 10 h/day including overtime, 50 overtime hours per quarter, a rotating weekly off, women's night-work consent and transport, a POSH IC, and wages paid to bank accounts.",
+      "impact": "medium"
+    },
+    {
+      "date": "2024-06",
+      "title": "Karnataka renews IT/ITeS standing-orders exemption to June 2029",
+      "detail": "The notification of 10 Jun 2024 exempts IT, ITeS, start-up, telecom, BPO/KPO and knowledge industries from the Industrial Employment (Standing Orders) Act 1946 on conditions: POSH IC, a GRC, reporting disciplinary action to labour authorities, and furnishing service-condition data. The notification anticipates that the IR Code will apply once in force, so its status after Nov 2025 needs confirmation.",
+      "impact": "medium"
+    }
+  ],
+  "watchlist": [
+    {
+      "title": "Final Karnataka and Telangana rules under the four Codes",
+      "detail": "The final state rules will fix the overtime thresholds, health check-up scope, registers and returns, leave details and GRC mechanics that govern Bengaluru and Hyderabad offices. Monitor Karmika Spandana and the Telangana Labour Department gazette.",
+      "expected": "Late 2026-2027"
+    },
+    {
+      "title": "DPDP substantive obligations and SDF acceleration",
+      "detail": "Consent managers start 13 Nov 2026 and full duties 13 May 2027. MeitY may notify earlier deadlines and cross-border restrictions for Significant Data Fiduciaries. Build employee notices, a breach playbook and a rights-handling process now.",
+      "expected": "Nov 2026 / May 2027"
+    },
+    {
+      "title": "Notifications still pending under the Codes",
+      "detail": "The national floor wage (CoW s.9), a revised statutory bonus eligibility ceiling, a gratuity ceiling revision from INR 20 lakh, and EPFO operating circulars and portal changes for the INR 25,000 ceiling (including EPS higher-pension interplay).",
+      "expected": "2026-2027"
+    },
+    {
+      "title": "IT/ITeS standing-orders exemption under the IR Code",
+      "detail": "Whether Karnataka re-issues the IT exemption under the IR Code, or employers with 300+ workers must adopt model standing orders. Until this is clear, comply with the exemption's conditions and prepare model-standing-order-compatible service rules.",
+      "expected": "2026-2027"
+    },
+    {
+      "title": "Karnataka menstrual leave policy",
+      "detail": "The 2025 state policy of 1 paid day a month for women, including in private and IT establishments, has faced legal challenge. Confirm whether it is operative before implementing it or deciding not to.",
+      "expected": "Ongoing"
+    },
+    {
+      "title": "Karnataka local-candidate job quota",
+      "detail": "The 2024 Bill reserving private-sector jobs for locals remains on hold. Revival would hit GCC hiring, especially for non-management roles.",
+      "expected": "Uncertain"
+    },
+    {
+      "title": "EPF international worker litigation",
+      "detail": "Appeals against the 2024 Karnataka High Court ruling striking down the IW provisions will determine PF for expatriates and assignees.",
+      "expected": "Pending in higher courts"
+    },
+    {
+      "title": "Karnataka 24x7 notification renewal",
+      "detail": "The current three-year permission expires in Sep 2027. Watch whether it is renewed and on what conditions.",
+      "expected": "Sep 2027"
+    }
+  ],
+  "calendar": [
+    {
+      "month": 1,
+      "title": "Monthly (every month): statutory payroll deposits",
+      "detail": "Salaries by the 7th. TDS deposit by the 7th (30 Apr for March). PF and ESI contributions and returns by the 15th. Karnataka PT by the 20th and Telangana PT by the 10th."
+    },
+    {
+      "month": 1,
+      "title": "Labour Welfare Fund contributions",
+      "detail": "Karnataka LWF (INR 20 employee + INR 40 employer per employee) due 15 Jan for the prior calendar year. Telangana LWF (INR 2 + INR 5) due 31 Jan (verify current rates)."
+    },
+    {
+      "month": 1,
+      "title": "POSH annual report to District Officer",
+      "detail": "The IC's calendar-year annual report goes to the employer and the District Officer (Bengaluru Urban / Hyderabad). Commonly filed by 31 Jan (confirm local practice). Figures also feed the board's report disclosures."
+    },
+    {
+      "month": 1,
+      "title": "Q3 TDS return and annual labour returns",
+      "detail": "Form 138 (formerly 24Q) for Oct-Dec due 31 Jan. Prepare the annual returns under the Labour Codes and state rules (unified electronic returns; verify Karnataka/Telangana due dates when final rules issue)."
+    },
+    {
+      "month": 2,
+      "title": "Karnataka PT top-up and tax proofs",
+      "detail": "Deduct INR 300 of Karnataka PT in February to reach the INR 2,500 annual cap. Collect Form 124 (formerly 12BB) investment proofs from old-regime employees."
+    },
+    {
+      "month": 3,
+      "title": "Year-end payroll and gratuity valuation",
+      "detail": "Final TDS true-up, gratuity and leave actuarial valuation (reflecting the Code wages base), and renewal of gratuity trust or insurance funding."
+    },
+    {
+      "month": 4,
+      "title": "New tax year and regime choice",
+      "detail": "Tax year starts 1 Apr: collect regime elections and declarations. Renew or pay the employer PT enrolment where applicable (verify the Karnataka due date). Revise salary structures against the 50% rule in the annual cycle."
+    },
+    {
+      "month": 5,
+      "title": "Q4 TDS return",
+      "detail": "Form 138 for Jan-Mar due 31 May."
+    },
+    {
+      "month": 6,
+      "title": "Issue Form 130 (formerly Form 16)",
+      "detail": "Issue salary TDS certificates by 15 Jun. For FY 2025-26, the old-Act Form 16 was issued in June 2026."
+    },
+    {
+      "month": 7,
+      "title": "Q1 TDS return; employee ITR season",
+      "detail": "Form 138 for Apr-Jun due 31 Jul. Remind employees to disclose foreign RSUs/ESPP in Schedule FA."
+    },
+    {
+      "month": 10,
+      "title": "Q2 TDS return",
+      "detail": "Form 138 for Jul-Sep due 31 Oct."
+    },
+    {
+      "month": 11,
+      "title": "Statutory bonus deadline; DPDP consent-manager phase",
+      "detail": "Pay statutory bonus by 30 Nov (8 months after a March year end). DPDP consent-manager provisions start 13 Nov 2026, and May 2027 readiness should be on track."
+    },
+    {
+      "month": 12,
+      "title": "Leave year-end and holiday list",
+      "detail": "Apply the 30-day carry-forward for workers and encash the excess. Finalise and display next year's national and festival holiday list (Karnataka: 5 mandatory + 5 festival). Refresh POSH training and IC member terms."
+    }
+  ],
+  "gotchas": [
+    "Assuming every engineer is exempt. 'Worker' excludes only managerial or administrative staff and supervisors over INR 18,000, so individual-contributor engineers can claim retrenchment compensation, overtime, OSH leave and reinstatement before the Industrial Tribunal.",
+    "Running US-style same-day RIFs with 'at-will' letters. India needs notice or pay in lieu, retrenchment compensation plus the re-skilling fund for workers, notice to the government, and final pay within 2 working days.",
+    "Keeping legacy CTC structures with a 30-40% basic. Since 21 Nov 2025, allowances above 50% of remuneration count as 'wages', so PF, gratuity, leave encashment and retrenchment are underpaid if payroll is not re-based, and past-service gratuity is valued on the new base.",
+    "Running a 30-60 day full & final settlement cycle that waits for clearance. Code on Wages s.17(2) requires 2 working days, including on resignation.",
+    "Relying on post-employment non-competes or long 'cooling-off' clauses. They are void under Contract Act s.27. Use garden leave, confidentiality, trade-secret injunctions and reasonable employee non-solicits instead.",
+    "Using generic US IP assignment language. Under Copyright Act s.19, an assignment that does not state its duration and territory is deemed limited to 5 years and to India, and it lapses if the assignee does not exercise the rights within 1 year. Patents and inventions need an express present assignment.",
+    "Treating the POSH IC as a single global hotline. India requires an IC at each office or administrative unit with 10+ employees, including an external member, and an annual report to the District Officer. Fines are up to INR 50,000 and repeat breaches escalate.",
+    "Holding original degree certificates, or withholding relieving letters to enforce notice periods. Karnataka now bans keeping originals and requires a service certificate within 7 days of request.",
+    "Forgetting foreign-equity reporting. Employees must report parent RSUs/ESPP in Schedule FA (Black Money Act penalties), and the Indian entity must withhold TDS on the perquisite at vesting or exercise even when the US plan settles the shares.",
+    "Assuming EPF stops at INR 15,000. From 17 Sep 2026 the mandatory ceiling is INR 25,000, and expatriates (IW) contribute on full salary."
+  ],
+  "semiconductorNotes": [
+    "GCC talent market: Bengaluru and Hyderabad chip-design GCCs compete for VLSI, verification, physical design and embedded engineers. Attrition typically runs in the low-to-mid teens (%), counter-offers and offer reneging are common, and notice periods of 60-90 days (sometimes bought out by the new employer) are the norm. Build offer-to-join engagement, joining bonuses with pro-rated clawbacks, and retention RSUs.",
+    "IP and confidentiality: pair Copyright Act s.17(c) employer ownership with an express, present, perpetual and worldwide assignment of inventions, mask works and designs (s.19 formalities), a prior-inventions schedule, invention-disclosure duties, and confidentiality that survives exit. India has no trade-secret statute, so protection rests on contract, equity and injunctions. Keep access controls and exit forensics in place.",
+    "Export controls (flag): US EAR follows US-origin controlled technology and source code to India. Releasing it to Indian nationals in India is a re-export to India, which sits in Country Group A:5 and is often eligible for license exceptions. Releasing it to third-country nationals (e.g., China- or Russia-national staff or contractors) is a deemed re-export to their home country and may need a licence under advanced-computing/semiconductor rules. Screen nationality at hire, keep a technology control plan, and check India's own SCOMET controls for exports from India.",
+    "SEZ/STPI units: SEZ units carry export and NFE obligations. The SEZ Development Commissioner may exercise labour-law powers where the state has delegated them (verify for the unit's state), and WFH for SEZ unit staff needs to comply with SEZ Rule 43A. STPI registration supports software exports. Check whether semiconductor-specific SEZ relaxations and India Semiconductor Mission/DLI design incentives apply (verify current terms).",
+    "Hardware labs and shift work: validation, reliability or ATE labs can trigger OSH Code 'factory' status (20+ workers with power), which brings licensing, safety committee, hazardous-substance and hours rules. 24x7 lab or support shifts need Shops Act 24x7 compliance, weekly-off rotation, women's night-shift consent and transport, and overtime at double pay for workers.",
+    "Security and monitoring: DPDP s.7(i) expressly supports processing to prevent corporate espionage and protect trade secrets and IP. Use it to justify DLP, badge and CCTV logs and forensic reviews, with proportionality, notice and access controls. CERT-In 6-hour incident reporting applies to breaches involving design data.",
+    "Equity compensation: parent RSUs and ESPP are taxed as salary perquisites at vesting or exercise, with Indian payroll TDS and sell-to-cover or cash funding. ESPP purchases by resident employees fall under FEMA ODI/LRS rules. Recharge arrangements with the US parent affect corporate deductibility and transfer pricing."
+  ],
+  "sources": [
+    {
+      "title": "PIB - Government makes the four Labour Codes effective (21 Nov 2025)",
+      "url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2192463&reg=3&lang=2"
+    },
+    {
+      "title": "KPMG - Government of India notifies final rules on four Labour Codes (May 2026)",
+      "url": "https://kpmg.com/xx/en/our-insights/gms-flash-alert/2026/flash-alert-2026-127.html"
+    },
+    {
+      "title": "BDO India - Final central rules notified under all four Labour Codes",
+      "url": "https://www.bdo.in/en-gb/insights/alerts-updates/alert-final-central-rules-notified-under-all-four-labour-codes"
+    },
+    {
+      "title": "DLA Piper - Key considerations of the notified Central Rules under India's Labour Codes",
+      "url": "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/Key-considerations-of-the-notified-Central-Rules-under-Indias-Labour-Codes"
+    },
+    {
+      "title": "Cyril Amarchand Mangaldas - A Guide to the New Labour Codes (Dec 2025)",
+      "url": "https://www.cyrilshroff.com/wp-content/uploads/2025/12/Guide-to-the-Labour-Codes.pdf"
+    },
+    {
+      "title": "Cyril Amarchand Mangaldas - 60 Days of the Labour Codes (Jan 2026)",
+      "url": "https://www.cyrilshroff.com/wp-content/uploads/2026/01/60-days-of-Labour-Codes.pdf"
+    },
+    {
+      "title": "Ministry of Labour & Employment - Additional FAQs on Labour Codes (16 Mar 2026)",
+      "url": "https://www.labour.gov.in/static/uploads/2026/03/a4ccf4c6d97c4f1f36a6d83f8c64213d.pdf"
+    },
+    {
+      "title": "LKS - Labour Code Rules: Central & State-wise Status 2026",
+      "url": "https://employmentlaw.lkslaw.com/rules"
+    },
+    {
+      "title": "Fisher Phillips - Labor relations in India: 7 steps under the new IR Code (Apr 2026)",
+      "url": "https://www.fisherphillips.com/en/insights/insights/labor-relations-in-india-7-steps-employers-should-take-under-new-industrial-relations-code"
+    },
+    {
+      "title": "SCC Online - OSH (Central) Rules 2026 key highlights",
+      "url": "https://www.scconline.com/blog/post/2026/05/13/osh-central-rules-2026-key-highlights-and-compliance-guide/"
+    },
+    {
+      "title": "Obhan & Associates - Key compliances under OSH and IR (Central) Rules 2026",
+      "url": "https://obhanmason.com/blog/central-rules-notified-key-compliances-under-the-occupational-safety-health-and-working-conditions-central-rules-2026-and-the-industrial-relations-central-rules-2026/"
+    },
+    {
+      "title": "SGCMS - Wage ceiling for supervisors under the Code on Wages (S.O. 454(E), 30 Jan 2026)",
+      "url": "https://www.sgcms.com/regulatory-updates/wage-ceiling-for-supervisors-under-the-code-on-wages-2019/"
+    },
+    {
+      "title": "PM India - Cabinet approves EPFO wage ceiling increase to Rs 25,000",
+      "url": "https://www.pmindia.gov.in/en/news_updates/cabinet-approves-enhancement-of-epfo-wage-ceiling-from-rs-15000-to-rs-25000-per-month/"
+    },
+    {
+      "title": "Upstox - EPFO wage ceiling hiked to Rs 25,000; gazette notification",
+      "url": "https://upstox.com/news/personal-finance/latest-updates/epfo-wage-ceiling-hiked-to-25-000-labour-ministry-issues-gazette-notification/article-200466/"
+    },
+    {
+      "title": "SCC Online - Karnataka Shops and Commercial Establishments (Amendment) Act 2026 explained",
+      "url": "https://www.scconline.com/blog/post/2026/09/12/karnataka-shops-and-commercial-establishments-amendment-act-2026-explained/"
+    },
+    {
+      "title": "Deccan Chronicle - Karnataka amends Shops Act, drops certain night-shift safeguards",
+      "url": "https://www.deccanchronicle.com/southern-states/karnataka/karnataka-amends-shops-act-drops-certain-night-shift-safeguards-for-women-employees-1986853"
+    },
+    {
+      "title": "Mondaq - Karnataka shops and commercial establishments to operate 24x7 (Sep 2024)",
+      "url": "https://www.mondaq.com/india/employee-benefits-compensation/1533326/karnataka-shops-and-commercial-establishments-to-operate-24%C3%977-throughout-the-year"
+    },
+    {
+      "title": "India Briefing - IT/ITES in Karnataka get standing orders exemption till 2029",
+      "url": "https://www.india-briefing.com/news/it-ites-companies-karnataka-standing-orders-exemption-till-2029-33321.html/"
+    },
+    {
+      "title": "Peoples Dispatch - Karnataka withdraws plan to increase IT work hours (Aug 2025)",
+      "url": "https://peoplesdispatch.org/2025/08/01/worker-resistance-stops-karnataka-governments-plan-to-increase-it-work-hours/"
+    },
+    {
+      "title": "All India Radio - Karnataka puts job quota bill on hold (Jul 2024)",
+      "url": "https://www.newsonair.gov.in/karnataka-govt-decided-to-put-on-hold-the-draft-bill-that-ensured-job-quotas-for-kannadigas-in-private-sector"
+    },
+    {
+      "title": "Shardul Amarchand Mangaldas - Enforcement of the DPDP Act and notification of the DPDP Rules",
+      "url": "https://www.amsshardul.com/insight/enforcement-of-the-dpdp-act-and-notification-of-the-dpdp-rules/"
+    },
+    {
+      "title": "PIB - Digital Personal Data Protection Rules, 2025",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014&reg=3&lang=2"
+    },
+    {
+      "title": "S.S. Rana - MeitY plans to cut short DPDP compliance timeline for SDFs (Feb 2026)",
+      "url": "https://ssrana.in/articles/meity-plans-to-cut-short-dpdp-compliance-timeline-and-notify-cross-border-restrictions-for-sdfs/"
+    },
+    {
+      "title": "Income Tax Department - FAQs and guidance notes on forms under Income-tax Rules 2026",
+      "url": "https://www.incometaxindia.gov.in/faqs-and-guidance-notes-on-forms-as-per-income-tax-rules-2026"
+    },
+    {
+      "title": "Income Tax Department - FAQs on interplay and transition from ITA 1961 to ITA 2025",
+      "url": "https://www.incometaxindia.gov.in/documents/81799/11848482/Updated-FQAs-on-Interplay%26Transitions.pdf/e10ad2b6-9495-de90-58d3-20606d8954ae?t=1775128640970"
+    }
+  ]
+}

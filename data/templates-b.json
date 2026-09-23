@@ -1,0 +1,2310 @@
+{
+ "templates": [
+  {
+   "id": "T-TECH-ACCESS",
+   "name": "Technology access and deemed-export questionnaire",
+   "category": "Onboard",
+   "format": "form",
+   "purpose": "Records what controlled technology a position will touch, collects from the candidate only the information export control requires, and documents the Trade Compliance determination that gates Day 1 access. It keeps export screening need-based, post-offer and separate from Form I-9, so the company meets the EAR and ITAR without discriminating on citizenship or national origin.",
+   "audience": "Hiring managers (Part A), candidates for export-flagged roles (Part B), Trade Compliance (Parts C-E), People Ops, IT and identity management, Immigration.",
+   "when": "Part A at requisition approval (PL-02) or when a role's technology scope changes; Part B within 1 business day of offer acceptance, for flagged roles only; Parts C-D before the start date is confirmed; Part E on any re-check trigger.",
+   "owner": "Trade Compliance (Export Compliance Officer); hiring manager for Part A",
+   "sections": [
+    {
+     "title": "Part A: Role technology profile (hiring manager)",
+     "intro": "Completed for the position, not the person. Trade Compliance classifies the role from this part before any candidate is asked anything.",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Requisition or position ID, job title and level, department, hiring manager, work location(s) (country, site, remote)"
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Primary work: architecture, RTL design, verification, physical design, DFT, analog/mixed-signal, firmware or software, test or product engineering, FAE/customer support, lab and bring-up, IT or infrastructure, other"
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Technology the role will access (tick all that apply): only published or EAR99 information / chip design data (RTL, netlists, GDSII) / source code (firmware, drivers, EDA scripts) / foundry PDK and process data / test programs and characterization data / encryption source code / other",
+       "detail": "Source code and 'technology' (information for development, production or use) trigger deemed-export rules. Object code and published information generally do not."
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Product lines, projects and programs in scope (name, process node, program code)",
+       "detail": "E.g., advanced-computing accelerators (possible 3A090/3E001), high-speed SerDes, RF front-end, radiation-hardened parts (possible ITAR). Trade Compliance maps these to ECCNs; the manager does not classify."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Repositories and systems needed on Day 1 and in the first 90 days",
+       "detail": "List Git or Perforce depots, EDA project areas, PLM, JIRA/Confluence spaces, license-server groups, compute clusters and shared drives. Need-to-know only: 'all engineering' access is not accepted."
+      },
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Lab and physical access: bench and bring-up labs, secure design rooms, partner fab or OSAT sites; equipment such as ATE, probe stations, lasers, RF chambers"
+      },
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Customer and third-party data: customer designs, customer roadmaps under NDA, foundry confidential data, partner source code",
+       "detail": "Customer and foundry contracts can add their own export or nationality restrictions. Attach the clause."
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Government or defense work: security clearance, ITAR program, or government contract with a citizenship requirement (yes/no; contract or regulation reference)",
+       "detail": "Only a law, regulation, executive order or government contract can justify a 'U.S. citizens only' requirement. Attach the source or leave blank."
+      },
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Unflagged work available if a license is needed (yes/no; describe)",
+       "detail": "E.g., verification of EAR99 IP, internal tooling, work on published standards. This lets a hire with a pending license start productively instead of waiting."
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "Manager attestation: the access listed is what the role genuinely needs, and I will route any new project or system through Trade Compliance before assigning it.",
+       "owner": "Manager",
+       "when": "At req approval"
+      }
+     ]
+    },
+    {
+     "title": "Part B: Candidate questionnaire (flagged roles only)",
+     "intro": "Sent through the export tool only for positions Trade Compliance has flagged, only after offer acceptance, and identically to every candidate for those positions. Answers go to Trade Compliance, not to Greenhouse, the hiring team or I-9 records.",
+     "items": [
+      {
+       "id": "i11",
+       "type": "para",
+       "text": "Purpose statement shown to the candidate: 'Your position requires access to technology or source code that is controlled under U.S. export control laws (the Export Administration Regulations and, where applicable, the International Traffic in Arms Regulations). Before that access can be granted, [Company] must determine whether a U.S. government license is required. We ask the questions below only for that purpose. Trade Compliance will use your answers only to determine export authorization and will keep them separate from your personnel file and your employment eligibility (Form I-9) records.'"
+      },
+      {
+       "id": "i12",
+       "type": "para",
+       "text": "Non-discrimination statement: '[Company] is an equal opportunity employer and does not discriminate on the basis of citizenship, immigration status or national origin. Your offer is not conditioned on being a U.S. person. If a license is required, we will work with you on timing or on the scope of your initial work while it is obtained. Do not attach any documents to this form.'"
+      },
+      {
+       "id": "i13",
+       "type": "question",
+       "text": "1. Are you a U.S. person? (Yes / No)",
+       "detail": "U.S. person means a U.S. citizen or national, a lawful permanent resident (green card holder), or a person granted asylum or refugee status. Holders of H-1B, L-1, O-1, TN, E-3, F-1/OPT and other temporary visas are not U.S. persons for export purposes."
+      },
+      {
+       "id": "i14",
+       "type": "question",
+       "text": "2. If No: list every country of which you are currently a citizen.",
+       "detail": "Include all current citizenships. The EAR uses the most recent citizenship or permanent residency; the ITAR considers every nationality, including dual nationals."
+      },
+      {
+       "id": "i15",
+       "type": "question",
+       "text": "3. If No: list any country where you currently hold permanent residency, and which is the most recent."
+      },
+      {
+       "id": "i16",
+       "type": "question",
+       "text": "4. Do you expect any answer above to change before your start date? (Yes / No) You can also update Trade Compliance at any time.",
+       "detail": "Optional. A change to lawful permanent resident, asylee or refugee status makes the person a U.S. person and can remove a license requirement."
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "Candidate certification: 'The information above is true and complete. I will tell Trade Compliance within 5 business days if my citizenship or permanent residency changes.' Name, signature, date"
+      },
+      {
+       "id": "i18",
+       "type": "note",
+       "text": "Ask nothing else: no passport or green card copies, place of birth, parents' nationality, visa history or immigration documents. Never use Form I-9 or E-Verify data to answer these questions, and send the identical questionnaire to every candidate for a flagged role."
+      }
+     ]
+    },
+    {
+     "title": "Part C: Trade Compliance determination",
+     "intro": "Completed by Trade Compliance within 3 business days of Part B. Recruiters, hiring managers and Immigration receive the outcome only, never the candidate's answers.",
+     "items": [
+      {
+       "id": "i19",
+       "type": "field",
+       "text": "Restricted-party screening (Entity List, SDN, Unverified List, MEU, DOJ DSP covered persons): Clear / Potential match resolved / Match, escalate",
+       "detail": "Prior employment at a listed entity triggers enhanced clean-hire onboarding (TA-10), never rejection on nationality."
+      },
+      {
+       "id": "i20",
+       "type": "field",
+       "text": "Jurisdiction and classification: EAR / ITAR / both; ECCN for each technology in Part A (e.g., 3E001, 3D001, 5E002, 3E991, EAR99); USML category if ITAR"
+      },
+      {
+       "id": "i21",
+       "type": "field",
+       "text": "Release analysis: deemed export in the U.S. to country __ / deemed reexport outside the U.S. to country __ / reexport to a local national in __ / not applicable (U.S. person)",
+       "detail": "Country means most recent citizenship or permanent residency (EAR 734.13(b), 734.14(b)); under the ITAR, all nationalities count."
+      },
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "License required? Yes / No. If No, the reason: U.S. person; no license needed for that country under the reasons for control; EAR99 only; published or fundamental-research exclusion"
+      },
+      {
+       "id": "i23",
+       "type": "field",
+       "text": "License exception relied on, if any (e.g., TSR, ENC), the EAR paragraph, and the facts that meet its conditions",
+       "detail": "Record any written assurance the exception requires before release (verify current conditions for the country group)."
+      },
+      {
+       "id": "i24",
+       "type": "field",
+       "text": "License details: BIS or DDTC application or license number, date filed, date approved, expiry, scope limits and provisos (e.g., excludes 3A090 technology; report when the person leaves)"
+      },
+      {
+       "id": "i25",
+       "type": "field",
+       "text": "Outcome: Cleared / Licensed / Restricted scope pending license / Not cleared, referred to Legal",
+       "detail": "The outcome sets the Darwinbox export status (Pending, Cleared, Licensed, Restricted). 'Not cleared' never leads directly to an offer withdrawal: Legal reviews timing, scope and alternate-role options first (IER risk)."
+      },
+      {
+       "id": "i26",
+       "type": "field",
+       "text": "I-129 Part 6 input (H-1B, H-1B1, L-1, O-1A): license not required / license required and access will be blocked until it is obtained; determination date",
+       "detail": "Immigration signs Part 6 only with this written determination on file, including for extensions and amendments."
+      },
+      {
+       "id": "i27",
+       "type": "field",
+       "text": "Determined by (name, title) and date; second reviewer for any 'license required' or 'not cleared' outcome",
+       "owner": "Trade Compliance",
+       "when": "Within 3 bd of Part B"
+      }
+     ]
+    },
+    {
+     "title": "Part D: Access gating and Technology Control Plan acknowledgment",
+     "items": [
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Darwinbox export status set. The start date is confirmed only when the status is Cleared or Licensed, or an approved Restricted plan exists.",
+       "owner": "People Ops",
+       "when": "Before start confirmation"
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "Identity rules updated: repositories, EDA projects, license-server groups and lab badge zones are granted only as the export status and license provisos allow; blocked requests are logged.",
+       "owner": "IT",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i30",
+       "type": "field",
+       "text": "Restricted-scope plan (license pending): permitted repositories and projects, excluded ones, rules for design reviews, meetings and screen shares, next review date",
+       "detail": "Signed by the manager and Trade Compliance. The manager briefs the team so no one shares controlled data by chat, screen share or whiteboard."
+      },
+      {
+       "id": "i31",
+       "type": "para",
+       "text": "Employee TCP acknowledgment: 'I have completed the Technology Control Plan briefing. I will access only the systems, projects and areas I am authorized to use. I will not share controlled technology or source code, including by screen share, chat, email, verbal explanation or lab demonstration, with anyone whose authorization I have not confirmed, including colleagues, contractors, visitors, customers and members of my household. I will not take controlled technology outside my approved work country, or access it from there, without Trade Compliance approval. I will report any suspected unauthorized release to Trade Compliance immediately. I understand that a breach may lead to disciplinary action and may violate the law.'"
+      },
+      {
+       "id": "i32",
+       "type": "field",
+       "text": "Employee signature and date; TCP version; LMS briefing completion date",
+       "owner": "Employee",
+       "when": "Day 1, before controlled access"
+      },
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Annual TCP refresher scheduled in the LMS; license-conditioned employees added to the restricted license register (license number, expiry, scope, exit-reporting duty).",
+       "owner": "Trade Compliance"
+      }
+     ]
+    },
+    {
+     "title": "Part E: Re-check triggers",
+     "intro": "Each event sends the record back to Trade Compliance within 5 business days of the Darwinbox change. Access to any new scope waits for the new determination.",
+     "items": [
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "Role change: transfer, promotion, new job code or new manager with a different technology scope (MV-01, PD-04)."
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Relocation or work-location change: move to another country or site, remote work from a new country, workation abroad or international assignment (MV-02, MV-04).",
+       "detail": "Release abroad can be a reexport or deemed reexport, and home access is still a release if a foreign-person household member can see the screen."
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "New project, product line or ECCN, including a move into advanced-computing, ITAR or customer-restricted programs."
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Employee reports a change in citizenship, permanent residency or U.S.-person status (e.g., naturalization, a new green card, a new citizenship)."
+      },
+      {
+       "id": "i38",
+       "type": "check",
+       "text": "License expiry, amendment or new proviso; I-129 amendment or extension, with Part 6 redone from a fresh determination."
+      },
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "Assignment to support fabs or customers in China or Macau (EAR 744.6 U.S.-person restrictions apply to citizens and green card holders)."
+      },
+      {
+       "id": "i40",
+       "type": "check",
+       "text": "Exit: controlled access revoked on the last day, any license-required departure report filed, records kept 5 years (EAR Part 762).",
+       "owner": "Trade Compliance",
+       "when": "Last day"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Classify the position first, then screen the person. Part A is required for every requisition with technical access; Part B goes only to candidates for positions Trade Compliance flags, and to all of them in the same way.",
+    "Keep this form out of Form I-9 and E-Verify. Requesting documents, or using I-9 data to decide export status, is document abuse and citizenship discrimination under 8 U.S.C. 1324b.",
+    "Export controls require authorization before release, not citizenship-based hiring. 'U.S. citizens only' is permitted only when a law, regulation, executive order or government contract requires it, and Part A must cite it.",
+    "'Release' includes screen shares, design reviews, repository permissions, lab tours and verbal explanation. Most real violations happen through collaboration tools, so the restricted-scope plan covers meetings and chat as well as systems.",
+    "When a license is needed, adjust timing, scope or role before anyone considers withdrawal, and have Legal review any withdrawal.",
+    "Use the same form for interns, contractors, EOR workers, visiting researchers and onsite interview candidates who will see controlled technology.",
+    "Parts B and C live in the export tool with access limited to Trade Compliance and are kept 5 years (EAR Part 762). Outside the US, collect nationality only under a local privacy notice."
+   ],
+   "countryNotes": {
+    "us": "Ask Part B only after the offer, only for flagged roles and separately from the I-9 (DOJ IER guidance; 8 U.S.C. 1324b). The Part C determination is the only basis for I-129 Part 6 on H-1B, H-1B1, L-1 and O-1A petitions, including extensions and amendments.",
+    "us-ca": "FEHA protects national origin and immigration status, so collect only what licensing needs, after the offer. Keep E-Verify out of this workflow (never before an offer, and only where federal law requires it) and cover export data in the CCPA notice at collection.",
+    "us-co": "CADA covers employers of every size and protects national origin and ancestry. Keep export questions off the initial application (which also avoids JAFA-restricted data) and ask them only after the offer for flagged roles.",
+    "us-nc": "No state export rule. NC requires E-Verify for employers with 25+ NC employees, so never let E-Verify or the I-9 double as export screening; national origin is protected by Title VII, NCEEPA public policy and local ordinances.",
+    "us-tx": "No Texas-specific rule; federal export and anti-discrimination law governs. TCHRA mirrors Title VII on national origin, so keep the questionnaire need-based and separate from the I-9.",
+    "us-wa": "WLAD protects citizenship and immigration status (RCW 49.60.180), so ask only for flagged roles where a license may legally be required, after the offer where possible, and separately from Form I-9.",
+    "ca": "Releasing US-origin controlled technology to a foreign national in a Canadian office is a deemed reexport judged by most recent citizenship or permanent residency. Ontario's Code protects citizenship and both provinces protect place of origin; ITAR items also bring Controlled Goods Program registration and security assessments.",
+    "de": "EU law has no general deemed-export rule inside Germany, but EAR deemed-reexport rules follow US-origin technology to third-country nationals. Collect nationality only for flagged roles under a GDPR Art. 13 notice; a standard questionnaire needs works council consent (§94 BetrVG), and nationality-based rejection risks AGG claims.",
+    "il": "Release to Israeli nationals in Israel is a reexport to Israel, and release to third-country or dual nationals may be a deemed reexport; check license needs for advanced-computing ECCNs (verify current country-group status). Collect nationality for export control only and give the Amendment 13 privacy notice.",
+    "in": "Release to Indian nationals in India is a reexport to India (Country Group A:5, often eligible for exceptions); release to third-country nationals is a deemed reexport. Give a DPDP notice when collecting nationality and check India's SCOMET controls for technology leaving India.",
+    "tw": "Release to Taiwanese nationals is a reexport to Taiwan, and deemed-reexport rules apply to foreign-national staff. Check Taiwan's SHTC controls, treat national core key technology roles as security-sensitive, and give the PDPA notice.",
+    "cn": "Access by PRC nationals in China to controlled US-origin technology is an export to China under restrictive licensing, so scope China roles around unflagged work. Nationality is personal information under PIPL, EAR 744.6 limits U.S. persons supporting advanced-node PRC fabs, and Entity List messaging needs Anti-Foreign Sanctions Law review.",
+    "vn": "Vietnam is in Country Groups D:1 and D:3, so releasing NS-controlled or advanced-computing technology to Vietnamese nationals is a reexport that may need a license (check TSR and other exceptions). Collect nationality under a PDPL notice and gate design-database access until cleared."
+   },
+   "processes": [
+    "TA-06",
+    "ON-01",
+    "MV-04"
+   ],
+   "policies": [
+    "POL-18",
+    "POL-08",
+    "POL-19",
+    "POL-46",
+    "POL-48",
+    "POL-38"
+   ]
+  },
+  {
+   "id": "T-NEWHIRE-NOTICES",
+   "name": "New-hire forms and notices by jurisdiction",
+   "category": "Onboard",
+   "format": "checklist",
+   "purpose": "A jurisdiction-by-jurisdiction checklist of the forms, notices, registrations and acknowledgments required when someone is hired in each of the company's 13 jurisdictions. People Ops uses it to build the Darwinbox onboarding task packs and to audit that no statutory step was missed.",
+   "audience": "People Ops, payroll, local HR Operations, Benefits, Immigration, HRBPs; internal audit reviewing onboarding compliance.",
+   "when": "From offer acceptance to Day 30 for every hire, rehire and cross-border transfer. HR Ops re-checks the list against the country files each January and July and whenever a law changes.",
+   "owner": "People Ops (global HR Operations), with local HR Ops and payroll",
+   "sections": [
+    {
+     "title": "US: federal (every US hire)",
+     "intro": "Applies on top of the state section for the employee's work location. Remote hires follow the state where they actually work.",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Form W-4 collected before the first payroll; if it is not returned, withhold as single with no adjustments.",
+       "owner": "Payroll",
+       "when": "Before first payroll"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "Form I-9 Section 1 by the end of Day 1 and Section 2 within 3 business days, on the current edition (01/20/25, expiring 05/31/2027).",
+       "detail": "The 08/01/23 edition may not be used for new hires. Remote document review by live video is only for E-Verify employers in good standing. Store I-9s apart from personnel files.",
+       "owner": "People Ops",
+       "when": "Day 1-3"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "E-Verify case opened by Day 3 where required: FAR E-Verify clause contracts, STEM OPT hires (with the Form I-983 training plan) and state mandates (NC below).",
+       "detail": "Never run E-Verify before the offer or to pre-screen. Display the E-Verify participation and IER right-to-work notices.",
+       "owner": "People Ops",
+       "when": "Day 3"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "State new-hire report filed within 20 days (some states are shorter); withholding, UI and PFML accounts registered in the work state before the first payroll, including for remote hires.",
+       "owner": "Payroll",
+       "when": "Day 20"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Health Insurance Marketplace notice (FLSA 18B) given within 14 days of the start date.",
+       "owner": "Benefits",
+       "when": "Day 14"
+      },
+      {
+       "id": "i6",
+       "type": "check",
+       "text": "Benefits packet: SBC, HIPAA special enrollment rights, COBRA general notice within 90 days of coverage starting, and 401(k) automatic-enrollment and safe-harbor notices where they apply.",
+       "owner": "Benefits",
+       "when": "Day 1-90"
+      },
+      {
+       "id": "i7",
+       "type": "check",
+       "text": "PIIA signed before any system access, with the DTSA immunity notice, SEC Rule 21F-17 protected-rights carve-out, NLRA savings language, state invention-assignment notice and prior-inventions schedule.",
+       "owner": "People Ops",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i8",
+       "type": "check",
+       "text": "Export questionnaire (T-TECH-ACCESS) completed for flagged roles only and stored apart from the I-9.",
+       "owner": "Trade Compliance",
+       "when": "Before start confirmation"
+      },
+      {
+       "id": "i9",
+       "type": "check",
+       "text": "Voluntary self-identification (sex and race/ethnicity for EEO-1; disability and veteran status if the company is a federal contractor under Section 503 and VEVRAA) offered on a separate, optional form (verify contractor status).",
+       "owner": "People Ops",
+       "when": "Week 1"
+      }
+     ]
+    },
+    {
+     "title": "US: West (California, Colorado, Washington)",
+     "items": [
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "CA: Labor Code 2810.5 Wage Theft Prevention Act notice to non-exempt hires (pay rates, payday, employer legal names and addresses, workers' comp carrier, paid sick leave terms); changes notified within 7 days.",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i11",
+       "type": "check",
+       "text": "CA: SB 294 Workplace Know Your Rights notice at hire (and every 1 February), plus the emergency-contact designation asking whether that contact may be notified if the employee is arrested or detained at work.",
+       "detail": "Give the notice in the language the employee normally uses at work where the state provides a template.",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i12",
+       "type": "check",
+       "text": "CA: DE 4 state withholding certificate; EDD DE 34 new-hire report within 20 days.",
+       "owner": "Payroll",
+       "when": "Day 20"
+      },
+      {
+       "id": "i13",
+       "type": "check",
+       "text": "CA: new-hire pamphlets: CRD sexual harassment pamphlet, SDI (DE 2515) and PFL (DE 2511) brochures, workers' comp new-employee pamphlet, CRD victims' leave notice, lactation policy.",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i14",
+       "type": "check",
+       "text": "CA: CCPA employee notice at collection; PIIA with the LC 2870 invention notice; no non-compete, non-California law or forum clause, or training or relocation repayment term in any onboarding document.",
+       "owner": "People Ops",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i15",
+       "type": "check",
+       "text": "CA: harassment prevention training assigned for completion within 6 months (1 hour non-supervisors, 2 hours supervisors); IIPP, WVPP and HazCom training before lab work, with SB 513 training records.",
+       "owner": "L&D",
+       "when": "Month 6"
+      },
+      {
+       "id": "i16",
+       "type": "check",
+       "text": "CO: optional DR 0004 withholding certificate (W-4 used otherwise); report to the Colorado State Directory of New Hires within 20 days; Denver Occupational Privilege Tax set up for Denver workers.",
+       "owner": "Payroll",
+       "when": "Day 20"
+      },
+      {
+       "id": "i17",
+       "type": "check",
+       "text": "CO: written HFWA paid sick leave notice, current FAMLI program notice and pregnancy-accommodation notice at hire; COMPS, payday and anti-discrimination posters available electronically to remote staff.",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "CO: any non-compete or customer non-solicit notice delivered as a separate signed document before offer acceptance (C.R.S. 8-2-113(4)); Colorado-law PIIA; biometric consent before badge or lab enrollment (C.R.S. 6-1-1314).",
+       "owner": "People Ops",
+       "when": "Before acceptance"
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "CO: government ID used for the I-9 returned the same day and not retained beyond the short verification window (HB 26-1283).",
+       "owner": "People Ops",
+       "when": "Day 1-3"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "WA: new hires reported to DSHS within 20 days; ESD (UI, PFML, WA Cares), L&I and DOR accounts in place before the first WA payroll, even for a single remote hire.",
+       "owner": "Payroll",
+       "when": "Before first payroll"
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "WA: state paid sick leave notice to non-exempt hires; Seattle hires also get the Wage Theft Ordinance notice of employment information and the PSST notice.",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i22",
+       "type": "check",
+       "text": "WA: PFML and WA Cares deductions configured, including the WA Cares exemption for temporary visa holders (unless they opt in in writing) and any ESD-approved exemptions.",
+       "owner": "Payroll",
+       "when": "Before first payroll"
+      },
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "WA: PIIA with the RCW 49.44.140 invention notice and Silenced No More carve-out; any noncompete disclosed in writing by offer acceptance and above the earnings threshold (all WA noncompetes void from 30 June 2027).",
+       "owner": "People Ops",
+       "when": "Before acceptance"
+      }
+     ]
+    },
+    {
+     "title": "US: Southeast and South (North Carolina, Texas)",
+     "items": [
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "NC: Form NC-4 state withholding certificate; new-hire report within 20 days (G.S. 110-129.2).",
+       "owner": "Payroll",
+       "when": "Day 20"
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "NC: E-Verify case for every NC hire within 3 business days of the start where the company has 25+ NC employees, including remote NC staff (hires employed under 9 months in a calendar year excepted); records kept for employment plus 1 year.",
+       "owner": "People Ops",
+       "when": "Day 3"
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "NC: written wage notice at hire (rate, pay frequency, payday, place of payment) and acknowledged PTO, bonus and commission policies, including forfeiture terms (G.S. 95-25.13).",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "NC: PIIA with the G.S. 66-57.1 own-time invention carve-out; any non-compete signed in writing by the start date; NCDOL, DES, Industrial Commission and E-Verify posters available to remote staff.",
+       "owner": "People Ops",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "TX: no state withholding form (federal W-4 only); new hire reported to the Texas OAG within 20 calendar days of the first day wages are earned.",
+       "owner": "Payroll",
+       "when": "Day 20"
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "TX: written workers' compensation coverage notice (subscriber or non-subscriber) given at hire with the W-4 and I-9 (28 TAC 110.101).",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "TX: payday notice: paydays posted (at least monthly for exempt staff, twice monthly for others) with the TWC Payday Law poster, and sent electronically to remote Texas staff (Labor Code 61.011-61.012).",
+       "owner": "Payroll",
+       "when": "Day 1"
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "TX: written authorizations for any non-statutory payroll deductions; CUBI notice and consent before enrolling fingerprints or face templates for badge or lab access.",
+       "owner": "People Ops",
+       "when": "Week 1"
+      }
+     ]
+    },
+    {
+     "title": "Canada (Ontario and British Columbia)",
+     "items": [
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "TD1 federal and TD1ON or TD1BC personal tax credits returns; SIN within 3 days of starting (record work-permit expiry for 9-series SINs); direct-deposit details.",
+       "owner": "Payroll",
+       "when": "Day 1-3"
+      },
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "ON (25+ employees): written new-hire information statement before Day 1 where practicable: legal and operating name, contact details, work location, starting pay, pay period and payday, anticipated hours.",
+       "owner": "People Ops",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "ON: current ESA poster, written disconnecting-from-work policy and written electronic monitoring policy given within 30 days of hire.",
+       "owner": "People Ops",
+       "when": "Day 30"
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "ON: AODA training as soon as practicable and basic OHS awareness training; BC: new and young worker orientation before starting work, including bullying and harassment procedures.",
+       "owner": "EHS",
+       "when": "Before work / Week 1"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "Employment agreement (ESA-compliant termination clause, IP assignment, moral-rights waiver, confidentiality) signed before Day 1; terms signed after the start need fresh consideration.",
+       "owner": "People Ops",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Group benefits from Day 1; interim private coverage for hires moving into BC during the MSP waiting period. Quebec remote hires: French-language documents and legal review before any offer.",
+       "owner": "Benefits",
+       "when": "Day 1"
+      }
+     ]
+    },
+    {
+     "title": "Europe and Middle East (Germany, Israel)",
+     "items": [
+      {
+       "id": "i38",
+       "type": "check",
+       "text": "DE: Nachweisgesetz written terms: day-1 items (parties, pay and due date, working time, breaks, shifts), day-7 items (start, workplace, duties, probation, overtime) and 1-month items (leave, training, pension provider, termination procedure with written form, notice periods and the 3-week claim deadline).",
+       "detail": "Put everything in the contract signed before Day 1. Text form is allowed since 2025 if storable and printable with a request to confirm receipt; give paper on request. Fines up to EUR 2,000 per breach.",
+       "owner": "People Ops",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "DE: social insurance registration (DEÜV) with the chosen health insurer no later than the first payroll (within 6 weeks); social insurance number recorded; ELStAM tax data retrieved with the tax ID.",
+       "owner": "Payroll",
+       "when": "First payroll"
+      },
+      {
+       "id": "i40",
+       "type": "check",
+       "text": "DE: non-EU hires: residence title checked and copied before work starts and kept for the duration of employment (§4a(5) AufenthG).",
+       "owner": "Immigration",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i41",
+       "type": "check",
+       "text": "DE: works council consent to the hire where there are more than 20 employees (§99 BetrVG); GDPR Art. 13 employee privacy notice; IT and acceptable-use rules.",
+       "owner": "People Ops",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i42",
+       "type": "check",
+       "text": "DE: safety instruction before work starts (§12 ArbSchG); AGG complaint-office and HinSchG reporting-channel details; ArbnErfG invention-disclosure briefing.",
+       "owner": "EHS",
+       "when": "Day 1"
+      },
+      {
+       "id": "i43",
+       "type": "check",
+       "text": "IL: written Notice to Employee (Terms of Employment) within 30 days of start: employer, start date, role, supervisor, pay components, hours and weekly rest, social benefits and fund names; later changes notified in writing.",
+       "owner": "People Ops",
+       "when": "Day 30"
+      },
+      {
+       "id": "i44",
+       "type": "check",
+       "text": "IL: Form 101 tax card at hire (and every January); withhold at the maximum rate until it is received.",
+       "owner": "Payroll",
+       "when": "Day 1"
+      },
+      {
+       "id": "i45",
+       "type": "check",
+       "text": "IL: pension enrollment under the comprehensive pension extension order (employee 6%, employer 6.5% plus the severance component) with the Section 14 annex signed; keren hishtalmut opened where offered; reported through the pension clearing house.",
+       "detail": "Contributions start from Day 1 for hires with an existing pension fund and after the waiting period (up to 6 months, with retroactive rules) for others (verify).",
+       "owner": "Payroll",
+       "when": "Per extension order"
+      },
+      {
+       "id": "i46",
+       "type": "check",
+       "text": "IL: sexual-harassment bylaw and commissioner contact details given to every new hire with acknowledgment; Amendment 13 privacy notice and IT and monitoring policy before monitoring begins.",
+       "owner": "People Ops",
+       "when": "Week 1"
+      },
+      {
+       "id": "i47",
+       "type": "check",
+       "text": "IL: invention assignment with an explicit s.134 royalty waiver and confidentiality agreement; Section 102 undertaking for equity grantees.",
+       "owner": "People Ops",
+       "when": "Before Day 1"
+      }
+     ]
+    },
+    {
+     "title": "India",
+     "items": [
+      {
+       "id": "i48",
+       "type": "check",
+       "text": "IN: appointment letter at joining (OSH Code s.6(1)(f)) stating designation, worker or non-worker category, wages, PF/ESI/gratuity details, probation, notice and hours; employment agreement e-stamped (Karnataka; verify current duty).",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i49",
+       "type": "check",
+       "text": "IN: EPF enrolment: Form 11 declaration, UAN generated or linked, Aadhaar/KYC seeded. Mandatory for wages up to INR 25,000/month from 17 Sep 2026; international workers covered from Day 1 unless they hold an SSA certificate of coverage.",
+       "owner": "Payroll",
+       "when": "Day 1"
+      },
+      {
+       "id": "i50",
+       "type": "check",
+       "text": "IN: ESI registration for employees earning up to INR 21,000/month (INR 25,000 for persons with disability) in establishments with 10+ employees.",
+       "owner": "Payroll",
+       "when": "Day 1"
+      },
+      {
+       "id": "i51",
+       "type": "check",
+       "text": "IN: PF e-nomination, gratuity nomination and group insurance nominations collected at joining.",
+       "owner": "People Ops",
+       "when": "Week 1"
+      },
+      {
+       "id": "i52",
+       "type": "check",
+       "text": "IN: tax regime choice (new regime by default), claims on Form 124 (formerly 12BB) and prior-employer income on Form 122 (formerly 12B); professional tax and Labour Welfare Fund set up for the state (verify Karnataka and Telangana rates).",
+       "owner": "Payroll",
+       "when": "First payroll"
+      },
+      {
+       "id": "i53",
+       "type": "check",
+       "text": "IN: written and electronic maternity benefit information to every woman employee at appointment; POSH induction; standing orders or service rules, privacy notice and IT policy acknowledged; original certificates verified and returned the same day (Karnataka).",
+       "owner": "People Ops",
+       "when": "Day 1-Week 1"
+      }
+     ]
+    },
+    {
+     "title": "Greater China (Taiwan, China)",
+     "items": [
+      {
+       "id": "i54",
+       "type": "check",
+       "text": "TW: Labor Insurance, Employment Insurance, Occupational Accident Insurance and National Health Insurance enrollment effective Day 1 at the correct insured-salary grade.",
+       "detail": "Late enrollment makes the employer liable for any benefits lost, so file on or before the first working day.",
+       "owner": "Payroll",
+       "when": "Day 1"
+      },
+      {
+       "id": "i55",
+       "type": "check",
+       "text": "TW: labor pension (employer at least 6%) reported within 7 days; voluntary employee contribution of up to 6% offered.",
+       "owner": "Payroll",
+       "when": "Day 7"
+      },
+      {
+       "id": "i56",
+       "type": "check",
+       "text": "TW: statutory employee roster created; approved work rules and harassment and bullying complaint channels distributed and acknowledged; general OSH training for new hires (typically at least 3 hours).",
+       "owner": "People Ops",
+       "when": "Week 1"
+      },
+      {
+       "id": "i57",
+       "type": "check",
+       "text": "TW: foreign hires: WDA work permit or Gold Card in hand before Day 1; tax residency determined (183-day rule) for withholding.",
+       "owner": "Immigration",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i58",
+       "type": "check",
+       "text": "CN: written labor contract (Chinese or bilingual, Chinese prevailing) signed on or before Day 1 and never later than one month after start; the employee's copy delivered with proof.",
+       "detail": "Double wages accrue from month 2 without it (LCL Arts. 10, 82). Write the probation period and acknowledged probation criteria into the contract.",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i59",
+       "type": "check",
+       "text": "CN: social insurance and housing provident fund registration within 30 days in the city of employment, including foreign employees.",
+       "owner": "Payroll",
+       "when": "Day 30"
+      },
+      {
+       "id": "i60",
+       "type": "check",
+       "text": "CN: PIPL employee notice plus separate consents for sensitive personal information and for transfer to Darwinbox and US HQ.",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i61",
+       "type": "check",
+       "text": "CN: employee handbook adopted through democratic procedure delivered and acknowledged; prior employer's termination certificate collected and any non-compete obligations checked.",
+       "owner": "People Ops",
+       "when": "Day 1"
+      },
+      {
+       "id": "i62",
+       "type": "check",
+       "text": "CN: foreign hires: work permit, Z visa and residence permit within 30 days of entry; equity grantees added to the SAFE Circular 7 registration; pre-job occupational health exams for lab and test roles with exposure.",
+       "owner": "Immigration",
+       "when": "Day 30"
+      }
+     ]
+    },
+    {
+     "title": "Southeast Asia (Vietnam)",
+     "items": [
+      {
+       "id": "i63",
+       "type": "check",
+       "text": "VN: labour contract in Vietnamese (bilingual for foreigners) signed before work starts in two originals, or as an e-contract through a licensed provider uploaded to the national platform (Decree 337/2025); confidentiality and IP annex attached.",
+       "owner": "People Ops",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i64",
+       "type": "check",
+       "text": "VN: social, health and unemployment insurance registration within 30 days for contracts of 1 month or more (foreigners: 12+ months and no UI); the SI filing also carries the labour registration. Personal ID number collected; it is also the tax code.",
+       "owner": "Payroll",
+       "when": "Day 30"
+      },
+      {
+       "id": "i65",
+       "type": "check",
+       "text": "VN: hire entered in the labour management book (paper or electronic) with contract, salary and SI details.",
+       "owner": "People Ops",
+       "when": "Week 1"
+      },
+      {
+       "id": "i66",
+       "type": "check",
+       "text": "VN: registered internal labour regulations (including the sexual harassment section) delivered and acknowledged; OSH induction training for the statutory group before lab access; PDPL employee notice with monitoring disclosure.",
+       "owner": "People Ops",
+       "when": "Week 1"
+      },
+      {
+       "id": "i67",
+       "type": "check",
+       "text": "VN: PIT commitment or dependant registration forms; foreign hires: work permit or exemption before Day 1, LD visa or temporary residence card, contract term no longer than the permit.",
+       "owner": "Payroll",
+       "when": "Before Day 1"
+      },
+      {
+       "id": "i68",
+       "type": "check",
+       "text": "VN: probation written into the contract (maximum 60 days for degree-level roles, once per job, at least 85% of salary) and the result notified in writing when it ends.",
+       "owner": "HRBP",
+       "when": "Probation end"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Pick the pack by work location, not by entity or HQ. A remote US hire gets the federal section plus the section for the state where they work.",
+    "Items marked (verify) are not yet confirmed against current official sources; local HR Ops confirms them before they go into Darwinbox task packs.",
+    "Keep right-to-work, export-control and personnel records apart: I-9s and permit copies in the restricted I-9 store, export answers in the export tool, everything else in Darwinbox.",
+    "Language rules apply to many notices: CA SB 294 in the employee's usual work language, Colorado HFWA in any language spoken by 5% of the workforce, Israeli notices in Hebrew, Taiwan and China documents in Chinese, Vietnam in Vietnamese.",
+    "Deadlines run from the start date, but send most items before Day 1 so everything is signed before any system access.",
+    "Rehires and cross-border transfers get the full destination pack. Prior service may count, but prior notices and registrations do not carry over.",
+    "HR Ops re-checks this list against the country files in January and July and whenever a law change lands."
+   ],
+   "countryNotes": {
+    "us": "Every US hire gets the federal section plus the section for the state where they work. ICE's March 2026 guidance treats many I-9 errors as uncurable, so audit new I-9s quarterly rather than waiting for an inspection.",
+    "us-ca": "California has the heaviest pack: the LC 2810.5 notice, the SB 294 notice (also every 1 February), EDD DE 34 within 20 days, the pamphlet set and the CCPA notice at collection. Use E-Verify only where federal law requires it, and never before an offer.",
+    "us-co": "Give the HFWA, FAMLI and pregnancy-accommodation notices at hire, and any non-compete notice separately before offer acceptance. HFWA notices must be in any language spoken by 5% or more of the workforce.",
+    "us-nc": "E-Verify is mandatory for every NC hire once the company has 25+ NC employees. The written wage and forfeiture-policy notice is what makes PTO and bonus forfeiture enforceable.",
+    "us-tx": "No state withholding, wage notice or harassment pamphlet. The Texas items are the OAG new-hire report, the workers' comp coverage notice, posted paydays and written deduction authorizations.",
+    "us-wa": "Register with ESD, L&I and DOR before the first WA payroll, even for one remote hire. From 1 Oct 2026, an I-9 inspection triggers the HB 2105 worker notice in English and the five most common other languages.",
+    "ca": "Ontario hires need the written information statement before Day 1 (25+ employees) and the ESA poster and two policies within 30 days; BC hires need worker orientation before starting work. Quebec remote hires need French documents and legal review first.",
+    "de": "Nachweisgesetz deadlines run from Day 1, and each missing term is a fineable breach, so put all terms in the signed contract. Register with the health insurer (DEÜV) by the first payroll, and obtain works council consent to the hire where required.",
+    "il": "The written Notice to Employee (Terms of Employment) is due within 30 days and again whenever terms change. Form 101, pension enrollment under the extension order and the sexual-harassment bylaw complete the pack.",
+    "in": "The appointment letter is mandatory under the OSH Code. PF (Form 11, UAN) covers wages up to INR 25,000 from 17 Sep 2026 and ESI applies up to INR 21,000; display statutory abstracts in English and Kannada or Telugu.",
+    "tw": "Insurance enrollment must be effective on Day 1, and late enrollment makes the employer liable for lost benefits. Report the labor pension within 7 days and distribute work rules in Chinese.",
+    "cn": "Sign the labor contract on or before Day 1 (otherwise double wages accrue from month 2) and register social insurance and housing fund within 30 days. PIPL requires separate consent for sensitive data and cross-border transfer.",
+    "vn": "The Vietnamese labour contract must be signed before work starts, and SI/HI/UI and labour registration are due within 30 days. Foreign hires need the work permit before Day 1 and a contract no longer than the permit."
+   },
+   "processes": [
+    "ON-01",
+    "ON-02",
+    "ON-03"
+   ],
+   "policies": [
+    "POL-19",
+    "POL-28",
+    "POL-37",
+    "POL-46",
+    "POL-48",
+    "POL-49"
+   ]
+  },
+  {
+   "id": "T-DAY1-AGENDA",
+   "name": "Day 1 and first-week agenda",
+   "category": "Onboard",
+   "format": "checklist",
+   "purpose": "An hour-by-hour Day 1 and day-by-day Week 1 plan for a new engineer, covering equipment, accounts, security and export-control briefings, lab safety, meeting the team, the buddy and a first real task. It gives managers and buddies a clear run sheet so every engineer starts the same way: compliant, safe and productive by Friday.",
+   "audience": "Hiring managers, buddies, new engineers, People Ops, IT, Security, EHS, Trade Compliance.",
+   "when": "Manager sends it with the welcome email on Day -5; used from Day 1 to Day 5. Shift times for the site's time zone and working hours.",
+   "owner": "Hiring manager; People Ops owns the orientation blocks",
+   "sections": [
+    {
+     "title": "Before Day 1 (manager and buddy prep)",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Confirm with People Ops that the contract, PIIA and local pre-start paperwork are signed and the start date is confirmed (for flagged roles: export status Cleared, Licensed or an approved Restricted plan).",
+       "owner": "Manager",
+       "when": "Day -5"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "Confirm the laptop or Linux workstation, monitors, VDI and headset are at the desk, or shipped to arrive by Day -3 for remote hires.",
+       "owner": "IT",
+       "when": "Day -5"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "Book Week 1 invites: welcome 1:1, team lunch, stakeholder meetings, a design review to observe, daily buddy check-ins, Friday wrap-up.",
+       "owner": "Manager",
+       "when": "Day -5"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "Pick the first task: small, real and reviewable within Week 1 (e.g., fix a lint or CDC warning, add a regression test, run a block through synthesis and report QoR), using only systems the hire is cleared for.",
+       "owner": "Manager",
+       "when": "Day -5"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Brief the buddy on the hire's background, access scope and any restricted-scope limits the team must respect.",
+       "owner": "Manager",
+       "when": "Day -3"
+      },
+      {
+       "id": "i6",
+       "type": "check",
+       "text": "Send the welcome email: Week 1 agenda, arrival time, site address, parking and badge pickup, what to wear for lab work, and who to ask for at reception.",
+       "owner": "Manager",
+       "when": "Day -5"
+      }
+     ]
+    },
+    {
+     "title": "Day 1: hour by hour",
+     "intro": "Times assume a 09:00 start on site. Remote hires follow the same order by video, with equipment delivered in advance.",
+     "items": [
+      {
+       "id": "i7",
+       "type": "check",
+       "text": "09:00-09:30 Arrival: met by the manager or buddy at reception; temporary badge; desk, kitchen, restrooms, emergency exits and assembly point.",
+       "owner": "Manager / Buddy",
+       "when": "09:00"
+      },
+      {
+       "id": "i8",
+       "type": "check",
+       "text": "09:30-10:30 People Ops orientation: Day 1 statutory forms (I-9 documents in the US, SIN and TD1 in Canada, Form 101 in Israel, bank and tax forms elsewhere); acknowledgments of the Code of Conduct, insider trading policy, acceptable use and monitoring notice, and local handbook or work rules; benefits overview.",
+       "owner": "People Ops",
+       "when": "09:30"
+      },
+      {
+       "id": "i9",
+       "type": "check",
+       "text": "10:30-11:30 IT setup: activate SSO and MFA, email, chat, VPN and password manager; confirm disk encryption and the endpoint agent; start the security awareness module.",
+       "owner": "IT",
+       "when": "10:30"
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "11:30-12:00 Security and trade-secret briefing: data classification, no personal devices or personal cloud storage for company data, clean-hire reminder (bring nothing from a prior employer), how to report a lost device or phishing.",
+       "owner": "Security",
+       "when": "11:30"
+      },
+      {
+       "id": "i11",
+       "type": "check",
+       "text": "12:00-13:00 Team lunch with the manager, buddy and two or three teammates.",
+       "owner": "Manager",
+       "when": "12:00"
+      },
+      {
+       "id": "i12",
+       "type": "check",
+       "text": "13:00-14:00 Welcome 1:1: team mission and the current tape-out or release schedule, role expectations, how design and code reviews work, working hours and on-call norms, first draft of 30/60/90 goals (T-ONBOARD-PLAN).",
+       "owner": "Manager",
+       "when": "13:00"
+      },
+      {
+       "id": "i13",
+       "type": "check",
+       "text": "14:00-14:45 Export-control briefing: Technology Control Plan briefing and signed acknowledgment for flagged roles (T-TECH-ACCESS Part D); a short 'what counts as a release' briefing for every engineer.",
+       "owner": "Trade Compliance",
+       "when": "14:00"
+      },
+      {
+       "id": "i14",
+       "type": "check",
+       "text": "14:45-16:00 Buddy session: repository layout, version-control workflow, build and CI, bug tracker, wiki and team channels; clone the repository and run a first build.",
+       "owner": "Buddy",
+       "when": "14:45"
+      },
+      {
+       "id": "i15",
+       "type": "check",
+       "text": "16:00-16:45 Introduce the first task and agree what 'done' looks like by Friday.",
+       "owner": "Manager",
+       "when": "16:00"
+      },
+      {
+       "id": "i16",
+       "type": "check",
+       "text": "16:45-17:00 End-of-day check-in: questions, anything missing (access, licenses, equipment), plan for Day 2.",
+       "owner": "Manager",
+       "when": "16:45"
+      }
+     ]
+    },
+    {
+     "title": "Days 2-5: day by day",
+     "items": [
+      {
+       "id": "i17",
+       "type": "check",
+       "text": "Day 2: lab safety orientation before any lab access (ESD, chemical hygiene, lasers, high voltage, emergency procedures, plus the local statutory module); badge zones open only after the LMS records completion.",
+       "owner": "EHS",
+       "when": "Day 2"
+      },
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "Day 2: EDA tools and license-server access verified; run a simulation or synthesis job end to end on a training design; compute quota confirmed.",
+       "owner": "Buddy",
+       "when": "Day 2"
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "Day 2: meet key partners for 30 minutes each: architecture, verification, physical design or software lead, depending on the role.",
+       "owner": "Employee",
+       "when": "Day 2"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "Day 3: observe a design or code review; afterwards the buddy explains the checklist and sign-off rules.",
+       "owner": "Buddy",
+       "when": "Day 3"
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "Day 3: start mandatory training (harassment prevention, POSH or AODA where applicable, insider trading, export-control awareness, data handling). Non-exempt staff complete it on paid time.",
+       "owner": "Employee",
+       "when": "Day 3"
+      },
+      {
+       "id": "i22",
+       "type": "check",
+       "text": "Day 3: US hires: I-9 Section 2 complete by the end of the third business day and E-Verify case opened where required.",
+       "owner": "People Ops",
+       "when": "Day 3"
+      },
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "Day 4: first commit or first result on the starter task, reviewed by the buddy; stakeholder meetings continue (DFT, test and product engineering, foundry liaison, program management).",
+       "owner": "Employee",
+       "when": "Day 4"
+      },
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "Day 4: benefits enrollment walkthrough and equity and ESPP overview; confirm the enrollment deadline (US: typically 30 days).",
+       "owner": "Benefits",
+       "when": "Day 4"
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "Day 5: starter task submitted for review or demoed to the team; Week 1 wrap-up with the manager: what went well, blockers, access or tooling gaps, 30-day goals and the Day 30 check-in date.",
+       "owner": "Manager",
+       "when": "Day 5"
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "Day 5: new hire completes the short Week 1 feedback in Darwinbox or tells the manager directly what was missing.",
+       "owner": "Employee",
+       "when": "Day 5"
+      }
+     ]
+    },
+    {
+     "title": "Manager responsibilities",
+     "items": [
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "Be there on Day 1, or name a delegate at your level, and hold the welcome 1:1 in person or on video."
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Keep access need-based: request only what the first 90 days require, and never share your credentials or let the hire use a teammate's account while access is pending."
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "Write down role expectations and 30/60/90 goals in Week 1. Where probation applies, also write the confirmation criteria and get them acknowledged (essential in China and Vietnam)."
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "Protect non-exempt hires' hours: setup, reading and training are paid working time, and there is no off-the-clock work before Day 1."
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "Hold a 10-minute daily check-in in Week 1 and schedule the Day 30 check-in (T-ONBOARD-PLAN)."
+      },
+      {
+       "id": "i32",
+       "type": "note",
+       "text": "Don't ask about citizenship, visa status, family plans, health or religion in 'getting to know you' conversations. Export questions go through Trade Compliance only."
+      }
+     ]
+    },
+    {
+     "title": "Buddy responsibilities",
+     "items": [
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Meet the hire on Day 1, hold a 15-minute daily check-in during Week 1, then weekly until Day 30."
+      },
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "Walk through the repository, build, regressions, CI, bug tracker and team conventions; pair on the starter task without doing it for them."
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Explain the unwritten norms: who decides what, meeting etiquette, how to ask for help, how design-review feedback is given and received."
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "Respect access limits: never share controlled data, screens or repository contents beyond what the hire is cleared for, and ask Trade Compliance if unsure."
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Escalate blockers (missing access, licenses, equipment) to the manager the same day, and any concern the hire raises (harassment, safety, ethics) to the manager or HR immediately."
+      },
+      {
+       "id": "i38",
+       "type": "note",
+       "text": "The buddy is a peer guide, not a supervisor, and does not assess performance or contribute to probation decisions."
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Front-load what gates access (PIIA, TCP acknowledgment, lab safety) and what makes the first task possible; move slide-heavy orientation later in the month.",
+    "The first task must be real, small and on cleared systems only. A hire on a restricted scope gets a task from the unflagged work list, not a waiting period.",
+    "Remote hires: ship equipment by Day -3, run every block by video, pick a buddy in the same time zone, and replace lab time with remote bench or VDI access.",
+    "Non-exempt hires (lab technicians, test operators): all Week 1 activities are paid time; keep them within scheduled hours and record meal and rest breaks.",
+    "Some sites have heavy legal Day 1 steps (Taiwan insurance enrollment, China contract signature, Germany safety instruction, Vietnam contract and OSH induction); move the IT block to make room rather than skipping them.",
+    "Use the same agenda for everyone at the same level. Inconsistent onboarding shows up later in probation disputes and engagement results."
+   ],
+   "countryNotes": {
+    "us": "Schedule I-9 document review on Day 1 so Section 2 is done by Day 3, collect the W-4 and any state form, and get the insider trading acknowledgment before equity-portal access.",
+    "us-ca": "Give the SB 294 notice and emergency-contact designation on Day 1 and schedule harassment training within 6 months. IIPP, WVPP and HazCom training must come before lab work, with SB 513 training records.",
+    "us-co": "Deliver the HFWA and FAMLI notices and the harassment-prevention program acknowledgment in Week 1, since the POWR Act defense depends on a documented program. Hand back any ID used for the I-9 the same day (HB 26-1283).",
+    "us-nc": "Open the E-Verify case within 3 business days where the company has 25+ NC employees, and collect acknowledgment of the written wage, PTO and bonus policies in Week 1. OSHANC hazard communication and chemical hygiene training come before lab access.",
+    "us-tx": "Give the workers' comp coverage notice with the W-4 and I-9 on Day 1, obtain CUBI consent before any biometric badge enrollment, and cover the weapons and parking-lot policy in orientation.",
+    "us-wa": "Deliver the paid sick leave notice (and Seattle notices) on Day 1 and the Accident Prevention Program orientation before lab work. Recording any Day 1 session needs all-party consent.",
+    "ca": "Collect the SIN (within 3 days) and TD1 forms on Day 1. Ontario hires get the ESA poster and disconnecting and e-monitoring policies within 30 days plus AODA and OHS awareness training; BC hires get worker orientation before starting work.",
+    "de": "Safety instruction must happen before work starts (§12 ArbSchG); hand over the privacy notice and the AGG complaint-office and HinSchG channel details. Where a works council exists, onboarding tools and surveys may be co-determined.",
+    "il": "Collect Form 101 and the pension-fund choice in Week 1 and hand over the sexual-harassment bylaw and commissioner details. Include the site's protected spaces and Home Front Command alert procedure in the Day 1 tour.",
+    "in": "Collect Form 11/UAN and nominations on Day 1, verify original certificates and return them the same day (Karnataka), and schedule POSH induction in Week 1.",
+    "tw": "Insurance enrollment must be effective on Day 1. Deliver the work rules, harassment and bullying complaint channels and general OSH training (typically at least 3 hours) in Week 1, in bilingual form.",
+    "cn": "Sign the labor contract and hand over the handbook for acknowledgment on Day 1, and have the manager give the written probation criteria for acknowledgment in Week 1. Arrange occupational health exams before lab or test work with exposure.",
+    "vn": "Sign the labour contract before work starts, deliver the registered internal labour regulations and OSH induction training before lab access, and diarize the probation end date (maximum 60 days for degree-level roles)."
+   },
+   "processes": [
+    "ON-04"
+   ],
+   "policies": [
+    "POL-45",
+    "POL-51",
+    "POL-18",
+    "POL-47",
+    "POL-05",
+    "POL-01"
+   ]
+  },
+  {
+   "id": "T-PROBATION-REVIEW",
+   "name": "Probation and confirmation review",
+   "category": "Onboard",
+   "format": "form",
+   "purpose": "Structures the mid-point and final review of a probation or introductory period: the criteria set at hire, evidence, a rating against expectations and a decision to confirm, extend or end employment. It builds in each country's rules on probation length, extension, notice and documentation, so the outcome is lawful and defensible where probation matters most (China, Vietnam, Germany, India, Taiwan).",
+   "audience": "Hiring managers, HRBPs, Legal and Employee Relations (for any non-confirmation), People Ops (letters and HRIS status).",
+   "when": "Mid-probation review at the halfway point; final review at least 10 business days before probation ends, earlier where the law requires (China before expiry, Germany by about month 5, Canada before month 3, Vietnam within the statutory maximum).",
+   "owner": "Manager (review); HRBP (decision check); People Ops (letters)",
+   "sections": [
+    {
+     "title": "Employee and probation details",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Employee, ID, job title and level, manager, HRBP, entity and work location (country and state)"
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Start date, contract type and term, probation length as written in the contract, probation end date",
+       "detail": "China: 1 month (contract of 3 months to under 1 year), 2 months (1 to under 3 years), 6 months (3+ years or open-ended). Vietnam: 60 days for degree-level roles, 30 for technicians, 180 for enterprise managers. Germany: up to 6 months. Elsewhere: as contracted."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Probation type in this country: statutory / contractual only / none (US introductory period)"
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Confirmation criteria given at hire, and the date the employee acknowledged them",
+       "detail": "Attach the signed criteria. In China a probation exit is lawful only against criteria disclosed and acknowledged at hire."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Protected-status check (HRBP only): leave taken, accommodation requests, pregnancy, complaints or other protected activity during probation",
+       "detail": "Any 'yes' needs HRBP and Legal review before a non-confirmation."
+      },
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Mid-probation review date and the written summary shared with the employee"
+      }
+     ]
+    },
+    {
+     "title": "Assessment against expectations",
+     "intro": "Rate each area against the level expectations and the acknowledged criteria using dated examples. Rate only time worked.",
+     "items": [
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Technical delivery: quality and completion of assigned work (e.g., starter task, owned block or test plan, bring-up task)",
+       "detail": "Exceeds / Meets / Partly meets / Does not meet, with dated evidence: deliverables, review outcomes, schedule."
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Technical knowledge and learning: ramp-up on tools, flows, codebase and domain relative to the level"
+      },
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Collaboration and communication: design-review participation, responsiveness, work with cross-functional partners"
+      },
+      {
+       "id": "i10",
+       "type": "field",
+       "text": "Compliance and conduct: required training completed, TCP and data-handling rules followed, working-time rules followed",
+       "detail": "Count only unexcused absence. Never count protected leave, statutory sick leave or reserve duty."
+      },
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Each acknowledged criterion: met / not met, with evidence"
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Overall: Meets or exceeds / Partly meets / Does not meet"
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Employee self-assessment and comments (optional; attach)"
+      },
+      {
+       "id": "i14",
+       "type": "note",
+       "text": "Evidence must be specific and dated, e.g., 'Missed the agreed 15 May date for the lint-clean handoff of block X; two review cycles needed', not 'slow to ramp'. General impressions and 'culture fit' comments are not evidence."
+      }
+     ]
+    },
+    {
+     "title": "Decision",
+     "items": [
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "Recommendation: Confirm / Extend / End employment (not confirmed)"
+      },
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "If confirming: effective date and any changes that follow confirmation (notice period, benefits, eligibility)",
+       "detail": "India: a confirmation letter is standard, and notice terms often change on confirmation."
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "If extending: legal basis, new end date, criteria still to be met, support to be given",
+       "detail": "Only where the contract and law allow: typically once in India; never beyond the statutory maximum in China, and only one probation per employer; not beyond 6 months in Germany; not beyond the statutory cap in Vietnam; in Canada an extension does not delay ESA rights after 3 months."
+      },
+      {
+       "id": "i18",
+       "type": "field",
+       "text": "If ending: statutory ground relied on, notice or pay in lieu, any severance, Legal/ER sign-off reference"
+      },
+      {
+       "id": "i19",
+       "type": "field",
+       "text": "HRBP check: outcome tested against the evidence, the country rules and how similar hires were treated (initials, date)",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i20",
+       "type": "field",
+       "text": "Approvals: manager, skip-level manager, HRBP; Legal for every non-confirmation outside the US"
+      }
+     ]
+    },
+    {
+     "title": "Notice and documentation rules by country",
+     "intro": "Check the row for the work location before the decision is communicated.",
+     "items": [
+      {
+       "id": "i21",
+       "type": "note",
+       "text": "China: a probation dismissal (LCL Art. 39(1)) needs evidence of failing criteria disclosed and acknowledged at hire, written reasons, prior notice to the union (Art. 43) and delivery before probation expires. Probation cannot be extended past the statutory maximum or repeated with the same employer."
+      },
+      {
+       "id": "i22",
+       "type": "note",
+       "text": "India: issue a written confirmation letter, or an extension letter restating the criteria and new date. If confirmation is not automatic under the contract, diarize the end date to avoid 'deemed confirmation' disputes; standing orders govern workers where they apply."
+      },
+      {
+       "id": "i23",
+       "type": "note",
+       "text": "Vietnam: either side may end employment during probation without notice or compensation, but the employer must notify the result in writing when probation ends (LC Art. 27). One probation per job, at least 85% of salary, within the Art. 25 maximum."
+      },
+      {
+       "id": "i24",
+       "type": "note",
+       "text": "Germany: the dismissal must be received before the 6-month KSchG waiting period ends, with 2 weeks' notice during probation, after a §102 BetrVG works council hearing (the council has 1 week), as a wet-ink signed letter. Pregnancy protection applies from Day 1, so decide by about month 5."
+      },
+      {
+       "id": "i25",
+       "type": "note",
+       "text": "Israel: there is no statutory probation. Notice accrues from Day 1 (1 day per month of service in months 1-6), and a genuine hearing (shimua) with a written invitation and time to prepare is required before a probation exit."
+      },
+      {
+       "id": "i26",
+       "type": "note",
+       "text": "Taiwan: there is no statutory probation. Ending employment at or after an agreed probation still needs an LSA Art. 11 or 12 ground (usually 11(5) incompetence, with objective standards and coaching), Art. 16 notice once tenure reaches 3 months, and pro-rated severance. Up to 10 sick days a year cannot count against the hire."
+      },
+      {
+       "id": "i27",
+       "type": "note",
+       "text": "Canada: there is no statutory probation, but ESA notice (Ontario) and compensation for length of service (BC) apply after 3 months, and a contractual probation clause limits notice only if it is clearly written. Assess suitability in good faith and document it before month 3."
+      },
+      {
+       "id": "i28",
+       "type": "note",
+       "text": "US: employment is at will. Call the period an introductory period, never promise 'permanent' status, and do not issue a 'probation passed' letter implying for-cause protection. Check retaliation windows (California's 90-day presumption) before any exit."
+      }
+     ]
+    },
+    {
+     "title": "Communication and acknowledgment",
+     "items": [
+      {
+       "id": "i29",
+       "type": "say",
+       "text": "Confirming: 'You've met the expectations we agreed when you joined, and I'm confirming your employment. Here's what I'd like you to focus on next.'"
+      },
+      {
+       "id": "i30",
+       "type": "say",
+       "text": "Extending: 'You've made progress, but [criterion] isn't met yet. We're extending the review period to [date]. Here is exactly what needs to happen and the support you'll get.'"
+      },
+      {
+       "id": "i31",
+       "type": "note",
+       "text": "For a non-confirmation, don't improvise. Use the approved local script and letter from Legal/ER (T-TERM-SCRIPT), and hold the meeting only after the local steps (hearing, works council, union notice) are complete."
+      },
+      {
+       "id": "i32",
+       "type": "field",
+       "text": "Employee acknowledgment of receipt (not agreement), date, language version, employee comments",
+       "detail": "Chinese version for China and Taiwan, Vietnamese for Vietnam, German where the employee needs it. Keep proof of delivery; if the employee declines to sign, record delivery with a witness."
+      },
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "People Ops updates the Darwinbox probation status and issues the confirmation, extension or outcome letter by the probation end date; the form is filed in the restricted folder.",
+       "owner": "People Ops",
+       "when": "By probation end"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Decide before the deadline, not at it. China, Germany and Canada decisions lose most of their value once the probation end date or month 3 passes.",
+    "Criteria written and acknowledged in Week 1 are the backbone of the review; without them a China or Vietnam probation exit is hard to defend.",
+    "Probation is not a free exit in Taiwan, Israel or Canada, and does not exist in US law. There, use this form as a structured introductory-period review.",
+    "Rate only time worked. Protected leave, sick leave (including Taiwan's 10 days), reserve duty, pregnancy and accommodation requests must not drive the outcome.",
+    "The HRBP compares the outcome with similar hires in the same team and level; inconsistent treatment is the main evidence of pretext.",
+    "A concern raised by the hire during probation goes to ER-01 at once and is kept separate from the probation decision, with Legal review of any non-confirmation.",
+    "The final review should never be the first time a gap is raised; a 'partly meets' at the mid-point should already have named it."
+   ],
+   "countryNotes": {
+    "us": "No statutory probation. Use this form as an introductory-period review, state that the period does not change at-will status, and avoid 'permanent employee' wording (Montana's WDEA is the exception).",
+    "us-ca": "Keep any introductory period at will. Before a non-confirmation, check the 90-day retaliation presumption (LC 98.6, 1102.5) and any CFRA, PDL or accommodation activity.",
+    "us-co": "Introductory periods must preserve at-will status. HFWA sick leave accrues from day one and cannot count against the hire, and adverse action within 90 days of a wage complaint is presumed retaliatory (HB 25-1001).",
+    "us-nc": "No statutory probation. Keep the introductory period explicitly at will and run the REDA retaliation screen (workers' comp, wage or safety complaints) before any exit.",
+    "us-tx": "Texas enforces at-will strictly, but the introductory period should still say it does not limit the right to terminate. Keep any workers' comp claim out of the assessment.",
+    "us-wa": "No statutory probation. Paid sick leave usable from day 90 cannot count against the hire, and WLAD retaliation rules and 21-day personnel-file access apply.",
+    "ca": "ESA notice (Ontario) and compensation for length of service (BC) start after 3 months, and a probation clause limits notice only if it is clearly drafted, so review and decide before month 3.",
+    "de": "Probation is capped at 6 months with 2 weeks' notice, and the KSchG waiting period is 6 months regardless. Decide by about month 5 to allow for the §102 BetrVG hearing and wet-ink delivery; probation cannot be extended.",
+    "il": "No statutory probation. Notice accrues from Day 1, a genuine hearing (shimua) is required before a probation exit, and pension contributions typically begin during this period.",
+    "in": "No statutory limit; market practice is 3-6 months, extendable once, closed by a written confirmation letter. The contract should say whether confirmation is automatic, and standing orders govern workers where they apply.",
+    "tw": "Probation is not statutory and not a free exit: termination still needs an LSA Art. 11 or 12 ground, Art. 16 notice once tenure reaches 3 months, and pro-rated severance. Decide before month 3 where possible.",
+    "cn": "Probation length is set by the contract term (1, 2 or 6 months), once per employer, at 80%+ pay. A probation exit needs evidence against acknowledged criteria, prior union notice and delivery before expiry.",
+    "vn": "Maximum 60 days for degree-level roles (30 for technicians, 180 for enterprise managers), once per job, at 85%+ pay. Either side can end probation without notice, but the employer must notify the result in writing when it ends."
+   },
+   "processes": [
+    "ON-04"
+   ],
+   "policies": [
+    "POL-21",
+    "POL-42",
+    "POL-53",
+    "POL-13",
+    "POL-08"
+   ]
+  },
+  {
+   "id": "T-GOALS",
+   "name": "Goal-setting and check-in template",
+   "category": "Perform",
+   "format": "form",
+   "purpose": "Captures 3-5 measurable goals linked to team objectives, one development goal and a quarterly check-in record for each employee. The dated, factual record becomes the evidence base for the annual review (PD-02) and, if needed, a PIP (PD-03).",
+   "audience": "Employees (draft and update goals), managers (approve goals and hold check-ins), HRBPs (quality sampling).",
+   "when": "Goals within 30 days of the cycle start, a new hire's start date or a transfer; check-ins at least quarterly; goal changes whenever priorities materially shift.",
+   "owner": "Manager (approval and check-ins); employee (drafting and updates); People Ops (cycle setup)",
+   "sections": [
+    {
+     "title": "Header",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Employee, ID, job title and level, manager, department, work location, cycle (e.g., FY2027 H1)"
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Team objectives this cycle (from the manager's cascade)",
+       "detail": "3-5 team objectives, e.g., 'Tape out the X controller on schedule with zero critical escapes.'"
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Cycle adjustments: mid-cycle start date, planned leave, part-time schedule, pro-rating",
+       "detail": "Goals are pro-rated for mid-cycle hires, transfers and extended leave, and leave periods are excluded from assessment."
+      }
+     ]
+    },
+    {
+     "title": "Individual goals (3-5)",
+     "intro": "Each goal names an outcome, a measure and a date, and links to a team objective. Weights total 100%.",
+     "items": [
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Goal 1: outcome statement",
+       "detail": "An outcome, not an activity. Good: 'Close timing on block A at all sign-off corners by 30 June with no ECOs after freeze.' Weak: 'Work on timing closure.'"
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Goal 1: measures and target",
+       "detail": "E.g., functional coverage at least 98% and code coverage at least 95%; test time per unit cut 15%; zero P1 escapes to silicon."
+      },
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Goal 1: due date and milestones"
+      },
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Goal 1: team objective it supports, and weight (%)"
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Goal 2: outcome, measures, date, alignment, weight"
+      },
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Goal 3: outcome, measures, date, alignment, weight"
+      },
+      {
+       "id": "i10",
+       "type": "field",
+       "text": "Goals 4 and 5 (optional): outcome, measures, date, alignment, weight"
+      },
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Dependencies and risks outside the employee's control (e.g., foundry PDK drop, customer spec freeze, EDA license availability)",
+       "detail": "Recorded so a check-in can adjust the target rather than hold the employee responsible."
+      },
+      {
+       "id": "i12",
+       "type": "check",
+       "text": "Quality check before approval: specific, measurable, achievable at this level, linked to a team objective, dated, and comparable in stretch with peers at the same level.",
+       "owner": "Manager",
+       "when": "By Day 30"
+      },
+      {
+       "id": "i13",
+       "type": "note",
+       "text": "Don't set goals that depend on unrecorded overtime for non-exempt staff, skipped meal or rest breaks, attendance metrics, or telemetry such as keystrokes or active-screen time."
+      }
+     ]
+    },
+    {
+     "title": "Development goal",
+     "items": [
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Development goal: the skill or capability to build (e.g., learn formal verification for the arbiter blocks, lead a design review, mentor an intern)"
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "Actions and support: course, stretch assignment, mentor, conference, rotation",
+       "detail": "Use PD-07 learning programs where there is a cost or tuition."
+      },
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Evidence of progress and target date"
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "Career interests the employee wants the manager to know (optional)",
+       "detail": "E.g., interest in the manager track or a move to another team or site; feeds PD-05 talent review."
+      }
+     ]
+    },
+    {
+     "title": "Quarterly check-ins",
+     "intro": "At least one documented check-in per quarter, on top of regular 1:1s. Notes are dated, factual and job-related.",
+     "items": [
+      {
+       "id": "i18",
+       "type": "prompt",
+       "text": "What progress have you made on each goal since our last check-in? Status: On track / At risk / Off track / Done.",
+       "detail": "Ask for evidence: commits, coverage reports, review sign-offs, yield or test data."
+      },
+      {
+       "id": "i19",
+       "type": "prompt",
+       "text": "What is blocking you, and what do you need from me or other teams?",
+       "detail": "Record the support offered (licenses, compute, reviewer time, a clearer spec) and follow up next time."
+      },
+      {
+       "id": "i20",
+       "type": "prompt",
+       "text": "Have priorities changed? Should any goal be revised, dropped or re-weighted?",
+       "detail": "Material changes go through the goal-change workflow with a reason, so the record shows why the target moved."
+      },
+      {
+       "id": "i21",
+       "type": "prompt",
+       "text": "What went well that we should recognize or repeat?",
+       "detail": "Specific positive feedback belongs in the record as much as concerns do."
+      },
+      {
+       "id": "i22",
+       "type": "prompt",
+       "text": "How are you progressing on your development goal, and is the support working?"
+      },
+      {
+       "id": "i23",
+       "type": "prompt",
+       "text": "What feedback do you have for me on how I'm supporting you?"
+      },
+      {
+       "id": "i24",
+       "type": "field",
+       "text": "Check-in record: date, attendees, status per goal, feedback given (strengths and concerns with examples), support agreed, next check-in date",
+       "owner": "Manager",
+       "when": "Quarterly"
+      },
+      {
+       "id": "i25",
+       "type": "field",
+       "text": "Employee comments on the check-in (optional)"
+      }
+     ]
+    },
+    {
+     "title": "Goal changes and manager notes",
+     "items": [
+      {
+       "id": "i26",
+       "type": "field",
+       "text": "Goal change log: date, goal, old and new target, reason (re-prioritization, re-org, leave, dependency slip), approver"
+      },
+      {
+       "id": "i27",
+       "type": "field",
+       "text": "Manager notes: dated observations of performance with examples, positive and negative",
+       "detail": "Write as if the employee will read them; in many locations they can (CA, CO and WA personnel-file rights; GDPR, PIPL and DPDP access rights)."
+      },
+      {
+       "id": "i28",
+       "type": "note",
+       "text": "Keep notes to job-related facts. Never record health, pregnancy or family plans, religion, age, accent, national origin, visa status, union activity or leave use as a performance factor."
+      },
+      {
+       "id": "i29",
+       "type": "field",
+       "text": "End-of-cycle summary: result per goal (Met / Partly met / Not met) with evidence, carried into the PD-02 review form"
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "Goals and check-ins locked at cycle end and transferred to the review; later changes need HRBP approval.",
+       "owner": "People Ops",
+       "when": "Cycle end"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Three to five goals is right for engineers; more turns goals into a task list.",
+    "Write outcomes, not activities, and choose measures the employee can influence. A tape-out owned by 40 people needs an individual slice.",
+    "Goals count toward the review only after manager approval, and edits after approval are logged with a reason.",
+    "Check-in notes are evidence: dated, factual and shared with the employee. A surprise at the annual review means the check-ins failed.",
+    "Adjust goals for leave and schedule changes instead of letting targets quietly fail; leave periods are excluded from assessment.",
+    "AI goal-suggestion or productivity-scoring features are used only after DS-06 review, and never to generate ratings.",
+    "Sales and FAE roles use the CO-04 quota plan as the main goal and add one or two non-quota goals, including compliance behaviors."
+   ],
+   "countryNotes": {
+    "us": "No statutory rules. Keep goals job-related; NLRA Section 7 protects non-supervisory employees who discuss workload and pay. AI goal or productivity scoring can trigger IL HB 3773 and CO SB 26-189 notice duties.",
+    "us-ca": "Goals and check-in notes are personnel-file records employees can inspect within 30 days (LC 1198.5). Never set goals that require non-exempt staff to work off the clock or skip meal and rest breaks.",
+    "us-co": "Goal records are part of the personnel file employees may inspect at least once a year (C.R.S. 8-2-129). From 1 Jan 2027, AI tools that score goals for consequential decisions need SB 26-189 notices.",
+    "us-nc": "No state variation. Where goals drive a bonus or commission, the eligibility and forfeiture rules must be in the written plan to be enforceable.",
+    "us-tx": "No Texas-specific rule. AI goal or productivity scoring falls under TRAIGA's intent standard, with no employee notice duty.",
+    "us-wa": "Employees, and former employees for 3 years, can obtain goal and check-in records within 21 days, so keep them factual. Don't set goals that lead non-exempt staff to skip meal and rest breaks.",
+    "ca": "Clear, acknowledged expectations are the starting point for any later performance or cause argument (McKinley v. BC Tel). Ontario's electronic monitoring policy must disclose any telemetry used to track goals.",
+    "de": "Goal systems that feed ratings or pay are co-determined (§§87(1) no.6, 94(2) BetrVG). Where goals drive a bonus, set them on time; failing to set targets can make the employer liable as if they had been fully met.",
+    "il": "No statutory process, but dated goals and check-ins are what the Labor Courts look for when a performance dismissal is challenged. Pro-rate goals for reserve duty and parental leave.",
+    "in": "Many individual-contributor engineers are 'workers' under the Labour Codes, so written goals and dated check-ins underpin any later performance action. Align timing with the April-March cycle where it is used locally.",
+    "tw": "Issue goals in writing (bilingual, Chinese prevailing), because LSA Art. 11(5) cases need objective standards communicated in advance. Keep attendance out of goals; up to 10 sick days a year cannot lower appraisals.",
+    "cn": "Objective, communicated standards are a precondition for an Art. 40(2) incompetence process, so have employees e-confirm their goals. Performance rules that affect pay or discipline go through democratic procedure (LCL Art. 4).",
+    "vn": "Written goals feed the task-completion criteria needed before any termination for regular failure to complete work (LC Art. 36(1)(a)). Keep goals in Vietnamese or bilingual, with the employee's acknowledgment."
+   },
+   "processes": [
+    "PD-01"
+   ],
+   "policies": [
+    "POL-42",
+    "POL-50",
+    "POL-44",
+    "POL-29"
+   ]
+  },
+  {
+   "id": "T-REVIEW-FORM",
+   "name": "Performance review form (self and manager)",
+   "category": "Perform",
+   "format": "form",
+   "purpose": "The annual review form: employee self-assessment, manager assessment of results and competencies against level expectations with evidence, a rating on a defined scale, a development plan, calibration notes and acknowledgment. It is built so ratings are evidence-based, consistent across teams and defensible in every jurisdiction, including for employees on protected leave.",
+   "audience": "Employees (self-assessment), managers (assessment and rating), HRBPs and Dept Heads (calibration), Legal and Employee Relations (high-risk review).",
+   "when": "Annual cycle (optional mid-year check): self-assessment in weeks 0-2, manager draft by week 4, calibration in weeks 4-7, conversation within 3 weeks of the ratings lock.",
+   "owner": "Manager (assessment and rating); People Ops (form and cycle); HRBP (calibration)",
+   "sections": [
+    {
+     "title": "Header and eligibility",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Employee, ID, job title, level, job family, manager, department, work location, review period"
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Eligibility: Rated / Not rated (hired after the cut-off, or less than about 3 months worked in the cycle because of leave)",
+       "detail": "'Not rated' is not a penalty. Bonus is handled under the plan rules (CO-03)."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Protected leave or accommodation during the period (HRBP flag only; not visible to calibration participants)",
+       "detail": "Rate only time worked. The flag triggers special handling and Legal/ER review of any below-expectations rating before lock."
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Review language (English, Traditional or Simplified Chinese, German, Hebrew, Vietnamese as needed)"
+      }
+     ]
+    },
+    {
+     "title": "Self-assessment (employee)",
+     "items": [
+      {
+       "id": "i5",
+       "type": "question",
+       "text": "What were your most important results this period? For each goal, give the outcome and the evidence (e.g., coverage reports, tape-out milestones, yield data, customer feedback)."
+      },
+      {
+       "id": "i6",
+       "type": "question",
+       "text": "Which result are you most proud of, and what was your specific contribution?"
+      },
+      {
+       "id": "i7",
+       "type": "question",
+       "text": "What didn't go as planned, what did you learn, and what would you do differently?"
+      },
+      {
+       "id": "i8",
+       "type": "question",
+       "text": "How did you work with others (design reviews, cross-functional partners, mentoring, helping teammates)? Give examples."
+      },
+      {
+       "id": "i9",
+       "type": "question",
+       "text": "What support, tools or changes would help you be more effective next period?"
+      },
+      {
+       "id": "i10",
+       "type": "question",
+       "text": "What do you want to develop next year, and what kind of work would help you grow?"
+      },
+      {
+       "id": "i11",
+       "type": "note",
+       "text": "Employees on leave during the self-assessment window may submit on return; their deadline pauses."
+      }
+     ]
+    },
+    {
+     "title": "Manager assessment",
+     "intro": "Rate results and each competency against the written expectations for the employee's level, citing dated evidence from check-ins. Peer input informs the manager but is never a vote.",
+     "items": [
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Results against goals: for each goal, Met / Partly met / Not met, with evidence and any agreed adjustments"
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Technical expertise and quality: design correctness, verification rigor, first-pass success, code or schematic quality",
+       "detail": "Rate 1-5 with 2-3 evidence bullets, as for each competency below."
+      },
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Execution and ownership: planning, hitting milestones, managing risks and dependencies"
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "Problem solving and innovation: debug, root cause, improving flows or methods"
+      },
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Collaboration and communication: design reviews, documentation, cross-team work, customer interaction for FAEs"
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "Leadership and influence, scaled to level: mentoring and technical direction; people leadership for managers"
+      },
+      {
+       "id": "i18",
+       "type": "field",
+       "text": "Compliance and integrity: export and TCP rules, data handling, safety, required training",
+       "detail": "Rate conduct only. Whether a license was needed or pending is never a factor."
+      },
+      {
+       "id": "i19",
+       "type": "field",
+       "text": "Peer feedback summary (themes only, no attribution)"
+      },
+      {
+       "id": "i20",
+       "type": "field",
+       "text": "Overall rating (1-5) and a 3-5 sentence rationale linking results and competencies"
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "Manager attestation: this rating is my decision, based on the evidence above. I reviewed and edited any AI-drafted text, and I entered no health, leave or peer-identifying data into an AI tool.",
+       "owner": "Manager",
+       "when": "Before calibration"
+      }
+     ]
+    },
+    {
+     "title": "Rating scale definitions",
+     "items": [
+      {
+       "id": "i22",
+       "type": "note",
+       "text": "5 Exceptional: consistently exceeds all expectations for the level, with results well beyond goals and impact beyond the team (e.g., rescued a tape-out, built a flow others adopted). Expect a small share of employees."
+      },
+      {
+       "id": "i23",
+       "type": "note",
+       "text": "4 Exceeds: exceeds expectations on most goals and competencies; strong, reliable results with some impact beyond own scope."
+      },
+      {
+       "id": "i24",
+       "type": "note",
+       "text": "3 Meets: fully meets the expectations of the level with solid, dependable results. This is the expected rating for most people and a positive outcome."
+      },
+      {
+       "id": "i25",
+       "type": "note",
+       "text": "2 Partly meets: meets some expectations but has clear gaps in results or competencies that must close. Documented feedback should already exist."
+      },
+      {
+       "id": "i26",
+       "type": "note",
+       "text": "1 Does not meet: significant gaps against expectations despite feedback and support. Requires dated evidence from check-ins and HRBP review before release."
+      },
+      {
+       "id": "i27",
+       "type": "note",
+       "text": "Not rated: hired after the cut-off, or less than about 3 months worked because of leave. Never default an employee on leave to 3, and never penalize them."
+      }
+     ]
+    },
+    {
+     "title": "Development plan",
+     "items": [
+      {
+       "id": "i28",
+       "type": "field",
+       "text": "Strengths to build on (2-3)"
+      },
+      {
+       "id": "i29",
+       "type": "field",
+       "text": "Development areas (1-3), with specific actions, support and dates"
+      },
+      {
+       "id": "i30",
+       "type": "field",
+       "text": "Career aspirations discussed and readiness for the next step (ready now / 1-2 years / develop in role)",
+       "detail": "Feeds PD-04 and PD-05. Don't promise a promotion or pay outcome."
+      },
+      {
+       "id": "i31",
+       "type": "field",
+       "text": "Goals carried into the next cycle (link to T-GOALS)"
+      }
+     ]
+    },
+    {
+     "title": "Calibration notes",
+     "intro": "The HRBP records outcomes and reasons, not the discussion. Notes are discoverable and are not shared with the employee beyond the final rating.",
+     "items": [
+      {
+       "id": "i32",
+       "type": "field",
+       "text": "Proposed rating, calibrated rating, and the evidence-based reason for any change"
+      },
+      {
+       "id": "i33",
+       "type": "field",
+       "text": "Legal/ER review of below-expectations ratings in the high-risk population (protected leave, pending accommodation, protected activity in the last 12 months, China or Taiwan incompetence path): reviewer and date"
+      },
+      {
+       "id": "i34",
+       "type": "note",
+       "text": "Don't record comments about age, family plans, accent, health, national origin, visa status or 'culture fit'. Record the evidence and the decision."
+      }
+     ]
+    },
+    {
+     "title": "Review conversation and acknowledgment",
+     "items": [
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Conversation held within 3 weeks of the lock, in person or by video, in the employee's working language; below-expectations conversations prepared with the HRBP.",
+       "owner": "Manager",
+       "when": "Weeks 8-11"
+      },
+      {
+       "id": "i36",
+       "type": "field",
+       "text": "Employee comments (optional, within 10 business days)"
+      },
+      {
+       "id": "i37",
+       "type": "field",
+       "text": "Employee acknowledgment of receipt (not agreement), date, manager signature",
+       "detail": "In China and Taiwan the acknowledgment is key evidence; if the employee refuses to sign, the manager records delivery with a witness."
+      },
+      {
+       "id": "i38",
+       "type": "note",
+       "text": "Appeals go to the skip-level manager and HRBP within 30 days. Allegations of discrimination or retaliation go to ER (ER-01)."
+      },
+      {
+       "id": "i39",
+       "type": "note",
+       "text": "For employees on or returning from protected leave: hold the conversation after they return, rate only time worked, and never give the leave as a reason for the rating."
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Rate against the written level expectations, not against teammates; the scale definitions are the standard used in calibration.",
+    "Every rating of 1 or 2 needs dated evidence from the year's check-ins. A first-time surprise at review time is a process failure.",
+    "Employees on protected leave (FMLA, CFRA, PDL, parental leave, reserve duty, Mutterschutz and Elternzeit, maternity leave) are rated only on time worked or not rated. Leave is never a factor, and the HRBP flags these reviews for Legal/ER check before lock.",
+    "AI may help draft text only in approved tools under POL-50. The manager owns the words and the rating; in California, keep ADS inputs and outputs for 4 years.",
+    "Hold the review and development conversation separately from the pay letter where the calendar allows.",
+    "In China, Taiwan and Vietnam a low rating can be the first exhibit in an incompetence process, so use objective criteria, the local-language version and a signed acknowledgment.",
+    "Reviews are personnel records employees can obtain (CA within 30 days, WA within 21 days, CO annually, plus GDPR, PIPL and DPDP access rights). Write accordingly."
+   ],
+   "countryNotes": {
+    "us": "FMLA leave cannot count against the employee (29 CFR 825.220(c)), so rate on time worked. Check calibrated outcomes for adverse impact, including by visa status, since Muldrow lowered the harm threshold.",
+    "us-ca": "CFRA and PDL leave cannot be held against the employee, and a low rating within 90 days of protected activity carries a retaliation presumption. CRD ADS rules cover AI-assisted ratings (keep records 4 years), and reviews must be produced within 30 days on request.",
+    "us-co": "FAMLI and HFWA leave cannot count against the employee, and adverse action within 90 days of a wage complaint is presumed retaliatory. CADA covers all employers, and ADMT used in ratings needs SB 26-189 notices from 2027.",
+    "us-nc": "No state rule on ratings. Where ratings drive bonus or commission payouts, eligibility and forfeiture terms must be in the written plan (G.S. 95-25.7, 95-25.13).",
+    "us-tx": "No personnel-file access statute, but ratings are the key evidence in TCHRA claims (charge within 180 days, 300 for sexual harassment). Document any AI-assisted rating tools in case of a TRAIGA inquiry.",
+    "us-wa": "Reviews must be produced within 21 days on request, and employees may add a rebuttal (RCW 49.12.250). Paid sick leave, PFML and domestic-violence leave cannot count against the employee.",
+    "ca": "There is no at-will employment, so an acknowledged review history is the basis of any later performance or cause argument. Low ratings linked to leave, disability or family status invite human rights complaints, and Ontario's e-monitoring policy must disclose data used in ratings.",
+    "de": "Rating scales and calibration rules need works council consent (§94(2) BetrVG), and performance software is co-determined. Employees may inspect ratings and add statements (§83), and Mutterschutz, Elternzeit and sickness must not be penalised.",
+    "il": "Ratings must not penalise reserve duty (including a spouse's), pregnancy, maternity leave or fertility treatment. Keep review and calibration records at least 5 years for discrimination claims.",
+    "in": "No statutory appraisal process; explain increment timing if the local April-March cycle differs. Ratings later used for a worker's dismissal must survive natural-justice scrutiny, and rating-linked pay must be gender-neutral (Code on Wages s.3).",
+    "tw": "From 2026, up to 10 sick days a year cannot lead to an adverse rating, and pregnancy or parental leave cannot be penalized. Deliver reviews in Traditional Chinese or bilingual form and keep the acknowledgment.",
+    "cn": "Adopt the rating scale and its consequences through democratic procedure and get each review acknowledged in writing. No rating-driven adverse action against Art. 42 protected employees; moving review data to US systems needs PIPL notice and separate consent.",
+    "vn": "Ratings used for pay or exit decisions should rest on published task-completion criteria issued after union consultation. No rating-driven adverse action against employees who are pregnant, on maternity leave or raising a child under 12 months."
+   },
+   "processes": [
+    "PD-02"
+   ],
+   "policies": [
+    "POL-42",
+    "POL-50",
+    "POL-08",
+    "POL-35",
+    "POL-46",
+    "POL-24"
+   ]
+  },
+  {
+   "id": "T-CALIBRATION",
+   "name": "Calibration session guide",
+   "category": "Perform",
+   "format": "guide",
+   "purpose": "A facilitator's guide for rating and promotion calibration sessions: pre-work, a script, discussion prompts, bias checks, a distribution review against guidance (not a forced curve), documentation rules and follow-up actions. It produces consistent, evidence-based ratings and promotion decisions and a clean record of how they were reached.",
+   "audience": "HRBPs (facilitators), Dept Heads (decision owners), people managers (participants), HR Analytics, Legal/ER for high-risk cases.",
+   "when": "Weeks 4-7 of the annual review cycle (PD-02) and each promotion cycle (PD-04); allow 90-120 minutes per group of roughly 40-80 employees.",
+   "owner": "HRBP (facilitation and notes); Dept Head (final decisions)",
+   "sections": [
+    {
+     "title": "Pre-work (1-2 weeks before)",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Managers enter proposed ratings and promotion nominations in Darwinbox with 3-5 evidence bullets each by the deadline. No evidence, no discussion slot.",
+       "owner": "Managers",
+       "when": "Week 3"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "HR Analytics prepares the pre-calibration pack: proposed distribution by org and level, and breakdowns by gender, age 40+, race/ethnicity (US, where lawfully held), leave status, visa status, location and part-time status, with four-fifths flags. China and India views are aggregated and de-identified.",
+       "owner": "HR Analytics",
+       "when": "Week 4"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "HRBP flags the high-risk population (protected leave, pending accommodation, protected activity in the last 12 months, China or Taiwan incompetence path) for Legal/ER review. These flags are not shown in the session.",
+       "owner": "HRBP",
+       "when": "Week 4"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "Circulate the level expectations, rating scale definitions, promotion criteria and agenda to participants 3 days before.",
+       "owner": "HRBP",
+       "when": "Day -3"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Confirm participants: the Dept Head, managers of the employees being discussed and the HRBP facilitator, plus an optional note-taker. No one who doesn't know the work, and no one being calibrated.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i6",
+       "type": "check",
+       "text": "Local prerequisites: in Germany the method and any distribution guidance are covered by a works council agreement (§94 BetrVG); in China the rating scale was adopted through democratic procedure; in Vietnam task-completion criteria are published.",
+       "owner": "HRBP"
+      }
+     ]
+    },
+    {
+     "title": "Facilitator script",
+     "items": [
+      {
+       "id": "i7",
+       "type": "say",
+       "text": "Thanks for coming. Our goal today is consistent, fair ratings based on evidence against our level expectations. We are not ranking people against each other."
+      },
+      {
+       "id": "i8",
+       "type": "say",
+       "text": "Everything we discuss here is confidential. Please don't share other managers' ratings or comments outside this room, and don't tell employees what was said about them. Managers communicate final ratings after the lock."
+      },
+      {
+       "id": "i9",
+       "type": "say",
+       "text": "We'll start with proposed below-expectations ratings, then exceptional and exceeds, then promotions. For each person, the manager has two minutes to summarize the evidence, and then we test it against the level criteria."
+      },
+      {
+       "id": "i10",
+       "type": "say",
+       "text": "The distribution guidance is a reference point, not a quota. If this group is different, that's fine, as long as the evidence supports it and we write down why."
+      },
+      {
+       "id": "i11",
+       "type": "say",
+       "text": "Please stick to evidence about the work. We don't discuss health, family situations, leave, age, nationality, visa status or personal life. If that comes up, I'll pause the discussion."
+      },
+      {
+       "id": "i12",
+       "type": "say",
+       "text": "Before we close, I'll read back every change and its reason, and the Dept Head will confirm the final outcomes."
+      }
+     ]
+    },
+    {
+     "title": "Discussion prompts",
+     "items": [
+      {
+       "id": "i13",
+       "type": "prompt",
+       "text": "What specific results did this person deliver against their goals, and how do we know?",
+       "detail": "Ask for artifacts: tape-out milestones, coverage numbers, bugs found or escaped, customer outcomes. Push back on adjectives."
+      },
+      {
+       "id": "i14",
+       "type": "prompt",
+       "text": "How does this compare with the written expectations for the level, rather than with others on the team?"
+      },
+      {
+       "id": "i15",
+       "type": "prompt",
+       "text": "Would we rate the same evidence the same way if it came from a different team or site?",
+       "detail": "Tests leniency and severity differences between managers and between sites such as Hsinchu, Bengaluru, Munich, Haifa, Austin and San Jose."
+      },
+      {
+       "id": "i16",
+       "type": "prompt",
+       "text": "Does this rating reflect the whole period, or mostly the last few weeks?"
+      },
+      {
+       "id": "i17",
+       "type": "prompt",
+       "text": "Is this work visible or invisible? Are we under-crediting verification, DFT, infrastructure or support work compared with architecture and customer escalations?"
+      },
+      {
+       "id": "i18",
+       "type": "prompt",
+       "text": "For a proposed 1 or 2: was the gap raised earlier in the year, with dated check-ins and support offered?",
+       "detail": "If not, the rating may still be right, but the next step is documented coaching, not a PIP."
+      },
+      {
+       "id": "i19",
+       "type": "prompt",
+       "text": "For a promotion: is the person already working at the next level consistently, against the published criteria, and is there a business need?",
+       "detail": "Check H-1B holders with Immigration before the effective date; an amended petition and a new I-129 Part 6 determination may be needed."
+      },
+      {
+       "id": "i20",
+       "type": "prompt",
+       "text": "Is anything other than performance shaping this discussion, such as schedule flexibility, leave, remote status, accent or communication style?"
+      }
+     ]
+    },
+    {
+     "title": "Bias checks",
+     "intro": "The facilitator raises these in the moment, neutrally, and records only the outcome.",
+     "items": [
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "Recency: the evidence covers the whole period, not just the last project."
+      },
+      {
+       "id": "i22",
+       "type": "check",
+       "text": "Halo and horns: one strong or weak area is not driving every competency rating."
+      },
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "Similarity and affinity: 'reminds me of myself', same school or same former employer."
+      },
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "Visibility and proximity: remote, part-time, flexible-schedule and other-site employees are judged on output, not face time."
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "Leave and caregiving: time on protected leave, reserve duty or sick leave is excluded, and 'commitment' is not inferred from leave or flexible hours."
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "Language and style: accent, English fluency or a quiet style in meetings are not treated as performance unless communication is a documented role requirement with examples."
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "Rater effects: managers who rate everyone high or everyone low are corrected to the evidence, not to the average."
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Group outcomes: at the end, review the analytics pack for any group with materially lower ratings; each flagged gap is explained by evidence or escalated to HR Analytics and Legal."
+      }
+     ]
+    },
+    {
+     "title": "Distribution review (guidance, not forced)",
+     "items": [
+      {
+       "id": "i29",
+       "type": "note",
+       "text": "Guidance: about 15-20% in the top two ratings and 5-10% below expectations, across a population large enough to be meaningful (roughly 25+). It is a sanity check, not a quota."
+      },
+      {
+       "id": "i30",
+       "type": "prompt",
+       "text": "Where the group is well outside the guidance, what evidence explains it?",
+       "detail": "E.g., a team that achieved first-pass silicon success, or a new team still ramping. Record the rationale."
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "No rating is changed only to fit the guidance; every change cites evidence."
+      },
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "Compare distributions across managers, sites and job families in the same org, and investigate outliers."
+      },
+      {
+       "id": "i33",
+       "type": "note",
+       "text": "Forced distribution needs works council agreement in Germany, and in small teams a forced curve creates arbitrary low ratings and litigation exhibits."
+      }
+     ]
+    },
+    {
+     "title": "Documentation and privacy",
+     "items": [
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "For each change, the HRBP records the employee, proposed rating, calibrated rating, evidence-based reason and decision owner. No verbatim debate, personality opinions or references to protected characteristics.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Notes are stored in the restricted Darwinbox calibration folder under the retention schedule (at least 5 years for Israel; 4 years for California ADS records).",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "Read back every change at the end and have the Dept Head confirm it.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i37",
+       "type": "note",
+       "text": "Calibration notes are discoverable in litigation and can fall within access requests (GDPR, PIPL, DPDP, CCPA). Write only what you would be comfortable having the employee and a judge read."
+      },
+      {
+       "id": "i38",
+       "type": "note",
+       "text": "Participants must not share other employees' ratings, the discussion or comparisons after the session; breaches are handled under the Code of Conduct."
+      }
+     ]
+    },
+    {
+     "title": "Post-session actions",
+     "items": [
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "Managers update evidence or ratings in Darwinbox within 2 business days.",
+       "owner": "Managers",
+       "when": "Session +2 bd"
+      },
+      {
+       "id": "i40",
+       "type": "check",
+       "text": "HR Analytics reruns the adverse-impact analysis on calibrated ratings, and flagged gaps are reviewed with Legal under privilege before the lock.",
+       "owner": "HR Analytics",
+       "when": "Week 7"
+      },
+      {
+       "id": "i41",
+       "type": "check",
+       "text": "Legal/ER signs off below-expectations ratings in the high-risk population before release.",
+       "owner": "Legal",
+       "when": "Week 7"
+      },
+      {
+       "id": "i42",
+       "type": "check",
+       "text": "The Dept Head approves; People Ops locks ratings and reconciles record counts to the comp planning tool (SOX control).",
+       "owner": "People Ops",
+       "when": "Week 8"
+      },
+      {
+       "id": "i43",
+       "type": "check",
+       "text": "HRBP prepares managers for difficult conversations and routes below-expectations ratings to documented coaching or PD-03. A PIP is never launched in the review meeting.",
+       "owner": "HRBP",
+       "when": "Weeks 8-11"
+      },
+      {
+       "id": "i44",
+       "type": "check",
+       "text": "Promotion outcomes go to Total Rewards for pay and equity under PD-04, after the Colorado internal-posting, German §99 consent and H-1B amendment checks are complete.",
+       "owner": "HRBP",
+       "when": "Before effective date"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Calibrate the bottom first: below-expectations ratings carry the most legal risk and feed PIPs and RIF selection.",
+    "Use a guidance distribution, not forced ranking. Deviations are fine when they are documented with evidence.",
+    "Protected characteristics, leave and visa status are never discussed. The analytics pack covers group outcomes so the room doesn't have to.",
+    "Keep the room small and informed: managers who know the work, the Dept Head and the HRBP.",
+    "Write notes as if they will be read in court. They may be, and employees can request them in several jurisdictions.",
+    "Promotion calibration uses the same evidence standard and the published criteria; no one promises dates or equity in the room.",
+    "In multi-country orgs, let non-US managers present in their working language and respect local prerequisites (works council agreement, China democratic procedure, Vietnam task-completion criteria)."
+   ],
+   "countryNotes": {
+    "us": "Calibration outcomes are central evidence in discrimination claims. Run adverse-impact analysis under privilege, including by visa status given EEOC, DOJ IER and DOL scrutiny, and keep promotion criteria open to all.",
+    "us-ca": "Have Legal review below-expectations ratings within 90 days of protected activity. Algorithmic calibration aids are ADS under CRD rules (keep records 4 years), and CCPA ADMT duties start 1 Jan 2027.",
+    "us-co": "Check outcomes across all CADA classes, including marital status and gender expression. Promotions are usually 'job opportunities' that must be posted to all Colorado employees, with a post-selection notice within 30 days.",
+    "us-nc": "No state calibration or posting rules. A promotion is valid new consideration for a non-compete signed by a current employee.",
+    "us-tx": "No Texas calibration or promotion-posting rules. Document the purpose and safeguards of any AI-assisted tools in case of an AG civil investigative demand under TRAIGA.",
+    "us-wa": "EPOA guarantees equal career-advancement opportunity, so calibration and promotion outcomes are discoverable, and employees offered an internal promotion can request its pay range.",
+    "ca": "Calibration notes can be produced in wrongful-dismissal and human rights proceedings. Any electronic data used in Ontario ratings must be disclosed in the e-monitoring policy.",
+    "de": "Calibration procedures and any forced distribution need a works council agreement (§94 BetrVG). Moving someone into a new pay group needs council consent above 20 employees (§99), and the council can require internal posting (§93).",
+    "il": "Keep sessions reserve-duty neutral and gender-equal, and keep calibration records at least 5 years given the discrimination limitation period.",
+    "in": "Use aggregated, de-identified analytics under the DPDP Act, and make sure rating-linked pay is gender-neutral (Code on Wages s.3). A promotion into a managerial role can change 'worker' status, so record the duties change.",
+    "tw": "Keep up to 10 sick days a year and protected leave out of the discussion. A promotion to manager does not remove overtime coverage in Taiwan.",
+    "cn": "The rating scale and any distribution guidance must have been adopted through democratic procedure and publicized. Use aggregated analytics and keep individual data in China unless transfer rules are met.",
+    "vn": "Calibrate against the published task-completion criteria. Record promotions in a contract annex with the new salary, which becomes the SI contribution base."
+   },
+   "processes": [
+    "PD-02",
+    "PD-04"
+   ],
+   "policies": [
+    "POL-42",
+    "POL-43",
+    "POL-08",
+    "POL-24",
+    "POL-46",
+    "POL-50"
+   ]
+  }
+ ]
+}

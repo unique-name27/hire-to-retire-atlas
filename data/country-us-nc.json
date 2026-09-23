@@ -1,0 +1,907 @@
+{
+  "id": "us-nc",
+  "name": "North Carolina",
+  "shortName": "North Carolina",
+  "region": "Americas",
+  "parent": "us",
+  "lastVerified": "2026-09",
+  "summary": "North Carolina is a strongly at-will, right-to-work state with no state paid sick leave, PFML, mini-WARN, pay-transparency or comprehensive privacy law, and since 1 Jul 2023 local governments may not regulate private-sector pay, benefits or leave (G.S. 95-25.1(d)). Its distinctive rules are procedural. The Wage and Hour Act requires written notice of promised wages and payday at hire and written notice at least one pay period before any pay cut (since the 2021 amendments; the old 24-hour rule is gone). Vacation, bonus and commission forfeiture rules bind only if employees were told in writing beforehand, and every deduction needs a compliant written authorization. Private employers with 25+ NC employees must E-Verify every new hire, and REDA gives workers who file workers' comp, wage-hour or safety complaints a 180-day retaliation remedy with treble damages. Non-competes are enforceable if written, signed, supported by consideration and reasonable, but courts will only strike terms, not rewrite them, and out-of-state forum clauses and jury waivers are void (G.S. 22B-3, 22B-10). California-HQ employers most often go wrong by cutting pay or changing commission plans without one pay period's written notice, deducting unreturned equipment from final pay, missing E-Verify for NC remote hires, and using California templates (no restrictive covenants, California forum) that leave NC engineering talent and trade secrets under-protected.",
+  "ratings": {
+    "termination": 2,
+    "representation": 1,
+    "privacy": 2,
+    "payTransparency": 1,
+    "workingTime": 2,
+    "leave": 1,
+    "immigration": 3,
+    "changeVelocity": 2
+  },
+  "ratingNotes": {
+    "termination": "At-will with no severance, notice or mini-WARN; the risk comes from wrongful-discharge claims based on public policy (NCEEPA, 15+ employees), REDA retaliation (treble damages for willful violations) and wage claims over final pay and vacation payout.",
+    "representation": "Right-to-work state with one of the lowest union densities in the US and a ban on public-sector bargaining contracts (G.S. 95-98); private-sector labor relations follow the NLRA only.",
+    "privacy": "No comprehensive privacy law (S757 and H462 stalled in 2025); duties come from the breach-notice law (G.S. 75-65), SSN protection (75-62), secure disposal (75-64) and the expunged-records inquiry ban. Recording needs only one party's consent.",
+    "payTransparency": "No pay-range posting, salary-history ban or pay data reporting for private employers; Executive Order 93 (2019) bars salary-history use by state agencies only.",
+    "workingTime": "FLSA overtime and $7.25 minimum wage with no daily overtime or adult break rules, but the Wage and Hour Act's written-notice, deduction and forfeiture rules apply to all employers and create liquidated-damages exposure.",
+    "leave": "No PSL, PFML or state FMLA. Only narrow unpaid protections: 4 hours of school involvement leave a year, jury duty, domestic-violence court time and National Guard state duty; local leave mandates are preempted.",
+    "immigration": "State E-Verify mandate for private employers with 25+ NC employees, enforced by NCDOL complaint investigations ($10,000 penalty for not filing a corrective affidavit). 2025-26 immigration laws (HB 318, SB 153) target sheriffs and benefits, and HB 1214 would add random E-Verify audits.",
+    "changeVelocity": "Moderate: the 2025-26 enactments that affect employers are mostly tax, REDA procedure and workers' comp benefits; bills on E-Verify, non-competes and privacy are pending, and the 2027 long session starts in January."
+  },
+  "keyFacts": [
+    {
+      "label": "Employment model",
+      "value": "At-will. Exceptions: wrongful discharge in violation of public policy (Sides v. Duke University, 1985; Coman v. Thomas Manufacturing, 1989), including the NC Equal Employment Practices Act (G.S. 143-422.2, 15+ employees) as a public-policy source; REDA retaliation (G.S. 95-240 et seq.); and specific anti-retaliation statutes (jury duty, school leave, domestic-violence relief, National Guard, lawful products, genetic and sickle-cell testing). Handbooks with disclaimers generally do not create contracts."
+    },
+    {
+      "label": "Contracts & offer letters",
+      "value": "No written contract is required, but the Wage and Hour Act requires written notice at hire of promised wages and the day and place of payment, plus written or posted wage policies (G.S. 95-25.13). Non-competes must be in writing and signed (G.S. 75-4). Clauses requiring suit or arbitration outside NC are void for contracts entered in NC (G.S. 22B-3), and pre-dispute jury waivers are unenforceable (G.S. 22B-10)."
+    },
+    {
+      "label": "Probation",
+      "value": "No statutory probation for private employers; employment remains at-will throughout. Any introductory period should say it does not change at-will status or create a right to be kept on after it ends."
+    },
+    {
+      "label": "Notice (employer)",
+      "value": "None for individual terminations. There is no state mini-WARN; federal WARN notices (100+ employees) go to the state dislocated worker unit at NC Commerce and to local chief elected officials. While employment continues, pay reductions need written notice at least one full pay period in advance (G.S. 95-25.13(3))."
+    },
+    {
+      "label": "Notice (employee)",
+      "value": "None required. Employers may make vacation payout conditional on notice or other conditions only if a written forfeiture policy was given to employees in advance (G.S. 95-25.12)."
+    },
+    {
+      "label": "Statutory severance",
+      "value": "None. Severance is by contract or plan (usually ERISA). Unpaid wages, including promised vacation, bonuses and commissions, carry liquidated damages equal to the unpaid amount, interest and attorney fees, with a 2-year limitation period (G.S. 95-25.22)."
+    },
+    {
+      "label": "Working hours & overtime",
+      "value": "The FLSA governs covered employers: 1.5x after 40 hours a week, with no daily overtime. The Wage and Hour Act's minimum wage and overtime provisions apply only where the FLSA does not (G.S. 95-25.14). There are no meal or rest break mandates for workers 16 and older; under-16s need a 30-minute break after 5 consecutive hours."
+    },
+    {
+      "label": "Minimum wage",
+      "value": "$7.25/hr (G.S. 95-25.3), matching the federal rate, with a $2.13 tipped cash wage. There are no local minimum wages for private employers; local governments are preempted (G.S. 95-25.1(d)), and Triangle 'living wage' policies cover city and county staff and some contractors only."
+    },
+    {
+      "label": "Annual leave",
+      "value": "Not required. If offered, time off must follow the company's policy or practice, and accrued vacation must be paid out at separation unless employees were notified in writing, in advance, of a forfeiture or use-it-or-lose-it rule (G.S. 95-25.12, 95-25.13). Caps and conditions on payout are lawful if written."
+    },
+    {
+      "label": "Public holidays",
+      "value": "No private-sector holiday, holiday-premium or voting-leave requirement. State holidays apply only to state employees. Exempt salary rules under the FLSA still apply when offices close, for example for hurricanes or snow."
+    },
+    {
+      "label": "Sick leave",
+      "value": "No state paid sick leave. Since 1 Jul 2023 cities and counties cannot require private employers to provide leave or benefits (S.L. 2023-134, G.S. 95-25.1(d)). A written company sick-leave policy is enforceable as a promised benefit under the Wage and Hour Act."
+    },
+    {
+      "label": "Parental leave",
+      "value": "No state parental leave or PFML; FMLA (50+ employees) and the federal PUMP Act and PWFA govern. The only state leave for parents is unpaid school involvement leave of 4 hours a year (G.S. 95-28.3), and there is no separate private-employer lactation statute (verify)."
+    },
+    {
+      "label": "Social insurance / mandatory benefits",
+      "value": "Unemployment insurance (DES) is employer-paid: 2026 taxable wage base $34,200 (2025: $32,600), new-employer rate 1.0%, experience rates 0.06%-5.76%, quarterly NCUI 101 reports. Workers' compensation is mandatory with 3+ employees (G.S. 97-2); the 2026 maximum weekly benefit is $1,446. There is no state disability tax, PFML or auto-IRA mandate; federal FICA and FUTA apply."
+    },
+    {
+      "label": "Payroll frequency & final pay",
+      "value": "Any regular interval from daily to monthly (G.S. 95-25.6); bonuses and commissions may be paid less often, up to annually, if set in advance. For separations of any kind, all wages are due on or before the next regular payday, through regular pay channels or by trackable mail if the employee asks in writing. Bonuses and commissions are due on the first payday after they become calculable (G.S. 95-25.7). There are no waiting-time penalties."
+    },
+    {
+      "label": "Employee representation",
+      "value": "Right-to-work (G.S. 95-78 to 95-84). Public-sector collective bargaining contracts are void (G.S. 95-98). The NLRA governs private-sector labor relations, and there are no works councils or consultation duties. Union density in tech and semiconductors in the Triangle is negligible."
+    },
+    {
+      "label": "Data privacy law",
+      "value": "No comprehensive privacy law; the Consumer Privacy Act (S757) and H462 stalled in committee in 2025. The Identity Theft Protection Act requires breach notice to affected people and the Attorney General's Consumer Protection Division without unreasonable delay, and to consumer reporting agencies when more than 1,000 people are notified (G.S. 75-65). It also restricts SSN use (75-62) and requires secure disposal (75-64). Recording needs one party's consent (G.S. 15A-287)."
+    },
+    {
+      "label": "Record retention",
+      "value": "Wage and Hour Act payroll and time records must be kept (G.S. 95-25.13; 3 years is the common standard, verify under NCDOL rules). E-Verify records: during employment plus 1 year (G.S. 64-26). OSH 300/301 logs: 5 years. Federal I-9, FLSA and Title VII periods apply. There is no private-sector right to inspect personnel files."
+    },
+    {
+      "label": "Non-competes & IP",
+      "value": "Enforceable if in writing and signed (G.S. 75-4), part of the employment contract, supported by consideration (new employment, or a raise, promotion or bonus for current staff; continued employment is not enough), reasonable in time and territory, and protecting a legitimate interest. Courts only strike distinct terms and will not rewrite them (Beverage Systems v. Associated Beverage Repair, 2016). Customer non-solicits limited to customers the employee actually dealt with fare best. Invention assignment is limited by G.S. 66-57.1 (own-time carve-out), and trade secrets are protected by the NC Trade Secrets Protection Act (G.S. 66-152 et seq.)."
+    },
+    {
+      "label": "Language requirements",
+      "value": "No statutory language requirement for contracts, policies or notices. NCDOL and the Industrial Commission publish Spanish-language posters, and best practice is to give wage notices in a language the employee understands."
+    },
+    {
+      "label": "Regulator(s)",
+      "value": "NC Department of Labor (Commissioner Luke Farley since 2025): Wage and Hour Bureau, OSH Division (state-plan OSHA), Employment Discrimination Bureau (REDA), E-Verify complaints and drug-testing rules. Division of Employment Security (unemployment). Industrial Commission (workers' comp; Employee Classification Section). Department of Revenue (withholding). Attorney General Consumer Protection Division (data breaches). EEOC Charlotte District and Raleigh Area Office (Title VII, ADA, ADEA)."
+    }
+  ],
+  "mandatoryPolicies": [
+    {
+      "name": "Written wage notice at hire and wage-practice policies",
+      "requirement": "Tell each employee in writing at hire the promised wages and the day and place of payment. Make written or posted policies on wages, including vacation, sick leave, bonuses, commissions and any forfeiture rules, available to employees.",
+      "source": "G.S. 95-25.13(1)-(2) (as amended by S.L. 2021-82)",
+      "level": "required"
+    },
+    {
+      "name": "Pay-change notice procedure",
+      "requirement": "Give written notice at least one pay period before any change in promised wages that reduces pay or wage benefits, including salary cuts, commission-plan changes and shift-differential removal. Retroactive increases need no advance notice.",
+      "source": "G.S. 95-25.13(3) (S.L. 2021-82, replacing the prior 24-hour rule)",
+      "level": "required"
+    },
+    {
+      "name": "Vacation / PTO policy with forfeiture terms",
+      "requirement": "No PTO is required, but any policy under which accrued vacation can be forfeited (use-it-or-lose-it, no payout on termination, notice conditions) must be given to employees in writing in advance; otherwise accrued vacation is owed at separation.",
+      "source": "G.S. 95-25.12, 95-25.13",
+      "level": "required"
+    },
+    {
+      "name": "Bonus and commission plan documents",
+      "requirement": "Put in writing the timing of bonuses and commissions (payable up to annually if set in advance) and any forfeiture on separation. Calculable amounts are due on the first payday after they can be calculated, and forfeiture rules bind only if notified beforehand.",
+      "source": "G.S. 95-25.6, 95-25.7",
+      "level": "required"
+    },
+    {
+      "name": "Wage deduction authorization procedure",
+      "requirement": "Deduct only when required by law or with a signed written authorization (on or before the payday) stating the reason and the amount or percentage. For amounts not known in advance, give advance notice of the amount and a chance to withdraw. Cash or inventory shortages and property damage need 7 days' written notice and cannot cut pay below minimum wage or reduce overtime pay.",
+      "source": "G.S. 95-25.8",
+      "level": "required"
+    },
+    {
+      "name": "E-Verify procedure",
+      "requirement": "Employers with 25+ employees in NC must verify every new hire through E-Verify (excluding employees hired for less than 9 months in a calendar year) and keep verification records during employment plus 1 year. Covers NC-based remote workers.",
+      "source": "G.S. 64-25 et seq. (Article 2 of Chapter 64)",
+      "level": "required"
+    },
+    {
+      "name": "Anti-retaliation / REDA policy",
+      "requirement": "Prohibit retaliation against employees who file or take part in workers' comp, wage-hour, OSH, mine-safety, genetic or sickle-cell testing, pesticide or National Guard claims, or who take domestic-violence relief time or juvenile-court time. Complaints to NCDOL within 180 days; treble damages for willful violations.",
+      "source": "G.S. 95-240 to 95-246 (amended by S.L. 2026-13)",
+      "level": "required"
+    },
+    {
+      "name": "EEO and anti-harassment policy",
+      "requirement": "No general state private-sector anti-discrimination statute with its own remedies, but NCEEPA sets public policy (race, religion, color, national origin, age, sex, handicap; 15+ employees). Add protections from the PDPA (15+), military status, genetic information, sickle-cell trait, HIV status and local ordinances (e.g., Durham, Chapel Hill, Carrboro, Orange County towns, Greensboro, Charlotte/Mecklenburg).",
+      "source": "G.S. 143-422.2; G.S. 168A; G.S. 127B-11; G.S. 95-28.1, 95-28.1A; G.S. 130A-148(i); local ordinances",
+      "level": "expected"
+    },
+    {
+      "name": "Drug and alcohol testing program",
+      "requirement": "Any controlled-substance testing must use approved labs for employees (single-use test devices only for applicants), confirm positives by GC/MS or equivalent, follow chain-of-custody procedures, keep confirmed positive samples at least 90 days and let the examinee request a retest at their own cost. Penalties up to $250 per examinee, capped at $1,000 per investigation.",
+      "source": "Controlled Substance Examination Regulation Act, G.S. 95-230 to 95-235",
+      "level": "required"
+    },
+    {
+      "name": "Lawful use of lawful products",
+      "requirement": "Employers with 3+ employees may not refuse to hire or discharge because of lawful off-duty, off-premises use of lawful products such as tobacco or alcohol, unless the restriction is a bona fide occupational requirement, relates to the organization's fundamental objectives, or enforces a substance-abuse program. One-year limitation period.",
+      "source": "G.S. 95-28.2",
+      "level": "required"
+    },
+    {
+      "name": "Statutory leave policies",
+      "requirement": "Cover school involvement leave (4 hours a year, unpaid, 48-hour written request), jury duty (no discharge or demotion), reasonable time off to obtain domestic-violence relief, and National Guard state-duty reemployment, alongside FMLA and USERRA.",
+      "source": "G.S. 95-28.3; G.S. 9-32; G.S. 50B-5.5; G.S. 127A-201 et seq.",
+      "level": "required"
+    },
+    {
+      "name": "Background screening procedure",
+      "requirement": "Do not ask applicants to disclose, or knowingly ask about, expunged arrests, charges or convictions (NCDOL warning, then up to $500 per violation). Follow the FCRA. There is no private-sector ban-the-box law; Executive Order 158 applies to state agencies only.",
+      "source": "G.S. 15A-153; FCRA; Executive Order 158 (2020)",
+      "level": "required"
+    },
+    {
+      "name": "Workers' compensation coverage and injury reporting",
+      "requirement": "Insure (or self-insure) with 3+ employees, post the Industrial Commission's workplace poster, and file Form 19 within 5 days of knowing of an injury that causes more than 1 day's absence or medical costs over $4,000.",
+      "source": "G.S. 97-2, 97-92; 11 NCAC 23A .0104",
+      "level": "required"
+    },
+    {
+      "name": "Occupational safety and health program",
+      "requirement": "Comply with OSHANC standards (state plan). Employers with an experience rate modifier of 1.5 or more must run a written safety and health program; those with 11+ employees and a modifier of 1.5 or more also need safety committees.",
+      "source": "G.S. 95-126 et seq. (OSHANC); G.S. 95-251, 95-252",
+      "level": "required"
+    },
+    {
+      "name": "Weapons on premises policy",
+      "requirement": "Private employers can bar firearms, including concealed handguns carried by permit holders, but must post a conspicuous notice at the premises. NC has no law protecting private employees' firearms locked in vehicles in employer parking lots.",
+      "source": "G.S. 14-415.11(c)",
+      "level": "expected"
+    },
+    {
+      "name": "Data breach response and SSN protection",
+      "requirement": "Keep an incident plan covering notice to affected people and the AG's Consumer Protection Division without unreasonable delay, and to consumer reporting agencies when more than 1,000 people are notified. Limit SSN display and transmission, and dispose of personal information securely.",
+      "source": "G.S. 75-62, 75-64, 75-65 (Identity Theft Protection Act)",
+      "level": "required"
+    },
+    {
+      "name": "Restrictive covenant and invention assignment standards",
+      "requirement": "Non-competes must be written, signed and supported by consideration, with reasonable time, territory or customer scope. Invention assignments must honor the G.S. 66-57.1 own-time carve-out, and the employer may not require assignment of excluded inventions. Use NC law and forum; no out-of-state forum clauses or jury waivers.",
+      "source": "G.S. 75-4; G.S. 66-57.1, 66-57.2; G.S. 22B-3, 22B-10",
+      "level": "required"
+    },
+    {
+      "name": "Required workplace postings",
+      "requirement": "NCDOL Employment Poster (wage and hour, OSH, child labor, REDA), the DES 'Certificate of Coverage and Notice to Workers', the Industrial Commission workers' compensation poster, and the E-Verify participation and IER right-to-work notices, plus federal posters.",
+      "source": "G.S. 95-25.13; OSHANC; DES; Industrial Commission; E-Verify MOU",
+      "level": "required"
+    },
+    {
+      "name": "New-hire reporting and withholding set-up",
+      "requirement": "Report new hires to the NC New Hire Reporting program within 20 days, collect Form NC-4 for state withholding, and register with NCDOR and DES before the first payroll.",
+      "source": "G.S. 110-129.2; G.S. 105-163.1 et seq.; G.S. Chapter 96",
+      "level": "required"
+    },
+    {
+      "name": "Youth employment certificates",
+      "requirement": "Workers under 18 (e.g., high-school interns) need a youth employment certificate before starting, and under-16s have hour limits and break rules.",
+      "source": "G.S. 95-25.5",
+      "level": "required"
+    }
+  ],
+  "stages": {
+    "hiring": [
+      {
+        "req": "Written pay terms in the offer",
+        "detail": "The offer letter or a hire notice must state promised wages (salary or rate, bonus and commission basis) and the day and place of payment in writing. Oral notice no longer suffices after the 2021 amendments. Attach or reference the PTO and bonus forfeiture policies.",
+        "cite": "G.S. 95-25.13(1)-(2) (S.L. 2021-82)"
+      },
+      {
+        "req": "Sign restrictive covenants at hire",
+        "detail": "Present any non-compete or non-solicit with the offer and have it signed before or at the start date, when new employment counts as consideration. After the start date, a covenant needs new consideration such as a raise, promotion, bonus or equity. Keep the signed original.",
+        "cite": "G.S. 75-4; NC common law (continued employment alone is not consideration)"
+      },
+      {
+        "req": "E-Verify for every NC hire",
+        "detail": "Employers with 25+ NC employees must create an E-Verify case for each new NC hire, including remote employees, within the federal 3-business-day window after the start. Excludes hires employed less than 9 months in a calendar year. Never run E-Verify before the offer or to pre-screen applicants.",
+        "cite": "G.S. 64-25, 64-26; E-Verify MOU"
+      },
+      {
+        "req": "No state pay-transparency or salary-history rules",
+        "detail": "Private employers need not post pay ranges or avoid salary-history questions in NC; Executive Order 93 (2019) applies to state agencies only. A nationwide posting that could be filled remotely in CO, NY, WA, CA and similar states still needs ranges for those states.",
+        "cite": "Executive Order 93 (2019); US Federal note"
+      },
+      {
+        "req": "Criminal history and expunged records",
+        "detail": "No private-sector ban-the-box; Executive Order 158 covers state agencies only. Do not ask applicants to disclose expunged records or knowingly ask about them. Use FCRA disclosure and adverse-action steps. The 2020 Second Chance Act expanded expunctions, so older reports may include sealed matters that must not be used.",
+        "cite": "G.S. 15A-153; FCRA; Executive Order 158"
+      },
+      {
+        "req": "Pre-employment drug screens",
+        "detail": "Applicants may be screened with single-use test devices, but confirm positives by GC/MS or an equivalent method at an approved lab before rescinding. Collect samples under sanitary, dignified conditions, and allow a retest of a confirmed positive at the applicant's expense.",
+        "cite": "G.S. 95-232"
+      },
+      {
+        "req": "Lawful-products and genetic protections",
+        "detail": "Do not screen out applicants for off-duty tobacco or alcohol use (3+ employees), genetic test results or information, sickle-cell or hemoglobin C trait, or HIV status.",
+        "cite": "G.S. 95-28.2, 95-28.1A, 95-28.1; G.S. 130A-148(i)"
+      },
+      {
+        "req": "Local anti-discrimination ordinances",
+        "detail": "Durham, Chapel Hill, Carrboro, Hillsborough, Greensboro and Charlotte/Mecklenburg ordinances add sexual orientation, gender identity and protected hairstyles, among others, with varying thresholds and enforcement. Train Durham and RTP hiring managers accordingly.",
+        "cite": "Local ordinances (e.g., Durham City Code ch. 34)"
+      },
+      {
+        "req": "Forum and jury-waiver clauses",
+        "detail": "Offer letters, PIIAs and arbitration agreements must not require suit or arbitration outside NC (void under G.S. 22B-3, unless all parties agree after a dispute arises) or waive jury trial (22B-10). Use NC venue or FAA-governed arbitration seated in NC.",
+        "cite": "G.S. 22B-3, 22B-10"
+      }
+    ],
+    "onboarding": [
+      {
+        "req": "Wage notice and policy access",
+        "detail": "Give written notice of wages, pay frequency and payday, and make the handbook policies on PTO, sick leave, bonuses, commissions and forfeiture available, with an acknowledgment. Keep proof, because forfeiture defenses depend on it.",
+        "cite": "G.S. 95-25.12, 95-25.13"
+      },
+      {
+        "req": "New-hire reporting and tax set-up",
+        "detail": "Report each new hire to the NC New Hire Reporting program within 20 days. Collect Form NC-4 (state withholding allowance certificate), and make sure payroll is registered with NCDOR (withholding) and DES (unemployment).",
+        "cite": "G.S. 110-129.2; NCDOR NC-4"
+      },
+      {
+        "req": "E-Verify case and records",
+        "detail": "Complete the I-9 first, then open the E-Verify case. Resolve tentative nonconfirmations under the MOU. Keep E-Verify records during employment plus 1 year, and be able to produce them to NCDOL when a complaint is investigated.",
+        "cite": "G.S. 64-26; 8 CFR 274a"
+      },
+      {
+        "req": "PIIA with NC invention carve-out",
+        "detail": "Invention-assignment clauses must exclude inventions developed entirely on the employee's own time without company equipment, supplies, facilities or trade secrets, unless they relate to the business or R&D or result from company work. The employer may not require assignment of excluded inventions. Add the DTSA immunity notice.",
+        "cite": "G.S. 66-57.1, 66-57.2; 18 USC 1833(b)"
+      },
+      {
+        "req": "Postings",
+        "detail": "NCDOL Employment Poster, the DES Certificate of Coverage and Notice to Workers, the Industrial Commission workers' comp poster, and E-Verify and IER notices at each NC site (and electronically for remote staff), plus federal posters.",
+        "cite": "NCDOL; DES; Industrial Commission"
+      },
+      {
+        "req": "Safety orientation",
+        "detail": "OSHANC-compliant hazard communication, emergency action and, for labs, chemical hygiene training. Record training for OSH inspections.",
+        "cite": "OSHANC (29 CFR 1910 as adopted); G.S. 95-126 et seq."
+      },
+      {
+        "req": "Youth hires",
+        "detail": "Interns under 18 need a youth employment certificate before starting, and under-16s have hour limits and a 30-minute break after 5 hours.",
+        "cite": "G.S. 95-25.5"
+      }
+    ],
+    "payAndPayroll": [
+      {
+        "req": "Paydays and pay frequency",
+        "detail": "Pay all wages on the regular payday at any interval from daily to monthly. Bonuses and commissions may be paid less often, up to annually, if the schedule is set in advance.",
+        "cite": "G.S. 95-25.6"
+      },
+      {
+        "req": "One pay period's written notice of pay cuts",
+        "detail": "Any reduction in promised wages or wage benefits (salary cut, commission or bonus plan change, loss of shift differential, furlough pay cut) needs written notice at least one full pay period before it takes effect. Increases can be retroactive without notice.",
+        "cite": "G.S. 95-25.13(3) (S.L. 2021-82)"
+      },
+      {
+        "req": "Lawful deductions",
+        "detail": "Only deductions required by law, or with a signed written authorization stating the reason and amount (or percentage) on or before the payday. Variable amounts need advance notice and a right to withdraw. Shortages or damage need 7 days' written notice and may not cut pay below minimum wage or reduce overtime. Overpayments and advances may be recovered as prepaid wages.",
+        "cite": "G.S. 95-25.8"
+      },
+      {
+        "req": "Itemized deduction statements",
+        "detail": "Provide an itemized statement of deductions every pay period in which deductions are made; standard pay stubs satisfy this.",
+        "cite": "G.S. 95-25.13(4)"
+      },
+      {
+        "req": "State income tax withholding",
+        "detail": "Flat rate: 4.25% (2025), 3.99% (2026), and 3.49% for 2027-2029 under the 2026 budget (S.L. 2026-41), then 3.24% (2030-2032) and 2.99% (2033-2034), with possible triggered cuts to 2.49%. Update NC-30 withholding tables each January. File NC-5 returns on the assigned schedule, and the NC-3 annual reconciliation with W-2s by 31 January.",
+        "cite": "G.S. 105-153.7; S.L. 2023-134; S.L. 2026-41; NCDOR"
+      },
+      {
+        "req": "Unemployment contributions",
+        "detail": "Employer-only contributions on the first $34,200 per employee (2026). New employers pay 1.0%; experience rates run 0.06%-5.76%. File NCUI 101 quarterly reports by the last day of the month after each quarter; electronic filing is required with 10+ wage items.",
+        "cite": "G.S. Chapter 96; DES"
+      },
+      {
+        "req": "Minimum wage and overtime",
+        "detail": "Apply the FLSA: $7.25 minimum and 1.5x over 40 hours a week, with the federal exempt tests. There is no daily overtime and no local minimum wage (preempted), so NC non-exempt technicians follow federal rules only.",
+        "cite": "FLSA; G.S. 95-25.3, 95-25.4, 95-25.14; G.S. 95-25.1(d)"
+      },
+      {
+        "req": "Wage claim exposure",
+        "detail": "Unpaid wages (including promised PTO, bonuses and commissions) bring liquidated damages equal to the unpaid amount unless the employer shows good faith, plus interest and attorney fees. The limitation period is 2 years. NCDOL can also assess civil penalties for notice and recordkeeping violations.",
+        "cite": "G.S. 95-25.22, 95-25.23"
+      }
+    ],
+    "timeAndLeave": [
+      {
+        "req": "Vacation forfeiture must be in writing",
+        "detail": "Accrual caps, use-it-or-lose-it rules and no-payout-on-termination terms are lawful only if employees were told in writing in advance; otherwise accrued vacation is owed at separation. For 'unlimited' PTO, say in writing that no time accrues.",
+        "cite": "G.S. 95-25.12, 95-25.13"
+      },
+      {
+        "req": "No mandated paid sick leave",
+        "detail": "No state PSL, and localities cannot mandate leave for private employers (S.L. 2023-134). A company PSL policy, once promised in writing, is enforceable as written.",
+        "cite": "G.S. 95-25.1(d)"
+      },
+      {
+        "req": "School involvement leave",
+        "detail": "Parents, guardians and those in loco parentis of school-age children get 4 hours of leave a year for involvement at the child's school, preschool or child-care facility, at a mutually agreed time. The employer may require a written request 48 hours ahead and written verification from the school. Leave may be unpaid, and adverse action is barred.",
+        "cite": "G.S. 95-28.3"
+      },
+      {
+        "req": "Jury duty",
+        "detail": "No discharge or demotion for being called for or serving on a jury (grand or petit). Leave may be unpaid, subject to FLSA exempt-salary rules. Remedies include reasonable damages and reinstatement; 1-year limitation period.",
+        "cite": "G.S. 9-32"
+      },
+      {
+        "req": "Domestic violence relief time",
+        "detail": "No discharge, demotion, denial of promotion or discipline for taking reasonable time off to obtain or try to obtain relief under Chapter 50B (protective orders). The employee follows usual leave procedures unless there is an emergency, and the employer may ask for documentation. Enforced through REDA.",
+        "cite": "G.S. 50B-5.5; G.S. 95-241(a)(5)"
+      },
+      {
+        "req": "Military and National Guard",
+        "detail": "USERRA for federal service. NC and other states' National Guard members on state duty have reemployment rights: apply within 24 hours of return (duty of 30 days or less) or 14 days (longer duty), with reinstatement within 5 days. Military-status discrimination is barred.",
+        "cite": "G.S. 127A-201 to 127A-203; G.S. 127B-11; 38 USC 4301 et seq."
+      },
+      {
+        "req": "FMLA and accommodations",
+        "detail": "No state FMLA for private employers; apply FMLA (50+), ADA and PWFA. The Persons with Disabilities Protection Act (15+ full-time employees in NC) gives limited state remedies, and there is no state action if a federal ADA proceeding has been started.",
+        "cite": "G.S. 168A-3, 168A-11; 29 USC 2601"
+      },
+      {
+        "req": "No voting or bereavement leave mandate",
+        "detail": "NC has no voting-time or bereavement leave statute; bereavement is policy-based. Apply the policy consistently to avoid discrimination claims.",
+        "cite": "None (policy)"
+      }
+    ],
+    "benefits": [
+      {
+        "req": "Workers' compensation",
+        "detail": "Mandatory with 3+ employees (corporate officers count). The 2026 maximum weekly benefit is $1,446 (2025: $1,380). S.L. 2026-14 raises the minimum weekly benefit from $30 to $50 and doubles disfigurement and organ-loss maximums for injuries from 1 Jul 2027.",
+        "cite": "G.S. 97-2, 97-29, 97-31; S.L. 2026-14"
+      },
+      {
+        "req": "State health continuation",
+        "detail": "Insured group health plans must offer state continuation (generally up to 18 months) to employees who lose coverage, alongside federal COBRA (20+ employees). Coordinate notices with the carrier.",
+        "cite": "G.S. 58-53-5 et seq."
+      },
+      {
+        "req": "Lawful-products premium differentials",
+        "detail": "Tobacco-user surcharges on health, disability or life insurance are allowed under the lawful-products statute if they reflect actual cost differences and the employer gives written notice (verify conditions), subject to HIPAA wellness rules.",
+        "cite": "G.S. 95-28.2 (verify subsection)"
+      },
+      {
+        "req": "No state benefit mandates beyond UI and workers' comp",
+        "detail": "No state disability, PFML, retirement auto-IRA or commuter-benefit mandate. Plans are ERISA-governed; NC insurance-law mandates apply only to insured plans.",
+        "cite": "ERISA; G.S. Chapter 58"
+      },
+      {
+        "req": "Promised benefits are wages",
+        "detail": "Written promises of PTO, bonuses, commissions and similar benefits are enforceable as wages under the Wage and Hour Act, so change them prospectively with one pay period's written notice.",
+        "cite": "G.S. 95-25.2(16), 95-25.13"
+      },
+      {
+        "req": "Portable benefits for contractors",
+        "detail": "From 1 Jan 2027, the Voluntary Portable Benefits Plan Act lets hiring parties fund portable benefit accounts for independent contractors without that alone creating employee status for UI, workers' comp or wage-hour purposes.",
+        "cite": "S.L. 2026-59 (Regulatory Reform Act of 2026)"
+      }
+    ],
+    "performanceAndConduct": [
+      {
+        "req": "REDA retaliation screen",
+        "detail": "Before discipline or termination, check for protected activity: workers' comp claims, wage-hour or OSH complaints, genetic or sickle-cell claims, National Guard, pesticide, domestic-violence relief or juvenile-court compliance. Employees have 180 days to complain to NCDOL; S.L. 2026-13 (22 Jun 2026) sets complaint contents, a 7-day position statement and a 90-day determination. Willful violations bring treble damages.",
+        "cite": "G.S. 95-241 to 95-243, 95-246 (S.L. 2026-13)"
+      },
+      {
+        "req": "Public-policy wrongful discharge",
+        "detail": "Terminations for refusing to break the law, testifying truthfully, or for reasons NCEEPA condemns (15+ employees) support common-law claims with a 3-year limitation period and possible punitive damages. Document legitimate reasons.",
+        "cite": "G.S. 143-422.2; Sides v. Duke (1985)"
+      },
+      {
+        "req": "Controlled-substance testing of employees",
+        "detail": "Reasonable-suspicion, post-accident or random tests of current employees must use approved labs (no instant cups), GC/MS confirmation, chain of custody and 90-day retention of positive samples, with the employee's right to a retest at their own expense. Cannabis is not legal in NC, so a policy barring any positive result is lawful.",
+        "cite": "G.S. 95-230 to 95-235"
+      },
+      {
+        "req": "Off-duty conduct",
+        "detail": "Do not discipline for lawful off-duty use of lawful products (3+ employees) unless an exception applies. Other off-duty political or social conduct is not protected by statute in the private sector, but check NLRA concerted-activity rules.",
+        "cite": "G.S. 95-28.2; NLRA §7"
+      },
+      {
+        "req": "Monitoring and recording",
+        "detail": "One-party consent applies to recording calls or meetings, and there is no state electronic-monitoring notice statute. Disclose monitoring in the acceptable-use policy for NLRA and privacy reasons.",
+        "cite": "G.S. 15A-287"
+      },
+      {
+        "req": "Firearms and workplace violence",
+        "detail": "To bar concealed carry on premises, post conspicuous notices at entrances. NC has no parking-lot gun protection for private employees, so vehicle rules can be set by policy. SB 50 (permitless carry) is pending a House veto override.",
+        "cite": "G.S. 14-415.11(c); SB 50 (2025, pending)"
+      },
+      {
+        "req": "Local ordinances in investigations",
+        "detail": "For Durham and Orange County sites, treat sexual orientation, gender identity and hairstyle complaints as covered by local ordinances as well as Title VII (Bostock).",
+        "cite": "Local ordinances; Title VII"
+      }
+    ],
+    "termination": [
+      {
+        "req": "At-will with documentation",
+        "detail": "No notice or cause is required, but document reasons and check timing against workers' comp claims, wage complaints, leave and REDA-protected activity. Terminating an employee receiving workers' comp is a frequent REDA trigger.",
+        "cite": "G.S. 95-241"
+      },
+      {
+        "req": "Final pay by the next regular payday",
+        "detail": "Pay all wages due, including accrued vacation unless a written forfeiture policy applies, on or before the next regular payday through normal channels (or by trackable mail on written request). Commissions and bonuses are due on the first payday after they become calculable.",
+        "cite": "G.S. 95-25.7, 95-25.12"
+      },
+      {
+        "req": "No deductions without authorization",
+        "detail": "Do not deduct laptop or badge replacement, training costs or advances from final pay unless a compliant written authorization exists. Shortages and damage need 7 days' notice (or notice at separation), without cutting below minimum wage.",
+        "cite": "G.S. 95-25.8"
+      },
+      {
+        "req": "Layoffs: federal WARN only",
+        "detail": "No mini-WARN. Federal WARN (100+ employees; 50+ at a site) notices go to employees, the NC Commerce dislocated worker unit and the chief elected local official. NCWorks rapid-response teams will offer on-site sessions.",
+        "cite": "29 USC 2101 et seq."
+      },
+      {
+        "req": "Releases and forum",
+        "detail": "Releases follow federal rules (OWBPA 21/45 days plus 7-day revocation for 40+). Any forum clause must allow NC venue (G.S. 22B-3) and must not waive jury trial (22B-10). Pay undisputed wages unconditionally, outside the release consideration.",
+        "cite": "29 USC 626(f); G.S. 22B-3, 22B-10"
+      },
+      {
+        "req": "Enforcing covenants",
+        "detail": "Reasonable NC non-competes and customer non-solicits can be enforced by injunction, often in the NC Business Court. Courts strike, not rewrite, overbroad provisions, so draft narrowly.",
+        "cite": "G.S. 75-4; G.S. 7A-45.4 (Business Court)"
+      }
+    ],
+    "exit": [
+      {
+        "req": "Final paycheck contents",
+        "detail": "All earned wages, accrued vacation (unless forfeited under a written policy), calculable commissions and bonuses, and approved expense reimbursements. Use the normal payroll channel or trackable mail on written request.",
+        "cite": "G.S. 95-25.7"
+      },
+      {
+        "req": "Unemployment claims",
+        "detail": "Respond promptly and completely to DES requests for separation information; late or inadequate responses can lead to charges against the employer's account. From 2026, DES must verify claimants' legal residency (SB 153).",
+        "cite": "G.S. Chapter 96; S.L. 2026-19"
+      },
+      {
+        "req": "References",
+        "detail": "Employers have qualified immunity for disclosing accurate job-performance information and reasons for separation to prospective employers, unless the information is knowingly false. Many firms still confirm dates and title only.",
+        "cite": "G.S. 1-539.12"
+      },
+      {
+        "req": "Benefits continuation",
+        "detail": "Issue federal COBRA notices (20+), and for insured plans the state continuation information. Close out equity per plan terms.",
+        "cite": "ERISA/COBRA; G.S. 58-53-5 et seq."
+      },
+      {
+        "req": "Return of property and trade secrets",
+        "detail": "Collect devices and badges, get a return certification, and remind departing staff of confidentiality and covenant obligations. The NC Trade Secrets Protection Act allows injunctions and damages for misappropriation.",
+        "cite": "G.S. 66-152 to 66-162"
+      },
+      {
+        "req": "No service-letter duty",
+        "detail": "NC does not require a written reason for separation or a service letter, and there is no private-sector personnel-file access right after exit.",
+        "cite": "None (policy)"
+      }
+    ],
+    "recordsAndPrivacy": [
+      {
+        "req": "Breach notification",
+        "detail": "For breaches of personal information (e.g., SSNs, account numbers, biometric data, passwords), notify affected people and the AG's Consumer Protection Division without unreasonable delay, and notify consumer reporting agencies when more than 1,000 people are notified. The notice must include the statutory content elements.",
+        "cite": "G.S. 75-61, 75-65"
+      },
+      {
+        "req": "SSN protection",
+        "detail": "Do not publicly display SSNs, print them on badges or cards, send them over the internet unencrypted, or use them as passwords without other authentication.",
+        "cite": "G.S. 75-62"
+      },
+      {
+        "req": "Secure disposal",
+        "detail": "Destroy personal information records (paper and electronic) by shredding, erasing or other reasonable measures, and bind disposal vendors by contract.",
+        "cite": "G.S. 75-64"
+      },
+      {
+        "req": "No comprehensive privacy law",
+        "detail": "No CCPA-style rights for NC employees or applicants. The Consumer Privacy Act (S757) and Personal Data Privacy (H462) stalled in 2025, and H301 (Social Media and AI Safety) is in conference. Recheck in the 2027 long session.",
+        "cite": "S757, H462, H301 (2025-26, pending)"
+      },
+      {
+        "req": "E-Verify and payroll records",
+        "detail": "Keep E-Verify records during employment plus 1 year and Wage and Hour Act payroll records (3 years common, verify). Produce them to NCDOL on request.",
+        "cite": "G.S. 64-26; G.S. 95-25.13"
+      },
+      {
+        "req": "Expunged and sealed records",
+        "detail": "Do not keep or use expunged criminal information; purge it from vendor reports and ATS notes.",
+        "cite": "G.S. 15A-153"
+      },
+      {
+        "req": "Recording and monitoring",
+        "detail": "One-party consent for recording; no biometric-privacy statute; federal ECPA applies. Disclose monitoring in policy.",
+        "cite": "G.S. 15A-287"
+      }
+    ],
+    "healthSafety": [
+      {
+        "req": "OSHANC state plan",
+        "detail": "The NCDOL OSH Division enforces standards that largely mirror federal OSHA. Since 2023, citations must issue within 6 months of the violation, and new standards need full state rulemaking (S.L. 2023-134).",
+        "cite": "G.S. 95-126 et seq.; S.L. 2023-134"
+      },
+      {
+        "req": "Safety and health programs and committees",
+        "detail": "An experience rate modifier of 1.5 or more requires a written safety and health program; with 11+ employees it also requires safety committees. Monitor the workers' comp experience modifier.",
+        "cite": "G.S. 95-251, 95-252"
+      },
+      {
+        "req": "Injury reporting",
+        "detail": "Report fatalities to NCDOL within 8 hours and inpatient hospitalizations, amputations or eye loss within 24 hours. Keep OSH 300/301 logs for 5 years and post the 300A from 1 Feb to 30 Apr.",
+        "cite": "29 CFR 1904 as adopted by NCDOL (OSHANC)"
+      },
+      {
+        "req": "Workers' comp Form 19",
+        "detail": "File Form 19 with the Industrial Commission within 5 days of learning of an injury that causes more than 1 day's absence or medical costs over $4,000. Direct medical care for accepted claims.",
+        "cite": "G.S. 97-92; 11 NCAC 23A .0104"
+      },
+      {
+        "req": "Lab and chemical safety",
+        "detail": "Hazard communication, laboratory chemical hygiene plans and PPE for any Triangle lab or reliability site, under OSHANC-adopted standards.",
+        "cite": "29 CFR 1910.1200, 1910.1450 (as adopted)"
+      },
+      {
+        "req": "Severe weather and emergencies",
+        "detail": "Hurricane, ice-storm and flood planning for Triangle sites: emergency action plans, remote-work fallback, pay rules for closures (FLSA exempt salary) and employee check-in procedures.",
+        "cite": "29 CFR 1910.38 (as adopted)"
+      },
+      {
+        "req": "Workplace violence and weapons",
+        "detail": "No NC workplace violence statute. Use the OSH general-duty clause, threat assessment and posted firearm restrictions.",
+        "cite": "G.S. 95-129(1); G.S. 14-415.11(c)"
+      }
+    ]
+  },
+  "terminationDeepDive": {
+    "voluntary": "Employees may resign at any time without notice. Employers may ask for notice and may tie vacation payout to giving notice only if a written policy says so in advance (G.S. 95-25.12). Paid garden leave during a notice period is allowed. If the employer accepts the resignation early, pay through the date it chooses; there is no statutory duty to pay the notice period. Final pay is due by the next regular payday. Non-competes and non-solicits signed with proper consideration start on the separation date.",
+    "involuntary": "At-will: no cause, notice or process is required. The main exposures are public-policy wrongful discharge (e.g., for refusing to break the law or for reasons NCEEPA condemns, 15+ employees), REDA retaliation for workers' comp, wage-hour, OSH and similar protected activity (180 days to complain to NCDOL; treble damages if willful), federal Title VII, ADA and ADEA claims, and local-ordinance claims in Durham and Orange County. Best practice: documented performance history, consistent treatment, a timing check against workers' comp claims and complaints, and final pay on the next regular payday with no unauthorized deductions.",
+    "redundancy": "No statutory redundancy pay, consultation or state WARN. Federal WARN applies (100+ employees; plant closing or mass layoff of 50+ at a site, or 500+) with 60 days' notice to employees, the state dislocated worker unit (NC Commerce, Division of Workforce Solutions) and the chief elected local official. NCWorks rapid response offers reemployment sessions. Remaining obligations are federal: OWBPA group disclosures for releases of workers 40+ (45 days plus 7-day revocation), and COBRA and state continuation. Run a privileged adverse-impact analysis by age, sex and race, and check for employees on workers' comp or with recent REDA-protected activity.",
+    "finalPayTiming": "For every separation (resignation, discharge, layoff): all wages due on or before the next regular payday, through regular pay channels or by trackable mail if the employee asks in writing (G.S. 95-25.7). Commissions, bonuses and other calculable pay are due on the first regular payday after the amount becomes calculable. Accrued vacation must be paid unless employees were told in writing in advance of a forfeiture rule. There are no waiting-time penalties, but unpaid wages bring liquidated damages equal to the amount owed (unless good faith is shown), interest and attorney fees, and NCDOL can pursue claims (2-year limitation).",
+    "requiredDocuments": [
+      "Final paycheck and statement of any deductions (G.S. 95-25.7, 95-25.13(4))",
+      "COBRA election notice (20+ employees) and state continuation information for insured plans (G.S. 58-53-5 et seq.)",
+      "Federal WARN notices where triggered, including to the NC dislocated worker unit",
+      "OWBPA disclosures and 21/45-day consideration plus 7-day revocation for releases from workers aged 40+",
+      "Response to the DES request for separation information when a claim is filed",
+      "Written authorization supporting any final-pay deduction (G.S. 95-25.8)"
+    ],
+    "releaseAgreements": "General releases of discrimination and common-law claims are enforceable if knowing and voluntary and supported by consideration beyond wages already owed. Pay undisputed final wages, including accrued vacation owed, unconditionally, because Wage and Hour Act claims for undisputed wages should not be traded for a release. For employees 40+, follow OWBPA (21 or 45 days to consider, 7 days to revoke, group disclosures). NC-specific drafting points: forum clauses must not require litigation or arbitration outside NC (G.S. 22B-3), jury waivers are unenforceable (22B-10) though arbitration is allowed, workers' comp claims can only be settled with Industrial Commission approval (G.S. 97-17), and REDA and NLRA rights to file with agencies must be preserved. Confidentiality and non-disparagement clauses should include NLRA and SEC whistleblower carve-outs, and the Speak Out Act applies to pre-dispute sexual harassment NDAs.",
+    "typicalPackage": "Market practice (not statutory) for Triangle tech and semiconductor employers: individual contributors typically get 2-3 weeks' base pay per year of service with a 4-week minimum; directors and VPs 2-6 months; executives 6-12 months under a severance plan. Packages often add 1-3 months of COBRA subsidy and outplacement, and in larger RIFs 60 days' pay in lieu of WARN notice. Packages are usually somewhat leaner than in California, but the local market reset after 2024-25 Wolfspeed and tech layoffs shapes expectations."
+  },
+  "recentChanges": [
+    {
+      "date": "2026-08",
+      "title": "Regulatory Reform Act of 2026: voluntary portable benefits for contractors",
+      "detail": "S.L. 2026-59 (signed 11 Aug 2026) creates the Voluntary Portable Benefits Plan Act, effective 1 Jan 2027. Hiring parties may fund portable health, retirement or disability accounts for independent contractors, and doing so alone does not create employee status for UI, workers' comp or labor-law purposes.",
+      "impact": "low"
+    },
+    {
+      "date": "2026-07",
+      "title": "2026 budget sets new income tax path",
+      "detail": "S.L. 2026-41 (signed 7 Jul 2026) keeps the flat rate at 3.99% for 2026 and cuts it to 3.49% for 2027-2029, 3.24% for 2030-2032 and 2.99% for 2033-2034, with possible revenue-triggered cuts to 2.49%. A constitutional amendment on the November 2026 ballot would cap the income tax rate at 3.5% (currently 7%). Update 2027 withholding tables.",
+      "impact": "medium"
+    },
+    {
+      "date": "2026-06",
+      "title": "REDA complaint procedure overhauled",
+      "detail": "S.L. 2026-13 (effective 22 Jun 2026) amends G.S. 95-242. Complaints must be filed within 180 days on the NCDOL form, by mail or by email, and identify the protected activity and supervisors, with any workers' comp Form 18 attached. Respondents get 7 days for a position statement setting out affirmative defenses, and NCDOL must decide within 90 days. New G.S. 95-246 applies civil-procedure time computation.",
+      "impact": "medium"
+    },
+    {
+      "date": "2026-06",
+      "title": "Workers' comp benefit increases and litigation-funding ban",
+      "detail": "S.L. 2026-14 (signed 22 Jun 2026) raises the minimum weekly total-disability benefit from $30 to $50 and doubles maximum awards for serious disfigurement ($40,000 facial/head; $20,000 bodily) and loss of important organs ($40,000) for injuries from 1 Jul 2027. It also bans third-party litigation investments in NC civil cases.",
+      "impact": "low"
+    },
+    {
+      "date": "2026-06",
+      "title": "Veto overrides: Border Protection Act and public-sector DEI bans",
+      "detail": "On 24 Jun 2026 the House completed overrides of SB 153 (S.L. 2026-19: ICE cooperation, benefit eligibility checks, and DES verification of UI claimants' legal residency), SB 227 (DEI ban in public K-12) and SB 558 (DEI ban in public universities). HB 171 (DEI ban in state and local agencies) awaits a Senate override vote. None directly regulates private employers.",
+      "impact": "low"
+    },
+    {
+      "date": "2026-06",
+      "title": "E-Verify expansion bill advances in House committees",
+      "detail": "HB 1214 ('Make E-Verify Great Again') was filed 30 Apr 2026. The committee substitute keeps the 25-employee threshold but adds NCDOL random audits (up to once a year), a 30-day cure period, anti-retaliation protection for reporters and higher per-violation penalties. It was re-referred to House Rules on 10 Jun 2026 and is not law.",
+      "impact": "medium"
+    },
+    {
+      "date": "2026-01",
+      "title": "2026 payroll parameters",
+      "detail": "Flat income tax rate fell to 3.99% (from 4.25%). The UI taxable wage base rose to $34,200 (from $32,600), with the new-employer rate unchanged at 1.0%. The maximum weekly workers' comp benefit rose to $1,446 (from $1,380).",
+      "impact": "medium"
+    },
+    {
+      "date": "2025-10",
+      "title": "HB 318 immigration detainer law in force",
+      "detail": "S.L. 2025-85 (enacted over veto 29 Jul 2025; effective 1 Oct 2025) requires jails to check immigration status and hold people subject to ICE detainers. It has no direct employer duties, but it affects employees arrested on unrelated charges and heightens I-9 and E-Verify scrutiny.",
+      "impact": "low"
+    },
+    {
+      "date": "2025-07",
+      "title": "HB 805 statutory definition of sex",
+      "detail": "S.L. 2025-84 (enacted over veto 29 Jul 2025) adds a biological definition of 'sex' to NC statutes, including the statutory-construction chapter, and applies it to state records and facilities (verify scope). Private employers remain bound by Title VII (Bostock) and local ordinances covering gender identity.",
+      "impact": "low"
+    },
+    {
+      "date": "2025-07",
+      "title": "Veto overrides begin; permitless-carry bill stalls",
+      "detail": "The Senate overrode vetoes of SB 50 (Freedom to Carry NC), SB 153 and HB 318 on 29 Jul 2025, but the SB 50 House override vote has been postponed repeatedly into 2026, so posted-premises firearm bans remain the key employer tool.",
+      "impact": "low"
+    },
+    {
+      "date": "2025-01",
+      "title": "2025 payroll parameters and Hurricane Helene recovery",
+      "detail": "Flat income tax rate 4.25%, UI wage base $32,600, maximum weekly workers' comp benefit $1,380. After Hurricane Helene, Executive Order 322 (Oct 2024) temporarily eased and raised UI benefits for affected western NC claimants.",
+      "impact": "low"
+    }
+  ],
+  "watchlist": [
+    {
+      "title": "HB 1214 E-Verify expansion",
+      "detail": "Would add NCDOL random audits, a 30-day cure period, anti-retaliation protection for reporters, higher penalties (up to $5,000 per missed verification for third violations) and extend E-Verify to state and local government. The original version lowered the threshold to 5 employees, but the committee substitute kept 25.",
+      "expected": "Stalled in House Rules; likely revived in the 2027 long session (verify)"
+    },
+    {
+      "title": "Income tax cap constitutional amendment",
+      "detail": "Voters decide whether to cap the state income tax rate at 3.5% (currently 7%), locking in the S.L. 2026-41 rate path.",
+      "expected": "General election, 3 Nov 2026"
+    },
+    {
+      "title": "HB 269 Workforce Freedom and Protection Act (non-competes)",
+      "detail": "Would ban non-competes for employees earning under $75,000 (indexed) and create a private right of action. It sits in House committee.",
+      "expected": "Unlikely before the 2027 long session"
+    },
+    {
+      "title": "Comprehensive privacy and AI bills",
+      "detail": "S757 (Consumer Privacy Act) and H462 (Personal Data Privacy/Social Media Safety) stalled in committee in 2025; H301 (Social Media and AI Safety) is in conference. Any version could reach employee and applicant data.",
+      "expected": "2027 long session (verify)"
+    },
+    {
+      "title": "SB 50 permitless carry",
+      "detail": "The House has not scheduled the veto override vote. If enacted, permitless concealed carry would grow, but property owners' posting rights would remain (verify final text).",
+      "expected": "Uncertain; described as unlikely to move in 2026"
+    },
+    {
+      "title": "HB 171 state-agency DEI ban",
+      "detail": "The House overrode the veto in June 2026 and the bill awaits a Senate override vote. It covers state and local agencies, not private employers, but may affect state-funded research partnerships and contracts.",
+      "expected": "Reconvened session or 2027"
+    },
+    {
+      "title": "HB 48 unemployment benefit increase",
+      "detail": "Passed the House 114-1 in Feb 2025 to raise the $350 maximum weekly UI benefit and grant a 2025 UI tax credit; it sits in Senate Rules.",
+      "expected": "Uncertain"
+    }
+  ],
+  "calendar": [
+    {
+      "month": 1,
+      "title": "Year-start payroll updates; NC-3 and W-2 due",
+      "detail": "Apply the new flat withholding rate (3.49% from 1 Jan 2027), the new DES wage base and the Industrial Commission maximum rate. File the NC-3 annual reconciliation and W-2s with NCDOR, and the Q4 NCUI 101 with DES, by 31 Jan. The long session convenes in odd years (Jan 2027)."
+    },
+    {
+      "month": 2,
+      "title": "OSH 300A posting",
+      "detail": "Post the OSH Form 300A summary at each NC establishment from 1 Feb to 30 Apr."
+    },
+    {
+      "month": 3,
+      "title": "Electronic injury data submission",
+      "detail": "Submit Form 300A data through OSHA ITA by 2 Mar where the establishment is covered (NC state-plan employers follow the same rule; verify)."
+    },
+    {
+      "month": 4,
+      "title": "DES Q1 report",
+      "detail": "File the NCUI 101 quarterly tax and wage report and pay contributions by 30 Apr."
+    },
+    {
+      "month": 6,
+      "title": "Mid-year policy review",
+      "detail": "Review bonus and commission plan changes due 1 Jul and give written notice at least one pay period before any reduction. Check E-Verify case completeness."
+    },
+    {
+      "month": 7,
+      "title": "Fiscal-year laws effective; DES Q2 report",
+      "detail": "Many session laws take effect 1 Jul (e.g., workers' comp benefit increases from 1 Jul 2027). File the Q2 NCUI 101 by 31 Jul."
+    },
+    {
+      "month": 8,
+      "title": "Hurricane season readiness",
+      "detail": "Peak season runs Aug-Oct: refresh emergency action plans, closure-pay rules and employee check-in procedures for Triangle sites."
+    },
+    {
+      "month": 10,
+      "title": "1 Oct effective dates; DES Q3 report",
+      "detail": "1 Oct is a common effective date for new NC laws; S.L. 2026-59 firearm course changes take effect 1 Oct 2026. File the Q3 NCUI 101 by 31 Oct."
+    },
+    {
+      "month": 11,
+      "title": "General election; open enrollment",
+      "detail": "3 Nov 2026: vote on the income tax cap amendment. Benefits open enrollment; check insured-plan state continuation language."
+    },
+    {
+      "month": 12,
+      "title": "Year-end PTO and rate notices",
+      "detail": "Make sure written forfeiture notices exist before any year-end PTO forfeiture. Review DES contribution rate notices for the next year and the NC-30 withholding tables. 1 Dec is a common effective date for criminal-law and expunction changes."
+    }
+  ],
+  "gotchas": [
+    "Cutting salaries or changing commission or bonus plans with only a few days' notice. Since 2021, NC requires written notice at least one full pay period before any reduction (G.S. 95-25.13(3)); the old 24-hour rule is gone.",
+    "Forfeiting PTO (use-it-or-lose-it, no payout on termination) without a written policy given in advance, which leaves accrued vacation owed as wages with liquidated damages.",
+    "Deducting unreturned laptops, sign-on bonus clawbacks or training costs from final pay without a signed authorization that meets G.S. 95-25.8 (reason, amount, timing, minimum-wage floor).",
+    "Forgetting E-Verify for NC remote hires, or assuming federal-only rules: with 25+ NC employees every new NC hire must be run, and failing to file the corrective affidavit costs $10,000.",
+    "Using California templates in NC: no non-compete or non-solicit (leaving key SiC and power-device engineers unprotected), a California forum clause (void under G.S. 22B-3), or a jury waiver (void under G.S. 22B-10).",
+    "Asking existing employees to sign a new non-compete for 'continued employment' only. NC courts require new consideration such as a raise, bonus or equity, and they will not rewrite overbroad territory or customer clauses.",
+    "Firing an employee soon after a workers' comp claim or wage complaint without a documented, independent reason, which invites REDA claims (180 days to file; treble damages if willful).",
+    "Using instant drug-test cups on current employees, or acting on unconfirmed positives, which violates the Controlled Substance Examination Regulation Act.",
+    "Asking candidates about expunged records or rejecting them over off-duty tobacco or alcohol use (G.S. 15A-153, 95-28.2).",
+    "Assuming 'no state law' means no local law: Durham, Orange County towns, Greensboro and Charlotte/Mecklenburg non-discrimination ordinances add sexual orientation, gender identity and hairstyle protections."
+  ],
+  "semiconductorNotes": [
+    "Wolfspeed and the silicon carbide talent pool: Durham-based Wolfspeed filed a prepackaged Chapter 11 on 30 Jun 2025 and emerged on 29 Sep 2025. It closed its Durham 150mm fab by end-2025, laid off 73 people at the Siler City John Palmour (JP) materials plant (WARN, Aug 2025) and is ramping 200mm SiC materials there. Experienced SiC crystal-growth, epi, device and reliability engineers are available in the Triangle, so run clean-hire certifications, check prior-employer covenants (NC non-competes can be enforceable) and use no-bring-data onboarding.",
+    "CHIPS funding in NC: Wolfspeed's up-to-$750M preliminary CHIPS award (Oct 2024) was never disbursed because it depended on refinancing. The company instead received a $698.6M 48D advanced manufacturing tax credit refund in Dec 2025. MACOM's $70M preliminary award (Jan 2025) and the $285M SMART USA digital-twin Manufacturing USA institute (SRC, HQ Durham, Jan 2025) are subject to the Commerce Department's renegotiation of CHIPS awards (verify current status).",
+    "Talent pipelines: NC State (ECE, PowerAmerica wide-bandgap institute, FREEDM center, and the DoD Microelectronics Commons CLAWS hub for wide-bandgap semiconductors), Duke Pratt and UNC supply power-electronics, RF, analog and verification talent. Many graduates are F-1/OPT, so plan for STEM OPT E-Verify, I-983 plans and deemed-export reviews before granting access to controlled technology.",
+    "Competition for engineers comes from Cisco, IBM, Lenovo, SAS, Red Hat, MACOM, Qorvo (Greensboro) and biotech manufacturers. Triangle pay runs well below Bay Area levels, so geo-differentiated ranges are common. NC has no pay-range posting law, but remote postings reaching CO, NY, WA or CA need ranges.",
+    "Trade-secret toolkit is stronger than in California: reasonable non-competes (e.g., 12 months, limited to named competitors or the SiC and power-device segment) and customer non-solicits limited to accounts the employee handled can be enforced in the NC Business Court. Pair them with the NC Trade Secrets Protection Act, the G.S. 66-57.1 invention carve-out in PIIAs, and NC law and forum clauses.",
+    "Export control and E-Verify: state E-Verify must not be used for export screening or before an offer. Export questions (citizenship and permanent-residence country for EAR deemed exports) belong in a separate post-offer workflow consistent with 8 USC 1324b and NCEEPA national-origin policy.",
+    "Lab, test and reliability sites in RTP follow OSHANC standards. Track the workers' comp experience modifier, because 1.5 or more triggers mandatory safety programs and committees, and keep Form 19 reporting within 5 days.",
+    "Hurricane and severe-weather continuity: Triangle sites face hurricane remnants and ice storms (Helene disrupted western NC supply chains in 2024), so build remote-work fallback, exempt-pay closure rules and data-center or lab shutdown procedures into crisis plans."
+  ],
+  "sources": [
+    {
+      "title": "NCDOR: Individual income tax rate schedules",
+      "url": "https://www.ncdor.gov/taxes-forms/individual-income-tax/tax-rate-schedules"
+    },
+    {
+      "title": "Carolina Journal: NC lawmakers unveil long-awaited state budget (income tax path)",
+      "url": "https://www.carolinajournal.com/nc-lawmakers-unveil-long-awaited-state-budget/"
+    },
+    {
+      "title": "NCGA: Senate Bill 257 / S.L. 2026-41 (2026 Appropriations Act)",
+      "url": "https://www.ncleg.gov/BillLookup/2025/S257"
+    },
+    {
+      "title": "NCGA: G.S. 95-25.13 Notification, posting, and records",
+      "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_95/GS_95-25.13.html"
+    },
+    {
+      "title": "Ogletree: NC modifies pay notice and final wage requirements (S.L. 2021-82)",
+      "url": "https://ogletree.com/insights-resources/blog-posts/north-carolina-modifies-requirements-governing-pay-notice-and-final-wages-for-separated-employees/"
+    },
+    {
+      "title": "NCDOL: Changes or reduction in wages",
+      "url": "https://www.labor.nc.gov/workplace-rights/employee-rights-regarding-time-worked-and-wages-earned/changes-or-reduction-wages"
+    },
+    {
+      "title": "NCDOL: E-Verify information",
+      "url": "https://www.labor.nc.gov/workplace-rights/e-verify/e-verify-information"
+    },
+    {
+      "title": "NCGA: House Bill 1214 'Make E-Verify Great Again' (2025-2026)",
+      "url": "https://www.ncleg.gov/BillLookup/2025/H1214"
+    },
+    {
+      "title": "Enlace Latino NC: E-Verify bill keeps 25-employee threshold, adds audits and fines",
+      "url": "https://enlacelatinonc.org/en/Project-eVerify-eliminates-requirement-for-small-businesses-but-maintains-new-audits-and-fines-for-employers/"
+    },
+    {
+      "title": "NCGA: S.L. 2026-13 (REDA amendments)",
+      "url": "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2025-2026/SL2026-13.html"
+    },
+    {
+      "title": "NCGA: S.L. 2026-14 (litigation investments; workers' comp benefits)",
+      "url": "https://www.ncleg.gov/EnactedLegislation/SessionLaws/HTML/2025-2026/SL2026-14.html"
+    },
+    {
+      "title": "Ogletree: 2023 NC budget bars local wage payment laws and changes OSH rules",
+      "url": "https://ogletree.com/insights-resources/blog-posts/north-carolinas-new-state-budget-makes-changes-to-occupational-safety-and-health-rules-and-bars-local-wage-payment-laws/"
+    },
+    {
+      "title": "NC Industrial Commission: Maximum weekly compensation rates 1982-2026",
+      "url": "https://www.ic.nc.gov/workers-compensation-claims/maximum-weekly-compensation-rates"
+    },
+    {
+      "title": "Hedrick Gardner: NC Commission revises Form 19 filing threshold",
+      "url": "https://hedrickgardner.com/blog/nc-commission-revises-form-19-froi-filing-requirement/"
+    },
+    {
+      "title": "NC DES: Tax rate information (wage base, new employer rate)",
+      "url": "https://www.des.nc.gov/employers/tax-rate-information"
+    },
+    {
+      "title": "NCGA: Senate Bill 757 Consumer Privacy Act (2025-2026)",
+      "url": "https://www.ncleg.gov/BillLookup/2025/S757"
+    },
+    {
+      "title": "NC Newsline: House overrides vetoes on anti-DEI and pro-ICE bills (June 2026)",
+      "url": "https://ncnewsline.com/2026/06/24/nc-house-republicans-override-gov-steins-vetoes-on-anti-dei-and-pro-ice-bills/"
+    },
+    {
+      "title": "NCGA: House Bill 318 / S.L. 2025-85",
+      "url": "https://www.ncleg.gov/BillLookup/2025/H318"
+    },
+    {
+      "title": "Littler: Expiration of state preemption prompts NC local anti-discrimination ordinances",
+      "url": "https://www.littler.com/publication-press/publication/expiration-state-preemption-anti-discrimination-ordinances-prompts"
+    },
+    {
+      "title": "Robinson Bradshaw: Workplace violence prevention policies and gun rights laws",
+      "url": "https://www.robinsonbradshaw.com/newsroom/publications/Workplace-Violence-Prevention-Policies"
+    },
+    {
+      "title": "NCGA: Senate Bill 445 / S.L. 2026-59 (Regulatory Reform Act of 2026)",
+      "url": "https://www.ncleg.gov/BillLookup/2025/S445"
+    },
+    {
+      "title": "Manufacturing Dive: Post-bankruptcy, Wolfspeed receives nearly $700M tax refund",
+      "url": "https://www.manufacturingdive.com/news/wolfspeed-receives-700m-tax-refund-chips-act/807037/"
+    },
+    {
+      "title": "Carolina Journal: Wolfspeed layoffs at its Siler City materials factory",
+      "url": "https://www.carolinajournal.com/wolfspeed-layoffs-at-its-siler-city-materials-factory/"
+    },
+    {
+      "title": "Commerce Dept: SMART USA CHIPS Manufacturing USA institute headquartered in Durham",
+      "url": "https://www.commerce.gov/news/press-releases/2025/01/biden-harris-administration-awards-semiconductor-research-corporation"
+    },
+    {
+      "title": "WFAE: North Carolina companies still waiting for CHIPS Act funding",
+      "url": "https://www.wfae.org/2025-06-16/north-carolina-companies-chips-act"
+    }
+  ]
+}

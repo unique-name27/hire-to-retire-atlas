@@ -1,0 +1,569 @@
+{
+ "jurisdiction": "de",
+ "processes": {
+  "PL-01": "Plan headcount per German establishment (Munich, any Dresden site), because thresholds drive duties: KSchG at more than 10 employees, works council consent to hires above 20 employees (§99 BetrVG), severely disabled quota at 20+ jobs, DPO at 20+ processing staff, HinSchG channel at 50+, economic committee above 100 and the §17 KSchG mass-dismissal bands. Budget fully loaded cost with roughly 21-22% employer social insurance up to the 2026 ceilings (EUR 8,450 pension, EUR 5,812.50 health per month), 28-30 days' leave, 13 (Munich) or 11 (Dresden) public holidays and notice periods of up to 7 months.",
+  "PL-02": "Record the German establishment on each req: at more than 20 employees the works council must consent to every hire and pay grouping (§99 BetrVG, 1-week objection period) and may require internal posting first (§93). Flag access to US-origin controlled technology so EAR deemed re-export licensing for third-country nationals is cleared before offer, and note Blue Card eligibility (EUR 50,700 / EUR 45,934.20 in 2026). Decide fixed-term vs permanent here: a fixed term without objective reason is capped at 2 years and needs a wet-ink signature before the start date (§14 TzBfG).",
+  "PL-03": "There is no exempt/non-exempt split: everyone except 'leitende Angestellte' (§5(3) BetrVG: independent hiring/firing authority, Prokura or equivalent) is covered by the ArbZG, time recording and the works council, so flag executive status per job code with care. Where a works council exists, the grading structure and allocation principles (not amounts) are co-determined (§87(1) no.10 BetrVG); build gender-neutral job evaluation now for the Pay Transparency Directive's 'work of equal value' test.",
+  "PL-04": "In companies with more than 20 employees, an operational change (closure, relocation, merging or splitting establishments, fundamental reorganisation, or cuts at §17 KSchG scale) requires early information of the works council, an attempt at an Interessenausgleich and a Sozialplan before implementation (§§111-112 BetrVG); skipping the attempt triggers Nachteilsausgleich (§113). Inform the economic committee (more than 100 employees) in good time (§106), treat moves to a new area of work for more than 1 month as transfers needing council consent (§§95(3), 99), and change contract terms only by consent or a socially justified Änderungskündigung.",
+  "PL-05": "Freelancers embedded in teams (set hours, company tools, manager direction) are usually employees: use the DRV status procedure (§7a SGB IV) for long engagements, since misclassification brings back contributions for 4 years (30 if intentional) and criminal exposure (§266a StGB). EOR and agency staff are labour leasing: the provider needs an AÜG licence, assignments are capped at 18 months, equal pay applies after 9 months, and the contract must be labelled as leasing with the worker named in advance, or employment with the client is deemed (§§1, 9, 10 AÜG). The works council must consent to deploying leased workers (§14(3) AÜG, §99 BetrVG).",
+  "TA-01": "No pay-range posting duty yet, but German transposition of the Pay Transparency Directive (bill expected early 2027) will require the starting pay or range before the interview, so pilot ranges now. Ads must be AGG-neutral ('(m/w/d)', no age limits, no 'native German' unless justified, no photo requests); a discriminatory ad creates a presumption in any rejected applicant's claim (§§11, 22 AGG; 2-month claim window). The works council can require internal posting first (§93 BetrVG), and each vacancy must be checked for severely disabled applicants with the Agentur für Arbeit (§164(1) SGB IX).",
+  "TA-02": "Agencies act as controllers or processors under GDPR, so sign DPAs and make sure sourced candidates get an Art. 14 notice within 1 month (active sourcing on LinkedIn/XING is allowed on that basis). Referral bonuses are taxable wages and, where a works council exists, a co-determined pay principle (§87(1) no.10 BetrVG). No-poach arrangements between employers are unenforceable (either side may withdraw, §75f HGB), while antitrust law still bars wage-fixing or no-hire cartels.",
+  "TA-03": "Questions on pregnancy, family plans, religion, union membership, sexual identity or health beyond fitness for the job are prohibited and candidates may answer untruthfully without consequence; structured scorecards rebut the §22 AGG burden shift. Standardised interview forms and selection guidelines need works council consent (§§94, 95 BetrVG), including AI-based selection guidelines (§95(2a)), and AI screening tools are co-determined (§87(1) no.6); fully automated rejection breaches Art. 22 GDPR, and Annex III AI Act deployer duties apply from 2 Dec 2027. The SBV may inspect disabled applicants' files and attend their interviews (§178(2) SGB IX).",
+  "TA-04": "Issue a German-law contract from the local entity (bilingual recommended) that satisfies the Nachweisgesetz: probation (max 6 months), notice, working time and overtime, statutory vs contractual leave, variable pay and an ArbnErfG-compliant invention clause; text form suffices for the Nachweis since 2025, but a fixed-term clause needs wet ink before start (§14(4) TzBfG). A post-employment non-compete must promise at least 50% Karenzentschädigung for up to 2 years (§§74-75 HGB); US at-will, US governing-law and arbitration clauses do not displace mandatory German law. At more than 20 employees get works council consent to the hire and pay grouping (§99 BetrVG) before the start date.",
+  "TA-05": "Keep checks to what the role needs: identity, right to work, education and employment verification with the candidate's involvement; a certificate of good conduct (Führungszeugnis) only for trust-sensitive roles, no credit checks for ordinary roles and no reference calls without consent. Pre-employment medicals are limited to fitness for the specific job, questionnaires need works council consent (§94 BetrVG), and results must be deleted once the decision is made (GDPR Arts. 5, 6, 10).",
+  "TA-06": "EU and German law have no general deemed-export rule for foreign nationals inside Germany, but US EAR deemed re-export rules follow US-origin controlled technology and source code released in Germany to third-country nationals (e.g. PRC, Russian, Iranian), and BAFA licensing covers transfers out of the EU and technical assistance abroad (Reg. (EU) 2021/821; AWV §§49-52). Collect nationality only for roles with controlled access, under an Art. 13 notice and legitimate-interest basis, and use it to scope access or seek a licence rather than as a blanket hiring bar, since nationality-based rejection risks indirect ethnic discrimination (§§1, 3(2) AGG). Standard export questionnaires need works council consent (§94 BetrVG).",
+  "TA-07": "Non-EU hires need a residence title before starting: EU Blue Card (2026: EUR 50,700; EUR 45,934.20 for shortage occupations, recent graduates and IT specialists), a skilled-worker permit (§§18a-b AufenthG) or an ICT card for intra-group transferees. Use the employer-initiated fast-track procedure (§81a AufenthG) with the Munich KVR or Dresden foreigners' office and allow 1-3 months; the Chancenkarte (since Jun 2024) lets candidates job-search for a year with up to 20 h/week work and 2-week trial jobs. The employer must keep a copy of the title and notify the foreigners' office within 4 weeks if employment ends early (§4a(5) AufenthG).",
+  "TA-08": "Interns must receive the minimum wage (EUR 13.90/h in 2026; EUR 14.60 from 2027) unless the internship is mandatory under study rules or a voluntary orientation internship of up to 3 months (§22 MiLoG); working students up to 20 h/week in term time are exempt from most social insurance except pension. Interns get a Nachweis (§2(1a) NachwG), and non-EU students may work only within their residence-title limits (currently 140 full or 280 half days a year; verify). Avoid age- or 'German-only'-restricted graduate programmes (AGG).",
+  "TA-09": "GmbH managing directors are usually not employees (outside the KSchG and ArbZG) but EU law may treat them as workers (e.g. mass dismissals, ECJ Balkaya); their appointment is filed in the commercial register. Senior executives ('leitende Angestellte') are outside the works council and ArbZG, and courts may dissolve their employment against severance without reasons (§14(2) KSchG); a Sprecherausschuss can be formed at 10+ executives. Employee executives' non-competes still need 50% Karenzentschädigung (§74 HGB); for GmbH directors the BGH tests reasonableness instead.",
+  "TA-10": "Ask candidates to confirm they will not bring former employers' confidential information (GeschGehG) and to disclose post-contractual non-competes, which are enforceable in Germany when paid (§74 HGB), unlike in California. Conflict and relatives questions must be necessary for a genuine conflict risk, and a standard questionnaire needs works council consent (§94 BetrVG). Rehire eligibility must not rest on protected characteristics or protected activity (AGG, HinSchG §36).",
+  "TA-11": "Give an Art. 13 GDPR notice at application (Art. 14 within 1 month for sourced candidates) and delete rejected candidates' data about 6 months after rejection to cover the 2-month AGG claim window and §61b ArbGG deadline, unless they consent to a talent pool. A US-hosted ATS needs DPF certification of the vendor or SCCs, and AI screening needs a DPIA; the BayLDA and Saxon DPA audit recruiting tools. Rejected candidates increasingly use Art. 15 access requests and Art. 82 damages claims.",
+  "ON-01": "Send the signed contract and Nachweis terms before day 1 (text form allowed since 2025 with a request to confirm receipt), collect tax ID, social insurance number, health insurer choice and bank details, and register the hire with the health insurer via DEÜV no later than the first payroll. For non-EU hires confirm the residence title permits this specific job before the start date and keep a copy (§4a(5) AufenthG). Replace US PIIAs with German-law confidentiality and ArbnErfG-compliant invention terms, and limit background checks to role-necessary items.",
+  "ON-02": "EU/EEA and Swiss nationals need no permit; everyone else needs a residence title allowing the specific employment (Blue Card, §§18a-b skilled-worker permit, ICT card; the Chancenkarte allows only part-time and trial work). The employer must check the title before work starts, keep a copy for the duration of employment and notify the foreigners' office within 4 weeks of learning that employment ended early (§4a(5) AufenthG); illegal employment of foreign nationals can be fined up to EUR 500,000 (§404 SGB III). Diary expiry dates and fictional certificates for pending renewals (§81(4)).",
+  "ON-03": "Record the employing entity, establishment and state (holiday calendar; church tax 8% Bavaria, 9% Saxony; Saxony's care-insurance split), ELStAM tax class and child allowances, health insurer, parenthood (care surcharge and child reductions), executive status and severe-disability status. The employer needs a Betriebsnummer from the Bundesagentur für Arbeit, and the DEÜV registration is due with the first payroll (within 6 weeks).",
+  "ON-04": "Probation is capped at 6 months with 2 weeks' notice (§622(3) BGB) and the KSchG waiting period is 6 months regardless, so decide around month 5 to leave time for the §102 BetrVG hearing (1 week) and delivery of a wet-ink notice before the 6-month mark; probation cannot be extended. Give safety instruction before work starts (§12 ArbSchG) plus AGG, data-protection, HinSchG-channel and AI-literacy briefings. Pregnancy protection applies from day 1.",
+  "ON-05": "Reimbursement of a job-related move is tax-free within Federal Relocation Costs Act limits (§3 No.16 EStG); the excess is taxable wages. Repayment clauses must be transparent and proportionate (commonly up to 2-3 years, pro-rated monthly) and must not apply where the employer ends the employment for reasons not caused by the employee, or the whole clause fails (§307 BGB). Blue Card holders' family members join without a German-language test.",
+  "PY-01": "Pay monthly in arrears, remit social insurance (employer share about 21% up to the 2026 ceilings of EUR 8,450 pension/unemployment and EUR 5,812.50 health/care per month) by the third-last banking day, and file and pay wage tax by the 10th of the following month. Apply insurer-specific health additional rates (average 2.9%), the childless care surcharge and child reductions, the Saxony care split and church tax (8% Bavaria, 9% Saxony). Issue payslips in text form (§108 GewO) and keep the Lohnkonto to the end of the 6th year (§41 EStG); DRV and tax auditors test payroll every 4 years or so.",
+  "PY-02": "There is no accelerated final-pay deadline, so final pay normally runs with the regular payroll, but correct shortfalls promptly: late wages carry default interest and exclusion clauses never bar minimum-wage claims. One-off payments (bonus, RSU income) use the annual social insurance ceiling (with the March rule for Jan-Mar payments) and the annual wage-tax table; genuine severance is free of social insurance.",
+  "PY-03": "All working time of all employees except executives must be recorded (BAG 13 Sep 2022, 1 ABR 22/21), including trust-based and remote staff, and time beyond 8 h/day kept 2 years (§16(2) ArbZG). There is no statutory overtime premium, but excess hours must be paid or credited unless a transparent clause covers a defined amount, and ArbZG caps (10 h/day, 11 h rest, Sunday ban) apply whatever the pay. The recording system, overtime and time accounts are co-determined (§87(1) nos.2, 3, 6 BetrVG); a June 2026 BMAS draft would require same-day electronic recording.",
+  "PY-04": "Transmit electronic Lohnsteuerbescheinigungen by the last day of February, DEÜV annual reports by 15 Feb and the Berufsgenossenschaft annual payroll report by 16 Feb. Employers with 10+ employees at year-end must run the annual wage-tax equalisation for eligible employees (§42b EStG), and from 2026 tax-free Aktivrente amounts are reported in the certificate.",
+  "PY-05": "Overpaid net wages are recoverable as unjust enrichment, but the employee can plead good-faith spending (§818(3) BGB) unless the contract validly excludes it; set-off is limited to the attachable part of wages (§394 BGB with the §850c ZPO table). Underpayments are corrected with social insurance and tax adjustments, and prior-year wage tax through corrected certificates.",
+  "CO-01": "No range-posting rule yet, but the Pay Transparency Directive (German law expected early 2027) will require objective, gender-neutral structures, ranges before interview and information rights, so price German roles into bands now with German survey cuts (Munich vs Dresden). Where a works council exists, the salary structure and allocation principles (not amounts) are co-determined (§87(1) no.10 BetrVG); IG Metall metal and electrical scales in Bavaria and Saxony are reference points even for non-tariff employers.",
+  "CO-02": "There is no statutory annual increase, but a general increase must respect equal treatment and the AGG, and the distribution principles of a merit budget are co-determined where a works council exists (§87(1) no.10 BetrVG). Document objective reasons for each outcome to withstand the BAG's single-comparator equal-pay test (Oct 2025) and its rule that negotiation skill is no justification (2023). Notify changed terms no later than the day they take effect (§3 NachwG).",
+  "CO-03": "Bonus plan design (metrics, weighting, allocation) is co-determined where a works council exists (§87(1) nos.10-11 BetrVG), and plan terms are reviewed as standard terms (§§305-310 BGB): 'discretionary' labels fail for performance-linked pay, and a bonus earned for a period cannot be forfeited by a stay-until-payment condition. Set targets on time, because late or missing targets give damages based on full achievement (BAG 2025). Bonuses are taxed and treated as one-off payments for social insurance.",
+  "CO-04": "Employee commission plans follow §§65, 87-87c HGB (entitlement on concluded business, statement and book-extract rights), are co-determined pay principles (§87(1) nos.10-11 BetrVG) and are reviewed as standard terms. Average commissions feed holiday pay and sick pay (§11 BUrlG, EFZG), and clawback of unearned advances needs clear, transparent terms.",
+  "CO-05": "Counteroffers and retention bonuses are lawful but must be consistent with equal-pay rules and documented against objective criteria. Repayment or stay conditions must be proportionate to the bonus size under BAG case law and cannot bite where the employer ends employment for reasons not caused by the employee. Individual adjustments are not co-determined unless they follow a general scheme.",
+  "CO-06": "Audit 'equal or equivalent work' (§§3-4 EntgTranspG) under privilege: the BAG presumes discrimination on a single better-paid male comparator (8 AZR 300/24, 23 Oct 2025) and awards back pay up to the 3-year limitation plus AGG compensation. Today, establishments with more than 200 employees must answer individual information requests and employers with more than 500 are asked to run audits (§17). Prepare for Directive gap reporting and joint pay assessments with the works council where an unexplained gap of 5%+ persists.",
+  "CO-07": "German-employed executives are covered by the Nachweisgesetz and labour law unless they are genuine managing directors, and Dodd-Frank clawbacks bind them only if contractually agreed and are limited by standard-terms review and wage attachment limits. Board-level co-determination (DrittelbG above 500, MitbestG above 2,000 German employees) would bring employee representatives into pay oversight, but a sales/R&D GmbH of this size is far below those thresholds.",
+  "EQ-01": "The US parent's grant decisions are generally not co-determined, but the German employer's own allocation criteria can be where it has discretion (§87(1) no.10 BetrVG), and eligibility must treat part-time and fixed-term staff equally (§4 TzBfG). Give German award agreements a German summary, rely on the EU Prospectus Regulation employee-plan exemption document, and note that forfeiture of unvested parent-company awards on termination is generally upheld (BAG 2008). Tax arises at vest or exercise, not grant.",
+  "EQ-02": "RSU/PSU vests and option exercises are wage income at vest or exercise, withheld through German payroll (Lohnsteuer, solidarity surcharge, church tax) and treated as one-off payments for social insurance up to the ceilings; reflect sell-to-cover in the vest month's payroll. Movers into or out of Germany during vesting are taxed pro rata by workdays under the applicable treaty, so track mobility data.",
+  "EQ-03": "Run a non-423 sub-plan: the purchase discount is taxable wages, but up to EUR 2,000 a year is tax- and contribution-free if the offer is open to all employees with 1+ year's service (§3 No.39 EStG). Payroll deductions need the employee's written authorisation, and gains on later sale fall under the 25% flat capital-gains tax plus surcharges.",
+  "EQ-04": "The EU MAR insider-dealing ban (enforced by BaFin) applies to trades in the parent's shares on German venues such as Frankfurt or Tradegate open-market listings, even without issuer consent, while issuer duties like EU insider lists apply only if the company requested or approved EU trading (verify). Pre-clearance and window data need an Art. 13 GDPR notice; trading rules beyond statutory duties may be co-determined conduct rules (§87(1) no.1 BetrVG).",
+  "EQ-05": "No German equivalent of Section 16; Germany-based officers still file Forms 3/4/5. MAR Art. 19 manager-transaction notices to BaFin would apply only if the company's shares were admitted to EU trading at its request (verify listing status). Send German payroll data for Form 4 under an Art. 13 notice.",
+  "EQ-06": "Recovering paid incentive pay from German employees needs a clear contractual basis agreed before the award (the US policy alone does not bind), passes standard-terms review only if transparent and proportionate, and set-off is limited to the attachable part of wages (§394 BGB). Prefer cancellation of unvested awards or a repayment agreement; tax already withheld is corrected only through later assessments.",
+  "BN-01": "Statutory social insurance starts on day 1 (DEÜV registration with the employee's chosen health insurer with the first payroll); employees above EUR 77,400/yr may opt for private health insurance with an employer subsidy of half the premium up to the statutory cap (§257 SGB V). Offer salary-deferral bAV with the 15% employer subsidy (§1a BetrAVG) and name the pension provider in the Nachweis within 1 month; group accident, life and disability cover are voluntary market practice.",
+  "BN-02": "There is no US-style open enrollment because statutory insurance is continuous. Annual touchpoints are health insurers' January additional-rate changes (employees have a special switching right on increases), bAV contribution elections, and recalculating private-insurance subsidies against new ceilings; changes to voluntary benefit distribution involve the works council (§87(1) nos.8, 10 BetrVG).",
+  "BN-03": "Marriage and children update ELStAM (tax class, child allowances) automatically from the tax authority, but parenthood for the care-insurance childless surcharge and child reductions must be evidenced to the employer (§55 SGB XI). Spouses and children are generally covered free under statutory family insurance (§10 SGB V), and births trigger Mutterschutz, Elternzeit and Elterngeld steps.",
+  "BN-04": "Honour the §1a BetrAVG deferral right up to 4% of the pension ceiling (EUR 4,056 in 2026) with the 15% subsidy, vesting of employer-funded promises after 3 years (age 21+), PSVaG insolvency insurance for direct promises and support funds, and 3-yearly pension adjustment reviews (§16). BRSG II (in force 22 Jan 2026) lets non-tariff employers introduce opting-out auto-enrolment by works agreement with a 20% subsidy and raises the §100 EStG low-earner subsidy to EUR 1,200 from 2027. Scheme design within the employer's budget is co-determined (§87(1) nos.8, 10 BetrVG).",
+  "BN-05": "Renew bAV vehicles (Direktversicherung, Pensionskasse, Pensionsfonds, Unterstützungskasse), group risk insurance, company-car leasing and benefit-card vendors under German-law DPAs, and agree changes to eligibility or distribution with any works council. Switching bAV providers must preserve accrued rights and may need employee consent.",
+  "BN-06": "No COBRA equivalent: statutory health cover continues automatically (via the Agentur für Arbeit for benefit recipients, otherwise voluntary or family insurance), and private health insurance continues individually without the employer subsidy. Direktversicherung or Pensionskasse bAV can be continued privately or transferred to a new employer within 1 year (§4(3) BetrAVG).",
+  "LV-01": "Route each absence to its German regime: sickness (6 weeks' full pay per illness, then insurer Krankengeld), Mutterschutz (6 weeks before and 8 after birth, now also staggered protection after miscarriage from week 13), Elternzeit up to 3 years per child (text-form request 7 weeks ahead; 15-32 h part-time right at employers with more than 15 employees), Pflegezeit (more than 15 employees) and Familienpflegezeit (more than 25), and insurer-paid child-sick days. Dismissal protection runs from notice of pregnancy and from the Elternzeit request, and returners get their contractual role and hours back. Elterngeld is state-paid (EUR 175,000 income cap); the employer pays the Mutterschaftsgeld top-up, reimbursed via U2.",
+  "LV-02": "Severely disabled employees (degree 50+, or 30+ equated) have enforceable rights to suitable employment, adapted workplaces, part-time work and 5 extra leave days (§§164(4)-(5), 208 SGB IX), with Integrationsamt funding; involve the SBV and works council. For pregnancy, apply the MuSchG risk assessment and adjust work before any employment ban, especially in labs with chemicals or lasers. Health data is special-category data (Art. 9 GDPR; §26(3) BDSG) kept separate from the personnel file.",
+  "LV-03": "After 6+ weeks' sickness in 12 months, offer BEM in writing with data-protection information and involve the works council and SBV (§167(2) SGB IX); a graduated return (Hamburger Modell) runs while the employee is still on sick status. Parents returning from Elternzeit resume contractual hours with rights to part-time (§8 TzBfG, more than 15 employees) or bridge part-time (§9a, more than 45). Leave accrues during Mutterschutz; the employer may cut leave by 1/12 per full month of Elternzeit if it declares so (§17 BEEG).",
+  "LV-04": "Work and commuting accidents and occupational diseases are covered by the Berufsgenossenschaft, which pays Verletztengeld after the employer's 6 weeks of full pay; employers are immune from injury claims except for intent (§104 SGB VII). Report accidents causing more than 3 days' incapacity within 3 days and deaths immediately (§193 SGB VII); home-office accidents connected with work are covered.",
+  "LV-05": "Configure 20 statutory days on a 5-day week plus contractual days (typically 30), 5 extra days for severely disabled employees, and separate Bavaria/Munich (13) and Saxony/Dresden (11) holiday calendars. Leave lapses at year-end or 31 March only after an individual forfeiture notice (ECJ C-684/16; BAG 2019) and is paid out only at exit. Vacation principles and the vacation plan are co-determined (§87(1) no.5 BetrVG), and holiday pay includes average variable pay of the prior 13 weeks (§11 BUrlG).",
+  "PD-01": "Goal systems that feed ratings or pay are co-determined as assessment principles and, when software-based, as technical devices (§§87(1) no.6, 94(2) BetrVG). Where goals drive a bonus, set them on time and fairly (§315 BGB); failing to set targets makes the employer liable for damages as if they were fully met (BAG 2025).",
+  "PD-02": "Rating scales and calibration rules are 'general assessment principles' that need works council consent (§94(2) BetrVG), performance software is co-determined (§87(1) no.6), and forced distribution needs agreement. Employees may inspect ratings in their file and add statements (§83 BetrVG), and ratings must not penalise Mutterschutz, Elternzeit or sickness absences. A poor rating alone rarely supports a dismissal.",
+  "PD-03": "A PIP has no legal status: a performance dismissal requires proof of sustained, significant underperformance versus peers (the BAG has referred to about one-third below average over time) and normally a prior Abmahnung, plus the KSchG and a §102 BetrVG hearing. Because the burden is heavy, most PIPs end in an Aufhebungsvertrag with severance around 0.5-1 monthly salary per year; check special protections and offer BEM where health issues underlie performance.",
+  "PD-04": "Moving an employee into a different pay group is a regrouping that needs works council consent at more than 20 employees (§99 BetrVG), and the council can require internal posting (§93). Notify changed terms under the Nachweisgesetz, reassess executive status (§5(3) BetrVG), and document objective criteria because AGG burden-shift and equal-pay comparator rules apply to promotions.",
+  "PD-05": "Potential and flight-risk ratings are personal data needing a legal basis and transparency (Arts. 6(1)(f), 13 GDPR) and are disclosable on an Art. 15 request. Standardised criteria are co-determined assessment principles (§94(2) BetrVG), and algorithmic flight-risk scoring needs a DPIA and works agreement. Changes of the GmbH managing director must be filed with the commercial register.",
+  "PD-06": "German mandatory or expected training: safety instruction before starting and at least annually (§12 ArbSchG), AGG prevention training (§12(2) AGG), data-protection confidentiality, HinSchG channel information, AI literacy for AI users (Art. 4 AI Act, softened by the 2026 Omnibus), export control for technology staff, and first-aider and fire-warden training. Mandatory training counts as working time, in-house training implementation is co-determined (§98 BetrVG) and LMS tracking falls under §87(1) no.6.",
+  "PD-07": "Training repayment clauses are valid only if the training gives a marketable benefit, the binding period is proportionate to its length and cost (BAG guidance: about 6 months' binding for up to 1 month's training, up to 2 years for 3-4 months and up to 3 years for 6-12 months) and repayment is pro-rated and excluded where the employer ends the employment or causes the employee's exit (§307 BGB). Job-related training paid by the employer is not taxable wages; Bavaria and Saxony have no educational-leave statute.",
+  "MV-01": "Assigning a different area of work for more than 1 month, or with significantly changed conditions, is a transfer needing works council consent at more than 20 employees (§§95(3), 99 BetrVG), and the employer's right to direct (§106 GewO) reaches only what the contract allows; otherwise use consent or an Änderungskündigung. Notify changed terms (§3 NachwG) and re-screen technology access; Blue Card holders changing jobs in their first 12 months must notify the foreigners' office.",
+  "MV-02": "Inbound assignees need a residence title (ICT card for intra-company transfers over 90 days, or a Blue Card or skilled-worker permit) and a certificate of coverage: the US-Germany social security agreement keeps US-employed assignees in US social security for up to 5 years, and EU postings need an A1. Tax follows the treaty 183-day and cost-bearing rules, and German employees sent abroad for more than 4 consecutive weeks must receive Nachweis details on destination, duration, currency and return (§2(2) NachwG). German-based staff working for the US parent can create a permanent establishment.",
+  "MV-03": "Moving an employee from the German entity to another group company needs a new contract and a wet-ink termination or Aufhebungsvertrag with the German entity (§623 BGB); agree service recognition, bAV vesting and portability, and any severance waiver explicitly. If a team moves with assets or functions, §613a BGB may transfer employment automatically, requiring written information to each employee and a 1-month objection right.",
+  "MV-04": "There is no statutory right to home office, but the design of mobile work is co-determined (§87(1) no.14 BetrVG), fixed telework stations fall under ArbStättV, and ArbZG limits and time recording apply at home. Cross-border remote work triggers host-state social insurance and tax: the EU framework agreement keeps German coverage for up to 49.9% telework from another signatory state with an A1, and PE risk must be checked. A move between German states changes the holiday calendar and church-tax rate.",
+  "MV-05": "After 6 months, employees at employers with more than 15 staff have a right to reduce hours (§8 TzBfG) and above 45 to bridge part-time with a return right (§9a); refuse only for operational reasons within the statutory deadlines or consent is deemed. There is no exempt/non-exempt reclassification; only executive status (§5(3) BetrVG) removes ArbZG and works council coverage. Converting freelancers or leased workers should include a review of back social insurance exposure, and fixed-term staff should be made permanent before the 2-year cap.",
+  "MV-06": "Diary Blue Card and permit expiries (renewals at the Munich KVR or Dresden foreigners' office can take months; applying before expiry keeps the right to work via a fictional certificate, §81(4) AufenthG). Blue Card holders can get a settlement permit after 27 months (21 months with B1 German), and job changes in the first 12 months must be notified. Permanent residence is employee-driven; the employer supplies employment confirmations.",
+  "EN-01": "Employer surveys are co-determined where they use standardised questionnaires (§94 BetrVG) or software able to monitor behaviour or performance (§87(1) no.6), and works councils usually insist on minimum reporting groups (often 5-10). Run them on a legitimate-interest basis or voluntary consent with a clear Art. 13 notice, keep individual answers away from HR, and avoid health questions without an Art. 9 basis.",
+  "EN-02": "Recognition awards are taxable wages, except benefits in kind up to EUR 50 a month (§8(2) EStG) and gifts on personal occasions up to EUR 60; other non-cash awards can be flat-taxed by the employer at 30% (§37b EStG). Schemes with set criteria are co-determined pay principles where a works council exists (§87(1) no.10 BetrVG).",
+  "EN-03": "Stay-interview notes are personal data disclosable under Art. 15 GDPR, so keep them factual and avoid questions on family planning, health or union involvement. Retention offers that follow must meet equal-pay rules and be documented against objective criteria.",
+  "ER-01": "Employers with 50+ employees must run an internal reporting office under the HinSchG (acknowledge within 7 days, feedback within 3 months, confidentiality, impartial handling); a group-level hotline can be used only if the German entity keeps responsibility for follow-up (verify the group model with counsel). Discrimination and harassment complaints must also reach the AGG complaint office (§13 AGG), and employees may complain to the works council (§85 BetrVG). Nothing may deter reports to external channels such as the Federal Office of Justice or BaFin.",
+  "ER-02": "Hear the accused before any suspicion dismissal and keep the 2-week deadline for summary dismissal, which runs once the facts are sufficiently known (§626(2) BGB); protect the reporter's identity (§8 HinSchG). Email and device review needs a proportionate legal basis (Art. 6(1)(f) GDPR; stricter for suspected crimes), respect for any permitted private use, and a works agreement where monitoring tools are used; unlawfully obtained evidence can be excluded. Brief the works council before any resulting dismissal (§102 BetrVG).",
+  "ER-03": "Germany has no statutory harassment committee: complaints go to the AGG complaint office (§13 AGG), which must examine them and report the outcome, and the employer must take suitable, necessary and appropriate measures such as warning, transfer or dismissal (§12(3)). If it takes no or clearly inadequate measures, the harassed employee may stop work without loss of pay (§14 AGG). Harassment claims must be asserted within 2 months (§15(4)).",
+  "ER-04": "German discipline has two tools: the Abmahnung (written warning naming the conduct, demanding change and threatening dismissal), normally required before a conduct dismissal, and dismissal; fines or unpaid suspensions need a works agreement on company penalties (§87(1) no.1 BetrVG). Every dismissal needs a works council hearing (§102 BetrVG), and a summary dismissal must follow within 2 weeks of knowledge (§626(2) BGB). Employees can demand removal of unjustified warnings from the file.",
+  "ER-05": "The global hotline can serve as the German internal reporting office only if it meets the HinSchG: text and oral reporting (in-person meeting on request), 7-day acknowledgment, 3-month feedback, confidentiality for reporters and persons concerned, and deletion of documentation 3 years after closure. Retaliation is presumed when a reporter suffers a detriment (§36 HinSchG); fines reach EUR 20,000 for no channel and EUR 50,000 for obstruction or breach of confidentiality. Hotline software and investigation rules need a DPIA and works council agreement.",
+  "ER-06": "Secondary jobs can be restricted only where a legitimate interest (competition, conflict, working-time limits) is affected (Art. 12 GG), so require disclosure rather than blanket bans; hours across all employers count toward ArbZG limits. A standard disclosure form is a questionnaire needing works council consent (§94 BetrVG) and an Art. 13 notice.",
+  "ER-07": "The employer's duty of care (§618 BGB) and the ArbSchG risk assessment cover violence and threats; tools include house bans, paid suspension and summary dismissal within 2 weeks (§626 BGB). Victims can obtain civil protection orders under the Gewaltschutzgesetz; report crimes to police, and the Berufsgenossenschaft covers work-related psychological trauma.",
+  "ER-08": "A works council can be elected at 5+ employees and obstruction is a crime (§119 BetrVG); regular elections run 1 Mar-31 May every 4 years (next 2030). With a council, map each change against information (§§80, 90, 92), consultation (§§90, 92, 111) and co-determination (§87) rights, and budget council costs and training (§§37, 40). Munich and Dresden may each form a council or be combined (§§1, 4 BetrVG), creating a central works council when both exist; unions bargain only if the employer joins an association or signs an agreement.",
+  "ER-09": "Holds must fit GDPR storage limitation (retention for establishing or defending legal claims, Art. 17(3)(e)), and sending personnel data to US courts or eDiscovery vendors needs an Art. 49 derogation or SCCs and must respect Art. 48. Dismissal claims come within 3 weeks, AGG claims within 2 months and other claims within contractual exclusion periods or the 3-year limitation from year-end (§195 BGB).",
+  "ER-10": "A post-contractual non-compete binds only with at least 50% Karenzentschädigung for up to 2 years (§§74-75d HGB); decide early whether to enforce or waive (a waiver before exit still costs 1 year, §75a). During notice and garden leave the statutory competition ban applies (§60 HGB). DLP lookbacks and device imaging need a legitimate interest, proportionality, a works agreement for the tools (§87(1) no.6 BetrVG) and GDPR transparency; GeschGehG injunctions require proof of 'appropriate secrecy measures'.",
+  "HS-01": "Report workplace and commuting accidents causing death or more than 3 days' incapacity to the Berufsgenossenschaft within 3 days (§193 SGB VII), inform the works council, and report deaths and serious incidents immediately; log all first-aid cases and keep the log 5 years (DGUV Vorschrift 1). Findings feed the ArbSchG risk assessment and the quarterly safety committee.",
+  "HS-02": "The employer's duty of care (§618 BGB, ArbSchG) covers travel and emergencies: keep evacuation plans, first aiders and fire-safety assistants at each site. When offices close for emergencies employees generally keep their pay (operational risk, §615 s.3 BGB), and location data in travel-safety tools needs a legal basis, transparency and works council agreement.",
+  "HS-03": "Offices and labs need a documented risk assessment (§§5-6 ArbSchG), a company doctor and safety specialist (ASiG, DGUV Vorschrift 2), a quarterly safety committee at more than 20 employees, safety officers, and a hazardous-substance register with operating instructions (GefStoffV). Laser work needs a laser safety officer (OStrV), pregnant or breastfeeding employees need the MuSchG assessment and any activity bans, and occupational medical checks follow ArbMedVV. Health-protection rules are co-determined (§87(1) no.7 BetrVG).",
+  "DS-01": "Changes to tax class, church affiliation, health insurer or children flow into ELStAM and DEÜV notifications, so route them through payroll inside the monthly cut-off. HRIS configurations and reports that can evaluate behaviour or performance are co-determined (§87(1) no.6 BetrVG) and must match a GDPR-compliant works agreement, including test systems (BAG 8 May 2025, Workday).",
+  "DS-02": "Answer GDPR access, rectification and erasure requests within 1 month (extendable by 2) with a copy of the data (Art. 15(3)); access requests are routinely used in termination disputes and failures trigger Art. 82 damages claims. Employees also have a separate right to inspect their personnel file (§83 BetrVG), and the BDSG permits limited refusals, e.g. to protect trade secrets or third parties (§§29, 34 BDSG).",
+  "DS-03": "German periods: Lohnkonto to the end of the 6th year (§41 EStG), accounting vouchers 8 years and ledgers/annual accounts 10 years (§147 AO as amended by BEG IV), working-time records at least 2 years (§16(2) ArbZG), social insurance documents until the year after the next DRV audit, first-aid logs 5 years and HinSchG case files deleted 3 years after closure. Delete applicant data about 6 months after rejection and other personnel data once purposes and limitation periods end (Arts. 5(1)(e), 17 GDPR).",
+  "DS-04": "Global admin access to German employee data must be need-to-know and documented as a security measure (Art. 32 GDPR); access from the US is a transfer covered by DPF or SCCs. Access logs are themselves monitoring data, and using them to evaluate employees is co-determined (§87(1) no.6 BetrVG).",
+  "DS-05": "If the group meets the amended CSRD non-EU parent test (EUR 450m EU turnover plus an EU subsidiary or branch above EUR 200m), ESRS S1 own-workforce disclosures would follow from FY2028 (verify after Omnibus I and Germany's transposition by 19 Mar 2027). Companies that must prepare a management report and have more than 500 employees report on equal pay (§21 EntgTranspG), and the employer reports annually to the works meeting on personnel, equality and integration matters (§43(2) BetrVG).",
+  "DS-06": "Every HR tool that can monitor behaviour or performance, including AI features switched on in existing systems, is co-determined (§87(1) no.6 BetrVG), and the works council may call in an AI expert at the employer's cost (§80(3)). Run a DPIA, sign an Art. 28 DPA and cover US transfers; under the AI Act, no emotion recognition at work (since Feb 2025), support AI literacy, and from 2 Dec 2027 meet Annex III deployer duties including informing worker representatives. Fully automated decisions with legal effect breach Art. 22 GDPR.",
+  "DS-07": "Employees are entitled on request to a written reference (§109 GewO), simple or qualified, truthful and benevolent; references to third parties need the employee's consent. Answer lenders, landlords or authorities only with consent or a legal duty (e.g. the Arbeitsbescheinigung to the Agentur für Arbeit, §312 SGB III).",
+  "DS-08": "Provide German versions of core policies, and adopt any policy on conduct, working time, monitoring/IT, pay principles, mobile work or health protection as a works agreement where a council exists (§§77, 87 BetrVG), not unilaterally. Works agreements must be made available to staff (§77(2)); policies cannot override mandatory law or collective agreements, and changing contract terms via policy needs consent or a valid reservation clause.",
+  "OF-01": "Resignations must be in wet ink (§623 BGB); an email resignation is void, so obtain the original. Notice is 4 weeks to the 15th or month-end or longer by contract (typically 3 months for engineers); garden leave must be irrevocable to offset leave, and the statutory competition ban applies until the end date (§60 HGB). Issue the Arbeitszeugnis on request, the electronic Arbeitsbescheinigung and the Urlaubsbescheinigung, pay out untaken leave, and decide on waiving or enforcing any paid non-compete and on pending employee inventions before the last day.",
+  "OF-02": "Under the KSchG (more than 10 employees, 6 months' service) a dismissal needs social justification based on the person, conduct (usually after an Abmahnung) or operational reasons with social selection; hear the works council first (§102 BetrVG) and obtain Integrationsamt or authority consent for severely disabled, pregnant or parental-leave employees. Deliver a wet-ink notice with the correct §622 BGB period and the job-seeker registration notice; the employee has 3 weeks to sue, and most cases settle at the conciliation hearing around 0.5-1 monthly salary per year of service. Summary dismissal must be declared within 2 weeks of knowledge (§626 BGB).",
+  "OF-03": "Count §17 KSchG thresholds per establishment over 30 days (21-59 employees: 6+; 60-499: 10% or 26+; 500+: 30+, including employer-induced settlements), consult the works council in writing, finish consultation, then file a complete notice with the Agentur für Arbeit before any notice is received; defects void every dismissal and cannot be cured (ECJ C-134/24 and C-402/24, Oct 2025; BAG Mar/Apr 2026). At more than 20 employees attempt an Interessenausgleich and agree a Sozialplan (§§111-112 BetrVG), and select by seniority, age, maintenance obligations and disability (§1(3) KSchG). Budget 0.5-1.5 monthly salaries per year of service plus garden leave through notice periods of up to 7 months.",
+  "OF-04": "Use a wet-ink Aufhebungsvertrag (§623 BGB) or a court settlement; there is no statutory review or revocation period, but fair negotiation is required (BAG 7 Feb 2019), so give time for advice. Cover the end date (shortening notice triggers a Ruhenszeitraum, §158 SGB III), gross severance, garden leave, bonus and RSUs, reference grade and a general release; minimum wage, statutory leave during employment, vested pensions and works-agreement rights cannot be waived. Explain the 12-week unemployment Sperrzeit (§159 SGB III), which the Agentur waives where an operational dismissal was threatened and severance is 0.25-0.5 monthly salary per year.",
+  "OF-05": "Final pay runs with the regular payroll (no accelerated deadline) and includes pro-rated salary, untaken leave (§7(4) BUrlG), time-account balances and variable pay per plan. Severance is taxable but free of social insurance, and the §34 EStG relief has been claimed only in the tax return since 2025. Deregister with the health insurer within 6 weeks, transmit the Arbeitsbescheinigung and the Lohnsteuerbescheinigung (by end-February); post-exit RSU vests stay taxable in Germany pro rata to German workdays.",
+  "OF-06": "Recover devices and badges, get confirmation that company data is deleted from private devices, and log access removal; DLP lookbacks and forensic imaging need a legitimate purpose, proportionality, a works agreement for the tools and GDPR transparency. Final pay cannot be withheld to force return of property beyond lawful set-off within attachment limits.",
+  "OF-07": "Exit surveys and interviews are voluntary: give an Art. 13 notice (legitimate interest or consent), agree questionnaires and minimum reporting groups with any works council (§§87(1) no.6, 94 BetrVG), and keep answers out of the reference process. Harassment or discrimination raised at exit goes to the AGG complaint office and compliance reports to the HinSchG channel.",
+  "OF-08": "There is no mandatory retirement age, but contracts or collective agreements may end employment at the standard pension age (rising to 67) (§41 SGB VI), and agreements to continue beyond it can be made in text form since 2025. From 2026, employees working past pension age can receive up to EUR 2,000/month tax-free (Aktivrente). Pay bAV per plan terms and apply equity retirement definitions consistently with the AGG's age rules (§10 AGG).",
+  "OF-09": "Pay wages to the date of death to the heirs (normally against a certificate of inheritance), including untaken leave, which passes to the heirs as a payment claim (ECJ C-569/16; BAG 2019). Report work-related deaths immediately to the Berufsgenossenschaft, which pays survivors' benefits; statutory survivors' pensions come from the Deutsche Rentenversicherung and bAV survivor benefits follow plan terms. Some contracts provide continued pay to survivors for 1-3 months (market practice).",
+  "OF-10": "Employees are entitled on request to a written simple or qualified Arbeitszeugnis (§109 GewO), truthful and benevolent; the coded grading is often negotiated in settlements and can be litigated. References to prospective employers need the former employee's consent, and rehire flags are personal data that must be justified, time-limited and free of protected characteristics or protected activity (AGG, HinSchG)."
+ },
+ "policies": {
+  "POL-01": "Add a German version; conduct rules (behaviour in the workplace, gifts, alcohol, dress) are co-determined under §87(1) no.1 BetrVG, while rules on how work is performed are not, so adopt the conduct sections by works agreement where a council exists (BAG 2008 on ethics codes). Reference the HinSchG channel and state that breaches are handled through warnings and dismissal under German law, not fines.",
+  "POL-02": "Add the HinSchG internal reporting office (50+ employees): text and oral channels with an in-person meeting on request, acknowledgment within 7 days, feedback within 3 months, confidentiality, deletion 3 years after closure, and the external channels (Federal Office of Justice, BaFin, Federal Cartel Office). State that reporters may go external first and that retaliation is presumed when a detriment follows a report (§36 HinSchG); fines reach EUR 50,000.",
+  "POL-03": "Secondary employment may be restricted only where a legitimate interest is affected (Art. 12 GG), so require disclosure rather than a blanket ban, and count hours across all jobs against ArbZG limits. The disclosure form is a questionnaire needing works council consent (§94 BetrVG).",
+  "POL-04": "Add the German offences of commercial bribery (§299 StGB) and bribery of public officials (§§331-335 StGB), corporate fines up to EUR 10m plus disgorgement (§§30, 130 OWiG), and tax limits on gifts (EUR 50 per recipient per year for deductible business gifts, §4(5) No.1 EStG). Treat state-owned customers, universities and research institutes (e.g. Fraunhofer) as public-sector counterparties when hiring relatives or interns.",
+  "POL-05": "Add that the EU MAR insider-dealing ban, enforced by BaFin, applies to trades in the parent's shares on German venues (e.g. Frankfurt or Tradegate open-market listings) even without issuer consent, while issuer duties such as EU insider lists apply only if the company sought EU trading (verify). Pre-clearance data needs an Art. 13 GDPR notice.",
+  "POL-06": "State that clawback binds German-employed executives only if agreed in the award or employment contract before payment, transparently and proportionately (§§305-310 BGB); the policy alone is not enough. Recovery by set-off is limited to the attachable part of wages (§394 BGB), so use repayment agreements or cancellation of unvested awards.",
+  "POL-07": "Limit disclosure duties to conflict situations such as reporting lines; blanket dating bans breach personality rights (Arts. 1-2 GG) and GDPR proportionality. Relationship rules are conduct rules co-determined under §87(1) no.1 BetrVG.",
+  "POL-08": "Replace the US protected-class list with the AGG grounds (race or ethnic origin, sex, religion or belief, disability, age, sexual identity), plus SGB IX protection for severely disabled people, equal treatment of part-time and fixed-term staff (§4 TzBfG) and freedom of association (Art. 9(3) GG). Name the AGG complaint office, make the AGG available in the workplace, and describe the 2-month claim window, burden shift and compensation (§§12, 13, 15, 22 AGG); positive measures are allowed only if proportionate (§5).",
+  "POL-09": "Define harassment and sexual harassment per §3(3)-(4) AGG, name the AGG complaint office (§13), list measures (warning, transfer, dismissal, §12(3)) and state the employee's right to stop work without loss of pay if the employer fails to act (§14). Treat training as the core prevention duty (§12(2)) and route whistleblowing-type reports to the HinSchG channel.",
+  "POL-10": "Bullying has no statute but is covered by the employer's duty of care (§241(2) BGB), AGG harassment where linked to a protected ground, and the ArbSchG risk assessment for psychological stress; employees may complain to the works council (§85 BetrVG). Conduct rules are co-determined (§87(1) no.1 BetrVG).",
+  "POL-11": "Tie the policy to the ArbSchG risk assessment, emergency plans and first aid, and list house bans, paid suspension and summary dismissal within 2 weeks (§626 BGB) as tools. Note that the Berufsgenossenschaft covers work-related psychological trauma.",
+  "POL-12": "Testing is allowed only with consent or for genuinely safety-critical roles (rare in offices and labs), and results are health data (Art. 9 GDPR); alcohol bans and test procedures are co-determined (§87(1) nos.1, 7 BetrVG). Treat addiction as illness: offer help and BEM before any illness-based dismissal, unless the employee refuses treatment.",
+  "POL-13": "Replace graduated US discipline with the Abmahnung (written warning) required before most conduct dismissals; fines and unpaid suspensions are unavailable without a works agreement on company penalties. Every dismissal needs a works council hearing (§102 BetrVG) and summary dismissal must be declared within 2 weeks of knowledge (§626(2) BGB); employees can demand removal of unjustified warnings.",
+  "POL-14": "Private posts are protected expression, but loyalty duties apply: disclosing trade secrets or insulting colleagues or the employer can justify a warning or dismissal. Rules for work use of social media and monitoring of company accounts are co-determined (§87(1) nos.1, 6 BetrVG; BAG 2016 on company Facebook pages).",
+  "POL-15": "The LkSG (eased in 2025-26: reporting abolished, fines only for serious breaches) applies only at 1,000+ employees in Germany, so the German entity is out of scope, but customers flow its duties down. Cite German minimum wage, ArbZG limits and anti-discrimination law, and link the HinSchG channel as the complaints procedure.",
+  "POL-16": "Add AGG-compliant ads and selection, works council rights (internal posting §93, questionnaires §94, selection guidelines §95, consent to hires §99 at more than 20 employees), the severely disabled vacancy check and SBV involvement (§§164, 178 SGB IX), and deletion of applicant data after about 6 months. Prepare for pay-range disclosure and the salary-history ban under the Pay Transparency Directive (German law expected early 2027).",
+  "POL-17": "Limit checks to role-relevant verification with the candidate's involvement: education and employment history, certificates of good conduct only for trust-sensitive roles, no credit or deep social-media checks, and references only with consent. Standard questionnaires need works council consent (§94 BetrVG), and results must be deleted when no longer needed (GDPR Arts. 5, 17).",
+  "POL-18": "Add EU Reg. 2021/821 (Annex I updated 15 Nov 2025 with chip-making and quantum items), the AWG/AWV including German national list entries and technical-assistance rules, BAFA licensing and the ICP with a board-level export control officer, alongside US EAR deemed re-export rules for US-origin technology released to third-country nationals in Germany. Collect nationality only for controlled roles under an Art. 13 notice and legitimate interest, and use it to limit access or obtain licences rather than as a hiring bar (AGG indirect discrimination risk).",
+  "POL-19": "Add the EU Blue Card (2026: EUR 50,700; EUR 45,934.20 for shortage occupations, graduates and IT specialists), skilled-worker permits (§§18a-b AufenthG), the ICT card, the Chancenkarte and the employer fast-track procedure (§81a). State the employer's duties to check and copy the residence title and notify the foreigners' office within 4 weeks of early termination (§4a(5)).",
+  "POL-20": "Add AÜG rules for agency and EOR workers (licensed provider, 18-month cap, equal pay after 9 months, contract labelled as leasing with the worker named, works council consent) and the sham self-employment risk for freelancers (DRV status procedure §7a SGB IV, back contributions, §266a StGB). EOR in Germany is labour leasing and needs an AÜG-licensed provider.",
+  "POL-21": "Probation is up to 6 months with 2 weeks' notice (§622(3) BGB), cannot be extended, and the KSchG applies after 6 months regardless. Probation dismissals still need a works council hearing and wet-ink notice, pregnancy protection applies from day 1, and in fixed-term contracts probation must be proportionate (§15(3) TzBfG).",
+  "POL-22": "Add minimum wage for interns (EUR 13.90/h in 2026 except mandatory study or up-to-3-month orientation internships, §22 MiLoG), working-student social insurance rules, the Nachweis for interns (§2(1a) NachwG) and residence-title work limits for non-EU students. Apprentices under the BBiG receive at least the statutory minimum training allowance (EUR 724/month in year one for 2026 starts).",
+  "POL-23": "Add equal pay for equal or equivalent work (EntgTranspG; BAG single-comparator presumption, Oct 2025), works council co-determination of pay structure and principles (§87(1) no.10 BetrVG), collectively agreed scales as benchmarks, and Nachweis notification of pay changes. Build objective job evaluation now for the Pay Transparency Directive.",
+  "POL-24": "Add current EntgTranspG rights (individual information above 200 employees answered within 3 months; audits invited above 500; equal-pay report for management-report companies above 500) and BAG case law (negotiation skill no justification, 2023; single comparator suffices, 2025). Add a Directive-readiness plan: range before interview, salary-history ban, information on request within 2 months, annual notice of rights, gap reporting and joint pay assessment with the works council; note transposition is pending (bill expected early 2027).",
+  "POL-25": "Bonus plans are standard terms (§§305-310 BGB): 'voluntary/discretionary' reservations fail for performance pay, stay-until-payment conditions cannot forfeit earned performance bonuses, and targets must be set on time or damages at 100% achievement follow (BAG 2025). Plan design is co-determined (§87(1) nos.10-11 BetrVG); add German leaver and pro-rating rules.",
+  "POL-26": "Employee commission plans follow §§65, 87-87c HGB (entitlement on concluded business, statement and information rights), are co-determined pay principles, and feed holiday and sick-pay averages. Clawback of advances needs clear terms, and plan changes need consent or a valid reservation clause.",
+  "POL-27": "State that awards come from the US parent, are taxed at vest or exercise through German payroll and treated as one-off payments for social insurance, that broad-based share discounts are tax-free up to EUR 2,000 a year (§3 No.39 EStG), and how leaver forfeiture works. Cover GDPR transfers of participant data to the plan administrator and the EU Prospectus Regulation employee-plan exemption.",
+  "POL-28": "Add monthly payment in arrears (§614 BGB), text-form payslips (§108 GewO), social insurance by the third-last banking day and wage tax by the 10th, minimum-wage record-keeping, and deduction limits under the attachment table (§850c ZPO). There is no accelerated final-pay deadline.",
+  "POL-29": "Replace exempt/non-exempt concepts: all employees except executives fall under the ArbZG (8 h/day, up to 10 h averaged, 11 h rest, breaks, Sunday ban) and must have their working time recorded (BAG 2022). Set out how overtime is ordered, recorded and compensated (pay or time account), and adopt the recording system and flexitime or trust-based rules by works agreement (§87(1) nos.2, 3, 6 BetrVG); watch the 2026 ArbZG reform.",
+  "POL-30": "Tax-free reimbursement follows travel-expense rules (statutory per diems, EUR 0.30/km for car travel), employees claim home-office days themselves (EUR 6/day, max EUR 1,260), and private use of employer-provided IT equipment is tax-free (§3 No.45 EStG). Equipment the employer requires for home work can be reimbursed tax-free as expense replacement.",
+  "POL-31": "Repayment clauses must be transparent and proportionate (typically binding up to 2-3 years with monthly pro-rating) and must exclude repayment where the employer ends employment for reasons not caused by the employee, or the whole clause fails (§307 BGB). Relocation costs are tax-free within Federal Relocation Costs Act limits (§3 No.16 EStG).",
+  "POL-32": "Referral bonuses are taxable wages and, where a works council exists, a co-determined pay principle (§87(1) no.10 BetrVG); referred candidates must receive an Art. 14 GDPR notice.",
+  "POL-33": "Set 20 statutory days on a 5-day week plus contractual days (market 28-30), 5 extra days for severely disabled employees, and distinguish statutory from contractual leave for forfeiture and payout. Add individual forfeiture notices, carry-over to 31 March, payout only at exit, holiday-pay averaging (§11 BUrlG), co-determined vacation planning (§87(1) no.5 BetrVG), and the Bavaria/Munich (13) and Saxony/Dresden (11) holiday calendars.",
+  "POL-34": "Add 6 weeks' full pay per illness after 4 weeks' service (EFZG), same-day notification and certificates via eAU (employer may require one from day 1), insurer Krankengeld afterwards, the rule that illness during vacation does not use up leave (§9 BUrlG), and BEM after 6 weeks' absence in 12 months (§167(2) SGB IX). Child-sick days are paid by the health insurer (§45 SGB V).",
+  "POL-35": "Add Mutterschutz (6 weeks before, 8 after birth or 12 in special cases; staggered miscarriage protection from week 13 since June 2025; dismissal ban), Elternzeit (up to 3 years per child; text-form request; 15-32 h part-time; dismissal protection), state-paid Elterngeld (EUR 175,000 income cap), Pflegezeit and Familienpflegezeit, 10-day short-term care leave, and paid time off for brief personal reasons (§616 BGB, often limited by contract).",
+  "POL-36": "Add severely disabled employees' rights (adapted workplace, part-time, 5 extra leave days, dismissal protection) with SBV and Integrationsamt involvement and an Inklusionsvereinbarung (§§164, 166, 208 SGB IX), BEM (§167(2)), and pregnancy adjustments through the MuSchG risk assessment. Religious needs are handled through the AGG and good-faith scheduling.",
+  "POL-37": "Add statutory social insurance for all employees above mini-job level, the private-insurance subsidy above EUR 77,400 (§257 SGB V), the bAV deferral right with a 15% subsidy (§1a BetrAVG), pro rata equal treatment of part-time and fixed-term staff (§4 TzBfG), and works council co-determination over distribution of voluntary benefits.",
+  "POL-38": "There is no statutory right to home office; the design of mobile work is co-determined (§87(1) no.14 BetrVG), fixed telework stations fall under ArbStättV, and ArbZG limits and time recording apply at home. Cover data security, equipment, cost reimbursement and termination of the arrangement, and require approval for cross-border remote work (A1 and tax review; EU framework agreement up to 49.9% telework).",
+  "POL-39": "There is no statutory right to disconnect, but any work including answering emails interrupts the 11-hour rest period (§5 ArbZG), so limit after-hours contact; on-call duty at the employer's direction counts as working time, while standby counts only when called out. Rules on availability and standby are co-determined (§87(1) nos.2-3 BetrVG).",
+  "POL-40": "Add ICT card or Blue Card for inbound assignees, A1 or US-Germany certificates of coverage (up to 5 years), treaty-based tax (183-day and cost-bearing rules), Nachweis details for postings abroad of more than 4 consecutive weeks (§2(2) NachwG), host-state posting notifications and PE review. Assignment letters must address return rights and social insurance continuity.",
+  "POL-41": "Travel time counts as working time when the employee works or drives, within ArbZG limits; carrying controlled technology abroad is an export needing EU/German and US licensing review. Travel-tracking tools processing location data need a legal basis, transparency and works council agreement.",
+  "POL-42": "Rating systems and assessment principles need works council consent (§94(2) BetrVG) and tools are co-determined (§87(1) no.6). A performance dismissal requires proof of sustained, significant underperformance and usually a warning, so replace the PIP-to-termination path with warning and settlement options.",
+  "POL-43": "Regrouping into a new pay group and internal transfers need works council consent at more than 20 employees (§99 BetrVG), internal posting may be required (§93), changed terms must be notified under the Nachweisgesetz, and promotion decisions must be documented to withstand AGG and equal-pay comparisons.",
+  "POL-44": "Repayment clauses are valid only for training with marketable value, with binding periods proportionate to duration and cost, monthly pro-rating, and no repayment where the employer ends or causes the end of employment (§307 BGB). Bavaria and Saxony have no educational-leave statute; in-house training implementation is co-determined (§98 BetrVG).",
+  "POL-45": "Add annual safety instruction (§12 ArbSchG), AGG prevention training (§12(2) AGG), data protection, HinSchG channel information, AI literacy (Art. 4 AI Act), first-aider and fire-warden training, and export control for technology staff. Training time is working time, and LMS tracking of employees is co-determined (§87(1) no.6 BetrVG).",
+  "POL-46": "Base employee processing on Art. 6(1)(b), (c), (f) GDPR and GDPR-compliant works agreements after CJEU C-34/21 and C-65/23, give Art. 13 notices, appoint a DPO (20+ persons processing, §38 BDSG), keep records of processing, run DPIAs for monitoring and cover US transfers (DPF or SCCs). Name the competent authority (BayLDA; Saxon Data Protection Commissioner) and flag the pending Beschäftigtendatengesetz.",
+  "POL-47": "Monitoring tools (email review, DLP, badges, CCTV, M365/Teams analytics, screen capture) need a legitimate interest, proportionality, a DPIA and a works agreement (§87(1) no.6 BetrVG); covert keyloggers without concrete suspicion are unlawful (BAG 27 Jul 2017, 2 AZR 681/16). State whether private email and internet use is allowed, because permitting it restricts access.",
+  "POL-48": "Add the ArbnErfG: text-form invention reports, claim or release within 4 months (deemed claim otherwise), mandatory compensation that cannot be waived in advance (§22), and German patent filing duties (§13); technical improvement proposals can also be compensable. Software rights vest in the employer (§69b UrhG), trade secrets need 'appropriate secrecy measures' (GeschGehG), and post-contractual non-competes need 50% compensation (§74 HGB).",
+  "POL-49": "Add German periods: Lohnkonto to the end of the 6th year (§41 EStG), accounting vouchers 8 years and ledgers 10 years (§147 AO), working-time records at least 2 years (§16(2) ArbZG), first-aid logs 5 years, applicant data about 6 months, HinSchG case files deleted 3 years after closure, and personnel files deleted once limitation periods end.",
+  "POL-50": "Add AI Act duties: no emotion recognition at work (since 2 Feb 2025), AI literacy support (Art. 4), and from 2 Dec 2027 Annex III deployer duties for recruitment, promotion, termination, task-allocation and monitoring tools, including human oversight, logs and informing the works council and affected workers (Art. 26; Reg. (EU) 2026/1744). Add Art. 22 GDPR limits, DPIAs, works council rights (§§80(3), 87(1) no.6, 90, 95(2a) BetrVG) and the Bundesnetzagentur's role under the KI-MIG.",
+  "POL-51": "Add ArbSchG risk assessments including psychological stress, the ASiG company doctor and safety specialist, a quarterly safety committee (more than 20 employees), safety officers, first aiders and fire wardens, Berufsgenossenschaft membership and 3-day accident reporting, the MuSchG workplace assessment, and ArbStättV/ArbMedVV screen-work rules. Health-protection rules are co-determined (§87(1) no.7 BetrVG).",
+  "POL-52": "Resignations must be in wet ink (§623 BGB) and respect statutory or contractual notice (never longer for the employee than the employer); garden leave must be irrevocable to offset leave, the statutory competition ban runs to the end date (§60 HGB), and any paid post-contractual non-compete needs an enforce-or-waive decision. Early release requires a written Aufhebungsvertrag.",
+  "POL-53": "Replace at-will: after 6 months in establishments with more than 10 employees, dismissals need social justification (KSchG); every dismissal needs a works council hearing (§102 BetrVG) and a wet-ink notice (§623 BGB) with the §622 period; special protections require authority consent; and summary dismissal needs compelling cause within 2 weeks (§626). Include the job-seeker registration notice (§2(2) SGB III).",
+  "POL-54": "Add §17 KSchG consultation and a complete notification before any notice (defects void all dismissals: ECJ Oct 2025; BAG 2026), social selection (§1(3) KSchG), Interessenausgleich and Sozialplan at more than 20 employees (§§111-112 BetrVG), economic committee information, and the §1a KSchG 0.5-month-per-year option. State that severance is set by Sozialplan or settlement (market 0.5-1.5 monthly salaries per year of service).",
+  "POL-55": "Add return duties (§667 BGB), deletion of company data from private devices, no withholding of final pay beyond lawful set-off within attachment limits, the statutory competition ban during notice (§60 HGB), and post-contractual non-competes only if paid (§74 HGB). Confidentiality survives exit but cannot operate as an unpaid non-compete.",
+  "POL-56": "Employees are entitled on request to a written simple or qualified Arbeitszeugnis (§109 GewO), truthful and benevolent, on paper or electronically with consent since 2025; references to third parties need consent. Keep other verifications neutral.",
+  "POL-57": "Add SGB IX: 5% quota at 20+ jobs with the annual report and levy by 31 March (EUR 155-815 per unfilled place per month for 2025), an SBV where 5+ severely disabled employees work, an Inklusionsvereinbarung, vacancy checks for disabled applicants, 5 extra leave days and dismissal protection. The Barrierefreiheitsstärkungsgesetz (from June 2025) covers consumer-facing products and services, not internal HR systems."
+ },
+ "templates": {
+  "T-EXIT-SURVEY": "Add a German-language version and an Art. 13 GDPR notice (purpose, legal basis of legitimate interest or consent, retention, recipients including the US parent and survey vendor under DPF/SCCs). Where a works council exists, agree the questionnaire and minimum reporting groups (§§87(1) no.6, 94 BetrVG), and state that taking part has no effect on the Arbeitszeugnis or any settlement.",
+  "T-EXIT-INTERVIEW": "Add prompts to route harassment or discrimination allegations to the AGG complaint office and compliance concerns to the HinSchG channel, and to confirm open items: garden leave, non-compete waiver or enforcement, pending invention disclosures (ArbnErfG) and return of property. Notes are disclosable under Art. 15 GDPR, so keep them factual.",
+  "T-OFFBOARD-CHECKLIST": "Add German steps: wet-ink termination or Aufhebungsvertrag (§623 BGB), §102 BetrVG hearing file, job-seeker registration notice (§2(2) SGB III), Arbeitszeugnis on request, electronic Arbeitsbescheinigung (§312 SGB III), Urlaubsbescheinigung, leave payout, DEÜV deregistration within 6 weeks and the non-compete decision. Final pay runs with regular payroll; there is no same-day or 2-day deadline.",
+  "T-TERM-SCRIPT": "The meeting is where the wet-ink notice (or a settlement offer) is handed over in front of a witness; do not press for an Aufhebungsvertrag signature on the spot (fair-negotiation rule, BAG 7 Feb 2019) and offer time for advice. Confirm beforehand that the works council was heard and any authority consent obtained, keep the stated reason consistent with the §102 hearing, and mention the duty to register with the Agentur für Arbeit within 3 days.",
+  "T-RIF-SELECTION": "Replace US adverse-impact logic with German social selection: define comparable employees (interchangeable roles at the same level in the establishment), score seniority, age, maintenance obligations and severe disability, ideally under a points scheme agreed with the works council (§1(4) KSchG, §95 BetrVG), and document any high-performer exclusions (§1(3) s.2). Add §17 KSchG threshold counts per establishment over 30 days and special-protection checks.",
+  "T-SEP-TERMS": "German term sheet: wet-ink Aufhebungsvertrag (§623 BGB); end date respecting notice (or Ruhenszeitraum risk, §158 SGB III); gross severance with tax note (no social insurance; §34 EStG relief only via tax return); garden leave with leave offset; bonus, RSU and bAV treatment; Arbeitszeugnis grade; non-compete waiver; a release excluding non-waivable rights (minimum wage, statutory leave during employment, vested pension, works-agreement rights); and a note on the 12-week unemployment Sperrzeit (§159 SGB III).",
+  "T-INVESTIGATION": "Add the 2-week clock for summary dismissal (§626(2) BGB) from the date facts are sufficiently known, the mandatory hearing of the accused before a suspicion dismissal, HinSchG confidentiality for reporters, the GDPR basis for email and device review, and checks for works council involvement (monitoring tools, §102 hearing before any dismissal).",
+  "T-PIP": "Reframe as a support plan with documented comparison to peers: a German performance dismissal needs sustained, significant underperformance and normally a prior Abmahnung, so add a warning-letter option and a BEM offer where health may be a factor. A standardised PIP form is an assessment principle the works council may co-determine (§94(2) BetrVG).",
+  "T-ONBOARD-PLAN": "Add: contract and Nachweis before day 1, DEÜV registration and ELStAM retrieval, residence-title check and copy, safety instruction before work starts (§12 ArbSchG), AGG, data-protection, HinSchG and AI-literacy briefings, the ArbnErfG invention procedure, and a month-5 probation decision point leaving time for the §102 hearing.",
+  "T-ONBOARD-PULSE": "Provide in German with an Art. 13 notice; where a works council exists, agree the questionnaire, anonymity threshold and reporting (§§87(1) no.6, 94 BetrVG). Avoid health or family-planning questions.",
+  "T-SCORECARD": "Remove questions on pregnancy, family plans, religion, union membership, nationality (unless export licensing requires it) and health beyond job fitness; score only job-related criteria so the scorecard rebuts the §22 AGG burden shift. Standard scorecards and criteria need works council consent (§§94, 95 BetrVG); keep them about 6 months to cover AGG claim windows, then delete.",
+  "T-OFFER-APPROVAL": "Add German checks: Nachweis-compliant contract, probation up to 6 months, notice periods, statutory vs contractual leave, bAV offer, non-compete with 50% Karenzentschädigung, wet-ink fixed-term rule, residence title, works council consent to hire and pay grouping (§99 BetrVG, more than 20 employees), and an equal-pay check against peers in the same job (BAG single-comparator rule).",
+  "T-POLICY": "Add a German-language version and a works council field: policies on conduct, working time, monitoring/IT, pay principles, mobile work or health must be adopted as works agreements (§87 BetrVG) and made available (§77(2)). Include the HinSchG channel and AGG complaint office, and note that a policy cannot unilaterally change contract terms.",
+  "T-STAY-INTERVIEW": "Keep notes factual because they are disclosable under Art. 15 GDPR, avoid questions on family planning, health or union involvement, and route pay concerns through the equal-pay-compliant adjustment process.",
+  "T-ACCOMMODATION": "Add German regimes: severely disabled employees' enforceable rights to adapted work and part-time (§164(4)-(5) SGB IX) with Integrationsamt funding and SBV involvement, BEM after 6 weeks' absence (§167(2)), the MuSchG risk assessment and adjustments for pregnancy, and separate storage of health data (Art. 9 GDPR, §26(3) BDSG).",
+  "T-REQ": "Add German flags: establishment (Munich/Dresden), fixed-term vs permanent (2-year cap without objective reason), executive status, works council consent to hire (§99 BetrVG) and internal posting (§93), severely disabled vacancy check (§164 SGB IX), Blue Card eligibility, and technology-access classification for EAR deemed re-export."
+ },
+ "register": [
+  {
+   "id": "R-DE-01",
+   "name": "Germany written statement of essential terms (Nachweis)",
+   "type": "Record",
+   "domain": "Onboard",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Give every employee the §2 NachwG terms on day 1 (pay, hours, breaks), by day 7 (start, place, duties, probation, overtime) and within 1 month (leave, training, pension provider, termination procedure and 3-week claim deadline); text form allowed since 2025 with a receipt request. Changes are notified by the day they take effect; fine up to EUR 2,000 per breach.",
+   "owner": "Germany HR Ops + Legal",
+   "cadence": "Per hire; per change",
+   "cite": "Nachweisgesetz §§2-4 (as amended 2022 and by BEG IV)",
+   "processes": [
+    "TA-04",
+    "ON-01",
+    "ON-03"
+   ]
+  },
+  {
+   "id": "R-DE-02",
+   "name": "Germany works council information, consultation & co-determination",
+   "type": "Committee",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Where a works council exists (possible at 5+ employees), inform and consult it and obtain agreement on co-determined matters (working time, IT and monitoring tools, pay principles, bonus schemes, mobile work) before rollout, and obtain consent to hires, groupings and transfers at more than 20 employees. Unilateral action can be enjoined; obstruction is a crime (§119 BetrVG).",
+   "owner": "Germany HR + Employee Relations + Legal",
+   "cadence": "Continuous; per change; elections every 4 years (2026, 2030)",
+   "cite": "BetrVG §§80, 87, 90, 94-95, 99, 111, 119",
+   "processes": [
+    "ER-08",
+    "DS-06",
+    "DS-08",
+    "PL-04"
+   ]
+  },
+  {
+   "id": "R-DE-03",
+   "name": "Germany works council hearing before every dismissal",
+   "type": "Control",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Before any dismissal (including in probation) give the works council the reasons, social data and selection details; it has 1 week (3 days for summary dismissal) to respond. A dismissal without a proper hearing is void, and an objection can give the employee a right to continued employment during the lawsuit.",
+   "owner": "Employee Relations (Germany) + Legal",
+   "cadence": "Per dismissal",
+   "cite": "BetrVG §102",
+   "processes": [
+    "OF-02",
+    "OF-03",
+    "ON-04"
+   ]
+  },
+  {
+   "id": "R-DE-04",
+   "name": "Germany mass-dismissal consultation & Agentur für Arbeit notification",
+   "type": "Filing",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Within 30 days per establishment (21-59 employees: 6+; 60-499: 10% or 26+; 500+: 30+ dismissals, counting employer-induced settlements), consult the works council in writing, complete consultation, then file a complete notice with the Agentur für Arbeit before any notice is received; 1-month blocking period. Defective or late notices void the dismissals and cannot be cured (ECJ C-134/24, C-402/24; BAG 2026).",
+   "owner": "Employee Relations + Legal (Germany)",
+   "cadence": "Per RIF",
+   "cite": "KSchG §§17-18; Directive 98/59/EC",
+   "processes": [
+    "OF-03",
+    "PL-04"
+   ]
+  },
+  {
+   "id": "R-DE-05",
+   "name": "Germany Interessenausgleich & Sozialplan",
+   "type": "Committee",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "In companies with more than 20 employees, operational changes (closures, relocations, large cuts, fundamental reorganisation) require an attempt at an Interessenausgleich and a Sozialplan with the works council before implementation, enforceable through the Einigungsstelle where §112a thresholds are met; skipping the attempt triggers Nachteilsausgleich. Inform the economic committee (100+ employees) early.",
+   "owner": "Employee Relations + Legal + Finance (Germany)",
+   "cadence": "Per operational change",
+   "cite": "BetrVG §§106, 111-113, 112a",
+   "processes": [
+    "OF-03",
+    "PL-04"
+   ]
+  },
+  {
+   "id": "R-DE-06",
+   "name": "Germany HinSchG internal reporting office",
+   "type": "Program",
+   "domain": "Governance",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Employers with 50+ employees run an internal reporting office accepting text and oral reports: acknowledge within 7 days, give feedback within 3 months, protect confidentiality, delete documentation 3 years after closure. Fines up to EUR 20,000 for no channel and EUR 50,000 for obstruction; retaliation is presumed after a report (§36).",
+   "owner": "Ethics & Compliance + Germany HR",
+   "cadence": "Continuous; per report",
+   "cite": "Hinweisgeberschutzgesetz §§12-18, 36, 40; Directive (EU) 2019/1937",
+   "processes": [
+    "ER-01",
+    "ER-05"
+   ]
+  },
+  {
+   "id": "R-DE-07",
+   "name": "Germany AGG complaint office & postings",
+   "type": "Notice",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Designate an AGG complaint office, make the AGG, the §61b ArbGG claim deadline and the complaint office available in the workplace or intranet, train staff on discrimination prevention and take appropriate measures on complaints. Post other required texts (ArbZG, MuSchG where more than 3 women, works agreements).",
+   "owner": "Germany HR + Legal",
+   "cadence": "Continuous; review annually",
+   "cite": "AGG §§12(5), 13; ArbZG §16(1); MuSchG §26; BetrVG §77(2)",
+   "processes": [
+    "ER-03",
+    "DS-08",
+    "PD-06"
+   ]
+  },
+  {
+   "id": "R-DE-08",
+   "name": "Germany severely disabled employment report & Ausgleichsabgabe",
+   "type": "Filing",
+   "domain": "Governance",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Employers with 20+ jobs must fill 5% with severely disabled people; by 31 March file the prior-year report with the Agentur für Arbeit (REHADAT-Elan) and pay the levy to the Integrationsamt (for 2025: EUR 155/275/405 per unfilled place per month by quota band, EUR 815 at zero). Keep a register of severely disabled employees.",
+   "owner": "Germany HR Ops + Payroll",
+   "cadence": "Annual (31 March); register continuous",
+   "cite": "SGB IX §§154, 160, 163",
+   "processes": [
+    "TA-01",
+    "LV-02"
+   ]
+  },
+  {
+   "id": "R-DE-09",
+   "name": "Germany Schwerbehindertenvertretung & inclusion agreement",
+   "type": "Committee",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Where 5+ severely disabled employees work, an SBV is elected; it must be informed and heard before decisions affecting them (a dismissal without SBV hearing is void) and may attend interviews of disabled applicants. Conclude an Inklusionsvereinbarung with the SBV and works council.",
+   "owner": "Germany HR + Employee Relations",
+   "cadence": "Continuous; per decision",
+   "cite": "SGB IX §§166, 177-178",
+   "processes": [
+    "LV-02",
+    "OF-02",
+    "TA-03"
+   ]
+  },
+  {
+   "id": "R-DE-10",
+   "name": "Germany BEM (occupational reintegration management)",
+   "type": "Program",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Offer BEM in writing, with data-protection information, to every employee absent more than 6 weeks (continuous or cumulative) in 12 months, involving the works council and SBV with consent; a sickness dismissal without a proper BEM offer usually fails.",
+   "owner": "Germany HR + Occupational Health",
+   "cadence": "Per trigger (rolling 12 months)",
+   "cite": "SGB IX §167(2)",
+   "processes": [
+    "LV-03",
+    "LV-01"
+   ]
+  },
+  {
+   "id": "R-DE-11",
+   "name": "Germany working-time recording & ArbZG limits",
+   "type": "Control",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Record start, end and duration of daily working time for all employees except executives (BAG 13 Sep 2022), keep time beyond 8 h/day for 2 years, and monitor the 10-hour day, 11-hour rest and Sunday ban. A 2026 draft would require same-day electronic recording.",
+   "owner": "Germany HR + Payroll + Managers",
+   "cadence": "Daily recording; monthly exception review",
+   "cite": "ArbSchG §3(2); ArbZG §§3-5, 9, 16(2); BAG 1 ABR 22/21",
+   "processes": [
+    "PY-03",
+    "LV-05"
+   ]
+  },
+  {
+   "id": "R-DE-12",
+   "name": "Germany leave forfeiture notices",
+   "type": "Notice",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Tell each employee individually and in good time how much leave remains, ask them to take it and warn that it will lapse at year-end or on 31 March; without notice statutory leave never lapses or becomes time-barred and must be paid out at exit.",
+   "owner": "Germany HR Ops",
+   "cadence": "Annual (Q1 and Q4 reminders)",
+   "cite": "BUrlG §7; ECJ C-684/16; BAG 9 AZR 423/16",
+   "processes": [
+    "LV-05"
+   ]
+  },
+  {
+   "id": "R-DE-13",
+   "name": "Germany social insurance registration & contributions",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Register each employee with the health insurer via DEÜV (with the first payroll, within 6 weeks), pay contributions by the third-last banking day each month, file annual DEÜV reports by 15 Feb and deregister within 6 weeks of exit; 2026 ceilings EUR 8,450 (pension/unemployment) and EUR 5,812.50 (health/care) per month.",
+   "owner": "Payroll (Germany)",
+   "cadence": "Monthly; annual (15 Feb); per hire and exit",
+   "cite": "SGB IV §§23, 28a; DEÜV; SV-Rechengrößenverordnung 2026",
+   "processes": [
+    "PY-01",
+    "BN-01",
+    "OF-05"
+   ]
+  },
+  {
+   "id": "R-DE-14",
+   "name": "Germany wage-tax filings",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "File the Lohnsteuer-Anmeldung and pay wage tax, solidarity surcharge and church tax by the 10th of the following month, transmit electronic Lohnsteuerbescheinigungen by the last day of February, and run the annual equalisation for eligible employees at 10+ employees.",
+   "owner": "Payroll (Germany) + Tax",
+   "cadence": "Monthly (10th); annual (end-February)",
+   "cite": "EStG §§39e, 41, 41a, 41b, 42b",
+   "processes": [
+    "PY-01",
+    "PY-04",
+    "EQ-02"
+   ]
+  },
+  {
+   "id": "R-DE-15",
+   "name": "Germany occupational safety organisation & risk assessment",
+   "type": "Committee",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Keep documented risk assessments (including psychological stress and MuSchG workplace assessments), a company doctor and safety specialist, a quarterly safety committee at more than 20 employees, safety officers, first aiders and fire-safety assistants, and give safety instruction before starting work and annually.",
+   "owner": "EHS + Germany HR + Facilities",
+   "cadence": "Quarterly committee; annual instruction; review on change",
+   "cite": "ArbSchG §§5, 12; ASiG §§2, 5, 11; SGB VII §22; MuSchG §10; DGUV Vorschrift 1-2",
+   "processes": [
+    "HS-03",
+    "HS-01"
+   ]
+  },
+  {
+   "id": "R-DE-16",
+   "name": "Germany accident reporting & Berufsgenossenschaft annual report",
+   "type": "Filing",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Report work and commuting accidents causing death or more than 3 days' incapacity to the Berufsgenossenschaft within 3 days, keep first-aid logs 5 years, and file the digital annual payroll report by 16 February.",
+   "owner": "EHS + Payroll (Germany)",
+   "cadence": "Per incident; annual (16 Feb)",
+   "cite": "SGB VII §§165, 193; DGUV Vorschrift 1 §24",
+   "processes": [
+    "HS-01",
+    "LV-04"
+   ]
+  },
+  {
+   "id": "R-DE-17",
+   "name": "Germany maternity protection notification & assessment",
+   "type": "Notice",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "On learning of a pregnancy, notify the supervisory authority without delay, update the individual risk assessment and offer a discussion of adjustments; observe protection periods (including miscarriage protection from week 13 since June 2025) and the dismissal ban.",
+   "owner": "Germany HR + EHS",
+   "cadence": "Per notification",
+   "cite": "MuSchG §§3, 10, 17, 27",
+   "processes": [
+    "LV-01",
+    "LV-02"
+   ]
+  },
+  {
+   "id": "R-DE-18",
+   "name": "Germany DPO, processing records & DPIAs",
+   "type": "Program",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Appoint a data protection officer where 20+ persons regularly process personal data automatically and notify the BayLDA or Saxon DPA; keep Art. 30 records, run DPIAs before monitoring, people analytics or AI tools, and report breaches within 72 hours.",
+   "owner": "Privacy + Germany HR + IT Security",
+   "cadence": "Continuous; per new tool",
+   "cite": "GDPR Arts. 30, 33, 35, 37; BDSG §38",
+   "processes": [
+    "DS-06",
+    "DS-02",
+    "DS-03"
+   ]
+  },
+  {
+   "id": "R-DE-19",
+   "name": "EU AI Act HR controls (Germany)",
+   "type": "Control",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "No emotion recognition at work (since 2 Feb 2025); support AI literacy (Art. 4); by 2 Dec 2027 deployers of Annex III employment tools must ensure human oversight, keep logs, follow instructions and inform the works council and affected workers before use. The Bundesnetzagentur supervises under the KI-MIG.",
+   "owner": "Privacy + HR Technology + Legal",
+   "cadence": "Continuous; readiness by 2 Dec 2027",
+   "cite": "Regulation (EU) 2024/1689 Arts. 4, 5, 26, Annex III(4); Regulation (EU) 2026/1744; KI-MIG",
+   "processes": [
+    "DS-06",
+    "TA-03"
+   ]
+  },
+  {
+   "id": "R-DE-20",
+   "name": "Germany employee invention (ArbnErfG) process",
+   "type": "Program",
+   "domain": "Reward",
+   "tier": "legal",
+   "scope": "Germany (with EU layer)",
+   "countries": [
+    "de"
+   ],
+   "requirement": "Receive text-form invention disclosures, confirm receipt, claim or release within 4 months (claim is otherwise deemed), file German patent applications for claimed service inventions and pay statutory compensation, which cannot be waived in advance.",
+   "owner": "IP Legal + Engineering + Germany HR",
+   "cadence": "Per invention; compensation on use",
+   "cite": "ArbnErfG §§5, 6, 9, 12, 13, 22",
+   "processes": [
+    "OF-01",
+    "ON-01"
+   ]
+  }
+ ]
+}

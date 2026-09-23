@@ -1,0 +1,736 @@
+{
+ "id": "T-EXIT-SURVEY",
+ "name": "Exit survey",
+ "category": "Offboard",
+ "format": "survey",
+ "purpose": "Captures why people leave, what would have kept them, and any unreported conduct concerns, in a form that can be trended by function, level, site and manager without identifying individuals. It is the quantitative half of the exit program (OF-07); the HRBP-led exit interview (T-EXIT-INTERVIEW) is the qualitative half.",
+ "audience": "All voluntary leavers (employees and interns with 3+ months' service). Involuntary leavers receive only Sections 1 (optional), 7 and 8 via a shortened version; RIF-impacted employees receive the RIF variant (see notes).",
+ "when": "Invitation sent automatically by Darwinbox when the resignation is entered (People Ops, D-10 or on acceptance of resignation, whichever is later). Survey closes 7 days after the last working day. Two reminders (D-5, D-1). Optional 90-day post-exit 'look-back' pulse (Section 9).",
+ "owner": "HR Analytics (instrument and reporting); HRBPs (response follow-up); Employee Relations (Section 7 escalations)",
+ "admin": {
+  "length": "10-12 minutes: 25 core questions, 8 conditional follow-ups and an optional 3-question 90-day pulse",
+  "platform": "Survey platform with SSO-free unique links; responses keyed to a confidential respondent ID, joined to HRIS attributes (tenure band, level, function, site, manager ID, regretted flag, exit type) in the analytics layer, not asked in the survey",
+  "confidentiality": "Individual responses visible only to HR Analytics and, for Section 7 only, Employee Relations. Reporting minimum group size n>=5 (n>=10 for manager-level cuts, rolled up over 4 quarters). Free-text is reviewed for identifying details before it is shown to leaders.",
+  "languages": "English (default), Traditional Chinese (Taiwan), Simplified Chinese (China). Hindi/Kannada optional; English is standard for India engineering populations.",
+  "scales": "Agreement items: 5-point (Strongly disagree ... Strongly agree) + 'Not applicable'. Advocacy items: 0-10. Comparisons: 5-point Much worse ... Much better + 'Prefer not to say'.",
+  "reasonTaxonomy": "Primary reason codes map 1:1 to the Darwinbox voluntary termination reason picklist so survey and system data reconcile (DS-01)."
+ },
+ "sections": [
+  {
+   "title": "Before you start",
+   "intro": "Shown on the first screen. Keep it short and honest about who sees what.",
+   "items": [
+    {
+     "id": "n1",
+     "type": "note",
+     "text": "Thank you for taking 10 minutes to tell us about your time at [Company]. Your answers help us fix what's not working for the people who stay.",
+     "detail": "Tone: grateful, not defensive. Never imply the survey is a condition of final pay or equity."
+    },
+    {
+     "id": "n2",
+     "type": "note",
+     "text": "Who sees your answers: responses are confidential. Reports only show groups of 5 or more people, and written comments are reviewed to remove names or details that could identify you. Your manager will never see your individual answers.",
+     "detail": "Confidential, not anonymous: the response is linked to HRIS attributes for analysis. Do not promise anonymity you cannot deliver."
+    },
+    {
+     "id": "n3",
+     "type": "note",
+     "text": "This survey is not a way to report misconduct. If something needs attention now, use Speak Up (hotline, anonymous option available) or contact Employee Relations. Question 7.1 lets you ask us to follow up.",
+     "detail": "Required so leadership cannot claim the company was 'on notice' only through a survey nobody triaged; Section 7 is triaged within 2 business days."
+    },
+    {
+     "id": "n4",
+     "type": "note",
+     "text": "Participation is voluntary. You can skip any question and stop at any time.",
+     "detail": "Voluntariness is part of the lawful basis under PIPL (China), DPDP (India), PIPEDA/BC PIPA (Canada) and Taiwan PDPA; see country notes for consent wording."
+    }
+   ]
+  },
+  {
+   "title": "1. Your decision to leave",
+   "intro": "The core of the survey. Keep the primary-reason list identical to the Darwinbox termination reason codes.",
+   "items": [
+    {
+     "id": "q1_1",
+     "type": "question",
+     "qtype": "single",
+     "required": true,
+     "text": "What is the main reason you decided to leave?",
+     "options": [
+      "Career growth or promotion opportunity",
+      "Base salary",
+      "Equity, bonus or total rewards",
+      "My manager",
+      "Confidence in company direction or leadership",
+      "The work itself (interest, scope, technology)",
+      "Workload or burnout",
+      "Flexibility: hybrid/onsite policy, hours or location",
+      "Team culture, respect or inclusion",
+      "Recognition",
+      "Job security or company stability",
+      "Relocation, family or personal reasons",
+      "Health",
+      "Return to education",
+      "Immigration or visa situation",
+      "Commute",
+      "Other (please describe)"
+     ],
+     "purpose": "Primary attrition driver; reconciles to HRIS reason code.",
+     "driver": "Primary reason"
+    },
+    {
+     "id": "q1_1o",
+     "type": "question",
+     "qtype": "text",
+     "text": "Please describe your main reason.",
+     "logic": "Show if 1.1 = Other",
+     "purpose": "Captures uncoded reasons; reviewed quarterly to refine the taxonomy."
+    },
+    {
+     "id": "q1_2",
+     "type": "question",
+     "qtype": "multi",
+     "max": 3,
+     "text": "Which other factors contributed? (Choose up to 3)",
+     "options": [
+      "Career growth or promotion opportunity",
+      "Base salary",
+      "Equity, bonus or total rewards",
+      "My manager",
+      "Confidence in company direction or leadership",
+      "The work itself (interest, scope, technology)",
+      "Workload or burnout",
+      "Flexibility: hybrid/onsite policy, hours or location",
+      "Team culture, respect or inclusion",
+      "Recognition",
+      "Job security or company stability",
+      "Relocation, family or personal reasons",
+      "Tools, lab equipment, compute or EDA licenses",
+      "Cross-site collaboration (time zones, hand-offs)",
+      "None"
+     ],
+     "purpose": "Secondary drivers; most exits are multi-causal and the primary reason alone under-reports manager and workload issues.",
+     "driver": "Contributing reasons"
+    },
+    {
+     "id": "q1_3",
+     "type": "question",
+     "qtype": "single",
+     "text": "When did you first start seriously considering leaving?",
+     "options": [
+      "Less than 1 month ago",
+      "1-3 months ago",
+      "3-6 months ago",
+      "6-12 months ago",
+      "More than 12 months ago"
+     ],
+     "purpose": "Size of the retention window; long windows mean stay interviews and check-ins are missing signals.",
+     "driver": "Retention window"
+    },
+    {
+     "id": "q1_4",
+     "type": "question",
+     "qtype": "yesno",
+     "text": "Was there a specific event that triggered your decision?",
+     "purpose": "Identifies triggers (missed promotion, reorg, refresh grant, manager change, RTO announcement)."
+    },
+    {
+     "id": "q1_4a",
+     "type": "question",
+     "qtype": "single",
+     "text": "What was it?",
+     "logic": "Show if 1.4 = Yes",
+     "options": [
+      "Promotion or level decision",
+      "Compensation review outcome",
+      "Equity refresh or vesting cliff",
+      "Performance rating",
+      "Reorganization or manager change",
+      "Layoffs or restructuring elsewhere in the company",
+      "Change to hybrid/onsite requirements",
+      "Project cancelled or technology direction changed",
+      "A conflict with a colleague or manager",
+      "An outside offer I wasn't looking for",
+      "Something else"
+     ],
+     "purpose": "Trigger taxonomy; correlates to company events (comp cycle close, RTO dates, reorgs).",
+     "driver": "Trigger"
+    },
+    {
+     "id": "q1_5",
+     "type": "question",
+     "qtype": "text",
+     "required": false,
+     "text": "What, if anything, could we have done that would have made you stay?",
+     "purpose": "Most actionable single question; coded quarterly into themes.",
+     "driver": "Retention lever"
+    },
+    {
+     "id": "q1_6",
+     "type": "question",
+     "qtype": "single",
+     "text": "Before deciding, did you raise your concerns with anyone at [Company]?",
+     "options": [
+      "Yes, with my manager",
+      "Yes, with HR",
+      "Yes, with both",
+      "Yes, with someone else (mentor, skip-level)",
+      "No"
+     ],
+     "purpose": "Tests whether internal voice channels work.",
+     "driver": "Voice"
+    },
+    {
+     "id": "q1_6a",
+     "type": "question",
+     "qtype": "single",
+     "text": "Why not?",
+     "logic": "Show if 1.6 = No",
+     "options": [
+      "I didn't think it would change anything",
+      "I wasn't comfortable raising it",
+      "I didn't know who to talk to",
+      "My decision was already made",
+      "It wasn't something the company could fix",
+      "Other"
+     ],
+     "purpose": "Distinguishes futility, fear and access problems in the voice system.",
+     "driver": "Voice"
+    },
+    {
+     "id": "q1_6b",
+     "type": "question",
+     "qtype": "single",
+     "text": "How was it handled?",
+     "logic": "Show if 1.6 = any Yes",
+     "options": [
+      "Very well",
+      "Reasonably well",
+      "Not well",
+      "It wasn't addressed"
+     ],
+     "purpose": "Quality of response to raised concerns.",
+     "driver": "Voice"
+    }
+   ]
+  },
+  {
+   "title": "2. Your next step (optional)",
+   "intro": "Sensitive. Never require an employer name; trade-secret risk triage happens in OF-01/ER-10, not here.",
+   "items": [
+    {
+     "id": "q2_1",
+     "type": "question",
+     "qtype": "single",
+     "text": "What are you doing next?",
+     "options": [
+      "Joining another semiconductor company",
+      "Joining a hyperscaler, cloud or large tech company",
+      "Joining a startup",
+      "Joining a customer or partner of [Company]",
+      "Moving to a different industry",
+      "Starting my own company",
+      "Further education",
+      "Taking a break",
+      "Retiring",
+      "Prefer not to say"
+     ],
+     "purpose": "Talent-market destination mix; informs comp benchmarking peer set (CO-01).",
+     "driver": "Destination"
+    },
+    {
+     "id": "q2_2",
+     "type": "question",
+     "qtype": "matrix",
+     "text": "Compared with your role here, how does your new role compare on...",
+     "logic": "Show if 2.1 is a new employer or startup",
+     "rows": [
+      "Base salary",
+      "Equity and bonus",
+      "Title or level",
+      "Scope and technical challenge",
+      "Flexibility (location, hours)",
+      "Manager quality (as far as you can tell)"
+     ],
+     "options": [
+      "Much worse",
+      "Worse",
+      "About the same",
+      "Better",
+      "Much better",
+      "Prefer not to say"
+     ],
+     "purpose": "Quantifies the competitive gap; 'Much better' on base or equity for regretted leavers feeds range reviews.",
+     "driver": "Competitive gap"
+    },
+    {
+     "id": "q2_3",
+     "type": "question",
+     "qtype": "single",
+     "text": "How did the new opportunity find you?",
+     "logic": "Show if 2.1 is a new employer or startup",
+     "options": [
+      "A recruiter contacted me",
+      "A former colleague referred me",
+      "I applied after actively searching",
+      "Through my professional network or a conference",
+      "Other"
+     ],
+     "purpose": "Passive vs active attrition; heavy recruiter-sourced exits signal targeted poaching of a team.",
+     "driver": "Poaching signal"
+    }
+   ]
+  },
+  {
+   "title": "3. Your experience here",
+   "intro": "One agreement matrix per theme. Item wording mirrors the engagement survey (EN-01) so exit results can be compared with current-employee results.",
+   "items": [
+    {
+     "id": "q3_1",
+     "type": "question",
+     "qtype": "likert",
+     "text": "The work itself",
+     "rows": [
+      "My work was meaningful to me.",
+      "I had the tools, lab equipment, compute and licenses I needed to do my job well.",
+      "My workload was sustainable over time.",
+      "Decisions that affected my work were made quickly enough."
+     ],
+     "purpose": "Role design, enablement and pace drivers.",
+     "driver": "Work"
+    },
+    {
+     "id": "q3_2",
+     "type": "question",
+     "qtype": "likert",
+     "text": "Growth and career",
+     "rows": [
+      "I could see a realistic career path for myself here.",
+      "I had enough opportunities to learn and grow.",
+      "Promotion decisions were fair and explained clearly.",
+      "My role matched what was described when I was hired."
+     ],
+     "purpose": "Growth driver; the last item flags recruiting mis-selling for leavers with <18 months' tenure.",
+     "driver": "Growth"
+    },
+    {
+     "id": "q3_3",
+     "type": "question",
+     "qtype": "likert",
+     "text": "Your manager",
+     "rows": [
+      "My manager gave me regular, useful feedback.",
+      "My manager cared about my wellbeing.",
+      "My manager recognized my contributions.",
+      "My manager supported my career development.",
+      "I trusted my manager."
+     ],
+     "purpose": "Manager effectiveness; reported only at n>=10 per manager over a rolling 4 quarters.",
+     "driver": "Manager"
+    },
+    {
+     "id": "q3_4",
+     "type": "question",
+     "qtype": "likert",
+     "text": "Pay and rewards",
+     "rows": [
+      "My base pay was fair for my role and the market.",
+      "I understood how my equity works and what it could be worth.",
+      "Strong performance was rewarded here.",
+      "Benefits met my needs."
+     ],
+     "purpose": "Rewards driver; the equity-understanding item is a known gap at equity-heavy chip companies.",
+     "driver": "Rewards"
+    },
+    {
+     "id": "q3_5",
+     "type": "question",
+     "qtype": "likert",
+     "text": "Leadership and company",
+     "rows": [
+      "I had confidence in the company's strategy and product roadmap.",
+      "Senior leaders communicated openly and honestly.",
+      "I felt safe raising concerns without fear of retaliation.",
+      "I was proud to work here."
+     ],
+     "purpose": "Leadership confidence and psychological safety; the retaliation item is also a compliance signal (POL-02).",
+     "driver": "Leadership"
+    },
+    {
+     "id": "q3_6",
+     "type": "question",
+     "qtype": "likert",
+     "text": "Culture, inclusion and ways of working",
+     "rows": [
+      "I was treated with respect.",
+      "I felt I belonged on my team.",
+      "Collaboration across teams and sites (e.g., US, Canada, India, Taiwan) worked well.",
+      "The hybrid or onsite arrangement worked for me.",
+      "Meeting times across time zones were manageable."
+     ],
+     "purpose": "Inclusion and multi-site operating model; the time-zone item is a known burnout driver for APAC teams supporting US HQ.",
+     "driver": "Culture"
+    },
+    {
+     "id": "q3_7",
+     "type": "question",
+     "qtype": "likert",
+     "text": "Your first months (shown if tenure < 12 months)",
+     "logic": "Show if HRIS tenure < 12 months (passed as hidden field)",
+     "rows": [
+      "Onboarding prepared me to be effective.",
+      "I had access to the systems, repositories and lab resources I needed within my first two weeks.",
+      "I understood what was expected of me in my first 90 days."
+     ],
+     "purpose": "Early-tenure attrition diagnostics; the access item catches export-control or IT provisioning delays (TA-06, ON-01).",
+     "driver": "Onboarding"
+    }
+   ]
+  },
+  {
+   "title": "4. Your manager and team",
+   "items": [
+    {
+     "id": "q4_1",
+     "type": "question",
+     "qtype": "single",
+     "text": "Would you work for your manager again?",
+     "options": [
+      "Yes",
+      "Maybe",
+      "No",
+      "Prefer not to say"
+     ],
+     "purpose": "Single best manager-quality proxy in exit data.",
+     "driver": "Manager"
+    },
+    {
+     "id": "q4_2",
+     "type": "question",
+     "qtype": "text",
+     "text": "What is one thing your manager should keep doing?",
+     "purpose": "Balanced manager feedback; shared only in aggregate themes.",
+     "driver": "Manager"
+    },
+    {
+     "id": "q4_3",
+     "type": "question",
+     "qtype": "text",
+     "text": "What is one thing your manager should do differently?",
+     "purpose": "Developmental manager feedback; themes feed manager training.",
+     "driver": "Manager"
+    },
+    {
+     "id": "q4_4",
+     "type": "question",
+     "qtype": "single",
+     "text": "Do you think others on your team are likely to leave in the next 6 months?",
+     "options": [
+      "No",
+      "One or two people",
+      "Several people",
+      "Not sure",
+      "Prefer not to say"
+     ],
+     "purpose": "Contagion signal; 'Several people' from 2+ leavers on one team triggers an HRBP retention review.",
+     "driver": "Flight risk signal"
+    }
+   ]
+  },
+  {
+   "title": "5. Looking back",
+   "items": [
+    {
+     "id": "q5_1",
+     "type": "question",
+     "qtype": "nps",
+     "required": true,
+     "text": "How likely are you to recommend [Company] as a place to work to a friend? (0 = not at all likely, 10 = extremely likely)",
+     "purpose": "Leaver eNPS; compared with current-employee eNPS (EN-01).",
+     "driver": "Advocacy"
+    },
+    {
+     "id": "q5_2",
+     "type": "question",
+     "qtype": "single",
+     "text": "Would you consider coming back to [Company] in the future?",
+     "options": [
+      "Yes",
+      "Maybe",
+      "No"
+     ],
+     "purpose": "Boomerang potential; combined with rehire eligibility (OF-10).",
+     "driver": "Boomerang"
+    },
+    {
+     "id": "q5_3",
+     "type": "question",
+     "qtype": "yesno",
+     "text": "May we contact you about our alumni network and future opportunities?",
+     "purpose": "Explicit consent for alumni outreach; stored separately from survey answers.",
+     "driver": "Boomerang"
+    },
+    {
+     "id": "q5_4",
+     "type": "question",
+     "qtype": "text",
+     "text": "What should [Company] keep doing?",
+     "purpose": "Strengths to protect."
+    },
+    {
+     "id": "q5_5",
+     "type": "question",
+     "qtype": "text",
+     "text": "If you could change one thing about working here, what would it be?",
+     "purpose": "Top improvement theme; the most-read question in leadership readouts."
+    }
+   ]
+  },
+  {
+   "title": "6. Leaving experience",
+   "items": [
+    {
+     "id": "q6_1",
+     "type": "question",
+     "qtype": "likert",
+     "text": "Your offboarding so far",
+     "rows": [
+      "After I resigned I was treated respectfully.",
+      "I got clear information about my last day, final pay, equity and benefits.",
+      "My knowledge-transfer plan was reasonable."
+     ],
+     "purpose": "Offboarding quality; low scores on respect predict poor alumni and Glassdoor sentiment.",
+     "driver": "Offboarding"
+    }
+   ]
+  },
+  {
+   "title": "7. Conduct and compliance",
+   "intro": "Required section. A 'Yes' creates an Employee Relations case within 2 business days (OF-07 control). Explain that this answer is not anonymous if they want a follow-up.",
+   "items": [
+    {
+     "id": "q7_1",
+     "type": "question",
+     "qtype": "single",
+     "required": true,
+     "text": "During your time here, did you experience or see conduct you believe broke our Code of Conduct, a policy or the law, and that you have not already reported? Examples include harassment, discrimination, retaliation, safety hazards, financial or accounting irregularities, misuse of confidential or export-controlled technology, and data misuse.",
+     "options": [
+      "No",
+      "Yes, and I'd like someone to follow up with me",
+      "Yes, but I'd prefer to report it anonymously",
+      "Prefer not to say"
+     ],
+     "purpose": "Legal and compliance safety net; unreported concerns surfacing at exit are a leading indicator of claims (retaliation, whistleblower) and of control failures.",
+     "driver": "Compliance"
+    },
+    {
+     "id": "q7_1a",
+     "type": "question",
+     "qtype": "text",
+     "text": "Please briefly describe what happened (optional). Someone from Employee Relations will contact you within 2 business days.",
+     "logic": "Show if 7.1 = Yes, follow up",
+     "purpose": "Minimum information for ER triage (ER-01). Response routes to ER case management, not to survey reporting."
+    },
+    {
+     "id": "q7_1b",
+     "type": "note",
+     "text": "You can report anonymously through Speak Up at [hotline number / web link]. Reports are reviewed by Ethics & Compliance, and retaliation is prohibited.",
+     "logic": "Show if 7.1 = Yes, anonymously",
+     "detail": "Show the channel as selectable text, not only a link. The hotline must support Mandarin and Taiwanese Mandarin."
+    }
+   ]
+  },
+  {
+   "title": "8. Closing",
+   "items": [
+    {
+     "id": "q8_1",
+     "type": "question",
+     "qtype": "text",
+     "text": "Is there anything else you'd like us to know?",
+     "purpose": "Catch-all."
+    },
+    {
+     "id": "n8",
+     "type": "note",
+     "text": "Thank you. Your final pay, equity and benefits information will come separately from People Ops. We wish you every success.",
+     "detail": "Closing screen. Include a link to the alumni sign-up page only if the respondent answered Yes to 5.3."
+    }
+   ]
+  },
+  {
+   "title": "9. 90-day look-back (optional follow-up)",
+   "intro": "Sent 90 days after exit to regretted leavers who consented in 5.3. Reasons often change once the new job is real.",
+   "items": [
+    {
+     "id": "q9_1",
+     "type": "question",
+     "qtype": "single",
+     "text": "Looking back, what was the real main reason you left?",
+     "options": [
+      "Same as I said when I left",
+      "Career growth",
+      "Pay or equity",
+      "My manager",
+      "Leadership or direction",
+      "Workload",
+      "Flexibility",
+      "Other"
+     ],
+     "purpose": "Detects reason drift, which is typically toward manager and pay once the leaver is no longer worried about references."
+    },
+    {
+     "id": "q9_2",
+     "type": "question",
+     "qtype": "single",
+     "text": "How does your new role compare with what you expected?",
+     "options": [
+      "Better than expected",
+      "As expected",
+      "Worse than expected"
+     ],
+     "purpose": "Boomerang window signal."
+    },
+    {
+     "id": "q9_3",
+     "type": "question",
+     "qtype": "single",
+     "text": "Would you be open to a conversation about returning?",
+     "options": [
+      "Yes, now",
+      "Maybe in the future",
+      "No"
+     ],
+     "purpose": "Routes 'Yes, now' to Talent Acquisition (TA-10 rehire screening)."
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "Confidential, not anonymous. Linking responses to HRIS attributes is what makes the data useful; be explicit about it on the first screen and enforce n>=5 reporting thresholds.",
+  "Keep it at or below 12 minutes. Completion drops sharply after that; the biggest gains come from the primary reason, the 'what would have kept you' text, the manager block and the conduct question.",
+  "Do not ask where they are going as a required field, and never use survey answers for trade-secret or non-compete enforcement. That creates a chilling effect and, in California and Ontario, can look like a threat over void restrictions.",
+  "Section 7 must be triaged. A concern raised in an exit survey that nobody reads can later be cited as notice to the company. Route 'Yes' answers to ER case management automatically and track time-to-contact.",
+  "Mirror engagement-survey wording in Section 3 so exit scores can be compared directly with the same items for current employees. The gap between the two is the most useful single chart.",
+  "Report regretted and non-regretted leavers separately. Blending them hides the signal. Regretted status comes from the manager and HRBP at resignation (OF-01), not from the survey.",
+  "Involuntary leavers: send only the conduct question plus an optional comments box. RIF-impacted employees get a 5-question variant about how the RIF was handled (communication, respect, clarity of package, support).",
+  "Reason codes in 1.1 must match the Darwinbox termination reason picklist. When they drift, HRIS and survey attrition reports disagree and leaders stop trusting both."
+ ],
+ "countryNotes": {
+  "us": "No consent requirement for the survey itself, but keep NLRA Section 7 in mind: don't discourage leavers from discussing pay or conditions, and don't use responses to identify concerted activity. Where a leaver is signing a separation agreement (OF-04), keep the survey separate and state that participation doesn't affect the package.",
+  "us-ca": "CCPA/CPRA applies to employee data: the privacy notice at collection must cover survey data, its purpose and its retention period, and leavers can request access or deletion (DS-02). Automated scoring or AI summarization of free text is an automated-decision-system use to assess under the CRD regulations and CCPA ADMT rules if it informs employment decisions such as rehire eligibility.",
+  "ca": "PIPEDA-style reasonableness applies in BC (PIPA) with notice of purposes; Ontario private employers are largely outside PIPEDA for employee data but should still give notice. Offer French in Quebec (Charter of the French Language) if you have Quebec-based leavers.",
+  "in": "Under the DPDP Act, employment purposes can be a legitimate use, but an optional exit survey is safer on notice and consent: give a clear notice in plain language, and let the leaver withdraw. Main DPDP obligations apply from 13 May 2027, so build the consent language now. Keep the survey separate from full and final settlement (due within 2 working days) and from the relieving letter.",
+  "tw": "Under the Taiwan PDPA, give notice of purpose, data categories, retention and rights at collection; get written consent if you use the data beyond the purpose stated. Offer Traditional Chinese. If a leaver raises harassment or bullying in 7.1, the Gender Equality in Employment Act and the July 2026 workplace-bullying rules can require an investigation and, for bullying, registration in the Ministry of Labor system.",
+  "cn": "Under PIPL, rely on consent for an optional survey (HR-management necessity is weak for a voluntary post-resignation survey). Get separate consent for any sensitive personal information, such as health reasons in 1.1, and for cross-border transfer if responses are stored on a US-hosted platform. Check the transfer against the 2024 HR-data exemption. Offer Simplified Chinese, and don't tie the survey to the termination certificate or social-insurance transfer (due within 15 days)."
+ },
+ "processes": [
+  "OF-07",
+  "OF-01",
+  "EN-01",
+  "ER-01"
+ ],
+ "policies": [
+  "POL-46",
+  "POL-02",
+  "POL-52"
+ ],
+ "illustrative": {
+  "note": "Illustrative sample data showing how results would be reported. Replace with real survey results.",
+  "reasons": [
+   {
+    "label": "Career growth or promotion",
+    "n": 38
+   },
+   {
+    "label": "Equity, bonus or total rewards",
+    "n": 31
+   },
+   {
+    "label": "My manager",
+    "n": 22
+   },
+   {
+    "label": "Base salary",
+    "n": 19
+   },
+   {
+    "label": "Workload or burnout",
+    "n": 14
+   },
+   {
+    "label": "Confidence in direction",
+    "n": 11
+   },
+   {
+    "label": "Flexibility / RTO",
+    "n": 9
+   },
+   {
+    "label": "Relocation / personal",
+    "n": 8
+   },
+   {
+    "label": "Other",
+    "n": 12
+   }
+  ],
+  "drivers": {
+   "columns": [
+    "Regretted leavers",
+    "Non-regretted leavers",
+    "Current employees (EN-01)"
+   ],
+   "rows": [
+    {
+     "label": "Work",
+     "v": [
+      3.9,
+      3.4,
+      4.0
+     ]
+    },
+    {
+     "label": "Growth",
+     "v": [
+      2.8,
+      3.1,
+      3.6
+     ]
+    },
+    {
+     "label": "Manager",
+     "v": [
+      3.3,
+      2.9,
+      3.9
+     ]
+    },
+    {
+     "label": "Rewards",
+     "v": [
+      2.7,
+      3.2,
+      3.4
+     ]
+    },
+    {
+     "label": "Leadership",
+     "v": [
+      3.1,
+      3.0,
+      3.7
+     ]
+    },
+    {
+     "label": "Culture",
+     "v": [
+      3.8,
+      3.5,
+      4.0
+     ]
+    }
+   ]
+  }
+ }
+}

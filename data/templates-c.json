@@ -1,0 +1,2106 @@
+{
+ "templates": [
+  {
+   "id": "T-PROMO-CASE",
+   "name": "Promotion nomination case",
+   "category": "Perform",
+   "format": "form",
+   "purpose": "Builds the evidence case for moving an employee to the next job level: what they already do at that level, who else has seen it, and what the new pay should be. It gives calibration, Total Rewards and approvers one record that explains the decision and lists the checks a level change triggers.",
+   "audience": "Nominating managers (authors), skip-level managers and peers (input), HRBPs, Total Rewards, Dept Heads, People Ops.",
+   "when": "In the annual cycle, by the nomination deadline before calibration (aligned with CO-02); off-cycle only for a genuine scope change, at least 30 days before the proposed effective date.",
+   "owner": "Nominating manager (author); HRBP (process and calibration); Total Rewards (pricing); Dept Head (approval)",
+   "sections": [
+    {
+     "title": "Employee and proposed level",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Employee name, ID, job title, job family, work location and employing entity"
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Current level and time in level",
+       "detail": "Time-in-level guidelines are guidance, not a gate. A nomination under the guideline needs stronger evidence; one far over it should explain what changed."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Proposed level, title and job code (from the job architecture, PL-03)",
+       "detail": "Confirm the target role exists at that level in the employee's job family and location. Don't create a title to fit the person."
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Nomination type",
+       "detail": "Annual cycle / off-cycle scope change / promotion into people management / promotion combined with an internal move (also complete T-TRANSFER)."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Latest performance rating and date; any active PIP, written warning or open investigation",
+       "detail": "An open PIP or corrective action normally pauses the nomination; talk to the HRBP. Protected leave, sick leave or reserve duty is never a performance gap."
+      },
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Proposed effective date",
+       "detail": "Annual: the cycle effective date for that country. Off-cycle: the first of a month, checked against the payroll cut-off."
+      }
+     ]
+    },
+    {
+     "title": "Evidence against next-level criteria",
+     "intro": "Quote the next-level criteria from the job architecture and show, for each one, what the employee has done in the last 12-18 months. Tenure, workload and 'nearly ready' are not evidence.",
+     "items": [
+      {
+       "id": "i7",
+       "type": "prompt",
+       "text": "Scope: what does the employee own end to end, and how does that compare with the next-level definition?",
+       "detail": "Probe: block, IP, subsystem or product; one project or several tapeouts; how much direction they needed and from whom."
+      },
+      {
+       "id": "i8",
+       "type": "prompt",
+       "text": "Complexity and judgment: describe 2-3 decisions the employee made that we'd expect from someone at the next level.",
+       "detail": "Probe: the trade-offs, the risk call (e.g., signing off with a known timing waiver), who agreed and what happened as a result."
+      },
+      {
+       "id": "i9",
+       "type": "prompt",
+       "text": "Impact: which measurable outcomes can be tied to the employee's work?",
+       "detail": "Examples: first-pass silicon, schedule pulled in, power, performance or area gains, a customer design win, fewer escaped defects, a flow or tool other teams adopted."
+      },
+      {
+       "id": "i10",
+       "type": "prompt",
+       "text": "Influence: who follows the employee's lead beyond their own tasks?",
+       "detail": "Probe: mentoring, reviews led, cross-site coordination (e.g., Hsinchu and San Jose), foundry, EDA-vendor or customer interactions."
+      },
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Scope and impact examples (2-4), each with dates, artifacts and who can verify them",
+       "detail": "Link design reviews, sign-off records, patents filed, customer escalations closed. Keep export-controlled or confidential detail out of the form; reference the document ID instead."
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Criteria not yet met or only partly met, and why the promotion should still go ahead",
+       "detail": "Be candid; calibration will ask. A promotion with a known gap needs a development plan and a named check-in date."
+      },
+      {
+       "id": "i13",
+       "type": "note",
+       "text": "Apply the same criteria to everyone in the job family. Visibility bias (people who present to executives, sit near the manager or work HQ hours) is the most common reason similar work is promoted at different rates across sites."
+      }
+     ]
+    },
+    {
+     "title": "Peer and skip-level input",
+     "items": [
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Skip-level manager: is the employee already operating at the next level? (Yes / Not yet / Unsure) and one example"
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "Peer input from 2-3 people named by the manager, at least one from another team or site, summarized",
+       "detail": "Collect it in writing; quote specifics, not adjectives. Don't ask peers to rank the nominee against named colleagues."
+      },
+      {
+       "id": "i16",
+       "type": "question",
+       "text": "Has anyone outside the manager's line seen this work? If not, how will calibration verify it?"
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "Conflicting input and how it was resolved"
+      },
+      {
+       "id": "i18",
+       "type": "note",
+       "text": "Input is evidence for calibration, not a vote. Keep it in the case file and never tell the employee who said what."
+      }
+     ]
+    },
+    {
+     "title": "Compensation recommendation",
+     "items": [
+      {
+       "id": "i19",
+       "type": "field",
+       "text": "Current base, currency, range (minimum, midpoint, maximum) and compa-ratio",
+       "detail": "From Total Rewards, using the range for the employee's work location.",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i20",
+       "type": "field",
+       "text": "New level range, proposed base, increase % and new compa-ratio",
+       "detail": "Typical guideline is 8-12%, and pay must reach at least the new range minimum. Increases above guideline or placement above the new midpoint need Dept Head and Total Rewards sign-off.",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i21",
+       "type": "field",
+       "text": "Bonus target change (if the new level has a different target) and proration from the effective date"
+      },
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "Equity recommendation",
+       "detail": "Promotion refresh per the EQ-01 guideline for the new level, stated as a recommendation until granted on the scheduled grant date. Section 16 officers go through CO-07."
+      },
+      {
+       "id": "i23",
+       "type": "field",
+       "text": "Budget source",
+       "detail": "Annual promotion pool or off-cycle pool; FP&A confirms the cost fits the org's budget."
+      },
+      {
+       "id": "i24",
+       "type": "field",
+       "text": "Exempt status at the new level and pay",
+       "detail": "US: FLSA duties and state salary floors (2026: CA $70,304; WA $80,168.40; CO $57,784). A non-exempt technician promoted to an exempt role stops recording overtime only from the effective date."
+      }
+     ]
+    },
+    {
+     "title": "Pay equity and fairness check",
+     "items": [
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "Proposed pay compared with peers in the same job, level and location; any gap is explained by documented factors (experience, performance, location), not negotiation or prior pay.",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "The new pay creates no unexplained gap by sex (all countries), race or ethnicity (US), or other protected class where the law requires it (WA covers all classes; CA counts bonus and equity as wages).",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "The promotion slate was reviewed for adverse impact in calibration (gender, age 40+, race and ethnicity in the US where lawful, visa status, location, part-time and leave status) before decisions were final.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Local posting and consent rules met: Colorado job-opportunity notice and 30-day post-selection notice unless an exception applies; Germany works council consent to the regrouping (§99 BetrVG) where a council exists.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "Any AI or automated tool used to rank or recommend promotions has passed DS-06 review, with the California ADMT pre-use notice where required.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i30",
+       "type": "field",
+       "text": "Total Rewards reviewer, date and outcome (clean / adjusted / exception approved)"
+      }
+     ]
+    },
+    {
+     "title": "Approvals",
+     "items": [
+      {
+       "id": "i31",
+       "type": "field",
+       "text": "Nominating manager: name and date"
+      },
+      {
+       "id": "i32",
+       "type": "field",
+       "text": "HRBP: calibration outcome and date"
+      },
+      {
+       "id": "i33",
+       "type": "field",
+       "text": "Dept Head: approval within guideline and budget"
+      },
+      {
+       "id": "i34",
+       "type": "field",
+       "text": "Total Rewards: approval of above-guideline pay, placement above the new midpoint or off-cycle timing"
+      },
+      {
+       "id": "i35",
+       "type": "field",
+       "text": "VP and CHRO: promotions to Director and above; Comp Committee for Section 16 officers"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "All approvals recorded in Darwinbox before anyone talks to the employee; nothing is promised before final approval."
+      }
+     ]
+    },
+    {
+     "title": "Downstream checks and communication plan",
+     "items": [
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "People Ops processes the level, title, pay and manager change in Darwinbox by the payroll cut-off; retro pay is scheduled if the cut-off is missed.",
+       "owner": "People Ops"
+      },
+      {
+       "id": "i38",
+       "type": "check",
+       "text": "Trade Compliance re-screens if the new role gives access to different controlled technology or source code; no new access until clearance is recorded.",
+       "owner": "Trade Compliance"
+      },
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "Immigration reviews sponsored employees (H-1B, L-1, TN, O-1): a material change in duties or pay may need a new LCA and amended petition. Canadian, Taiwanese, Chinese and Vietnamese permits are updated where the role or title is on the permit.",
+       "owner": "Immigration"
+      },
+      {
+       "id": "i40",
+       "type": "check",
+       "text": "Insider-list and blackout status updated if the new role gives access to material non-public information (EQ-04).",
+       "owner": "Stock Admin"
+      },
+      {
+       "id": "i41",
+       "type": "check",
+       "text": "California: supervisor harassment training (2 hours) assigned within 6 months when the promotion adds supervisory duties.",
+       "owner": "People Ops"
+      },
+      {
+       "id": "i42",
+       "type": "check",
+       "text": "Promotion letter or contract amendment issued in the local language and signed (e-signature, or wet ink where required), then filed.",
+       "owner": "People Ops"
+      },
+      {
+       "id": "i43",
+       "type": "say",
+       "text": "I'm pleased to tell you that you've been promoted to [New Title], level [Level], effective [Date]. This reflects the work you've done on [two specific examples], which is exactly what we expect at the next level.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i44",
+       "type": "say",
+       "text": "Your new base salary will be [Amount]. [Your bonus target moves to [X]%.] [I've also recommended an equity grant, which is subject to approval and granted on the scheduled date.] Your letter will be in Darwinbox today.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i45",
+       "type": "field",
+       "text": "Announcement date, channel and order",
+       "detail": "Employee first, then skip-level, then the team. In Colorado, the post-selection notice goes to employees who were eligible to apply."
+      },
+      {
+       "id": "i46",
+       "type": "note",
+       "text": "If the nomination is declined, the manager tells the employee within 2 weeks which criteria are not yet met and agrees 2-3 development actions in PD-01 goals; the HRBP records the outcome for the next cycle."
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Write the case against the next level's published criteria. 'Doing a great job' at the current level is a merit case, not a promotion case.",
+    "Collect peer and skip-level input before calibration so the outcome doesn't depend on how well the manager presents.",
+    "Price the promotion inside the new range and run the peer check before approval; fixing pay equity after the letter goes out is costly and visible.",
+    "A promotion is a job change: run the downstream checks (exempt status, export access, visa, insider list) before the effective date, not after.",
+    "Don't promise a promotion or a number in advance. 'I'm nominating you' is fine; 'you'll be L5 in March' is a commitment.",
+    "Keep the file. Promotion decisions drive discrimination and equal-pay claims (Muldrow's 'some harm' test, California's 6-year Equal Pay Act lookback, Germany's AGG burden shift)."
+   ],
+   "countryNotes": {
+    "us": "Document the reasons for each decision and run adverse-impact analysis; after Muldrow v. St. Louis (2024) a denied promotion or unwanted lateral move needs only 'some harm' to be actionable. Recheck FLSA exempt status and whether an H-1B amendment is needed when duties or pay change materially.",
+    "us-ca": "Bonus, stock and benefits count as wages under the Equal Pay Act (SB 642), so compare total pay at the new level, and give the pay scale for the new role on request (LC 432.3). New supervisors need 2 hours of harassment training within 6 months, and ADMT used in promotion decisions needs a pre-use notice.",
+    "us-co": "A promotion is usually a 'job opportunity' that must be announced to all Colorado employees on the same day with pay range, benefits and deadline, followed by a post-selection notice within 30 days, unless the career-development or career-progression exception applies (C.R.S. 8-5-201). Recheck the COMPS exempt floor ($57,784 in 2026).",
+    "us-nc": "No state pay-transparency or internal posting rule. A promotion is valid new consideration if a key engineer is asked to sign a new non-compete or non-solicit.",
+    "us-tx": "No state pay-range or promotion-notice rule. Promotion into a trade-secret role is a good point to add or refresh a Texas non-solicit supported by new equity or confidential information.",
+    "us-wa": "EPOA requires equal career-advancement opportunity across all protected classes, and an employee offered a promotion can ask for its wage scale or salary range (RCW 49.58.110). Recheck the $80,168.40 (2026) exempt floor when promoting non-exempt technicians.",
+    "ca": "Ontario's Pay Equity Act (10+ employees) and ESA equal-pay rule apply, so recheck job-class comparisons after promotions; BC pay-transparency reports (50+ employees) will show promotion effects on the gap. Confirm the promotion in writing, and support any new termination or restrictive clause with fresh consideration.",
+    "de": "Moving an employee into a different pay group is a regrouping that needs works council consent at more than 20 employees (§99 BetrVG), and the council can require internal posting (§93). Notify changed terms under the Nachweisgesetz, reassess executive status (§5(3) BetrVG) and document objective criteria for the AGG.",
+    "il": "Confirm the promotion in writing (Notice to Employee Law) and update the pension and Section 14 salary base. Keep decisions reserve-neutral and gender-equal, and rely on a special-trust hours exemption only if real authority comes with the new role.",
+    "in": "Reassess worker or non-worker status: moving into a genuinely managerial role, or a supervisory role paying over INR 18,000 a month, changes retrenchment, standing-order and GRC coverage. Issue a revised appointment or increment letter with the CTC annexure, keeping 'wages' at 50% or more of pay.",
+    "tw": "Confirm the new title and wage in writing and update Labor Insurance, NHI and pension grades. From 2026, up to 10 days of sick leave a year cannot count against a promotion, and maternity, parental or family-care leave never can.",
+    "cn": "Record the new role and pay in a written amendment (LCL Art. 35) and adjust the social insurance and housing fund base at the next annual reset. Promotion into senior technical or management roles is the moment to decide non-compete eligibility (only staff with real trade-secret access).",
+    "vn": "Record the promotion in a contract annex with the new title and salary; the higher salary becomes the SI contribution salary up to the cap. Apply equal pay for work of equal value (LC Art. 90(3))."
+   },
+   "processes": [
+    "PD-04"
+   ],
+   "policies": [
+    "POL-43",
+    "POL-23",
+    "POL-24",
+    "POL-42",
+    "POL-27",
+    "POL-08",
+    "POL-50"
+   ]
+  },
+  {
+   "id": "T-COMP-CHANGE",
+   "name": "Off-cycle compensation change and retention request",
+   "category": "Reward",
+   "format": "form",
+   "purpose": "Documents why an employee's pay should change outside the annual cycle, what the change costs and whether it keeps pay fair against peers. It gives approvers, Payroll and auditors one record per change, with the approval, equity-check and effective-date evidence that SOX testing needs.",
+   "audience": "Managers (requesters), HRBPs, Total Rewards, Dept Heads, CHRO, Stock Admin, Payroll, Legal (retention agreements) and internal audit.",
+   "when": "Whenever pay changes outside CO-02: counteroffers (decision within 2 business days of the resignation), market or equity adjustments, retention awards and off-cycle refreshes (decision within 10 business days). Avoid in the 90 days before the annual cycle locks unless the case is urgent.",
+   "owner": "HRBP (case and flight-risk judgement); Total Rewards (pricing and equity check); Payroll and Stock Admin (execution)",
+   "sections": [
+    {
+     "title": "Request and reason",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Employee name, ID, job, level, work location, manager and HRBP"
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Reason code",
+       "detail": "Market adjustment / internal equity / retention (no resignation) / counteroffer (resignation given or imminent) / off-cycle promotion (also complete T-PROMO-CASE) / equity refresh. One primary code; add a second only if both genuinely apply."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Components requested",
+       "detail": "Base increase, one-time retention cash, time-vested RSU retention grant, bonus target change, other. Prefer forward-vesting equity or deferred cash to large base jumps."
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Business justification: what we lose if the employee leaves, and who would cover the work",
+       "detail": "Critical skill (e.g., analog, SerDes, physical design, DFT), program at risk (tapeout, customer bring-up), succession cover and realistic time to backfill."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Date requested and decision deadline",
+       "detail": "Counteroffers: decision within 2 business days of the resignation."
+      }
+     ]
+    },
+    {
+     "title": "Current pay and market position",
+     "items": [
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Current base, currency, bonus target, unvested equity value and next vest dates",
+       "detail": "Unvested equity at the current share price is often the strongest retention lever already in place; show it."
+      },
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Range for job, level and location (minimum, midpoint, maximum), current compa-ratio and range position",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Market data",
+       "detail": "Survey source and cut (e.g., Radford/Aon semiconductor, job match, location, percentile, effective date). Never use pay data exchanged directly with competitors: wage-fixing and no-poach agreements are criminal in the US and Canada.",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Last pay change: date, amount and reason",
+       "detail": "Flag any off-cycle change in the last 12 months."
+      },
+      {
+       "id": "i10",
+       "type": "field",
+       "text": "Performance ratings for the last 2 cycles"
+      }
+     ]
+    },
+    {
+     "title": "Flight risk and counteroffer details",
+     "items": [
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Flight-risk evidence",
+       "detail": "Resignation given, competing offer described by the employee, recruiter approaches, stay-interview findings (T-STAY-INTERVIEW), key-person dependency. Record what the employee said, not assumptions."
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Competing offer as described by the employee: employer type, role, level, base, bonus, equity, sign-on",
+       "detail": "Don't require a copy of the offer letter. Where salary-history bans apply (CA, CO, WA, BC and others), don't use the employee's pay history to set the new pay."
+      },
+      {
+       "id": "i13",
+       "type": "question",
+       "text": "Is pay the real driver? What else did the employee raise (manager, scope, location, career path, workload)?"
+      },
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Destination flag",
+       "detail": "Direct competitor, customer or PRC-linked entity: notify Security to start the departing-employee trade-secret protocol (ER-10), whatever the counteroffer decision."
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "HRBP recommendation: counteroffer / adjust / don't counter (proceed with OF-01), with rationale",
+       "owner": "HRBP"
+      }
+     ]
+    },
+    {
+     "title": "Proposed change and internal equity",
+     "items": [
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Proposed base, % increase and new compa-ratio"
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "One-time cash or retention equity: amount, earning or vesting schedule and grant date",
+       "detail": "State equity as 'subject to approval and granted on the scheduled grant date' (EQ-01). Never promise a share count or price."
+      },
+      {
+       "id": "i18",
+       "type": "field",
+       "text": "Internal equity check",
+       "detail": "Pay of peers in the same job, level and location after the change. List anyone who would now be paid less for substantially similar work and the documented factor that explains it, or the fix.",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "The change creates no new unexplained gap by sex (all countries), race or ethnicity (US) or other protected class where the law requires it (CA counts bonus and equity as wages; WA covers all classes; Germany's single-comparator rule).",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "The justification doesn't rely on prior pay or 'the employee negotiated harder'; neither is a valid factor in California, Colorado, Washington or Germany.",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i21",
+       "type": "field",
+       "text": "Budget",
+       "detail": "Off-cycle pool (e.g., 0.5% of payroll) balance before and after the change; FP&A confirmation if the org is over its allocation."
+      }
+     ]
+    },
+    {
+     "title": "Approvals by threshold",
+     "items": [
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "Within range and under 10% of base, or one-time cash under [Amount]: Dept Head and Total Rewards"
+      },
+      {
+       "id": "i23",
+       "type": "field",
+       "text": "10-15% of base, placement above midpoint for someone rated below 'exceeds', or retention equity above guideline: add VP"
+      },
+      {
+       "id": "i24",
+       "type": "field",
+       "text": "Over 15% of base, above range maximum, or any counteroffer to a Director or above: add CHRO"
+      },
+      {
+       "id": "i25",
+       "type": "field",
+       "text": "Section 16 officers and other executives in the Comp Committee's remit: Comp Committee (CO-07), with Legal"
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "All approvals recorded in the Darwinbox workflow before the employee is told; no verbal commitments before approval."
+      },
+      {
+       "id": "i27",
+       "type": "note",
+       "text": "The thresholds above are illustrative; the authority matrix in POL-23 governs, and the workflow blocks any load that lacks a required approval."
+      }
+     ]
+    },
+    {
+     "title": "Effective date, letter and retention terms",
+     "items": [
+      {
+       "id": "i28",
+       "type": "field",
+       "text": "Effective date and the payroll cut-off for that country",
+       "detail": "If the date misses cut-off, record the retro amount and the pay date. No backdating beyond the approval date without Total Rewards sign-off.",
+       "owner": "Payroll"
+      },
+      {
+       "id": "i29",
+       "type": "field",
+       "text": "Retention agreement terms",
+       "detail": "Amount; earning or vesting period; condition (employed on the payment date); treatment on termination without cause, death or disability."
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "California (agreements from 1 Jan 2026): no repayment on separation unless the narrow AB 692 exception for a discretionary upfront bonus under a standalone agreement applies (B&P 16608, LC 926). Use pay-on-completion cash or forward vesting instead, and track AB 1697.",
+       "owner": "Legal"
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "Elsewhere, any repayment is pro-rated, reasonable and in a signed agreement. Wage deductions need written authorization (e.g., NC G.S. 95-25.8, TX Labor Code 61.018, ON ESA s.13), are capped (India 50%) or unavailable (Vietnam; China outside training service periods). WA voids repayments triggered by joining another employer from 30 June 2027.",
+       "owner": "Legal"
+      },
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "Letter delivered in writing and signed (e-signature, local language), stating the new pay, effective date and any retention terms.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Stock Admin receives the approved equity request for the next scheduled grant date and checks blackout and insider status.",
+       "owner": "Stock Admin"
+      }
+     ]
+    },
+    {
+     "title": "SOX evidence and outcome tracking",
+     "items": [
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "Change loaded in Darwinbox by People Ops (not the requester or an approver) and matched to the approved request: employee, amount, currency, effective date.",
+       "owner": "People Ops"
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "First payroll register after the effective date reconciled to the approved amount by a second Payroll analyst.",
+       "owner": "Payroll"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "Equity grant reconciled: approved request = equity platform = grant record used for ASC 718 expense.",
+       "owner": "Stock Admin"
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Evidence retained for audit: request, market data, equity check, time-stamped approvals, signed letter and payroll reconciliation.",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i38",
+       "type": "field",
+       "text": "Retention outcome at 6 and 12 months (stayed / left, date, reason)",
+       "detail": "Reported quarterly to Total Rewards with off-cycle spend against budget.",
+       "owner": "HRBP"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Decide counteroffers within 2 business days. Late counteroffers rarely work, and people who stay for pay alone often leave within a year; track 6- and 12-month outcomes to test it.",
+    "Fix the range or the peer group, not just the person: if one market adjustment is justified, check the rest of the job and level before approving.",
+    "Prefer forward-looking retention (RSUs vesting over 2-4 years, cash paid on a future date) to repayment clauses; it works everywhere, including California after AB 692.",
+    "Use survey data only. Pay information obtained directly from competitors creates antitrust exposure in the US and under Canada's Competition Act s.45.",
+    "Treat every off-cycle change as a SOX pay-change event: approval before load, an independent loader and reconciliation to the payroll register.",
+    "Write the reason in terms an equal-pay auditor will accept (market data, scarce skill, performance), not 'flight risk' alone."
+   ],
+   "countryNotes": {
+    "us": "Base the change on documented job-related factors so it survives an Equal Pay Act or Title VII challenge, and check state salary-history bans before using the competing offer. Recovering money from wages needs written authorization under most state laws.",
+    "us-ca": "AB 692 (B&P 16608, LC 926) bars stay-or-pay repayment in agreements from 1 Jan 2026 except narrow cases, with $5,000 minimum damages per worker; AB 1697, if signed, would move the start to 2027 and extend the exception to retention bonuses. Bonus and stock count as wages under the Equal Pay Act (SB 642).",
+    "us-co": "Counteroffer and retention increases must be explainable under EPEWA's listed factors, and wage history cannot justify pay (C.R.S. 8-5-102). Review any repayment term against C.R.S. 8-2-113 and Wage Act deduction rules before use.",
+    "us-nc": "Retention awards may carry repayment clauses, but recovery from wages needs a signed G.S. 95-25.8 authorization. Any cut to base, bonus target or commission rate needs written notice a full pay period ahead (G.S. 95-25.13(3)).",
+    "us-tx": "Retention repayment terms are enforceable (no stay-or-pay ban), but payroll recovery needs a written deduction authorization (Labor Code 61.018). A counteroffer to a key engineer can add or refresh a non-solicit supported by new equity.",
+    "us-wa": "From 30 June 2027 a retention repayment triggered by leaving for other lawful work is a void noncompete (ESHB 1155). Don't seek prior pay (RCW 49.58.100), and document EPOA factors across all protected classes, including bonus and equity.",
+    "ca": "Confirm the change in writing. Recovering a retention bonus from wages needs a written authorization for that specific deduction (ON ESA s.13) and BC restricts deductions further (verify), so prefer paid-on-completion terms; BC bars asking applicants about pay history and protects pay discussions.",
+    "de": "Individual adjustments are not co-determined unless they follow a general scheme, but they must meet equal-pay rules: one better-paid comparator raises a presumption, and negotiation skill is no justification. Stay conditions on retention bonuses must be proportionate to the bonus under BAG case law.",
+    "il": "Record the change as a written change to terms (Notice to Employee Law) and update the pension and Section 14 salary base. Retention clawbacks must be reasonable and pro-rated, and any deduction from final pay needs clear written authority within Wage Protection Law s.25.",
+    "in": "Retention bonds and clawbacks are enforceable only as reasonable, pro-rated liquidated damages tied to actual cost, and recovery from final pay needs clear contract terms within the 50% deduction cap. Issue a revised CTC annexure and keep 'wages' at 50% or more of pay for PF and gratuity.",
+    "tw": "Minimum-service commitments are valid only in return for employer-funded specialized training or reasonable compensation, for a reasonable period, and in writing (LSA Art. 15-1). Update the Labor Insurance, NHI and pension grades for the new salary.",
+    "cn": "Liquidated damages are allowed only for training service periods and non-competes (LCL Arts. 22-23, 25), so condition a retention bonus on payment dates rather than repayment. Put pay changes in a written amendment and adjust the social insurance base at the annual reset.",
+    "vn": "Document the change in a contract annex. A retention repayment is only a contractual claim and cannot be recovered by wage deduction, and the weeks after the Tet bonus are the peak resignation window, so time awards before it."
+   },
+   "processes": [
+    "CO-05",
+    "CO-02"
+   ],
+   "policies": [
+    "POL-23",
+    "POL-24",
+    "POL-31",
+    "POL-27",
+    "POL-28",
+    "POL-05"
+   ]
+  },
+  {
+   "id": "T-WORK-LOCATION",
+   "name": "Remote work and work-location change request",
+   "category": "Move",
+   "format": "form",
+   "purpose": "Captures a request to work remotely or from a new location and routes it through the checks the location triggers: payroll and tax registration, pay range, export control, immigration, expenses and cross-border risk. The work location, not HQ, decides which law applies, so nothing changes in Darwinbox until every check is signed off.",
+   "audience": "Employees (requesters), managers, HRBPs, Payroll, Tax, Trade Compliance, Immigration, IT/Security and Mobility.",
+   "when": "Before an employee starts working from a new address, state, province or country, or moves between on-site, hybrid and remote: at least 30 days ahead (60 days for a new state or country). Also used at the annual review of existing remote agreements.",
+   "owner": "HRBP (decision); Payroll and Tax (registration); Trade Compliance and IT/Security (location controls)",
+   "sections": [
+    {
+     "title": "Request details",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Employee name, ID, job, level, manager, current work location and arrangement (on-site / hybrid / remote)"
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Arrangement requested",
+       "detail": "Hybrid (days on site) / fully remote / new home address in the same state or province / move to a new state or province / work from another country (temporary or permanent) / short workation."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "New work address (full address, not just the city), start date and expected duration",
+       "detail": "The exact address sets the tax jurisdiction, local ordinances (e.g., Seattle, Denver, San Francisco) and, in Vietnam, the minimum-wage region."
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Reason for the request",
+       "detail": "If the reason is a disability, pregnancy or other medical need, route to LV-02 and T-ACCOMMODATION; the accommodation process decides, not this form."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Expected travel to a company site: frequency and who pays",
+       "detail": "Commuting to the regular office is normally the employee's cost; travel to another site at the company's request is reimbursed."
+      }
+     ]
+    },
+    {
+     "title": "Role eligibility",
+     "items": [
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Role category from the eligibility matrix",
+       "detail": "On-site required (lab, validation, silicon bring-up, hardware debug, secure design room) / hybrid / remote-eligible.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i7",
+       "type": "question",
+       "text": "Which parts of the work need physical presence (lab equipment, secure rooms, hardware, customer sites), and how often?"
+      },
+      {
+       "id": "i8",
+       "type": "question",
+       "text": "How will collaboration, time zones and on-call work?",
+       "detail": "E.g., a Vancouver engineer on a Hsinchu team. Evening calls count as working time in Taiwan and must be recorded."
+      },
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Non-exempt or hourly? Timekeeping method at the new location",
+       "detail": "Remote non-exempt staff record all hours, including log-in time; California, Colorado and Washington meal and rest rules apply at home."
+      },
+      {
+       "id": "i10",
+       "type": "field",
+       "text": "Manager recommendation (approve / approve with conditions / decline) and reasons",
+       "detail": "Decline reasons must be role-based and applied consistently across the team; document them.",
+       "owner": "Manager"
+      }
+     ]
+    },
+    {
+     "title": "Payroll, tax and pay-range impact",
+     "items": [
+      {
+       "id": "i11",
+       "type": "check",
+       "text": "Payroll confirms the entity can pay in the new location: withholding, UI, PFML, workers' comp and local tax registrations (US) or EHT, WSIB or WorkSafeBC and provincial items (Canada). No effective date until registration is confirmed.",
+       "owner": "Payroll"
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Nexus and entity check",
+       "detail": "Is this a state or country where we have no employees? Record corporate tax nexus, registration cost and permanent-establishment exposure.",
+       "owner": "Tax"
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Pay range and geo-differential at the new location",
+       "detail": "Current base, the new location's range and geo-tier, and whether pay changes and from when. A pay cut on relocation needs written consent or notice in Canada, and a written amendment in China, Taiwan and Vietnam.",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Local employment rules that change",
+       "detail": "Exempt salary floor, overtime, sick leave and PFML, final pay, pay-range posting coverage, state notices and posters, WARN and FMLA site attribution.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "Restrictive covenants",
+       "detail": "A move to CA, MN, ND, OK or WY (and WA from 30 June 2027) makes non-competes void; a move into Colorado needs the Colorado notice for any new covenant.",
+       "owner": "Legal"
+      },
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Equity and bonus sourcing",
+       "detail": "Equity vesting after the move is sourced across states or countries by workdays; flag the move to Stock Admin and Payroll.",
+       "owner": "Stock Admin"
+      }
+     ]
+    },
+    {
+     "title": "Export control and security",
+     "items": [
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "Does the employee access EAR- or ITAR-controlled technology, source code or tools? (set by Trade Compliance)"
+      },
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "Trade Compliance re-checks licence coverage for the new location; access from outside the approved country is blocked unless a licence review clears it.",
+       "owner": "Trade Compliance"
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "Sanctioned or embargoed destinations are always declined, and geo-IP controls block access from them.",
+       "owner": "IT"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "IT confirms VPN, managed device and secure design environment; controlled design data is never stored locally at home.",
+       "owner": "IT"
+      },
+      {
+       "id": "i21",
+       "type": "note",
+       "text": "A foreign-national employee working from a third country can change the deemed-reexport analysis even when the job is unchanged, so screen every cross-border location change."
+      }
+     ]
+    },
+    {
+     "title": "Equipment, expenses and immigration",
+     "items": [
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "Equipment issued (laptop, monitors, peripherals, ergonomic chair) and return terms"
+      },
+      {
+       "id": "i23",
+       "type": "field",
+       "text": "Expense reimbursement or stipend",
+       "detail": "California (LC 2802): reimburse all necessary business expenses, including a reasonable share of personal phone and internet; a stipend works only if it fully covers actual costs, and the right can't be waived. Elsewhere in the US, unreimbursed costs can't take non-exempt pay below minimum wage."
+      },
+      {
+       "id": "i24",
+       "type": "field",
+       "text": "Home-office safety and ergonomics self-assessment completed (date)",
+       "detail": "Germany: telework workstation risk assessment (ArbStättV). Taiwan and Vietnam: OSH duties apply at home. US: workers' comp covers injuries in the course of work."
+      },
+      {
+       "id": "i25",
+       "type": "field",
+       "text": "Immigration impact",
+       "detail": "H-1B: a worksite outside the current LCA area needs a new LCA and possibly an amended petition before the move. TN, L-1 and Canadian and Asian permits may be tied to a location, and a green-card case may need review.",
+       "owner": "Immigration"
+      }
+     ]
+    },
+    {
+     "title": "Cross-border remote work",
+     "intro": "Cross-border remote work is declined by default. Exceptions (a short pre-approved workation, or approved temporary remote work) need Mobility, Tax and Legal approval; longer or permanent moves go to MV-02 or MV-03.",
+     "items": [
+      {
+       "id": "i26",
+       "type": "field",
+       "text": "Destination country, days requested in the 12-month period and days already spent there this year"
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "Tax confirms individual income-tax exposure (183-day and treaty tests) and any host payroll withholding duty.",
+       "owner": "Tax"
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Tax and Legal confirm permanent-establishment risk: the employee has no authority to negotiate or sign contracts, and the home is not a fixed place of business at the company's disposal.",
+       "owner": "Tax"
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "Social security coverage confirmed: certificate of coverage where an agreement exists (US-Canada, US-Germany), A1 or the EU framework agreement for up to 49.9% telework, otherwise host enrollment.",
+       "owner": "Payroll"
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "Right to work in the destination confirmed; business-visitor status doesn't allow remote productive work in most countries.",
+       "owner": "Immigration"
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "Host employment and data rules checked (e.g., PIPL separate consent for transfers out of China, GDPR for EU locations).",
+       "owner": "Legal"
+      }
+     ]
+    },
+    {
+     "title": "Approvals and agreement terms",
+     "items": [
+      {
+       "id": "i32",
+       "type": "field",
+       "text": "Approvals: Manager, HRBP, Payroll (registration confirmed), Trade Compliance, Tax (new state or country), Mobility and Legal (cross-border)"
+      },
+      {
+       "id": "i33",
+       "type": "para",
+       "text": "This remote work arrangement is provided under the Hybrid & Remote Work policy and is not a term of your employment contract. The company may change or end it for business reasons with [30] days' written notice, or sooner where law, security or export-control rules require."
+      },
+      {
+       "id": "i34",
+       "type": "para",
+       "text": "You will work only from [Approved Address]. You must get approval before working from any other location, including temporarily from another state or country, because your work location affects tax, payroll, immigration and export-control obligations."
+      },
+      {
+       "id": "i35",
+       "type": "para",
+       "text": "Your core hours are [Hours and time zone]. [Non-exempt only: You must record all time worked, including time spent logging in, and take meal and rest breaks as required.] You will be on site for [On-site days or events] at [Site]."
+      },
+      {
+       "id": "i36",
+       "type": "para",
+       "text": "The company provides [Equipment] and will [reimburse necessary business expenses / pay a monthly stipend of [Amount] for reasonable internet, phone and home-office costs, and reimburse documented costs above it]. You must follow the Electronic Monitoring & Acceptable Use and Confidential Information policies, use only company-managed devices for company work and keep controlled technology in approved environments."
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Darwinbox work location updated to the approved address from [Date]; it drives payroll tax, LMS assignments, notices and WARN counts.",
+       "owner": "HRBP"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Never let a location change take effect before Payroll confirms registration; paying someone in a state where the company isn't registered is the most common multi-state error.",
+    "Keep remote arrangements policy-based and revocable in writing. In Canada, a remote term written into the contract can turn a later return-to-office mandate into constructive dismissal.",
+    "Handle accommodation-driven requests in LV-02. A 'no' under the role eligibility matrix doesn't end the duty to consider remote work as an accommodation.",
+    "Location drives the export-control analysis: re-screen any cross-border move even if the job and data don't change.",
+    "Each quarter, compare login geolocation with the Darwinbox work location to catch unapproved work from abroad.",
+    "Apply the geo-pay rule consistently when someone moves to a lower-cost location; ad hoc cuts create equal-pay and constructive-dismissal risk."
+   ],
+   "countryNotes": {
+    "us": "The work state and city govern payroll registration, minimum wage, overtime, sick leave and PFML, final pay and non-competes; register before the first pay date and give that state's notices electronically. Buy workers' comp in the new state (monopolistic state funds in ND, OH, WA and WY).",
+    "us-ca": "Reimburse all necessary remote and hybrid expenses, including a reasonable share of personal phone and internet (LC 2802; Cochran v. Schwan's); the right can't be waived. A move into California voids non-competes (B&P 16600.5) and brings CA pay-scale, wage-statement and final-pay rules.",
+    "us-co": "A move into Colorado needs withholding, UI, FAMLI and workers' comp registration, the COMPS poster, HFWA notice and local minimum wages (e.g., Denver). Covenants for employees who live or work in Colorado at termination follow Colorado law and venue (C.R.S. 8-2-113(6)).",
+    "us-nc": "A move into NC needs NC withholding and DES registration, counts toward the 25-employee E-Verify threshold and brings NC wage-notice and deduction rules. A new NC non-compete needs new consideration.",
+    "us-tx": "A move into Texas ends state income tax withholding; register for TWC unemployment tax and apply the Payday Law. Employees leaving California keep California tax on equity partly earned there.",
+    "us-wa": "A move into WA triggers ESD (UI, PFML, WA Cares) and L&I registration, the $80,168.40 exempt floor (2026) and Seattle ordinances inside the city. WA has no general expense statute, but unreimbursed costs can't take non-exempt pay below minimum wage.",
+    "ca": "A move between provinces changes the ESA and payroll items (EHT, WSIB or WorkSafeBC), and a Quebec location adds French-language documents, OQLF registration and Law 25. Ontario employers with 25+ employees need disconnecting-from-work and electronic-monitoring policies that cover remote staff.",
+    "de": "There is no statutory right to home office, but the design of mobile work is co-determined (§87(1) no.14 BetrVG), fixed telework stations fall under ArbStättV and ArbZG time recording applies at home. Cross-border telework needs an A1 and a PE check; the EU framework agreement keeps German coverage for up to 49.9% telework.",
+    "il": "There is no remote-work statute, but hours rules, overtime recording and privacy limits (Isakov) apply at home, and travel is reimbursed only for days actually commuted. Home-office injuries can be NII work injuries, and moving the work location abroad needs tax, NII and export-control review.",
+    "in": "There is no statutory remote-work regime, so record the arrangement and work location in writing; work from home for SEZ unit staff must follow SEZ Rule 43A. A move between states changes Shops Act, professional tax and labour welfare fund registrations.",
+    "tw": "Record remote working time to the minute (electronic logs are acceptable) and pay overtime for evening calls with US teams. A change of work location is a transfer that must meet the LSA Art. 10-1 principles, including help with relocation and regard for family life.",
+    "cn": "A change of work location needs written agreement unless the contract reasonably allows it; a Shanghai-Shenzhen move needs consent and changes the social insurance and housing fund city. Remote access that moves personal data out of China follows PIPL cross-border rules.",
+    "vn": "Record the agreed work location in a contract annex, because it sets the minimum-wage region and the province for filings. Hours, overtime and OSH duties still apply at home, and remote monitoring must be disclosed under PDPL Art. 25."
+   },
+   "processes": [
+    "MV-04"
+   ],
+   "policies": [
+    "POL-38",
+    "POL-30",
+    "POL-18",
+    "POL-40",
+    "POL-19",
+    "POL-39",
+    "POL-47",
+    "POL-28"
+   ]
+  },
+  {
+   "id": "T-ASSIGNMENT-LETTER",
+   "name": "International assignment letter",
+   "category": "Move",
+   "format": "letter",
+   "purpose": "Sets out the terms of a temporary international assignment while the employee stays employed by the home entity: role, duration, pay and allowances, tax, social security, immigration, export-control rules and repatriation. The signed letter is the third 'green light' that, with work authorization and export clearance, lets an assignment start.",
+   "audience": "Mobility (author), assignees (signers), home and host managers, Tax and the tax vendor, Payroll, Immigration, Trade Compliance and Legal.",
+   "when": "Issued after the cost estimate and package are approved and before any visa filing that needs the terms; signed before departure. Reissued as an amendment for any extension or change of host site, role or package.",
+   "owner": "Mobility (author and owner); Tax (equalization terms); Trade Compliance (export paragraph); Legal (template)",
+   "sections": [
+    {
+     "title": "Assignment terms",
+     "items": [
+      {
+       "id": "i1",
+       "type": "para",
+       "text": "Dear [Assignee Name], We are pleased to confirm your temporary international assignment from [Home Entity] in [Home Country] to [Host Entity] in [Host City, Country]. This letter sets out the terms of the assignment and forms part of your terms of employment for its duration. Where it conflicts with your employment agreement, this letter governs for the assignment period only."
+      },
+      {
+       "id": "i2",
+       "type": "para",
+       "text": "Your assignment will start on [Start Date], subject to the conditions below, and is expected to last [Duration], ending on [End Date]. The company may shorten or extend it with [30] days' written notice; any extension beyond [Maximum Duration] needs a new approval and a written amendment."
+      },
+      {
+       "id": "i3",
+       "type": "para",
+       "text": "During the assignment you will work as [Host Role Title] at [Host Site], reporting to [Host Manager] for day-to-day work. [Home Manager] remains your home manager for performance reviews, compensation and career decisions, and your job level remains [Level]."
+      },
+      {
+       "id": "i4",
+       "type": "para",
+       "text": "The assignment can start only when (1) you hold valid work authorization for [Host Country], (2) Trade Compliance has confirmed export clearance for your role and (3) you have signed this letter. Do not travel to start work until Mobility has confirmed all three in writing."
+      }
+     ]
+    },
+    {
+     "title": "Employment structure, compensation and allowances",
+     "items": [
+      {
+       "id": "i5",
+       "type": "para",
+       "text": "You remain employed by [Home Entity] throughout the assignment and your continuous service is not interrupted. [Where the host permit or law requires it: you will also sign a [secondment agreement / local employment contract] with [Host Entity]. It covers only what host law requires and does not add to your total package.]"
+      },
+      {
+       "id": "i6",
+       "type": "para",
+       "text": "Your base salary remains [Amount, Currency] a year, paid [through home payroll / through split payroll in [Currencies]]. You remain eligible for the annual compensation review, the [Bonus Plan] and equity grants on home-country terms, and your salary continues to be reviewed against your home-country range."
+      },
+      {
+       "id": "i7",
+       "type": "para",
+       "text": "For the assignment period only, you will receive: [cost-of-living allowance of [Amount]], [location or hardship allowance of [Amount]], [[Number] home-leave trips a year in [Class]] and [other allowances]. Allowances end when the assignment ends and are not pensionable or included in severance calculations unless local law requires it."
+      },
+      {
+       "id": "i8",
+       "type": "para",
+       "text": "Assignment allowances and benefits in kind are taxable income and will be reported in the home and host countries as the law requires."
+      }
+     ]
+    },
+    {
+     "title": "Tax, social security and payroll",
+     "items": [
+      {
+       "id": "i9",
+       "type": "para",
+       "text": "You will be tax equalized under the company's Tax Equalization Policy. You will bear approximately the tax you would have paid had you stayed in [Home Country], through a hypothetical tax deduction from salary, and the company will pay the actual home and host taxes on your assignment compensation. Personal income, such as investment income or a partner's earnings, is not equalized."
+      },
+      {
+       "id": "i10",
+       "type": "para",
+       "text": "The company will provide tax briefings and preparation of your home and host returns through [Tax Vendor] for each tax year affected. You must provide information by the vendor's deadlines and repay any tax refund or equalization balance due to the company within [60] days of the settlement calculation, [where local law allows recovery]."
+      },
+      {
+       "id": "i11",
+       "type": "para",
+       "text": "Equity that vests during or after the assignment may be taxed in more than one country based on where you worked during the vesting period. Stock Admin and Payroll will source and withhold tax accordingly, and tax equalization applies to the assignment-related portion."
+      },
+      {
+       "id": "i12",
+       "type": "para",
+       "text": "[Where a social security agreement applies:] You will stay covered by [Home Country] social security, and the company will obtain a certificate of coverage before your start date. [Where none applies:] You will be enrolled in [Host Country] social insurance as the law requires, and the company will [bear the employee share of host contributions / seek any available refund when you leave]."
+      }
+     ]
+    },
+    {
+     "title": "Housing, travel, family, benefits and immigration",
+     "items": [
+      {
+       "id": "i13",
+       "type": "para",
+       "text": "The company will provide [company-leased housing up to [Amount] a month / a housing allowance of [Amount] a month], including [utilities listed], for the assignment period. The lease must allow early termination, and you are responsible for damage beyond normal wear."
+      },
+      {
+       "id": "i14",
+       "type": "para",
+       "text": "The company will pay [economy / business for flights over [X] hours] travel for you [and your eligible family members] at the start and end of the assignment, shipment of up to [Weight or Volume] of personal goods, and temporary accommodation for up to [X] days on arrival and departure."
+      },
+      {
+       "id": "i15",
+       "type": "para",
+       "text": "[If family members accompany you:] The company will support [Partner] and [Children] with immigration filings, [a schooling allowance of up to [Amount] per child per year], [partner career support of up to [Amount]] and up to [X] hours of cross-cultural and language training."
+      },
+      {
+       "id": "i16",
+       "type": "para",
+       "text": "You and your enrolled family members will [stay in your home-country benefit plans / join the [International Medical Plan]], with emergency medical evacuation cover through [Vendor]. Retirement plan participation continues on home-country terms where the plan allows; Mobility will confirm any gap and how it is handled."
+      },
+      {
+       "id": "i17",
+       "type": "para",
+       "text": "You must obtain, before departure, the work and residence permits Immigration arranges for you, and comply with their conditions, including registration deadlines and permitted activities. You may not start productive work on a business visitor visa. Tell Immigration immediately about any change to your role, site, salary or family status."
+      }
+     ]
+    },
+    {
+     "title": "Compliance in the host country",
+     "items": [
+      {
+       "id": "i18",
+       "type": "para",
+       "text": "You must follow the Code of Business Conduct, host-country law and the Technology Control Plan for [Host Site]. You may access, carry or share controlled technology, source code and design data only as cleared by Trade Compliance. [Specific restrictions, e.g.: you may not support development or production at [named facilities or entities].] Take only a company-issued device configured for [Host Country]."
+      },
+      {
+       "id": "i19",
+       "type": "para",
+       "text": "Your personal data will be processed in both countries to administer the assignment (payroll, tax, immigration, security), including transfers between [Home Country] and [Host Country], as described in the Employee Privacy Notice [and with your separate consent where host law requires it]."
+      },
+      {
+       "id": "i20",
+       "type": "para",
+       "text": "You may not negotiate or sign contracts, accept orders, or present yourself as able to bind [Home Entity] or any other company entity in [Host Country] without written authority from Legal. This protects the company from creating a taxable presence in the host country."
+      },
+      {
+       "id": "i21",
+       "type": "para",
+       "text": "You must follow the Travel Safety & Restricted Travel policy, register with the company's travel-security provider and follow the crisis team's instructions in an emergency."
+      }
+     ]
+    },
+    {
+     "title": "Repatriation, early end and governing terms",
+     "items": [
+      {
+       "id": "i22",
+       "type": "para",
+       "text": "At the end of the assignment you will return to [Home Country] to [your previous role / a role at the same level] in [Home Entity]. Mobility and your home manager will confirm your return role at least [6] months before the end date. If no suitable role is available, the situation will be handled under home-country policy and law."
+      },
+      {
+       "id": "i23",
+       "type": "para",
+       "text": "If the company ends the assignment early for business reasons, it will pay return travel, shipment and any unavoidable lease-break cost. If you resign during the assignment or your employment ends for cause, [the company will pay return travel for you and your family if you leave the host country within [30] days / return costs will not be covered], subject to local law."
+      },
+      {
+       "id": "i24",
+       "type": "para",
+       "text": "[Only where lawful for the home location and approved by Legal: If you resign within [X] months after repatriation, you will repay a pro-rated share of [listed costs].]",
+       "detail": "Delete this paragraph for California-based assignees (AB 692), for Washington-based assignees where the trigger is joining another employer (from 30 June 2027), and wherever local law bars repayment on exit."
+      },
+      {
+       "id": "i25",
+       "type": "para",
+       "text": "This letter is governed by the law of [Home Jurisdiction], except where host-country law applies mandatorily; your mandatory rights under host law are not reduced. Your employment remains [at will / subject to your employment agreement]. Please sign and return this letter by [Date]."
+      },
+      {
+       "id": "i26",
+       "type": "field",
+       "text": "Signatures: assignee and date; Mobility and date; home manager; host entity representative (where a host contract applies)"
+      }
+     ]
+    },
+    {
+     "title": "Pre-departure checklist",
+     "intro": "Mobility completes this list before the assignee travels to start work. The 'three green lights' (work authorization, export clearance, signed letter) are mandatory; the rest must be done before the first host pay period.",
+     "items": [
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "Work and residence permits approved and copies held by Mobility; arrival registration deadlines calendared (e.g., India FRRO within 14 days for stays of 180+ days).",
+       "owner": "Immigration"
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Export clearance recorded, Technology Control Plan briefing completed, and the device configured with data restricted under host rules.",
+       "owner": "Trade Compliance"
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "Certificate of coverage issued, or host social insurance enrollment arranged.",
+       "owner": "Payroll"
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "Shadow or host payroll live for the first host pay period, with hypothetical tax configured.",
+       "owner": "Payroll"
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "Tax briefing held with the tax vendor before departure.",
+       "owner": "Mobility"
+      },
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "Travel-security and host-conduct briefings completed, plus the device and counter-espionage briefing for China.",
+       "owner": "Security"
+      },
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Medical cover, evacuation cover and any required vaccinations confirmed for the assignee and family.",
+       "owner": "Mobility"
+      },
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "Housing, schooling and shipment booked; home-country lease, car and property arrangements discussed.",
+       "owner": "Mobility"
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Signed letter and any host contract filed; host day counts and permit-expiry alerts (120 days) set in the tracking system.",
+       "owner": "Mobility"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Issue the letter only after the cost estimate is approved and Tax has confirmed the equalization terms; the letter commits the company to the spend.",
+    "Use the bracketed variants for local structures. Some permits need a host contract or secondment agreement (e.g., China for most long-term assignees); it should mirror, not add to, the package.",
+    "State that allowances end with the assignment and are excluded from severance where lawful; otherwise they may be claimed in notice or final-pay calculations.",
+    "Remove repayment paragraphs for California and anywhere else repayment on exit is barred; use completion-based allowances instead.",
+    "Keep the export-control paragraph specific about what the assignee may not access or support. Trade Compliance writes it, not Mobility.",
+    "Confirm the return role 6 months before the end date; assignees without a clear role on return are the most likely to leave within a year."
+   ],
+   "countryNotes": {
+    "us": "The US has totalization agreements with Canada and Germany (a certificate of coverage keeps US social security for up to 5 years) but none with India, China, Taiwan or Vietnam; check Israel (verify). US citizens and green-card holders are taxed on worldwide income, so equalization must net out US tax.",
+    "us-ca": "Assignment repayment and 'quit fee' terms are barred in agreements from 1 Jan 2026 (AB 692), and non-California law or forum clauses are void for CA-based employees without individual counsel (LC 925). California may keep taxing equity earned while the employee worked there.",
+    "us-co": "Colorado residents are taxed on worldwide income, so confirm domicile and withholding for Colorado-based assignees. FAMLI and UI coverage follow the location of work; confirm coverage for long assignments.",
+    "us-nc": "No NC-specific rule for outbound assignments. Inbound assignees on NC payroll need the written wage notice (G.S. 95-25.13) and NC withholding on NC-source pay.",
+    "us-tx": "No Texas-specific rule; no state income tax simplifies equalization. Inbound transferees from California keep California-source equity income.",
+    "us-wa": "WA PFML, WA Cares and UI continue only while work stays localized in WA, so confirm L&I extraterritorial coverage and buy host cover. From 30 June 2027, assignment-cost repayment triggered by joining a competitor is void.",
+    "ca": "Use the Canada-US agreement's certificate of coverage for US assignees, and intra-company transfer or CUSMA work permits for inbound staff. Spousal open work permits now require the principal in a TEER 0/1 (or listed TEER 2/3) role with 16+ months left on the permit.",
+    "de": "Inbound assignees need a residence title (ICT card for transfers over 90 days, Blue Card or skilled-worker permit) and a certificate of coverage (US-Germany, up to 5 years) or A1. German employees sent abroad for more than 4 consecutive weeks must get written details of destination, duration, currency and return (§2(2) NachwG).",
+    "il": "Inbound assignees need a B-1 expert permit with a salary of at least NIS 27,132 a month. Check NII and US social security double coverage (no totalization agreement, verify), keep pension and keren continuity for outbound Israelis, and track Section 102 trustee holdings through any change in tax residence.",
+    "in": "Inbound assignees need an Employment visa (generally salary over USD 25,000 a year) and FRRO registration within 14 days for stays of 180+ days. With no India-US social security agreement, international workers contribute to EPF on full salary from day one (subject to the pending appeal of the Karnataka High Court ruling).",
+    "tw": "Inbound assignees need a WDA work permit or Employment Gold Card plus an ARC, and enrollment in Labor Insurance and NHI where required. Check PE and 183-day tax exposure, and the 50% exemption on salary above NT$3M for qualifying foreign professionals.",
+    "cn": "Inbound assignees need a work permit, Z visa and residence permit, and foreign employees must join PRC social insurance (no US-China totalization agreement). Brief on EAR 744.6 US-person limits and PIPL separate consent for HR data transfers; expatriate allowance tax exemptions expire 31 Dec 2027 unless extended.",
+    "vn": "Inbound assignees need a work permit (unless exempt, e.g., under 90 days a year) and a temporary residence card; intra-company transferees are outside Vietnamese SI. Tax residents (183+ days) pay PIT on worldwide income at up to 35%, and releasing controlled technology follows EAR Country Group D:1 rules."
+   },
+   "processes": [
+    "MV-02"
+   ],
+   "policies": [
+    "POL-40",
+    "POL-19",
+    "POL-18",
+    "POL-41",
+    "POL-31",
+    "POL-37",
+    "POL-46",
+    "POL-27"
+   ]
+  },
+  {
+   "id": "T-TRANSFER",
+   "name": "Internal transfer request and manager handoff",
+   "category": "Move",
+   "format": "form",
+   "purpose": "Records an internal move from application to effective date: eligibility, both managers' sign-off, the release date, any pay or level change, and the knowledge transfer and access changes the move needs. It keeps internal mobility fast and fair while making sure nobody starts a new role before export and immigration checks are done.",
+   "audience": "Employees (applicants), releasing and receiving managers, HRBPs, People Ops, Trade Compliance, Immigration and IT.",
+   "when": "When an employee applies for an internal posting or a manager proposes a reassignment within the same entity and country; completed before the move is confirmed to the employee. Cross-border moves use MV-02 or MV-03.",
+   "owner": "HRBP (process); receiving manager (selection); People Ops (transaction)",
+   "sections": [
+    {
+     "title": "Employee application",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Employee name, ID, current job, level, team, manager and work location"
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Target role: requisition ID, title, level, team, receiving manager and location"
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Move type",
+       "detail": "Employee-applied internal posting / manager-initiated reassignment / reorganization move. A manager-initiated move needs a documented business reason."
+      },
+      {
+       "id": "i4",
+       "type": "question",
+       "text": "Why do you want this role, and what will you bring to it?",
+       "owner": "Employee"
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Date the employee told the current manager",
+       "detail": "Policy: tell the current manager when invited to interview. Managers may not block an application or treat the employee differently for applying."
+      }
+     ]
+    },
+    {
+     "title": "Eligibility",
+     "items": [
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Time in current role (guideline: 12 months)",
+       "detail": "The HRBP can waive it for reorganizations, accommodations or when the current role is ending."
+      },
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Performance standing",
+       "detail": "Rated at least 'meets' in the last cycle and not on a PIP or final warning. Protected leave, sick leave (Taiwan: up to 10 days a year), reserve duty or a pending complaint can never make an employee ineligible."
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Selection outcome",
+       "detail": "Structured interview completed (TA-03) and the receiving manager's scorecard on file.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i9",
+       "type": "check",
+       "text": "Colorado: the opening was announced to Colorado employees with range, benefits and deadline, and the post-selection notice goes out within 30 days (unless an exception applies). Washington: the range was provided on request.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "Germany: works council consent obtained (§§95(3), 99 BetrVG) where a council exists and the move lasts more than 1 month or significantly changes working conditions.",
+       "owner": "HRBP"
+      }
+     ]
+    },
+    {
+     "title": "Manager sign-off and release period",
+     "items": [
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Receiving manager: approval, proposed start date and signature",
+       "owner": "Manager"
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Releasing manager: agreed release date (default 30 days, maximum 60 days) and signature",
+       "detail": "The releasing manager can negotiate timing but cannot veto an approved move.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Reason for any release longer than 30 days",
+       "detail": "E.g., a tapeout or customer commitment. More than 60 days needs agreement from the Dept Head and HRBP."
+      },
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Backfill plan for the releasing team (requisition ID or redistribution of work)"
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "HRBP approval and date",
+       "owner": "HRBP"
+      }
+     ]
+    },
+    {
+     "title": "Pay, level and terms",
+     "items": [
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Current level, base and compa-ratio; new level, range and proposed base",
+       "detail": "Lateral moves normally keep pay; promotions follow T-PROMO-CASE; a move to a lower level is voluntary only and documented as the employee's request.",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "Changes to bonus plan, sales plan, on-call or shift pay, and allowances"
+      },
+      {
+       "id": "i18",
+       "type": "field",
+       "text": "Exempt status in the new role",
+       "detail": "Recheck duties and state salary floors; a move to non-exempt status starts timekeeping on the effective date."
+      },
+      {
+       "id": "i19",
+       "type": "field",
+       "text": "Change of location or work arrangement? (If yes, also complete T-WORK-LOCATION)"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "Transfer letter or contract amendment prepared in the local language where required; any reduction in pay or conditions has written consent, or notice where the law allows it.",
+       "owner": "People Ops"
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "Pay equity: proposed pay checked against peers in the new job, level and location.",
+       "owner": "Total Rewards"
+      }
+     ]
+    },
+    {
+     "title": "Knowledge transfer",
+     "items": [
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "Knowledge-transfer plan: responsibilities, who takes each over, and documentation to finish",
+       "detail": "Design databases, verification environments, scripts, lab setups, customer contacts, open bugs and in-flight tapeout items."
+      },
+      {
+       "id": "i23",
+       "type": "field",
+       "text": "Handover meetings scheduled (dates and attendees)"
+      },
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "In-flight approvals, delegations of authority and on-call rotations reassigned.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "Releasing manager confirms the handover is complete by the release date.",
+       "owner": "Manager"
+      }
+     ]
+    },
+    {
+     "title": "Systems, access and compliance checks",
+     "items": [
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "Trade Compliance re-screen: the new project's controlled technology and source code, licence coverage for foreign-person employees and a new TCP briefing. No access until clearance is recorded.",
+       "owner": "Trade Compliance"
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "Immigration review: a new LCA and amended H-1B petition (with a new I-129 Part 6 attestation) for material changes in duties, worksite or pay; a Canadian, Taiwanese, Chinese or Vietnamese permit update or notification. The move waits as counsel advises.",
+       "owner": "Immigration"
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Darwinbox updated (job, manager, cost center, location); the change triggers LMS reassignment and an access-change ticket.",
+       "owner": "People Ops"
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "Prior-role access removed within 5 business days of the effective date, including design repositories, lab access and customer portals.",
+       "owner": "IT"
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "Insider-list and blackout status reviewed for the new role (EQ-04).",
+       "owner": "Stock Admin"
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "Conflict-of-interest review if the employee will now report to, or manage, a relative or partner (POL-07).",
+       "owner": "HRBP"
+      }
+     ]
+    },
+    {
+     "title": "Communication",
+     "items": [
+      {
+       "id": "i32",
+       "type": "say",
+       "text": "You've been selected for [Role] on [Team], starting [Date]. [Releasing Manager] and [Receiving Manager] have agreed a handover plan, and your transfer letter will be in Darwinbox today.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i33",
+       "type": "field",
+       "text": "Communication order and dates",
+       "detail": "Employee first, then the releasing team, then the receiving team; announce only after the letter is signed."
+      },
+      {
+       "id": "i34",
+       "type": "field",
+       "text": "Unsuccessful internal candidates told the outcome (date) and offered feedback",
+       "detail": "Aim for 2 weeks from the decision; internal candidates who hear nothing are more likely to look outside."
+      },
+      {
+       "id": "i35",
+       "type": "note",
+       "text": "The receiving manager holds a 30-day check-in, and the HRBP checks at 90 days that the move is working and goals have been reset (PD-01)."
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Nobody should be worse off for applying internally: no blocking, no retaliation and a clear answer with feedback.",
+    "Set the release date at selection. Open-ended releases ('after tapeout') stall internal mobility and push people toward external offers.",
+    "Treat the move as a job change for compliance: export re-screen, immigration, exempt status and access clean-up all happen before the start date.",
+    "Document the business reason for any manager-initiated move; after Muldrow, an unwanted lateral transfer can be an adverse action in the US.",
+    "Where local law treats a transfer as a contract change (China, Taiwan, Vietnam, Germany, Israel, Canada), get written consent or follow the statutory route; the global policy alone isn't enough."
+   ],
+   "countryNotes": {
+    "us": "After Muldrow v. St. Louis, an involuntary transfer can be actionable on 'some harm', so document the business reason. A change in duties, worksite or pay may need a new LCA and amended H-1B petition before the move.",
+    "us-ca": "Give the pay scale for the new role on request (LC 432.3), check the exempt floor ($70,304 in 2026) and computer-professional rate, and assign supervisor harassment training within 6 months if the move adds supervisory duties.",
+    "us-co": "An internal opening is a job opportunity that needs same-day notice to Colorado employees with range, benefits and deadline, plus a post-selection notice within 30 days (C.R.S. 8-5-201). A new non-compete or non-solicit needs separate notice at least 14 days before it takes effect.",
+    "us-nc": "Any reduction in pay, differentials or commission eligibility needs written notice at least one pay period before it takes effect (G.S. 95-25.13(3)). A move into an NC role triggers NC withholding but no new E-Verify case.",
+    "us-tx": "No Texas notice for job changes; recheck FLSA status and whether the new role warrants a Texas non-solicit. A move from a California role to a Texas role ends California wage-hour coverage for the Texas work.",
+    "us-wa": "Transfer candidates can request the role's range (RCW 49.58.110). Moving into exempt status needs $80,168.40 (2026), and moving into Seattle adds its minimum wage, PSST and payroll-tax rules.",
+    "ca": "A unilateral change to role, pay, reporting line or location can be constructive dismissal (Potter v. NB Legal Aid), so get written consent with consideration or give working notice of the change. Seniority and service continue across the move.",
+    "de": "A transfer of more than 1 month or with significantly changed conditions needs works council consent at more than 20 employees (§§95(3), 99 BetrVG), and the right to direct (§106 GewO) reaches only what the contract allows; otherwise use consent or an Änderungskündigung. Blue Card holders changing jobs in their first 12 months must notify the foreigners' office.",
+    "il": "A transfer that materially worsens location, role or pay can let the employee resign and still receive severance (Severance Pay Law s.11(a)); notify changes in writing. Changing a reservist's role during duty or the protection window needs a permit, and a returning mother's role can't be cut for 60 days.",
+    "in": "Issue a revised appointment letter with the new designation and wages, and reassess worker or non-worker status. A transfer used as POSH interim relief follows the Internal Committee's recommendation.",
+    "tw": "A transfer must meet LSA Art. 10-1: genuine business need, no worse wages or terms, suited to the employee's abilities, help if the location changes, and regard for family life. Up to 10 days of sick leave a year can't count against a transfer decision.",
+    "cn": "A change of role, location or pay needs a written amendment (LCL Art. 35) unless the contract reasonably permits it and the change is fair; a Shanghai-Shenzhen move needs consent and changes the social insurance and housing fund city. A unilateral cut lets the employee resign with severance (Art. 38).",
+    "vn": "A change of job, workplace or salary needs a written contract annex (LC Art. 22); a temporary transfer without consent is limited to 60 working days a year with 3 working days' notice (Art. 29). Foreign employees may need a work-permit update for a new position or location."
+   },
+   "processes": [
+    "MV-01"
+   ],
+   "policies": [
+    "POL-43",
+    "POL-18",
+    "POL-19",
+    "POL-23",
+    "POL-24",
+    "POL-07"
+   ]
+  },
+  {
+   "id": "T-LOA-REQUEST",
+   "name": "Leave of absence request and designation checklist",
+   "category": "Leave",
+   "format": "form",
+   "purpose": "Captures an employee's leave request once and walks the leave team through eligibility, certification, designation, pay and benefits across every regime that applies at the employee's work location. It protects the employee's job and pay, and gives the company evidence that every notice went out on time.",
+   "audience": "Employees (request), managers (referral only), the Leave & Accommodation team and US leave vendor, Payroll, Benefits, Stock Admin and HRBPs.",
+   "when": "As soon as a leave need is known: 30 days ahead when foreseeable, otherwise as soon as practicable. Managers route any possible qualifying reason to intake within 2 business days; eligibility and rights notices go out within 5 business days.",
+   "owner": "Benefits - Leave & Accommodation team (process); US leave vendor (administration); Payroll (pay coordination); HRBP (job protection)",
+   "sections": [
+    {
+     "title": "Employee request",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Employee name, ID, entity, work location (state, province or city), manager and hire date",
+       "detail": "The work location, not HQ, decides which laws apply. For remote US employees, FMLA eligibility counts employees at the worksite they report to."
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Reason for leave",
+       "detail": "Own health condition; pregnancy and childbirth; bonding (birth, adoption, foster placement); family member's health condition (relationship); military (service, exigency, caregiver, reserve duty); work injury; bereavement or reproductive loss; victim of violence; personal or unpaid."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Dates and pattern: start, expected end, and continuous / intermittent (frequency and duration) / reduced schedule"
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Expected due date or placement date (pregnancy, adoption)",
+       "detail": "Sets the Mutterschutz and maternity-leave clocks and prenatal leave in Germany, Taiwan, China, India, Israel and Vietnam."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Contact preferences during leave (channel, frequency, who)",
+       "detail": "No work requests during leave."
+      },
+      {
+       "id": "i6",
+       "type": "note",
+       "text": "Employees don't have to name a law or give a diagnosis. Managers must not ask about the condition; they route the request to intake within 2 business days and plan coverage."
+      }
+     ]
+    },
+    {
+     "title": "Leave type and certification",
+     "items": [
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Certification needed? (Y/N) and type",
+       "detail": "Provider certification for own or family serious health conditions and long illness; proof of birth or placement; military orders. None for obvious short needs. California CFRA: never the diagnosis. Ontario: no medical note for the 3 ESA sick days. BC: no note for absences of up to 5 consecutive days for the first two absences a year."
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Date certification requested and date due",
+       "detail": "US FMLA/CFRA: at least 15 calendar days to return it, longer where the employee is trying in good faith."
+      },
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Date received, and whether it is complete and sufficient",
+       "detail": "If it isn't, tell the employee in writing what is missing and allow 7 calendar days to fix it (FMLA)."
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "Certification stored only in the vendor system or the restricted Darwinbox folder; managers see dates and status only.",
+       "owner": "Benefits"
+      }
+     ]
+    },
+    {
+     "title": "HR eligibility determination by jurisdiction",
+     "intro": "Test every regime that applies at the work location; they often run concurrently, but not always. For each one, record the entitlement available, the amount already used and the job-protection end date.",
+     "items": [
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "US federal: FMLA (50 employees within 75 miles, 12 months, 1,250 hours; 12 weeks, or 26 for a military caregiver), PWFA accommodation and USERRA"
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "California: CFRA (5+ employees, 12 months, 1,250 hours; 12 weeks); PDL (up to 4 months per pregnancy, no service requirement, not concurrent with CFRA); PFL/SDI wage replacement (not job protection); bereavement and reproductive-loss leave (5 days each)"
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Colorado: FAMLI (12 weeks paid, +4 for pregnancy complications, +12 NICU weeks from 2026; job protection after 180 days' employment; PTO can't be required first) and HFWA sick leave"
+      },
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Washington: PFML (12 weeks family or medical, 16 combined, 18 with pregnancy incapacity; job protection at 25+ employees in 2026 after 180 days) and WLAD pregnancy-disability leave"
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "North Carolina and Texas: no state family or medical leave, so FMLA, ADA and PWFA govern; plus state jury, military and (NC) school-involvement leave"
+      },
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Canada: ON or BC ESA leave and length (pregnancy 17 weeks; parental up to 61-63 weeks; ON long-term illness 27 weeks; BC serious illness or injury 27 weeks; family caregiver, critical illness, domestic violence) and the EI benefit type"
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "India: maternity benefit (26 weeks for the first two children, up to 8 before delivery; 12 weeks from the third child, for adoption or a commissioning mother; needs 80 days worked in the prior 12 months), or ESI where covered"
+      },
+      {
+       "id": "i18",
+       "type": "field",
+       "text": "China: maternity leave by city (98 days nationally; Shanghai 158; Guangdong/Shenzhen 178), paternity and childcare leave, and the medical treatment period by service (3-24 months)"
+      },
+      {
+       "id": "i19",
+       "type": "field",
+       "text": "Taiwan: maternity 8 weeks (full pay after 6 months' service), prenatal and paternity 7 days each, unpaid parental leave up to 2 years (EI allowance up to 80% for 6 months), family care 7 days, sick leave 30 days at half pay"
+      },
+      {
+       "id": "i20",
+       "type": "field",
+       "text": "Germany: sickness (6 weeks' full pay per illness, then Krankengeld), Mutterschutz (6 weeks before and 8 after birth), Elternzeit (up to 3 years; requested in text form 7 weeks ahead), Pflegezeit and Familienpflegezeit"
+      },
+      {
+       "id": "i21",
+       "type": "field",
+       "text": "Israel: maternity 26 weeks (15 with under 12 months' seniority; NII pays up to 15 weeks), reserve duty (employer pays, NII reimburses via Form 3010), sick pay and Home Front Command absences"
+      },
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "Vietnam: maternity 6 months (7 for a second child from 1 Jul 2026), paternity 5-14 working days, SI sickness benefit at 75%; unpaid leave by agreement only"
+      },
+      {
+       "id": "i23",
+       "type": "field",
+       "text": "Company leave on top of statute (paid parental, extended medical, personal leave) and whether it runs concurrently"
+      }
+     ]
+    },
+    {
+     "title": "Notices and designation",
+     "items": [
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "Eligibility and rights-and-responsibilities notice sent within 5 business days of the request, or of learning of a qualifying reason (FMLA/CFRA); WA PFML rights notice within 5 business days; Colorado FAMLI notice (verify timing).",
+       "owner": "Vendor",
+       "when": "Within 5 business days"
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "Designation notice sent within 5 business days of complete information, stating each regime, the amount counted, any intermittent schedule and any fitness-for-duty requirement for return.",
+       "owner": "Vendor",
+       "when": "Within 5 business days of complete certification"
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "Concurrency mapped: FMLA runs with CFRA; PDL does not run with CFRA; FMLA runs with FAMLI or WA PFML only if designated with timely notice.",
+       "owner": "Vendor"
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "Non-US entitlements confirmed to the employee in writing through Darwinbox (dates, pay, job protection), including confirmation of Elternzeit periods in Germany.",
+       "owner": "Benefits"
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Any denial or ineligibility notice gives the reason and routes the case to accommodation review (LV-02) before closure.",
+       "owner": "Benefits"
+      }
+     ]
+    },
+    {
+     "title": "Pay coordination with statutory benefits",
+     "items": [
+      {
+       "id": "i29",
+       "type": "field",
+       "text": "Pay status for each period: full pay / company top-up / statutory benefit only / unpaid"
+      },
+      {
+       "id": "i30",
+       "type": "field",
+       "text": "Statutory benefit coordination",
+       "detail": "CA SDI/PFL (vacation can't be required first); CO FAMLI and WA PFML benefits paid by the state; Canada EI, topped up only through a registered SUB plan, with the ROE filed within 5 calendar days; India maternity benefit paid by the employer, or ESI; Germany Mutterschaftsgeld top-up (reimbursed via U2); Israel NII maternity allowance; Taiwan maternity pay and EI parental allowance; China maternity allowance topped up to salary under local rules; Vietnam SI maternity and sickness claims filed by the employer.",
+       "owner": "Payroll"
+      },
+      {
+       "id": "i31",
+       "type": "field",
+       "text": "Company top-up amount and duration, and the offset rule that prevents overpayment",
+       "owner": "Payroll"
+      },
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "Leave pay changes set up before the first affected payroll and reviewed by a second payroll analyst.",
+       "owner": "Payroll"
+      }
+     ]
+    },
+    {
+     "title": "Benefits and equity during leave",
+     "items": [
+      {
+       "id": "i33",
+       "type": "field",
+       "text": "Health benefits and premium collection",
+       "detail": "Same terms during FMLA, CFRA, PDL, FAMLI and WA PFML, with direct billing or arrears for unpaid periods. Canada continues benefit contributions during ESA leave unless the employee opts out.",
+       "owner": "Benefits"
+      },
+      {
+       "id": "i34",
+       "type": "field",
+       "text": "Retirement, life and disability coverage and contributions",
+       "detail": "Israel: pension and keren contributions continue during paid maternity leave if the employee pays her share.",
+       "owner": "Benefits"
+      },
+      {
+       "id": "i35",
+       "type": "field",
+       "text": "Equity vesting",
+       "detail": "Vesting continues during statutory and company-paid leave; any tolling for long personal leave follows the plan and local counsel, and never applies to Canadian ESA leave. Check blackout windows and 10b5-1 plans.",
+       "owner": "Stock Admin"
+      },
+      {
+       "id": "i36",
+       "type": "field",
+       "text": "Bonus and performance-cycle treatment",
+       "detail": "Pro-rate on a documented basis only where lawful; protected leave never lowers a rating (Taiwan protects up to 10 sick days a year; Israel requires reserve neutrality)."
+      }
+     ]
+    },
+    {
+     "title": "Return date and job protection",
+     "items": [
+      {
+       "id": "i37",
+       "type": "field",
+       "text": "Expected return date and job-protection end date for each regime"
+      },
+      {
+       "id": "i38",
+       "type": "field",
+       "text": "Protected-period flags set in Darwinbox",
+       "detail": "China (pregnancy, maternity, nursing, medical treatment period); Taiwan (maternity leave, occupational injury treatment); Germany (pregnancy to 4 months after birth, and from the Elternzeit request); Israel (maternity leave plus 60 days, reserve protection window); Vietnam (pregnancy, maternity leave, child under 12 months).",
+       "owner": "People Ops"
+      },
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "Any termination, demotion, PIP or RIF selection of an employee on, or recently back from, protected leave goes to Legal before action.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i40",
+       "type": "check",
+       "text": "Extension requests and exhaustion reviewed 2 weeks before the scheduled end; extra leave is considered as an accommodation before any action.",
+       "owner": "Benefits"
+      },
+      {
+       "id": "i41",
+       "type": "check",
+       "text": "Return confirmed 10 business days ahead and the case handed to LV-03 with a T-RTW-PLAN.",
+       "owner": "Benefits"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Keep one front door: the employee asks once and the leave team works out every regime. Never make employees name the law or pick the program.",
+    "Run notices to the clock. Late FMLA or CFRA designation can stop the company counting the leave against the entitlement.",
+    "Map concurrency carefully: PDL and CFRA stack in California, and state paid-leave programs replace wages without always protecting the job.",
+    "Coordinate pay with statutory benefits before the first affected payroll; overpayments are hard to recover and in some countries can't be deducted at all.",
+    "Keep medical detail out of managers' hands and out of the personnel file.",
+    "Never close a case at exhaustion without an accommodation review; finite extra leave may be a reasonable accommodation."
+   ],
+   "countryNotes": {
+    "us": "Send FMLA eligibility and rights notices within 5 business days and the designation notice within 5 business days of sufficient information; allow at least 15 calendar days for certification. Continue group health on the same terms; USERRA adds reemployment rights and up to 24 months of continuation coverage.",
+    "us-ca": "CFRA and PDL apply at 5+ employees, and PDL (up to 4 months) doesn't run with CFRA, so a birth parent can take both. PFL/SDI replaces 70-90% of wages but is not job protection, and vacation can't be required before PFL (AB 2123).",
+    "us-co": "FAMLI gives 12 weeks' paid leave (+4 for pregnancy complications, +12 NICU weeks from 2026) with job protection after 180 days, and PTO can't be required first. Layer HFWA sick leave, FMLA (concurrent only with notice) and the Family Care Act.",
+    "us-nc": "No state FMLA, PFML or paid sick leave, and local leave mandates are preempted. Track school-involvement leave (4 hours a year with 48 hours' written request), jury duty, domestic-violence protective-order time and National Guard state duty.",
+    "us-tx": "No state family, medical, pregnancy or paid sick leave, and city sick-leave ordinances are preempted, so FMLA, ADA and PWFA govern. State protections cover jury service, voting time, Texas military forces duty and evacuation orders.",
+    "us-wa": "Send the PFML rights notice within 5 business days of learning of a qualifying event; job protection covers employers with 25+ employees in 2026 after 180 days, and FMLA counts against PFML only with notice within 5 business days. Continue health coverage and track WLAD pregnancy-disability leave.",
+    "ca": "Pregnancy leave is 17 weeks and parental leave up to 61-63 weeks under the ON and BC ESAs, with income from EI; top up only through a registered SUB plan and file the ROE within 5 calendar days. Seniority, service and benefit contributions continue during ESA leave.",
+    "de": "Mutterschutz runs 6 weeks before and 8 after birth, with a dismissal ban until 4 months after birth; Elternzeit (up to 3 years) is requested in text form 7 weeks ahead, with part-time rights at more than 15 employees. Pay 6 weeks' sick pay per illness and reclaim the Mutterschaftsgeld top-up via U2.",
+    "il": "Maternity leave is 26 weeks (15 with under 12 months' seniority), up to 15 of them paid by NII, with no dismissal or role cut during leave and for 60 days after. Reserve duty is paid by the employer and reimbursed by NII (Form 3010), with a 30- or 60-day post-duty protection window.",
+    "in": "Maternity benefit is 26 weeks for the first two children (up to 8 before delivery) after 80 days worked in the prior 12 months, paid by the employer unless ESI applies, and dismissal during maternity leave is prohibited. There is no statutory private-sector paternity leave, so apply company policy.",
+    "tw": "Maternity leave is 8 weeks (full pay after 6 months' service), prenatal and paternity leave 7 days each, and unpaid parental leave up to 2 years with an EI allowance; from 2026 up to 30 days can be taken in single days on 5 days' notice. Employers can't refuse or penalize these leaves.",
+    "cn": "Maternity leave is 98 days nationally plus local extensions (Shanghai 158 days; Guangdong 178), with paternity and annual childcare leave set by the city; the maternity allowance comes from social insurance, with an employer top-up where it is below salary. Terminations are barred during pregnancy, maternity leave, nursing and the medical treatment period.",
+    "vn": "Maternity leave is 6 months (7 for a second child from 1 Jul 2026) and paternity leave 5-14 working days, both paid by SI at 100% of the average SI salary, and the employer files the claims. Termination is barred during approved leave, pregnancy, maternity leave and while the employee raises a child under 12 months."
+   },
+   "processes": [
+    "LV-01"
+   ],
+   "policies": [
+    "POL-35",
+    "POL-34",
+    "POL-36",
+    "POL-37",
+    "POL-33",
+    "POL-27",
+    "POL-46"
+   ]
+  },
+  {
+   "id": "T-RTW-PLAN",
+   "name": "Return-to-work plan",
+   "category": "Leave",
+   "format": "form",
+   "purpose": "Plans an employee's return from medical, parental, military or injury leave so they come back to the same or an equivalent role with pay, access and support working on day one. It records reinstatement, any fitness-for-duty step, the phased return or accommodation, and how the leave is treated in the performance and pay cycle.",
+   "audience": "Leave & Accommodation case managers, managers, HRBPs, People Ops, Payroll, EHS (safety-sensitive roles) and the returning employee.",
+   "when": "Started 10 business days before the confirmed return date (earlier after 6+ months away or when restrictions are expected); reviewed at the 30-day check-in and at the end of any phased return.",
+   "owner": "Benefits - Leave & Accommodation team (process); HRBP (reinstatement); Manager (reboarding)",
+   "sections": [
+    {
+     "title": "Return details",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Employee name, ID, role, level, manager and work location"
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Leave type and dates: start, planned return, actual return",
+       "detail": "Medical / pregnancy and parental / military or reserve duty / work injury / other."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Return date confirmed with the employee (date and how)",
+       "detail": "Confirm 10 business days ahead and check for any extension request first.",
+       "owner": "Benefits"
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Return pattern",
+       "detail": "Full return / phased return (schedule and end date) / modified duties / remote or hybrid for a set period / part-time (statutory or agreed)."
+      },
+      {
+       "id": "i5",
+       "type": "note",
+       "text": "Keep contact during leave to agreed return planning only. Don't ask about the diagnosis; ask what the employee needs to come back well."
+      }
+     ]
+    },
+    {
+     "title": "Fitness for duty",
+     "items": [
+      {
+       "id": "i6",
+       "type": "question",
+       "text": "Did the designation notice, or a uniform written policy for this job, require a fitness-for-duty certificate?",
+       "detail": "If not, don't ask for one. US FMLA: only if announced in the designation notice, and limited to the condition that caused the leave."
+      },
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Certificate received (date) and restrictions listed",
+       "detail": "Record only the functional restrictions and their duration; the certificate itself goes in the restricted medical file.",
+       "owner": "Benefits"
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "EHS review for safety-sensitive work",
+       "detail": "Lab, chemical, laser, cleanroom or driving duties; pregnancy and post-partum hazard assessment (Germany MuSchG, Taiwan maternal health rules, China and Vietnam limits on overtime and night work).",
+       "owner": "EHS"
+      },
+      {
+       "id": "i9",
+       "type": "note",
+       "text": "Where the law limits the medical information an employer may ask for (Ontario, BC, PIPL, GDPR, Taiwan PDPA), ask only about fitness to return and the accommodations needed."
+      }
+     ]
+    },
+    {
+     "title": "Accommodations and phased return",
+     "items": [
+      {
+       "id": "i10",
+       "type": "field",
+       "text": "Accommodations needed on return (open or link an LV-02 case and T-ACCOMMODATION)"
+      },
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Phased-return schedule",
+       "detail": "Hours or days week by week, duties included and excluded, and the end date. Germany: a graduated return (Hamburger Modell) runs while the employee is still on sick status."
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Lactation: break schedule, private non-bathroom space and duration",
+       "detail": "California LC 1030-1034; Colorado up to 2 years after birth; Washington paid lactation breaks from 1 Jan 2027; nursing breaks in China, Taiwan, India, Israel and Vietnam."
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Statutory part-time or schedule requests",
+       "detail": "Germany: part-time after Elternzeit (§8 TzBfG, more than 15 employees) or bridge part-time (§9a, more than 45); reply within the statutory deadline or consent may be deemed."
+      },
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Review date for each accommodation or phased element"
+      }
+     ]
+    },
+    {
+     "title": "Reinstatement and reboarding",
+     "items": [
+      {
+       "id": "i15",
+       "type": "check",
+       "text": "Reinstatement to the same or an equivalent (US) or comparable (Canada) role confirmed: title, level, pay, grade, reporting line, location and shift. Any change is documented with its business reason and reviewed by Legal before the return.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i16",
+       "type": "check",
+       "text": "Merit increases, bonus and equity awarded to the team during the leave applied as they would have been, as agreed with Total Rewards.",
+       "owner": "Total Rewards"
+      },
+      {
+       "id": "i17",
+       "type": "check",
+       "text": "Darwinbox leave status ended from the return date; accounts, badge, lab and design-environment access restored (with an export re-screen if the project changed).",
+       "owner": "People Ops"
+      },
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "Payroll restarts salary and deductions, ends top-up or SUB payments and sets any premium-arrears recovery within policy caps.",
+       "owner": "Payroll"
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "Mandatory training that lapsed during the leave assigned with a realistic deadline.",
+       "owner": "People Ops"
+      },
+      {
+       "id": "i20",
+       "type": "field",
+       "text": "Two-week reboarding plan",
+       "detail": "Project and org changes, tool and flow updates, key decisions made during the leave, people to meet and first deliverables.",
+       "owner": "Manager"
+      }
+     ]
+    },
+    {
+     "title": "Workload re-entry and check-ins",
+     "items": [
+      {
+       "id": "i21",
+       "type": "field",
+       "text": "Workload plan for the first 30 days",
+       "detail": "Start with scoped deliverables; don't hand over the backlog that built up during the leave.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "Check-in schedule",
+       "detail": "Week 1, day 30 and the end of any phased return; monthly for 3 months after a long medical leave.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i23",
+       "type": "prompt",
+       "text": "How is the return going? What's working, and what would make the next few weeks easier?",
+       "detail": "Probe: workload, schedule, energy, care or lactation needs, and any restriction that isn't working. Record agreed changes, not medical detail.",
+       "owner": "Manager"
+      },
+      {
+       "id": "i24",
+       "type": "field",
+       "text": "Actions agreed at each check-in (owner and date)"
+      }
+     ]
+    },
+    {
+     "title": "Performance-cycle treatment",
+     "items": [
+      {
+       "id": "i25",
+       "type": "field",
+       "text": "Goals pro-rated for the time worked in the cycle; the rating reflects work performed, not the absence",
+       "owner": "Manager"
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "Leave and reserve duty don't reduce ratings, bonus or promotion eligibility beyond documented pro-ration where lawful (Taiwan protects up to 10 sick days a year; Israel requires reserve neutrality; protected leave in the US and Germany can't be penalized).",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "Employee included in the current compensation review and promotion calibration, with the leave dates noted for calibrators.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Any PIP, warning or other adverse action within 90 days of the return is reviewed by Employee Relations and Legal before it happens.",
+       "owner": "Employee Relations"
+      }
+     ]
+    },
+    {
+     "title": "Country notes and sign-off",
+     "items": [
+      {
+       "id": "i29",
+       "type": "note",
+       "text": "Germany: after more than 6 weeks' illness in 12 months (continuous or cumulative), offer BEM in writing with data-protection information and involve the works council and SBV (§167(2) SGB IX). A sickness-based dismissal without a proper BEM offer usually fails."
+      },
+      {
+       "id": "i30",
+       "type": "note",
+       "text": "Canada: the duty to accommodate to the point of undue hardship applies on return, and Ontario employers with 50+ employees must document an individual return-to-work process (AODA). Reinstate after ESA leave to the same or a comparable job with seniority intact."
+      },
+      {
+       "id": "i31",
+       "type": "note",
+       "text": "Israel: a returning mother can't be dismissed or have her role or hours cut for 60 days and gets a daily nursing hour for 4 months; a returning reservist is protected for 30 days (60 with 60+ cumulative reserve days in the year)."
+      },
+      {
+       "id": "i32",
+       "type": "note",
+       "text": "Vietnam: a returning mother gets her old job, or another at no lower pay if it no longer exists (LC Art. 140). China: 1 hour a day of nursing time until the child's first birthday, and no extended hours or night work in that period."
+      },
+      {
+       "id": "i33",
+       "type": "field",
+       "text": "Sign-off: employee, manager, case manager and HRBP (dates); leave case closed, with any continuing accommodation left open in LV-02 with its review date"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Plan the return before the return date. Coming back to no laptop, no access and no plan reads as a signal about the employee's future.",
+    "Ask for fitness-for-duty documentation only where the law and a uniform policy allow it, and share only the restrictions with the manager.",
+    "Compare the pre-leave and post-return role, pay and reporting line; any change needs a documented reason and Legal review.",
+    "Pro-rate goals and don't penalize the absence; counting protected leave against a rating or bonus is one of the most common retaliation findings.",
+    "Watch the 90 days after the return: courts and tribunals in most of our countries view adverse action in that window with suspicion.",
+    "Close the leave case, but keep any continuing accommodation open in LV-02 with its own review date."
+   ],
+   "countryNotes": {
+    "us": "FMLA requires restoration to the same or an equivalent job, and a fitness-for-duty certificate can be required only if announced in the designation notice and limited to the condition. The ADA may require finite extra leave or modified duties, and USERRA applies the escalator principle to returning service members.",
+    "us-ca": "Reinstate after CFRA or PDL to the same or a comparable position, and handle restrictions through the FEHA interactive process (failing to engage is a separate violation). Provide lactation breaks and a compliant private space (LC 1030-1034).",
+    "us-co": "FAMLI requires reinstatement to the same or an equivalent position, with benefits restored, for employees with 180+ days' employment, and retaliation for FAMLI or HFWA use is prohibited. Provide lactation accommodation for up to 2 years after birth.",
+    "us-nc": "No state reinstatement rule beyond National Guard state duty (apply within 24 hours or 14 days; reinstate within 5 days) and federal FMLA and USERRA. Refusing suitable work can suspend workers' comp, but terminating a comp claimant invites REDA retaliation claims.",
+    "us-tx": "No Texas reinstatement rules beyond jury service and Texas military forces duty; FMLA, ADA and USERRA govern. For work injuries, coordinate the return with the carrier, or under the plan's return-to-work terms for non-subscribers.",
+    "us-wa": "Restore employees returning from job-protected PFML to the same or an equivalent job (25+ employees in 2026, 180 days' service). WLAD requires reinstatement after pregnancy-disability leave, and lactation breaks are paid from 1 Jan 2027.",
+    "ca": "Reinstate after ESA leave to the same job, or a comparable one if it no longer exists, with seniority and benefits intact, and accommodate to the point of undue hardship. Ontario employers with 50+ employees need a documented AODA return-to-work process.",
+    "de": "Offer BEM in writing after more than 6 weeks' sickness in 12 months, and run any graduated return (Hamburger Modell) while the employee is still on sick status. Returners from Elternzeit resume contractual hours, with rights to part-time (§8 TzBfG) or bridge part-time (§9a).",
+    "il": "A returning mother can't be dismissed or have her role or hours cut for 60 days and gets the daily nursing hour for 4 months. Returning reservists are protected for 30 days (60 with 60+ cumulative reserve days under the 2026 order), and the absence can't count against ratings or bonuses.",
+    "in": "Provide nursing breaks after maternity leave (verify the current number and duration under the SS Code) and agree work from home where the role allows. Establishments with 50+ employees must provide a creche.",
+    "tw": "Reinstate employees returning from unpaid parental leave to their role; refusal is allowed only on narrow statutory business grounds (Gender Equality in Employment Act Art. 17, verify). Provide breastfeeding breaks, and don't let protected leave or up to 10 sick days a year affect appraisal, promotion or transfer.",
+    "cn": "Nursing protections run until the child's first birthday (1 hour a day, no extended hours or night work). When a medical treatment period ends, an Art. 40 termination is possible only if the employee can't do the original or rearranged work, so plan redeployment first.",
+    "vn": "A returning mother gets her old job, or another at no lower pay if it no longer exists (LC Art. 140), plus a 60-minute daily nursing break until the child is 12 months. She may return early after at least 4 months with a medical certificate and the employer's agreement."
+   },
+   "processes": [
+    "LV-03"
+   ],
+   "policies": [
+    "POL-35",
+    "POL-36",
+    "POL-51",
+    "POL-42",
+    "POL-46",
+    "POL-38"
+   ]
+  }
+ ]
+}

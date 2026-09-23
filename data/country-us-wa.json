@@ -1,0 +1,1002 @@
+{
+ "id": "us-wa",
+ "name": "Washington State",
+ "shortName": "Washington",
+ "region": "Americas",
+ "parent": "us",
+ "lastVerified": "2026-09",
+ "summary": "Washington is at-will and has no personal income tax on wages, but it is one of the most employee-protective US states and changes fast (39 employment laws in 2025 alone). Distinctive features: an exempt salary floor pegged to the state minimum wage ($80,168.40 in 2026 at 2.25x, reaching 2.5x by 2028) and a $59.96/hr computer-professional rate; pay range and benefits in every posting with class-action statutory damages; a state-run Paid Family & Medical Leave program whose job protection now reaches employers with 25+ employees; the WA Cares long-term-care premium; an exclusive state workers' comp fund (L&I); a 2025 mini-WARN law; and a ban on all noncompetes from 30 June 2027 that also reaches forfeiture-for-competition clauses. Seattle adds a $21.30 minimum wage, paid sick and safe time that covers exempt staff (1 hour per 30 for 250+ FTE employers), and employer payroll taxes on high earners, including a 5% Social Housing Tax on pay above $1M in which RSUs count. US-HQ tech and semiconductor employers most often go wrong by posting remote roles without WA pay ranges, classifying engineers as exempt below the WA salary floor, using national noncompete and equity-forfeiture templates, buying private workers' comp, and mishandling PFML and WA Cares withholding (including the 2026 WA Cares exemption for temporary visa holders).",
+ "ratings": {
+  "termination": 2,
+  "representation": 2,
+  "privacy": 3,
+  "payTransparency": 4,
+  "workingTime": 3,
+  "leave": 4,
+  "immigration": 2,
+  "changeVelocity": 4
+ },
+ "ratingNotes": {
+  "termination": "At-will with no statutory severance and end-of-pay-period final pay, but WLAD (8+ employees, uncapped emotional-distress damages), double damages for willful wage withholding and a 2025 mini-WARN law (50+ WA employees) add risk.",
+  "representation": "NLRA governs and tech union density is low, but WA bans captive-audience meetings (2024), pays UI to strikers from 2026 (SB 5041) and gives PERC a backstop role if NLRA coverage lapses (ESHB 2471, 2026).",
+  "privacy": "No comprehensive privacy law covers HR data (My Health My Data excludes the employment context), but all-party consent for recording, a biometric law, 30-day breach notice and a 2025 personnel-file access law with statutory damages apply.",
+  "payTransparency": "Salary range plus a description of benefits and other compensation in every posting (15+ employees), salary-history ban, EPOA covering all protected classes since July 2025, and applicant class actions (Branson, 2025); no pay data reporting.",
+  "workingTime": "Weekly overtime only, but meal and rest breaks for non-exempt staff, an exempt salary floor at 2.25x minimum wage (2.5x by 2028), a $59.96/hr computer-professional rate and Seattle's higher minimum wage.",
+  "leave": "State PFML (up to 18 weeks, 90% wage replacement, job protection phasing down to 8+ employees by 2028), state PSL, Seattle PSST at 1:30 for exempt and non-exempt staff, WLAD pregnancy-disability leave and many specialty leaves.",
+  "immigration": "Visas are federal; the state adds WLAD protection for citizenship or immigration status, anti-coercion rules (SB 5104), I-9 inspection notices from 1 Oct 2026 (HB 2105) and a WA Cares exemption for temporary visa holders.",
+  "changeVelocity": "Dozens of employment bills pass each session and take effect about 90 days after adjournment; 2026 brought a noncompete ban, a 9.9% millionaires' income tax from 2028 (repeal initiative I-645 on the Nov 2026 ballot), PFML and mini-WARN amendments and I-9 rules."
+ },
+ "keyFacts": [
+  {
+   "label": "Employment model",
+   "value": "At-will, subject to the Washington Law Against Discrimination (WLAD, RCW 49.60; 8+ employees, individual supervisor liability, uncapped compensatory damages and attorney fees, no punitive damages), wrongful discharge in violation of public policy, and wage statutes with double damages for willful withholding (RCW 49.52.070). Contractor status is tested separately for wages, UI (RCW 50.04.140) and workers' comp (RCW 51.08.195)."
+  },
+  {
+   "label": "Contracts & offer letters",
+   "value": "No written contract is required. Non-exempt hires must get the state paid sick leave notice, and written pay rate, overtime status and payday are best practice. Seattle requires a written notice of employment information at hire (Wage Theft Ordinance). Until 29 June 2027 any noncompete must be disclosed in writing no later than offer acceptance and meet RCW 49.62 thresholds; from 30 June 2027 all are void (ESHB 1155). Invention-assignment agreements need the RCW 49.44.140 written carve-out notice."
+  },
+  {
+   "label": "Probation",
+   "value": "No statutory probation; any introductory period should preserve at-will status. State PSL can be used from day 90; PFML job protection needs 180 calendar days of employment (no hours test from 2026); PFML benefits need 820 hours in the qualifying period, with any employer."
+  },
+  {
+   "label": "Notice (employer)",
+   "value": "None for individual terminations. Mini-WARN (chapter 49.45 RCW, from 27 July 2025): employers with 50+ full-time WA employees give 60 days' written notice to ESD and affected employees or their union before a business closing or a mass layoff of 50+ in 30 days. Federal WARN also applies. On written request, give a signed statement of discharge reasons within 21 days (HB 1308)."
+  },
+  {
+   "label": "Notice (employee)",
+   "value": "None required. Final pay is due at the end of the established pay period whatever the notice. From 30 June 2027 clauses requiring repayment or forfeiture because a worker takes other lawful work are void noncompetes (ESHB 1155)."
+  },
+  {
+   "label": "Statutory severance",
+   "value": "None. Mini-WARN violations cost back pay and benefits for up to 60 days, civil penalties up to $500/day and attorney fees. Severance is market practice, exchanged for a release that respects the Silenced No More Act (RCW 49.44.211)."
+  },
+  {
+   "label": "Working hours & overtime",
+   "value": "1.5x after 40 hours/week, no daily overtime (RCW 49.46.130). Non-exempt adults get a paid 10-minute rest break per 4 hours (no more than 3 hours without one) and a 30-minute meal period between the 2nd and 5th hour on shifts over 5 hours (WAC 296-126-092). Exempt salary floor: $1,541.70/week ($80,168.40/yr) in 2026, rising to 2.5x minimum wage by 2028 (WAC 296-128-545); hourly computer professionals need $59.96/hr (3.5x)."
+  },
+  {
+   "label": "Minimum wage",
+   "value": "$17.13/hr statewide in 2026, CPI-indexed every 1 January (L&I announces by 30 Sept). Seattle is $21.30 for all employer sizes in 2026. Renton, Tukwila, Burien, SeaTac (hospitality/transport), Bellingham and unincorporated King County also set higher local rates; Bellevue, Redmond and Kirkland follow the state rate (verify local rates each January)."
+  },
+  {
+   "label": "Annual leave",
+   "value": "No statutory vacation. Payout of accrued vacation at separation, caps and use-it-or-lose-it follow the written policy, so the policy must be clear. Under the Family Care Act (RCW 49.12.270) employees may use any accrued paid leave to care for covered family members."
+  },
+  {
+   "label": "Public holidays",
+   "value": "No private-sector requirement to give paid holidays or holiday premiums. Accommodate religious observance under WLAD (creed) and Title VII."
+  },
+  {
+   "label": "Sick leave",
+   "value": "State PSL (RCW 49.46.210) covers non-exempt employees: 1 hour per 40 worked, use from day 90, carryover of at least 40 hours, and verification only after 3+ days. Since 2025 it covers anyone who lives in the employee's home and depends on them for care, closure of a child's school or place of care after an emergency declaration (SB 5793), immigration proceedings (HB 1875, 27 July 2025) and hate-crime needs (SB 5101, 2026). Seattle PSST also covers exempt staff: 250+ FTE employers accrue 1 hour per 30 with 72 hours' carryover (108 with a PTO policy)."
+  },
+  {
+   "label": "Parental leave",
+   "value": "PFML (Title 50A RCW) gives up to 12 weeks of family leave (bonding, family care, military exigency) and 12 weeks of medical leave: 16 weeks combined, or 18 with pregnancy incapacity. It pays up to 90% of wages, capped at $1,647/week in 2026 and $1,727 in 2027. From 2026 job restoration applies at employers with 25+ employees (15+ in 2027, 8+ in 2028) after 180 days of employment. WLAD pregnancy-disability leave (8+ employees) covers the actual disability period; WFLA and FMLA (50+) may run concurrently."
+  },
+  {
+   "label": "Social insurance / mandatory benefits",
+   "value": "No state income tax withholding. UI is employer-paid on a taxable wage base of $78,200 (2026, verify). PFML is 1.13% of wages up to the Social Security wage base ($184,500 in 2026): employees pay 71.43% and employers with 50+ WA employees pay 28.57%. WA Cares is 0.58%, employee-paid, on all wages with no cap. Workers' comp is available only through the L&I state fund or approved self-insurance, with hours-based premiums and a partial employee deduction. Federal FICA and FUTA also apply."
+  },
+  {
+   "label": "Payroll frequency & final pay",
+   "value": "Pay at least monthly on a regular, established payday (WAC 296-126-023), with an itemized pay statement (WAC 296-126-040). On any separation, wages are due at the end of the established pay period (RCW 49.48.010); vacation payout follows policy. Willful withholding brings double damages and attorney fees, and responsible officers are personally liable (RCW 49.52.050, 49.52.070)."
+  },
+  {
+   "label": "Employee representation",
+   "value": "The NLRA governs; there are no works councils. Mandatory meetings on political or religious matters, including unionization, are banned (RCW 49.44.250, 2024). From 2026, strikers and locked-out workers can get up to 6 weeks of UI (SB 5041). ESHB 2471 (11 June 2026) gives PERC jurisdiction over private-sector workers if NLRA coverage lapses. Union density in tech is low."
+  },
+  {
+   "label": "Data privacy law",
+   "value": "No comprehensive privacy law covers employee data, and the My Health My Data Act excludes people acting in an employment context (RCW 19.373.010). Relevant rules: breach notice within 30 days, plus the AG if 500+ residents are affected (RCW 19.255.010); the biometric identifier law (RCW 19.375); all-party consent to record private conversations (RCW 9.73.030); the social-media account access ban (RCW 49.44.200); and personnel-file access within 21 days (HB 1308)."
+  },
+  {
+   "label": "Record retention",
+   "value": "Payroll and time records: 3 years (RCW 49.46.070; WAC 296-128-010). PSL accrual and use: 3 years. Personnel files: available to former employees for 3 years after separation (HB 1308). WA Cares and ESD premium records: 6 years (verify). Seattle labor-standards records: 3 years. Form I-9: federal rules."
+  },
+  {
+   "label": "Non-competes & IP",
+   "value": "Until 29 June 2027 (RCW 49.62), a noncompete is void unless annual earnings exceed $126,858.83 (employees) or $317,147.09 (contractors) in 2026, and it needs written disclosure by offer acceptance, a presumptive 18-month cap, WA law and venue, and garden-leave pay on layoff; the minimum penalty is $5,000. ESHB 1155 voids all noncompetes from 30 June 2027, retroactively, including forfeiture and clawback-for-competition terms, caps customer non-solicits at 18 months, and requires notices by 1 Oct 2027. Invention assignment is limited by RCW 49.44.140; trade secrets are protected under RCW 19.108."
+  },
+  {
+   "label": "Language requirements",
+   "value": "No general language rule for contracts or handbooks. HB 2105 notices of I-9 inspections (from 1 Oct 2026) must be in English and the five most common other languages in WA. L&I and ESD posters are available in several languages."
+  },
+  {
+   "label": "Regulator(s)",
+   "value": "L&I (wage-hour, PSL, EPOA, workers' comp, DOSH/WISHA safety); ESD (UI, PFML, WA Cares, mini-WARN); Human Rights Commission (WLAD); Attorney General (Fair Chance Act, Consumer Protection Act, MHMDA, data breach, Healthy Starts until 2027); Department of Revenue (capital gains tax, 2028 income tax); PERC; Seattle Office of Labor Standards, Office for Civil Rights and Finance (payroll taxes)."
+  }
+ ],
+ "mandatoryPolicies": [
+  {
+   "name": "EEO, anti-harassment and anti-retaliation policy",
+   "requirement": "Cover every WLAD class (8+ employees): age 40+, sex, marital status, sexual orientation including gender identity, race including hair texture and protective hairstyles, creed, color, national origin, citizenship or immigration status, veteran or military status, disability and service-animal use. For Seattle staff, add SMC 14.04 classes such as caste, political ideology and parental status. Include a complaint route that bypasses the supervisor. Harassment training is required by statute only in certain industries.",
+   "source": "RCW 49.60.180; SMC 14.04",
+   "level": "expected"
+  },
+  {
+   "name": "State paid sick leave policy and notices",
+   "requirement": "Written notice of PSL entitlement, accrual, use, verification and non-retaliation for non-exempt employees; balances at least monthly; a written policy is needed before requiring verification (only after 3+ days). Cover the 2025-26 uses: household members, school or care closure after an emergency declaration, immigration proceedings and hate-crime leave.",
+   "source": "RCW 49.46.210; WAC 296-128-600 to -770",
+   "level": "required"
+  },
+  {
+   "name": "Seattle Paid Sick and Safe Time policy",
+   "requirement": "Seattle employees (exempt and non-exempt): Tier 3 (250+ FTE worldwide) accrues 1 hour per 30 with a 72-hour carryover (108 with PTO); give the OLS notice, show the balance each payday, and keep records for 3 years.",
+   "source": "SMC 14.16",
+   "level": "required"
+  },
+  {
+   "name": "PFML notice, premium deduction and job-protection procedure",
+   "requirement": "Post the ESD poster. Send the employee-rights notice within 5 business days of learning of a qualifying event. Deduct at most 71.43% of the 1.13% premium (2026). Restore employees to the same or an equivalent job (25+ employees in 2026, 15+ in 2027, 8+ in 2028), send the 14-day job-protection expiry notice, and continue health coverage.",
+   "source": "RCW 50A; ESHB 1213 (2025); 2SHB 2345 (2026)",
+   "level": "required"
+  },
+  {
+   "name": "Job posting pay-transparency procedure",
+   "requirement": "Employers with 15+ employees must include the wage scale or salary range (or a fixed wage when only one is offered) and a general description of benefits and other compensation (bonus, equity) in every posting for a job that could be filled in WA, including remote roles. Give internal transfer or promotion ranges on request.",
+   "source": "RCW 49.58.110 (SB 5408, 2025)",
+   "level": "required"
+  },
+  {
+   "name": "Salary history ban and pay discussion rights",
+   "requirement": "Do not seek wage or salary history from applicants or prior employers, or require it to meet criteria; confirming is allowed after voluntary disclosure or once an offer with pay is negotiated. Employees may discuss and disclose wages without retaliation.",
+   "source": "RCW 49.58.100, 49.58.040",
+   "level": "required"
+  },
+  {
+   "name": "Restrictive covenant policy (noncompete, non-solicit, repayment)",
+   "requirement": "Until 29 June 2027: meet RCW 49.62 thresholds, written disclosure and WA law and venue. From 30 June 2027: no noncompetes or forfeiture-for-competition terms, customer non-solicits limited to direct relationships and 18 months, and education repayment only within the safe harbor. Send void-notices by 1 Oct 2027.",
+   "source": "RCW 49.62; ESHB 1155 (2026 c 149)",
+   "level": "required"
+  },
+  {
+   "name": "Invention assignment notice",
+   "requirement": "Agreements may not require assignment of inventions developed entirely on the employee's own time without company equipment, supplies, facilities or trade secrets, unless the invention relates to the business or results from the work; the agreement must include written notice of this limit.",
+   "source": "RCW 49.44.140",
+   "level": "required"
+  },
+  {
+   "name": "Confidentiality and non-disparagement carve-outs (Silenced No More)",
+   "requirement": "Employment, severance and settlement agreements cannot bar disclosure of conduct reasonably believed to be illegal discrimination, harassment, retaliation, wage-and-hour violations, sexual assault or against clear public policy; only the settlement amount may be kept confidential. Enforcing a void clause costs the greater of actual damages or $10,000 plus fees.",
+   "source": "RCW 49.44.211",
+   "level": "required"
+  },
+  {
+   "name": "Meal and rest break policy",
+   "requirement": "For non-exempt adults: paid 10-minute rest per 4 hours, with no more than 3 hours without one; a 30-minute meal period between the 2nd and 5th hour on shifts over 5 hours (paid if the employee is on duty). Record and pay any missed rest break as extra time worked.",
+   "source": "WAC 296-126-092",
+   "level": "required"
+  },
+  {
+   "name": "Accident Prevention Program and safety committee",
+   "requirement": "Every employer needs a written, site-specific Accident Prevention Program. Locations with 11+ employees on the same shift need an elected safety committee (smaller locations hold safety meetings), with minutes kept 1 year.",
+   "source": "WAC 296-800-140, 296-800-130",
+   "level": "required"
+  },
+  {
+   "name": "Fair chance hiring procedure",
+   "requirement": "From 1 July 2026 (15+ employees): no criminal-history inquiry until the applicant is otherwise qualified and has a conditional offer; no blanket exclusions; identify the record, allow time to respond and document a legitimate business reason before adverse action. Seattle's Fair Chance Employment Ordinance adds its own notice and response steps.",
+   "source": "RCW 49.94 (HB 1747, 2025); SMC 14.17",
+   "level": "required"
+  },
+  {
+   "name": "Drug and cannabis testing policy",
+   "requirement": "Do not reject applicants for off-duty cannabis use or pre-employment tests for non-psychoactive THC metabolites. Exceptions include positions needing a federal background investigation or security clearance, airline or aerospace roles, and safety-sensitive roles. Impairment and on-duty rules may stay.",
+   "source": "RCW 49.44.240 (SB 5123, eff. 1 Jan 2024)",
+   "level": "required"
+  },
+  {
+   "name": "Captive-audience meeting rule",
+   "requirement": "Attendance at meetings or communications whose primary purpose is the employer's view on religious or political matters, including union representation, must be voluntary; do not discipline anyone who declines.",
+   "source": "RCW 49.44.250 (SB 5778, 2024)",
+   "level": "required"
+  },
+  {
+   "name": "Pregnancy accommodation and lactation policy",
+   "requirement": "Current law (15+ employees): accommodations such as more frequent breaks, seating, lifting limits and schedule changes, without medical certification for the listed accommodations; lactation break time and a private space for 2 years after birth. From 1 Jan 2027 (SB 5217) this covers all employers, with paid lactation breaks on top of meal and rest breaks and L&I enforcement.",
+   "source": "RCW 43.10.005 (Healthy Starts Act); ESSB 5217 (2025)",
+   "level": "required"
+  },
+  {
+   "name": "Domestic violence, sexual assault, stalking and hate-crime leave",
+   "requirement": "Allow reasonable leave (paid or unpaid) and safety accommodations for victims and family members. From 1 Jan 2026 this includes hate-crime victims (SB 5101). Keep information confidential.",
+   "source": "RCW 49.76",
+   "level": "required"
+  },
+  {
+   "name": "Military family and service leave",
+   "requirement": "Up to 15 days of unpaid leave for employees who average 20+ hours/week when a spouse or registered domestic partner is notified of deployment or is on leave from deployment. Also provide reemployment rights for service members.",
+   "source": "RCW 49.77; RCW 73.16",
+   "level": "required"
+  },
+  {
+   "name": "Personnel file and discharge-statement procedure",
+   "requirement": "Within 21 days of a request, give current employees, and former employees within 3 years of separation, a free copy of the personnel file (application, evaluations, discipline, leave and accommodation, payroll and agreements). Give a signed statement of discharge reasons within 21 days of a written request. Statutory damages run from $250 to $1,000.",
+   "source": "RCW 49.12.240-.250 as amended by HB 1308 (2025)",
+   "level": "required"
+  },
+  {
+   "name": "Mass layoff and closure (mini-WARN) procedure",
+   "requirement": "For employers with 50+ full-time WA employees: 60 days' notice to ESD and affected employees or their union with the statutory content. Do not select employees on PFML except under the exceptions. Coordinate with federal WARN and OWBPA.",
+   "source": "Chapter 49.45 RCW (ESSB 5525, 2025; ESB 6106, 2026)",
+   "level": "required"
+  },
+  {
+   "name": "Wage deduction authorization",
+   "requirement": "Deduct only as required by law or as specifically agreed by the employee for the employee's benefit, and never below minimum wage. Recover overpayments only under RCW 49.48.200-.210 procedures. Unauthorized deductions risk double damages.",
+   "source": "RCW 49.48.010, 49.52.060",
+   "level": "required"
+  },
+  {
+   "name": "WA Cares withholding and exemption procedure",
+   "requirement": "Withhold 0.58% of all wages. Stop withholding only for ESD-approved exemptions (private LTC coverage, out-of-state residents, veterans with 70%+ disability, military spouses) or, from 2026, for temporary nonimmigrant visa holders unless they opt in in writing. Keep records.",
+   "source": "RCW 50B.04 (ESSB 5291, 2025)",
+   "level": "required"
+  },
+  {
+   "name": "I-9 inspection notice procedure",
+   "requirement": "From 1 Oct 2026, within 5 days of a federal Notice of Inspection, post and deliver to workers a notice (English plus the five most common other languages) naming the agency, date and records sought, with advocate contacts. Notify affected workers of the results within 5 days. Do not re-verify beyond federal law.",
+   "source": "2SHB 2105 (2026 c 240)",
+   "level": "required"
+  },
+  {
+   "name": "Data breach response plan",
+   "requirement": "Notify affected WA residents within 30 days of discovery, and the AG within 30 days if more than 500 residents are affected, with plain-language content. Personal information includes usernames and passwords, biometric data and passport numbers.",
+   "source": "RCW 19.255.010",
+   "level": "required"
+  },
+  {
+   "name": "Seattle commuter benefit",
+   "requirement": "Employers with 20+ employees worldwide must let Seattle employees who work at least 10 hours/week pay transit or vanpool costs pre-tax (or give a subsidized pass).",
+   "source": "SMC 14.30",
+   "level": "required"
+  },
+  {
+   "name": "Seattle independent contractor protections",
+   "requirement": "For contractors paid $600+ a year for work in Seattle: give a notice of rights and a pre-work written notice of terms before work starts, pay by the agreed date (or within 30 days of completion), and give an itemized payment notice with each payment.",
+   "source": "SMC 14.34",
+   "level": "required"
+  }
+ ],
+ "stages": {
+  "hiring": [
+   {
+    "req": "Pay range and benefits in every posting",
+    "detail": "Employers with 15+ employees (one or more in WA) must include the wage scale or salary range, or the fixed wage if only one is offered, plus a general description of benefits and other compensation (bonus, equity, 401(k)) in postings for roles that could be filled in WA, including remote US postings. Postings replicated by third parties without consent are exempt. Until 27 July 2027 the employer can cure within 5 business days of written notice; statutory damages are $100-$5,000 per violation, and after Branson (2025) any applicant can sue whatever their intent.",
+    "cite": "RCW 49.58.110; SB 5408 (2025)"
+   },
+   {
+    "req": "No salary history questions",
+    "detail": "Remove prior-pay fields from Greenhouse and brief agencies accordingly; asking about pay expectations is allowed. You may confirm history the applicant volunteered, or after an offer including pay has been negotiated.",
+    "cite": "RCW 49.58.100"
+   },
+   {
+    "req": "Criminal history only after a conditional offer",
+    "detail": "From 1 July 2026 (15+ employees), ask about or run criminal checks only after the applicant is otherwise qualified and has a conditional offer. No automatic exclusions. Before adverse action, identify the record, give time to respond and document the legitimate-business-reason factors. For Seattle roles also follow SMC 14.17. The AG enforces with per-applicant penalties.",
+    "cite": "RCW 49.94 (HB 1747); SMC 14.17"
+   },
+   {
+    "req": "Cannabis testing limits",
+    "detail": "Do not use THC-metabolite pre-employment tests or off-duty cannabis use to reject applicants, unless the role needs a federal background investigation or security clearance, or is aerospace or safety-sensitive. Screens may still include THC if results are withheld from decision-makers.",
+    "cite": "RCW 49.44.240"
+   },
+   {
+    "req": "Driver's license and credit-check limits",
+    "detail": "Do not require a driver's license in postings or hiring unless driving is an essential function or the employer reasonably expects it (SB 5501, 2025). Use credit reports only where substantially job-related (e.g., finance roles) and disclose the reason.",
+    "cite": "RCW 49.44 (SB 5501); RCW 19.182.020"
+   },
+   {
+    "req": "Noncompete disclosure at offer (until June 2027)",
+    "detail": "Any noncompete for a WA hire must be disclosed in writing no later than initial acceptance of the offer and meet the 2026 earnings threshold ($126,858.83). Consider stopping WA noncompetes now, since all become void on 30 June 2027.",
+    "cite": "RCW 49.62.020; ESHB 1155"
+   },
+   {
+    "req": "WLAD-compliant selection and export-control questions",
+    "detail": "Citizenship or immigration status is a WLAD class, so ask a US-person question only for export-flagged roles where a license is legally required. No pre-offer medical inquiries. Hair texture and protective hairstyles are protected as part of race.",
+    "cite": "RCW 49.60.180, 49.60.040"
+   },
+   {
+    "req": "Social media and privacy in recruiting",
+    "detail": "Do not require applicants to give social-media passwords, add the employer to contacts or change privacy settings. Recording interviews requires consent of all parties.",
+    "cite": "RCW 49.44.200; RCW 9.73.030"
+   }
+  ],
+  "onboarding": [
+   {
+    "req": "Pay information and Seattle employment notice",
+    "detail": "Give written pay rate, overtime status, pay basis and payday (best practice statewide; the state PSL notice is mandatory for non-exempt hires). Seattle employees must receive the Wage Theft Ordinance written notice of employment information at hire: employer contact, pay rate, pay basis, tip policy and payday.",
+    "cite": "SMC 14.20.025; RCW 49.46.210"
+   },
+   {
+    "req": "Register and report new hires",
+    "detail": "Report new hires to DSHS (Division of Child Support) within 20 days. Register the entity with ESD (UI, PFML, WA Cares), L&I (workers' comp account) and DOR, and with Seattle FAS if Seattle payroll-tax thresholds apply, before the first WA payroll, including for a single remote hire.",
+    "cite": "RCW 26.23.040; RCW 50, 50A, 51"
+   },
+   {
+    "req": "PSL and PSST notices",
+    "detail": "Give the state PSL notice (entitlement, accrual, use, non-retaliation) to non-exempt hires, and the Seattle PSST notice to all Seattle hires. Set the accrual rules in the HRIS: 1:40 state and 1:30 Seattle Tier 3.",
+    "cite": "RCW 49.46.210; SMC 14.16"
+   },
+   {
+    "req": "PFML and WA Cares payroll setup",
+    "detail": "Set PFML at 1.13% (employee share up to 71.43%) up to $184,500 and WA Cares at 0.58% of all wages. Flag temporary nonimmigrant visa holders as exempt from WA Cares unless they opt in in writing, and load ESD exemption approvals.",
+    "cite": "RCW 50A; RCW 50B.04"
+   },
+   {
+    "req": "Workplace posters",
+    "detail": "Post L&I (Your Rights as a Worker, Job Safety and Health, workers' comp Notice to Employees), ESD (UI, PFML), WLAD, Healthy Starts pregnancy, domestic-violence leave and Seattle OLS posters. Add the HB 2105 I-9 notice poster when L&I publishes it (from 1 Oct 2026), and e-post for remote staff.",
+    "cite": "WAC 296-126; RCW 50A; SMC 14"
+   },
+   {
+    "req": "Invention, confidentiality and restrictive covenant agreements",
+    "detail": "Use WA versions: include the RCW 49.44.140 invention notice, the Silenced No More carve-out and the DTSA notice. For hires after 30 June 2027 use no noncompete, and customer non-solicits only within ESHB 1155 limits.",
+    "cite": "RCW 49.44.140, 49.44.211; ESHB 1155"
+   },
+   {
+    "req": "Form I-9 and E-Verify",
+    "detail": "Federal I-9 rules apply and E-Verify is voluntary for private employers. Do not demand more or specific documents (citizenship/immigration status discrimination under WLAD and INA 274B), and do not threaten workers over immigration status (SB 5104).",
+    "cite": "8 U.S.C. 1324a, 1324b; RCW 49.60; SB 5104 (2025)"
+   }
+  ],
+  "payAndPayroll": [
+   {
+    "req": "Exempt salary and computer-professional tests",
+    "detail": "In 2026, exempt EAP and salaried computer professionals must earn at least $1,541.70/week ($80,168.40/yr) and meet duties tests aligned with federal law. Hourly computer professionals need $59.96/hr (3.5x the minimum wage). The multiplier reaches 2.5x by 2028; recheck every 1 January.",
+    "cite": "RCW 49.46.010(3)(c); WAC 296-128-500 to -545"
+   },
+   {
+    "req": "Overtime and hours worked",
+    "detail": "Pay 1.5x the regular rate after 40 hours in a workweek (no daily overtime), including non-discretionary bonuses in the regular rate. On-call and travel time follow L&I administrative policies, which are stricter than federal rules in places.",
+    "cite": "RCW 49.46.130; WAC 296-128"
+   },
+   {
+    "req": "Pay frequency and pay statements",
+    "detail": "Pay at least monthly on a regular payday. Each pay statement shows hours worked, rate(s), gross pay, and each deduction with its purpose, plus PSL balances at least monthly. Seattle PSST balances must be shown each payday.",
+    "cite": "WAC 296-126-023, 296-126-040; SMC 14.16"
+   },
+   {
+    "req": "Minimum wage by location",
+    "detail": "Pay the higher of $17.13 (state) or the local rate: Seattle $21.30 (2026) for non-exempt Seattle work, including interns and temps; check Renton, Tukwila, Burien and unincorporated King County for Eastside/Southend sites. Rates change every 1 January.",
+    "cite": "RCW 49.46.020; SMC 14.19"
+   },
+   {
+    "req": "PFML and WA Cares withholding and quarterly reports",
+    "detail": "Report hours and wages for each employee quarterly to ESD (UI and PFML), due by the last day of the month after the quarter. Paid Leave penalties for late reports started 1 Aug 2026. Premiums: PFML 1.13% up to $184,500 (2026); WA Cares 0.58% with no cap, including supplemental wages such as bonuses and RSU income (verify ESD guidance on equity).",
+    "cite": "RCW 50A.10; RCW 50B.04"
+   },
+   {
+    "req": "Workers' comp premiums by hours",
+    "detail": "Report hours worked for each risk class to L&I each quarter (due the last day of the following month). Employees may be charged their share of the medical aid and supplemental pension premiums, but never the accident fund. Private workers' comp policies do not satisfy WA law.",
+    "cite": "RCW 51.16.140; WAC 296-17"
+   },
+   {
+    "req": "Deductions and overpayments",
+    "detail": "Deduct only as legally required or as agreed in writing for the employee's benefit. Recover overpayments within 90 days of issuance under the statutory notice procedure (RCW 49.48.200-.210). Wilfully withholding wages brings double damages and officer liability.",
+    "cite": "RCW 49.48.010, 49.48.200-.210, 49.52.050-.070"
+   },
+   {
+    "req": "Seattle payroll expense tax and Social Housing Tax",
+    "detail": "Businesses with Seattle payroll of $9,074,409+ (2025 base) pay 0.746%-2.557% (2026) on Seattle-apportioned pay of employees earning $194,452+. Separately, a 5% Social Housing Tax applies to pay above $1M per employee (since 2025; not indexed). RSUs and PSUs count as compensation; stock option exercise gains do not. Filings are quarterly from 2026 and the Q4 return is due 31 Jan.",
+    "cite": "SMC 5.38; Seattle Social Housing Tax (Prop. 1A, 2025)"
+   },
+   {
+    "req": "No state income tax, but check work locations",
+    "detail": "There is no WA wage withholding. Withhold for other states where employees physically work (e.g., Oregon for commuters from Vancouver WA, or California for CA-sourced RSU vesting after a move), and track workdays for equity sourcing.",
+    "cite": "Federal and other-state rules"
+   }
+  ],
+  "timeAndLeave": [
+   {
+    "req": "State paid sick leave",
+    "detail": "For non-exempt employees: 1 hour per 40 worked, use from day 90, at least 40 hours carried over, paid at normal hourly compensation. No payout at separation, but balances are reinstated if the employee is rehired within 12 months. Covers the employee and family, including household members who depend on the employee, closure of a child's school or care after an emergency declaration, DV/hate-crime leave, and immigration proceedings. Verification only after 3+ days.",
+    "cite": "RCW 49.46.210; SB 5793; HB 1875; SB 5101"
+   },
+   {
+    "req": "Seattle PSST",
+    "detail": "Covers all Seattle employees including exempt staff (after 240 hours of work in Seattle a year). Tier 3 (250+ FTE worldwide): 1 hour per 30, 72-hour carryover (108 with PTO), and uses including a family member's school or place of care closing. The Tier is based on worldwide FTEs.",
+    "cite": "SMC 14.16"
+   },
+   {
+    "req": "PFML leave and job protection",
+    "detail": "PFML benefits come from ESD; the employer's duties are notice, restoration and benefits. Job restoration applies at 25+ employees in 2026 (15+ in 2027, 8+ in 2028) after 180 days of employment. Leave can be taken in increments as short as 4 hours. FMLA can be counted against PFML job protection only with written notice within 5 business days and monthly updates. Health coverage must continue during protected leave.",
+    "cite": "RCW 50A.35; ESHB 1213"
+   },
+   {
+    "req": "Pregnancy disability and accommodation",
+    "detail": "WLAD (8+ employees) requires leave for the actual period of pregnancy-related disability, separate from PFML and FMLA, plus reinstatement. Healthy Starts accommodations apply now at 15+ employees and at all employers from 2027, with paid lactation breaks.",
+    "cite": "WAC 162-30-020; RCW 43.10.005; ESSB 5217"
+   },
+   {
+    "req": "Washington Family Leave Act and FMLA",
+    "detail": "WFLA (RCW 49.78; 50+ employees, 12 months and 1,250 hours) mirrors FMLA, including registered domestic partners, and generally runs with PFML and FMLA. Coordinate the leave year and notices so PFML protection is not unintentionally extended.",
+    "cite": "RCW 49.78; 29 U.S.C. 2601"
+   },
+   {
+    "req": "Specialty leaves",
+    "detail": "Domestic violence, sexual assault, stalking and (from 2026) hate-crime leave: reasonable time off (RCW 49.76). Military spouse leave: 15 days (RCW 49.77). Jury duty: unpaid, no penalty (RCW 2.36.165). Family Care Act: use accrued leave to care for family (RCW 49.12.270).",
+    "cite": "RCW 49.76, 49.77, 2.36.165, 49.12.270"
+   },
+   {
+    "req": "Meal and rest breaks",
+    "detail": "Non-exempt: 10 minutes paid per 4 hours (no more than 3 hours without a rest break) and a 30-minute meal between the 2nd and 5th hour. Employees can waive meal periods, but not rest breaks. Pay missed rest breaks as extra time; there is no California-style premium.",
+    "cite": "WAC 296-126-092"
+   },
+   {
+    "req": "Vacation and PTO rules",
+    "detail": "No statutory vacation. Accrual caps, use-it-or-lose-it and payout at separation all follow the written policy. If a PTO bank is used to satisfy PSL, it must meet all PSL rules (accrual, carryover, uses, no retaliation), and in Seattle PSST as well.",
+    "cite": "RCW 49.46.210; L&I PSL rules (WAC 296-128)"
+   },
+   {
+    "req": "Remote and hybrid time rules",
+    "detail": "Non-exempt remote staff still need meal and rest breaks and accurate time capture. Expense reimbursement is not a general statutory duty in WA, but deductions or unreimbursed costs cannot take pay below minimum wage.",
+    "cite": "WAC 296-126-092; RCW 49.46.020"
+   }
+  ],
+  "benefits": [
+   {
+    "req": "PFML premiums and voluntary plans",
+    "detail": "Employer share: 28.57% of 1.13% (2026) for 50+ WA employees; the employer can pay the employee share too. An ESD-approved voluntary plan can replace the state plan. 2SHB 2345 moves the employer share to the family-leave portion from 2027 for federal tax reasons; ESD publishes 2027 rates by mid-November.",
+    "cite": "RCW 50A.10, 50A.30; 2SHB 2345"
+   },
+   {
+    "req": "WA Cares Fund",
+    "detail": "0.58% employee premium on all wages. From July 2026 benefits of up to $36,500 (lifetime, indexed) became payable and portability started for contributors of 3+ years who move out of state. New 2026 exemptions for temporary visa holders and active-duty service members; people exempted through private LTC can rejoin by 1 July 2028.",
+    "cite": "RCW 50B.04; ESSB 5291"
+   },
+   {
+    "req": "Unemployment insurance",
+    "detail": "UI is employer-paid, experience-rated, on a $78,200 wage base (2026, verify). Strikers and locked-out workers can get up to 6 weeks of benefits from 2026 (SB 5041), and volunteers in written RIF announcements are eligible from June 2026 (HB 2264). Maximum weekly benefit $1,208 from July 2026.",
+    "cite": "Title 50 RCW; SB 5041; HB 2264"
+   },
+   {
+    "req": "Workers' compensation via the state fund",
+    "detail": "L&I is the exclusive insurer (a monopolistic state), unless the employer is certified self-insured. Buy Stop Gap (employer's liability) coverage separately. Use an L&I extraterritorial/reciprocity certificate for WA employees working out of state.",
+    "cite": "Title 51 RCW"
+   },
+   {
+    "req": "Health plan continuation",
+    "detail": "Federal COBRA applies. Continue group health coverage during PFML job-protected leave on the same terms as for active employees (from 2026). Where WLAD pregnancy-disability leave or WFLA applies, continue benefits as those laws require.",
+    "cite": "RCW 50A.35; 29 U.S.C. 1161"
+   },
+   {
+    "req": "Seattle commuter benefit",
+    "detail": "Seattle employers with 20+ employees worldwide must offer pre-tax transit and vanpool deductions (up to the federal limit) or a subsidized pass to employees who work 10+ hours/week in Seattle.",
+    "cite": "SMC 14.30"
+   },
+   {
+    "req": "Retirement savings",
+    "detail": "WA offers a voluntary Small Business Retirement Marketplace and has no auto-IRA mandate in force as of Sept 2026. A state auto-IRA ('Washington Saves') is planned for a later launch (verify status); offering a 401(k) meets any such requirement.",
+    "cite": "RCW 43.330.730-.750; WA Dept. of Commerce"
+   }
+  ],
+  "performanceAndConduct": [
+   {
+    "req": "Investigations and WLAD exposure",
+    "detail": "Investigate promptly and impartially and document findings. WLAD claims have a 3-year limitation period, allow uncapped emotional-distress damages and attorney fees, and make supervisors individually liable. Independent contractors can also bring WLAD claims.",
+    "cite": "RCW 49.60.030, 49.60.180"
+   },
+   {
+    "req": "Retaliation-sensitive windows",
+    "detail": "Before discipline, check for recent wage or pay-range complaints, PSL, PFML or DV leave use, accommodation requests, safety complaints (DOSH retaliation complaints can be filed within 90 days) and pay discussions. PFML and PSL use cannot count toward attendance discipline.",
+    "cite": "RCW 49.46.210; RCW 50A.40; RCW 49.17.160; RCW 49.58.040"
+   },
+   {
+    "req": "Captive-audience and union activity",
+    "detail": "Do not require attendance at meetings about unionization, politics or religion. Section 7 NLRA rights also protect concerted complaints about pay and conditions, including on social media.",
+    "cite": "RCW 49.44.250; 29 U.S.C. 157"
+   },
+   {
+    "req": "Off-duty conduct and cannabis",
+    "detail": "Off-duty lawful cannabis use cannot be used to reject applicants (limited exceptions). For current employees, keep impairment-based rules; WA law does not protect on-duty use or impairment.",
+    "cite": "RCW 49.44.240"
+   },
+   {
+    "req": "Workplace monitoring and recording",
+    "detail": "Recording private conversations or calls needs the consent of all parties (announcements count as consent). Written monitoring notice is not required by statute but is expected; HB 2144 (2026) on electronic-monitoring disclosure died in committee.",
+    "cite": "RCW 9.73.030"
+   },
+   {
+    "req": "Immigration-related threats",
+    "detail": "Managers must not threaten to report or use an employee's or family member's immigration status to deter complaints or protected activity (SB 5104, 2025). Train managers, since WLAD also covers citizenship and immigration status.",
+    "cite": "SB 5104 (2025); RCW 49.60.180"
+   },
+   {
+    "req": "Personnel file corrections",
+    "detail": "Employees may review their personnel file, ask each year for irrelevant or erroneous information to be removed, and place a rebuttal statement in the file (former employees for 2 years after separation). Keep performance documents accurate, since they are disclosed within 21 days on request.",
+    "cite": "RCW 49.12.240-.250 (HB 1308)"
+   }
+  ],
+  "termination": [
+   {
+    "req": "At-will with documented reasons",
+    "detail": "Document legitimate business reasons and check timing against leave, complaints and accommodation requests. Wrongful discharge in violation of public policy (Thompson v. St. Regis; Rose v. Anderson Hay) and WLAD claims are the main risks.",
+    "cite": "RCW 49.60; common law"
+   },
+   {
+    "req": "Final pay by end of pay period",
+    "detail": "Pay all wages due at the end of the established pay period in which employment ends. Pay accrued vacation if the policy promises it. Do not hold final pay for equipment return or make unauthorized deductions.",
+    "cite": "RCW 49.48.010; RCW 49.52.050-.070"
+   },
+   {
+    "req": "Discharge-reason statement",
+    "detail": "On a written request from a former employee, give a signed statement within 21 days stating the effective date of discharge, whether there was a reason, and the reasons. Draft it with legal review; it will be evidence.",
+    "cite": "HB 1308 (2025)"
+   },
+   {
+    "req": "Mini-WARN for group actions",
+    "detail": "With 50+ full-time WA employees, give 60 days' notice to ESD and affected employees for a closing or mass layoff (50+ within 30 days). Employees on PFML cannot be included unless an exception applies. ESB 6106 (2026) removed employee names from employee copies.",
+    "cite": "Chapter 49.45 RCW"
+   },
+   {
+    "req": "PFML-protected employees",
+    "detail": "Terminating or failing to restore an employee on job-protected PFML is interference unless the job would have ended anyway; document independent reasons. Restoration can be denied only for top-10% salaried employees (within 75 miles) where it causes substantial and grievous economic injury, with notice.",
+    "cite": "RCW 50A.35, 50A.40"
+   },
+   {
+    "req": "Noncompete enforcement limits",
+    "detail": "Until 29 June 2027, enforce only covenants that meet RCW 49.62; laid-off employees must receive base salary for the restricted period, minus other earnings. From 30 June 2027 do not threaten or enforce noncompetes; the penalty is the greater of actual damages or $5,000 plus fees.",
+    "cite": "RCW 49.62.020, 49.62.080; ESHB 1155"
+   },
+   {
+    "req": "UI eligibility and ESD information",
+    "detail": "Give separating employees ESD's printed UI information and respond to ESD separation inquiries on time; late or inadequate responses can lead to charging even for overpayments. Volunteers in announced written RIFs are eligible for UI (HB 2264).",
+    "cite": "RCW 50.20.140; HB 2264 (2026)"
+   }
+  ],
+  "exit": [
+   {
+    "req": "Final paycheck and statement",
+    "detail": "Final wages with an itemized pay statement by the regular payday for the period. Include commissions and bonuses earned under plan terms, PTO payout if the policy requires it, and expense reimbursements.",
+    "cite": "RCW 49.48.010; WAC 296-126-040"
+   },
+   {
+    "req": "Personnel file copies on request",
+    "detail": "Former employees (within 3 years) and their designees can get free copies within 21 days. Late production brings tiered statutory damages of $250, $500 or $1,000, depending on how far past day 21 the file arrives (thresholds at day 28 and day 35).",
+    "cite": "RCW 49.12.250 (HB 1308)"
+   },
+   {
+    "req": "Separation agreement terms",
+    "detail": "Include the Silenced No More carve-out and no confidentiality over illegal-conduct facts (the amount may stay confidential). From 30 June 2027 remove noncompete and forfeiture-for-competition terms. Follow OWBPA timing for employees aged 40+.",
+    "cite": "RCW 49.44.211; ESHB 1155; 29 U.S.C. 626(f)"
+   },
+   {
+    "req": "Equity at exit",
+    "detail": "Apply plan terms consistently. From 30 June 2027, clauses forfeiting vested or unvested equity because an employee joins a competitor are void noncompetes for WA workers. Time-based forfeiture on termination is not directly targeted, but confirm with counsel.",
+    "cite": "ESHB 1155 (2026)"
+   },
+   {
+    "req": "Void-noncompete notices",
+    "detail": "By 1 Oct 2027, make reasonable efforts to notify current and former employees and contractors whose noncompetes (including forfeiture-for-competition terms) are void. Plan a records search now.",
+    "cite": "ESHB 1155 (2026)"
+   },
+   {
+    "req": "Benefits continuation",
+    "detail": "Federal COBRA; PFML and WA Cares need no exit action. PSL balances need not be paid out, but must be reinstated on rehire within 12 months (Seattle PSST: 7 months).",
+    "cite": "29 U.S.C. 1161; RCW 49.46.210; SMC 14.16"
+   },
+   {
+    "req": "References",
+    "detail": "WA grants employers qualified immunity for good-faith disclosures about a current or former employee's job performance to a prospective employer (RCW 4.24.730). Still apply a neutral-reference policy and respect Silenced No More settlement terms.",
+    "cite": "RCW 4.24.730"
+   }
+  ],
+  "recordsAndPrivacy": [
+   {
+    "req": "Personnel file access law",
+    "detail": "Defines personnel file contents (application records, evaluations, discipline, leave and accommodation, payroll, agreements). Copies are due within 21 days of a request by employees, former employees (within 3 years) or designees, with tiered statutory damages and a private right of action.",
+    "cite": "RCW 49.12.240-.250 (HB 1308)"
+   },
+   {
+    "req": "Recording and monitoring",
+    "detail": "WA requires all-party consent to record private communications, so tell employees about call recording and meeting recording. There is no general employee-monitoring notice statute, but a written policy and banner notices are expected.",
+    "cite": "RCW 9.73.030"
+   },
+   {
+    "req": "Health data outside employment",
+    "detail": "The My Health My Data Act excludes people acting in an employment context, but consumer-facing wellness apps, event health screening of non-employees, or vendor data used outside HR purposes may be covered. It carries a private right of action under the CPA, so review wellness vendors' data flows.",
+    "cite": "RCW 19.373"
+   },
+   {
+    "req": "Biometrics",
+    "detail": "Collecting biometric identifiers (fingerprint time clocks, face recognition for lab access) for commercial purposes needs notice and consent and limits on sale; a security-purpose exception exists. Document the purpose and retention and get consent anyway.",
+    "cite": "RCW 19.375"
+   },
+   {
+    "req": "Data breach notification",
+    "detail": "Notify affected WA residents within 30 days of discovering a breach of personal information, including usernames with passwords and biometric data; notify the AG within 30 days if more than 500 residents are affected. HR systems holding SSNs, bank and passport data are in scope.",
+    "cite": "RCW 19.255.010"
+   },
+   {
+    "req": "Payroll and PSL records",
+    "detail": "Keep payroll and time records for 3 years, including hours, rates, PSL accrual and use, and pay statements. For Seattle, keep 3 years of PSST, wage-theft and ICPO records.",
+    "cite": "RCW 49.46.070; WAC 296-128-010; SMC 14.16, 14.20"
+   },
+   {
+    "req": "Social media privacy",
+    "detail": "Do not request personal account login details, require access, or require employees to add managers as contacts. Investigating specific allegations using content shared voluntarily is allowed.",
+    "cite": "RCW 49.44.200"
+   },
+   {
+    "req": "Mini-WARN data handling",
+    "detail": "Employee data given to ESD in mini-WARN notices is exempt from public disclosure (ESB 6106, 2026), and ESD uses it for UI outreach and fraud prevention (WAC 192-460-150).",
+    "cite": "Chapter 49.45 RCW; WAC 192-460-150"
+   }
+  ],
+  "healthSafety": [
+   {
+    "req": "Accident Prevention Program",
+    "detail": "A written, site-specific program covering the safety orientation, hazard reporting, first aid and emergency response, tailored to labs, cleanrooms or offices. Train new hires before exposure.",
+    "cite": "WAC 296-800-140"
+   },
+   {
+    "req": "Safety committee or meetings",
+    "detail": "At locations with 11+ employees on the same shift: an elected committee (employee-elected members at least equal to employer-appointed), meeting monthly, with minutes kept 1 year. Otherwise, hold safety meetings.",
+    "cite": "WAC 296-800-130"
+   },
+   {
+    "req": "Injury reporting and records",
+    "detail": "Report a work-related death or in-patient hospitalization to DOSH within 8 hours, and an amputation or loss of an eye within 24 hours. Keep OSHA-equivalent logs (WAC 296-27), post the summary 1 Feb-30 Apr, and report claims to L&I.",
+    "cite": "WAC 296-27; WAC 296-800"
+   },
+   {
+    "req": "Lab chemical and hazard rules",
+    "detail": "DOSH (WISHA) standards apply to hardware, reliability and failure-analysis labs: GHS hazard communication (WAC 296-901), lab-specific chemical hygiene, PPE hazard assessment, lockout/tagout and electrical safety. WA runs its own state plan.",
+    "cite": "RCW 49.17; WAC 296-901, 296-800, 296-803"
+   },
+   {
+    "req": "Workers' comp claims",
+    "detail": "Give injured workers claim information. Treating providers file the claim with L&I (ROA). Employers may offer light duty through Stay at Work (wage subsidies of up to 50% for 66 days). Retaliation for filing is prohibited.",
+    "cite": "Title 51 RCW; RCW 51.32.090"
+   },
+   {
+    "req": "Workplace safety retaliation",
+    "detail": "Employees may file DOSH discrimination complaints within 90 days of retaliation for safety complaints (RCW 49.17.160, extended from 30 days in 2023). Do not discourage hazard reporting.",
+    "cite": "RCW 49.17.160"
+   },
+   {
+    "req": "Heat and wildfire smoke",
+    "detail": "Outdoor heat rules (WAC 296-62-095) and wildfire smoke rules (WAC 296-820) apply to outdoor work above set thresholds; they are usually relevant only for facilities and field staff at a tech employer.",
+    "cite": "WAC 296-62-095; WAC 296-820"
+   }
+  ]
+ },
+ "terminationDeepDive": {
+  "voluntary": "Employees may resign at any time without notice. A contractual notice period cannot be enforced by withholding earned wages, and final pay is due at the end of the established pay period. If the company accepts the resignation early, pay through the date it set or treat the separation as a discharge; paid garden leave during notice is allowed. Review repayment terms (sign-on, relocation, training): from 30 June 2027 any clause requiring repayment or forfeiture because the worker takes other lawful work is a void noncompete. Education repayment survives only within ESHB 1155's safe harbor: the obligation ends within 18 months of hire, is prorated, and is waived for separations with UI 'good cause'.",
+  "involuntary": "At-will: no cause or process is required. The main exposures are WLAD discrimination, retaliation and failure-to-accommodate claims (8+ employees; uncapped compensatory damages, attorney fees, individual supervisor liability, 3-year limitation); wrongful discharge in violation of public policy; retaliation for wage, pay-range, safety or leave complaints; and PFML interference (job protection at 25+ employees in 2026). Best practice: documented performance history, consistent treatment, legal review of timing, an independent decision-maker, final pay ready for the regular payday, and a prepared discharge-reason statement (due within 21 days of a written request).",
+  "redundancy": "There is no statutory redundancy pay or consultation. The mini-WARN law (chapter 49.45 RCW; ESSB 5525, effective 27 July 2025, amended by ESB 6106 in 2026) covers employers with 50+ WA employees, not counting part-timers (under 20 hours/week or under 6 of the last 12 months). They must give 60 days' written notice to ESD and to affected employees or their union before a business closing (50+ job losses at a site) or a mass layoff (50+ in any 30 days). Notices state the site and a company contact, whether the action is permanent or temporary, expected dates and schedule, job titles, and any relocation or contracting out; employee names go to ESD and unions only, and ESD holds the data confidentially. Employees on PFML cannot be included unless an exception applies (faltering company, unforeseeable business circumstances, natural disaster, construction). Remedies: back pay and benefits for up to 60 days, civil penalties up to $500/day and attorney fees. Federal WARN and OWBPA group disclosures also apply. From June 2026, employees who volunteer in response to a written RIF announcement can claim UI (HB 2264).",
+  "finalPayTiming": "On any separation, wages are due at the end of the established pay period (RCW 49.48.010); there is no immediate-pay rule. Vacation or PTO payout follows written policy; state PSL is not paid out but is reinstated on rehire within 12 months. Deductions are allowed only if required by law or authorized in writing for the employee's benefit, and overpayments are recovered only through the RCW 49.48.200-.210 procedure. Willful failure to pay brings double damages and attorney fees (RCW 49.52.070, 49.48.030), with personal liability for officers who control payment. L&I can also assess interest and civil penalties, and Seattle OLS enforces the Wage Theft Ordinance.",
+  "requiredDocuments": [
+   "Final wages and itemized pay statement by the end of the pay period (RCW 49.48.010; WAC 296-126-040)",
+   "ESD unemployment information for separating employees (RCW 50.20.140)",
+   "Signed statement of discharge reasons within 21 days of written request, and personnel file copies on request (HB 1308)",
+   "Mini-WARN notices to ESD and affected employees or union, where triggered (chapter 49.45 RCW)",
+   "COBRA election notice (federal) and notice of end of PFML job-protected health continuation where relevant",
+   "OWBPA disclosures for releases from workers aged 40+ (21/45 days plus 7-day revocation)",
+   "Written notice that noncompetes are void, to current and former workers by 1 Oct 2027 (ESHB 1155)"
+  ],
+  "releaseAgreements": "Releases of WLAD, wage and common-law claims are enforceable if knowing, voluntary and supported by new consideration, but wages already owed cannot be conditioned on signing. Under the Silenced No More Act (RCW 49.44.211), confidentiality or non-disparagement terms cannot bar disclosure of conduct the employee reasonably believes is illegal discrimination, harassment, retaliation, a wage-and-hour violation, sexual assault or against clear public policy; the settlement amount may stay confidential. Trying to enforce a void clause costs the greater of actual damages or $10,000 plus fees. From 30 June 2027 releases cannot add noncompetes, and customer non-solicits are limited to 18 months and direct relationships. Workers' comp rights cannot be released privately (structured settlements need L&I/BIIA approval, RCW 51.04.063), and UI rights cannot be waived. For employees aged 40+, follow OWBPA; keep confidentiality language NLRA-compliant for non-supervisors.",
+  "typicalPackage": "Market practice, not statutory, for Seattle-area tech and semiconductor employers: individual contributors typically get 2-4 weeks' base per year of service with a 4-8 week minimum; directors and VPs 3-6 months; executives 6-12+ months under a severance plan. Packages often add a 3-6 month COBRA subsidy, outplacement and sometimes a pro-rated bonus. RSU vesting normally stops at separation, with acceleration mostly limited to double-trigger change-of-control plans. In large RIFs, local peers such as Microsoft and Amazon have commonly paid a 60-day non-working notice period before severance, which also satisfies WARN and mini-WARN."
+ },
+ "recentChanges": [
+  {
+   "date": "2026-10",
+   "title": "I-9 inspection notices (2SHB 2105) operative",
+   "detail": "Employers must post and deliver notice of a federal I-9 Notice of Inspection within 5 days, in English and the five most common other WA languages, and notify affected workers of results within 5 days. Verification beyond federal requirements is barred. Penalties are $500 per violation plus a private right of action. The general effective date was 11 June 2026, with notice and poster duties from 1 Oct 2026.",
+   "impact": "medium"
+  },
+  {
+   "date": "2026-07",
+   "title": "Fair Chance Act expansion (HB 1747) in force for 15+ employees",
+   "detail": "No criminal-history inquiry until after a conditional offer; the definition of criminal record is broader; blanket exclusions are banned; the specific record must be identified, with time to respond and a documented legitimate business reason. Employers under 15 employees follow on 1 Jan 2027.",
+   "impact": "high"
+  },
+  {
+   "date": "2026-06",
+   "title": "2026 session laws effective (11 June): PERC backstop, mini-WARN and UI amendments",
+   "detail": "ESHB 2471 gives PERC jurisdiction over private-sector workers who lose NLRA coverage, with interest arbitration after 6 months. ESB 6106 removed employee names from employee mini-WARN notices and made ESD data confidential. HB 2264 makes volunteers in a written RIF eligible for UI. 2SHB 2345 moves the PFML employer share to the family-leave portion (applies from 2027 rates).",
+   "impact": "medium"
+  },
+  {
+   "date": "2026-03",
+   "title": "ESHB 1155: all noncompetes void from 30 June 2027",
+   "detail": "Signed 23 March 2026 (2026 c 149). It applies retroactively, covers employees and contractors, and treats provisions requiring repayment or forfeiture because a worker takes lawful work as noncompetes. Customer non-solicits are limited to direct relationships and 18 months; education repayment has a narrow safe harbor. Notices are due by 1 Oct 2027. Damages are the greater of actual damages or $5,000 plus fees.",
+   "impact": "high"
+  },
+  {
+   "date": "2026-03",
+   "title": "SB 6346 millionaires' income tax signed",
+   "detail": "A 9.9% tax on WA-source income, including wages, above a $1M household standard deduction, from 1 Jan 2028, with first returns in 2029. The Supreme Court rejected a quick referendum (May 2026); repeal Initiative I-645 was certified for the 3 Nov 2026 ballot, and a constitutional challenge (Petter v. Washington) is pending.",
+   "impact": "high"
+  },
+  {
+   "date": "2026-01",
+   "title": "PFML job protection expanded (ESHB 1213) and premium rises to 1.13%",
+   "detail": "Job restoration now covers employers with 25+ employees (15+ in 2027, 8+ in 2028) after 180 days of employment, with no hours test. Health coverage continues during protected leave. FMLA can be counted against PFML job protection only with a 5-business-day notice and monthly updates, and the minimum claim increment is 4 hours. The 2026 premium is 1.13% (71.43% employee) and the maximum weekly benefit $1,647.",
+   "impact": "high"
+  },
+  {
+   "date": "2026-01",
+   "title": "2026 wage thresholds: $17.13 minimum wage, $80,168.40 exempt floor, $59.96 computer professional",
+   "detail": "The exempt salary floor rose to 2.25x minimum wage ($1,541.70/week), and the noncompete earnings thresholds to $126,858.83 (employees) and $317,147.09 (contractors). Seattle's minimum wage is $21.30 for all employers.",
+   "impact": "high"
+  },
+  {
+   "date": "2026-01",
+   "title": "WA Cares changes (ESSB 5291); benefits live from July 2026",
+   "detail": "0.58% premium unchanged. Temporary nonimmigrant visa holders and active-duty service members are exempt unless they opt in. Portability for contributors of 3+ years who move away started 1 July 2026, when benefits of up to $36,500 became payable.",
+   "impact": "medium"
+  },
+  {
+   "date": "2026-01",
+   "title": "UI for strikers (SB 5041); hate-crime leave (SB 5101)",
+   "detail": "Striking or locked-out workers can get up to 6 weeks of UI after the disqualification and waiting periods. DV leave and safety accommodations, and PSL uses, now cover hate-crime victims and their families.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-07",
+   "title": "Mini-WARN (ESSB 5525), EPOA cure period (SB 5408), personnel files (HB 1308), PSL for immigration proceedings (HB 1875)",
+   "detail": "Effective 27 July 2025: 60-day layoff notice at 50+ WA employees; a 5-business-day cure for defective postings (until 27 July 2027), statutory damages of $100-$5,000 and a fixed-wage option; personnel files within 21 days plus a discharge-reason statement; and a ban on driver's-license requirements unless job-related (SB 5501).",
+   "impact": "high"
+  },
+  {
+   "date": "2025-07",
+   "title": "Equal Pay and Opportunities Act extended to all protected classes (SHB 1905)",
+   "detail": "From 1 July 2025 pay and career-advancement discrimination claims under RCW 49.58 cover all WLAD classes, not just gender, with L&I enforcement. In 2025 the Supreme Court held in Branson v. Washington Fine Wine & Spirits that any applicant can sue over a posting without a range, whatever their subjective intent.",
+   "impact": "high"
+  },
+  {
+   "date": "2025-01",
+   "title": "Seattle Social Housing Tax and WA capital gains surcharge",
+   "detail": "Seattle's 5% employer tax on pay above $1M per employee (RSUs count) took effect 1 Jan 2025. ESSB 5813 added a 2.9% surcharge on WA long-term capital gains above $1M (9.9% total) from tax year 2025; the first returns were due 15 April 2026.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-01",
+   "title": "PSL expansions (SB 5793)",
+   "detail": "From 1 Jan 2025, family now includes household members who depend on the employee for care and a child's spouse. PSL covers closure of a child's school or place of care after an emergency declaration.",
+   "impact": "medium"
+  },
+  {
+   "date": "2024-06",
+   "title": "Captive-audience ban (SB 5778) and noncompete tightening (SB 5935)",
+   "detail": "From 6 June 2024 employees cannot be disciplined for skipping employer meetings on political, religious or union matters (RCW 49.44.250). The RCW 49.62 amendments broadened the noncompete definition to cover bars on accepting customer business, limited non-solicits to current customers and required disclosure by offer acceptance.",
+   "impact": "medium"
+  },
+  {
+   "date": "2024-01",
+   "title": "Pre-employment cannabis testing limits (SB 5123)",
+   "detail": "From 1 Jan 2024 employers cannot reject applicants for off-duty cannabis use or non-psychoactive THC metabolites, except for security-clearance, aerospace, safety-sensitive and other exempt roles (RCW 49.44.240).",
+   "impact": "medium"
+  }
+ ],
+ "watchlist": [
+  {
+   "title": "Millionaires' income tax: I-645 vote and court challenge",
+   "detail": "Voters decide the repeal initiative on 3 Nov 2026; Petter v. Washington challenges the tax under Article VII uniformity (Culliton). If it survives, wages and RSU income above $1M earned in WA are taxed at 9.9% from 2028, with a credit against the capital gains tax to prevent double taxation.",
+   "expected": "Ballot 3 Nov 2026; litigation 2026-27; tax year 2028"
+  },
+  {
+   "title": "Noncompete ban go-live and retroactivity litigation",
+   "detail": "ESHB 1155 takes effect 30 June 2027 and voids existing covenants. Expect challenges to retroactive application and guidance on equity forfeiture, TRAPs and clawbacks. Employer notices are due 1 Oct 2027.",
+   "expected": "30 June 2027; notices by 1 Oct 2027"
+  },
+  {
+   "title": "PFML: 2027 premium, split and job-protection step-down",
+   "detail": "ESD publishes the 2027 premium and the new family/medical allocation (2SHB 2345) by mid-November 2026. Job protection extends to 15+ employees in 2027 and 8+ in 2028, and SB 5292 moves to actuarial rate-setting from 2028 (1.2% cap).",
+   "expected": "Nov 2026; 1 Jan 2027; 1 Jan 2028"
+  },
+  {
+   "title": "2027 minimum wage and exempt thresholds",
+   "detail": "L&I announces the 2027 minimum wage by 30 Sept 2026. The exempt salary multiplier reaches 2.5x by 2028 (WAC 296-128-545), and the 2027 noncompete thresholds follow in the fall. Update ranges and exempt classifications.",
+   "expected": "Announcement by 30 Sept 2026; effective 1 Jan 2027"
+  },
+  {
+   "title": "Healthy Starts expansion (ESSB 5217)",
+   "detail": "Pregnancy accommodation and lactation rules extend to all employers, with paid lactation breaks on top of meal and rest breaks and L&I enforcement.",
+   "expected": "1 Jan 2027"
+  },
+  {
+   "title": "AI in employment legislation",
+   "detail": "The AG AI Task Force final report (July 2026) recommends disclosure of workplace AI, no sole reliance on AI for consequential employment decisions, and appeal rights. 2026 monitoring (HB 2144) and facial-recognition (HB 1672) bills died; expect reintroduction in the 2027 session.",
+   "expected": "2027 session (Jan-Apr 2027)"
+  },
+  {
+   "title": "EPOA cure period sunset",
+   "detail": "The 5-business-day right to cure defective postings expires 27 July 2027, after which each non-compliant posting risks $100-$5,000 per applicant in statutory damages.",
+   "expected": "27 July 2027"
+  },
+  {
+   "title": "PERC backstop (ESHB 2471) and NLRA preemption",
+   "detail": "Watch for federal preemption challenges and any NLRB quorum or jurisdiction gaps that could trigger PERC certification and interest arbitration for private-sector units.",
+   "expected": "2026-27"
+  }
+ ],
+ "calendar": [
+  {
+   "month": 1,
+   "title": "New rates and thresholds effective",
+   "detail": "1 Jan: state minimum wage, exempt salary floor, computer-professional rate, noncompete earnings thresholds, PFML premium and benefit cap, Seattle and other local minimum wages. Update pay ranges in postings, HRIS exempt flags and WA offer templates."
+  },
+  {
+   "month": 1,
+   "title": "Quarterly ESD and L&I reports; Seattle payroll tax",
+   "detail": "31 Jan: Q4 UI/PFML/WA Cares wage-and-hour reports to ESD and the workers' comp hours report to L&I. Seattle payroll expense tax and Social Housing Tax Q4 return."
+  },
+  {
+   "month": 2,
+   "title": "Injury log summary posting",
+   "detail": "Post the annual summary of work-related injuries and illnesses (WAC 296-27) from 1 Feb to 30 Apr."
+  },
+  {
+   "month": 3,
+   "title": "Legislative session ends",
+   "detail": "The session ends in March (even years, 60 days) or April (odd years, 105 days). Most new laws take effect 90 days after adjournment (June or July). Run a bill-impact review."
+  },
+  {
+   "month": 4,
+   "title": "Capital gains tax return; Q1 filings",
+   "detail": "15 April: WA capital gains tax return and payment for equity holders (communicate to RSU and ESPP participants). 30 April: Q1 ESD, L&I and Seattle payroll tax filings."
+  },
+  {
+   "month": 6,
+   "title": "Mid-year effective dates",
+   "detail": "New session laws usually take effect in June or July (11 June 2026; around late July in odd years). Refresh policies, posters and agreement templates."
+  },
+  {
+   "month": 6,
+   "title": "Noncompete ban effective (2027)",
+   "detail": "30 June 2027: all noncompetes void. Stop enforcing and remove them from WA agreements and equity award terms by then."
+  },
+  {
+   "month": 7,
+   "title": "UI benefit amounts and Q2 filings",
+   "detail": "UI maximum and minimum weekly benefits change the first Sunday of July. 31 July: Q2 ESD, L&I and Seattle filings. The EPOA cure period ends 27 July 2027."
+  },
+  {
+   "month": 9,
+   "title": "Minimum wage announcement",
+   "detail": "By 30 Sept, L&I publishes next year's minimum wage, and with it the exempt salary floor and computer-professional rate. Seattle OLS publishes the Seattle rate around the same time."
+  },
+  {
+   "month": 10,
+   "title": "Q3 filings and noncompete notices",
+   "detail": "31 Oct: Q3 ESD, L&I and Seattle filings. 1 Oct 2027: deadline for notices that noncompetes are void (ESHB 1155). HB 2105 I-9 notice duties began 1 Oct 2026."
+  },
+  {
+   "month": 11,
+   "title": "PFML rate announcement and open enrollment",
+   "detail": "ESD announces next year's PFML premium and split (by mid-November). Update payroll and open-enrollment materials. Verify WA Cares exemption lists, including temporary visa holders."
+  },
+  {
+   "month": 12,
+   "title": "Year-end leave and threshold review",
+   "detail": "Confirm PSL carryover (40 hours state; Seattle Tier 3 up to 72/108 hours), the PFML employer size for job protection in the next year, exempt salaries against the new floor, and Seattle payroll-tax thresholds."
+  }
+ ],
+ "gotchas": [
+  "Posting national or remote roles without a WA salary range and a description of benefits and other compensation (equity, bonus): serial-applicant class actions follow, and Branson (2025) removed the 'bona fide applicant' defense. The 5-business-day cure ends 27 July 2027.",
+  "Classifying engineers as exempt below the WA floor ($80,168.40 in 2026, rising to 2.5x minimum wage by 2028) or paying hourly computer professionals under $59.96. WA thresholds are far above the federal $684/week.",
+  "Buying private workers' comp or relying on a national carrier: WA is a monopolistic state fund, so register with L&I, report hours quarterly and buy Stop Gap employer's liability separately.",
+  "Missing PFML and WA Cares setup for the first remote WA hire, over-deducting the PFML employee share, or withholding WA Cares from temporary visa holders who are exempt from 2026 unless they opt in.",
+  "Assuming exempt staff get no sick leave: state PSL excludes exempt employees, but Seattle PSST covers them at 1 hour per 30 (250+ FTE) with 72/108-hour carryover.",
+  "Using national offer, PIIA and equity templates with noncompetes, non-WA law or venue, or forfeiture-for-competition clauses. They are already void below the RCW 49.62 thresholds, carry a $5,000 minimum penalty, and all become void on 30 June 2027 with notices due 1 Oct 2027.",
+  "Holding final pay for laptop return or taking unauthorized deductions: willful withholding brings double damages, attorney fees and personal liability for officers (RCW 49.52.070).",
+  "Using NDA, non-disparagement or settlement terms without Silenced No More carve-outs ($10,000 minimum damages per attempt to enforce).",
+  "Running background checks before a conditional offer (HB 1747, from 1 July 2026), or rejecting engineers for THC-positive pre-employment tests when the role is not security-cleared, aerospace or safety-sensitive.",
+  "Treating Seattle like the rest of the state: its minimum wage, PSST, fair chance, wage-theft notice, commuter benefits, contractor protections, caste as a protected class, and payroll expense and 5% Social Housing taxes all apply to work in the city. Seattle's Secure Scheduling Ordinance covers only retail and food-service employers with 500+ employees, and the city has no AI-in-hiring ordinance."
+ ],
+ "semiconductorNotes": [
+  "Talent market: the company competes with Microsoft (Redmond), Amazon (Seattle and Bellevue), Google, Meta and Nvidia for chip, systems and AI-infrastructure engineers. WA pay-range postings expose peers' ranges and yours, so benchmark before posting. With noncompetes gone from June 2027, retention rests on trade-secret controls (RCW 19.108 and DTSA), equity refreshers and customer non-solicits within ESHB 1155 limits.",
+  "Equity design: ESHB 1155 treats provisions forcing a worker to repay or forfeit compensation because they take lawful work as noncompetes, for employees and contractors. Review RSU/PSU award terms, 'bad leaver' and competition-triggered clawbacks, and sign-on repayment clauses before 2027 grants. Keep SEC/Nasdaq Rule 10D-1 clawbacks, which are not competition-based, and confirm with counsel.",
+  "Capital gains for RSU holders: WA taxes long-term gains on sales of shares (RSU shares held more than 1 year after vest, ISO qualifying dispositions, ESPP) at 7% above the standard deduction ($278,000 for 2025, indexed) and 9.9% above $1M. Short-term gains and vest income are outside the capital gains tax, and domicile at the time of sale controls. From 2028 the 9.9% income tax on income over $1M would reach RSU vest income unless I-645 passes or courts strike it. Include this in equity education; there is no WA withholding.",
+  "Seattle location cost: Seattle-sited teams bring the JumpStart payroll expense tax (0.746%-2.557% on Seattle pay of employees earning $194,452+ in 2026, including RSUs but not option exercises) and the 5% Social Housing Tax above $1M. Many peers place engineering on the Eastside (Bellevue, Redmond, Kirkland), which also avoids Seattle's labor ordinances.",
+  "Remote work and mobility: WA has no wage withholding, but CA-to-WA movers keep CA-sourced equity income (workday allocation from grant to vest), and WA residents who work in Oregon trigger OR withholding. PFML, WA Cares, UI and L&I coverage follow WA localization rules, so register before the first remote WA hire.",
+  "Export control and WLAD: WLAD protects citizenship and immigration status. Screen US-person status only for roles where an EAR/ITAR license is legally required, apply HB 2105 I-9 inspection notices from Oct 2026, and remember WA Cares exempts H-1B, L-1 and other temporary visa holders unless they opt in.",
+  "Lab and hardware roles: hourly lab technicians and test operators need meal and rest breaks and weekly overtime. Salaried engineers need at least $80,168.40 (2026), and W-2 hourly software or firmware staff at least $59.96/hr. Hardware and failure-analysis labs fall under DOSH/WISHA chemical, electrical and lockout rules, and the safety committee rule applies at 11+ per shift.",
+  "Hyperscaler customer proximity: engineers placed on site at Microsoft or Amazon facilities remain your employees for WA wage, PSL/PSST and L&I purposes, and the customer's premises determine Seattle or Redmond ordinance coverage. Align customer site-access NDAs with Silenced No More and trade-secret carve-outs."
+ ],
+ "sources": [
+  {
+   "title": "Foster Garvey: 2026 WA minimum wage, exempt salary and noncompete thresholds",
+   "url": "https://www.foster.com/newsroom/legal-alerts/washingtons-minimum-wage-minimum-salary-for-exempt-status-and-noncompete-salary-thresholds-set-to-increase-in-2026/"
+  },
+  {
+   "title": "L&I: Changes to overtime rules (exempt salary threshold)",
+   "url": "https://www.lni.wa.gov/workers-rights/wages/overtime/changes-to-overtime-rules"
+  },
+  {
+   "title": "WAC 296-128-545: salary threshold schedule",
+   "url": "https://app.leg.wa.gov/wac/default.aspx?cite=296-128-545"
+  },
+  {
+   "title": "L&I: Paid sick leave",
+   "url": "https://lni.wa.gov/workers-rights/leave/paid-sick-leave/"
+  },
+  {
+   "title": "ESD: PFML premium rate increases to 1.13% in 2026",
+   "url": "https://esd.wa.gov/about-us/news-release/2025/paid-family-medical-leave-premium-rate-increases-113-2026"
+  },
+  {
+   "title": "Paid Leave: Job protection requirements for employers",
+   "url": "https://paidleave.wa.gov/job-protection-requirements-for-employers/"
+  },
+  {
+   "title": "Paid Leave: Employer roles and responsibilities",
+   "url": "https://paidleave.wa.gov/employer-roles-responsibilities/"
+  },
+  {
+   "title": "Final Bill Report 2SHB 2345 (PFML premium allocation)",
+   "url": "https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bill%20Reports/House/2345-S2%20HBR%20FBR%2026.pdf"
+  },
+  {
+   "title": "WA Cares Fund: toolkit FAQ",
+   "url": "https://wacaresfund.wa.gov/toolkit/faq"
+  },
+  {
+   "title": "Littler: WA Cares gets a makeover (2026)",
+   "url": "https://www.littler.com/news-analysis/asap/wa-cares-gets-makeover-whats-changing-2026"
+  },
+  {
+   "title": "Final Bill Report ESHB 1155 (noncompete ban)",
+   "url": "https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bill%20Reports/House/1155-S.E%20HBR%20FBR%2026.pdf"
+  },
+  {
+   "title": "Littler: Washington bans all noncompetes and takes a swipe at TRAPs, clawbacks and forfeitures",
+   "url": "https://www.littler.com/news-analysis/asap/washington-bans-all-noncompetes-and-takes-swipe-traps-clawbacks-and-forfeitures"
+  },
+  {
+   "title": "Chapter 49.62 RCW (noncompetition covenants)",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62&full=true"
+  },
+  {
+   "title": "House Bill Report ESSB 5525 (mini-WARN) as enacted",
+   "url": "https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill%20Reports/House/5525-S.E%20HBR%20LAWS%2025.htm"
+  },
+  {
+   "title": "Seyfarth: WA refines mini-WARN (ESB 6106) and UI for layoff volunteers (HB 2264)",
+   "url": "https://www.seyfarth.com/news-insights/workforce-reductions-in-washington-lawmakers-refine-miniwarn-requirements-and-broaden-unemployment-benefits-for-layoff-volunteers.html"
+  },
+  {
+   "title": "Ogletree: Governor signs SB 5408 changes to the Equal Pay and Opportunities Act",
+   "url": "https://ogletree.com/insights-resources/blog-posts/washington-governor-signs-bill-making-key-changes-to-equal-pay-and-opportunities-act/"
+  },
+  {
+   "title": "Epstein Becker Green: 2026 Washington employment law update",
+   "url": "https://www.ebglaw.com/insights/publications/2026-washington-employment-law-update-hiring-restrictions-pay-transparency-leave-and-workplace-safety"
+  },
+  {
+   "title": "Miller Nash: WA employment law mid-year 2026 update",
+   "url": "https://www.millernash.com/industry-news/washington-employment-law-update-mid-year-2026-legislative-and-case-law-developments"
+  },
+  {
+   "title": "Chapter 49.94 RCW (Fair Chance Act)",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.94&full=true"
+  },
+  {
+   "title": "Final Bill Report 2SHB 2105 (immigrant worker protections)",
+   "url": "https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bill%20Reports/House/2105-S2%20HBR%20FBR%2026.pdf"
+  },
+  {
+   "title": "Seattle OLS: 2026 minimum wage and fine adjustments memo",
+   "url": "https://seattle.gov/documents/Departments/LaborStandards/Memo_2026_Seattle_MW_Increase_Jan_update_ADA.pdf"
+  },
+  {
+   "title": "Seattle OLS: PSST updates Q&A (July 2025)",
+   "url": "https://www.seattle.gov/documents/departments/laborstandards/qa_psst_updates_07232025.pdf"
+  },
+  {
+   "title": "Seattle: Payroll expense tax",
+   "url": "https://www.seattle.gov/city-finance/business-taxes-and-licenses/seattle-taxes/payroll-expense-tax"
+  },
+  {
+   "title": "Seattle: Social Housing Tax",
+   "url": "https://seattle.gov/city-finance/business-taxes-and-licenses/seattle-taxes/social-housing-tax"
+  },
+  {
+   "title": "WA DOR: New tiered rates for Washington's capital gains tax",
+   "url": "https://dor.wa.gov/forms-publications/publications-subject/special-notices/new-tiered-rates-washingtons-capital-gains-tax"
+  }
+ ]
+}

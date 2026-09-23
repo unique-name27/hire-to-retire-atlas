@@ -1,0 +1,985 @@
+{
+ "id": "us-co",
+ "name": "Colorado",
+ "shortName": "Colorado",
+ "region": "Americas",
+ "parent": "us",
+ "lastVerified": "2026-09",
+ "summary": "Colorado is at-will with no mini-WARN and no statutory severance, but it is one of the most employee-protective US states and the strictest on pay transparency: every posting and every promotional opportunity needs a pay range, benefits and an application deadline, with post-selection notices to co-workers (EPEWA). It adds daily overtime over 12 hours, paid rest breaks, an exempt salary floor of $57,784 (2026), 48 hours of HFWA sick leave, state-run FAMLI paid leave (0.88% premium in 2026, job protection after 180 days), immediate final pay with mandatory vacation payout (Nieto), a non-compete statute with a $130,014 (2026) pay floor, separate notice and $5,000-per-worker penalties, and the POWR Act's no-'severe or pervasive' harassment standard. HR data sits outside the Colorado Privacy Act, but the 2025 biometric rules and the SB 26-189 AI notice regime (from 1 Jan 2027) reach employers. US-HQ tech employers most often go wrong by posting Front Range roles without compliant ranges or promotion notices, rolling out national non-competes without the Colorado notice, forfeiting vacation at exit, asking graduation years in the ATS, and assuming California templates fit Colorado.",
+ "ratings": {
+  "termination": 2,
+  "representation": 2,
+  "privacy": 3,
+  "payTransparency": 5,
+  "workingTime": 3,
+  "leave": 4,
+  "immigration": 2,
+  "changeVelocity": 4
+ },
+ "ratingNotes": {
+  "termination": "At-will with no state WARN or severance, but immediate final pay, mandatory vacation payout, automatic 2x/3x wage penalties, CADA claims against employers of any size and a 90-day retaliation presumption (HB 25-1001) add risk.",
+  "representation": "NLRA governs; union density in tech is low. The Labor Peace Act's unique second 75% election for union-security clauses survives after reform bills were vetoed in 2025 and 2026 (HB 26-1005).",
+  "privacy": "The Colorado Privacy Act excludes employment data, but the biometric amendment (HB 24-1130, July 2025) applies to employers regardless of size, plus data-disposal, security and 30-day breach rules and SB 26-189 AI notices from 2027.",
+  "payTransparency": "The most demanding US regime: ranges, benefits and deadlines in all postings, same-day notice of promotional opportunities to all Colorado employees, 30-day post-selection notices, a salary history ban and $500-$10,000 fines per violation.",
+  "workingTime": "COMPS Order: OT after 40/week, 12/day or 12 consecutive hours; paid 10-minute rest per 4 hours (untaken breaks paid extra); 30-minute meal over 5 hours; exempt floor $57,784 and computer rate $34.85/hr (2026).",
+  "leave": "HFWA 48 hours paid sick leave plus 80 hours public-health-emergency leave when triggered; FAMLI 12 weeks (+4 pregnancy complications, +12 NICU from 2026) with job protection after 180 days; DV, jury, voting leave.",
+  "immigration": "Federal I-9 rules apply; the state affirmation form was repealed in 2016. HB 26-1283 (June 2026) bars demanding or retaining employees' ID documents beyond short I-9 copying.",
+  "changeVelocity": "Several employment bills pass each session, CDLE rewrites COMPS/PAY CALC figures and rules every year, the AI Act was replaced in 2026, and a new governor in 2027 may sign bills Polis vetoed (Labor Peace Act, surveillance wage-setting, arbitration)."
+ },
+ "keyFacts": [
+  {
+   "label": "Employment model",
+   "value": "At-will, subject to CADA (all employers, 1+ employee), the lawful off-duty activity statute (C.R.S. 24-34-402.5), public-policy wrongful discharge and implied-contract claims. Wage-hour rules come from the Colorado Wage Act (C.R.S. 8-4-101 et seq.) and the COMPS Order #39 (7 CCR 1103-1), updated annually."
+  },
+  {
+   "label": "Contracts & offer letters",
+   "value": "No written contract is required. Offer letters and PIIAs must not include a non-compete or customer non-solicit unless the pay threshold is met, the trade-secret purpose is shown and a separate signed notice was given before the offer was accepted (C.R.S. 8-2-113(4)). Colorado law and venue must apply to Colorado-based workers. Training-repayment terms are allowed only under the 8-2-113(3) education exception."
+  },
+  {
+   "label": "Probation",
+   "value": "No statutory probation. An introductory period should state that it does not alter at-will status. HFWA accrual starts on day one, and FAMLI job protection requires 180 days of employment."
+  },
+  {
+   "label": "Notice (employer)",
+   "value": "No notice is required for individual terminations and Colorado has no mini-WARN; federal WARN (100+ employees) applies and notices go to CDLE as the state dislocated worker unit. Final pay is due immediately on involuntary separation."
+  },
+  {
+   "label": "Notice (employee)",
+   "value": "No notice is required. On resignation, final wages are due on the next regular payday (C.R.S. 8-4-109(1)(b)). Employers may not withhold earned vacation for failure to give notice (Nieto)."
+  },
+  {
+   "label": "Statutory severance",
+   "value": "None. Severance is market practice in exchange for a release. Releases cannot waive Wage Act rights to earned wages (C.R.S. 8-4-125), and any confidentiality or non-disparagement term must meet the POWR Act NDA conditions (C.R.S. 24-34-407)."
+  },
+  {
+   "label": "Working hours & overtime",
+   "value": "COMPS: 1.5x the regular rate after 40 hours/week, 12 hours/workday or 12 consecutive hours (no double time). Paid 10-minute rest break per 4 hours or major fraction (untaken breaks must be paid extra) and a 30-minute duty-free meal for shifts over 5 hours. Exempt salary floor $57,784/yr ($1,111.23/week) in 2026; highly technical computer employees may be paid hourly at $34.85+ (2026)."
+  },
+  {
+   "label": "Minimum wage",
+   "value": "$15.16/hr statewide from 1 Jan 2026 (CDLE has announced $15.71 for 2027 — verify). Local rates are higher: Denver $19.29, Edgewater $18.17, City of Boulder and unincorporated Boulder County $16.82 (2026). Fort Collins and Colorado Springs follow the state rate."
+  },
+  {
+   "label": "Annual leave",
+   "value": "Vacation is not mandatory, but once earned it is wages and cannot be forfeited at separation (Nieto v. Clark's Market, 2021 CO 48); CDLE treats use-it-or-lose-it forfeiture as unlawful, while accrual caps are allowed. Genuinely unlimited PTO with no accrual avoids payout. From 2026, records of vacation accrued, used and available must be kept."
+  },
+  {
+   "label": "Public holidays",
+   "value": "No private-sector requirement to give paid holidays or holiday premiums. Employees get up to 2 hours of paid voting leave on any day voter service and polling centers are open (HB 26-1113, from 1 Jun 2026) if they request it in advance."
+  },
+  {
+   "label": "Sick leave",
+   "value": "HFWA (C.R.S. 8-13.3-401 et seq.): 1 hour per 30 worked, up to 48 hours/year, carryover up to 48, front-loading allowed. Uses include own or family illness, preventive care, DV/sexual assault, public-health closures and, since SB 23-017, bereavement, weather/utility school closures and evacuation. Plus 80 hours of public health emergency leave during a declared emergency. No payout; reinstate balance if rehired within 6 months."
+  },
+  {
+   "label": "Parental leave",
+   "value": "FAMLI gives up to 12 weeks of paid leave (up to 90% wage replacement, capped weekly; $1,448.02 max reported for 2026 — verify), +4 weeks for pregnancy or childbirth complications and, from 2026, +12 weeks for NICU care (SB 25-144). Job-protected after 180 days' employment. FMLA (50+) runs concurrently. Parental leave offered for birth must be offered for adoption (C.R.S. 19-5-211)."
+  },
+  {
+   "label": "Social insurance / mandatory benefits",
+   "value": "FAMLI premium 0.88% of wages in 2026 (0.44% employer, 0.44% employee; employers with fewer than 10 employees pay only the employee half), capped at the Social Security wage base; 0.86% proposed for 2027. UI is employer-paid on a $30,600 chargeable wage base (2026). Workers' comp is mandatory. Colorado SecureSavings applies only if no qualified retirement plan is offered."
+  },
+  {
+   "label": "Payroll frequency & final pay",
+   "value": "Pay at least monthly (or every 30 days), within 10 days after the pay period ends, with itemized statements; post regular paydays (C.R.S. 8-4-103, 8-4-107). Involuntary separation: wages due immediately (6 hours if payroll is closed, 24 hours if off-site). Resignation: next regular payday. Unpaid wages 14 days after demand trigger a penalty of the greater of 2x or $1,000 (3x or $3,000 if willful)."
+  },
+  {
+   "label": "Employee representation",
+   "value": "NLRA governs private-sector labor relations; there are no works councils. The Colorado Labor Peace Act requires a second, 75% election before an all-union agreement; repeal bills were vetoed in 2025 and 2026. A 2024 captive-audience ban (HB 24-1260) was vetoed."
+  },
+  {
+   "label": "Data privacy law",
+   "value": "The Colorado Privacy Act (C.R.S. 6-1-1301 et seq.) excludes data maintained for employment purposes, but its biometric section (HB 24-1130, from 1 Jul 2025) applies to employers: written policy, consent, retention limits. Also data disposal and security duties and 30-day breach notice (C.R.S. 6-1-713, 713.5, 716), one-party-consent recording, and SB 26-189 AI notices from 1 Jan 2027."
+  },
+  {
+   "label": "Record retention",
+   "value": "Payroll and time records: 3 years (COMPS). Job descriptions and wage-rate history: employment plus 2 years (C.R.S. 8-5-202). Personnel and employment records and a repository of discrimination complaints: at least 5 years (POWR Act). I-9s per federal rules. Biometric data: delete within the HB 24-1130 limits."
+  },
+  {
+   "label": "Non-competes & IP",
+   "value": "C.R.S. 8-2-113 (HB 22-1317): non-competes void unless the worker earns at least $130,014 (2026) when signed and when enforced and the covenant protects trade secrets; customer non-solicits need 60% ($78,008.40). Separate signed notice required; Colorado law and venue; $5,000 per worker plus damages and fees; presenting a void covenant is a class 2 misdemeanor. SB 25-083 (Aug 2025) limits covenants for health-care providers and minority owners. Trade secrets: CUTSA (C.R.S. 7-74-101) and DTSA."
+  },
+  {
+   "label": "Language requirements",
+   "value": "No general translation rule for contracts. HFWA notices must be in English and any language spoken by 5% or more of the workforce, CDLE posters are available in many languages, FAMLI notices are in English and Spanish, and HB 26-1283 notices go in English and the employee's primary language."
+  },
+  {
+   "label": "Regulator(s)",
+   "value": "CDLE Division of Labor Standards and Statistics (wage-hour, HFWA, EPEWA, JAFA, non-compete fines); CDLE Division of Family and Medical Leave Insurance (FAMLI); CDLE Unemployment Insurance and Workers' Compensation divisions; Colorado Civil Rights Division/Commission (CADA); Attorney General (Privacy Act, biometrics, SB 26-189); Denver Labor (Denver minimum wage and wage theft); federal OSHA (no state plan)."
+  }
+ ],
+ "mandatoryPolicies": [
+  {
+   "name": "Anti-harassment program and complaint procedure (POWR Act)",
+   "requirement": "A program reasonably designed to prevent and deter harassment of all CADA classes, communicated to supervisory and non-supervisory staff, with a complaint route, prompt investigation and remedial action; needed for the only affirmative defense to harassment claims, which no longer require 'severe or pervasive' conduct.",
+   "source": "C.R.S. 24-34-402 as amended by SB 23-172 (POWR Act)",
+   "level": "required"
+  },
+  {
+   "name": "Personnel records retention and complaint repository",
+   "requirement": "Keep personnel and employment records (applications, accommodation requests, complaints, hiring, pay, promotion, termination and training decisions) for at least 5 years, and keep a repository of all discrimination complaints with date, complainant, alleged harasser and substance.",
+   "source": "CADA record-keeping as amended by SB 23-172 (POWR Act)",
+   "level": "required"
+  },
+  {
+   "name": "Pay transparency and job-opportunity posting procedure",
+   "requirement": "Every posting (internal or external, including remote roles open to Colorado) must state the pay range, a general description of benefits and other compensation, and the application deadline; notify all Colorado employees of promotional opportunities on the same day; send post-selection notices within 30 days; give written career-progression requirements.",
+   "source": "C.R.S. 8-5-201 (SB 23-105); 7 CCR 1103-13 (EPT Rules)",
+   "level": "required"
+  },
+  {
+   "name": "Equal pay, salary history and pay discussion policy",
+   "requirement": "No pay differences for substantially similar work based on sex or sex plus another protected status unless explained by listed factors; do not ask about or rely on wage history; no bans on discussing pay; keep job descriptions and wage-rate history for employment plus 2 years.",
+   "source": "C.R.S. 8-5-102, 8-5-202",
+   "level": "required"
+  },
+  {
+   "name": "Paid sick leave (HFWA) policy and notice",
+   "requirement": "48 hours/year of paid sick leave with all statutory uses, carryover, documentation only after 4+ consecutive workdays, confidentiality, non-retaliation, and public health emergency leave terms; give written notice (handbook if any) and post the Workplace Public Health Rights poster.",
+   "source": "C.R.S. 8-13.3-401 et seq.; 7 CCR 1103-7",
+   "level": "required"
+  },
+  {
+   "name": "FAMLI leave policy and notice",
+   "requirement": "Explain FAMLI rights, premium deductions, notice, job protection after 180 days, health-benefit continuation and anti-retaliation; display the current program notice and give it at hire and when a FAMLI-qualifying event is known. Private plans need approval.",
+   "source": "C.R.S. 8-13.3-501 et seq.; 7 CCR 1107-3, 1107-7",
+   "level": "required"
+  },
+  {
+   "name": "Restrictive covenant compliance procedure",
+   "requirement": "Use non-competes only for workers earning the highly compensated threshold ($130,014 in 2026) and customer non-solicits only at 60% ($78,008.40), tied to trade secrets; give the separate signed notice before offer acceptance or 14 days before effect for current workers; Colorado law and venue.",
+   "source": "C.R.S. 8-2-113 (HB 22-1317; SB 25-083); 7 CCR 1103-14 (PAY CALC Order)",
+   "level": "required"
+  },
+  {
+   "name": "Nondisclosure provisions in agreements",
+   "requirement": "Any clause limiting disclosure of discriminatory or unfair employment practices must apply equally to both parties, allow disclosure of the underlying facts, state disclosure is not disparagement, carry proportionate liquidated damages and include a signed compliance addendum; otherwise void and $5,000 per violation.",
+   "source": "C.R.S. 24-34-407 (SB 23-172)",
+   "level": "required"
+  },
+  {
+   "name": "Vacation / PTO policy",
+   "requirement": "If vacation is offered, earned time is wages: accrual caps are allowed, but no forfeiture at separation (and per CDLE none at year end); pay out at separation; keep balance records. Define any unlimited PTO carefully.",
+   "source": "C.R.S. 8-4-101(14)(a)(III); Nieto v. Clark's Market, 2021 CO 48",
+   "level": "expected"
+  },
+  {
+   "name": "Meal and rest period policy",
+   "requirement": "Authorize paid 10-minute rest periods per 4 hours (major fraction) and 30-minute duty-free meal periods for shifts over 5 hours (on-duty paid meal when impractical); pay extra for untaken rest breaks.",
+   "source": "COMPS Order #39, Rule 5 (7 CCR 1103-1)",
+   "level": "required"
+  },
+  {
+   "name": "Fair hiring procedure (Chance to Compete and JAFA)",
+   "requirement": "No criminal-history questions or 'no felons' language in ads or initial applications; no age, date of birth or school attendance/graduation dates on initial applications (allow redaction of certificates and transcripts).",
+   "source": "C.R.S. 8-2-130 (HB 19-1025); C.R.S. 8-2-131 (SB 23-058)",
+   "level": "required"
+  },
+  {
+   "name": "Pregnancy accommodation notice",
+   "requirement": "Provide reasonable accommodation for pregnancy, childbirth and related conditions through an interactive process; give written notice of these rights to new employees at hire and post it conspicuously.",
+   "source": "C.R.S. 24-34-402.3",
+   "level": "required"
+  },
+  {
+   "name": "Lactation accommodation",
+   "requirement": "Reasonable break time (paid or unpaid) to express milk for up to 2 years after birth, and a private location other than a toilet stall close to the work area.",
+   "source": "C.R.S. 8-13.5-101 et seq.",
+   "level": "required"
+  },
+  {
+   "name": "Domestic violence leave",
+   "requirement": "Employers with 50+ employees must allow up to 3 working days (paid or unpaid) in 12 months for victims of domestic abuse, stalking, sexual assault or related crimes to seek protection or services; keep it confidential. HFWA leave also covers these reasons.",
+   "source": "C.R.S. 24-34-402.7",
+   "level": "required"
+  },
+  {
+   "name": "Jury duty and voting leave",
+   "requirement": "Pay regular wages up to $50/day for the first 3 days of jury service and do not penalize jurors; give up to 2 hours of paid voting leave on request on any voting day (HB 26-1113).",
+   "source": "C.R.S. 13-71-126, 13-71-134; C.R.S. 1-7-102",
+   "level": "required"
+  },
+  {
+   "name": "Lawful off-duty conduct and drug/alcohol policy",
+   "requirement": "Do not terminate for lawful off-duty activity unless it conflicts with a bona fide occupational requirement or creates a conflict of interest. Drug-free policies may still bar marijuana (Coats v. Dish, 2015 CO 44) and natural medicine impairment or use.",
+   "source": "C.R.S. 24-34-402.5; Colo. Const. art. XVIII §16(6)(a); SB 23-290",
+   "level": "expected"
+  },
+  {
+   "name": "Biometric data policy",
+   "requirement": "Employers collecting biometric identifiers (badge, time clock, lab access) need a written, public policy with retention schedule, deletion deadlines and incident response, and informed consent; consent may be a condition of employment only for secure access, timekeeping, workplace safety/security and public safety.",
+   "source": "C.R.S. 6-1-1314 (HB 24-1130, eff. 1 Jul 2025)",
+   "level": "required"
+  },
+  {
+   "name": "Personal data disposal and security policy",
+   "requirement": "Written policy for destroying paper and electronic records with personal identifying information when no longer needed, reasonable security procedures, and breach notice to affected Colorado residents within 30 days (AG notice if 500+).",
+   "source": "C.R.S. 6-1-713, 6-1-713.5, 6-1-716",
+   "level": "required"
+  },
+  {
+   "name": "Payday notice and wage statements",
+   "requirement": "Post the regular paydays and time/place of payment; give itemized pay statements with hours, gross, deductions and net; limit deductions to those allowed by C.R.S. 8-4-105 and never below minimum wage (HB 25-1001); no PPE deductions (SB 26-160; verify scope).",
+   "source": "C.R.S. 8-4-103, 8-4-105, 8-4-107",
+   "level": "required"
+  },
+  {
+   "name": "Workers' compensation injury procedure",
+   "requirement": "Insure (or self-insure), post the DOWC notice, give injured workers the designated provider list, and file the Employer's First Report of Injury with the insurer within 10 days for lost time over 3 shifts or permanent impairment.",
+   "source": "C.R.S. 8-40-101 et seq.; 8-43-101, 8-43-404(5)",
+   "level": "required"
+  },
+  {
+   "name": "Personnel file access",
+   "requirement": "Current employees may inspect and copy their personnel file at least once a year; former employees once after separation. Employers may redact confidential reference and third-party information.",
+   "source": "C.R.S. 8-2-129",
+   "level": "required"
+  },
+  {
+   "name": "AI / automated decision tools notice procedure",
+   "requirement": "From 1 Jan 2027, deployers of ADMT that materially influences employment decisions must give notice before use, a plain-language explanation within 30 days of an adverse decision, and allow data correction and human review; AG rulemaking is pending.",
+   "source": "SB 26-189 (replacing SB 24-205)",
+   "level": "required"
+  },
+  {
+   "name": "Retirement plan or Colorado SecureSavings",
+   "requirement": "Employers without a qualified plan (5+ employees, in business 2+ years) must facilitate the state auto-IRA; employers offering a 401(k) should certify their exemption when contacted.",
+   "source": "C.R.S. 24-54.3-101 et seq. (verify thresholds)",
+   "level": "required"
+  }
+ ],
+ "stages": {
+  "hiring": [
+   {
+    "req": "Pay range, benefits and application deadline in every posting",
+    "detail": "Each posting for a job performed in Colorado or remotely by someone who could be in Colorado must state the hourly or salary range the employer in good faith expects to pay, a general description of bonuses, commissions and benefits, the application deadline and how to apply. Ranges cannot be open-ended ('up to'). Fines are $500-$10,000 per posting.",
+    "cite": "C.R.S. 8-5-201, 8-5-203; 7 CCR 1103-13"
+   },
+   {
+    "req": "Notice of promotional and job opportunities to all Colorado employees",
+    "detail": "Announce each job opportunity (including promotions) to all Colorado employees on the same calendar day, before a selection decision, with the same range and benefits content, including those who might not be fully qualified. Narrow exceptions: acting/interim roles, confidential replacements and career-development promotions. Career-progression moves need written criteria instead.",
+    "cite": "C.R.S. 8-5-201(1) (SB 23-105); EPT Rules"
+   },
+   {
+    "req": "Post-selection notice within 30 days",
+    "detail": "After an internal or external candidate is selected, notify the Colorado employees who will work with them regularly of the selectee's name, former title (if internal), new title and how to express interest in similar roles. The candidate may opt out of disclosure for safety or other lawful reasons.",
+    "cite": "C.R.S. 8-5-201 (SB 23-105, eff. 1 Jan 2024)"
+   },
+   {
+    "req": "No age, date of birth or graduation dates on initial applications",
+    "detail": "Remove DOB, age and school attendance or graduation dates from ATS fields and forms (JAFA, from 1 Jul 2024). If transcripts or certifications are requested, tell applicants they may redact age-identifying information. Penalties: warning, then up to $1,000 and $2,500 per violation, each posting counted.",
+    "cite": "C.R.S. 8-2-131 (SB 23-058)"
+   },
+   {
+    "req": "Ban-the-box (Chance to Compete Act)",
+    "detail": "Do not ask about criminal history on the initial application or state in ads that people with records may not apply. Background checks remain allowed later, with FCRA steps; do not ask about sealed records.",
+    "cite": "C.R.S. 8-2-130 (HB 19-1025)"
+   },
+   {
+    "req": "Salary history ban",
+    "detail": "Do not ask about or rely on an applicant's wage-rate history, directly or through recruiters or background vendors. Asking about pay expectations is allowed.",
+    "cite": "C.R.S. 8-5-102(1)"
+   },
+   {
+    "req": "Credit checks and social media limits",
+    "detail": "Use consumer credit information only where substantially related to the job as defined by statute, and disclose it in writing when it drives an adverse decision. Never demand personal social media passwords.",
+    "cite": "C.R.S. 8-2-126; 8-2-127"
+   },
+   {
+    "req": "Non-compete notice before offer acceptance",
+    "detail": "If the role will carry a non-compete or customer non-solicit, give the separate, signed notice (naming the agreement and the covenant sections) with the offer so the candidate receives it before accepting; confirm the pay meets the 2026 threshold ($130,014 or $78,008.40).",
+    "cite": "C.R.S. 8-2-113(2), (4); PAY CALC Order"
+   },
+   {
+    "req": "AI and automated tools in screening",
+    "detail": "Today CADA disparate-impact rules and federal law apply. From 1 Jan 2027, ADMT that materially influences hiring needs pre-use notice to applicants, a plain-language explanation within 30 days of an adverse decision, correction and human-review rights (SB 26-189). Inventory vendors now.",
+    "cite": "SB 26-189; CADA C.R.S. 24-34-402"
+   }
+  ],
+  "onboarding": [
+   {
+    "req": "Form I-9; no state affirmation form; ID retention limits",
+    "detail": "Complete federal I-9 (and E-Verify only if used company-wide or federally required). Colorado's Affirmation of Legal Work Status was repealed in 2016, but CDLE may audit and request I-9 documentation. HB 26-1283 (from 3 Jun 2026) bars demanding or keeping employees' government IDs except briefly (up to 10 hours) for I-9 verification and copying.",
+    "cite": "8 U.S.C. 1324a; C.R.S. 8-2-122 (as amended by HB 16-1114); HB 26-1283"
+   },
+   {
+    "req": "New hire reporting",
+    "detail": "Report new hires and rehires to the Colorado State Directory of New Hires within 20 days of hire.",
+    "cite": "Colorado State Directory of New Hires; 42 U.S.C. 653a"
+   },
+   {
+    "req": "Required notices at hire",
+    "detail": "Give written HFWA notice (handbook if one exists), the current FAMLI program notice, the pregnancy-accommodation notice and any restrictive-covenant notices; post the COMPS poster, Workplace Public Health Rights poster, payday notice, CCRD anti-discrimination, UI and workers' comp posters.",
+    "cite": "HFWA (C.R.S. 8-13.3-401 et seq.); 7 CCR 1107-3; C.R.S. 24-34-402.3; 8-4-107"
+   },
+   {
+    "req": "Restrictive covenants and PIIA",
+    "detail": "Use a Colorado-specific PIIA: confidentiality clauses cannot bar use of general skills, publicly available information or legally protected disclosures; non-competes only for eligible earners with trade-secret nexus; Colorado law and forum. Current employees need the notice 14 days before the covenant or new consideration takes effect.",
+    "cite": "C.R.S. 8-2-113"
+   },
+   {
+    "req": "Biometric consent for access and timekeeping",
+    "detail": "If badge, fab-access or time systems use fingerprints or face geometry, obtain informed consent and publish the biometric policy; consent may be a condition of employment only for secure access, timekeeping, safety and security.",
+    "cite": "C.R.S. 6-1-1314 (HB 24-1130)"
+   },
+   {
+    "req": "Payroll and tax set-up",
+    "detail": "Set up Colorado withholding (DR 0004 optional certificate), FAMLI premiums, UI account, local minimum wage by work location, and Denver Occupational Privilege Tax for employees earning $500+/month working in Denver ($5.75 employee and $4 employer per month).",
+    "cite": "Colorado Dept. of Revenue; Denver Rev. Mun. Code (OPT)"
+   },
+   {
+    "req": "Exempt classification check",
+    "detail": "Confirm exempt roles meet the COMPS salary ($57,784 in 2026) or computer-employee hourly rate ($34.85) and the COMPS duties tests; lab technicians and test operators are usually non-exempt.",
+    "cite": "COMPS Order #39 (7 CCR 1103-1)"
+   },
+   {
+    "req": "Retirement: SecureSavings exemption",
+    "detail": "If the company offers a 401(k), certify the Colorado SecureSavings exemption when the program sends an access code; otherwise register and facilitate payroll deductions.",
+    "cite": "C.R.S. 24-54.3-101 et seq."
+   }
+  ],
+  "payAndPayroll": [
+   {
+    "req": "State and local minimum wage",
+    "detail": "Pay at least $15.16 (2026) statewide or the higher local rate where work is performed: Denver $19.29, Edgewater $18.17, Boulder city and unincorporated county $16.82. Rates update on 1 January; CDLE has announced $15.71 for 2027 (verify).",
+    "cite": "C.R.S. 8-6-101 et seq.; COMPS Order; Denver Minimum Wage Ordinance"
+   },
+   {
+    "req": "Exempt salary and computer-employee thresholds",
+    "detail": "Colorado exempt floor is $57,784/yr ($1,111.23/week) in 2026, indexed annually; highly technical computer employees may be paid hourly at $34.85+. Colorado has no highly compensated employee exemption.",
+    "cite": "COMPS Order #39; CDLE INFO #1 (2026)"
+   },
+   {
+    "req": "Overtime and regular rate",
+    "detail": "Pay 1.5x the regular rate after 40 hours/week, 12 hours/workday or 12 consecutive hours regardless of workday. Include non-discretionary bonuses and shift differentials in the regular rate; comp time in lieu of OT is not allowed for private employers.",
+    "cite": "COMPS Order #39; PAY CALC Order (7 CCR 1103-14)"
+   },
+   {
+    "req": "Pay frequency, pay statements and paydays",
+    "detail": "Pay at least monthly or every 30 days, no more than 10 days after the period ends; issue itemized statements; post regular paydays.",
+    "cite": "C.R.S. 8-4-103, 8-4-107"
+   },
+   {
+    "req": "Deductions",
+    "detail": "Only lawful deductions (tax, authorized benefits, written-agreement items); never reduce pay below minimum wage (HB 25-1001) or deduct for required PPE (SB 26-160, 2026; verify scope beyond meatpacking). Deductions for unreturned property need a prior written agreement.",
+    "cite": "C.R.S. 8-4-105; HB 25-1001; SB 26-160"
+   },
+   {
+    "req": "Equal pay analysis",
+    "detail": "Pay differences for substantially similar work by sex, or sex plus another protected status, must be fully explained by seniority, merit, production, geography, education/training/experience or travel. Back pay reaches 6 years plus equal liquidated damages; a thorough pay audit in the prior 2 years with reasonable progress can defeat liquidated damages.",
+    "cite": "C.R.S. 8-5-102, 8-5-104 (SB 23-105)"
+   },
+   {
+    "req": "Wage theft penalties and enforcement",
+    "detail": "Unpaid wages 14 days after written demand or complaint trigger the greater of 2x or $1,000 (3x or $3,000 if willful). Willful non-payment is theft (HB 19-1267). HB 25-1001 adds misclassification fines ($5,000-$50,000), 25%-owner liability, published citations and a CDLE claim limit of $13,000 (Jul 2026-Dec 2027); SB 26-121 raised willful-violation penalties from May 2026.",
+    "cite": "C.R.S. 8-4-109; HB 19-1267; HB 25-1001; SB 26-121"
+   },
+   {
+    "req": "Vacation and sick balances in records",
+    "detail": "From 2026 the Wage Protection Rules require records of vacation and HFWA hours accrued, used and available. HFWA leave is paid at the rate the employee would have earned (excluding OT and bonuses), with new calculation rules from 1 Feb 2026.",
+    "cite": "7 CCR 1103-7 (2026 amendments)"
+   },
+   {
+    "req": "FAMLI premium withholding",
+    "detail": "Withhold 0.44% of wages (employee share) and pay 0.44% (employer share) up to the Social Security wage base in 2026; report and remit quarterly by 30 Apr, 31 Jul, 31 Oct and 31 Jan. The 2027 rate is proposed at 0.86% total.",
+    "cite": "C.R.S. 8-13.3-501 et seq.; 7 CCR 1107-1"
+   }
+  ],
+  "timeAndLeave": [
+   {
+    "req": "Meal and rest periods",
+    "detail": "Authorize a paid 10-minute rest per 4 hours (major fraction), ideally mid-block, and a 30-minute uninterrupted duty-free meal for shifts over 5 hours (paid on-duty meal if impractical). A 12-hour fab shift needs three rest breaks; untaken rest periods must be paid as extra time.",
+    "cite": "COMPS Order #39 (rest and meal period rules)"
+   },
+   {
+    "req": "HFWA paid sick leave",
+    "detail": "1 hour per 30 worked up to 48 hours/year (front-loading allowed); covers mental or physical illness, care, DV, public-health closures, bereavement, weather/utility school closures and evacuation. Documentation only after 4+ consecutive workdays; no payout; reinstate if rehired within 6 months.",
+    "cite": "C.R.S. 8-13.3-401 et seq. (SB 23-017)"
+   },
+   {
+    "req": "Public health emergency leave",
+    "detail": "When a qualifying public health emergency is declared, full-time employees get 80 hours (prorated for part-time) of supplemental paid leave usable through 4 weeks after the emergency ends; existing PTO counts only if usable for the same reasons.",
+    "cite": "C.R.S. 8-13.3-401 et seq. (public health emergency leave)"
+   },
+   {
+    "req": "FAMLI paid leave and job protection",
+    "detail": "Up to 12 weeks per year of paid family, medical, safe or military exigency leave, +4 weeks for pregnancy complications and +12 weeks for NICU care from 2026. Employees employed 180+ days must be reinstated to the same or an equivalent job; maintain health benefits. Intermittent leave allowed.",
+    "cite": "C.R.S. 8-13.3-501 et seq., 8-13.3-509 (SB 25-144)"
+   },
+   {
+    "req": "FMLA coordination and Family Care Act",
+    "detail": "Run FAMLI concurrently with FMLA where both apply (with notice). Colorado extends FMLA family-care leave to civil union and domestic partners. Employees may choose, but cannot be required, to use PTO; employers may allow top-ups.",
+    "cite": "C.R.S. 8-13.3-201 et seq.; FAMLI rules"
+   },
+   {
+    "req": "Domestic violence leave",
+    "detail": "Employers with 50+ employees: up to 3 working days per 12 months for victims seeking protection orders, medical care, counseling or relocation. Keep records confidential.",
+    "cite": "C.R.S. 24-34-402.7"
+   },
+   {
+    "req": "Jury duty",
+    "detail": "Pay regular wages up to $50/day for the first 3 days of jury service (regular employees); no penalty for service.",
+    "cite": "C.R.S. 13-71-126, 13-71-134"
+   },
+   {
+    "req": "Voting leave",
+    "detail": "Up to 2 hours of paid leave to vote on any day polling centers are open, on advance request; employer may set the hours and may deny only if the employee has 3+ consecutive non-working hours while polls are open.",
+    "cite": "C.R.S. 1-7-102 (HB 26-1113, eff. 1 Jun 2026)"
+   },
+   {
+    "req": "Vacation and PTO rules",
+    "detail": "Accrual caps are allowed, but earned vacation cannot be forfeited; pay out at separation. Combined PTO banks that also satisfy HFWA must meet all HFWA rules for the sick-leave portion.",
+    "cite": "Nieto v. Clark's Market, 2021 CO 48; HFWA"
+   }
+  ],
+  "benefits": [
+   {
+    "req": "FAMLI: state plan or approved private plan",
+    "detail": "Participate in the state program (0.88% in 2026) or get a private plan approved that equals or exceeds FAMLI; private plans need annual attestations, and 2026 proposed rules end the 8-year renewal.",
+    "cite": "C.R.S. 8-13.3-501 et seq.; 7 CCR 1107-5"
+   },
+   {
+    "req": "Health benefits during leave",
+    "detail": "Continue group health coverage on the same terms during FAMLI leave (as under FMLA); the employee keeps paying their share.",
+    "cite": "C.R.S. 8-13.3-509"
+   },
+   {
+    "req": "Adoption leave parity",
+    "detail": "If parental leave is offered for the birth of a child, the same leave must be offered for adoption (other than stepparent adoptions).",
+    "cite": "C.R.S. 19-5-211"
+   },
+   {
+    "req": "Colorado SecureSavings",
+    "detail": "Employers with 5+ employees and no qualified plan must facilitate the state auto-IRA; 401(k) sponsors should certify their exemption.",
+    "cite": "C.R.S. 24-54.3-101 et seq."
+   },
+   {
+    "req": "Unemployment insurance",
+    "detail": "Employer-paid premiums on the first $30,600 of wages (2026), experience-rated with support and solvency surcharges; file quarterly wage reports and respond promptly to separation requests to avoid charges.",
+    "cite": "C.R.S. 8-70-101 et seq.; CDLE UI"
+   },
+   {
+    "req": "Workers' compensation",
+    "detail": "Mandatory for all employers with employees; provide the designated provider list and post the DOWC notice. SB 26-175 lets employers ask carriers to adjust inflated experience-mod factors from 2027.",
+    "cite": "C.R.S. 8-40-101 et seq.; SB 26-175"
+   }
+  ],
+  "performanceAndConduct": [
+   {
+    "req": "Harassment standard without 'severe or pervasive'",
+    "detail": "Harassment is unwelcome conduct based on a protected class that is subjectively offensive to the individual and objectively offensive to a reasonable person in the same class; petty slights generally excluded. Train managers on the lower standard and investigate promptly.",
+    "cite": "C.R.S. 24-34-402 (SB 23-172)"
+   },
+   {
+    "req": "Affirmative defense requires a real program",
+    "detail": "The employer defense applies only if it had a harassment-prevention program with documented communication to staff, prompt investigation and remedial action, and the employee unreasonably failed to use it.",
+    "cite": "C.R.S. 24-34-402 (SB 23-172)"
+   },
+   {
+    "req": "Lawful off-duty activity",
+    "detail": "Do not discipline for lawful off-duty conduct unless it relates to a bona fide occupational requirement or causes a conflict of interest. Marijuana is not 'lawful' for this purpose (Coats v. Dish Network, 2015 CO 44), so drug-free policies remain valid.",
+    "cite": "C.R.S. 24-34-402.5"
+   },
+   {
+    "req": "Pay discussion and whistleblower protection",
+    "detail": "No discipline for discussing pay or for raising public-health or safety concerns (PHAWA). HB 25-1001 presumes retaliation for adverse action within 90 days of wage-related protected activity.",
+    "cite": "C.R.S. 8-5-102; 8-14.4-101 et seq.; HB 25-1001"
+   },
+   {
+    "req": "AI and monitoring in performance decisions",
+    "detail": "From 2027, ADMT that materially influences discipline, pay or termination needs notice and a post-adverse explanation within 30 days (SB 26-189). HB 26-1210 on surveillance-based wage-setting was vetoed in 2026. Recording is one-party consent.",
+    "cite": "SB 26-189; C.R.S. 18-9-303, 304"
+   },
+   {
+    "req": "Investigation records and complaint repository",
+    "detail": "Log every discrimination or harassment complaint (date, parties, substance) in a central repository and keep investigation files 5+ years.",
+    "cite": "SB 23-172 (POWR Act)"
+   },
+   {
+    "req": "Personnel file access",
+    "detail": "Allow current employees to review and copy their file at least annually and former employees once after separation.",
+    "cite": "C.R.S. 8-2-129"
+   }
+  ],
+  "termination": [
+   {
+    "req": "At-will with documented reasons",
+    "detail": "Document legitimate reasons and check timing against leave, accommodation, complaints and wage claims. CADA covers employers of any size; charges can be filed with CCRD within 300 days, and compensatory and punitive damages are available.",
+    "cite": "C.R.S. 24-34-402, 24-34-306, 24-34-405"
+   },
+   {
+    "req": "Immediate final pay on involuntary separation",
+    "detail": "Pay all wages, commissions due and accrued vacation immediately at termination (within 6 hours of the next workday if payroll is closed, 24 hours if payroll is off-site). Deliver at the worksite, local office or by mail to the last known address.",
+    "cite": "C.R.S. 8-4-109(1)(a)"
+   },
+   {
+    "req": "Vacation payout",
+    "detail": "All earned, unused vacation must be paid at separation regardless of policy language; forfeiture clauses are void.",
+    "cite": "Nieto v. Clark's Market, 2021 CO 48; C.R.S. 8-4-101(14)(a)(III)"
+   },
+   {
+    "req": "No state WARN",
+    "detail": "Colorado has no mini-WARN; federal WARN (100+ employees; 50+ at a site) applies, with notice to CDLE's rapid-response unit and local officials. CDLE publishes WARN notices.",
+    "cite": "29 U.S.C. 2101 et seq.; CDLE WARN list"
+   },
+   {
+    "req": "Enforcing restrictive covenants",
+    "detail": "A non-compete is enforceable only if the worker was highly compensated both when signed and at enforcement; attempting to enforce a void covenant risks $5,000 per worker, damages, fees and misdemeanor liability.",
+    "cite": "C.R.S. 8-2-113(2), (8)"
+   },
+   {
+    "req": "Separation agreements",
+    "detail": "Releases need consideration beyond wages owed; earned wages cannot be waived. Confidentiality/non-disparagement must meet the POWR Act conditions and include the signed addendum. Include OWBPA terms for 40+.",
+    "cite": "C.R.S. 8-4-125; 24-34-407; 29 U.S.C. 626(f)"
+   },
+   {
+    "req": "Retaliation presumption",
+    "detail": "Adverse action within 90 days of a wage complaint or protected wage activity is presumed retaliatory (HB 25-1001); escalate these cases to Legal.",
+    "cite": "C.R.S. 8-4-120; HB 25-1001"
+   }
+  ],
+  "exit": [
+   {
+    "req": "Final pay delivery and penalties",
+    "detail": "Resignations: next regular payday. If any wages remain unpaid 14 days after a written demand or complaint, penalties of the greater of 2x or $1,000 apply (3x or $3,000 if willful), plus fees.",
+    "cite": "C.R.S. 8-4-109"
+   },
+   {
+    "req": "UI separation information",
+    "detail": "Respond to CDLE separation-information requests promptly via MyUI Employer+. Give separating employees information on filing for unemployment (CDLE separation notice — verify current form).",
+    "cite": "Colorado Employment Security Act; CDLE UI guidance (verify)"
+   },
+   {
+    "req": "Return of property and deductions",
+    "detail": "Recover devices and badges; deduct the value of unreturned property from final pay only under a prior written agreement and within C.R.S. 8-4-105 limits.",
+    "cite": "C.R.S. 8-4-105(1)(e)"
+   },
+   {
+    "req": "Benefits and FAMLI after exit",
+    "detail": "Issue COBRA notices. Former employees can still claim FAMLI benefits based on prior wages, although job protection ends.",
+    "cite": "29 U.S.C. 1161; C.R.S. 8-13.3-501 et seq."
+   },
+   {
+    "req": "References",
+    "detail": "Employers who disclose job-performance information about former employees are presumed in good faith unless the information was knowingly false or violated civil rights; keep to verifiable facts.",
+    "cite": "C.R.S. 8-2-114"
+   },
+   {
+    "req": "Trade-secret exit steps",
+    "detail": "Collect exit certifications and remind departing engineers of confidentiality duties; do not threaten a non-compete that fails 8-2-113.",
+    "cite": "C.R.S. 7-74-101 et seq. (CUTSA); DTSA"
+   },
+   {
+    "req": "Personnel file and records",
+    "detail": "Provide a former employee one inspection or copy of the personnel file on request; keep records for the required retention periods.",
+    "cite": "C.R.S. 8-2-129"
+   }
+  ],
+  "recordsAndPrivacy": [
+   {
+    "req": "Colorado Privacy Act exclusion for HR data",
+    "detail": "The CPA does not cover people acting in an employment context or data kept for employment records, so no CPA rights requests for HR data; still honor it for consumer-facing products.",
+    "cite": "C.R.S. 6-1-1303, 6-1-1304"
+   },
+   {
+    "req": "Biometric identifiers",
+    "detail": "Written, public biometric policy with retention schedule and incident response; delete once the purpose is met, within 24 months after last interaction, or within 45 days of deciding retention is no longer needed; no sale; consent rules for employees.",
+    "cite": "C.R.S. 6-1-1314 (HB 24-1130)"
+   },
+   {
+    "req": "Data disposal, security and breach notice",
+    "detail": "Keep a written disposal policy and reasonable security for personal identifying information; notify affected residents within 30 days of determining a breach and the AG if 500+ residents.",
+    "cite": "C.R.S. 6-1-713, 6-1-713.5, 6-1-716"
+   },
+   {
+    "req": "Retention minimums",
+    "detail": "Payroll/time records 3 years (COMPS); job descriptions and wage-rate history for employment plus 2 years (EPEWA); personnel records and complaint repository at least 5 years (POWR); vacation and sick-leave balance records (2026 rules).",
+    "cite": "COMPS Order #39; C.R.S. 8-5-202; SB 23-172"
+   },
+   {
+    "req": "State EEO-1 filing (from 2027)",
+    "detail": "Private employers with 100+ workers must submit EEO-1-type demographic data to the Colorado Secretary of State starting 1 Jul 2027, even if the federal filing is discontinued; keep demographic data separate from personnel files.",
+    "cite": "HB 26-1207"
+   },
+   {
+    "req": "Medical and leave records confidentiality",
+    "detail": "Keep HFWA documentation, FAMLI certifications and accommodation records confidential and separate from personnel files.",
+    "cite": "HFWA; FAMLI (C.R.S. 8-13.3-509); ADA"
+   },
+   {
+    "req": "AI decision records",
+    "detail": "Keep records for ADMT used in employment decisions to support notices, explanations and corrections from 2027; developers must keep documentation for 3 years.",
+    "cite": "SB 26-189"
+   },
+   {
+    "req": "Recording and social media",
+    "detail": "Colorado is a one-party-consent state for recording; employers may not demand access to personal social media accounts.",
+    "cite": "C.R.S. 18-9-303, 304; 8-2-127"
+   }
+  ],
+  "healthSafety": [
+   {
+    "req": "Federal OSHA jurisdiction",
+    "detail": "Colorado has no state OSHA plan for private employers; federal OSHA standards (HazCom, lab standard, PSM for hazardous gases, recordkeeping) apply. A state OSHA bill (HB 26-1054) failed in 2026.",
+    "cite": "29 U.S.C. 651 et seq."
+   },
+   {
+    "req": "Workers' compensation injury handling",
+    "detail": "Give the injured worker the designated provider list, report lost-time injuries (over 3 shifts) to the insurer within 10 days, and do not retaliate. Employees should report injuries in writing within 4 working days.",
+    "cite": "C.R.S. 8-43-101, 8-43-102, 8-43-404(5)"
+   },
+   {
+    "req": "Public health whistleblower protection",
+    "detail": "No retaliation for raising workplace health and safety concerns about a public health emergency or for wearing one's own PPE; post the Workplace Public Health Rights poster.",
+    "cite": "C.R.S. 8-14.4-101 et seq. (PHAWA)"
+   },
+   {
+    "req": "Heat illness",
+    "detail": "No state heat standard yet; HB 26-1272 directs CDLE to collect data and publish a model temperature-related injury prevention plan by 1 Jul 2028. Follow OSHA general-duty guidance for gowned clean-room work.",
+    "cite": "HB 26-1272"
+   },
+   {
+    "req": "Drug and alcohol testing",
+    "detail": "Testing is allowed; employers may prohibit marijuana and natural-medicine use or impairment. Apply federal rules for DOT or cleared roles and handle medical-marijuana disclosures under the ADA/CADA accommodation process carefully.",
+    "cite": "Colo. Const. art. XVIII §16(6)(a); SB 23-290; Coats v. Dish Network"
+   },
+   {
+    "req": "Accommodation process",
+    "detail": "Run an interactive process for disability, pregnancy and lactation accommodations; CADA covers all employers.",
+    "cite": "C.R.S. 24-34-402, 24-34-402.3; 8-13.5-101 et seq."
+   }
+  ]
+ },
+ "terminationDeepDive": {
+  "voluntary": "Employees may resign at any time without notice (at-will), and no notice can be enforced by withholding wages or vacation. Final wages, including all earned vacation, are due on the next regular payday (C.R.S. 8-4-109(1)(b)). If the employer accepts a resignation early, pay through the notice period or treat it as an involuntary separation and pay immediately. Paid garden leave is allowed; any post-employment non-compete must independently satisfy C.R.S. 8-2-113.",
+  "involuntary": "At-will termination needs no cause or process, but risks include CADA discrimination, harassment and retaliation claims (all employer sizes; 300 days to file with CCRD; compensatory and punitive damages), lawful off-duty activity claims (C.R.S. 24-34-402.5), FAMLI and HFWA interference and retaliation, the 90-day presumption of retaliation after wage complaints (HB 25-1001), and public-policy wrongful discharge. Best practice: documented performance history, consistent treatment, independent decision-maker, legal review of timing near leave or complaints, human review of any AI input, and final pay ready at the meeting.",
+  "redundancy": "No statutory redundancy pay, consultation or state mini-WARN. Federal WARN applies (100+ employees; 60 days' notice for plant closings or mass layoffs of 50+ at a site), with notices to employees, the CDLE state dislocated worker/rapid-response unit and the local chief elected official; CDLE publishes WARN filings. OWBPA group disclosures apply to releases from workers 40+. CDLE's Work-Share program is an alternative to layoffs. Final pay for laid-off employees is due immediately, including vacation.",
+  "finalPayTiming": "Involuntary separation (including layoff): all wages, earned commissions and accrued vacation due immediately; within 6 hours of the start of the next workday if the payroll unit is closed, or 24 hours if it is off-site (C.R.S. 8-4-109(1)(a)). Resignation: next regular payday. If wages remain unpaid 14 days after a written demand or a filed claim, the employer owes the wages plus the greater of 2x the unpaid amount or $1,000, rising to 3x or $3,000 if willful (SB 22-161), plus attorney fees; willful non-payment can be prosecuted as theft (HB 19-1267).",
+  "requiredDocuments": [
+   "Final paycheck with itemized pay statement, including all earned vacation (C.R.S. 8-4-103, 8-4-109; Nieto)",
+   "Information on filing for unemployment insurance and prompt responses to CDLE separation requests (verify current CDLE separation notice form)",
+   "COBRA election notice (federal) for group health plan participants",
+   "Personnel file copy on request of the former employee (C.R.S. 8-2-129)",
+   "OWBPA disclosures for releases from workers 40+ (21/45 days to consider, 7 days to revoke)",
+   "POWR Act nondisclosure addendum signed by both parties where the agreement has confidentiality terms (C.R.S. 24-34-407)",
+   "Federal WARN notices where thresholds are met (to employees, CDLE and local officials)"
+  ],
+  "releaseAgreements": "Releases of CADA, federal and common-law claims are enforceable if knowing, voluntary and supported by consideration beyond wages already owed; earned wages and vacation must be paid unconditionally because Wage Act rights cannot be waived (C.R.S. 8-4-125). Any provision limiting disclosure of discriminatory or unfair employment practices must apply equally to both parties, allow disclosure of the underlying facts to anyone, state that disclosure is not disparagement, keep liquidated damages proportionate, and be accompanied by a signed addendum confirming compliance; otherwise it is void and carries a $5,000 penalty (C.R.S. 24-34-407). HFWA, FAMLI, UI and workers' comp rights cannot be waived by private agreement. Any non-compete or non-solicit in a severance agreement must meet the C.R.S. 8-2-113 pay thresholds and notice rules. OWBPA timing applies for employees 40+.",
+  "typicalPackage": "Market practice (not statutory) for Front Range tech and semiconductor employers is broadly in line with national tech norms: individual contributors typically 2-4 weeks' base pay per year of service with a 4-8 week minimum; directors and VPs 3-6 months; executives 6-12 months under a severance plan. Packages often add a COBRA subsidy (3-6 months), outplacement and a pro-rated bonus. Colorado adds no WARN pay, but release consideration must be separate from earned vacation, which is always paid out."
+ },
+ "recentChanges": [
+  {
+   "date": "2026-08",
+   "title": "State EEO-1 reporting enacted (HB 26-1207)",
+   "detail": "Private employers with 100+ workers must file EEO-1 demographic data with the Colorado Secretary of State starting 1 Jul 2027, regardless of whether the federal EEO-1 continues. The act took effect 12 Aug 2026; rules are pending.",
+   "impact": "medium"
+  },
+  {
+   "date": "2026-06",
+   "title": "Limits on holding employees' ID documents (HB 26-1283)",
+   "detail": "From 3 Jun 2026 employers may not demand, confiscate or retain government-issued IDs, except up to 10 hours for employment-eligibility verification and copying; written notice in English and the employee's primary language; class 2 misdemeanor.",
+   "impact": "low"
+  },
+  {
+   "date": "2026-06",
+   "title": "Paid voting leave expanded (HB 26-1113)",
+   "detail": "From 1 Jun 2026, up to 2 hours of paid leave to vote on any day voter service and polling centers are open (not just election day), on advance request; first applies to the 3 Nov 2026 general election.",
+   "impact": "low"
+  },
+  {
+   "date": "2026-05",
+   "title": "AI Act replaced by SB 26-189 after court blocks SB 24-205",
+   "detail": "A federal court stipulated order (27 Apr 2026, xAI/DOJ challenge) blocked enforcement of SB 24-205. SB 26-189, signed 14 May 2026 and effective 1 Jan 2027, replaces risk-management, impact-assessment and anti-discrimination duties with notice of ADMT use in consequential decisions (including employment), a plain-language explanation within 30 days of an adverse decision, data correction and human review; AG-only enforcement with a 60-day cure period and rulemaking due by 1 Jan 2027.",
+   "impact": "high"
+  },
+  {
+   "date": "2026-05",
+   "title": "Higher wage-violation penalties (SB 26-121)",
+   "detail": "From 4 May 2026, penalties for willful and repeat wage violations and misclassification increase, with further scheduled increases from 2028; agricultural OT threshold moves to 56 hours in 2027 (not relevant to tech).",
+   "impact": "medium"
+  },
+  {
+   "date": "2026-02",
+   "title": "HFWA pay-calculation rules",
+   "detail": "From 1 Feb 2026, CDLE rules define HFWA pay as what the employee would have earned (excluding OT and bonuses), with rules for multiple rates, commissions and a 30-day lookback; the Wage Protection Rules now also require records of vacation and sick hours accrued, used and available.",
+   "impact": "medium"
+  },
+  {
+   "date": "2026-01",
+   "title": "2026 COMPS and PAY CALC figures",
+   "detail": "Minimum wage $15.16; exempt salary $57,784 ($1,111.23/week); computer employee hourly $34.85; non-compete highly compensated threshold $130,014 and customer non-solicit $78,008.40; Denver $19.29, Edgewater $18.17, Boulder $16.82. Local governments may set tip offsets (HB 25-1208).",
+   "impact": "high"
+  },
+  {
+   "date": "2026-01",
+   "title": "FAMLI NICU leave and premium cut (SB 25-144)",
+   "detail": "Up to 12 additional weeks of paid FAMLI leave for parents of infants in neonatal intensive care (up to 24 weeks combined with bonding); premium reduced to 0.88% (0.44/0.44) for 2026, with the director setting later rates (0.86% proposed for 2027; cap 1.2%).",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-08",
+   "title": "Colorado Wage Act overhaul (HB 25-1001)",
+   "detail": "Effective 6 Aug 2025: 25%+ owners can be liable as employers, misclassification fines of $5,000-$50,000, a 90-day presumption of retaliation, CDLE claim limit raised to $13,000 (Jul 2026-Dec 2027), published violation citations, deductions cannot cut pay below minimum wage, and limits on employer fee recovery.",
+   "impact": "high"
+  },
+  {
+   "date": "2025-08",
+   "title": "Non-compete amendments (SB 25-083)",
+   "detail": "For agreements entered or renewed from 6 Aug 2025: non-competes and patient non-solicits void for physicians, APRNs and dentists; sale-of-business non-competes for minority owners (under 50%, interest received for services) limited to sale proceeds divided by average annual compensation, in years.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-08",
+   "title": "AI Act delayed to 30 Jun 2026 (SB 25B-004)",
+   "detail": "The August 2025 special session pushed SB 24-205's effective date from 1 Feb 2026 to 30 Jun 2026; the law was later blocked and replaced by SB 26-189.",
+   "impact": "low"
+  },
+  {
+   "date": "2025-07",
+   "title": "Biometric privacy rules apply to employers (HB 24-1130)",
+   "detail": "From 1 Jul 2025, any employer collecting biometric identifiers needs a written policy, retention and deletion schedule, incident response and informed consent; consent can be a condition of employment only for access control, timekeeping and safety/security. AG enforcement; no private right of action.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-05",
+   "title": "Kelly Loving Act (HB 25-1312)",
+   "detail": "Effective 16 May 2025: CADA's gender expression protection covers chosen name and how an individual chooses to be addressed; intentional deadnaming or misgendering can support discrimination or harassment claims. Update HRIS name fields and harassment training.",
+   "impact": "medium"
+  },
+  {
+   "date": "2024-07",
+   "title": "Job Application Fairness Act in force (SB 23-058)",
+   "detail": "From 1 Jul 2024, employers may not request age, date of birth or school attendance/graduation dates on initial applications; certificates and transcripts may be requested if applicants can redact ages. CDLE enforcement with warnings, then fines up to $1,000 and $2,500.",
+   "impact": "medium"
+  },
+  {
+   "date": "2024-01",
+   "title": "EPEWA amendments (SB 23-105) and FAMLI benefits start",
+   "detail": "From 1 Jan 2024, postings must list the application deadline, employers must send post-selection notices within 30 days and give career-progression criteria; pay discrimination back pay extends to 6 years. FAMLI benefits became payable on 1 Jan 2024.",
+   "impact": "high"
+  }
+ ],
+ "watchlist": [
+  {
+   "title": "SB 26-189 rulemaking and go-live",
+   "detail": "AG rules on ADMT notices, explanations and records are due by 1 Jan 2027, when the law takes effect; watch whether the federal challenge or federal preemption efforts affect it.",
+   "expected": "Q4 2026 - 1 Jan 2027"
+  },
+  {
+   "title": "2027 COMPS/PAY CALC figures",
+   "detail": "Confirm the 2027 minimum wage ($15.71 announced), exempt salary, computer-employee rate and non-compete thresholds in the adopted COMPS and PAY CALC orders; update postings and covenant eligibility lists.",
+   "expected": "Nov-Dec 2026 (effective 1 Jan 2027)"
+  },
+  {
+   "title": "FAMLI 2027 premium and rule amendments",
+   "detail": "Proposed rules (hearing 18 Aug 2026) set 0.86% for 2027, require the current notice in English and Spanish at hire and after qualifying events, and make private-plan approvals indefinite. Confirm adoption.",
+   "expected": "Q4 2026"
+  },
+  {
+   "title": "New governor and vetoed labor bills",
+   "detail": "Governor Polis is term-limited; after the Nov 2026 election a new governor takes office in Jan 2027. Bills he vetoed (Labor Peace Act repeal HB 26-1005, surveillance wage-setting HB 26-1210, arbitration HB 26-1236) are likely to return.",
+   "expected": "2027 legislative session (Jan-May 2027)"
+  },
+  {
+   "title": "State EEO-1 filing rules (HB 26-1207)",
+   "detail": "Secretary of State rules on format and deadline for the first Colorado EEO-1 filing, due from 1 Jul 2027 for 100+ employers.",
+   "expected": "Rules late 2026 / first filing 2027"
+  },
+  {
+   "title": "Local minimum wages for 2027",
+   "detail": "Denver, Edgewater and Boulder city/county announce 2027 rates in the fall; other Front Range cities may adopt local minimums under the 2019 local-option law.",
+   "expected": "Oct-Dec 2026"
+  },
+  {
+   "title": "Temperature injury prevention model plan (HB 26-1272)",
+   "detail": "CDLE data collection now; model plan by 1 Jul 2028, which could become the basis for a future mandate.",
+   "expected": "2028"
+  }
+ ],
+ "calendar": [
+  {
+   "month": 1,
+   "title": "New rates and laws effective",
+   "detail": "1 Jan: new state and local minimum wages, exempt salary and computer rate, PAY CALC non-compete thresholds, FAMLI premium rate; post the new COMPS poster. 2027: SB 26-189 AI duties begin."
+  },
+  {
+   "month": 1,
+   "title": "FAMLI and UI Q4 filings",
+   "detail": "31 Jan: FAMLI Q4 wage report and premiums; UI quarterly wage report and premiums."
+  },
+  {
+   "month": 2,
+   "title": "FAMLI headcount and OSHA 300A",
+   "detail": "FAMLI employer size is recalculated annually (confirm headcount in the FAMLI portal); post OSHA Form 300A from 1 Feb to 30 Apr."
+  },
+  {
+   "month": 3,
+   "title": "Covenant eligibility review",
+   "detail": "After the new PAY CALC threshold, confirm that employees with non-competes or non-solicits still earn at least the threshold; enforcement requires the threshold at the time of enforcement."
+  },
+  {
+   "month": 4,
+   "title": "FAMLI and UI Q1 filings",
+   "detail": "30 Apr: FAMLI Q1 wage report and premiums; UI Q1 report."
+  },
+  {
+   "month": 5,
+   "title": "Legislative session ends",
+   "detail": "The General Assembly adjourns in early May; the governor has 30 days to act. Track signed bills and effective dates (many take effect in early August)."
+  },
+  {
+   "month": 7,
+   "title": "FAMLI and UI Q2 filings; mid-year effective dates",
+   "detail": "31 Jul: FAMLI Q2 wage report and premiums; UI Q2 report. 1 Jul 2027: first Colorado EEO-1 filings due under HB 26-1207 (confirm deadline)."
+  },
+  {
+   "month": 8,
+   "title": "New laws without safety clause take effect",
+   "detail": "Bills without a safety clause take effect about 90 days after adjournment (12 Aug in 2026): update handbooks, postings and forms."
+  },
+  {
+   "month": 9,
+   "title": "FAMLI rate for next year; CDLE rule proposals",
+   "detail": "FAMLI director sets next year's premium by 1 Sept; CDLE proposes next year's COMPS and PAY CALC orders in the fall."
+  },
+  {
+   "month": 10,
+   "title": "FAMLI and UI Q3 filings; election leave",
+   "detail": "31 Oct: FAMLI Q3 wage report and premiums; UI Q3 report. In even years, prepare for paid voting-leave requests before the November election (HB 26-1113)."
+  },
+  {
+   "month": 11,
+   "title": "General election and vacation planning",
+   "detail": "Election day (3 Nov 2026) voting leave. Remind managers that year-end vacation forfeiture is not allowed; use accrual caps instead."
+  },
+  {
+   "month": 12,
+   "title": "Year-end updates",
+   "detail": "Update Colorado posting ranges, offer letters and non-compete notices for new thresholds; order the new COMPS poster; confirm local minimum wage changes for interns and non-exempt staff."
+  }
+ ],
+ "gotchas": [
+  "Posting Front Range engineering roles (or 'remote, US') without a good-faith pay range, benefits description and application deadline, or filling promotions without same-day notice to all Colorado employees and a post-selection notice within 30 days. Each posting is a separate $500-$10,000 violation.",
+  "Using national offer letters or PIIAs with non-competes or customer non-solicits for employees below $130,014/$78,008.40 (2026), without the separate signed notice, or with Delaware/California law or venue. Penalties are $5,000 per worker plus damages, fees and criminal exposure.",
+  "Forfeiting accrued vacation at termination or year end, or conditioning payout on notice. Nieto makes earned vacation wages, and late final pay triggers 2x/3x penalties.",
+  "Paying laid-off or discharged employees on the next regular payday: Colorado requires immediate final pay for involuntary separations, including remote employees, and unpaid wages after a demand trigger automatic 2x/3x penalties.",
+  "Leaving date of birth or graduation year fields in the ATS or on background-check forms used at the initial application stage (JAFA), or asking criminal-history questions on the initial application.",
+  "Relying on 'severe or pervasive' in harassment policies and training, and using separation or settlement NDAs without the POWR Act terms and signed addendum.",
+  "Assuming the old Colorado E-Verify affirmation form is still required (repealed 2016) while keeping copies of IDs longer than allowed under HB 26-1283, or holding original documents.",
+  "Treating a generic PTO policy as HFWA-compliant without checking all HFWA uses, carryover, the 4-day documentation limit and the 6-month reinstatement rule; not reinstating employees after FAMLI leave (180+ days' service).",
+  "Missing local rules: Denver's $19.29 minimum wage and the Denver Occupational Privilege Tax for staff working in Denver, and Boulder's $16.82 rate for interns and non-exempt staff.",
+  "Assuming the Colorado Privacy Act covers or exempts all HR data processing, and overlooking the biometric policy for fab and lab access systems and the SB 26-189 AI notices from 2027."
+ ],
+ "semiconductorNotes": [
+  "Front Range footprint and talent: Microchip runs a wafer fab in Colorado Springs (Fab 5); its preliminary $162M CHIPS Act terms (Jan 2024, covering Colorado Springs and Gresham, OR) were paused when Microchip suspended its CHIPS application in Dec 2024 amid restructuring. Broadcom and Intel have long-standing Fort Collins design sites (verify current headcount after 2024-25 industry layoffs). Talent pipelines include CSU, CU Boulder, UCCS and Colorado School of Mines, plus aerospace and defense employers in Colorado Springs competing for the same analog, RF and verification engineers.",
+  "Trade secrets without broad non-competes: most senior design engineers exceed the $130,014 threshold, but many new-grad and mid-level engineers, technicians and recruiters do not. Build a tiered covenant matrix by comp band, reissue notices when adding covenants, and rely on CUTSA/DTSA controls (access tiers, DLP, exit certifications) for everyone else.",
+  "Pay transparency at scale: engineering requisitions, internal transfers and promotions all need Colorado-compliant postings, and remote 'US' roles must not exclude Colorado to avoid posting duties. Align ranges with the internal job architecture and keep EPEWA wage-rate history for employment plus 2 years.",
+  "Classification: design and verification engineers are usually exempt at $57,784+ with professional duties; software, firmware and EDA roles may use the computer-employee exemption ($34.85/hr in 2026). Lab, test and fab technicians are usually non-exempt. Colorado has no HCE exemption.",
+  "Fab and lab shifts: 12-hour shifts trigger OT only beyond 12 hours in a workday or 12 consecutive hours, but need three paid 10-minute rest breaks and a meal period; untaken rest breaks must be paid extra. Gowning time is usually compensable.",
+  "Biometrics and security: fingerprint or face-based access to clean rooms and secure labs is a permitted condition of employment under HB 24-1130, but requires a written policy, retention schedule and deletion within the statutory limits.",
+  "Export control and cleared roles: EAR/ITAR deemed-export screening and security-clearance roles (common in Colorado Springs defense work) must be handled after the initial application and consistently with CADA national-origin rules, JAFA and ban-the-box limits. Drug-free policies for cleared roles remain valid under Coats.",
+  "Incentives: HB 23-1260 created CHIPS zones and refundable-credit mechanisms for semiconductor manufacturers that seek federal CHIPS funding; coordinate HR data (jobs, wages) with tax and economic development reporting when expanding a Front Range site."
+ ],
+ "sources": [
+  {
+   "title": "CDLE INFO #1: 2026 COMPS and PAY CALC Orders",
+   "url": "https://cdle.colorado.gov/sites/cdle/files/info_%231_2026_comps_&_paycalc_orders_12.18.25.pdf"
+  },
+  {
+   "title": "CDLE 2026 COMPS Order poster",
+   "url": "https://cdle.colorado.gov/sites/cdle/files/2026_comps_order_poster_english_%5Baccessible%5D.pdf"
+  },
+  {
+   "title": "Ogletree: Colorado implements changes to wage and hour rules for 2026",
+   "url": "https://ogletree.com/insights-resources/blog-posts/colorado-implements-changes-to-wage-and-hour-rules-for-2026/"
+  },
+  {
+   "title": "GovDocs: Colorado's new minimum wage rates for 2026 (state and local)",
+   "url": "https://www.govdocs.com/colorados-new-minimum-wage-rates/"
+  },
+  {
+   "title": "Epstein Becker Green: 2026 state non-compete salary thresholds",
+   "url": "https://www.ebglaw.com/trade-secrets-employee-mobility/raising-the-cost-of-noncompetes-2026-state-noncompete-salary-threshold-changes"
+  },
+  {
+   "title": "Cooley: Colorado's new limitations on restrictive covenants (HB 22-1317)",
+   "url": "https://www.cooley.com/news/insight/2022/2022-07-12-colorados-new-limitations-on-restrictive-covenants-take-effect-in-august-2022"
+  },
+  {
+   "title": "Littler: SB 25-083 changes for health-care providers and minority owners",
+   "url": "https://www.littler.com/news-analysis/asap/colorado-brings-significant-changes-noncompete-agreements-healthcare-providers"
+  },
+  {
+   "title": "Kutak Rock: Summary of SB 25-083",
+   "url": "https://www.kutakrock.com/newspublications/publications/2025/july/summary-of-sb-25-083"
+  },
+  {
+   "title": "CDLE: Equal Pay for Equal Work Act (C.R.S. 8-5-101 et seq.)",
+   "url": "https://cdle.colorado.gov/sites/cdle/files/co_equal_pay_for_equal_work_act_%E2%80%9Cepewa%E2%80%9D),_c.r.s_%C2%A7_8-5-101,_et_seq.pdf"
+  },
+  {
+   "title": "Littler: Colorado pay transparency amendments go live 1 Jan 2024",
+   "url": "https://www.littler.com/publication-press/publication/colorado-pay-transparency-amendments-go-live-january-1-2024-requiring"
+  },
+  {
+   "title": "CDLE: Job Application Fairness Act (SB 23-058)",
+   "url": "https://cdle.colorado.gov/sites/cdle/files/Job%20Application%20Fairness%20Act%20%5Baccessible%5D.pdf"
+  },
+  {
+   "title": "Seyfarth: SB 23-017 changes to the Healthy Families and Workplaces Act",
+   "url": "https://www.seyfarth.com/news-insights/if-pain-or-anything-else-yes-gain-part-110-imminent-changes-to-colorados-healthy-families-and-workplaces-act.html"
+  },
+  {
+   "title": "FAMLI Division: Employers (premium rate and filing)",
+   "url": "https://famli.colorado.gov/employers"
+  },
+  {
+   "title": "Jackson Lewis: Colorado FAMLI changes for 2026",
+   "url": "https://www.jacksonlewis.com/insights/colorado-famli-new-changes-new-year-impact-process-duration-more"
+  },
+  {
+   "title": "Rocky Mountain Employer: FAMLI proposed rule amendments (2027 premium 0.86%)",
+   "url": "https://www.rockymountainemployersblog.com/blog/2026/7/30/colorados-famli-division-proposes-amendments-to-six-rules-ahead-of-august-18-2026-hearing"
+  },
+  {
+   "title": "Littler: Colorado's POWR Act",
+   "url": "https://www.littler.com/publication-press/publication/colorados-powr-act-significantly-expands-workplace-harassment-laws"
+  },
+  {
+   "title": "Greenberg Traurig: 2025 round-up of Colorado employment law",
+   "url": "https://www.gtlaw.com/en/insights/2025/12/2025-round-up-major-colorado-employment-law-developments"
+  },
+  {
+   "title": "Faegre Drinker: 2026 Colorado employment law — what's new",
+   "url": "https://www.faegredrinker.com/en/insights/publications/2026/6/2026-colorado-employment-law-whats-new-whats-next-and-what-to-do-about-it"
+  },
+  {
+   "title": "Fisher Phillips: Employer guide to Colorado's newest workplace laws (2026 session)",
+   "url": "https://www.fisherphillips.com/en/insights/insights/employer-guide-to-colorados-newest-workplace-laws"
+  },
+  {
+   "title": "McDermott: Colorado AI law replacement bill signed after federal court blocks predecessor",
+   "url": "https://www.mcdermottlaw.com/insights/colorado-ai-law-in-flux-comprehensive-replacement-bill-signed-after-federal-court-blocks-predecessors-enforcement/"
+  },
+  {
+   "title": "Littler: Implications for employers of Colorado's biometrics law",
+   "url": "https://www.littler.com/news-analysis/asap/implications-employers-colorados-new-biometrics-law"
+  },
+  {
+   "title": "CDLE: Employment verification law (affirmation repealed 2016)",
+   "url": "https://cdle.colorado.gov/employment-verification-law"
+  },
+  {
+   "title": "Colorado General Assembly: SB 22-161 wage theft penalties",
+   "url": "https://leg.colorado.gov/bills/sb22-161"
+  },
+  {
+   "title": "CDLE UI: Premiums and 2026 chargeable wage base",
+   "url": "https://cdle.colorado.gov/ui/employers/requirements/premiums"
+  },
+  {
+   "title": "Colorado General Assembly: HB 23-1260 semiconductor incentives",
+   "url": "https://leg.colorado.gov/bills/hb23-1260"
+  }
+ ]
+}

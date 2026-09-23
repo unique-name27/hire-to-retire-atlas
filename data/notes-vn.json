@@ -1,0 +1,553 @@
+{
+ "jurisdiction": "vn",
+ "processes": {
+  "PL-01": "Budget employer on-costs of about 21.5% SI/HI/UI (SI/HI capped at VND 50.6m/month from 1 Jul 2026, so most engineers hit the cap), the 2% union fee, the customary 13th-month/Tet bonus and 12 paid holidays from 2026. Plan contract types (the third consecutive contract must be indefinite), the duties that start at 10 employees (registered internal labour regulations), and confirm the HCMC or Hanoi site's minimum-wage zone after the 2025 provincial mergers.",
+  "PL-02": "Specify contract type and term on the req (definite-term maximum 36 months; only two definite-term contracts before an indefinite one) and the probation cap that follows from the role (60 days for degree-level engineering roles, 180 for enterprise managers). Flag roles that may need a foreign hire, since Decree 219/2025 folds the labour-demand explanation into the work-permit dossier filed 10-60 days before start. Classify technology access early because Vietnam is in EAR Country Group D:1, and budget gross VND pay with the SI cap and Tet bonus in the cost model.",
+  "PL-03": "There is no exempt/non-exempt split, so every job code is subject to the 8 h/day, 48 h/week and 40 h/month overtime limits; tag roles likely to need the 300-hour annual overtime regime (highly skilled technical work) or night shifts. Map levels to the salary scale and payroll table, which must be built after union consultation and published (LC Art. 93).",
+  "PL-04": "Changes in structure, technology or products that affect multiple jobs need a labour-use plan (LC Art. 44) consulted with the grassroots union and published within 15 days, then 30 days' notice to the provincial People's Committee and the employees before any dismissal, with the job-loss allowance (1 month per non-UI year, minimum 2 months). Temporary transfers to other work without consent are limited to 60 working days a year (Art. 29); other changes need a written contract annex.",
+  "PL-05": "Individual contractors doing ongoing, supervised work risk recharacterization as employees with SI back-contributions. Labour outsourcing is allowed only through licensed providers, for the jobs listed in Decree 145/2020 and for up to 12 months, with equal pay for comparable work (LC Arts. 52-58); contractors still need export-control screening and PDPL processing terms.",
+  "TA-01": "There is no pay-range posting rule, but ads may not state gender, age, marital-status or appearance preferences (LC Art. 8; Law on Gender Equality), and candidates may not be charged recruitment fees (Art. 11). Post in Vietnamese (English alongside is common) and link the PDPL candidate notice.",
+  "TA-02": "Recruitment agencies and headhunters must hold an employment-services licence and sign PDPL data-processing terms; referral bonuses are taxable salary. Engineers are often hired from competing design centres and OSATs, so screen for confidentiality obligations to the prior employer.",
+  "TA-03": "Use structured, job-related questions only: no questions about marriage, pregnancy or family plans, and no discrimination on the LC Art. 8 grounds, which include HIV status and union membership. Under PDPL Art. 25, collect only what recruitment needs, disclose any automated screening, and delete unsuccessful candidates' data unless they consent to a talent pool. Keep scorecards, since the selection record is the employer's main evidence if discrimination is alleged.",
+  "TA-04": "The offer should mirror the Vietnamese labour contract (job, workplace, salary and allowances, hours, probation of up to 60 days for engineering roles at 85%+ pay, SI and bonus basis), with an IP and trade-secret annex under LC Art. 21(2). State whether a 13th-month/Tet bonus is contractual, and quote gross VND pay with the SI cap and the 2026 five-bracket PIT in mind. Post-employment non-competes are of uncertain enforceability, so rely on confidentiality terms and paid restrictions.",
+  "TA-05": "Employers cannot obtain criminal records directly; ask the candidate for a Judicial Record Certificate No. 1 only where the role justifies it, with separate consent because criminal-record data is sensitive under Decree 356/2025. Verify degrees and employment with consent, and never keep original identity papers or diplomas or take deposits (LC Art. 17).",
+  "TA-06": "Vietnam is in EAR Country Group D:1 (national security) and D:3, not A:5, so releasing US-origin NS-controlled or advanced-computing technology or source code to Vietnamese nationals in Vietnam is a re-export that may need a licence; check TSR and other exceptions with Trade Compliance. Third-country nationals at the site (e.g., PRC nationals) trigger a deemed re-export to their home country. Collect nationality data under a PDPL notice and gate design-database access until cleared.",
+  "TA-07": "Foreign hires need a work permit (up to 2 years, renewable once) applied for 10-60 days before start with legalized degree, experience and criminal-record evidence, or a Decree 219/2025 exemption (e.g., under 90 days a year, or priority science, technology and innovation work confirmed by a ministry or province) notified at least 3 working days before start. Experts need a degree plus 2 years' relevant experience (1 year in priority sectors); then obtain the LD visa and a temporary residence card.",
+  "TA-08": "Trainees who do productive work must be paid (LC Art. 61) and students need a genuine training agreement (verify local practice); graduates are hired on labour contracts with probation of up to 60 days. University partnerships support the national target of 50,000 semiconductor engineers by 2030 (Decision 1017/QD-TTg).",
+  "TA-09": "Executives are covered by the Labor Code like everyone else: probation of up to 180 days for enterprise managers, and a 120-day notice period may apply under Decree 145 Art. 7 (verify). If the Vietnamese entity has a single legal representative, that person must reside in Vietnam (Enterprise Law 2020 Art. 12), and post-exit non-competes are of uncertain enforceability.",
+  "TA-10": "Screen for relatives of officials at state-owned customers, universities and government-linked research institutes, because Penal Code bribery offences reach the private sector. Hiring a competitor's engineer who brings design data exposes the company to trade-secret claims under the IP Law (Arts. 84-85, 127), so check prior confidentiality obligations.",
+  "TA-11": "PDPL Art. 25 requires collecting only recruitment-necessary data and deleting unsuccessful candidates' data unless they agree to retention; consent must be specific and verifiable (no pre-ticked boxes). A US-hosted ATS is a cross-border transfer: include it in the DPIA, and file a transfer impact assessment with the Ministry of Public Security within 60 days unless counsel confirms the Decree 356 HR-management exemption reaches candidate data (verify).",
+  "ON-01": "Sign the Vietnamese (or bilingual) labour contract and the IP/confidentiality annex before Day 1, on paper or as an e-contract through a licensed provider uploaded to the national platform under Decree 337/2025. Collect the personal ID number (now also the tax code), dependant registrations and SI details so SI and labour registration happen within 30 days, and do not keep original certificates or take deposits (LC Art. 17). For foreigners the work permit (or exemption notification) must be in place before the first working day, and export-control clearance must precede design access.",
+  "ON-02": "Vietnamese nationals need no permit; verify the citizen identity card, which is also used for SI and tax. Foreign nationals need a valid work permit or confirmed exemption before starting, an LD visa or temporary residence card, and a contract no longer than the permit (LC Art. 151); diarize renewal 10-45 days before expiry (verify window).",
+  "ON-03": "Record contract type and term, the count of definite-term contracts, probation end date, SI salary (base plus regular allowances) and PIT residency and dependants; for foreigners add work-permit number and expiry and whether SI applies (12+ month contracts). Update the labour management book (LC Art. 12; Decree 145/2020) and register SI and labour information within 30 days.",
+  "ON-04": "Probation is capped at 60 days for degree-level roles (30 for technicians, 180 for enterprise managers), once per job, at 85%+ of salary; either side can end it without notice, and the employer must notify the result in writing at the end (LC Arts. 24-27). Deliver the registered internal labour regulations (including the sexual harassment section), OSH induction training by Decree 44/2016 group before lab access, and the PDPL employee notice with monitoring disclosure, keeping signed acknowledgments.",
+  "ON-05": "Relocation or sign-on repayment terms can be agreed as reasonable, pro-rated contractual commitments (verify court practice), but they cannot be deducted from wages, which LC Art. 102 limits to damage compensation capped at 30% of net pay; recover by agreement. Repayment of employer-funded training costs is expressly allowed under a training agreement (Art. 62).",
+  "PY-01": "Pay monthly in VND on the fixed date with an itemized statement (LC Arts. 95, 97), withhold PIT on the five-bracket schedule with VND 15.5m/6.2m family deductions, and remit SI/HI/UI (employer 21.5%, employee 10.5%; SI/HI capped at VND 50.6m from 1 Jul 2026) plus the 2% union fee by the last day of the following month. From the 2026 tax year lawful overtime and night pay and pay for untaken leave are fully PIT-exempt (Decree 253/2026), so payroll must code them separately with timesheet support. Parent RSU and ESPP income is employment income; confirm with Tax whether it is taxed at vesting or on sale.",
+  "PY-02": "Final settlement is due within 14 working days of termination (up to 30 in restructuring or closure; LC Art. 48), so off-cycle runs are normal for leavers. Payments to people without a labour contract or on contracts under 3 months carry 10% PIT withholding once a payment reaches VND 5m (Decree 253/2026).",
+  "PY-03": "No employee is exempt: overtime needs consent, is capped at 40 h/month and 200 h/year (300 h in listed cases with written notice to the provincial labour authority), and is paid at 150/200/300% plus 30% for night work and a further 20% for night overtime (LC Arts. 98, 107). Keep timesheets and consent records; overtime and night pay are PIT-exempt from 2026 only with supporting documentation.",
+  "PY-04": "The employer files the annual PIT finalization, including for employees who authorize it, by 31 March, and self-filing employees finalize by 30 April; issue electronic PIT withholding certificates. Employees claiming charitable, medical or education deductions must self-file (Decree 253/2026), and foreign employees usually finalize before leaving Vietnam.",
+  "PY-05": "Correct underpayments quickly, because pay 15+ days late carries interest (LC Art. 97). Deductions are allowed only for damage compensation under Art. 129, capped at 30% of net monthly pay (Art. 102), so recover overpayments through a signed repayment agreement.",
+  "CO-01": "There is no pay-range posting duty, but salary scales and payroll tables must be built after union consultation and published at the workplace (LC Art. 93), and base pay may not fall below the regional minimum (Region I VND 5.31m). Price DV, validation and embedded roles on HCMC and Hanoi semiconductor survey cuts, because OSAT and design-centre competition is intense.",
+  "CO-02": "Increases need a contract annex and any reduction needs the employee's written consent. Many Vietnamese employers run increases from January or April alongside the Tet bonus cycle, and SI contributions follow the new salary up to the VND 50.6m cap. Keep salary scales and payroll tables in line with the outcome, and apply equal pay for work of equal value (LC Art. 90(3)).",
+  "CO-03": "Bonus rules must be issued after consulting the grassroots union and published (LC Art. 104); once promised in the contract or bonus regulation they are enforceable, including pro-rata and leaver terms. The customary 13th-month or Tet bonus is paid before Tet and taxed as salary.",
+  "CO-04": "Put commission plans in published bonus or salary regulations with signed acknowledgment; overpaid commission cannot be deducted from wages beyond damage compensation (LC Art. 102). Variable commissions are generally outside the SI salary base (verify), and payments or favours to customer staff risk Penal Code bribery offences.",
+  "CO-05": "Document counteroffers in contract annexes; retention bonuses with repayment terms are contractual commitments but cannot be recovered by wage deduction. The weeks after the Tet bonus payout are the peak resignation window in Vietnam's semiconductor talent market.",
+  "CO-06": "LC Art. 90(3) requires equal pay for work of equal value without gender discrimination; there is no reporting duty. Moving employee-level pay data to US analytics is a cross-border transfer, exempt from a transfer impact assessment only if the internal labour regulations cover cross-border HR management (Decree 356 Art. 17(3)).",
+  "CO-07": "Vietnamese employees are in the worldwide pay-ratio population unless excluded under the de minimis rule; pull payroll data from the local entity under the ILR-based PDPL transfer basis. Any Vietnam-based officer's equity is employment income for PIT (verify timing).",
+  "EQ-01": "Parent RSUs, options and ESPP discounts are employment income for PIT; confirm with Tax whether Vietnam taxes them at vesting or on sale, and withhold through local payroll, especially where the entity bears a recharge. Check whether the Vietnamese entity must register the plan or report foreign-currency flows with the State Bank of Vietnam before employees remit ESPP contributions or receive sale proceeds (verify). Name the US equity platform in the internal labour regulations so the Decree 356 HR-management exemption covers grantee data.",
+  "EQ-02": "Withhold PIT on vesting or exercise income through Vietnamese payroll at the resident rates (up to 35%) or 20% for non-residents (verify timing rules), and include it in the annual finalization. Proceeds held abroad follow State Bank foreign-exchange rules (verify).",
+  "EQ-03": "Payroll contributions to a foreign ESPP are an outward remittance, so confirm the State Bank of Vietnam registration route for the plan before enrolling Vietnamese employees (verify). The purchase discount is taxable employment income.",
+  "EQ-04": "Parent-share trading raises no Vietnamese insider-trading issue, but the Securities Law 2019 prohibits trading HOSE- or HNX-listed securities on inside information, which matters where customers or partners are listed in Vietnam. Provide a Vietnamese summary and acknowledgment.",
+  "EQ-05": "No material variation from the global standard; any Vietnam-based officer's share withholding is still reported on Form 4.",
+  "EQ-06": "Recovery cannot be deducted from wages (LC Art. 102 allows only damage compensation up to 30% of net pay), so recover through a signed repayment agreement or cancellation of unvested awards under the plan terms; PIT already withheld is not automatically refunded (verify).",
+  "BN-01": "Register SI, HI and UI within 30 days of signing for contracts of 1 month or more (employer 21.5%, employee 10.5%), with labour registration folded into the SI dossier from Jul 2026. Foreigners on contracts of 12+ months join SI and HI but not UI; intra-company transferees and hires already at retirement age are excluded (Decree 158/2025). Private medical cover for the employee, often with dependants, is market standard.",
+  "BN-02": "There is no open enrollment: private medical and life policies renew annually, and SI bases change when salaries change or the reference level moves (from 1 Jul 2026 VND 2.53m, with a VND 50.6m cap).",
+  "BN-03": "Register new dependants for PIT family deductions (VND 6.2m/month each) by 31 December (Decree 253/2026) and add them to private medical cover; a birth triggers the SI lump-sum childbirth allowance (2x the reference level) and maternity or paternity claims.",
+  "BN-04": "The state pension runs through SI (22% of the SI salary: 14% employer, 8% employee), and a pension needs 15 years' contributions under the 2024 SI Law. Voluntary supplementary pension plans are optional (Decree 88/2016), and one-time SI withdrawal is restricted for people who began contributing after 1 Jul 2025.",
+  "BN-05": "Renew private medical, accident and life cover and the annual health-check provider (OSH Law Art. 21); contracts with insurers and brokers handling employee health data need PDPL processing terms, because health data is sensitive under Decree 356/2025.",
+  "BN-06": "There is no statutory health continuation; private medical ends under the policy terms. Terminated Vietnamese employees can claim UI within 3 months, so close the SI record and issue termination documents within the 14-working-day settlement window.",
+  "LV-01": "Maternity leave is 6 months (7 months for a second child from 1 Jul 2026 under the Population Law) and paternity leave 5-14 working days within 60 days of birth (10 days for a second child), both paid by SI at 100% of the average SI salary; sickness is paid by SI at 75% for 30-60 working days a year depending on contribution history. The employer files the SI claims and cannot terminate during sick leave under treatment, approved leave, pregnancy, maternity leave or while the employee raises a child under 12 months (LC Arts. 37, 137). Unpaid leave is by agreement only.",
+  "LV-02": "Female employees get a 60-minute daily nursing break until the child is 12 months and 30 minutes a day during menstruation, and from the 7th month of pregnancy cannot be assigned overtime, night work or long trips without consent; pregnant employees in harmful work must be moved without loss of pay (LC Arts. 137-138; Decree 145 Art. 80). Employees with serious disabilities cannot be required to work overtime or at night without consent (Art. 160), and disability and HIV discrimination are prohibited (Art. 8). Medical information is sensitive personal data needing consent under the PDPL.",
+  "LV-03": "Returning mothers are entitled to their old job or, if it no longer exists, another job at no lower pay (LC Art. 140). A mother may return early after at least 4 months with a medical certificate and the employer's agreement, receiving both salary and the maternity benefit (Art. 139(4)).",
+  "LV-04": "Occupational accident and disease insurance (0.5% employer) pays SI benefits, but the employer must also pay treatment costs, full salary during treatment and OSH Law compensation of 1.5 months' salary for 5-10% capacity loss up to 30 months for 81%+ or death (reduced where the employee was at fault; OSH Law Art. 38). Report and investigate accidents under Decree 39/2016.",
+  "LV-05": "Grant 12 days' annual leave plus 1 day per 5 years (LC Arts. 113-114), 11 statutory holidays plus Vietnamese Culture Day (24 Nov) from 2026, and 2 extra days for foreign employees' traditional New Year and national day (Art. 112(2)). Set the leave schedule after consulting employees, pay out untaken leave on exit (PIT-exempt from 2026), and pay 300% plus holiday pay for holiday work.",
+  "PD-01": "No statutory process, but written goals feed the task-completion criteria that LC Art. 36(1)(a) requires before any termination for regular failure to complete work. Keep goals and check-ins in Vietnamese or bilingual with the employee's acknowledgment.",
+  "PD-02": "Ratings used for pay or exit decisions should rest on published task-completion criteria issued after union consultation, because regular failure to complete work is a termination ground only against those criteria (LC Art. 36(1)(a)). Pay outcomes must respect equal pay for work of equal value (Art. 90(3)), and employees who are pregnant, on maternity leave or raising a child under 12 months must not suffer rating-driven adverse action. Review data moved to US systems needs the ILR-based HR-management exemption or a transfer impact assessment under Decree 356/2025.",
+  "PD-03": "There is no statutory PIP, but a PIP measured against the published task-completion criteria is the evidence needed for an Art. 36(1)(a) termination with 45/30/3 days' notice. Poor performance alone is not a disciplinary ground, so do not dress a performance exit as a dismissal. Because an unlawful termination brings reinstatement and back pay, failed PIPs usually end in a negotiated mutual termination (Art. 34(3)) settled within 14 working days.",
+  "PD-04": "Record the promotion in a contract annex with the new title and salary; the higher salary becomes the SI contribution salary up to the cap. Apply equal pay for work of equal value; there are no other legal constraints.",
+  "PD-05": "No statutory rules; talent data sent to US systems relies on the ILR-based HR-management exemption under Decree 356. With the national push for 50,000 semiconductor engineers and aggressive poaching, retention plans for DV, validation and embedded leads matter more than legal controls.",
+  "PD-06": "Statutory content is OSH training by Decree 44/2016 group (at induction and periodic refreshers), acknowledgment of the registered internal labour regulations including the sexual harassment section, and fire-safety training for the on-site fire team. Add anti-bribery (Penal Code private-sector bribery), export-control and PDPL awareness. Keep completion records, because discipline must rest on registered rules the employee was made aware of.",
+  "PD-07": "Training agreements that require repayment of employer-funded training are expressly allowed and must state the course, cost, commitment period and repayment terms (LC Art. 62); keep invoices as evidence. Repayment cannot be deducted from wages beyond the Art. 102 limits, so recover by agreement.",
+  "MV-01": "A change of job, workplace or salary needs a written contract annex (LC Art. 22). A temporary transfer without consent is limited to 60 working days a year for listed reasons with 3 working days' notice, and pay is protected for 30 working days (Art. 29). For foreigners, a new position or work location may need a work-permit update or notification (Decree 219/2025).",
+  "MV-02": "Inbound assignees need a work permit (exempt only if under 90 days a year or in another listed case) and a temporary residence card; intra-company transferees are outside Vietnamese SI, while foreigners on local contracts of 12+ months join SI and HI (Decree 158/2025). Tax residents (183+ days) pay PIT on worldwide income at up to 35%, non-residents 20% on Vietnam-source income. Releasing controlled technology to assignees or local staff in Vietnam follows EAR Country Group D:1 rules, and assignee activity for the US parent can create PE exposure (verify with Tax).",
+  "MV-03": "Moving an employee into the Vietnamese entity requires a new labour contract (a move between entities is a termination and rehire unless structured as an agreed transfer), a work permit in the new employer's name for foreigners and SI enrollment. Agree in writing how prior service counts for leave seniority and any severance.",
+  "MV-04": "No statutory remote-work regime: record the agreed work location in a contract annex, because it sets the minimum-wage zone and the province for filings. Hours, overtime and OSH duties still apply at home, and remote monitoring must be disclosed under PDPL Art. 25.",
+  "MV-05": "After two definite-term contracts the next must be indefinite, and continuing to work 30 days past expiry without a new contract converts it automatically (LC Art. 20(2)). Part-timers earning at least the minimum SI salary are now in SI and UI (SI Law 2024; Employment Law 2025), so check SI back-contribution exposure on contractor-to-employee conversions.",
+  "MV-06": "Renew a work permit once, for up to 2 more years, before expiry, then apply for a new one; update the permit when position, title or work location changes (Decree 219/2025), and keep the contract term within the permit (LC Art. 151). There is no practical employer-sponsored permanent-residence route.",
+  "EN-01": "Voluntary surveys need consent under the PDPL, separate consent for sensitive data, and a transfer impact assessment if responses go to a US-hosted vendor outside the ILR-based HR-management exemption. Share results with the grassroots union and use the periodic dialogue or annual employee conference for action planning.",
+  "EN-02": "Cash and in-kind awards are taxable salary for PIT (verify treatment of small non-cash gifts), and awards must stay internal because gifts to customer or government staff risk Penal Code bribery offences. Service awards are commonly given at Tet or company anniversaries.",
+  "EN-03": "Hold stay interviews before the Tet bonus and increment cycle to get ahead of the post-Tet resignation wave. Notes are personal data under the PDPL, and any agreed change to pay or role needs a contract annex.",
+  "ER-01": "Sexual harassment complaints follow the procedure in the registered internal labour regulations (Decree 145/2020 Arts. 84-85), with confidentiality and anti-retaliation. There is no private-sector whistleblower statute, so the global hotline applies, but US-hosted intake is a cross-border transfer needing the ILR-based exemption or a transfer impact assessment.",
+  "ER-02": "Findings that may lead to discipline must map to a violation listed in the registered internal labour regulations, and discipline must be decided within 6 months of the violation (12 months for finance, property or secret-disclosure matters), so keep investigations short. Suspension during an investigation is limited to 15 days (90 in special cases), after consulting the union, with a 50% salary advance (LC Art. 128). Collect only necessary data under the PDPL notice and take signed Vietnamese statements for the disciplinary meeting.",
+  "ER-03": "There is no statutory complaints committee; the registered internal labour regulations must set the sexual harassment complaint and handling procedure (LC Art. 118; Decree 145 Arts. 84-85), and harassment as defined there is a dismissal ground (Art. 125). Involve the grassroots union if the case moves to discipline of a union member.",
+  "ER-04": "Only reprimand, deferral of salary increase for up to 6 months, demotion or dismissal are allowed; fines and pay cuts are banned (LC Arts. 124, 127). The employer must prove the fault, notify the meeting 5 working days ahead to the employee and the grassroots union (for members), keep signed minutes and issue the decision within the limitation period (Art. 122; Decree 145 Art. 70), and cannot discipline during sickness, approved leave, pregnancy, maternity leave or while the employee raises a child under 12 months.",
+  "ER-05": "Use the global SOX hotline; there is no private-sector whistleblower law, so non-retaliation rests on the internal labour regulations and policy. Hotline data sent to the US vendor needs the ILR-based HR-management exemption or a transfer impact assessment filed with the Ministry of Public Security.",
+  "ER-06": "Employees may lawfully hold several labour contracts (LC Art. 19), so control competing work and conflicts through the contract and internal labour regulations and make undisclosed conflicts a listed violation. Relationships with state-owned customers or officials raise Penal Code bribery risk.",
+  "ER-07": "There is no dedicated workplace-violence statute; rely on OSH Law duties and internal labour regulations under which intentional injury at work is a dismissal ground (LC Art. 125(1)). Report criminal conduct to the police.",
+  "ER-08": "Consult the grassroots union on internal labour regulations, salary scales, bonus rules, performance criteria and labour-use plans; hold periodic dialogue at least once a year and an annual employee conference; and pay the 2% union fee whether or not a union exists (Trade Union Law 2024; Decree 105/2026). Union officers get paid time for union work and extra protection against termination during their term (LC Art. 177).",
+  "ER-09": "Individual labour disputes can go to court within 1 year of discovering the breach (LC Art. 190), and dismissal disputes skip mediation, so preserve records at least that long. Sending evidence to US counsel is a cross-border transfer of personal data under the PDPL.",
+  "ER-10": "Post-exit non-competes are of uncertain enforceability, so protection rests on the Art. 21(2) confidentiality agreement, IP Law trade-secret remedies (Arts. 84-85, 127) and internal labour regulations that make disclosure a dismissal ground (12-month limitation). DLP lookbacks and device imaging must be disclosed monitoring under PDPL Art. 25, and asset recovery cannot delay the 14-working-day final settlement.",
+  "HS-01": "Report and investigate occupational accidents under Decree 39/2016 (fatal and serious accidents immediately to the provincial labour authority and police), keep the accident log, and pay treatment costs, full salary during treatment and OSH Law Art. 38 compensation on top of SI benefits.",
+  "HS-02": "For typhoons and floods in Hanoi and HCMC, pay during stoppages follows LC Art. 99: full pay if the employer caused it, and an agreed amount no lower than the regional minimum wage for the first 14 working days after power cuts, disasters or epidemics. Keep emergency contacts and fire and rescue plans current.",
+  "HS-03": "Under the OSH Law 2015, run OSH training by Decree 44/2016 group before lab access, annual health checks (every 6 months for hazardous work), occupational-disease checks for exposed staff, inspection of strict-requirement equipment such as pressure vessels, and OSH and medical staffing scaled to headcount (Decree 39/2016). Keep chemical inventories and fire-safety arrangements for validation and reliability labs.",
+  "DS-01": "Keep the labour management book, SI registration and contract annexes in line with every job, salary and location change (LC Art. 12; Decree 145/2020), and update the SI contribution salary when pay changes.",
+  "DS-02": "PDPL rights cover access, correction, deletion, restriction and withdrawal of consent; under Decree 356 acknowledge within 2 working days and complete within 10 days (access, correction), 15 days (restriction, withdrawal) or 20 days (deletion). Employees can also request copies of documents on their working history at termination (LC Art. 48(3)).",
+  "DS-03": "Keep the labour management book, contracts, disciplinary files and payroll (accounting records generally 10 years; verify record class), SI and PIT records, and DPIA/TIA dossiers, and keep breach records 5 years (Decree 356). Delete other personal data when the purpose or employment ends unless a law requires retention (PDPL Art. 25).",
+  "DS-04": "The PDPL requires technical and organizational security measures and a DPO or data-protection department; US-based administrators accessing Vietnamese employee data are a cross-border transfer covered by the HR-management exemption only if the internal labour regulations provide for it. Report breaches to the Ministry of Public Security within 72 hours.",
+  "DS-05": "There is no statutory human-capital disclosure for the Vietnamese entity; send aggregated metrics where possible, because employee-level exports are cross-border transfers under the PDPL.",
+  "DS-06": "Each new HR vendor or AI tool needs a DPIA update (filed within 60 days of starting processing and refreshed every 6 months for regulated changes) and, if data goes abroad outside the ILR-based HR-management exemption, a transfer impact assessment filed with the Ministry of Public Security within 60 days. Disclose monitoring or automated tools to employees (PDPL Art. 25) and sign processing contracts; biometric data is sensitive.",
+  "DS-07": "At termination, give the employee copies of documents on their working history on request (LC Art. 48(3)) and confirm the SI contribution period; answer third-party verification requests only with the employee's consent under the PDPL.",
+  "DS-08": "Rules on working time, rest, order, OSH, sexual harassment, protection of assets and secrets, discipline and material liability belong in the internal labour regulations: consult the grassroots union, register with the provincial Department of Home Affairs within 10 days of issue (effective 15 days after the dossier is received) and post them at the workplace (LC Arts. 118-121). Salary scales, bonus rules and performance criteria also need union consultation and publication, all in Vietnamese. Add a clause covering cross-border HR data flows so the Decree 356 HR-management exemption from TIA filing applies.",
+  "OF-01": "Employees resign without giving a reason on 45 days' notice (indefinite contracts), 30 days (definite 12-36 months) or 3 working days (under 12 months); no acceptance is needed, and quitting without notice forfeits severance and costs half a month's salary plus the unserved notice (LC Arts. 35, 40). Garden leave is not statutory, but a paid non-working period can be agreed. Settle salary, untaken leave and any severance allowance (0.5 month per non-UI year for 12+ months' service) within 14 working days, close the SI record and return originals (Art. 48). Expect resignations to spike right after the Tet bonus.",
+  "OF-02": "There is no at-will termination: use an Art. 36 ground (e.g., regular failure to complete work against published criteria) with 45/30/3 days' notice, or dismiss only for Art. 125 misconduct after the Art. 122 disciplinary meeting with the union (for members), signed minutes and a decision within 6 or 12 months. No termination during sick leave under treatment, approved leave, pregnancy, maternity leave or while the employee raises a child under 12 months. Illegal termination brings reinstatement, back pay and insurance plus at least 2 months' salary (Art. 41), so most exits are negotiated mutual terminations (Art. 34(3)) settled within 14 working days.",
+  "OF-03": "Terminations for structural, technological or economic reasons (LC Art. 42) or mergers (Art. 43) need a labour-use plan (Art. 44) consulted with the grassroots union and published within 15 days, priority to retraining and redeployment, and 30 days' notice to the provincial People's Committee (via the Department of Home Affairs) and the employees. Each employee with 12+ months' service gets the job-loss allowance of 1 month per non-UI year with a 2-month floor (Art. 47), paid within 30 days. There is no headcount threshold; exclude protected employees (pregnancy, maternity, child under 12 months), and consider a voluntary mutual-termination program first. Large layoffs can qualify for a temporary union-fee reduction (Decree 105/2026).",
+  "OF-04": "Use a Vietnamese mutual termination agreement (LC Art. 34(3)) recording that the contract ends by agreement, the gross and net amounts, PIT treatment, return of property and confidentiality; statutory items (untaken leave, severance where due) cannot be waived. Courts can annul agreements obtained by coercion or fraud, so allow review time and never use pressured resignation letters.",
+  "OF-05": "Pay salary, untaken leave, severance or job-loss allowance and contractual bonuses within 14 working days (30 in restructuring or closure; LC Art. 48), confirm and close SI, return originals and issue the PIT withholding certificate. Statutory severance and job-loss allowances are PIT-exempt, and Decree 253/2026 may extend the exemption to above-statutory amounts set out in internal policy (verify); post-exit RSU vesting remains taxable employment income.",
+  "OF-06": "Recover devices and badges and revoke access on the last day, but asset issues cannot hold up the 14-working-day settlement. Device reviews must be disclosed monitoring under PDPL Art. 25, and deletion of personal data should follow the retention schedule.",
+  "OF-07": "A voluntary exit survey needs specific, verifiable PDPL consent, separate consent for sensitive data, and a transfer impact assessment if responses go to a US-hosted vendor outside the ILR-based HR-management exemption. Offer Vietnamese, keep the survey separate from the 14-working-day settlement, and route any sexual harassment allegation through the internal labour regulations procedure. Report regretted exits by skill cluster (DV, validation, embedded), since the post-Tet period drives semiconductor attrition.",
+  "OF-08": "The statutory retirement age in 2026 is 61 years 6 months for men and 57 for women, rising each year to 62 in 2028 and 60 in 2035 (LC Art. 169; Decree 135/2020). Reaching it is an Art. 36 ground (with notice) unless the parties agree to continue, a pension needs 15 years of SI contributions, and no severance allowance is due to pension-eligible employees (Art. 46).",
+  "OF-09": "Pay outstanding salary and benefits to the lawful heirs; the SI fund pays a funeral allowance (10x the reference level) and survivor benefits, and a work-related death adds OSH Law compensation of at least 30 months' salary unless the employee was at fault. Report fatal occupational accidents immediately (Decree 39/2016).",
+  "OF-10": "Give copies of work-history documents on request at termination (LC Art. 48(3)); references and verifications need the former employee's consent under the PDPL. Keep rehire-eligibility codes job-related and consistent with the LC Art. 8 non-discrimination grounds."
+ },
+ "policies": {
+  "POL-01": "Fold the Code's disciplinary consequences into the registered internal labour regulations, because an employee can be disciplined only for violations listed in the ILR, the contract or the law (LC Art. 127(3)). Issue a Vietnamese version with acknowledgment, and cover hotline data under the PDPL (ILR-based HR-management exemption or a transfer impact assessment).",
+  "POL-02": "There is no private-sector whistleblower statute (the Law on Denunciations covers public authorities), so the addendum must put non-retaliation into the internal labour regulations and policy. Add the ILR sexual harassment complaint channel, and cover US-hosted hotline data through the ILR-based HR-management exemption or a filed transfer impact assessment.",
+  "POL-03": "Employees may lawfully hold several labour contracts (LC Art. 19), so the addendum must set disclosure duties and limits on competing work through the contract and the internal labour regulations, and make breach a listed ILR violation. Collect disclosure data under the PDPL employee notice.",
+  "POL-04": "The Penal Code (amended 2017) extends bribery offences to the private sector, and the Anti-Corruption Law 2018 imposes integrity duties on non-state enterprises. Treat state-owned customers, universities and national semiconductor-program bodies as public counterparties, and list bribery and improper hiring favours as ILR violations.",
+  "POL-05": "Parent-share trading raises no Vietnamese issue, but trading HOSE- or HNX-listed customers or partners on inside information breaches the Securities Law 2019. Provide a Vietnamese summary and check State Bank foreign-exchange rules for sale proceeds (verify).",
+  "POL-06": "Clawback cannot be taken by payroll deduction (LC Art. 102 allows only damage compensation up to 30% of net pay), so rely on forfeiture of unvested awards and a signed repayment agreement, and state the recovery right in the award agreement and a contract annex.",
+  "POL-07": "No statute regulates workplace relationships; put disclosure duties into the internal labour regulations so non-disclosure can be disciplined, and route any harassment element through the ILR sexual harassment procedure. Reassigning either partner beyond the 60-working-day temporary transfer limit needs consent (LC Art. 29).",
+  "POL-08": "LC Art. 8 prohibits discrimination on sex, race, colour, national origin, ethnicity, age, pregnancy, marital status, religion, belief, political opinion, disability, family responsibility, HIV status and union membership, and Art. 90(3) requires equal pay for work of equal value. Add the female-employee protections (LC Arts. 135-142) and the Law on Gender Equality 2006; verify whether any disability hiring quota applies to private employers.",
+  "POL-09": "The internal labour regulations must contain the sexual harassment rules: definition, prohibited acts, complaint and handling procedure, confidentiality, anti-retaliation and discipline (LC Art. 118; Decree 145/2020 Arts. 84-85), and harassment as defined in the ILR is a dismissal ground (Art. 125). The ILR must be registered for these provisions to support discipline.",
+  "POL-10": "No bullying statute exists; list abusive conduct as an ILR violation so it can be disciplined. Employees who are maltreated or insulted may resign without notice (LC Art. 35(2)).",
+  "POL-11": "There is no dedicated statute; the OSH Law general duties apply, and intentional injury at the workplace is an Art. 125 dismissal ground once listed in the internal labour regulations. Report criminal threats to the police.",
+  "POL-12": "Drug use at the workplace is a dismissal ground (LC Art. 125(1)), and alcohol rules belong in the internal labour regulations; test results are health data needing consent under the PDPL and Decree 356/2025.",
+  "POL-13": "Discipline only for violations listed in the registered internal labour regulations, contract or law, within 6 months (12 for finance, property or secret disclosure), after a meeting with the employee and the union (for members) notified 5 working days ahead, using only reprimand, salary-increase deferral up to 6 months, demotion or dismissal (LC Arts. 122-127; Decree 145 Art. 70). Fines and pay cuts are banned, and no discipline is allowed during sickness, approved leave, pregnancy, maternity leave or while the employee raises a child under 12 months.",
+  "POL-14": "The Cybersecurity Law 2025 prohibits online content that infringes others' rights or state interests, and posts identifying colleagues can breach the PDPL; list disclosure of confidential information as an ILR violation. Keep export-control topics out of public channels.",
+  "POL-15": "Cover the Labor Code points RBA audits check: the 48-hour week, overtime consent and caps (40 h/month, 200/300 h/year), weekly rest, no retention of identity documents or deposits (LC Art. 17), no recruitment fees (Art. 11) and the regional minimum wage. Labour outsourcing must use licensed providers for listed jobs for up to 12 months.",
+  "POL-16": "Add the LC Art. 8 non-discrimination grounds, the ban on charging candidates (Art. 11), the PDPL Art. 25 candidate-data duties (collect only what is needed; delete unsuccessful candidates' data unless they agree otherwise), and the contract-type and probation rules (Arts. 20, 25). Foreign hires need a Decree 219/2025 work permit or exemption before starting.",
+  "POL-17": "Employers cannot pull criminal records; ask the candidate for a Judicial Record Certificate No. 1 only where justified, with separate consent because criminal-record data is sensitive (Decree 356/2025). Verify education and employment with consent, and never retain originals (LC Art. 17).",
+  "POL-18": "Vietnam is in EAR Country Group D:1 and D:3, so releasing US-origin NS-controlled or advanced-computing technology to Vietnamese nationals is a re-export that may need a licence, and third-country nationals at the site trigger deemed re-exports. Collect nationality data under a PDPL notice, and frame access restrictions as legal compliance so they do not breach the LC Art. 8 national-origin ground.",
+  "POL-19": "Work permits under Decree 219/2025 last up to 2 years, are renewable once and must be issued before work starts; exempt workers need a notification at least 3 working days before starting. Enrol foreigners on contracts of 12+ months in SI and HI, and give them 2 extra holiday days (LC Art. 112(2)).",
+  "POL-20": "Contractors doing ongoing, supervised work risk recharacterization with SI back-contributions. Labour outsourcing is allowed only through licensed providers for the jobs listed in Decree 145/2020, for up to 12 months, with equal pay for comparable work (LC Arts. 52-58).",
+  "POL-21": "Replace company probation terms with the statutory maximums: 60 days for roles needing a college degree or higher, 30 days for technicians, 180 days for enterprise managers and 6 working days otherwise, once per job, at 85%+ pay, with written notice of the result at the end (LC Arts. 24-27). Either side can end probation without notice or compensation.",
+  "POL-22": "Trainees who do productive work must be paid (LC Art. 61), students need a genuine training agreement, and new graduates are hired on labour contracts with probation of up to 60 days. Partner with universities under the national semiconductor HR program (Decision 1017/QD-TTg).",
+  "POL-23": "Pay in VND (foreign-currency pay only as foreign-exchange rules allow; verify), at or above the regional minimum, and map pay to salary scales and payroll tables published after union consultation (LC Art. 93). Model the SI cap (VND 50.6m), the 2026 five-bracket PIT and the customary Tet bonus in the cash mix.",
+  "POL-24": "LC Art. 90(3) requires equal pay for work of equal value without gender discrimination, and salary scales and payroll tables must be published at the workplace (Art. 93), which gives employees visibility of bands. There is no posting-range or pay-gap reporting duty.",
+  "POL-25": "Bonus rules must be issued after union consultation and published (LC Art. 104); a bonus stated in the contract or rules, including a Tet or 13th-month bonus and its pro-rata and leaver conditions, is enforceable. Bonuses are taxable salary, so state clearly whether employment on the payment date is required.",
+  "POL-26": "Put commission plans into published bonus or salary regulations with signed acknowledgment; overpaid commission cannot be deducted from wages (LC Art. 102). Build Penal Code private-sector bribery and export-control gates into crediting rules.",
+  "POL-27": "Parent equity is employment income for PIT (confirm the timing with Tax), and ESPP contributions and sale proceeds may need State Bank of Vietnam foreign-exchange handling (verify). Name the US equity platform in the internal labour regulations so the Decree 356 HR-management exemption covers grantee data.",
+  "POL-28": "Pay at least monthly in VND on a fixed date with an itemized statement, deduct only for damage compensation up to 30% of net pay, and never fine (LC Arts. 94-102, 127). Remit SI/HI/UI and the 2% union fee by the last day of the following month, withhold PIT on the 2026 schedule, and settle final pay within 14 working days (Art. 48).",
+  "POL-29": "No employee is exempt: everyone is limited to 8 h/day and 48 h/week, with overtime only by consent, capped at 40 h/month and 200 h/year (300 h in listed cases with written notice to the provincial labour authority), and paid at 150/200/300% plus 30% for night work and 20% more for night overtime (LC Arts. 98, 105-107). Record hours and consents, since overtime and night pay are fully PIT-exempt from 2026 only with documentation.",
+  "POL-30": "Reimbursements backed by valid VAT e-invoices are not income; fixed allowances are generally taxable salary, except the cash meal allowance up to VND 1.2m/month (Decree 253/2026). Unsupported advances cannot be recovered from wages beyond the Art. 102 limits.",
+  "POL-31": "Repayment of employer-funded training costs is expressly allowed under a training agreement (LC Art. 62); frame sign-on and relocation repayment as pro-rated contractual advances recovered by agreement, not wage deduction (Art. 102). Enforceability of other stay-or-pay terms is untested (verify).",
+  "POL-32": "Referral bonuses are taxable salary, and referrers must have the candidate's consent before sharing personal data (PDPL). Tie payouts to the referred hire passing probation (up to 60 days).",
+  "POL-33": "Statutory minimums are 12 working days' annual leave plus 1 day per 5 years (LC Arts. 113-114), 11 holidays plus Vietnamese Culture Day (24 Nov) from 2026, and 2 extra days for foreign employees (Art. 112(2)). The employer sets the leave schedule after consulting employees, untaken leave is paid out on exit, and holiday work costs 300% plus holiday pay.",
+  "POL-34": "There is no employer-paid sick leave mandate: the SI fund pays 75% of the SI salary for 30/40/60 working days a year by contribution history, more for long-term illness, plus child-sickness leave. Company paid sick days are market practice, and the employer cannot terminate while the employee is under treatment except on the prolonged-illness ground (LC Arts. 36-37).",
+  "POL-35": "Maternity leave is 6 months (7 for a second child from 1 Jul 2026) and paternity leave 5-14 working days within 60 days of birth (10 for a second child), paid by SI at 100%; paid personal leave covers marriage (3 days) and bereavement (3 days) (LC Art. 115). Returning mothers keep their job or an equivalent at no lower pay (Art. 140), and unpaid leave is by agreement.",
+  "POL-36": "Add the female-employee protections (no overtime, night work or long trips from the 7th month of pregnancy without consent, reassignment from harmful work, a 60-minute nursing break until 12 months and 30 minutes a day during menstruation; LC Arts. 137-138; Decree 145 Art. 80) and disability protections (LC Arts. 8, 160). Health data needs consent under the PDPL.",
+  "POL-37": "SI and HI cover contracts of 1 month or more and UI covers Vietnamese employees; foreigners on contracts of 12+ months join SI and HI but not UI, and intra-company transferees are excluded (Decree 158/2025). Private medical, accident and life cover are market standard, and there is no US-Vietnam totalization agreement.",
+  "POL-38": "There is no remote-work statute: record the agreed work location in a contract annex (it drives the minimum-wage zone), apply hours and overtime rules to remote staff, and disclose remote monitoring under PDPL Art. 25. Foreigners working remotely from Vietnam still need a work-permit analysis.",
+  "POL-39": "There is no right-to-disconnect statute, but after-hours work is overtime that needs consent, counts toward the 40 h/month cap and earns 150/200/300% because no employee is exempt. Set expectations for US time-zone calls accordingly.",
+  "POL-40": "Inbound assignees need a work permit (unless under 90 days a year or otherwise exempt) and a temporary residence card; tax residents pay PIT on worldwide income at up to 35%, non-residents 20%. Intra-company transferees are outside Vietnamese SI, there is no US-Vietnam totalization agreement, and releasing controlled technology in Vietnam follows EAR Country Group D:1 rules.",
+  "POL-41": "Brief travellers carrying US-origin controlled technology on EAR rules (Vietnam is Country Group D:1) and on device and data rules under the Cybersecurity Law 2025. Add typhoon and flood-season checks (roughly June to November).",
+  "POL-42": "Ratings must rest on published task-completion criteria issued after union consultation to support an Art. 36(1)(a) termination with 45/30/3 days' notice. Poor performance alone is not a disciplinary ground, so keep performance and conduct processes separate.",
+  "POL-43": "Promotions and internal moves need a written contract annex (LC Art. 22), and temporary transfers without consent are limited to 60 working days a year (Art. 29). For foreigners, a change of position or work location may need a work-permit update.",
+  "POL-44": "Training agreements with repayment for employer-funded training are allowed (LC Art. 62) and must state the course, cost, commitment period and repayment terms; keep invoices. Confirm the PIT treatment of employer-paid degree programmes (verify).",
+  "POL-45": "Statutory training is OSH training by Decree 44/2016 group (induction and periodic refreshers), fire-safety training for the on-site team, and acknowledgment of the registered internal labour regulations including the sexual harassment section. Keep records in Vietnamese, because discipline relies on ILR rules the employee was made aware of.",
+  "POL-46": "The PDPL (Law 91/2025) and Decree 356/2025 apply from 1 Jan 2026: consent unless an exception applies (e.g., contract performance), separate consent for sensitive data, a DPIA filed with the Ministry of Public Security within 60 days, a DPO, 72-hour breach notices and data-subject request deadlines. Cross-border HR-management transfers made under the internal labour regulations are exempt from the transfer impact assessment (Decree 356 Art. 17(3)), so name the US HRIS, payroll, equity and case systems in the ILR. Other transfers need a TIA within 60 days, and cross-border breaches can be fined up to 5% of prior-year revenue.",
+  "POL-47": "PDPL Art. 25 requires telling employees which technologies process their data (DLP, email review, CCTV, badge and endpoint logs); keep monitoring proportionate and list misuse of company systems as an ILR violation. Biometric attendance data is sensitive and needs consent.",
+  "POL-48": "LC Art. 21(2) allows a written agreement on protecting business and technology secrets (duration, benefits, compensation), and disclosure is a dismissal ground (Art. 125(2)) with a 12-month limitation period. Inventions, designs and IC layout designs made in assigned duties or with employer resources belong to the employer under the IP Law, with statutory inventor remuneration unless otherwise agreed (verify), and post-exit non-competes are of uncertain enforceability.",
+  "POL-49": "Keep the labour management book, contracts, disciplinary files, payroll (accounting records generally 10 years; verify), SI and PIT records and DPIA/TIA dossiers, and keep breach records 5 years (Decree 356). Delete other personal data when the purpose or employment ends unless a law requires retention (PDPL Art. 25), and keep dispute evidence at least through the 1-year court limitation (LC Art. 190).",
+  "POL-50": "There is no AI-specific employment rule in force for HR tools (verify new AI legislation), but the PDPL requires disclosing technologies that process employee data (Art. 25), a DPIA update for new processing and a TIA for offshore AI vendors outside the ILR exemption. Test tools against the LC Art. 8 grounds.",
+  "POL-51": "The OSH Law 2015 requires an OSH plan, training by Decree 44/2016 group before lab access, annual health checks (every 6 months for hazardous work), OSH and medical staffing and an OSH council where Decree 39/2016 thresholds are met, inspection of strict-requirement equipment, and accident reporting with OSH Law compensation on top of SI. Add fire-safety rules and the pregnancy and nursing limits on night and hazardous work.",
+  "POL-52": "Statutory notice is 45 days (indefinite), 30 days (definite 12-36 months) or 3 working days (under 12 months), longer contractual notice cannot be imposed on the employee, and no acceptance is needed (LC Art. 35). Garden leave can be agreed as paid non-working time; resigning without notice forfeits severance and costs half a month's salary plus the unserved notice (Art. 40).",
+  "POL-53": "Terminate only on Art. 36 grounds with notice, by Art. 125 dismissal after the Art. 122 disciplinary procedure (with the union for members), or by mutual agreement (Art. 34(3)); respect the protected periods (Art. 37) and settle within 14 working days (Art. 48). Illegal termination means reinstatement, back pay and insurance plus at least 2 months' salary (Art. 41).",
+  "POL-54": "Restructuring, technology-change or economic layoffs need a labour-use plan consulted with the union and published within 15 days, and 30 days' notice to the provincial People's Committee and the employees (LC Arts. 42-44); pay the job-loss allowance of 1 month per non-UI year with a 2-month floor (Art. 47). Market packages add about 1-2 months per year of service with a 2-3 month floor, often through a mutual-termination program run first.",
+  "POL-55": "Recover devices and badges on the last day and remind the employee in writing of the Art. 21(2) confidentiality agreement, IP assignment and export-control duties; property issues cannot delay the 14-working-day settlement. Rely on confidentiality, IP Law trade-secret claims and paid restrictions rather than an unpaid non-compete.",
+  "POL-56": "On request at termination, provide copies of documents on the employee's working history (LC Art. 48(3)) and confirm the SI contribution period. Third-party references and verifications need the former employee's consent under the PDPL.",
+  "POL-57": "LC Art. 8 and the Law on Persons with Disabilities 2010 prohibit disability discrimination, and employees with serious disabilities cannot be required to work overtime or nights without consent (LC Art. 160); verify any current hiring incentives or quotas. Provide accessible facilities as building rules require."
+ },
+ "templates": {
+  "T-EXIT-SURVEY": "Use a PDPL consent notice (specific and verifiable, no pre-ticked boxes) with separate consent for sensitive items such as health reasons, and file a transfer impact assessment if responses sit on a US-hosted platform outside the ILR-based HR-management exemption. Offer a Vietnamese version and keep the survey separate from the 14-working-day final settlement.",
+  "T-EXIT-INTERVIEW": "Hold it in Vietnamese where possible; route sexual harassment disclosures to the procedure in the internal labour regulations, and conduct issues to ER quickly given the 6/12-month disciplinary limitation. Notes are personal data under the PDPL.",
+  "T-OFFBOARD-CHECKLIST": "Add final settlement within 14 working days (30 for restructuring; LC Art. 48), untaken-leave payout, SI closure with return of the SI book and originals, the PIT withholding certificate and, for foreigners, work-permit return and temporary residence card cancellation.",
+  "T-TERM-SCRIPT": "Cite the Art. 36 ground and notice period (45/30/3 days) or the dismissal decision issued after the Art. 122 disciplinary meeting, and never ask the employee to sign a resignation letter. Most meetings turn into a mutual termination negotiation, so do not promise unapproved terms, and deliver documents in Vietnamese.",
+  "T-RIF-SELECTION": "Add the Art. 44 labour-use plan fields (retained, retrained, part-time, terminated, funding), the union consultation record, the 30-day notice to the provincial authority and employees, protected-status flags (pregnancy, maternity leave, child under 12 months) and job-loss allowance calculations (1 month per non-UI year, minimum 2 months).",
+  "T-SEP-TERMS": "Use a Vietnamese mutual termination agreement under LC Art. 34(3) stating that the contract ends by agreement, that statutory items (untaken leave, severance where due) are paid in full, the ex gratia amount gross and net with PIT treatment, SI closure, confidentiality and return of property. There is no mandatory review period.",
+  "T-INVESTIGATION": "Map each allegation to a violation in the registered internal labour regulations and track the 6-month disciplinary deadline (12 months for finance, property or secret disclosure). Suspension is capped at 15 days (90 in special cases) with a 50% salary advance, and statements should be signed in Vietnamese.",
+  "T-PIP": "Measure against the published task-completion criteria (issued after union consultation) so a failed PIP can support an Art. 36(1)(a) termination with notice; poor performance is not a disciplinary offence. Provide a Vietnamese version signed by the employee.",
+  "T-ONBOARD-PLAN": "Add the labour contract and secrets/IP annex before Day 1, SI and labour registration within 30 days, acknowledgment of the internal labour regulations and sexual harassment rules, OSH training by Decree 44/2016 group before lab access, the PDPL notice with monitoring disclosure, the probation result notice (60 days maximum for engineers) and, for foreigners, the work permit.",
+  "T-ONBOARD-PULSE": "Keep it voluntary with PDPL consent and a Vietnamese version; identifiable responses on a US platform need the ILR-based HR-management exemption or a transfer impact assessment.",
+  "T-SCORECARD": "Remove questions on marriage, pregnancy, family plans, age, religion, union membership or HIV status (LC Art. 8), and record only job-related evidence in line with PDPL data minimization.",
+  "T-OFFER-APPROVAL": "Add approval fields for contract type and term (definite maximum 36 months; the third contract must be indefinite), probation length and pay (60 days maximum at 85%+ for engineers), gross VND salary against the regional minimum and SI cap, Tet bonus terms and the work-permit route for foreigners.",
+  "T-POLICY": "Rules on working time, discipline or material liability must be put into the internal labour regulations, consulted with the union, registered with the provincial Department of Home Affairs and posted in Vietnamese before they can support discipline (LC Arts. 118-121). Add a clause listing cross-border HR data flows for the Decree 356 exemption.",
+  "T-STAY-INTERVIEW": "Schedule before the Tet bonus and increment cycle; any agreed change to pay or role needs a contract annex, and notes are personal data under the PDPL.",
+  "T-ACCOMMODATION": "Log female-employee protections (pregnancy from the 7th month, nursing and menstrual breaks; LC Art. 137; Decree 145 Art. 80) and disability adjustments (LC Art. 160); health data needs consent under the PDPL.",
+  "T-REQ": "Add fields for contract type and term, the probation cap, the work-location zone for the minimum wage, whether a foreign hire needs a work permit, and the export-control access class (Vietnam is EAR Country Group D:1)."
+ },
+ "register": [
+  {
+   "id": "R-VN-01",
+   "name": "Vietnam internal labour regulations: consultation, registration & posting",
+   "type": "Filing",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Employers with 10+ employees issue written internal labour regulations after consulting the grassroots union (working time, order, OSH, sexual harassment, secrets and IP, discipline, material liability) and register them with the provincial Department of Home Affairs within 10 days of issuance; they take effect 15 days after the dossier is received and must be posted at the workplace. Re-register every amendment.",
+   "owner": "Vietnam HR + Legal",
+   "cadence": "On reaching 10 employees; per amendment",
+   "cite": "Labor Code 2019 Arts. 118-121; Decree 145/2020/ND-CP",
+   "processes": [
+    "DS-08",
+    "ER-04",
+    "ER-08"
+   ]
+  },
+  {
+   "id": "R-VN-02",
+   "name": "Vietnam workplace sexual harassment prevention (ILR section)",
+   "type": "Program",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "The internal labour regulations must define and prohibit sexual harassment and set the complaint, handling, confidentiality, anti-retaliation and discipline procedure; harassment as defined there is a dismissal ground. Train staff on it at induction.",
+   "owner": "Vietnam HR + Employee Relations",
+   "cadence": "Continuous; at induction and on amendment",
+   "cite": "Labor Code 2019 Arts. 118(2), 125(4); Decree 145/2020 Arts. 84-85",
+   "processes": [
+    "ER-03",
+    "ER-01",
+    "PD-06"
+   ]
+  },
+  {
+   "id": "R-VN-03",
+   "name": "Vietnam periodic workplace dialogue & annual employee conference",
+   "type": "Committee",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Hold periodic dialogue with employee representatives at least once a year and on request, dialogue before restructuring and changes to pay scales or internal rules, and an annual employee conference under the grassroots democracy regulation.",
+   "owner": "Vietnam HR + Grassroots union",
+   "cadence": "At least annually; per triggering event",
+   "cite": "Labor Code 2019 Arts. 63-64; Decree 145/2020",
+   "processes": [
+    "ER-08",
+    "EN-01"
+   ]
+  },
+  {
+   "id": "R-VN-04",
+   "name": "Vietnam trade union fee (2% of SI salary fund)",
+   "type": "Filing",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Pay 2% of the payroll used for SI contributions monthly, by the last day of the following month, whether or not a grassroots union exists; reductions to 1.6% (up to 6 months after major layoffs) or suspension (force majeure) require an application.",
+   "owner": "Payroll (Vietnam) + Finance",
+   "cadence": "Monthly",
+   "cite": "Trade Union Law 2024 (No. 50/2024/QH15) Arts. 29-30; Decree 105/2026/ND-CP",
+   "processes": [
+    "PY-01",
+    "ER-08"
+   ]
+  },
+  {
+   "id": "R-VN-05",
+   "name": "Vietnam SI, HI & UI registration and monthly contributions",
+   "type": "Filing",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Register employees on contracts of 1 month or more within 30 days (foreigners: 12+ month contracts, SI and HI only) and remit employer 21.5% and employee 10.5% monthly by the last day of the following month, capped at VND 50.6m for SI/HI (from 1 Jul 2026) and 20x the regional minimum for UI.",
+   "owner": "Payroll (Vietnam) + Vietnam HR Ops",
+   "cadence": "Per hire; monthly",
+   "cite": "Social Insurance Law 2024 (No. 41/2024/QH15); Decree 158/2025/ND-CP; Employment Law 2025; Decree 374/2025/ND-CP; Decree 161/2026/ND-CP",
+   "processes": [
+    "BN-01",
+    "PY-01"
+   ]
+  },
+  {
+   "id": "R-VN-06",
+   "name": "Vietnam labour management book, labour registration & usage reports",
+   "type": "Record",
+   "domain": "Governance",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Keep the labour management book (paper or electronic) from the start of operations, register employees' labour information with the SI dossier (from Jul 2026), and file labour usage reports on the cadence in force (6-monthly and annual under Decree 145; verify after the Employment Law 2025 changes).",
+   "owner": "Vietnam HR Ops",
+   "cadence": "Per hire and change; 6-monthly/annual (verify)",
+   "cite": "Labor Code 2019 Art. 12; Decree 145/2020 Arts. 3-4; Employment Law 2025; Decree 318/2025/ND-CP",
+   "processes": [
+    "ON-03",
+    "DS-01",
+    "PL-01"
+   ]
+  },
+  {
+   "id": "R-VN-07",
+   "name": "Vietnam PIT withholding, returns & annual finalization",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Withhold PIT on the five-bracket resident schedule (family deductions VND 15.5m + 6.2m per dependant), 10% on non-contract payments of VND 5m or more and 20% for non-residents; file monthly or quarterly returns, the employer's annual finalization by 31 March and issue withholding certificates; dependants must be registered by 31 December.",
+   "owner": "Payroll (Vietnam) + Tax",
+   "cadence": "Monthly/quarterly; annual (31 Mar); 31 Dec dependant deadline",
+   "cite": "PIT Law 2025 (No. 109/2025/QH15); Resolution 110/2025/UBTVQH15; Decree 253/2026/ND-CP; Circular 87/2026/TT-BTC",
+   "processes": [
+    "PY-04",
+    "PY-01",
+    "EQ-02"
+   ]
+  },
+  {
+   "id": "R-VN-08",
+   "name": "Vietnam work permits & exemption notifications",
+   "type": "Filing",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Obtain a work permit (up to 2 years, renewable once) 10-60 days before a foreigner starts, or confirm an exemption and notify the authority at least 3 working days before start; update permits for changes of position or work location and return or revoke them on exit.",
+   "owner": "Immigration + Vietnam HR",
+   "cadence": "Per hire; renewal before expiry; per change",
+   "cite": "Decree 219/2025/ND-CP; Labor Code 2019 Arts. 151-157",
+   "processes": [
+    "TA-07",
+    "ON-02",
+    "MV-06",
+    "MV-02"
+   ]
+  },
+  {
+   "id": "R-VN-09",
+   "name": "Vietnam overtime consent, caps & 300-hour notification",
+   "type": "Control",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Obtain each employee's consent, keep overtime within 50% of daily hours, 40 h/month and 200 h/year (300 h in listed cases), notify the provincial labour authority in writing before using the 300-hour regime, and pay 150/200/300% plus night premiums; run a monthly cap-breach report.",
+   "owner": "Vietnam HR + Payroll + Engineering managers",
+   "cadence": "Monthly; annual notification when applicable",
+   "cite": "Labor Code 2019 Arts. 98, 107; Decree 145/2020",
+   "processes": [
+    "PY-03"
+   ]
+  },
+  {
+   "id": "R-VN-10",
+   "name": "Vietnam salary scale, payroll table & bonus regulation",
+   "type": "Notice",
+   "domain": "Reward",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Build salary scales, payroll tables and labour norms and the bonus regulation after consulting the grassroots union, and publish them at the workplace before use; update them with each pay cycle and minimum-wage change.",
+   "owner": "Total Rewards + Vietnam HR",
+   "cadence": "Annual; on minimum-wage change",
+   "cite": "Labor Code 2019 Arts. 93, 104",
+   "processes": [
+    "CO-01",
+    "CO-02",
+    "CO-03"
+   ]
+  },
+  {
+   "id": "R-VN-11",
+   "name": "Vietnam labour-use plan & 30-day restructuring notice",
+   "type": "Filing",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Before terminating for structural, technological or economic reasons or mergers, adopt a labour-use plan consulted with the union, publish it within 15 days, and give 30 days' notice to the provincial People's Committee (Department of Home Affairs) and the affected employees; pay the job-loss allowance (minimum 2 months).",
+   "owner": "Vietnam HR + Legal + Employee Relations",
+   "cadence": "Per restructuring",
+   "cite": "Labor Code 2019 Arts. 42-44, 47",
+   "processes": [
+    "OF-03",
+    "PL-04"
+   ]
+  },
+  {
+   "id": "R-VN-12",
+   "name": "Vietnam final settlement within 14 working days & SI closure",
+   "type": "Control",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Pay salary, untaken leave, severance or job-loss allowance and contractual bonuses within 14 working days of termination (30 for restructuring, closure or force majeure), confirm and close the SI record, and return the SI book and original documents.",
+   "owner": "Payroll (Vietnam) + Vietnam HR Ops",
+   "cadence": "Per termination",
+   "cite": "Labor Code 2019 Art. 48; Social Insurance Law 2024",
+   "processes": [
+    "OF-05",
+    "OF-01",
+    "OF-02",
+    "PY-02"
+   ]
+  },
+  {
+   "id": "R-VN-13",
+   "name": "Vietnam PDPL impact assessments (DPIA & TIA) with the Ministry of Public Security",
+   "type": "Filing",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "File a data protection impact assessment within 60 days of starting processing and a transfer impact assessment within 60 days of the first cross-border transfer (unless the HR-management exemption for transfers under the internal labour regulations applies); update every 6 months for regulated changes.",
+   "owner": "Privacy + Vietnam HR + Legal",
+   "cadence": "Per new processing or transfer; 6-monthly review",
+   "cite": "Personal Data Protection Law (No. 91/2025/QH15) Art. 20; Decree 356/2025/ND-CP Arts. 17-20",
+   "processes": [
+    "DS-06",
+    "TA-11",
+    "DS-04"
+   ]
+  },
+  {
+   "id": "R-VN-14",
+   "name": "Vietnam DPO, breach notification & data-subject requests",
+   "type": "Control",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Designate a qualified DPO or data-protection department, notify the Ministry of Public Security within 72 hours of a qualifying breach and keep breach records for 5 years, and answer data-subject requests within the Decree 356 deadlines (acknowledge in 2 working days).",
+   "owner": "Privacy + IT Security + Vietnam HR",
+   "cadence": "Continuous; per breach or request",
+   "cite": "Personal Data Protection Law 2025; Decree 356/2025/ND-CP Arts. 13-15, 29",
+   "processes": [
+    "DS-02",
+    "DS-04"
+   ]
+  },
+  {
+   "id": "R-VN-15",
+   "name": "Vietnam OSH program: training, health checks, staffing & accident reporting",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Deliver OSH training by Decree 44/2016 group before lab access with periodic refreshers, annual health checks (6-monthly for hazardous work), OSH and medical staffing and an OSH council where thresholds apply, inspection of strict-requirement equipment, and accident reporting and investigation.",
+   "owner": "EHS + Vietnam HR + Facilities",
+   "cadence": "Annual; per hire; per incident",
+   "cite": "OSH Law 2015 (No. 84/2015/QH13) Arts. 14, 21, 34-38, 72-75; Decree 39/2016/ND-CP; Decree 44/2016/ND-CP",
+   "processes": [
+    "HS-03",
+    "HS-01",
+    "LV-04"
+   ]
+  },
+  {
+   "id": "R-VN-16",
+   "name": "Vietnam annual leave schedule & holiday calendar",
+   "type": "Notice",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Publish the annual leave schedule after consulting employees and the holiday calendar (11 statutory holidays plus Vietnamese Culture Day on 24 Nov from 2026, the chosen Tet and National Day days, and 2 extra days for foreign employees); pay out untaken leave on exit.",
+   "owner": "Vietnam HR Ops",
+   "cadence": "Annual (Q4); per holiday announcement",
+   "cite": "Labor Code 2019 Arts. 112-114; National Assembly resolution on Vietnamese culture (effective 1 Jul 2026)",
+   "processes": [
+    "LV-05"
+   ]
+  },
+  {
+   "id": "R-VN-17",
+   "name": "Vietnam disciplinary meeting notices, minutes & decisions",
+   "type": "Record",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "For every disciplinary action, keep the 5-working-day meeting notice to the employee and union (for members), the evidence of fault, signed minutes and the decision issued within the 6/12-month limitation and sent to the employee and union.",
+   "owner": "Employee Relations + Vietnam HR",
+   "cadence": "Per disciplinary case",
+   "cite": "Labor Code 2019 Arts. 122-124; Decree 145/2020 Art. 70",
+   "processes": [
+    "ER-04",
+    "ER-02",
+    "OF-02"
+   ]
+  },
+  {
+   "id": "R-VN-18",
+   "name": "Vietnam labour contract form, term tracking & e-contract upload",
+   "type": "Control",
+   "domain": "Onboard",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Sign a written Vietnamese (or bilingual) labour contract before work starts, track the count of definite-term contracts (the third must be indefinite) and expiry dates, and if e-contracts are used, sign through a licensed provider and upload to the national platform within 24 hours.",
+   "owner": "Vietnam HR Ops",
+   "cadence": "Per hire and renewal; monthly expiry report",
+   "cite": "Labor Code 2019 Arts. 13-14, 20-21; Decree 337/2025/ND-CP",
+   "processes": [
+    "ON-01",
+    "ON-03",
+    "MV-05"
+   ]
+  },
+  {
+   "id": "R-VN-19",
+   "name": "Vietnam task-completion criteria regulation",
+   "type": "Control",
+   "domain": "Grow",
+   "tier": "legal",
+   "scope": "Vietnam",
+   "countries": [
+    "vn"
+   ],
+   "requirement": "Issue written criteria for assessing whether employees complete their tasks, after consulting the grassroots union, before relying on 'regular failure to complete work' as a termination ground; apply them in reviews and PIPs.",
+   "owner": "Vietnam HR + Employee Relations",
+   "cadence": "On adoption; annual review",
+   "cite": "Labor Code 2019 Art. 36(1)(a); Decree 145/2020",
+   "processes": [
+    "PD-02",
+    "PD-03"
+   ]
+  }
+ ]
+}

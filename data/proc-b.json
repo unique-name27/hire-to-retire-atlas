@@ -1,0 +1,3117 @@
+{
+ "processes": [
+  {
+   "id": "ON-01",
+   "name": "Preboarding (accept to Day 1)",
+   "stage": "Onboard",
+   "depth": "deep",
+   "summary": "Moves a candidate from a signed offer in Greenhouse to a cleared, equipped and fully documented first day in Darwinbox. Covers the ATS-to-HRIS handoff, background and export-control clearance, country-specific pre-start documents, IT/identity, badge and welcome. Good looks like: nobody starts uncleared, every statutory Day-1 document is signed before access is switched on, and the hire can log in and badge in on the first morning.",
+   "owner": "People Ops (process), Recruiter (candidate relationship to Day 1), Trade Compliance (export clearance gate)",
+   "trigger": "Candidate e-signs the offer and the Greenhouse offer status moves to Accepted",
+   "outputs": [
+    "Darwinbox pre-hire record created from the approved Greenhouse offer (no re-keyed comp)",
+    "Background-check result and export-control clearance record, stored separately from the I-9",
+    "Signed country document pack: contract or appointment letter, PIIA/invention assignment, statutory hire notices",
+    "Provisioned identity, laptop, badge and access bundle matching the export-clearance scope",
+    "Day-1 agenda, buddy assignment and T-ONBOARD-PLAN shared with the manager",
+    "Preboarding checklist with completion timestamps (audit trail)"
+   ],
+   "systems": [
+    "Greenhouse (ATS)",
+    "Darwinbox (HRIS)",
+    "Background-check vendor",
+    "Export-control screening tool",
+    "E-signature",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "Document management"
+   ],
+   "sla": "Start date at least 10 business days after acceptance (15 for export-flagged roles, longer where notice periods apply, e.g. India 60-90 days); all contingencies cleared by Day -3",
+   "lanes": [
+    "Candidate",
+    "Recruiter",
+    "People Ops",
+    "Trade Compliance",
+    "Manager",
+    "IT",
+    "Security"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Recruiter",
+     "type": "start",
+     "label": "Offer accepted in Greenhouse",
+     "detail": "Recruiter confirms start date, work location (which drives the country document pack) and the export-control flag on the requisition. The Greenhouse-to-Darwinbox integration fires on status change; no email handoffs.",
+     "sla": "Day 0",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Create pre-hire record in Darwinbox",
+     "detail": "Record is built only from approved offer fields (position, level, base, bonus target, equity, cost center, legal entity, location, start date). Any mismatch with the T-OFFER-APPROVAL record goes back to the recruiter, never fixed by hand.",
+     "sla": "1 bd",
+     "control": "Offer-to-HRIS field match before activation (feeds ON-03 SOX control)",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Candidate",
+     "type": "task",
+     "label": "Complete consents and pre-hire forms",
+     "detail": "Candidate portal collects the background-check disclosure/authorization (standalone FCRA form; ICRAA in CA; PIPL, DPDP or PDPA consent elsewhere), personal data and emergency contact. CA hires are asked whether the emergency contact may be notified if they are arrested or detained at work (SB 294).",
+     "sla": "Day -12",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Order background check",
+     "detail": "Order the country/role package from the vendor. CA criminal checks run only post-offer with a Fair Chance individualized assessment; China has no official criminal-record check for private employers, so verify education, employment and the prior employer's termination certificate.",
+     "sla": "Day -12 to -5",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Trade Compliance",
+     "type": "task",
+     "label": "Run export-control and RPS screening",
+     "detail": "For export-flagged roles only, collect U.S.-person status and citizenship on the separate export form (never the I-9) and screen restricted-party lists. Decide whether a deemed export or deemed reexport license is needed and record the permitted access scope in the TCP register.",
+     "sla": "Day -10",
+     "control": "No controlled-technology access until clearance or license is recorded; same question set for every flagged role (8 U.S.C. 1324b)",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Trade Compliance",
+     "type": "decision",
+     "label": "All contingencies cleared?",
+     "detail": "Trade Compliance and People Ops confirm background and export status in the preboarding checklist. Anything open blocks account activation.",
+     "branches": [
+      {
+       "to": "s8",
+       "label": "Cleared"
+      },
+      {
+       "to": "s7",
+       "label": "Issue or license pending"
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Recruiter",
+     "type": "task",
+     "label": "Resolve issue or move start date",
+     "detail": "Background: run pre-adverse and adverse action steps (report, summary of rights, commonly 5 business days to respond; CA adds a written individualized assessment). Export: move the start date or start on a restricted non-controlled scope, and involve Legal before any offer withdrawal.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Issue country contract and notice pack",
+     "detail": "Send via e-signature the location's pack: US PIIA with DTSA immunity notice, Rule 21F-17 carve-out and state invention notices, plus a no-prior-employer-information certification; CA LC 2810.5 and SB 294 notices; ON information statement; India appointment letter; China labor contract; Canada and Taiwan contracts. Legal-approved template versions only.",
+     "sla": "Day -7",
+     "control": "IP/confidentiality and (ON/BC) termination clauses signed before Day 1",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Candidate",
+     "type": "task",
+     "label": "Sign pack and I-9 Section 1",
+     "detail": "Candidate signs the pack and, for US hires, completes Form I-9 Section 1 no later than the first day of work. Right-to-work documents follow the ON-02 country flow.",
+     "sla": "Day -5 to Day 1",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Confirm Day-1 plan and buddy",
+     "detail": "Manager completes the week-1 section of T-ONBOARD-PLAN, names a buddy outside the reporting line in the same site or timezone, and requests the role access bundle (EDA tools, repositories, lab) within the export scope.",
+     "sla": "Day -5",
+     "next": [
+      "s11"
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "IT",
+     "type": "task",
+     "label": "Provision identity and ship equipment",
+     "detail": "Okta account is created disabled from the Darwinbox feed with birthright apps plus the role bundle; repository and EDA entitlements stay inside the TCP scope. Laptop is imaged and shipped (remote) or staged at site; activation happens on Day 1 after the document check.",
+     "sla": "Day -3",
+     "control": "Access bundle compared to export scope; activation gated on the signed-PIIA flag in Darwinbox",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "Security",
+     "type": "task",
+     "label": "Encode badge and physical access",
+     "detail": "Badge is encoded for general site zones only; lab and restricted zones open after EHS training and export clearance. Badge photos and biometrics need the local notice or consent (CCPA notice in CA; separate consent and a non-biometric option in China).",
+     "sla": "Day -2",
+     "next": [
+      "s13"
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "Recruiter",
+     "type": "task",
+     "label": "Send welcome comms and keep warm",
+     "detail": "Welcome email with Day-1 logistics, first-week agenda and buddy intro. For long notice periods (India 60-90 days, China 30 days) schedule a touchpoint every two weeks to cut reneging.",
+     "sla": "Day -5, then biweekly",
+     "next": [
+      "s14"
+     ]
+    },
+    {
+     "id": "s14",
+     "lane": "People Ops",
+     "type": "decision",
+     "label": "Day -1 readiness check passed?",
+     "detail": "People Ops checks the preboarding report: documents signed, contingencies cleared, account staged, laptop delivered, badge encoded, manager plan done.",
+     "branches": [
+      {
+       "to": "s15",
+       "label": "Ready"
+      },
+      {
+       "to": "s7",
+       "label": "Gap found"
+      }
+     ]
+    },
+    {
+     "id": "s15",
+     "lane": "People Ops",
+     "type": "end",
+     "label": "Hire ready for Day 1",
+     "detail": "Record hands off to ON-02 (Section 2 within 3 business days), ON-03 (hire transaction) and ON-04 (Day 1 to Day 90)."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Greenhouse-to-Darwinbox handoff and pre-hire record",
+     "R": "People Ops",
+     "A": "People Ops",
+     "C": "Recruiter",
+     "I": "Manager, Payroll"
+    },
+    {
+     "activity": "Background check and adverse action",
+     "R": "People Ops",
+     "A": "People Ops",
+     "C": "Legal",
+     "I": "Recruiter"
+    },
+    {
+     "activity": "Export-control screening and access scope",
+     "R": "Trade Compliance",
+     "A": "Trade Compliance",
+     "C": "Legal, Manager",
+     "I": "People Ops, IT"
+    },
+    {
+     "activity": "Country contract and statutory notice pack",
+     "R": "People Ops",
+     "A": "People Ops",
+     "C": "Legal",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Identity, equipment and system access",
+     "R": "IT",
+     "A": "IT",
+     "C": "Trade Compliance, Manager",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Badge and physical/lab access",
+     "R": "Security",
+     "A": "Security",
+     "C": "EHS, Trade Compliance",
+     "I": "Manager"
+    },
+    {
+     "activity": "Day-1 plan and buddy",
+     "R": "Manager",
+     "A": "Manager",
+     "C": "HRBP",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Candidate engagement until Day 1",
+     "R": "Recruiter",
+     "A": "Recruiter",
+     "C": "Manager",
+     "I": "People Ops"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Pre-hire record fields (job, level, base, equity, cost center, entity, location) match the approved offer before activation",
+     "type": "preventive",
+     "evidence": "Greenhouse approval record and Darwinbox comparison report with reviewer sign-off"
+    },
+    {
+     "id": "C2",
+     "control": "Controlled-technology entitlements and restricted-zone badge access are not activated until Trade Compliance records clearance or a license",
+     "type": "preventive",
+     "evidence": "Export clearance form, TCP register entry and access ticket citing the clearance ID"
+    },
+    {
+     "id": "C3",
+     "control": "Account activation is blocked until the PIIA/confidentiality agreement is signed",
+     "type": "preventive",
+     "evidence": "E-signature certificate timestamped before first login"
+    },
+    {
+     "id": "C4",
+     "control": "Background-check adverse action follows FCRA/ICRAA and CA Fair Chance steps",
+     "type": "preventive",
+     "evidence": "Vendor report, dated pre-adverse and adverse notices, individualized assessment"
+    },
+    {
+     "id": "C5",
+     "control": "Weekly exception report of hires starting within 10 business days with missing documents or clearances",
+     "type": "detective",
+     "evidence": "Darwinbox preboarding exception report with resolution notes"
+    },
+    {
+     "id": "C6",
+     "control": "Only Legal-approved template versions (DTSA, Rule 21F-17, state invention notices) are used",
+     "type": "preventive",
+     "evidence": "Template version log and e-signature template library audit"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Day-1 readiness (laptop, login, badge working on first morning)",
+     "target": ">= 95% of hires",
+     "why": "The most visible signal of operational quality to a new hire and manager"
+    },
+    {
+     "name": "Accept-to-start reneges",
+     "target": "< 3% overall; track India separately",
+     "why": "Long notice periods and counteroffers make preboarding engagement a retention lever"
+    },
+    {
+     "name": "Contingencies cleared by Day -3",
+     "target": ">= 98%",
+     "why": "Late clearance forces start-date moves or restricted starts"
+    },
+    {
+     "name": "Hires with all statutory documents signed before first login",
+     "target": "100%",
+     "why": "Unsigned IP or termination terms are hard or impossible to fix after start"
+    },
+    {
+     "name": "Week-1 new-hire experience score (T-ONBOARD-PULSE item)",
+     "target": ">= 4.3 / 5",
+     "why": "Early indicator of first-year attrition"
+    }
+   ],
+   "considerations": [
+    "Set a hard minimum lead time and do not let managers pull start dates in for export-flagged roles: deemed export licenses can take weeks or months, and a restricted-scope start is better than an uncleared one.",
+    "Keep export questions off the I-9, ask them only for flagged roles with the approved U.S.-person script, and store the answers in the export record, not the personnel file.",
+    "Contracts must be signed before start: in Canada, termination, IP and restrictive terms signed after Day 1 need fresh consideration; in China the written contract is due within one month, but sign on Day 1 anyway.",
+    "Global templates break locally: no non-competes or relocation repayment in CA, no non-competes below the C-suite in Ontario, post-employment non-competes void in India, and China/Taiwan non-competes only with paid compensation for eligible roles.",
+    "Run a clean-hire protocol for hires from direct competitors (e.g., TSMC, MediaTek, Entity List companies): written no-prior-materials certification, no personal devices carrying former-employer data, and a scoped first project where needed.",
+    "Create accounts disabled and activate on Day 1. Pre-start access to repositories before the PIIA is signed is a trade-secret gap, and pre-start e-learning for non-exempt hires is compensable work time.",
+    "Collect China candidate data only after the PIPL notice and separate consent for transfer to Darwinbox/US HQ; India DPDP and CA CCPA notices at collection apply too.",
+    "Hiring into a new US state or Canadian province needs payroll, UI and tax registrations before the first payroll; Quebec remote hires need French documents and legal review first.",
+    "Karnataka now bans keeping original certificates: verify originals at the joining desk and return them the same day."
+   ],
+   "variations": [
+    {
+     "when": "Rehire or boomerang",
+     "how": "Reactivate the existing Darwinbox ID, check rehire eligibility (OF-10), re-run background checks if the gap is over 6 months, and use I-9 Supplement B if rehired within 3 years of the original I-9 and still authorized."
+    },
+    {
+     "when": "F-1 OPT / STEM OPT graduate",
+     "how": "E-Verify and a Form I-983 training plan are required; since the Sept 15, 2026 fixed-admission rule, build start-date buffers for I-539 and I-765 approvals."
+    },
+    {
+     "when": "Sponsored foreign national (H-1B transfer, Canada work permit, Taiwan WDA permit, China work permit)",
+     "how": "The start date is gated by the immigration case (TA-07); no work before the permit is in hand, and payroll starts on the approved date only."
+    },
+    {
+     "when": "Export-flagged role with license pending",
+     "how": "Start on a documented non-controlled scope with repository ACLs set accordingly, or defer the start; Trade Compliance signs off the scope."
+    },
+    {
+     "when": "Executive officer hire",
+     "how": "Add Section 16 insider onboarding (Form 3 within 10 days), clawback policy acknowledgment, D&O questionnaire and a Form 8-K Item 5.02 check with Legal."
+    },
+    {
+     "when": "Acquisition or bulk onboarding",
+     "how": "Load records in bulk with 100% reconciliation to the deal census, keep the acquired I-9 decision with Legal, and issue country documents in waves before integration day."
+    }
+   ],
+   "countries": {
+    "us": "Collect I-9 Section 1 by the first day of work and hand off to ON-02; report new hires to the state within 20 days and register withholding, UI and PFML in any new remote work state before the first payroll. The PIIA needs the DTSA immunity notice, a Rule 21F-17 protected-rights carve-out and state invention-assignment notices (e.g., IL, MN, WA, DE, NJ, NY). Background checks require a standalone FCRA disclosure, a pre-adverse notice with the report and summary of rights, a wait (commonly 5 business days), then adverse action; give NY/CT/DE electronic-monitoring notices where applicable.",
+    "us-ca": "Give non-exempt hires the LC 2810.5 Wage Theft Prevention Act notice, plus the SB 294 Workplace Know Your Rights notice at hire and the emergency-contact designation asking whether that contact may be notified if the employee is arrested or detained at work (LC 1550 et seq.). The PIIA must include the LC 2870 carve-out notice, and offer documents may not contain a non-compete (B&P 16600), a non-CA law or forum clause (LC 925) or relocation/training repayment terms (AB 692, agreements from 1 Jan 2026). Also give the CCPA notice at collection, CRD harassment pamphlet, SDI and PFL brochures and workers' comp pamphlet, and file the EDD DE 34 new-hire report within 20 days.",
+    "ca": "In Ontario (25+ employees), give the written new-hire information statement (legal and operating name, contact details, work location, starting pay, pay period and payday, anticipated hours) before Day 1 where practicable, and the ESA poster plus disconnecting-from-work and electronic-monitoring policies within 30 days. The Canadian contract (ESA-compliant termination clause, IP assignment with moral-rights waiver, equity language covering the notice period) must be signed before the start date or it needs fresh consideration. Collect the SIN within 3 days of starting plus TD1 and TD1ON/TD1BC forms, and give BC relocating hires interim cover for the MSP waiting period.",
+    "in": "Issue the statutory appointment letter at joining (OSH Code s.6(1)(f)) showing designation, worker or non-worker category, wages meeting the 50% 'wages' rule, PF/ESI/gratuity, notice, probation and hours, and pay Karnataka e-stamp duty on the employment agreement at execution. Background verification needs written consent, with Aadhaar voluntary and masked, and Karnataka's 2026 amendment bars keeping original certificates. Pre-collect Form 11 and UAN details (EPF mandatory up to INR 25,000/month from 17 Sep 2026) and the tax-regime choice so Day-1 payroll setup is clean.",
+    "tw": "Enroll Labor Insurance, Employment Insurance, Occupational Accident Insurance and NHI effective the first day of work at the correct insured-salary grade, and report the 6% labor pension within 7 days; late enrollment makes the employer liable for lost benefits. The contract (with a Traditional Chinese version) should cover the Enforcement Rules Art. 7 terms, name the employer as author of work-made copyrights (Copyright Act Art. 11) and address service-invention remuneration (Patent Act Art. 7). Run the clean-hire certification for hires from TSMC, MediaTek or UMC and arrange the employer-paid pre-employment health exam.",
+    "cn": "Sign the written labor contract (Chinese or bilingual, Chinese prevailing) on or before Day 1 and never later than one month after start, or double wages accrue from month 2 (LCL Arts. 10, 82). Give the PIPL employee notice and obtain separate consent for sensitive PI and for transfer to Darwinbox/US HQ, and collect the prior employer's termination certificate and check existing non-compete obligations (LCL Art. 91 joint liability). Register social insurance and housing fund within 30 days in Shanghai or Shenzhen and arrange pre-job occupational health exams for lab and test roles."
+   },
+   "templates": [
+    "T-ONBOARD-PLAN"
+   ],
+   "policies": [
+    "POL-16",
+    "POL-17",
+    "POL-18",
+    "POL-19",
+    "POL-46",
+    "POL-48",
+    "POL-01"
+   ],
+   "related": [
+    "TA-04",
+    "TA-05",
+    "TA-06",
+    "TA-07",
+    "ON-02",
+    "ON-03",
+    "ON-04",
+    "BN-01",
+    "DS-04"
+   ]
+  },
+  {
+   "id": "ON-02",
+   "name": "Right-to-work verification",
+   "stage": "Onboard",
+   "depth": "standard",
+   "summary": "Verifies each hire's legal right to work in the country of employment using that country's statutory method, and tracks temporary authorizations so they are renewed or reverified before they lapse. Good looks like: zero unauthorized work, zero substantive I-9 errors, no document abuse, and no expired permit on payroll.",
+   "owner": "People Ops (process), Immigration (foreign-national permits), Legal (I-9 and E-Verify policy)",
+   "trigger": "Pre-hire record created in Darwinbox (ON-01), or a work-authorization expiry date comes within 90 days",
+   "outputs": [
+    "Completed Form I-9 (Section 1, Section 2 and Supplement B when needed) and E-Verify case result",
+    "Canada SIN and work-permit record with expiry date (9-series SIN tracked)",
+    "Taiwan WDA work permit or Gold Card and ARC; China Foreigner's Work Permit and residence permit; India E visa and FRRO registration",
+    "Work-authorization expiry tickler in Darwinbox",
+    "Quarterly I-9 self-audit report with corrections"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "E-Verify",
+    "Immigration case system",
+    "Document management",
+    "E-signature"
+   ],
+   "sla": "US: Section 2 within 3 business days of the first day of work; foreign-national permits in hand before Day 1; renewal or reverification started 90 days before expiry",
+   "lanes": [
+    "Employee",
+    "People Ops",
+    "Immigration",
+    "Legal"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Hire record triggers RTW checklist",
+     "detail": "Darwinbox assigns the right-to-work checklist by country of employment; sponsored hires are flagged from the TA-07 immigration case, not by asking about citizenship.",
+     "sla": "Day -10",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Complete Section 1 / submit documents",
+     "detail": "US hires complete I-9 Section 1 by the first day of work and choose any acceptable List A or List B+C documents; staff never specify documents. Elsewhere the employee provides the SIN (within 3 days of start), permit, passport or ARC.",
+     "sla": "By Day 1",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "People Ops",
+     "type": "decision",
+     "label": "Foreign national needing a permit?",
+     "detail": "Based on the immigration flag and documents presented for the country of employment.",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Yes"
+      },
+      {
+       "to": "s5",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Immigration",
+     "type": "task",
+     "label": "Confirm permit valid before start",
+     "detail": "Check the permit covers this employer, occupation and location; record the expiry in Darwinbox. No start date is confirmed until the permit is in hand (Canada, Taiwan, China) or the petition allows work (US).",
+     "control": "Start date locked until permit recorded",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Examine documents (Section 2)",
+     "detail": "US: physically examine originals within 3 business days, or use the DHS remote alternative procedure (live video, copies retained, box checked) only at E-Verify sites in good standing and consistently for all hires at that site. Other countries: verify originals and record the check.",
+     "sla": "Day 1 + 3 bd",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Create E-Verify case (US, if enrolled)",
+     "detail": "Create the case by the third business day where E-Verify is used or required. On a tentative nonconfirmation, notify the employee privately and follow referral steps exactly; take no adverse action while the case is open.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Resolve TNCs, lapses and audit findings",
+     "detail": "Legal handles suspicious documents, TNC outcomes and authorization lapses (remove from work, unpaid leave pending renewal, or separation). A quarterly I-9 self-audit corrects errors with dated, initialed annotations and no backdating.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Diarize expiry and reverify",
+     "detail": "Darwinbox alerts at 90/60/30 days. Reverify in Supplement B on or before expiry only for temporary employment authorization; never reverify US citizens, permanent residents or List B identity documents.",
+     "sla": "Start 90 days before expiry",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Immigration",
+     "type": "decision",
+     "label": "Authorization renewed in time?",
+     "detail": "Immigration confirms an extension, new permit or qualifying pending filing before the expiry date.",
+     "branches": [
+      {
+       "to": "s10",
+       "label": "Yes"
+      },
+      {
+       "to": "s7",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "People Ops",
+     "type": "end",
+     "label": "RTW record complete and filed",
+     "detail": "Documents stored separately from the personnel file; I-9 retained for the later of 3 years after hire or 1 year after termination."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Section 1 and document presentation",
+     "R": "Employee",
+     "A": "People Ops",
+     "C": "Immigration",
+     "I": "Manager"
+    },
+    {
+     "activity": "Document examination, Section 2 and E-Verify",
+     "R": "People Ops",
+     "A": "People Ops",
+     "C": "Legal",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Foreign-national permits and renewals",
+     "R": "Immigration",
+     "A": "Immigration",
+     "C": "Legal, Mobility",
+     "I": "People Ops, Manager"
+    },
+    {
+     "activity": "TNCs, lapses and quarterly I-9 audit",
+     "R": "Legal",
+     "A": "Legal",
+     "C": "People Ops, Immigration",
+     "I": "HRBP"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Weekly report of hires without Section 2 completed within 3 business days",
+     "type": "detective",
+     "evidence": "Darwinbox I-9 timeliness report with follow-up notes"
+    },
+    {
+     "id": "C2",
+     "control": "Scripted document instructions: the employee chooses documents, and the remote procedure is applied to all hires at a site or none",
+     "type": "preventive",
+     "evidence": "I-9 SOP, reviewer training log, site election record"
+    },
+    {
+     "id": "C3",
+     "control": "Monthly report of authorizations expiring within 90 days",
+     "type": "detective",
+     "evidence": "Expiry report with actions and renewal evidence"
+    },
+    {
+     "id": "C4",
+     "control": "Quarterly sample audit of I-9s and E-Verify cases",
+     "type": "detective",
+     "evidence": "Audit workpaper and annotated corrections"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Section 2 completed within 3 business days",
+     "target": "100%",
+     "why": "Late Section 2 is a substantive violation"
+    },
+    {
+     "name": "Substantive I-9 error rate in quarterly audit",
+     "target": "< 1% of forms",
+     "why": "ICE's Mar 2026 guidance treats many former technical errors as uncurable"
+    },
+    {
+     "name": "Work authorizations lapsed while on payroll",
+     "target": "0",
+     "why": "Unauthorized work creates penalties and immigration consequences"
+    }
+   ],
+   "considerations": [
+    "Keep right-to-work and export-control screening separate: the I-9 confirms work authorization only, and linking the two invites citizenship discrimination and document-abuse charges.",
+    "Over-verification is document abuse: asking a green-card holder to reverify, or demanding a specific document, breaches 8 U.S.C. 1324b even when well meant.",
+    "Audit before an inspection, not after: ICE's Mar 2026 guidance leaves no cure period for many errors, so the quarterly self-audit is the only realistic fix window.",
+    "Use an authorized representative for remote hires at sites that do not use E-Verify; the remote alternative procedure is only for E-Verify employers in good standing.",
+    "Store I-9s and permit copies separately from personnel files with restricted access, and purge on schedule."
+   ],
+   "variations": [
+    {
+     "when": "Rehire within 3 years of the original I-9",
+     "how": "Use Supplement B (rehire) if the employee is still authorized; otherwise complete a new I-9."
+    },
+    {
+     "when": "STEM OPT employee",
+     "how": "E-Verify is mandatory, the I-983 training plan and reporting apply, and fixed I-94 end dates (from Sept 15, 2026) must be tracked alongside the EAD."
+    },
+    {
+     "when": "Acquired workforce",
+     "how": "Legal decides whether to retain the seller's I-9s (inheriting their errors) or complete new I-9s for everyone, and applies the choice consistently."
+    },
+    {
+     "when": "Cross-border transfer (MV-03)",
+     "how": "Run the destination country's check from scratch; the permit must be in hand before the first working day there."
+    }
+   ],
+   "countries": {
+    "us": "Form I-9 Section 1 by the first day of work and Section 2 within 3 business days, on the 01/20/25 edition (the 08/01/23 print expiring 07/31/2026 may not be used), with remote examination only for E-Verify employers in good standing; ICE's Mar 2026 guidance makes many former technical errors substantive ($288-$2,861 per form). E-Verify applies under the FAR clause, state mandates (e.g., AZ, AL, MS, SC, GA, NC 25+, FL 25+, UT 150+) and for STEM OPT hires.",
+    "us-ca": "Use E-Verify only as federal law requires, never before an offer or to check current employees, and notify employees within 72 hours of a federal I-9 inspection notice (LC 1019.1, 1019.2, 90.2). Do not let immigration agents into non-public areas without a judicial warrant (Gov Code 7285.1-7285.2).",
+    "ca": "Collect the SIN within 3 days of starting and record the permit expiry for 9-series SINs, which expire with the permit; for LMIA-exempt hires submit the offer in the IRCC Employer Portal with the C$230 fee and keep records 6 years. Keep wages and duties consistent with the permit conditions (IRPR ss.209.2-209.3).",
+    "in": "Indian nationals need no permit check, so confirm identity through consented background verification (Aadhaar voluntary and masked) and return original certificates the same day (Karnataka 2026 amendment). Foreign nationals need an Employment (E) visa (generally salary over USD 25,000/yr) and FRRO registration within 14 days of arrival if staying 180+ days, under the Immigration and Foreigners Act 2025 (verify employer reporting duties).",
+    "tw": "Foreign professionals need a WDA work permit for specialized work (salary threshold currently NT$47,971/month; verify) or an Employment Gold Card, plus an ARC, before starting; 2026 amendments widened eligibility for top-university graduates. Never hold employees' passports or ID cards (Employment Services Act).",
+    "cn": "Foreign hires need the Foreigner's Work Permit (A/B/C tier), a Z visa and a residence permit within 30 days of entry before working, and foreign contracts run at most 5 years; SPC Interpretation II Art. 4 recognizes employment only for foreigners with PR or valid permits. Taiwan-resident engineers can work in the mainland without a PRC work permit, but check their Taiwan obligations (e.g., core key technology travel approvals) first."
+   },
+   "templates": [],
+   "policies": [
+    "POL-19",
+    "POL-08",
+    "POL-46",
+    "POL-49"
+   ],
+   "related": [
+    "ON-01",
+    "ON-03",
+    "TA-06",
+    "TA-07",
+    "MV-06",
+    "DS-03"
+   ]
+  },
+  {
+   "id": "ON-03",
+   "name": "Hire transaction & HRIS setup",
+   "stage": "Onboard",
+   "depth": "standard",
+   "summary": "Turns the pre-hire record into an active Darwinbox worker with the correct position, cost center, legal entity, compensation and payroll attributes, sourced only from the approved offer. It is a SOX control point because the hire record feeds payroll, equity grants and headcount reporting. Good looks like: every record matches the approved offer, a second person reviews it before the first payroll cut-off, and the audit trail is complete.",
+   "owner": "People Ops (process and data), Payroll (payroll acceptance), Finance (cost center and SOX control owner)",
+   "trigger": "Preboarding contingencies cleared (ON-01), or Day 1 for same-week starts",
+   "outputs": [
+    "Active Darwinbox worker record linked to an approved, budgeted position",
+    "Compensation record (base, currency, bonus target, allowances, sign-on) matching the approved offer",
+    "Payroll new-hire interface record with statutory IDs (SSN, SIN, UAN, ARC, SI/HF numbers)",
+    "New-hire equity grant request queued for Stock Admin (EQ-01)",
+    "Maker-checker approval log and audit trail retained for SOX testing"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Greenhouse (ATS)",
+    "Payroll provider",
+    "Equity platform",
+    "ITSM / identity (e.g. ServiceNow, Okta)"
+   ],
+   "sla": "Hire entered and approved by Day -3, and always before the input cut-off of the first pay period",
+   "lanes": [
+    "People Ops",
+    "Payroll",
+    "Stock Admin",
+    "Finance"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Contingencies cleared; hire ready",
+     "detail": "ON-01 checklist shows background, export and document steps complete, so the hire transaction can be finalized.",
+     "sla": "Day -5",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Link hire to approved position",
+     "detail": "Select the open position from PL-02; it carries job code, level, overtime classification, location, legal entity, cost center and manager. No approved position, no hire.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Load comp from approved offer",
+     "detail": "Base, currency, pay frequency, bonus target, sign-on and allowances flow through the Greenhouse integration; manual entry needs a ticket with the approved offer attached. Check exempt status against the salary floor for the location.",
+     "control": "Comp fields locked to integration values; manual overrides logged",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Enter statutory and payroll data",
+     "detail": "Tax forms (W-4 and state, TD1, India regime election, China IIT deductions), bank details, statutory IDs, work state or social-insurance city, and worker/special-hours classification.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Maker-checker review",
+     "detail": "A second People Ops reviewer compares the record to the approved offer and position: job, level, base, bonus target, cost center, entity, location and start date. Darwinbox roles stop a maker approving their own entry.",
+     "control": "Key SOX control: independent review of new-hire record",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "People Ops",
+     "type": "decision",
+     "label": "Record matches the offer?",
+     "detail": "Checker approves or rejects with a reason code.",
+     "branches": [
+      {
+       "to": "s7",
+       "label": "Yes"
+      },
+      {
+       "to": "s3",
+       "label": "No - return to maker"
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Accept new hire into payroll",
+     "detail": "Payroll reviews the new-hire interface report against Darwinbox, confirms first-period proration and any new state, province or city registration before cut-off; mismatches go back to People Ops.",
+     "sla": "Before cut-off",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Stock Admin",
+     "type": "task",
+     "label": "Queue new-hire equity grant",
+     "detail": "Equity from the offer is queued for the next scheduled grant date under the equity grant policy; share count is set at grant under the approved conversion method and approved by the Comp Committee or its delegate.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Finance",
+     "type": "task",
+     "label": "Reconcile hires to headcount and GL",
+     "detail": "Monthly, Finance reconciles new hires to approved positions and cost centers and new-hire pay to the GL; any unexplained hire is investigated.",
+     "control": "Detective reconciliation of hires to approved positions",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "People Ops",
+     "type": "end",
+     "label": "Hire active; audit trail retained",
+     "detail": "Transaction history, approvals and source documents stay in Darwinbox for SOX testing and record retention."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Hire transaction entry",
+     "R": "People Ops",
+     "A": "People Ops",
+     "C": "Recruiter",
+     "I": "Manager"
+    },
+    {
+     "activity": "Maker-checker review",
+     "R": "People Ops (second reviewer)",
+     "A": "Finance (SOX control owner)",
+     "C": "Payroll",
+     "I": "Internal Audit"
+    },
+    {
+     "activity": "Payroll acceptance of new hires",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "People Ops",
+     "I": "Finance"
+    },
+    {
+     "activity": "New-hire equity grant",
+     "R": "Stock Admin",
+     "A": "Comp Committee (or delegate)",
+     "C": "Total Rewards",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Headcount and GL reconciliation",
+     "R": "Finance",
+     "A": "Finance",
+     "C": "FP&A",
+     "I": "People Ops"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Independent review of each new-hire record against the approved offer before the first payroll",
+     "type": "preventive",
+     "evidence": "Darwinbox approval log with maker and checker IDs, timestamps and attached offer"
+    },
+    {
+     "id": "C2",
+     "control": "Segregation of duties: no single user can create a worker, change pay and approve payroll",
+     "type": "preventive",
+     "evidence": "Quarterly user-access review (DS-04)"
+    },
+    {
+     "id": "C3",
+     "control": "Monthly exception report of Darwinbox comp vs Greenhouse approved offers",
+     "type": "detective",
+     "evidence": "Report with completeness and accuracy (IPE) evidence and reviewer sign-off"
+    },
+    {
+     "id": "C4",
+     "control": "Monthly reconciliation of new hires to approved positions and the payroll register",
+     "type": "detective",
+     "evidence": "Reconciliation workpaper signed by Finance"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Hire records matching the approved offer at first review",
+     "target": ">= 98%",
+     "why": "Measures input quality at the source of payroll data"
+    },
+    {
+     "name": "New hires paid correctly on first payroll",
+     "target": ">= 99.5%",
+     "why": "First-paycheck errors damage trust and trigger off-cycles"
+    },
+    {
+     "name": "Hires entered before first payroll cut-off",
+     "target": "100%",
+     "why": "Late entry forces off-cycle payments"
+    },
+    {
+     "name": "SOX exceptions in hire controls",
+     "target": "0",
+     "why": "Hire-to-pay is in audit scope"
+    }
+   ],
+   "considerations": [
+    "Integrate, do not retype: comp fields should come from the approved Greenhouse offer, with manual edits the logged exception.",
+    "Classification set at hire drives overtime exposure: CA exempt floors, Taiwan's lack of any salary-based exemption, India 'worker' status and China special-hours approval should be position attributes, not individual guesses.",
+    "The legal employer (US corp, Canadian subsidiary, India private limited, Taiwan entity, China WFOE) determines payroll, tax and social-insurance registration; a wrong entity is expensive to unwind.",
+    "Reports used in the review control need completeness and accuracy evidence (parameters, record counts), because auditors test the report as well as the review.",
+    "A hire entered after cut-off still has to be paid on time (CA non-exempt within 7 days of period close), so route it to PY-02 rather than deferring wages."
+   ],
+   "variations": [
+    {
+     "when": "Same-week start or late paperwork",
+     "how": "Enter as pending, keep checker review before any payment, and use an off-cycle (PY-02) if the cut-off is missed."
+    },
+    {
+     "when": "Rehire",
+     "how": "Reactivate the original ID to preserve service history (Canada notice, Taiwan seniority, China cumulative service for annual leave) and attach a new position."
+    },
+    {
+     "when": "Contractor or intern conversion",
+     "how": "Close the contingent or intern record, create a new hire record, and re-check classification (MV-05)."
+    },
+    {
+     "when": "Acquisition bulk load",
+     "how": "Migrate with 100% record-count and pay-total reconciliation and a sample-based checker review agreed in advance with auditors."
+    }
+   ],
+   "countries": {
+    "us": "Capture work state and city for withholding, UI, PFML and local tax, W-4 and state forms, and FLSA exempt status against the $684/week floor and higher state thresholds; report new hires to the state within 20 days.",
+    "us-ca": "Mark a role exempt only if it meets $70,304 (2026) or the computer-professional $58.85/hr ($122,573.13/yr) and the duties test; technicians and lab operators default to non-exempt. Capture the data needed for LC 226 wage statements and the EDD DE 34 new-hire report within 20 days.",
+    "ca": "Enter SIN, TD1 and TD1ON/TD1BC, province of employment (drives CPP/EI, EHT and WSIB or WorkSafeBC) and hours-of-work exemption status (ON IT professional; BC high-technology professional, ESR s.37.8), plus the 4% or 6% vacation pay basis.",
+    "in": "Record worker vs non-worker status (supervisor ceiling INR 18,000), a CTC split where 'wages' are at least 50% of remuneration, UAN/ESIC numbers and the tax-regime election, plus the state (Karnataka or Telangana) for PT and LWF.",
+    "tw": "Record insured-salary grades for Labor Insurance and NHI and the pension wage grade (6% employer contribution) effective Day 1, resident vs non-resident tax status (183-day rule; 18% non-resident withholding) and the statutory roster fields (LSA Art. 7).",
+    "cn": "Record contract term and probation end date (LCL Art. 19 limits and fixed-term counting), social-insurance and housing-fund city and base, IIT special additional deductions and any special working-hours approval; for foreigners, record permit numbers and the allowance-vs-deduction election."
+   },
+   "templates": [
+    "T-OFFER-APPROVAL"
+   ],
+   "policies": [
+    "POL-23",
+    "POL-28",
+    "POL-29",
+    "POL-46",
+    "POL-49"
+   ],
+   "related": [
+    "ON-01",
+    "TA-04",
+    "PL-02",
+    "PY-01",
+    "EQ-01",
+    "DS-01",
+    "DS-04"
+   ]
+  },
+  {
+   "id": "ON-04",
+   "name": "Day 1 to Day 90 onboarding & probation",
+   "stage": "Onboard",
+   "depth": "deep",
+   "summary": "Takes a new hire from Day-1 orientation through mandatory training and policy acknowledgments, structured 30/60/90 check-ins and, where it applies, a documented probation review with a confirmation, extension or exit decision. Good looks like: all acknowledgments and training done within 30 days (CA harassment within 6 months), three documented check-ins for every hire, and probation decisions made on time with evidence that holds up locally.",
+   "owner": "Manager (ramp and probation recommendation), HRBP (probation decision quality), People Ops (Day 1, tracking, letters), L&D (curriculum)",
+   "trigger": "Employee's first day of work (Darwinbox status Active)",
+   "outputs": [
+    "Signed acknowledgments: Code of Conduct, Insider Trading Policy, IP/confidentiality, acceptable use, local handbook or work rules",
+    "LMS completion records for compliance training (harassment/POSH, insider trading, export/TCP, EHS)",
+    "30/60/90 check-in records in the Performance module against T-ONBOARD-PLAN",
+    "T-ONBOARD-PULSE results at Day 30 and Day 90",
+    "Probation review and confirmation, extension or non-confirmation letter where probation applies",
+    "Onboarding completion status in Darwinbox"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "LMS",
+    "Performance module (Darwinbox)",
+    "Survey platform",
+    "E-signature",
+    "ITSM / identity (e.g. ServiceNow, Okta)"
+   ],
+   "sla": "Acknowledgments within 5 business days; mandatory training within 30 days (CA harassment within 6 months); probation decision at least 10 business days before probation ends",
+   "lanes": [
+    "Employee",
+    "Manager",
+    "People Ops",
+    "L&D",
+    "HRBP",
+    "Legal"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Day 1: activate and orient",
+     "detail": "Accounts are activated after the document check; orientation covers the company, security and trade-secret rules and speak-up channels. Day-1 statutory items (I-9 Section 2, SIN, bank and tax forms) are collected.",
+     "sla": "Day 1",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Sign policy acknowledgments",
+     "detail": "E-sign the Code of Conduct, Insider Trading Policy (blackouts, pre-clearance, designated-insider status), acceptable use and monitoring notice, and the local handbook or work rules (China handbook adopted through democratic procedure; Taiwan filed work rules).",
+     "sla": "Day 1-5",
+     "control": "Code and insider-trading acknowledgments required before equity portal and pre-clearance access",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "L&D",
+     "type": "task",
+     "label": "Assign compliance curriculum",
+     "detail": "LMS assigns by country and role: Code and insider trading for all; TCP briefing for export-flagged roles; EHS before lab access; CA harassment; India POSH; Taiwan OSH; Ontario AODA and OHS awareness.",
+     "sla": "Day 1",
+     "control": "Lab badge zones open only after EHS completion (LMS-to-badge feed)",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Kick off 30/60/90 plan",
+     "detail": "Manager and hire agree the T-ONBOARD-PLAN outcomes, first deliverables (e.g., own a verification block or a test program), stakeholders and tools. Where probation applies, write down measurable confirmation criteria and get them acknowledged (required in China).",
+     "sla": "Week 1",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Complete mandatory training",
+     "detail": "Employee completes the curriculum with LMS reminders at Day 14 and Day 25; overdue items escalate to the manager at Day 30. For non-exempt staff, training time is paid time.",
+     "sla": "By Day 30",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Day-30 check-in",
+     "detail": "Record progress against the plan, access or tool gaps and early concerns in the Performance module. Any performance concern must be written down specifically now, because CN, TW and IN decisions depend on it later.",
+     "sla": "Day 30",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Send Day-30 pulse; chase overdue",
+     "detail": "Send T-ONBOARD-PULSE (role clarity, tools, manager, buddy, belonging) and the overdue-training report to managers and HRBPs. Results are reported only for groups of 5 or more.",
+     "sla": "Day 30-35",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Day-60 check-in",
+     "detail": "Mid-point feedback; for probation roles, a documented mid-probation review with specific examples measured against the disclosed criteria.",
+     "sla": "Day 60",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Day-90 review and recommendation",
+     "detail": "Structured review against the plan, with a recommendation to confirm, extend or not confirm where probation applies; in the US it is a check-in with no 'permanent status' language.",
+     "sla": "Probation end - 10 bd",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "HRBP",
+     "type": "decision",
+     "label": "Probation outcome?",
+     "detail": "HRBP tests the recommendation against evidence, consistency across similar hires and the country rules before anything is communicated.",
+     "branches": [
+      {
+       "to": "s13",
+       "label": "Confirm / no probation"
+      },
+      {
+       "to": "s11",
+       "label": "Extend (where lawful)"
+      },
+      {
+       "to": "s12",
+       "label": "Not confirmed"
+      }
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Issue extension with plan",
+     "detail": "Extend only where the contract and local law allow (typically once in India); China probation cannot exceed the statutory maximum and is allowed only once per employer; in Canada extension does not delay the 3-month ESA threshold. The letter restates the criteria and the new review date.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Review non-confirmation exit",
+     "detail": "Legal and Employee Relations review evidence and local rules before any exit and route it to OF-02. China needs proof of failing disclosed criteria, notice before probation ends and prior union notification; Taiwan needs an LSA Art. 11 ground.",
+     "control": "Legal sign-off required for every non-confirmation outside the US",
+     "next": [
+      "s15"
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Issue confirmation letter",
+     "detail": "Send the confirmation letter by e-signature where used (India standard practice; optional elsewhere) and update the Darwinbox probation status, which triggers any confirmation-linked benefits or notice terms.",
+     "sla": "By probation end",
+     "next": [
+      "s14"
+     ]
+    },
+    {
+     "id": "s14",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Complete Day-90 pulse",
+     "detail": "Employee completes the Day-90 T-ONBOARD-PULSE; results feed HR Analytics and manager coaching.",
+     "sla": "Day 90",
+     "next": [
+      "s15"
+     ]
+    },
+    {
+     "id": "s15",
+     "lane": "People Ops",
+     "type": "end",
+     "label": "Close onboarding record",
+     "detail": "Onboarding status closes in Darwinbox; the employee moves into PD-01 goal setting, or the case moves to OF-02 for a non-confirmation."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Day-1 activation and orientation",
+     "R": "People Ops",
+     "A": "People Ops",
+     "C": "IT, Security",
+     "I": "Manager"
+    },
+    {
+     "activity": "Code of Conduct and insider-trading acknowledgments",
+     "R": "Employee",
+     "A": "Ethics & Compliance",
+     "C": "Legal",
+     "I": "Stock Admin"
+    },
+    {
+     "activity": "Compliance curriculum assignment and tracking",
+     "R": "L&D",
+     "A": "L&D",
+     "C": "EHS, Trade Compliance, Legal",
+     "I": "Manager"
+    },
+    {
+     "activity": "30/60/90 plan and check-ins",
+     "R": "Manager",
+     "A": "Manager",
+     "C": "HRBP",
+     "I": "People Ops"
+    },
+    {
+     "activity": "New-hire pulse survey",
+     "R": "People Ops",
+     "A": "HR Analytics",
+     "C": "L&D",
+     "I": "HRBP, Manager"
+    },
+    {
+     "activity": "Probation recommendation and decision",
+     "R": "Manager",
+     "A": "HRBP",
+     "C": "Legal, Employee Relations",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Confirmation and extension letters",
+     "R": "People Ops",
+     "A": "HRBP",
+     "C": "Legal",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Non-confirmation exit review",
+     "R": "Legal",
+     "A": "HRBP",
+     "C": "Employee Relations, Manager",
+     "I": "People Ops"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Code of Conduct and insider-trading acknowledgments signed before equity portal and pre-clearance access",
+     "type": "preventive",
+     "evidence": "E-signature records by employee and access provisioning log"
+    },
+    {
+     "id": "C2",
+     "control": "Training completion tracked against statutory deadlines (CA 6 months, POSH at induction, AODA as soon as practicable)",
+     "type": "detective",
+     "evidence": "LMS completion report with SB 513 fields; CA certificates kept 2 years"
+    },
+    {
+     "id": "C3",
+     "control": "Lab and restricted-zone access opens only after EHS training",
+     "type": "preventive",
+     "evidence": "LMS-to-badge integration log"
+    },
+    {
+     "id": "C4",
+     "control": "Probation-end alert 30 days ahead and decision recorded before the end date",
+     "type": "preventive",
+     "evidence": "Darwinbox alert log and decision record"
+    },
+    {
+     "id": "C5",
+     "control": "Legal review of every non-confirmation outside the US before communication",
+     "type": "preventive",
+     "evidence": "Legal sign-off in the ER case file"
+    },
+    {
+     "id": "C6",
+     "control": "TCP briefing acknowledgment for export-flagged employees before controlled access",
+     "type": "preventive",
+     "evidence": "Signed TCP acknowledgment linked to the clearance record"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Mandatory training completed within 30 days",
+     "target": ">= 95% (100% for statutory deadlines)",
+     "why": "Missed statutory training is a direct compliance failure"
+    },
+    {
+     "name": "30/60/90 check-ins documented",
+     "target": ">= 90% of hires",
+     "why": "Documented check-ins drive ramp and are evidence in probation decisions"
+    },
+    {
+     "name": "Probation decisions recorded before the end date",
+     "target": "100%",
+     "why": "Missed dates lose the probation window (China) or trigger notice rights (Canada)"
+    },
+    {
+     "name": "Voluntary attrition within 90 days",
+     "target": "< 2% of hires",
+     "why": "Early exits usually trace back to onboarding or role mismatch"
+    },
+    {
+     "name": "Day-90 pulse: role clarity and manager support",
+     "target": ">= 4.2 / 5",
+     "why": "Leading indicator of first-year retention"
+    },
+    {
+     "name": "Manager rates hire fully contributing at Day 90",
+     "target": ">= 75%",
+     "why": "Measures time to productivity"
+    }
+   ],
+   "considerations": [
+    "In the US avoid 'probation' language that implies permanent status after it ends; call it an introductory period and say it does not change at-will employment.",
+    "China probation is the only cheap exit window but it is narrow: criteria disclosed and acknowledged at hire, evidence gathered during probation, and the decision notified before probation expires. Diarize at contract signature, not at Day 80.",
+    "Taiwan has no statutory probation; ending employment at the end of an agreed probation still needs an LSA Art. 11 or 12 ground, and Art. 16 notice applies once tenure reaches 3 months, so decide before month 3 where you can.",
+    "Canada: ESA notice and BC compensation for length of service start after 3 months, and a probation clause only limits notice if it says so clearly. Assess suitability in good faith and document it.",
+    "India: state in the contract whether confirmation is automatic at the end of probation, and diarize the date to avoid disputes over 'deemed confirmation'; notice periods often change on confirmation.",
+    "Brief engineers on insider trading in week 1: people who see design wins, customer forecasts or tape-out results may be designated insiders, and 'shadow trading' in customer or competitor stock is a live risk (SEC v. Panuwat).",
+    "Pulse anonymity matters at small sites (e.g., a handful of Hsinchu hires a quarter): report results by quarter or region once n is at least 5.",
+    "Remind competitor hires at Day 30 of the clean-hire certification; in Taiwan, misuse of national core key technology carries criminal exposure for the individual and the company.",
+    "Taiwan's 2026 sick-leave rule bars adverse appraisal for up to 10 sick days a year, so probation reviews must not count protected sick leave against the hire."
+   ],
+   "variations": [
+    {
+     "when": "Remote hire",
+     "how": "Virtual orientation and shipped equipment; add ON disconnecting-from-work and monitoring policies, CA LC 2802 reimbursement setup and a buddy in the same timezone."
+    },
+    {
+     "when": "Intern or new-graduate cohort",
+     "how": "Cohort orientation and a shortened 30/60 plan; interns have no probation, and the conversion decision feeds TA-08."
+    },
+    {
+     "when": "People manager hire",
+     "how": "Adds the CA 2-hour supervisor harassment course, manager essentials training and briefings on POSH IC and speak-up escalation duties."
+    },
+    {
+     "when": "Lab or technical operations hire",
+     "how": "EHS, chemical hygiene and HazCom training before lab access, occupational health exams in China and Taiwan, and shift and overtime rules briefing (PY-03)."
+    },
+    {
+     "when": "Executive officer hire",
+     "how": "Section 16 onboarding (Form 3 within 10 days), pre-clearance setup, clawback acknowledgment and D&O questionnaire alongside the standard plan."
+    },
+    {
+     "when": "Rehire or transfer with prior service",
+     "how": "Check whether prior service counts (Canada notice, Taiwan seniority, China cumulative service) and whether a new probation is allowed (China: once per employer)."
+    },
+    {
+     "when": "Hire who reports a concern during onboarding",
+     "how": "Route to ER-01 immediately and keep the probation decision separate, with Legal review to avoid any retaliation inference."
+    }
+   ],
+   "countries": {
+    "us": "There is no statutory probation; any introductory period should state it does not change at-will status (Montana's WDEA probation is the exception). State harassment-training deadlines follow the work location: NY at hire and annually, CT 2 hours within 6 months (3+ employees), DE within 1 year (50+), ME within 1 year (15+), IL annually. Benefits waiting periods may not exceed 90 days (ACA).",
+    "us-ca": "Complete 1-hour (non-supervisor) or 2-hour (supervisor) interactive harassment training within 6 months of hire or promotion and keep records 2 years (Gov Code 12950.1), and record SB 513 training details (trainer, date, duration, competencies). Deliver IIPP orientation, WVPP training, HazCom and lab chemical hygiene training before lab work. Keep any introductory period explicitly at-will; the PSL 90-day use wait runs on its own schedule.",
+    "ca": "There is no statutory probation, but ON ESA notice and BC compensation for length of service start only after 3 months' service, so complete and document the review before month 3; a contractual probation clause must clearly limit notice or common-law reasonable notice applies. Ontario hires need AODA training as soon as practicable and basic OHS awareness training; BC hires need new and young worker orientation before starting work.",
+    "in": "There is no statutory probation limit; market practice is 3-6 months, extendable once, closed with a written confirmation letter, and where standing orders apply (300+ workers) their probation terms govern workers. Deliver POSH awareness at induction and keep acknowledgments of standing orders or service rules, the privacy notice and the acceptable-use policy.",
+    "tw": "Probation is not statutory; an agreed period (commonly 3 months) does not allow free exit, since termination still needs an LSA Art. 11 or 12 ground, Art. 16 notice once tenure reaches 3 months, and pro-rated severance. Deliver general OSH training (typically at least 3 hours) and the work rules, with harassment and (from 1 July 2026) workplace-bullying complaint channels acknowledged.",
+    "cn": "Probation is capped by contract term: 1 month (3 months to under 1 year), 2 months (1 to under 3 years), 6 months (3+ years or open-ended), once per employee per employer, at no less than 80% of the agreed wage and the local minimum (LCL Arts. 19-20). Termination during probation (Art. 39(1)) needs evidence of failing pre-disclosed, acknowledged hiring criteria, notice before probation expires and prior union notification (Art. 43)."
+   },
+   "templates": [
+    "T-ONBOARD-PLAN",
+    "T-ONBOARD-PULSE"
+   ],
+   "policies": [
+    "POL-21",
+    "POL-45",
+    "POL-01",
+    "POL-05",
+    "POL-09",
+    "POL-18",
+    "POL-42",
+    "POL-51"
+   ],
+   "related": [
+    "ON-01",
+    "ON-02",
+    "ON-03",
+    "PD-01",
+    "PD-06",
+    "EQ-04",
+    "OF-02",
+    "HS-03",
+    "BN-01"
+   ]
+  },
+  {
+   "id": "ON-05",
+   "name": "Relocation",
+   "stage": "Onboard",
+   "depth": "standard",
+   "summary": "Provides relocation support for new hires and employees asked to move, domestically or internationally, with correct payroll tax treatment and repayment terms that are lawful where the employee works. Good looks like: tiered, pre-approved packages; costs imputed and grossed up in the right payroll period; immigration and start dates aligned; and no repayment clause that is void in the destination location.",
+   "owner": "Mobility (process and vendor), Total Rewards (package design), Payroll (tax reporting), Legal (repayment agreements)",
+   "trigger": "Approved offer or internal move (MV-01, MV-03) that includes a relocation benefit",
+   "outputs": [
+    "Relocation authorization with tier, budget and gross-up decision",
+    "Signed country-specific relocation agreement (repayment terms only where lawful)",
+    "Vendor initiation and move plan (household goods, temporary housing, home-finding, destination services)",
+    "Payroll imputation and gross-up records per country",
+    "Cost reconciliation and closure record"
+   ],
+   "systems": [
+    "Travel/mobility vendor",
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "E-signature",
+    "Immigration case system"
+   ],
+   "sla": "Authorization within 3 business days of offer approval; vendor contact within 2 business days of initiation; costs imputed in the pay period they are paid",
+   "lanes": [
+    "Employee",
+    "Mobility",
+    "Immigration",
+    "Legal",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Mobility",
+     "type": "start",
+     "label": "Relocation approved in offer or move",
+     "detail": "Mobility receives the approved offer or transfer with the relocation line item and destination.",
+     "sla": "Day 0",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Mobility",
+     "type": "task",
+     "label": "Assign tier and estimate true cost",
+     "detail": "Tier by level and move type (domestic lump sum, domestic managed, international). The estimate includes gross-up so Finance sees the full cost; anything above tier needs Total Rewards and Dept Head approval.",
+     "sla": "3 bd",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Mobility",
+     "type": "decision",
+     "label": "International move?",
+     "detail": "Cross-border moves need immigration sequencing before any lease or shipment is committed.",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Yes"
+      },
+      {
+       "to": "s5",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Immigration",
+     "type": "task",
+     "label": "Align permit, family and start date",
+     "detail": "Work permit before start (TA-07/MV-06), dependant permits checked (Canada spousal open work permits now limited), and the export status re-screened for the new site. Shipping and lease dates follow visa approval, not the reverse.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Issue country relocation agreement",
+     "detail": "Use the destination template: no repayment clause for CA agreements from 1 Jan 2026 (AB 692); a pro-rated, cost-linked clawback in India; no liquidated damages in China beyond training and non-compete cases.",
+     "control": "Only Legal-approved country templates; CA template has no repayment clause",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Sign agreement and start move",
+     "detail": "Employee e-signs, meets the vendor and submits receipts for accountable items; lump sums are paid through payroll, not AP.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Impute, withhold and gross up",
+     "detail": "Taxable relocation is imputed in the period paid, with the approved gross-up covering income and payroll taxes; vendor-paid items are reported monthly so nothing escapes the W-2, T4 or local equivalent.",
+     "control": "Monthly vendor spend vs imputed income reconciliation",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Mobility",
+     "type": "decision",
+     "label": "Leaver within repayment period?",
+     "detail": "Checked at termination (OF-01/OF-02) against the signed agreement and the law of the work location.",
+     "branches": [
+      {
+       "to": "s9",
+       "label": "Yes, lawful clause"
+      },
+      {
+       "to": "s10",
+       "label": "No or clause void"
+      }
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Recover per agreement (PY-05)",
+     "detail": "Recover the pro-rated amount by invoice or by payroll deduction only with written authorization and within local limits; never from CA final pay.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Mobility",
+     "type": "end",
+     "label": "Reconcile costs and close",
+     "detail": "Vendor invoices reconciled to the authorization, year-end tax reconciliation done for moves spanning two tax years, and the file closed."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Package tier and exceptions",
+     "R": "Mobility",
+     "A": "Total Rewards",
+     "C": "Dept Head, Finance",
+     "I": "Recruiter"
+    },
+    {
+     "activity": "Relocation agreement and repayment terms",
+     "R": "Legal",
+     "A": "Legal",
+     "C": "Mobility, Total Rewards",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Immigration and family sequencing",
+     "R": "Immigration",
+     "A": "Immigration",
+     "C": "Mobility, Trade Compliance",
+     "I": "Manager"
+    },
+    {
+     "activity": "Tax imputation and gross-up",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "Vendor, Finance",
+     "I": "Mobility"
+    },
+    {
+     "activity": "Repayment recovery",
+     "R": "Payroll",
+     "A": "Mobility",
+     "C": "Legal, HRBP",
+     "I": "Finance"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Country-specific relocation templates approved by Legal; CA template contains no repayment clause",
+     "type": "preventive",
+     "evidence": "Template version log and Legal approval record"
+    },
+    {
+     "id": "C2",
+     "control": "Monthly reconciliation of vendor-reported relocation spend to income imputed in payroll",
+     "type": "detective",
+     "evidence": "Signed reconciliation workpaper"
+    },
+    {
+     "id": "C3",
+     "control": "Spend above tier requires documented Total Rewards and Dept Head approval",
+     "type": "preventive",
+     "evidence": "Exception approval ticket"
+    },
+    {
+     "id": "C4",
+     "control": "Payroll recovery only with signed authorization and a lawful clause",
+     "type": "preventive",
+     "evidence": "Authorization linked to the deduction code"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Relocation costs imputed in the correct pay period",
+     "target": ">= 99%",
+     "why": "Late imputation causes W-2c/amended slips and under-withholding"
+    },
+    {
+     "name": "Moves within approved tier budget",
+     "target": ">= 90%",
+     "why": "Controls cost creep from exceptions"
+    },
+    {
+     "name": "Start dates slipped due to relocation or immigration",
+     "target": "< 10% of moves",
+     "why": "Signals sequencing problems"
+    },
+    {
+     "name": "Relocating employee satisfaction",
+     "target": ">= 4.3 / 5",
+     "why": "Relocation experience shapes early engagement"
+    }
+   ],
+   "considerations": [
+    "Gross-ups can add half again to the taxable cost; decide gross-up policy by tier and prefer lump sums sized on a net basis for junior moves.",
+    "After AB 692, design CA retention with forward vesting (RSUs, deferred cash earned over time) instead of relocation clawbacks.",
+    "A move can change export status: a foreign national moving to a US or Canadian site may need a new deemed export or reexport assessment before access is restored.",
+    "Mobile employees create split-sourced RSU income across states and countries; tell Stock Admin and Payroll the move date before the next vest.",
+    "China transfers between Shanghai and Shenzhen need written consent (LCL Art. 35), and Taiwan transfers must meet the LSA Art. 10-1 principles, including help with the location change."
+   ],
+   "variations": [
+    {
+     "when": "Domestic lump sum (default for junior hires)",
+     "how": "Single payroll payment, taxable, no vendor; no repayment clause in CA."
+    },
+    {
+     "when": "International permanent move vs assignment",
+     "how": "A permanent move (MV-03) localizes to the host payroll; an assignment (MV-02) stays home-based with shadow payroll and tax equalization."
+    },
+    {
+     "when": "Cancelled or reversed move",
+     "how": "Mobility settles sunk costs (lease breaks, storage) and Payroll still imputes taxable amounts already paid."
+    },
+    {
+     "when": "Executive officer relocation",
+     "how": "Track relocation and any tax gross-up as perquisites for proxy disclosure; investors and proxy advisors view gross-ups critically."
+    }
+   ],
+   "countries": {
+    "us": "Relocation payments and reimbursements are taxable wages for non-military employees (the IRC 132(g) exclusion suspension was made permanent by OBBBA; verify), withheld as supplemental wages at 22% (37% over $1M) and reported on the W-2. Outside CA, repayment agreements are generally enforceable, but payroll deductions must follow state deduction laws (e.g., NY Labor Law 193) and cannot take a non-exempt employee below minimum wage.",
+    "us-ca": "For agreements entered on or after 1 Jan 2026, employers cannot require repayment of relocation, training or similar costs when employment ends (AB 692; B&P 16608, LC 926), with $5,000 minimum damages per worker; only narrow exceptions remain, and AB 1697 may change the scope or timing (verify). Reimburse necessary business expenses under LC 2802.",
+    "ca": "Spousal open work permits are limited to spouses of TEER 0/1 (or listed TEER 2/3) workers with 16+ months left on the permit, and BC's MSP waiting period (rest of the arrival month plus 2 months) needs interim private cover. Employer-paid moves are taxable unless they qualify as non-taxable reimbursed moving expenses under CRA rules (verify), and repayment deductions from wages need written authorization (ON ESA s.13; BC ESA ss.21-22).",
+    "in": "Joining-bonus and relocation clawbacks are enforceable only as reasonable liquidated damages tied to actual cost and pro-rated (Indian Contract Act s.74; Vijaya Bank v. Prashant Narnaware, 2025). Recovery from final pay needs clear contract terms and must stay within Code on Wages s.18 authorised deductions (50% cap).",
+    "tw": "Minimum-service commitments must be in writing and are valid only where the employer funded special training or pays reasonable compensation for the commitment (LSA Art. 15-1), so relocation alone may not support one (verify). Employer-initiated transfers must follow LSA Art. 10-1, including help with the location change and regard for family life.",
+    "cn": "Liquidated damages may be agreed only for training service periods and non-competes (LCL Arts. 22-23, 25), so structure any relocation clawback as a written, pro-rated refund of an advance and confirm with local counsel (verify). Foreign employees may choose tax-exempt housing, language and children's education allowances (through 31 Dec 2027) or special additional deductions, not both."
+   },
+   "templates": [],
+   "policies": [
+    "POL-31",
+    "POL-40",
+    "POL-19",
+    "POL-30"
+   ],
+   "related": [
+    "TA-04",
+    "TA-07",
+    "MV-01",
+    "MV-02",
+    "MV-03",
+    "MV-06",
+    "PY-02",
+    "PY-05"
+   ]
+  },
+  {
+   "id": "PY-01",
+   "name": "Payroll cycle: change control & close",
+   "stage": "Pay",
+   "depth": "deep",
+   "summary": "Runs every payroll cycle in every country from input cut-off to GL posting under SOX-grade change control: only approved changes go in, every master-data change is independently checked, variances are explained before approval, and payroll reconciles to the general ledger. Covers multi-country providers, statutory remittances and equity income processed through payroll. Good looks like: on-time and accurate pay, no unexplained variances, remittances made by statutory deadlines and clean SOX testing.",
+   "owner": "Payroll (process and control operation), Finance/Controller (SOX control owner and GL), People Ops (HRIS input quality)",
+   "trigger": "Country payroll calendar reaches the input cut-off (semi-monthly or biweekly US/Canada; monthly India, Taiwan, China)",
+   "outputs": [
+    "Certified HRIS input and change report with evidence of review",
+    "Payroll register and gross-to-net variance analysis with explanations",
+    "Maker-checker register approval and funding authorization",
+    "Country-compliant payslips and wage statements (e.g., CA LC 226)",
+    "Statutory remittance confirmations (IRS/state, CRA, EPFO/ESIC/PT/TDS, BLI/NHI/pension, China SI/HF/IIT)",
+    "Payroll-to-GL and bank reconciliation with reviewer sign-off"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "Timekeeping",
+    "Equity platform",
+    "BI / people analytics",
+    "Document management"
+   ],
+   "sla": "Input cut-off at T-5 business days before pay date; register approved by T-2; funding T-1; GL reconciliation within 3 business days after pay date; remittances by each statutory deadline",
+   "lanes": [
+    "People Ops",
+    "Stock Admin",
+    "Payroll",
+    "Vendor",
+    "Finance"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Payroll",
+     "type": "start",
+     "label": "Cut-off reached per calendar",
+     "detail": "Annual country payroll calendars fix cut-off, approval, funding and pay dates. Changes after cut-off move to the next cycle or, if pay would be late, to PY-02.",
+     "sla": "T-5 bd",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Finalize and certify HRIS changes",
+     "detail": "All hires, terminations, pay changes, allowances and unpaid leave are approved in Darwinbox before cut-off, and People Ops certifies the change set complete. No changes by email or spreadsheet.",
+     "control": "Signed cut-off certification",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Stock Admin",
+     "type": "task",
+     "label": "Send equity income file",
+     "detail": "RSU releases, option exercises and ESPP purchases (including disqualifying dispositions) with FMV, shares withheld or sold to cover and tax jurisdiction per employee, reconciled to the equity platform release report.",
+     "control": "Equity file tied to the platform release report before load",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Load inputs and run change report",
+     "detail": "Import the HRIS interface, approved time from Timekeeping, one-time payments and equity income. Generate a change report listing every new hire, termination, rate change and bank-account change since the last cycle.",
+     "sla": "T-5 to T-4",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Trace changes to approved source",
+     "detail": "A second payroll specialist traces 100% of rate and bank changes, and a sample of other changes, to approved Darwinbox transactions. Bank changes are confirmed by call-back to a number already on file.",
+     "control": "Change report reviewed by someone other than the entrant; bank changes independently verified",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Calculate gross-to-net",
+     "detail": "Provider runs the preliminary payroll with country rules: US federal/state/local and supplemental rates; Canada CPP/CPP2/EI; India PF/ESI/PT/TDS; Taiwan LI/EI/NHI/pension; China SI/HF and cumulative IIT.",
+     "sla": "T-4",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Analyze variances vs prior cycle",
+     "detail": "Compare the register to the prior period by employee and cost center against set thresholds (e.g., +/-10% or a local-currency amount); flag negative nets, zero pays and pay above expected caps. Every exception gets a written explanation (vest, bonus, OT, proration).",
+     "control": "Key detective control: documented variance review",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Payroll",
+     "type": "decision",
+     "label": "All variances explained?",
+     "detail": "Payroll manager reviews the variance file before sending it for approval.",
+     "branches": [
+      {
+       "to": "s9",
+       "label": "Yes"
+      },
+      {
+       "to": "s4",
+       "label": "No - correct inputs"
+      }
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Finance",
+     "type": "task",
+     "label": "Approve register and release funding",
+     "detail": "Payroll manager (maker) and a Finance approver (checker) sign the register summary and compare totals to the cash forecast; funding goes to the provider or bank only after approval.",
+     "sla": "T-2 to T-1",
+     "control": "Maker-checker approval before funding",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Pay, issue payslips, remit",
+     "detail": "Pay on the statutory or scheduled date and issue country-compliant payslips; the provider makes statutory deposits and filings under its service agreement.",
+     "sla": "Pay date",
+     "next": [
+      "s11"
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Confirm statutory remittances",
+     "detail": "Track every deposit against its deadline (941 schedule, CRA remitter schedule, India TDS by the 7th and PF/ESI by the 15th, China IIT by the 15th, Taiwan monthly premiums) and file confirmations.",
+     "sla": "Per statutory deadline",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "Finance",
+     "type": "task",
+     "label": "Post and reconcile payroll to GL",
+     "detail": "Post the payroll journal and reconcile gross pay, employer taxes and withholding liabilities to the GL and bank; clear suspense items within 30 days. Reviewer signs the reconciliation.",
+     "sla": "Pay date + 3 bd",
+     "control": "Payroll-to-GL reconciliation reviewed and signed",
+     "next": [
+      "s13"
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Log issues and root-cause",
+     "detail": "Log errors, off-cycles and late inputs with root cause, feeding PY-02, PY-05 and the quarterly SOX deficiency assessment. Tax-table and rate changes are tested before first live use.",
+     "next": [
+      "s14"
+     ]
+    },
+    {
+     "id": "s14",
+     "lane": "Finance",
+     "type": "end",
+     "label": "Cycle closed; evidence archived",
+     "detail": "Change report, variance file, approvals and reconciliations are archived per cycle for SOX testing."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "HRIS change completeness before cut-off",
+     "R": "People Ops",
+     "A": "People Ops",
+     "C": "Payroll",
+     "I": "Finance"
+    },
+    {
+     "activity": "Equity income file",
+     "R": "Stock Admin",
+     "A": "Stock Admin",
+     "C": "Payroll, Finance (Tax)",
+     "I": "Finance"
+    },
+    {
+     "activity": "Change report review",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "People Ops",
+     "I": "Finance"
+    },
+    {
+     "activity": "Gross-to-net calculation and statutory rules",
+     "R": "Vendor",
+     "A": "Payroll",
+     "C": "Legal",
+     "I": "Finance"
+    },
+    {
+     "activity": "Variance analysis",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "FP&A",
+     "I": "Finance"
+    },
+    {
+     "activity": "Register approval and funding",
+     "R": "Finance",
+     "A": "Finance",
+     "C": "Payroll",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Statutory remittances and filings",
+     "R": "Vendor",
+     "A": "Payroll",
+     "C": "Finance",
+     "I": "Legal"
+    },
+    {
+     "activity": "Payroll-to-GL reconciliation",
+     "R": "Finance",
+     "A": "Finance",
+     "C": "Payroll",
+     "I": "Internal Audit"
+    },
+    {
+     "activity": "Tax table and configuration changes",
+     "R": "Vendor",
+     "A": "Payroll",
+     "C": "Finance",
+     "I": "People Ops"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Input cut-off with People Ops certification that all approved HRIS changes are complete",
+     "type": "preventive",
+     "evidence": "Signed certification and cut-off log per cycle"
+    },
+    {
+     "id": "C2",
+     "control": "100% of pay-rate and bank-account changes traced to an approved source by someone other than the entrant",
+     "type": "preventive",
+     "evidence": "Annotated change report with reviewer initials and date"
+    },
+    {
+     "id": "C3",
+     "control": "Variance analysis against thresholds with written explanations",
+     "type": "detective",
+     "evidence": "Variance file with explanations and reviewer sign-off"
+    },
+    {
+     "id": "C4",
+     "control": "Maker-checker approval of the register before funding",
+     "type": "preventive",
+     "evidence": "Approval record and funding instruction"
+    },
+    {
+     "id": "C5",
+     "control": "Payroll-to-GL and bank reconciliation within 3 business days",
+     "type": "detective",
+     "evidence": "Signed reconciliation workpaper"
+    },
+    {
+     "id": "C6",
+     "control": "Equity income in payroll reconciled to the equity platform each cycle",
+     "type": "detective",
+     "evidence": "Tie-out of platform release report to payroll equity earnings"
+    },
+    {
+     "id": "C7",
+     "control": "Annual review of payroll providers' SOC 1 Type II reports and operation of complementary user-entity controls",
+     "type": "detective",
+     "evidence": "SOC 1 review memo with bridge letters"
+    },
+    {
+     "id": "C8",
+     "control": "Segregation of duties: nobody can change master data and approve payroll",
+     "type": "preventive",
+     "evidence": "Quarterly user-access review"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Payroll accuracy (payslips needing no correction)",
+     "target": ">= 99.8%",
+     "why": "Core quality measure"
+    },
+    {
+     "name": "On-time pay",
+     "target": "100% of cycles",
+     "why": "Late pay triggers statutory penalties and trust damage"
+    },
+    {
+     "name": "Off-cycle payments",
+     "target": "< 0.5% of payslips",
+     "why": "Off-cycles signal upstream input failures and carry control risk"
+    },
+    {
+     "name": "Statutory remittance or filing penalties",
+     "target": "0",
+     "why": "Direct cost and audit exposure"
+    },
+    {
+     "name": "Unreconciled GL items older than 30 days",
+     "target": "0",
+     "why": "Aged items hide errors and fraud"
+    },
+    {
+     "name": "Payroll SOX deficiencies",
+     "target": "0 significant deficiencies",
+     "why": "Payroll is a core ICFR area"
+    }
+   ],
+   "considerations": [
+    "One global calendar, local rules: CA non-exempt pay within 7 days of period close, BC within 8 days, India before the 7th, and fixed paydays in Taiwan and China. Build the calendar backwards from the strictest rule.",
+    "Equity income is the biggest variance driver: align vest dates with cut-offs, confirm sell-to-cover settlement before the run, and apply the mandatory 37% US rate above $1M of supplemental wages.",
+    "Payroll diversion fraud usually comes through bank-change requests; call back on a known number and hold same-cycle changes above a threshold.",
+    "Multi-country providers mean multiple control environments: get SOC 1 Type II reports (or agreed procedures where none exist), map the complementary user-entity controls, and do not assume the provider reviews your inputs.",
+    "Keep a rate-change calendar and test each change in parallel before first use: Jan 1 US wage base and CPP/EI rates, 1 Jan Taiwan minimum wage and grade tables, 1 Jul Shanghai SI base, 17 Sep 2026 India EPF ceiling.",
+    "India's 50% 'wages' rule (since 21 Nov 2025) changes PF and gratuity bases, so payroll configuration, not just CTC letters, must compute it.",
+    "China social insurance must be paid on the actual base; waiver agreements are void, and Shanghai's 2026 retroactive top-ups were due by 30 Sept 2026.",
+    "Small country teams cannot split duties internally; use a regional reviewer or have the provider prepare and in-house staff approve so maker-checker still holds.",
+    "Reports used in controls (change report, variance report) need IPE evidence: saved parameters, record counts and a tie-out to the register."
+   ],
+   "variations": [
+    {
+     "when": "New country, entity or US state",
+     "how": "Register tax, social-insurance and payroll accounts first (state withholding/UI/PFML, CRA RP account, EPFO/ESIC, BLI/NHI, SI/HF), then run a parallel payroll before live."
+    },
+    {
+     "when": "First cycle of the calendar or tax year",
+     "how": "Load new tax tables and wage bases, reset annual caps (CPP/EI, SS wage base, cumulative IIT), process W-4 exemption renewals due Feb 15, and India regime elections in April."
+    },
+    {
+     "when": "Bonus cycle (annual bonus, Taiwan Lunar New Year bonus, China one-off bonus)",
+     "how": "Run a special cycle with the bonus file approved by Total Rewards; apply the NHI 2.11% supplementary premium and the China separate-taxation choice."
+    },
+    {
+     "when": "Large RSU vest date",
+     "how": "Stock Admin confirms settlement and withholding before cut-off; Section 16 officers are handled with Legal for Form 4 timing."
+    },
+    {
+     "when": "Provider change or implementation",
+     "how": "At least two parallel runs, YTD balance conversion reconciled to the penny, and SOX walkthroughs updated before go-live."
+    },
+    {
+     "when": "Reduction in force cycle",
+     "how": "Final-pay deadlines drive timing (CA immediate); route to PY-02 and OF-05 with a dedicated reconciliation."
+    },
+    {
+     "when": "Retro pay after the annual comp review",
+     "how": "Retro amounts are recalculated from the approved CO-02 file and variance-checked by employee before approval."
+    }
+   ],
+   "countries": {
+    "us": "Withhold federal income tax (supplemental 22%, mandatory 37% over $1M, relevant to RSU vests), FICA with the $184,500 2026 Social Security wage base and 0.9% Additional Medicare over $200K, and state and local taxes by work location, depositing on the Form 941 schedule. Register each new remote work state before its first payroll and isolate the FLSA overtime premium for W-2 code TT. Keep payroll records 3 years (FLSA) and payroll tax records 4 years.",
+    "us-ca": "Non-exempt staff must be paid at least twice monthly, within 7 days after the period closes (LC 204), with LC 226 itemized wage statements showing gross and net wages, hours and rates, deductions, period dates, last-4 SSN or ID, legal employer name and address and PSL balance; penalties run $50 then $100 per period up to $4,000 per employee, plus PAGA. Withhold SDI at 1.3% of all wages (no cap) and include non-discretionary bonuses and shift differentials in the regular rate.",
+    "ca": "Withhold federal and provincial tax, CPP 5.95% (C$3,500-74,600), CPP2 4% (to C$85,000) and EI 1.63% employee / 2.282% employer (to C$68,900), and remit on the CRA schedule (accelerated remitters up to 4 times a month; late remittance draws 10% penalties). BC requires pay at least semi-monthly within 8 days after period end and ON a regular recurring payday, both with itemized wage statements; ON/BC Employer Health Tax and WSIB/WorkSafeBC premiums also apply. RSUs at vest, options at exercise and ESPP discounts are withheld on and reported on the T4.",
+    "in": "Pay before the 7th of the following month with electronic wage slips (Code on Wages s.17(1)), deposit TDS under s.392 of the Income-tax Act 2025 by the 7th, PF (12% + 12% on 'wages', mandatory to INR 25,000/month from 17 Sep 2026) and ESI (to INR 21,000) by the 15th, and Karnataka PT (INR 200/month, INR 300 in February) by the 20th. Compute PF and gratuity on the 50% 'wages' base, and withhold TDS on RSU/ESPP perquisites at vesting or exercise even when the US plan settles the shares.",
+    "tw": "Pay in NTD on a fixed payday with an itemized statement and no pre-deduction of damages (LSA Arts. 22-23, 26). Deduct the employee shares of Labor Insurance/EI (20%) and NHI (30%), pay the employer shares and the 0.025% wage arrears fund levy, and contribute at least 6% of wage (cap NT$150,000) to each labor pension account. Withhold the 2.11% NHI supplementary premium on bonuses above 4x the monthly insured amount; the minimum wage is NT$29,500/month and NT$196/hour from 1 Jan 2026.",
+    "cn": "Pay in RMB on a fixed date at least monthly with itemized statements, withhold IIT on the cumulative method and pay by the 15th of the following month, and pay social insurance and housing fund on the actual base within the city floor and cap (Shanghai RMB 7,546-37,731 from 1 Jul 2026). RSU, option and ESPP income is withheld as wages (separate taxation available through 31 Dec 2027) and needs SAFE Circular 7 plan registration; social-insurance waiver agreements are void (SPC Interpretation II Art. 19)."
+   },
+   "templates": [],
+   "policies": [
+    "POL-28",
+    "POL-29",
+    "POL-27",
+    "POL-46",
+    "POL-49"
+   ],
+   "related": [
+    "ON-03",
+    "PY-02",
+    "PY-03",
+    "PY-04",
+    "PY-05",
+    "EQ-02",
+    "EQ-03",
+    "CO-02",
+    "DS-04"
+   ]
+  },
+  {
+   "id": "PY-02",
+   "name": "Off-cycle & manual payments",
+   "stage": "Pay",
+   "depth": "standard",
+   "summary": "Controls payments made outside the regular cycle: final pay, missed or late inputs, underpayment corrections and urgent one-time payments. Off-cycles carry high fraud and SOX risk, so each needs a documented reason, approval by someone other than the requester and processing through the payroll provider with full tax treatment. Good looks like: statutory deadlines met, off-cycles kept rare, and every one traceable to an approved request.",
+   "owner": "Payroll (process), Finance (approval and SOX control owner), HRBP/People Ops (requesters)",
+   "trigger": "Approved request for pay that cannot wait for the next regular cycle: statutory final pay, missed input, underpayment correction, urgent one-time payment",
+   "outputs": [
+    "Off-cycle ticket with reason code, calculation and approvals",
+    "Off-cycle register and compliant payslip or wage statement",
+    "Taxes and statutory contributions withheld and remitted",
+    "GL posting included in the cycle reconciliation",
+    "Monthly off-cycle log with root-cause analysis"
+   ],
+   "systems": [
+    "Payroll provider",
+    "Darwinbox (HRIS)",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "BI / people analytics"
+   ],
+   "sla": "Final pay by the local statutory deadline (CA immediately on discharge); underpayments within 2 business days of approval",
+   "lanes": [
+    "HRBP",
+    "Payroll",
+    "Finance",
+    "Vendor"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "HRBP",
+     "type": "start",
+     "label": "Off-cycle need identified",
+     "detail": "HRBP or People Ops raises a ticket with a reason code (final pay, missed input, correction, one-time award), amount basis and pay-by date; managers cannot request directly.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Validate request and calculate",
+     "detail": "Check it is not a duplicate of a regular-cycle payment and calculate gross with the right tax method (US supplemental, Canada bonus method, India TDS, China cumulative IIT). Final pay includes the items local law requires, such as accrued vacation, unused annual leave and meal/rest premiums.",
+     "sla": "Same day",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Payroll",
+     "type": "decision",
+     "label": "Must pay before next cycle?",
+     "detail": "Required by a statutory deadline or causing real hardship? If not, it moves to the next regular cycle (PY-01).",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Yes"
+      },
+      {
+       "to": "s8",
+       "label": "No - defer to regular cycle"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Finance",
+     "type": "task",
+     "label": "Approve off-cycle payment",
+     "detail": "Approver is independent of the requester and preparer; the Payroll manager approves up to a set threshold and the Controller above it. Final pay is pre-authorized by policy and reviewed after payment.",
+     "control": "Independent approval before release",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Process off-cycle and pay",
+     "detail": "Provider runs the off-cycle through payroll (not AP) with the same deductions and a payslip. Manual checks or wires are an emergency exception under dual control and are loaded into payroll afterwards.",
+     "sla": "Per deadline",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Reconcile and post to GL",
+     "detail": "Include the off-cycle in the period reconciliation and update statutory reporting (e.g., Canada ROE within 5 calendar days for an interruption of earnings).",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Report root causes monthly",
+     "detail": "Monthly log by reason code goes to People Ops and HRBPs; late HRIS input is tracked to the team that caused it.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Payroll",
+     "type": "end",
+     "label": "Closed: paid or moved to cycle",
+     "detail": "Ticket closed with approvals, calculation and payment evidence attached."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Off-cycle request with reason code",
+     "R": "HRBP",
+     "A": "HRBP",
+     "C": "Manager",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Calculation and tax treatment",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "Vendor",
+     "I": "Finance"
+    },
+    {
+     "activity": "Approval",
+     "R": "Finance",
+     "A": "Finance",
+     "C": "Payroll",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Payment and statutory reporting",
+     "R": "Vendor",
+     "A": "Payroll",
+     "C": "Finance",
+     "I": "Employee"
+    },
+    {
+     "activity": "Monthly root-cause review",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "People Ops",
+     "I": "Finance"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Independent approval of every off-cycle; approver is not the requester or preparer",
+     "type": "preventive",
+     "evidence": "Ticket approval trail with user IDs"
+    },
+    {
+     "id": "C2",
+     "control": "Finance reviews 100% of the month's off-cycle payments against approved tickets",
+     "type": "detective",
+     "evidence": "Signed monthly off-cycle log"
+    },
+    {
+     "id": "C3",
+     "control": "Manual checks and wires only under dual control and logged",
+     "type": "preventive",
+     "evidence": "Check/wire log with two authorizations"
+    },
+    {
+     "id": "C4",
+     "control": "Termination date vs final-pay date report by country",
+     "type": "detective",
+     "evidence": "Final-pay timeliness report"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Off-cycle payments per 1,000 payslips",
+     "target": "< 5",
+     "why": "Off-cycles are costly and risky"
+    },
+    {
+     "name": "Final pay on time by country deadline",
+     "target": "100%",
+     "why": "Late final pay triggers penalties (e.g., CA waiting time)"
+    },
+    {
+     "name": "Unapproved off-cycles found in review",
+     "target": "0",
+     "why": "Tests the control"
+    },
+    {
+     "name": "Off-cycles caused by late HRIS input",
+     "target": "Downward trend quarter on quarter",
+     "why": "Points to the fix upstream"
+    }
+   ],
+   "considerations": [
+    "Pay employees through payroll, never AP: AP payments skip withholding and W-2/T4 reporting and are a classic audit finding.",
+    "Final-pay deadlines drive most urgent off-cycles, so prepare final pay before the termination meeting (CA) rather than after it.",
+    "A new bank account followed by an off-cycle request is a fraud red flag; block off-cycles to bank details changed within the last few days unless verified by call-back.",
+    "In CA, waiting-time penalties of up to 30 days' wages make a late off-cycle far more expensive than the effort of doing it on time.",
+    "Batch non-urgent one-time payments (spot awards, referral bonuses) into a scheduled monthly special run instead of one-off payments."
+   ],
+   "variations": [
+    {
+     "when": "Termination final pay (OF-05)",
+     "how": "Calculate and approve before the exit date; include accrued vacation, commissions due under the plan and any premiums; deliver on the local deadline."
+    },
+    {
+     "when": "Emergency manual check or wire",
+     "how": "Used only when the provider cannot meet a statutory deadline; dual control, then load into payroll for tax reporting in the same period."
+    },
+    {
+     "when": "Underpayment from a payroll error (PY-05)",
+     "how": "Pay within 2 business days with a corrected wage statement; include statutory premiums where due."
+    },
+    {
+     "when": "Urgent one-time award",
+     "how": "Requires Total Rewards approval as well as Finance; default is the next regular or monthly special run."
+    }
+   ],
+   "countries": {
+    "us": "Use the supplemental method (22% flat, mandatory 37% over $1M) or the aggregate method and report through the W-2; final-pay deadlines are set by state law, from immediate (CA, CO, MA involuntary) to the next regular payday (NY, IL).",
+    "us-ca": "On discharge or layoff all wages including accrued vacation are due immediately; on resignation, within 72 hours without notice or on the last day with 72+ hours' notice (LC 201-203), and late final pay accrues waiting-time penalties of up to 30 days' wages. Every off-cycle needs an LC 226-compliant wage statement.",
+    "ca": "ON final pay is due by the later of 7 days after termination or the next regular payday; BC within 48 hours if the employer terminates or 6 days if the employee quits. Issue the electronic ROE within 5 calendar days after the end of the pay period with the interruption of earnings.",
+    "in": "Final wages on resignation, dismissal or retrenchment are due within 2 working days (Code on Wages s.17(2)) and gratuity within 30 days of becoming payable; withhold TDS under s.392 on off-cycle salary and perquisites.",
+    "tw": "Wages, including unused annual leave, must be settled immediately on termination (Enforcement Rules Art. 9; LSA Art. 38) and severance within 30 days; apply the 2.11% NHI supplementary premium to large bonus payments.",
+    "cn": "Final wages are due in full at termination (verify any short Shenzhen grace period) and economic compensation is paid when the handover is completed (LCL Art. 50); an off-cycle annual bonus can use separate one-off bonus taxation once per year through 31 Dec 2027."
+   },
+   "templates": [],
+   "policies": [
+    "POL-28",
+    "POL-25",
+    "POL-53"
+   ],
+   "related": [
+    "PY-01",
+    "PY-05",
+    "OF-01",
+    "OF-02",
+    "OF-05",
+    "CO-03"
+   ]
+  },
+  {
+   "id": "PY-03",
+   "name": "Time, attendance & overtime",
+   "stage": "Pay",
+   "depth": "standard",
+   "summary": "Captures working time for non-exempt and hours-regulated employees, approves overtime within legal caps, and pays premiums correctly in each country. For an engineering-heavy company the main risks are misclassification and unrecorded after-hours work (tape-outs, calls with US HQ, lab shifts). Good looks like: every hours-regulated employee records time daily, overtime is pre-approved within caps, and premiums are paid in the period earned.",
+   "owner": "Payroll (process and calculation), Manager (approval), HRBP (policy, caps and remediation), People Ops (classification data)",
+   "trigger": "Each workday for time capture; each pay-period close for approval and transfer to payroll",
+   "outputs": [
+    "Daily time records (to the minute where required) for hours-regulated employees",
+    "Overtime pre-approvals and employee consent where required",
+    "Approved timesheets transferred to payroll",
+    "Overtime and meal/rest premium calculations",
+    "Cap and exception report with remediation",
+    "China special working-hours approvals and Taiwan labor-management overtime consents"
+   ],
+   "systems": [
+    "Timekeeping",
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "BI / people analytics"
+   ],
+   "sla": "Timesheets approved within 1 business day of period close; premiums paid in the pay period in which earned",
+   "lanes": [
+    "Employee",
+    "Manager",
+    "Payroll",
+    "HRBP"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Record start, end and breaks",
+     "detail": "Clock in and out daily in Timekeeping, including remote work and pre-shift log-in, and record meal breaks; no automatic break deductions.",
+     "sla": "Daily",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Pre-approve overtime within caps",
+     "detail": "Approve overtime before it is worked and check the local cap (e.g., Taiwan 46 h/month, China 36 h/month). Unapproved overtime that was worked is still paid, then handled as a conduct issue.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Attest timesheet",
+     "detail": "Employee attests the time is complete and accurate, reports any missed or late meal or rest break (which triggers a CA premium) and confirms no off-the-clock work.",
+     "sla": "Period close",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Approve timesheet",
+     "detail": "Approve by period close; any manager edit needs a reason code and the employee's acknowledgment.",
+     "sla": "Close + 1 bd",
+     "control": "Edit audit trail on every manager change",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Calculate premiums and load",
+     "detail": "Apply weekly (US), daily (CA), per-hour-band (Taiwan) or percentage (China, India) overtime rules with the correct regular-rate or base definition, plus meal/rest premiums. Isolate the FLSA overtime premium for W-2 code TT.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Run cap and exception report",
+     "detail": "Flag employees over statutory caps, missing punches, meal-break violations, manager edits and exempt staff logging overtime-type patterns.",
+     "control": "Monthly cap and exception report reviewed by HRBP",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "HRBP",
+     "type": "decision",
+     "label": "Cap breach or pattern found?",
+     "detail": "HRBP reviews the report with the Dept Head for sites and teams over thresholds.",
+     "branches": [
+      {
+       "to": "s8",
+       "label": "Yes"
+      },
+      {
+       "to": "s9",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Remediate staffing, approvals, filings",
+     "detail": "Rebalance workload or add shifts, coach the manager, renew Taiwan labor-management consents and filings, seek China comprehensive-hours approval for shift roles, and send any exemption doubts to Legal.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Payroll",
+     "type": "end",
+     "label": "Time paid and records retained",
+     "detail": "Retain time records for the local period: US 3 years (timecards 2), CA 3 years, Taiwan 5 years, China at least 2 years with the burden of proof on the employer."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Exempt, 'worker' and special-hours classification",
+     "R": "People Ops",
+     "A": "HRBP",
+     "C": "Legal",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Time recording and attestation",
+     "R": "Employee",
+     "A": "Manager",
+     "C": "HRBP",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Overtime approval within caps",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Premium calculation",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "Vendor",
+     "I": "Finance"
+    },
+    {
+     "activity": "Cap monitoring, consents and remediation",
+     "R": "HRBP",
+     "A": "HRBP",
+     "C": "Legal, Works Council/Union",
+     "I": "Manager"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Timekeeping enforces meal-break attestation and has no automatic break deduction",
+     "type": "preventive",
+     "evidence": "System configuration record and attestation logs"
+    },
+    {
+     "id": "C2",
+     "control": "Monthly review of manager time edits",
+     "type": "detective",
+     "evidence": "Edit report with reviewer sign-off"
+    },
+    {
+     "id": "C3",
+     "control": "Monthly overtime cap and exception report",
+     "type": "detective",
+     "evidence": "Signed report with remediation actions"
+    },
+    {
+     "id": "C4",
+     "control": "Annual classification review of job codes (exempt, 'worker', special hours)",
+     "type": "detective",
+     "evidence": "Review memo approved by Legal"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Timesheets approved on time",
+     "target": ">= 98%",
+     "why": "Late approvals cause off-cycles and missed premiums"
+    },
+    {
+     "name": "Employees over statutory overtime caps (TW, CN, IN)",
+     "target": "0",
+     "why": "Cap breaches carry fines and signal burnout"
+    },
+    {
+     "name": "Manual time edits per 100 timesheets",
+     "target": "< 3",
+     "why": "High edit rates suggest off-the-clock risk"
+    },
+    {
+     "name": "Wage-hour claims or agency findings",
+     "target": "0",
+     "why": "Outcome measure of the whole process"
+    }
+   ],
+   "considerations": [
+    "Classification is the root cause of most exposure: CA exempt floors ($70,304; computer professional $58.85/hr), no salary-based exemption in Taiwan, individual-contributor engineers who may be 'workers' in India, and China roles on standard hours unless approved otherwise.",
+    "Evening calls with US HQ from Taiwan or India are working time; in Taiwan, recorded attendance is presumed working time (Labor Incident Act Art. 38), so meeting norms matter.",
+    "Only the FLSA-required premium counts as qualified overtime for W-2 code TT; CA daily-only or contractual overtime does not, so payroll must split the codes all year.",
+    "Plan tape-out and lab crunches: Taiwan comp time only at the employee's choice with unused hours paid, and CA alternative workweeks only after a secret-ballot election and DLSE filing.",
+    "Biometric time clocks need extra care: China facial recognition needs separate consent and a non-biometric alternative, and US state biometric laws (e.g., IL BIPA) apply to remote sites."
+   ],
+   "variations": [
+    {
+     "when": "Exempt engineers",
+     "how": "No time recording for pay, but record project time where it supports R&D credits (e.g., Canada SR&ED timesheets)."
+    },
+    {
+     "when": "24x7 lab or support shifts",
+     "how": "CA alternative workweek, China comprehensive-hours approval, and the Karnataka 24x7 notification conditions (10 h/day including overtime, 50 overtime hours per quarter, women's night-shift consent and transport)."
+    },
+    {
+     "when": "Remote non-exempt staff",
+     "how": "Daily time entry, pay for short breaks under 20 minutes, and apply the work state's meal and rest rules."
+    },
+    {
+     "when": "Business travel and fab or customer site visits",
+     "how": "Apply compensable travel-time rules for non-exempt staff and record hours in Taiwan and China as normal working time."
+    }
+   ],
+   "countries": {
+    "us": "Non-exempt staff get 1.5x over 40 hours a week, with the regular rate including non-discretionary bonuses and shift differentials (29 U.S.C. 207(e)); pay for all hours including pre-shift log-in and breaks under 20 minutes. Exempt status needs $684/week (HCE $107,432) plus the duties test, with higher state thresholds (CA, NY, WA, CO).",
+    "us-ca": "Pay 1.5x after 8 hours a day or 40 a week and for the first 8 hours on the 7th consecutive day, and 2x after 12 hours or after 8 on the 7th day (LC 510). Provide a 30-minute meal break before the end of the 5th hour and 10-minute rest per 4 hours, with one hour of premium pay at the regular rate per missed break (LC 226.7).",
+    "ca": "ON pays 1.5x after 44 hours a week, with a maximum of 8 hours a day and 48 a week unless agreed in writing; BC pays 1.5x after 8 hours a day or 40 a week and 2x after 12 hours a day. ON IT professionals and BC high-technology professionals (ESR s.37.8) are exempt, but technicians and support staff usually are not.",
+    "in": "Workers get 2x the ordinary rate beyond 8 hours a day or 48 a week, only with consent, and central rules cap overtime at 144 hours per quarter; the Karnataka 24x7 notification allows 10 hours a day including overtime and 50 overtime hours per quarter. Individual-contributor engineers are often 'workers' (only managerial staff and supervisors over INR 18,000 are excluded).",
+    "tw": "Maximum 12 hours a day including overtime and 46 hours a month (54 a month and 138 a quarter with union or labor-management-meeting consent, filed with the authority at 30+ employees), at 1-1/3x for weekday hours 1-2 and 1-2/3x for hours 3-4. Record attendance to the minute and keep it 5 years; recorded time is presumed working time (Labor Incident Act Art. 38).",
+    "cn": "Overtime is capped at 36 hours a month after consulting the union and employee and paid at 150/200/300% using the 21.75 (daily) or 174 (hourly) divisors; Shanghai's 2026 measures exclude year-end bonus and certain allowances from the overtime base. Flexible or comprehensive hours for FAE, senior or shift/test roles need local HR bureau approval, otherwise standard overtime rules apply."
+   },
+   "templates": [],
+   "policies": [
+    "POL-29",
+    "POL-28",
+    "POL-39",
+    "POL-47"
+   ],
+   "related": [
+    "PY-01",
+    "ON-03",
+    "MV-05",
+    "LV-05",
+    "HS-03"
+   ]
+  },
+  {
+   "id": "PY-04",
+   "name": "Year-end & statutory payroll filings",
+   "stage": "Pay",
+   "depth": "standard",
+   "summary": "Closes each payroll year and produces employee tax statements and statutory returns on time in every country: W-2/W-3 and ACA 1095-C (US), T4/RL-1 (Canada), Form 130 and quarterly Form 138 (India), withholding statements (Taiwan) and IIT annual reconciliation support (China). Good looks like: year-to-date data reconciled before filing, every form issued and filed by its deadline, and no penalty notices.",
+   "owner": "Payroll (process), Finance/Tax (review and sign-off), Benefits (ACA data), Stock Admin (equity income true-up)",
+   "trigger": "Q4 year-end readiness review for calendar-year countries; Q4 of the India tax year ending 31 March",
+   "outputs": [
+    "YTD reconciliation of payroll register to quarterly returns and GL",
+    "Employee statements: W-2 (with codes TT, TP, TA and Box 14b), 1095-C, T4/RL-1, Form 130, Taiwan withholding statements",
+    "Filed returns and transmittals (W-3, 1094-C, T4 Summary, Form 138, Taiwan withholding filing)",
+    "Correction log (W-2c, amended T4, revised Form 138)",
+    "China IIT annual reconciliation support data"
+   ],
+   "systems": [
+    "Payroll provider",
+    "Equity platform",
+    "Benefits admin platform",
+    "Darwinbox (HRIS)",
+    "Document management"
+   ],
+   "sla": "W-2 by Jan 31; 1095-C furnished by about Mar 2 and e-filed by Mar 31; T4/RL-1 by the last day of February; India Form 130 by 15 June; Taiwan filing by 31 Jan and employee statements by 10 Feb; China reconciliation window 1 Mar-30 Jun",
+   "lanes": [
+    "Employee",
+    "Payroll",
+    "Stock Admin",
+    "Benefits",
+    "Finance"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Payroll",
+     "type": "start",
+     "label": "Start Q4 year-end readiness",
+     "detail": "Country checklists: address and tax ID clean-up (SSN, SIN, PAN), provider form versions (new W-2 codes), and a final cut-off for taxable benefits, imputed income and relocation.",
+     "sla": "Oct-Nov",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Stock Admin",
+     "type": "task",
+     "label": "True-up equity income",
+     "detail": "Reconcile equity platform releases, exercises and ESPP disqualifying dispositions to payroll YTD by country and jurisdiction; issue Forms 3921/3922 by Jan 31.",
+     "control": "Equity-to-payroll YTD tie-out signed before filing",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Deliver ACA and benefit data",
+     "detail": "Offer-of-coverage codes and affordability safe harbor for 1095-C, plus HSA, dependent care FSA (cap $7,500 from 2026), group-term life imputed income and any Trump account contributions (code TA).",
+     "sla": "Early Jan",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Reconcile YTD to returns and GL",
+     "detail": "Tie W-2 totals to the four Forms 941, T4 totals to CRA remittances, Form 138 quarters to TDS deposits and Taiwan annual withholding to monthly deposits, then to the GL.",
+     "control": "YTD-to-returns-to-GL reconciliation before release",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Finance",
+     "type": "task",
+     "label": "Review and approve for filing",
+     "detail": "Tax reviewer signs the reconciliation and clears the exception list (negative wages, missing IDs, code TT isolation, multi-state splits) before release.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Issue statements and file returns",
+     "detail": "Issue and file by each deadline, with e-delivery only where the employee consented; include RL-1 for Quebec staff and T4A for contractors and other payments.",
+     "sla": "Per deadline",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Review statement and raise queries",
+     "detail": "Employees check statements and raise queries through the ticketing portal. China employees complete their IIT annual reconciliation, and India employees report foreign shares in Schedule FA.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Payroll",
+     "type": "decision",
+     "label": "Corrections needed?",
+     "detail": "Based on employee queries, provider notices and post-filing checks.",
+     "branches": [
+      {
+       "to": "s9",
+       "label": "Yes"
+      },
+      {
+       "to": "s10",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Issue corrected forms",
+     "detail": "W-2c/W-3c, amended T4 or revised Form 138/130 with a root-cause note; correct configuration before the next year.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Finance",
+     "type": "end",
+     "label": "Year closed; records retained",
+     "detail": "Retain records for the local period: US payroll tax 4 years, CRA 6 years, India 6+ years, Taiwan wage records 5 years, China payroll accounting vouchers 30 years."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Year-end readiness and YTD reconciliation",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "Vendor",
+     "I": "Finance"
+    },
+    {
+     "activity": "Equity income true-up",
+     "R": "Stock Admin",
+     "A": "Stock Admin",
+     "C": "Payroll",
+     "I": "Finance"
+    },
+    {
+     "activity": "ACA and benefit reporting data",
+     "R": "Benefits",
+     "A": "Benefits",
+     "C": "Payroll, Vendor",
+     "I": "Finance"
+    },
+    {
+     "activity": "Review and approval for filing",
+     "R": "Finance",
+     "A": "Finance",
+     "C": "Payroll",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Corrections and root cause",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "Finance",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "YTD register reconciled to quarterly returns and the GL before filing",
+     "type": "detective",
+     "evidence": "Signed reconciliation per country"
+    },
+    {
+     "id": "C2",
+     "control": "Equity income in payroll reconciled to the equity platform for the year",
+     "type": "detective",
+     "evidence": "Tie-out workpaper"
+    },
+    {
+     "id": "C3",
+     "control": "Independent Finance/Tax approval before statements are released",
+     "type": "preventive",
+     "evidence": "Approval record"
+    },
+    {
+     "id": "C4",
+     "control": "Filing-deadline tracker with filing acknowledgments",
+     "type": "detective",
+     "evidence": "Tracker with receipts"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Forms issued and filed by the statutory deadline",
+     "target": "100%",
+     "why": "Late filing brings per-form penalties"
+    },
+    {
+     "name": "Corrections per 1,000 statements",
+     "target": "< 5",
+     "why": "Measures year-round data quality"
+    },
+    {
+     "name": "Penalty notices received",
+     "target": "0",
+     "why": "Outcome measure"
+    }
+   ],
+   "considerations": [
+    "The new W-2 code TT cannot be fixed in January: the FLSA overtime premium must be isolated in every cycle of the year (IRS transition relief covered 2025 only).",
+    "India renumbered its forms under the Income-tax Act 2025: Form 16 is now Form 130 and 24Q is now 138, while FY 2025-26 amounts stay under the 1961 Act, so check provider templates carefully.",
+    "Mobile employees and equity need multi-state and cross-border sourcing of RSU income, and Canadian option benefits need the C$200,000 stock-option deduction cap applied.",
+    "For ACA, affordability for 2026 is 9.96%; on-request furnishing is allowed for non-full-time individuals, and CA, NJ, MA, RI and DC have their own individual-mandate reporting.",
+    "In China the employer mainly supports the employee's reconciliation, but cumulative withholding restarts in January and the separate-bonus-taxation choice must be made per employee."
+   ],
+   "variations": [
+    {
+     "when": "Mid-year provider change",
+     "how": "Combine YTD from both providers into one statement per employee and reconcile both sets of returns."
+    },
+    {
+     "when": "Terminated employees",
+     "how": "Use last known addresses and furnish a W-2 within 30 days of a written request if the employee does not expect to be rehired that year."
+    },
+    {
+     "when": "Quebec remote employee",
+     "how": "RL-1 slips and QPP/QPIP reporting in addition to the T4."
+    },
+    {
+     "when": "Expatriates on shadow payroll (MV-02)",
+     "how": "Report in both home and host countries with tax-equalization reconciliation before statements are issued."
+    }
+   ],
+   "countries": {
+    "us": "Furnish W-2s and file with SSA by Jan 31, including the new 2026 codes TT (qualified overtime), TP (tips) and TA (Trump account contributions) and the Box 14b occupation code; furnish 1095-C by about Mar 2, e-file 1094-C/1095-C by Mar 31, and furnish Forms 3921/3922 by Jan 31.",
+    "us-ca": "Report CA wages and SDI withholding on the W-2 and reconcile to the EDD quarterly DE 9/DE 9C filings (verify due dates); self-insured plans send Forms 1094/1095 to the Franchise Tax Board by 31 Mar for the state individual mandate.",
+    "ca": "Issue T4 slips (and T4A for contractors and other payments) and file them with the summary by the last day of February, electronically above 5 slips; Quebec employees also need RL-1 slips. Report equity income with the correct T4 codes and apply the C$200,000 stock-option deduction cap for large non-CCPC employers.",
+    "in": "Issue Form 130 (formerly Form 16) by 15 June and Form 123 (formerly 12BA) for perquisites, after quarterly Form 138 (formerly 24Q) returns due 31 Jul, 31 Oct, 31 Jan and 31 May; FY 2025-26 amounts stay under the 1961 Act.",
+    "tw": "File the prior year's income tax withholding and NHI supplementary premium statements with the tax authority by 31 January (next business day if a holiday) and give statements to employees by 10 February; employees file their returns 1-31 May, when foreign professionals claim the special tax incentive.",
+    "cn": "IIT is withheld cumulatively each month and restarts in January; employees complete the annual reconciliation between 1 March and 30 June through the Individual Income Tax app, and the employer supplies data or files on their behalf where authorized. Decide per employee whether the annual one-off bonus is taxed separately (available through 31 Dec 2027)."
+   },
+   "templates": [],
+   "policies": [
+    "POL-28",
+    "POL-37",
+    "POL-49"
+   ],
+   "related": [
+    "PY-01",
+    "PY-05",
+    "EQ-02",
+    "EQ-03",
+    "BN-02",
+    "DS-03"
+   ]
+  },
+  {
+   "id": "PY-05",
+   "name": "Payroll error correction & overpayment recovery",
+   "stage": "Pay",
+   "depth": "standard",
+   "summary": "Corrects payroll errors fast and recovers overpayments lawfully in each country. Underpayments are fixed first because wage penalties accrue; overpayments are recovered only with the documentation, consent and deduction limits local law requires. Good looks like: underpayments paid within 2 business days, a signed repayment agreement before any deduction, and root causes fixed so errors do not repeat.",
+   "owner": "Payroll (process), HRBP (employee communication), Legal (recovery method outside standard templates), Finance (write-off approval)",
+   "trigger": "Error found through an employee query, PY-01 variance review, audit, or late processing of a termination or pay change",
+   "outputs": [
+    "Error ticket with root cause and affected periods",
+    "Corrected payment or recovery calculation (gross vs net, tax-year impact)",
+    "Signed repayment agreement or deduction authorization",
+    "Corrected wage statements and tax forms (W-2c, amended T4, revised Form 138)",
+    "Write-off approval where recovery is waived"
+   ],
+   "systems": [
+    "Payroll provider",
+    "Darwinbox (HRIS)",
+    "E-signature",
+    "ITSM / identity (e.g. ServiceNow, Okta)"
+   ],
+   "sla": "Underpayments paid within 2 business days of confirmation (via PY-02); overpayment notice to the employee within 5 business days of confirmation",
+   "lanes": [
+    "Employee",
+    "Payroll",
+    "HRBP",
+    "Legal",
+    "Finance"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Payroll",
+     "type": "start",
+     "label": "Error reported or detected",
+     "detail": "Ticket logged with source (employee, variance review, audit) and first estimate of impact.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Investigate and quantify",
+     "detail": "Identify cause and affected periods and calculate gross, net, taxes, social insurance and any equity impact. Note whether the error crosses a tax year, which changes gross vs net recovery and form corrections.",
+     "sla": "3 bd",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Payroll",
+     "type": "decision",
+     "label": "Underpaid or overpaid?",
+     "detail": "Direction of the error decides the path; mixed cases are split.",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Underpaid"
+      },
+      {
+       "to": "s5",
+       "label": "Overpaid"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Pay shortfall off-cycle",
+     "detail": "Pay through PY-02 with a corrected wage statement, including statutory premiums or penalties where due (e.g., CA meal/rest premiums, waiting time on final pay).",
+     "sla": "2 bd",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Notify employee in writing",
+     "detail": "Explain the overpayment, amount (gross and net), cause and repayment options (lump sum or installments over at least the period overpaid). No deduction is made at this stage.",
+     "sla": "5 bd",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Confirm lawful recovery method",
+     "detail": "Standard country templates cover routine cases; Legal reviews exceptions such as recovery from final pay, large amounts, CA and China, or disputed balances.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Agree repayment plan",
+     "detail": "Employee signs a deduction authorization (amount and schedule) or repays directly; disputes escalate to the HRBP.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Finance",
+     "type": "decision",
+     "label": "Recover or write off?",
+     "detail": "Write off when cost exceeds value, there is hardship, or no lawful recovery route or consent exists; thresholds set by the Controller.",
+     "branches": [
+      {
+       "to": "s9",
+       "label": "Recover per agreement"
+      },
+      {
+       "to": "s10",
+       "label": "Write off"
+      }
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Process deductions and tax fixes",
+     "detail": "Deduct within local limits and only under the signed authorization. Adjust tax reporting: same-year errors correct wages; prior-year errors need W-2c or amended slips.",
+     "control": "Recovery deduction code requires a linked signed authorization",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Payroll",
+     "type": "end",
+     "label": "Root cause fixed; case closed",
+     "detail": "Configuration or process fix recorded, SOX impact assessed, and any written-off amount reported as income where required."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Investigation and quantification",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "People Ops",
+     "I": "Finance"
+    },
+    {
+     "activity": "Employee communication",
+     "R": "HRBP",
+     "A": "HRBP",
+     "C": "Payroll",
+     "I": "Manager"
+    },
+    {
+     "activity": "Recovery method and agreement",
+     "R": "Legal",
+     "A": "Legal",
+     "C": "Payroll, HRBP",
+     "I": "Employee"
+    },
+    {
+     "activity": "Write-off approval",
+     "R": "Finance",
+     "A": "Finance",
+     "C": "Payroll, HRBP",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Tax and form corrections",
+     "R": "Payroll",
+     "A": "Payroll",
+     "C": "Vendor",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "No overpayment deduction without a signed authorization linked to the deduction code",
+     "type": "preventive",
+     "evidence": "E-signed authorization referenced on the deduction record"
+    },
+    {
+     "id": "C2",
+     "control": "Write-offs approved against Controller thresholds",
+     "type": "preventive",
+     "evidence": "Approval record per write-off"
+    },
+    {
+     "id": "C3",
+     "control": "Monthly error log with root-cause review",
+     "type": "detective",
+     "evidence": "Signed error log and action list"
+    },
+    {
+     "id": "C4",
+     "control": "Termination-processing timeliness report to prevent post-exit pay",
+     "type": "detective",
+     "evidence": "Report of terminations entered after the last day worked"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Underpayments corrected within 2 business days",
+     "target": ">= 98%",
+     "why": "Wage penalties and trust both depend on speed"
+    },
+    {
+     "name": "Agreed overpayment amounts recovered within 6 months",
+     "target": ">= 90%",
+     "why": "Measures recovery effectiveness"
+    },
+    {
+     "name": "Overpayments caused by late terminations",
+     "target": "Downward trend to 0",
+     "why": "Most preventable error source"
+    },
+    {
+     "name": "Repeat errors with the same root cause within 12 months",
+     "target": "0",
+     "why": "Tests whether fixes stick"
+    }
+   ],
+   "considerations": [
+    "Late terminations cause most overpayments, and erroneous vesting too; enforce a termination-entry deadline tied to the last day worked.",
+    "Gross vs net matters: same-year recoveries are usually net with a wage correction, while prior-year recoveries are gross with corrected forms and more employee tax complexity. Get Tax input before quoting an amount.",
+    "The overpayment is the employer's error: offer installments at least as long as the overpayment period, and keep a hardship waiver path.",
+    "Never self-help from CA final pay, and remember that many US states limit recovery deductions even with consent.",
+    "Equity over-vesting or withholding errors cannot simply be reversed; involve Stock Admin and Tax on share return vs cash repayment."
+   ],
+   "variations": [
+    {
+     "when": "Overpayment to a leaver",
+     "how": "No payroll to deduct from: send a written demand and invoice, and write off small balances under the threshold."
+    },
+    {
+     "when": "Systemic configuration error affecting many employees",
+     "how": "Legal-reviewed mass communication, correction run, and assessment of class or PAGA exposure for underpayments."
+    },
+    {
+     "when": "Benefit deduction error",
+     "how": "Follow plan rules and catch-up limits for missed premiums; coordinate with Benefits."
+    },
+    {
+     "when": "Equity tax withholding error",
+     "how": "Stock Admin and Tax correct through the next payroll or a cash settlement; the vest itself is not unwound."
+    }
+   ],
+   "countries": {
+    "us": "Recovery deductions cannot take a non-exempt employee below minimum wage, and many states require written, voluntary authorization or restrict self-help recovery (e.g., NY Labor Law 193, 820 ILCS 115/9, WA); prior-year overpayments need a W-2c for Social Security and Medicare wages.",
+    "us-ca": "Deduct only with lawful authorization and never from final pay without it; deductions for losses are barred unless caused by dishonesty, willful act or gross negligence (LC 221, 224; Wage Order 4). Underpaid final pay accrues waiting-time penalties of up to 30 days' wages (LC 203), so fix underpayments first.",
+    "ca": "Deductions from wages need the employee's written authorization and statutory permission (ON ESA s.13; BC ESA ss.21-22), so get signed consent for the specific amount before recovering through payroll, and correct CPP/EI and the T4 for the affected year.",
+    "in": "Payroll recovery must fall within the authorised deductions in Code on Wages s.18, with total deductions capped at 50% of wages; recovery from final pay needs clear contract terms and still carries litigation risk.",
+    "tw": "Wages must be paid in full and damages cannot be pre-deducted (LSA Arts. 22, 26), so recover overpayments by written agreement or separate repayment rather than unilateral offset, with unjust enrichment under Civil Code Art. 179 as the fallback (verify).",
+    "cn": "Deductions for employee-caused losses are capped at 20% of monthly wage and cannot take pay below the local minimum wage; recover overpayments only with the employee's written agreement, with unjust enrichment (Civil Code Art. 985) as the fallback (verify)."
+   },
+   "templates": [],
+   "policies": [
+    "POL-28",
+    "POL-06",
+    "POL-53"
+   ],
+   "related": [
+    "PY-01",
+    "PY-02",
+    "PY-04",
+    "OF-05",
+    "EQ-06",
+    "DS-01"
+   ]
+  }
+ ]
+}

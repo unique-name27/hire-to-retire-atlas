@@ -1,0 +1,1680 @@
+{
+ "lastVerified": "2026-09",
+ "publicCompany": [
+  {
+   "id": "human-capital-disclosure",
+   "title": "Form 10-K human capital disclosure",
+   "area": "SEC disclosure",
+   "rule": "Reg S-K Item 101(c)(2)(ii) (17 CFR 229.101), adopted Aug 2020 (Rel. 33-10825)",
+   "requirement": "Principles-based: disclose number of employees and a description of human capital resources, including any measures or objectives management uses to manage the business, to the extent material. No metrics are mandated; the separate prescriptive human-capital rulemaking listed on the SEC agenda in 2023-24 has not advanced under Chair Atkins (verify current Reg Flex agenda), and Atkins' Reg S-K review launched Jan 13, 2026 (comments closed Apr 13, 2026) could further change Item 101. Text is covered by SOX 302 certifications and disclosure controls.",
+   "hrActions": [
+    "Draft the human capital section each year (headcount by region/function, engineering share, attrition, engagement, rewards, talent pipeline) and reconcile every figure to HRIS as of the stated date",
+    "Maintain a metric dictionary and evidence binder (queries, snapshots, reviewer sign-off) for Disclosure Committee and auditor review",
+    "Align DEI/culture wording with programs actually operated today; S&P 100 companies removed 'DEI' terminology from 2025 10-Ks and 85% shortened the section",
+    "Keep methodology consistent year over year or explain changes; route any new metric to Legal before first use",
+    "Brief the Disclosure Committee on material workforce events (RIFs, export-control limits on hiring, H-1B cost exposure, key-talent loss) for risk factors/MD&A"
+   ],
+   "owner": "People Analytics + HR Leadership + Legal (Securities) + Finance (SEC Reporting)",
+   "cadence": "Annual (10-K); ad hoc for material events",
+   "risk": "Inaccurate or aspirational human capital statements create Rule 10b-5 and SOX certification exposure and are quoted in employment and securities litigation.",
+   "source": {
+    "title": "Gibson Dunn - Five Years of Evolving Form 10-K Human Capital Disclosures (Jan 2026)",
+    "url": "https://www.gibsondunn.com/five-years-of-evolving-form-10-k-human-capital-disclosures/"
+   }
+  },
+  {
+   "id": "exec-comp-item-402",
+   "title": "Executive compensation disclosure: CD&A and tables",
+   "area": "Executive comp",
+   "rule": "Reg S-K Item 402(a)-(t), 402(s) (17 CFR 229.402); Schedule 14A Item 8; Item 407(e)",
+   "requirement": "The proxy (due within 120 days of fiscal year-end when Form 10-K Part III is incorporated by reference) must include CD&A for the named executive officers (PEO, PFO and the three other most highly paid executive officers), the Summary Compensation Table (3 years), grants of plan-based awards, outstanding equity, option exercises/stock vested, pension/NQDC, potential payments on termination or change in control, director pay, the compensation committee report and compensation-risk narrative. Perquisites are disclosed if they total $10,000 or more, and each perk exceeding the greater of $25,000 or 10% of total perks is quantified. A May 2026 SEC proposal would scale this back for companies below a $2B public float (see sec-exec-comp-reform-2026).",
+   "hrActions": [
+    "Build the annual NEO determination (total comp excluding certain items) with Finance by fiscal year-end",
+    "Produce SCT/grant tables from the equity system with ASC 718 grant-date fair values reconciled to the financial statements",
+    "Track perquisites year-round (personal aircraft/car use, security, relocation, tax gross-ups, spousal travel) at aggregate incremental cost",
+    "Draft CD&A with the compensation consultant: peer group, pay mix, incentive metrics/payouts, say-on-pay response",
+    "Run the compensation risk assessment (sales commissions, engineering retention grants) for the Item 402(s) statement"
+   ],
+   "owner": "Total Rewards + Legal (Securities) + Finance + Compensation Committee advisor",
+   "cadence": "Annual proxy; ongoing data capture",
+   "risk": "Misstated or omitted compensation leads to SEC comment letters, enforcement (perquisite cases are common) and proxy-advisor 'against' recommendations.",
+   "source": {
+    "title": "eCFR - 17 CFR 229.402 (Item 402)",
+    "url": "https://www.ecfr.gov/current/title-17/section-229.402"
+   }
+  },
+  {
+   "id": "pay-ratio-402u",
+   "title": "CEO pay ratio",
+   "area": "Executive comp",
+   "rule": "Dodd-Frank s953(b); Reg S-K Item 402(u)",
+   "requirement": "Disclose the median employee's annual total compensation, the PEO's total compensation and the ratio. The median is identified from all worldwide employees (full-time, part-time, temporary, seasonal) on a date within the last three months of the fiscal year using a consistently applied compensation measure; it may be re-used for up to three years absent significant change. Non-US employees up to 5% of the workforce may be excluded (de minimis), plus countries whose privacy laws prevent compliance; cost-of-living adjustments are optional. The May 2026 proposal would remove the requirement for non-large accelerated filers.",
+   "hrActions": [
+    "Pull payroll data from every entity (US, Canada, India, Taiwan, China) as of the determination date",
+    "Document the consistently applied compensation measure, exclusions and annualization rules; keep workpapers",
+    "Annually assess whether workforce or pay changes require a new median employee",
+    "Compute the median employee's pay using SCT methodology; keep identity confidential",
+    "Prepare employee talking points, since equity-heavy CEO pay can produce high ratios"
+   ],
+   "owner": "Total Rewards + Global Payroll + People Analytics + Legal",
+   "cadence": "Annual proxy",
+   "risk": "Unsupported methodology draws SEC comments and undermines the integrity of the proxy.",
+   "source": {
+    "title": "SEC press release 2015-160 - pay ratio rule adopted",
+    "url": "https://www.sec.gov/news/pressrelease/2015-160.html"
+   }
+  },
+  {
+   "id": "pay-versus-performance-402v",
+   "title": "Pay versus performance",
+   "area": "Executive comp",
+   "rule": "Dodd-Frank s953(a); Reg S-K Item 402(v) (adopted Aug 25, 2022)",
+   "requirement": "Tabular disclosure for five years of SCT total and 'compensation actually paid' (CAP) for the PEO and the average of the other NEOs against company TSR, peer-group TSR, net income and a company-selected financial measure, plus a list of three to seven most important financial measures and narrative/graphic relationship descriptions, tagged in Inline XBRL. CAP requires remeasuring equity awards at year-end and vesting dates (ASC 718). The May 2026 proposal would exempt non-large accelerated filers; Chair Atkins has also signaled simplification for larger filers (verify outcome).",
+   "hrActions": [
+    "Have equity administration produce year-end and vest-date fair values for each NEO award (including PSU probability)",
+    "Align the company-selected measure with actual incentive-plan metrics (e.g., revenue, non-GAAP operating margin)",
+    "Maintain the peer group used for TSR consistently with the 10-K performance graph or Item 402(b) peer group",
+    "Coordinate XBRL tagging with SEC Reporting",
+    "Keep the data process running until any final rule actually removes the requirement"
+   ],
+   "owner": "Total Rewards + Equity Administration + Finance + Legal",
+   "cadence": "Annual proxy",
+   "risk": "Calculation errors in CAP are hard to correct and are visible to investors and the SEC.",
+   "source": {
+    "title": "SEC press release 2022-149 - pay versus performance adopted",
+    "url": "https://www.sec.gov/newsroom/press-releases/2022-149"
+   }
+  },
+  {
+   "id": "say-on-pay-and-8k-507",
+   "title": "Say-on-pay, say-on-frequency and vote results (8-K Item 5.07)",
+   "area": "Executive comp",
+   "rule": "Exchange Act s14A; Rule 14a-21; Form 8-K Item 5.07",
+   "requirement": "Non-binding shareholder vote on NEO pay at least once every three years (nearly all companies hold it annually), a frequency vote at least every six years, and a golden-parachute vote in merger proxies. Vote results must be filed on 8-K Item 5.07 within four business days of the meeting, and the board's frequency decision within 150 days after the meeting (and at least 60 days before the Rule 14a-8 deadline). The next CD&A must say how the committee considered the prior vote; proxy advisors scrutinize responsiveness after low support (ISS below 70%, Glass Lewis below 80% - verify current thresholds).",
+   "hrActions": [
+    "Plan shareholder engagement on pay (off-season outreach with Legal/IR)",
+    "Track vote support levels and investor feedback themes for the committee",
+    "Draft responsiveness disclosure when support is weak",
+    "Coordinate 8-K 5.07 timing with the meeting and any equity plan vote results"
+   ],
+   "owner": "Total Rewards + Legal (Securities) + Investor Relations + Corporate Secretary",
+   "cadence": "Annual meeting; frequency vote every 6 years",
+   "risk": "Failed or low say-on-pay votes trigger 'against' recommendations for compensation committee members.",
+   "source": {
+    "title": "eCFR - 17 CFR 240.14a-21",
+    "url": "https://www.ecfr.gov/current/title-17/section-240.14a-21"
+   }
+  },
+  {
+   "id": "option-grant-timing-402x",
+   "title": "Option grant timing near MNPI",
+   "area": "Equity & insider trading",
+   "rule": "Reg S-K Item 402(x) (adopted Dec 14, 2022)",
+   "requirement": "Narrative disclosure of policies and practices on the timing of stock option, SAR and option-like awards relative to the release of MNPI, and whether MNPI is taken into account. Tabular disclosure is required for any NEO option granted in the window from four business days before to one business day after filing a 10-Q, 10-K or MNPI-disclosing 8-K (other than an 8-K Item 5.02(e) grant disclosure), showing grant date fair value and the percentage change in stock price around the filing. RSUs are not covered, but most companies apply the same calendar.",
+   "hrActions": [
+    "Adopt a fixed annual/quarterly grant calendar approved by the compensation committee",
+    "Block off-cycle option grants to executives inside the four-before/one-after windows",
+    "Monitor 8-K filings that contain MNPI (earnings, acquisitions) when scheduling new-hire grants",
+    "Document grant approval dates, grant dates and pricing in the equity system"
+   ],
+   "owner": "Total Rewards + Equity Administration + Legal (Securities)",
+   "cadence": "Per grant cycle; annual proxy disclosure",
+   "risk": "'Spring-loaded' grants create disclosure, reputational and potential securities-fraud exposure.",
+   "source": {
+    "title": "SEC press release 2022-222 - Rule 10b5-1 and insider trading disclosure amendments",
+    "url": "https://www.sec.gov/newsroom/press-releases/2022-222"
+   }
+  },
+  {
+   "id": "insider-trading-policy-408",
+   "title": "Insider trading policy disclosure and Exhibit 19",
+   "area": "Equity & insider trading",
+   "rule": "Reg S-K Item 408(a)-(b); Item 601(b)(19) (Form 10-K Exhibit 19); Item 407(i) (hedging)",
+   "requirement": "The 10-K/proxy must state whether the company has adopted insider trading policies and procedures governing trading by directors, officers, employees and the company (or explain why not) and file the policy as Exhibit 19 (first required in 10-Ks for fiscal 2024). Item 408(a) requires quarterly disclosure (10-Q/10-K) of any director or officer adoption or termination of a Rule 10b5-1 plan or non-Rule 10b5-1 trading arrangement, with material terms. Item 407(i) requires disclosure of hedging policies.",
+   "hrActions": [
+    "Maintain designated-insider lists by role, including engineers and sales staff who see design wins, customer forecasts or tape-out results",
+    "Run quarterly blackout notices and a pre-clearance workflow; enforce broker restrictions through the equity plan administrator",
+    "Collect onboarding acknowledgments and annual certifications; translate the policy for non-US staff",
+    "Train on 'shadow trading' (trading in customers', suppliers' or competitors' stock) following the SEC v. Panuwat jury verdict (Apr 2024)",
+    "Report 10b5-1 plan adoptions/terminations by officers to Legal for Item 408(a)"
+   ],
+   "owner": "Legal (Securities) + Equity Administration + HR Communications",
+   "cadence": "Quarterly windows; annual 10-K exhibit",
+   "risk": "Insider trading by employees creates corporate reputational and controlling-person risk; a missing or stale Exhibit 19 is a disclosure deficiency.",
+   "source": {
+    "title": "eCFR - 17 CFR 229.408 (Item 408)",
+    "url": "https://www.ecfr.gov/current/title-17/section-229.408"
+   }
+  },
+  {
+   "id": "rule-10b5-1-plans",
+   "title": "Rule 10b5-1 trading plans",
+   "area": "Equity & insider trading",
+   "rule": "Exchange Act Rule 10b5-1(c) as amended Dec 2022 (Rel. 33-11138)",
+   "requirement": "The affirmative defense requires a cooling-off period of the later of 90 days after adoption or modification or two business days after the 10-Q/10-K for the quarter of adoption (maximum 120 days) for directors and officers, and 30 days for other persons; director/officer certification of no MNPI and good faith; no overlapping plans (limited exceptions such as sell-to-cover for tax withholding); only one single-trade plan in any 12 months; and good-faith operation. Form 4/5 filers must check the 10b5-1 box and give the plan adoption date.",
+   "hrActions": [
+    "Approve broker plan templates and require pre-clearance of adoptions, and adopt only during open windows",
+    "Track cooling-off and plan terms for officers for Item 408(a) disclosure",
+    "Structure RSU sell-to-cover elections to fit the overlapping-plan exception",
+    "Explain that a modification counts as termination plus a new plan (new cooling-off)",
+    "Watch the semiannual reporting proposal, since cooling-off is keyed to 10-Q filings"
+   ],
+   "owner": "Legal (Securities) + Equity Administration + Total Rewards",
+   "cadence": "Per plan adoption; quarterly disclosure",
+   "risk": "Plans that fail the conditions lose the affirmative defense, exposing executives to insider-trading claims.",
+   "source": {
+    "title": "eCFR - 17 CFR 240.10b5-1",
+    "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-240/subject-group-ECFR3dd95cf4d3f6730/section-240.10b5-1"
+   }
+  },
+  {
+   "id": "section-16-reporting",
+   "title": "Section 16(a) insider reporting (Forms 3/4/5) and EDGAR Next",
+   "area": "Equity & insider trading",
+   "rule": "Exchange Act s16(a); Rules 16a-1 to 16a-13; Reg S-K Item 405; EDGAR Next (adopted Sept 2024)",
+   "requirement": "Directors, 'officers' as defined in Rule 16a-1(f) and >10% holders file Form 3 within 10 days of becoming insiders, Form 4 within two business days of most changes in beneficial ownership (grants, tax-withholding, exercises, open-market trades and, since 2023, bona fide gifts), and Form 5 within 45 days after fiscal year-end. Late filings are disclosed in the proxy under Item 405. Under EDGAR Next (mandatory since Sept 2025), each filer needs individual Login.gov credentials, account administrators and delegations.",
+   "hrActions": [
+    "HR tells Legal the same day an officer is appointed, promoted into Section 16 status or departs",
+    "Equity administration sends grant, vest/withholding and ESPP data within one business day",
+    "Maintain powers of attorney and EDGAR Next delegations for each insider; add to officer onboarding checklist",
+    "Reconcile gifts and year-end holdings for Form 5 and proxy ownership tables"
+   ],
+   "owner": "Legal (Securities) + Equity Administration + HR Operations",
+   "cadence": "Per transaction (2 business days); annual Form 5",
+   "risk": "Late Form 4s must be publicly disclosed and can prompt SEC enforcement sweeps (the SEC has fined both insiders and issuers).",
+   "source": {
+    "title": "SEC - EDGAR Next: improving filer access and account management",
+    "url": "https://www.sec.gov/submit-filings/improving-edgar/edgar-next-improving-filer-access-account-management"
+   }
+  },
+  {
+   "id": "section-16b-short-swing",
+   "title": "Section 16(b) short-swing profits and Rule 16b-3",
+   "area": "Equity & insider trading",
+   "rule": "Exchange Act s16(b), s16(c); Rule 16b-3",
+   "requirement": "Insiders must disgorge any profit from a purchase and sale (or sale and purchase) within less than six months, on a strict-liability basis, enforceable by the company or any shareholder. Rule 16b-3 exempts issuer-insider transactions such as grants and tax withholding when approved by the board, a committee of two or more non-employee directors, or shareholders; tax-qualified ESPP purchases are exempt. Section 16(c) bars short sales by insiders.",
+   "hrActions": [
+    "Ensure the compensation committee (non-employee directors) or board approves every insider grant and net-settlement/withholding feature",
+    "Pre-clearance checks for matchable transactions within six months",
+    "Prohibit hedging, pledging and short sales in policy (Item 407(i) disclosure)",
+    "Brief new officers at onboarding"
+   ],
+   "owner": "Legal (Securities) + Equity Administration + Total Rewards",
+   "cadence": "Per transaction",
+   "risk": "Plaintiff firms monitor Form 4s and demand disgorgement of matched profits.",
+   "source": {
+    "title": "Cornell LII - 15 U.S.C. 78p (Section 16)",
+    "url": "https://www.law.cornell.edu/uscode/text/15/78p"
+   }
+  },
+  {
+   "id": "clawback-10d-1",
+   "title": "Mandatory clawback of incentive compensation",
+   "area": "Executive comp",
+   "rule": "Exchange Act s10D; Rule 10D-1; Nasdaq Rule 5608; Reg S-K Item 402(w); Form 10-K Exhibit 97 and cover-page checkboxes",
+   "requirement": "Listed companies must adopt and enforce a written policy to recover, reasonably promptly and without regard to fault, incentive-based compensation (tied wholly or partly to financial reporting measures, including stock price and TSR) received by current or former executive officers during the three completed fiscal years before the date a restatement (big R or little r) is required, in excess of what would have been paid on restated results, calculated pre-tax. Impracticability exceptions are narrow; the company may not indemnify or insure executives against recovery. The policy is filed as Exhibit 97 and recovery analysis is disclosed under Item 402(w).",
+   "hrActions": [
+    "Keep a register of executive officers (Rule 16a-1(f) definition) and each incentive award's metrics and payout calculations for at least three years",
+    "Obtain signed clawback acknowledgments; embed recovery rights in plan documents, offer letters, severance and CIC agreements",
+    "Pre-agree a methodology (with the compensation consultant) for estimating TSR/stock-price impact",
+    "Check that no indemnification, D&O coverage or separation agreement covers recovered amounts",
+    "Plan collection mechanics for executives paid in Taiwan, China, India or Canada (local payroll and wage-deduction limits)"
+   ],
+   "owner": "Total Rewards + Legal + Finance (Controller) + Compensation Committee",
+   "cadence": "Continuous policy; triggered by restatement",
+   "risk": "Failure to adopt, disclose or enforce the policy can lead to delisting under Nasdaq 5608.",
+   "source": {
+    "title": "SEC press release 2022-192 - clawback rules adopted",
+    "url": "https://www.sec.gov/newsroom/press-releases/2022-192"
+   }
+  },
+  {
+   "id": "form-8k-502",
+   "title": "Form 8-K Item 5.02 officer/director changes and compensatory arrangements",
+   "area": "SEC disclosure",
+   "rule": "Form 8-K Items 5.02(a)-(f), 5.05; Reg S-K Item 601(b)(10)",
+   "requirement": "Within four business days, disclose departures of the PEO, president, PFO, PAO, COO or any NEO; appointments of those officers (with biography, related-person interests and material comp terms); director elections and departures; and entry into or material amendment of material compensatory plans, contracts or awards with the PEO, PFO or an NEO (5.02(e)), except grants consistent with previously disclosed plans. Item 5.02(f) reports salary or bonus omitted from the SCT once determined. The clock runs from notice or decision, not the effective date.",
+   "hrActions": [
+    "Trigger the Legal disclosure workflow the moment an executive gives notice or a decision is made",
+    "Draft offer letters and separation agreements on the assumption they will be filed publicly",
+    "Coordinate employee, customer and press communications timing with the 8-K",
+    "Flag 5.02(e) triggers: retention awards, off-cycle CEO grants, severance plan amendments"
+   ],
+   "owner": "Legal (Securities) + HR Leadership + Total Rewards + Communications",
+   "cadence": "Per event (4 business days)",
+   "risk": "Late or incomplete 8-Ks can cause loss of Form S-3 eligibility and SEC enforcement.",
+   "source": {
+    "title": "SEC - Form 8-K general instructions",
+    "url": "https://www.sec.gov/files/form8-k.pdf"
+   }
+  },
+  {
+   "id": "nasdaq-comp-committee-5605d",
+   "title": "Nasdaq compensation committee requirements",
+   "area": "Exchange listing",
+   "rule": "Nasdaq Rule 5605(d); Exchange Act Rule 10C-1; Reg S-K Item 407(e)(3)",
+   "requirement": "A compensation committee of at least two independent directors (with heightened independence considering compensatory fees and affiliation), operating under a written charter reviewed annually that gives authority to retain and fund advisors. Before selecting a compensation consultant, legal counsel or other advisor, the committee must consider six independence factors (advisors need not be independent). The CEO may not be present for deliberations or voting on CEO pay. Item 407(e)(3) requires disclosure of consultant role, fees (when other services exceed $120,000) and conflicts.",
+   "hrActions": [
+    "Collect annual six-factor independence questionnaires from the compensation consultant and outside counsel",
+    "Maintain the committee calendar and a charter-compliance matrix",
+    "Minute CEO recusal on CEO pay decisions",
+    "Support the committee's annual self-evaluation"
+   ],
+   "owner": "Total Rewards + Corporate Secretary + Legal",
+   "cadence": "Annual; per advisor engagement",
+   "risk": "Non-compliance is a listing-standard deficiency and undermines Rule 16b-3 and approval defenses.",
+   "source": {
+    "title": "Nasdaq Rulebook - 5600 Series (Corporate Governance)",
+    "url": "https://listingcenter.nasdaq.com/rulebook/nasdaq/rules/nasdaq-5600-series"
+   }
+  },
+  {
+   "id": "nasdaq-code-of-conduct-5610",
+   "title": "Code of conduct and waiver disclosure",
+   "area": "Exchange listing",
+   "rule": "Nasdaq Rule 5610; SOX s406; Form 8-K Item 5.05",
+   "requirement": "Each Nasdaq company must have a publicly available code of conduct covering all directors, officers and employees, meeting the SOX 406 'code of ethics' definition, with an enforcement mechanism. Waivers for directors or executive officers require board approval and must be disclosed within four business days on Form 8-K or on the website if the Item 5.05(c) conditions are met.",
+   "hrActions": [
+    "Run employee code training and annual certification in all languages used (English, Chinese, Hindi as needed)",
+    "Log conflict-of-interest disclosures; escalate executive exceptions (outside boards, related-party hires) to Legal as potential waivers",
+    "Include whistleblower protected-rights carve-outs (Rule 21F-17) and non-retaliation language",
+    "Apply discipline for code violations consistently across countries"
+   ],
+   "owner": "Ethics & Compliance + HR (ER) + Legal",
+   "cadence": "Annual certification; per waiver",
+   "risk": "Undisclosed waivers breach listing rules and weaken the code's evidentiary value in investigations.",
+   "source": {
+    "title": "Nasdaq Rulebook - 5600 Series (Corporate Governance)",
+    "url": "https://listingcenter.nasdaq.com/rulebook/nasdaq/rules/nasdaq-5600-series"
+   }
+  },
+  {
+   "id": "nasdaq-equity-plan-approval-5635c",
+   "title": "Shareholder approval of equity plans; inducement grants",
+   "area": "Exchange listing",
+   "rule": "Nasdaq Rule 5635(c), IM-5635-1; IRC s422/s423 shareholder approval",
+   "requirement": "Shareholder approval is required to adopt or materially amend equity compensation plans (share increases, repricing unless the plan allows it, broader eligibility); evergreen plans need approval at adoption and are limited to 10 years without re-approval. Exceptions include tax-qualified plans, plans assumed in acquisitions (within limits) and inducement grants under 5635(c)(4) to people not previously employees or directors (or after a bona fide break), approved by independent directors or the independent compensation committee and promptly announced by press release with material terms (verify current timing text). ISO plans and 423 ESPPs also need shareholder approval within 12 months under the Code.",
+   "hrActions": [
+    "Model burn rate, overhang and share needs annually; plan share-reserve proposals against ISS's Equity Plan Scorecard",
+    "Operate an inducement-grant checklist (eligibility, committee approval, press release, Form S-8)",
+    "Never reprice underwater options without shareholder approval unless the plan expressly permits",
+    "Track reserves for ESPP and country sub-plans (e.g., China SAFE registration, India tax withholding)"
+   ],
+   "owner": "Total Rewards + Equity Administration + Legal",
+   "cadence": "Annual proxy; per plan change or inducement grant",
+   "risk": "Grants made without required approval breach listing rules and may be void or have to be rescinded.",
+   "source": {
+    "title": "Nasdaq Rulebook - 5600 Series (Corporate Governance)",
+    "url": "https://listingcenter.nasdaq.com/rulebook/nasdaq/rules/nasdaq-5600-series"
+   }
+  },
+  {
+   "id": "nasdaq-board-diversity-vacated",
+   "title": "Nasdaq board diversity rule (vacated)",
+   "area": "Exchange listing",
+   "rule": "Former Nasdaq Rules 5605(f) and 5606; Alliance for Fair Board Recruitment v. SEC (5th Cir. en banc, Dec 11, 2024); Reg S-K Item 407(c)(2)(vi)",
+   "requirement": "The Fifth Circuit en banc vacated the SEC's approval of Nasdaq's 'comply-or-explain' board diversity objectives and the board diversity matrix, so Nasdaq no longer requires them. Item 407(c)(2)(vi) still requires disclosing whether and how the nominating committee considers diversity, if it does. Proxy advisors and large index funds dropped or suspended explicit diversity-based voting policies in 2025 (e.g., ISS for US companies in Feb 2025 - verify current policy).",
+   "hrActions": [
+    "Remove the board diversity matrix unless kept voluntarily after legal review",
+    "Make D&O questionnaire demographic questions voluntary and consent-based",
+    "Coordinate nominating-committee diversity language with Legal",
+    "Keep records of the change for investor questions"
+   ],
+   "owner": "Corporate Secretary + Legal + HR (D&O questionnaire support)",
+   "cadence": "Annual proxy",
+   "risk": "Keeping outdated rule-based language creates inaccurate disclosure and possible legal-risk statements.",
+   "source": {
+    "title": "Harvard Law School Forum - Fifth Circuit Vacates SEC's Approval of Nasdaq Board Diversity Rules",
+    "url": "https://corpgov.law.harvard.edu/2025/01/12/fifth-circuit-vacates-secs-approval-of-nasdaq-board-diversity-rules/"
+   }
+  },
+  {
+   "id": "sox-icfr-hr-processes",
+   "title": "SOX 302/404 internal controls over HR-owned processes",
+   "area": "SOX / controls",
+   "rule": "SOX s302 (Rule 13a-14), s404(a)/(b) (Rule 13a-15; Reg S-K Item 308); PCAOB AS 2201; ASC 718, ASC 340-40, ASC 420/712",
+   "requirement": "The CEO and CFO certify each 10-Q/10-K, management assesses ICFR annually, and auditors attest for accelerated and large accelerated filers (the May 2026 filer-status proposal would limit 404(b) to large accelerated filers with a public float of $2B or more - verify outcome). HR processes usually in scope: payroll (hire-to-retire, pay changes, terminations, off-cycle payments), stock-based compensation (grant-date fair value, forfeitures, modifications, PSU probability, ESPP), sales commissions (capitalization under ASC 340-40), bonus and severance/restructuring accruals, and HRIS/payroll/equity-system access and segregation of duties.",
+   "hrActions": [
+    "Own process narratives, key controls and evidence for payroll, equity and commissions (e.g., independent review of payroll variance reports)",
+    "Enforce segregation of duties in HRIS/payroll: no single user can create a worker, change pay and approve payroll; run quarterly user-access reviews",
+    "Obtain and review SOC 1 Type II reports for payroll, benefits and equity administrators and operate complementary user-entity controls",
+    "Reconcile the equity administration system to the cap table and ASC 718 expense each quarter",
+    "Provide key reports (IPE) with completeness and accuracy evidence; process terminations promptly to stop overpayments and erroneous vesting"
+   ],
+   "owner": "HR Operations + Global Payroll + Equity Administration + Finance (Controller) + Internal Audit",
+   "cadence": "Quarterly certifications; annual assessment",
+   "risk": "HR-process control deficiencies can escalate to a material weakness, restatement and clawback.",
+   "source": {
+    "title": "Federal Register - SEC proposal: Simplification of Filer Status (May 21, 2026)",
+    "url": "https://www.federalregister.gov/documents/2026/05/21/2026-10222/enhancement-of-emerging-growth-company-accommodations-and-simplification-of-filer-status-for"
+   }
+  },
+  {
+   "id": "sox-dodd-frank-whistleblower",
+   "title": "SOX 806 and Dodd-Frank whistleblower anti-retaliation",
+   "area": "Whistleblower",
+   "rule": "SOX s806 (18 U.S.C. 1514A); SOX s301 (Rule 10A-3 complaint procedures); SOX s1107 (18 U.S.C. 1513(e)); Exchange Act s21F(h)",
+   "requirement": "Public companies and their consolidated subsidiaries may not retaliate against employees who report suspected securities, mail/wire/bank fraud or SEC-rule violations internally, to a supervisor or to government. SOX complaints go to OSHA within 180 days (with a federal-court option after 180 days without a final decision), and pre-dispute arbitration agreements do not apply to SOX claims. Dodd-Frank retaliation claims (double back pay) require a report to the SEC (Digital Realty v. Somers, 2018). The audit committee must have procedures for confidential, anonymous employee submissions on accounting and auditing matters.",
+   "hrActions": [
+    "Operate a multilingual global hotline (anonymous where lawful) that reports to the audit committee",
+    "Require a protected-activity check before any adverse action against an employee who raised concerns",
+    "Carve SOX whistleblower claims out of arbitration agreements",
+    "Train managers on non-retaliation and document legitimate reasons for decisions",
+    "Provide case metrics to the audit committee each quarter"
+   ],
+   "owner": "Ethics & Compliance + Employee Relations + Legal + Audit Committee",
+   "cadence": "Ongoing; quarterly reporting",
+   "risk": "Retaliation findings bring reinstatement, back pay, special damages and SEC scrutiny.",
+   "source": {
+    "title": "Cornell LII - 18 U.S.C. 1514A",
+    "url": "https://www.law.cornell.edu/uscode/text/18/1514A"
+   }
+  },
+  {
+   "id": "rule-21f-17",
+   "title": "Do not impede whistleblowers (Rule 21F-17): agreements and policies",
+   "area": "Whistleblower",
+   "rule": "Exchange Act Rule 21F-17(a)",
+   "requirement": "No person may take any action to impede an individual from communicating directly with SEC staff about a possible securities violation, including through confidentiality agreements. The SEC treats the language itself as a violation even if it is never enforced: requiring notice to or consent of the company before contacting regulators, waivers of whistleblower awards in releases, and broad bans on disclosing company information to government. Sept 9, 2024: seven public companies charged (over $3M combined); Jan 2025: Two Sigma; May 22, 2026: Foot Locker ($148,000, award-waiver clause in separation agreements), showing enforcement continues under Chair Atkins.",
+   "hrActions": [
+    "Audit every template globally: offer letters, PIIAs, NDAs, separation and release agreements, codes, policies, investigation interview scripts and exit certifications",
+    "Insert a clear protected-rights carve-out: nothing prevents reporting to or communicating with the SEC or other agencies, participating in investigations, or receiving a government award, and no notice to the company is required",
+    "Remove waivers of recovery from government agencies (waiving recovery from the company is allowed)",
+    "Train HRBPs and investigators not to discourage regulator contact",
+    "Keep a version log of remediated templates, including legacy agreements still in force"
+   ],
+   "owner": "Employment Legal + Employee Relations + HR Operations",
+   "cadence": "Annual template review; per new template",
+   "risk": "Settled orders carry penalties, cease-and-desist orders and required remediation notices to employees.",
+   "source": {
+    "title": "SEC - Whistleblower Protections (Rule 21F-17 guidance and actions)",
+    "url": "https://www.sec.gov/enforcement-litigation/whistleblower-program/whistleblower-protections"
+   }
+  },
+  {
+   "id": "reg-fd-social-media",
+   "title": "Regulation FD, MNPI and employee social media",
+   "area": "SEC disclosure",
+   "rule": "Regulation FD (17 CFR 243.100-243.103); SEC 2013 Section 21(a) report (Netflix) on social media; Rule 10b-5",
+   "requirement": "When the company or someone acting for it (senior officials, IR and others who regularly talk to market professionals or holders) discloses MNPI to market professionals or shareholders, public disclosure must be simultaneous (if intentional) or prompt (within 24 hours or before the next market open, if not). Social media can be used for disclosure only if investors have been told the channel will be used. Employee posts can leak MNPI such as design wins, customer ramps, tape-outs or layoffs.",
+   "hrActions": [
+    "Maintain an external communications and social media policy (authorized spokespeople, no unannounced customers or roadmaps) that preserves NLRA Section 7 rights of non-supervisory US employees",
+    "Train engineers, FAEs and sales on customer NDAs and what counts as MNPI",
+    "Review recruiting and employer-brand content with IR/Legal",
+    "Time RIF communications and WARN notices with Legal to match 8-K/earnings disclosures",
+    "Include Reg FD in executive and IR-facing onboarding"
+   ],
+   "owner": "Legal (Securities) + Investor Relations + HR Communications + Talent Brand",
+   "cadence": "Ongoing; annual training",
+   "risk": "Selective disclosure brings SEC enforcement and insider-trading risk.",
+   "source": {
+    "title": "eCFR - 17 CFR Part 243 (Regulation FD)",
+    "url": "https://www.ecfr.gov/current/title-17/part-243"
+   }
+  },
+  {
+   "id": "rule-144-insider-sales",
+   "title": "Rule 144 affiliate sales and S-8 registration",
+   "area": "Equity & insider trading",
+   "rule": "Securities Act Rule 144 (17 CFR 230.144); Form 144 (electronic EDGAR filing since Apr 2023); Form S-8",
+   "requirement": "Affiliates (directors, executive officers, control persons) must meet Rule 144 conditions to sell: current public information, holding period for restricted securities (6 months for reporting issuers), a volume limit per three months (greater of 1% of outstanding shares or average weekly volume over four weeks), manner-of-sale rules for equity, and Form 144 when sales exceed 5,000 shares or $50,000 in three months. Plan shares registered on Form S-8 are not restricted, but affiliates still sell under Rule 144 (without the holding period).",
+   "hrActions": [
+    "Flag affiliates in the equity system and with the plan broker",
+    "Coordinate pre-clearance so Form 144 and Form 4 are filed on time",
+    "Keep S-8 registrations current when share reserves increase or new plans are adopted",
+    "Educate new officers about volume limits"
+   ],
+   "owner": "Legal (Securities) + Equity Administration",
+   "cadence": "Per sale; S-8 per plan change",
+   "risk": "Non-compliant sales can be unregistered distributions and create Section 16/Rule 10b5-1 problems.",
+   "source": {
+    "title": "eCFR - 17 CFR 230.144",
+    "url": "https://www.ecfr.gov/current/title-17/section-230.144"
+   }
+  },
+  {
+   "id": "espp-iso-tax-qualified",
+   "title": "ESPP (IRC 423) and ISO (IRC 422) requirements",
+   "area": "Equity & insider trading",
+   "rule": "IRC s423, s422, s6039 (Forms 3921/3922)",
+   "requirement": "423 ESPP: shareholder approval within 12 months; offered to all employees of participating entities (permitted exclusions such as under 2 years' service, 20 hours/week or less, 5 months/year or less, highly compensated); purchase price at least 85% of FMV; no more than $25,000 of stock (grant-date FMV) accruing per calendar year; offering periods up to 27 months (5 years if price is based only on purchase-date FMV); 5% owners excluded. ISOs: only the first $100,000 (grant-date FMV) becoming exercisable per year qualifies; exercise within 3 months after employment ends (1 year for disability); 10-year term (5 years and 110% price for 10% owners). Forms 3921/3922 go to employees by Jan 31.",
+   "hrActions": [
+    "Maintain country sub-plans or non-423 components for India, Taiwan, China and Canada (local tax, securities and exchange-control rules)",
+    "Monitor the $25,000 and $100,000 limits in the equity system",
+    "Track disqualifying dispositions for payroll/W-2 reporting and the company tax deduction",
+    "Communicate post-termination exercise deadlines in exit packets"
+   ],
+   "owner": "Total Rewards + Equity Administration + Tax + Global Payroll",
+   "cadence": "Per offering/grant; annual Forms 3921/3922",
+   "risk": "Plan-design failures turn qualified awards into non-qualified ones and cause payroll tax errors.",
+   "source": {
+    "title": "Cornell LII - 26 U.S.C. 423",
+    "url": "https://www.law.cornell.edu/uscode/text/26/423"
+   }
+  },
+  {
+   "id": "section-409a",
+   "title": "Section 409A deferred compensation",
+   "area": "Executive comp",
+   "rule": "IRC s409A; Treas. Reg. 1.409A-1 to -6",
+   "requirement": "Nonqualified deferred compensation (including many severance, bonus-deferral and RSU arrangements) must meet timing rules for elections and payments; public companies must delay payments on separation to 'specified employees' (key employees, up to 50 officers above the IRC 416(i) threshold) for six months. Stock options must have a strike price at least equal to grant-date FMV. Violations cause immediate income inclusion, a 20% additional tax and interest for the employee.",
+   "hrActions": [
+    "Refresh the specified-employee list each year (common convention: identify Dec 31, effective Apr 1)",
+    "Draft severance/release templates with a fixed payment date after the release period so employees cannot choose the tax year",
+    "Collect deferral elections by Dec 31 for the next year",
+    "Review expatriate and dual-taxed employees (US citizens in Taiwan/India/China) for 409A compliance"
+   ],
+   "owner": "Total Rewards + Tax + Employment Legal",
+   "cadence": "Annual cycle; per agreement",
+   "risk": "Operational failures shift a 20% tax plus interest onto employees and create gross-up or dispute pressure.",
+   "source": {
+    "title": "Cornell LII - 26 U.S.C. 409A",
+    "url": "https://www.law.cornell.edu/uscode/text/26/409A"
+   }
+  },
+  {
+   "id": "section-280g",
+   "title": "Section 280G golden parachutes",
+   "area": "Executive comp",
+   "rule": "IRC s280G, s4999; Reg S-K Item 402(t)",
+   "requirement": "Change-in-control payments to 'disqualified individuals' (officers, more-than-1% owners, highly compensated individuals) that equal or exceed 3x the 'base amount' (average W-2 pay over five years) are excess parachute payments: the company loses the deduction on the excess over 1x base and the individual pays a 20% excise tax. Public companies cannot use the private-company shareholder cleansing vote, so mitigation relies on best-net cutbacks, valuing reasonable compensation for services or restrictive covenants, and timing. Golden-parachute arrangements are disclosed under Item 402(t) and voted on in merger proxies.",
+   "hrActions": [
+    "Run annual 280G estimates for executives with CIC agreements",
+    "Prefer best-net cutback over excise-tax gross-ups (viewed as problematic pay practices by ISS)",
+    "Include 280G analysis in M&A integration and retention planning",
+    "Educate the compensation committee on exposure"
+   ],
+   "owner": "Total Rewards + Tax + Legal (M&A)",
+   "cadence": "Annual; per transaction",
+   "risk": "Unplanned excise taxes and lost deductions make deals more expensive and raise shareholder concerns.",
+   "source": {
+    "title": "Cornell LII - 26 U.S.C. 280G",
+    "url": "https://www.law.cornell.edu/uscode/text/26/280G"
+   }
+  },
+  {
+   "id": "section-162m",
+   "title": "Section 162(m) $1M deduction cap and 2027 expansion",
+   "area": "Executive comp",
+   "rule": "IRC s162(m) as amended by TCJA (2017) and ARPA (2021) s9708; proposed regs (Jan 16, 2025)",
+   "requirement": "Public companies cannot deduct more than $1,000,000 per year paid to covered employees: PEO, PFO, the three other highest-paid executive officers, and anyone covered in any year after 2016 ('once covered, always covered'); no performance-based exception applies except grandfathered arrangements. For tax years beginning after Dec 31, 2026 (calendar 2027), the five highest-compensated employees other than those already covered are added, determined each year (including non-officer employees).",
+   "hrActions": [
+    "Build a 2027 process to identify the top five other employees; large RSU vests or sign-on awards to non-officer engineers can qualify",
+    "Model the lost deduction with Tax for the 2027 budget and equity refresh strategy",
+    "Update CD&A tax-deductibility language",
+    "Monitor finalization of the January 2025 proposed regulations"
+   ],
+   "owner": "Total Rewards + Tax + Finance",
+   "cadence": "Annual determination",
+   "risk": "Mis-identification causes tax under-reporting and surprise P&L costs.",
+   "source": {
+    "title": "Federal Register - Proposed regulations under IRC 162(m) (Jan 16, 2025)",
+    "url": "https://www.federalregister.gov/documents/2025/01/16/2025-00728/certain-employee-remuneration-in-excess-of-1000000-under-internal-revenue-code-section-162m"
+   }
+  },
+  {
+   "id": "related-person-transactions-404",
+   "title": "Related-person transactions, including employment of relatives",
+   "area": "SEC disclosure",
+   "rule": "Reg S-K Item 404(a)-(b); Nasdaq Rule 5630",
+   "requirement": "Disclose any transaction over $120,000 in which the company participates and a related person (director, nominee, executive officer, over-5% holder or their immediate family members) has a direct or indirect material interest, including the employment of a director's or executive officer's immediate family member whose total pay exceeds $120,000. Nasdaq requires the audit committee or another independent body to review and oversee related-party transactions; Item 404(b) requires describing the approval policy.",
+   "hrActions": [
+    "Add a relationship question to requisition and offer workflows; route hires of relatives of directors/officers to Legal and the audit committee before offer",
+    "Report pay of employed relatives each year for the proxy",
+    "Align the nepotism/conflict-of-interest policy with Item 404",
+    "Apply FCPA hiring controls as well to relatives of government officials and state-owned customers' employees"
+   ],
+   "owner": "Legal (Securities) + Talent Acquisition + Total Rewards + Audit Committee",
+   "cadence": "Per hire; annual proxy",
+   "risk": "Undisclosed related-party employment is a disclosure violation and a governance red flag.",
+   "source": {
+    "title": "eCFR - 17 CFR 229.404 (Item 404)",
+    "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-229/subpart-229.400/section-229.404"
+   }
+  },
+  {
+   "id": "investor-human-capital-expectations",
+   "title": "Investor and proxy-advisor expectations on human capital; EEO-1 status",
+   "area": "Human capital reporting",
+   "rule": "ISS/Glass Lewis voting policies; EO 'Protecting American Investors From Foreign-Owned and Politically-Motivated Proxy Advisors' (Dec 2025); EEO-1 (29 CFR 1602.7) - rescission proposed July 23, 2026",
+   "requirement": "Beyond Item 101(c) there is no legal mandate, but investors assess workforce metrics, pay-for-performance, equity dilution and board oversight of talent. In 2025-26: ISS stopped considering board diversity for US companies (Feb 2025 - verify), major index funds removed explicit diversity targets, Glass Lewis announced a move away from a single benchmark policy (verify timing), and a Dec 2025 executive order directed the SEC to review proxy-advisor rules and DEI/ESG-based recommendations. The EEOC proposed rescinding EEO-1 and related reports (comments closed Aug 24, 2026); the 2025 EEO-1 collection had not opened as of Sept 2026.",
+   "hrActions": [
+    "Decide with Legal whether to keep publishing EEO-1 or other workforce data voluntarily, and keep a defensible methodology",
+    "Prepare an investor-engagement brief on key-engineer retention, succession, pay-for-performance and burn rate",
+    "Track ISS and Glass Lewis policy updates each Nov-Dec, including the ISS Equity Plan Scorecard",
+    "Keep California pay data reporting and any federal-contractor obligations on the calendar regardless of the EEO-1 outcome"
+   ],
+   "owner": "People Analytics + Total Rewards + Investor Relations + Legal",
+   "cadence": "Annual policy cycle; engagement season",
+   "risk": "Misreading investor policy shifts leads to failed equity-plan or say-on-pay votes, or to disclosures that create legal risk.",
+   "source": {
+    "title": "Federal Register - EEOC proposed rule: Removal of Reporting Requirements (July 23, 2026)",
+    "url": "https://www.federalregister.gov/documents/2026/07/23/2026-14937/removal-of-reporting-requirements"
+   }
+  },
+  {
+   "id": "dei-legal-disclosure-risk",
+   "title": "DEI legal risk and consistency of public statements",
+   "area": "SEC disclosure",
+   "rule": "Title VII; 42 U.S.C. 1981; EO 14173 (Jan 21, 2025); EEOC/DOJ technical assistance on DEI-related discrimination (2025); state attorney-general actions",
+   "requirement": "Federal agencies treat some DEI practices as unlawful discrimination (race- or sex-restricted programs, ERGs limited by protected class, decisions where a protected trait is a motivating factor). EO 14173 requires federal contractors and grantees to certify they run no illegal DEI programs, creating False Claims Act exposure. Statements in 10-Ks, proxies, sustainability reports and career sites can be used by regulators, state AGs and plaintiffs; pulling back can also draw challenges from other investors or states, so disclosures must match current programs.",
+   "hrActions": [
+    "Inventory DEI programs, ERGs, fellowships and internships and confirm eligibility is open to all",
+    "Harmonize language across 10-K, proxy, sustainability report and careers site",
+    "If there are federal contracts or subcontracts, route EO 14173 certifications to Legal",
+    "Remove diversity metrics from incentive plans unless legally vetted",
+    "Keep locally required programs where law mandates them (e.g., Taiwan's disability employment quota)"
+   ],
+   "owner": "Employment Legal + HR Leadership + ESG/Communications",
+   "cadence": "Annual review; per disclosure",
+   "risk": "Inconsistent or inaccurate statements become evidence in discrimination, FCA or securities claims.",
+   "source": {
+    "title": "EEOC - What You Should Know About DEI-Related Discrimination at Work",
+    "url": "https://www.eeoc.gov/wysk/what-you-should-know-about-dei-related-discrimination-work"
+   }
+  },
+  {
+   "id": "sec-exec-comp-reform-2026",
+   "title": "SEC 2025-26 executive compensation disclosure reform",
+   "area": "Executive comp",
+   "rule": "SEC roundtable June 26, 2025 (File 4-855); Reg S-K review announced Jan 13, 2026; proposed 'Enhancement of EGC Accommodations and Simplification of Filer Status' (Rel. 33-11419, May 19, 2026)",
+   "requirement": "The proposal would create two filer categories: large accelerated filers (public float of $2B or more, measured as a 10-trading-day average, for two consecutive years, after 60 months of reporting) and non-accelerated filers (everyone else). Non-accelerated filers would get scaled comp disclosure: 3 NEOs, 2 years of SCT, no CD&A, pay ratio, pay versus performance, grants/pension/NQDC tables or quantified termination payments, no say-on-pay, frequency or golden-parachute votes, and no SOX 404(b) auditor attestation. Comments closed July 20, 2026; adoption could affect the 2027 proxy season (verify). No changes were proposed for large accelerated filers yet; Chair Atkins has signaled perquisite/security and pay-versus-performance reforms next.",
+   "hrActions": [
+    "Estimate the company's likely category under the proposed test (public float history, 10-day average)",
+    "Plan the 2027 proxy both ways (full vs scaled)",
+    "Keep pay ratio and pay-versus-performance processes running until a final rule is adopted",
+    "Brief the compensation committee on investor expectations, which may exceed legal minimums"
+   ],
+   "owner": "Legal (Securities) + Total Rewards + Finance",
+   "cadence": "Monitor through final rule",
+   "risk": "Dropping disclosures early, or missing the transition timing, creates deficient filings.",
+   "source": {
+    "title": "Morrison Foerster - SEC Proposal Would Significantly Reduce Executive Pay Disclosure (June 2026)",
+    "url": "https://www.mofo.com/resources/insights/260622-sec-proposal-would-significantly-reduce-executive-pay-disclosure"
+   }
+  },
+  {
+   "id": "sec-reporting-cadence-14a8",
+   "title": "Semiannual reporting option and Rule 14a-8 rescission proposals",
+   "area": "SEC disclosure",
+   "rule": "Proposed Form 10-S semiannual reporting (May 5, 2026); proposed rescission of Rule 14a-8 and amendments to Rule 14a-4 (Sept 16, 2026; FR Sept 21, 2026); Division of Corporation Finance no-action statement (Nov 2025)",
+   "requirement": "The SEC proposed letting reporting companies file a semiannual Form 10-S (due 40 or 45 days after the half-year) instead of quarterly 10-Qs. It separately proposed rescinding Rule 14a-8, leaving shareholder-proposal access to state law and bylaws (comment period 60 days after FR publication, about Nov 20, 2026). For the 2025-26 season, staff stopped responding substantively to most 14a-8 no-action requests. HR effects: trading windows, 10b5-1 cooling-off, earnings-linked grant calendars and ESPP purchase dates depend on quarterly reporting, and fewer pay-equity/human-capital shareholder proposals may reach the ballot.",
+   "hrActions": [
+    "Map blackout windows, grant calendars, ESPP purchase dates and 402(x) windows to reporting cadence; prepare changes if the board elects semiannual reporting",
+    "Expect quarterly earnings releases or 8-Ks to continue even if 10-Qs stop",
+    "Engage investors directly on pay and human capital topics",
+    "Track final rules before changing policies"
+   ],
+   "owner": "Legal (Securities) + Equity Administration + Total Rewards + Investor Relations",
+   "cadence": "Monitor 2026-27",
+   "risk": "Changing reporting cadence without aligning insider-trading and grant procedures creates MNPI and 10b5-1 risk.",
+   "source": {
+    "title": "SEC press release 2026-89 - Proposed rescission of shareholder proposal rule",
+    "url": "https://www.sec.gov/newsroom/press-releases/2026-89-sec-proposes-rescission-shareholder-proposal-rule-reforms-proxy-solicitation-process"
+   }
+  }
+ ],
+ "semiconductor": [
+  {
+   "id": "deemed-exports",
+   "title": "Deemed exports and deemed reexports of technology and source code",
+   "area": "Export control",
+   "rule": "EAR 15 CFR 734.13(a)(2),(b); 734.14(a)(2),(b); 734.15 ('release'); 772.1 ('U.S. person'); Commerce Control List (Part 774)",
+   "requirement": "Releasing EAR-controlled technology or source code (not object code) to a foreign person in the US is a deemed export to that person's most recent country of citizenship or permanent residency; releasing it abroad to a third-country national is a deemed reexport. 'Release' includes visual or other inspection (lab tours, screen shares, repository access) and oral or written exchanges. A license is needed if the ECCN's reasons for control apply to that country (many semiconductor/computing/encryption technologies for China, Russia or Iran nationals) unless an exception or exclusion (published, fundamental research, EAR99) applies. US citizens, lawful permanent residents and protected individuals (asylees, refugees) are not foreign persons; H-1B, L-1, O-1, TN and F-1/OPT holders are.",
+   "hrActions": [
+    "Add an export-control flag to each requisition/job code for roles with access to controlled technology or source code, set by Trade Compliance with the hiring manager",
+    "For flagged roles only, collect U.S.-person status and country(ies) of citizenship/permanent residency on a separate export form (not the I-9) and route it to Trade Compliance before start",
+    "Make start dates and IT/lab/repository access contingent on export clearance or license",
+    "Re-screen on transfers, new projects, promotions and immigration-status changes",
+    "Apply the same process to interns, contractors, visiting researchers, onsite interview candidates and visitors",
+    "Keep records for five years (EAR Part 762)"
+   ],
+   "owner": "Trade Compliance + Talent Acquisition + Immigration + IT/Security + Hiring managers",
+   "cadence": "Per hire, transfer and status change",
+   "risk": "Unlicensed release is an export violation: civil penalties per violation up to the greater of the inflation-adjusted ECRA maximum (about $374,000 in 2025, verify) or twice the transaction value; criminal up to $1M and 20 years if willful.",
+   "source": {
+    "title": "eCFR - 15 CFR 734.13 (Export)",
+    "url": "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-734/section-734.13"
+   }
+  },
+  {
+   "id": "technology-control-plan",
+   "title": "Technology Control Plan and access controls",
+   "area": "Export control",
+   "rule": "BIS deemed-export guidance and license conditions; EAR Part 762 (records); ITAR 22 CFR 126.18 if ITAR data is present",
+   "requirement": "The EAR does not require a TCP for every company, but BIS expects one and often makes it a condition of deemed-export licenses. A TCP identifies controlled technology and source code, segregates it physically and logically (badge zones, lab access, repository ACLs, EDA project permissions), briefs and certifies employees, controls visitors and meetings, and audits access. License provisos (scope limits, reporting when the person leaves) must be tracked per individual.",
+   "hrActions": [
+    "Deliver TCP briefings with signed acknowledgments at onboarding for flagged employees, plus annual refreshers",
+    "Feed HRIS job, location and manager changes to identity management so access updates automatically; revoke immediately on exit",
+    "Keep a restricted register of license-conditioned employees (expiry, scope, exit reporting)",
+    "Set visitor and interview rules: no lab tours or code demos to foreign-person candidates without clearance",
+    "Align discipline for TCP breaches with Trade Compliance"
+   ],
+   "owner": "Trade Compliance + IT Security + Facilities + HR Operations",
+   "cadence": "Ongoing; annual TCP review",
+   "risk": "Weak access control turns routine collaboration (chat, Git, shared EDA projects) into unlicensed releases.",
+   "source": {
+    "title": "BIS - Deemed Exports",
+    "url": "https://www.bis.gov/deemed-exports"
+   }
+  },
+  {
+   "id": "export-hiring-nondiscrimination",
+   "title": "Nationality questions in hiring without citizenship discrimination",
+   "area": "Export control",
+   "rule": "INA s274B (8 U.S.C. 1324b); DOJ IER guidance 'How to Avoid Immigration-Related Discrimination when Complying with U.S. Export Control Laws' (Mar 2024)",
+   "requirement": "Per DOJ IER, the EAR and ITAR contain no employment or hiring requirements; they require authorization before release, not citizenship-based hiring. Employers may not limit jobs to US citizens, or exclude asylees, refugees or permanent residents, by citing export controls unless a law, regulation, executive order or government contract requires it (e.g., security clearance). Employers may ask about U.S.-person status or citizenship only for positions needing access to controlled items, only to assess export authorization, and separately from Form I-9.",
+   "hrActions": [
+    "Audit job postings and ATS knockout questions; remove 'U.S. citizens only' unless a documented legal or contract requirement exists",
+    "Use an approved script for flagged roles: 'Are you a U.S. person (citizen, national, lawful permanent resident, asylee or refugee)?', explaining it is for export authorization",
+    "Do not request specific documents or link export questions to I-9/E-Verify; store export records separately",
+    "If a license is unlikely or slow, consider timing, alternate roles or documented business reasons, and involve Legal before withdrawing offers",
+    "Train recruiters and hiring managers; monitor outcomes by citizenship status"
+   ],
+   "owner": "Talent Acquisition + Immigration + Employment Legal + Trade Compliance",
+   "cadence": "Per requisition; annual recruiter training",
+   "risk": "Citizenship-status discrimination brings per-victim civil penalties, back pay and DOJ investigations.",
+   "source": {
+    "title": "DOJ IER - How to Avoid Immigration-Related Discrimination when Complying with U.S. Export Control Laws",
+    "url": "https://www.justice.gov/media/1287536/dl?inline"
+   }
+  },
+  {
+   "id": "i-129-part-6",
+   "title": "Form I-129 Part 6 deemed-export certification",
+   "area": "Export control",
+   "rule": "USCIS Form I-129, Part 6 (Certification Regarding the Release of Controlled Technology or Technical Data to Foreign Persons in the United States)",
+   "requirement": "For H-1B, H-1B1, L-1 and O-1A petitions, the petitioner certifies under penalty of perjury either that no EAR/ITAR license is needed to release technology to the beneficiary, or that a license is needed and access will be blocked until it is obtained. The certification applies to new petitions, extensions and amendments and must reflect the real job duties.",
+   "hrActions": [
+    "Require Trade Compliance's written classification of the role's technology access before Part 6 is signed",
+    "Do not let outside counsel complete Part 6 from a template; keep the analysis in the immigration file (not the I-9)",
+    "Redo the assessment for amendments (new project, role or worksite) and extensions",
+    "If a license is needed, align the license application with petition timing and access controls",
+    "Sample-audit Part 6 answers against actual system access"
+   ],
+   "owner": "Immigration/Global Mobility + Trade Compliance + Legal",
+   "cadence": "Per petition, extension and amendment",
+   "risk": "A false Part 6 certification is a false statement to USCIS and evidence of a deemed-export violation.",
+   "source": {
+    "title": "USCIS - Form I-129",
+    "url": "https://www.uscis.gov/i-129"
+   }
+  },
+  {
+   "id": "advanced-computing-sme-controls",
+   "title": "Advanced computing and semiconductor manufacturing controls (2022-2026)",
+   "area": "Export control",
+   "rule": "EAR ECCNs 3A090, 4A090, 3B001/3B090, 3E001, related .z items; 15 CFR 742.6, 744.23, 734.9 FDPRs; BIS actions of Oct 2022, Oct 2023, Dec 2024, Jan 2025, May 2025 (AI Diffusion rescission and guidance), Jan 2026 and Apr 2026",
+   "requirement": "Successive BIS rules require licenses for advanced computing ICs and computers (3A090/4A090), related technology and software, semiconductor manufacturing equipment and HBM destined for China, Macau and arms-embargoed (D:5) countries or entities headquartered there, with end-use controls for supercomputers and advanced-node IC production. The Jan 2025 foundry due-diligence rule requires fabs and OSATs to verify designers, with an 'authorized IC designer' deadline extended to Dec 31, 2026. In May 2025 BIS rescinded the AI Diffusion Rule and warned about Huawei Ascend chips; in Jan 2026 it moved H200-class chip licenses for China to case-by-case review. Whether each provision reaches deemed exports depends on the rule text; confirm with Trade Compliance.",
+   "hrActions": [
+    "Map which teams (design, verification, AI/HPC products, applications engineering) work on 3A090/4A090-type products and restrict access by location and nationality with Trade Compliance",
+    "Set the scope of China, Taiwan and India R&D centers around technology-access limits and record it in workforce plans",
+    "Add role-based export training for engineering, FAE, sales and support at onboarding, with annual refreshers",
+    "Build export compliance into sales/FAE incentive plans (no credit for unscreened or unlicensed business)",
+    "Give employees a protected escalation path for suspected diversion"
+   ],
+   "owner": "Trade Compliance + Engineering leadership + HRBPs + Total Rewards",
+   "cadence": "Ongoing; reassess after each BIS rule",
+   "risk": "Penalties are rising: Cadence paid over $140M (2025) and Applied Materials a $252M BIS penalty (2026) for semiconductor exports to China.",
+   "source": {
+    "title": "Federal Register - Revision to License Review Policy for Advanced Computing Commodities (Jan 15, 2026)",
+    "url": "https://www.federalregister.gov/documents/2026/01/15/2026-00789/revision-to-license-review-policy-for-advanced-computing-commodities"
+   }
+  },
+  {
+   "id": "us-person-744-6",
+   "title": "U.S.-person restrictions on supporting advanced chip production in China",
+   "area": "Export control",
+   "rule": "EAR 15 CFR 744.6(c)(2) (added Oct 2022, expanded 2023-24); 'U.S. person' per 15 CFR 772.1",
+   "requirement": "Without a license, U.S. persons (citizens, permanent residents, protected individuals, US entities and their foreign branches, anyone in the US) may not ship, transmit, transfer, facilitate or service items, even items not subject to the EAR, for developing or producing ICs at fabs in Macau or D:5 countries (including China) that make advanced-node ICs (e.g., non-planar logic at 16/14nm or below, DRAM at 18nm half-pitch or below, NAND with 128 layers or more), or certain SME. Natural U.S. persons employed by or working for companies headquartered in the US or A:5/A:6 countries (and not majority-owned by D:5/Macau-HQ entities) are excluded, but the company itself still needs licenses; no license exceptions apply.",
+   "hrActions": [
+    "Identify U.S.-person employees (including green-card holders) supporting China-based foundries, partners or customers, and clear assignments with Trade Compliance",
+    "Require Legal review before any consulting, advisory or board role with Chinese fabs or SME makers",
+    "At exit, remind U.S.-person engineers joining Chinese fabs or equipment makers of their personal license obligations",
+    "Do a pre-assignment export review for any secondment to China or Macau",
+    "Cover these rules in export training for U.S.-person staff abroad"
+   ],
+   "owner": "Trade Compliance + Employment Legal + Global Mobility + HRBPs",
+   "cadence": "Per assignment, outside-activity request and exit",
+   "risk": "Individuals face personal civil and criminal liability, and employee 'support' activities can create company violations.",
+   "source": {
+    "title": "eCFR - 15 CFR 744.6",
+    "url": "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-744/section-744.6"
+   }
+  },
+  {
+   "id": "entity-list-affiliates-screening",
+   "title": "Entity List, Affiliates Rule and restricted-party screening in HR channels",
+   "area": "Export control",
+   "rule": "EAR Supp. 4 to Part 744 (Entity List), 744.21 (MEU); Affiliates Rule (Sept 29, 2025), suspended Nov 10, 2025 to Nov 9, 2026 (90 FR, Nov 12, 2025); OFAC SDN list and 50% rule; DOJ DSP Covered Persons List",
+   "requirement": "Exports to Entity List parties need licenses (often presumption of denial). The Affiliates Rule automatically extended those restrictions to entities 50% or more owned by listed or MEU parties; BIS suspended it for one year as part of the US-China trade deal, and it comes back on Nov 10, 2026 unless BIS acts again. No law bars hiring former employees of listed companies, but contracts with listed parties or (once the rule returns) their affiliates as vendors, contractors, staffing agencies, universities or research partners can require licenses.",
+   "hrActions": [
+    "Run restricted-party screening (Entity List, MEU, SDN, UFLPA list, DSP covered persons) on HR vendors: recruiters, staffing/EOR firms, background-check, payroll and benefits providers in China, training vendors, university partners",
+    "Screen independent contractors, consultants and interns' sponsoring institutions before onboarding",
+    "Treat prior employment at a listed entity as a trigger for enhanced trade-secret/export onboarding (certifications, access review), never as a proxy for nationality",
+    "Prepare ownership research for vendors and partners before Nov 10, 2026",
+    "Document screening results and re-screen periodically"
+   ],
+   "owner": "Trade Compliance + Procurement + Talent Acquisition + HR Operations",
+   "cadence": "Before engagement and periodically; watch Nov 2026",
+   "risk": "Paying or sharing technology with a listed party through an HR channel can be an unlicensed export or a sanctions violation.",
+   "source": {
+    "title": "Federal Register - One Year Suspension of Expansion of End-User Controls for Affiliates of Certain Listed Entities",
+    "url": "https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities"
+   }
+  },
+  {
+   "id": "export-compliance-incentives",
+   "title": "Export compliance culture, sales incentives and China subsidiary oversight",
+   "area": "Export control",
+   "rule": "ECRA (50 U.S.C. 4801 et seq.); EAR Part 764 (enforcement, voluntary self-disclosure); DOJ Corporate Enforcement Policy",
+   "requirement": "Individual employee conduct drives corporate liability. On July 28, 2025 Cadence pleaded guilty and agreed to pay over $140M (DOJ and BIS) after China-subsidiary staff sold EDA tools to Entity-Listed NUDT under aliases and withheld information from compliance; on Feb 12, 2026 Applied Materials agreed to a $252M BIS penalty over SME exports. Regulators give credit for compensation structures that reward compliance and claw back pay for misconduct.",
+   "hrActions": [
+    "Build export-compliance gates into sales comp (no credit for unscreened or unlicensed orders; forfeiture or clawback for violations)",
+    "Add compliance KPIs or ethics modifiers to bonuses for China/APAC general managers and sales leaders",
+    "Require local-language export training with attestation for China, Taiwan and India staff",
+    "Investigate and discipline concealment consistently; preserve evidence and coordinate voluntary self-disclosure decisions with Legal",
+    "Separate duties so local sales cannot both book orders and clear screening"
+   ],
+   "owner": "Trade Compliance + Total Rewards + HRBPs (APAC) + Legal/Investigations",
+   "cadence": "Annual comp plan design; ongoing",
+   "risk": "Criminal pleas, nine-figure penalties, loss of export privileges and monitorships.",
+   "source": {
+    "title": "DOJ - Cadence Design Systems agrees to plead guilty and pay over $140 million",
+    "url": "https://www.justice.gov/opa/pr/cadence-design-systems-agrees-plead-guilty-and-pay-over-140-million-unlawfully-exporting"
+   }
+  },
+  {
+   "id": "itar",
+   "title": "ITAR (if any defense work)",
+   "area": "Export control",
+   "rule": "ITAR 22 CFR Parts 120-130; 126.1 (proscribed countries, including China); 126.18",
+   "requirement": "If any product or design is a USML defense article (e.g., certain radiation-hardened or military-specific ICs) or the company provides defense services, DDTC registration is required and release of technical data to any foreign person, including in the US, needs a license or agreement (DSP-5/TAA). ITAR considers all of a person's nationalities, and China is subject to a policy of denial. Most commercial fabless chips are EAR, not ITAR; confirm jurisdiction and classification.",
+   "hrActions": [
+    "Flag ITAR programs and roles separately; staff them with U.S. persons or licensed foreign persons",
+    "Keep separate ITAR TCPs, facilities and IT enclaves",
+    "Screen dual and third-country nationals under 126.18 with Legal",
+    "Train program staff and include ITAR in exit procedures"
+   ],
+   "owner": "Trade Compliance (Empowered Official) + Program Management + Talent Acquisition",
+   "cadence": "Per program and hire",
+   "risk": "High inflation-adjusted civil penalties per violation, debarment and loss of defense business.",
+   "source": {
+    "title": "eCFR - 22 CFR Part 120 (ITAR)",
+    "url": "https://www.ecfr.gov/current/title-22/part-120"
+   }
+  },
+  {
+   "id": "doj-data-security-program",
+   "title": "DOJ Data Security Program: HR data and employees in countries of concern",
+   "area": "National security & data",
+   "rule": "28 CFR Part 202 (EO 14117); effective Apr 8, 2025; due-diligence, audit and reporting duties (Subparts J-L) from Oct 6, 2025; corporate group exemption s202.506",
+   "requirement": "US persons may engage in 'restricted' vendor, employment or investment agreements with a country of concern (China including Hong Kong and Macau, Russia, Iran, North Korea, Cuba, Venezuela - verify current list) or a covered person only with CISA security requirements, a written data compliance program, an annual independent audit and 10-year records, where the deal gives access to government-related data or bulk US sensitive personal data. Bulk thresholds over 12 months: more than 1,000 US persons for biometric, precise geolocation (devices) or human 'omic data (100 for genomic), 10,000 for health or financial data, 100,000 for covered personal identifiers. Covered persons include individuals primarily resident in China and employees of China-organized entities (e.g., a China subsidiary), but not Chinese nationals living in the US. HR, payroll and benefits transfers within the corporate group are exempt under s202.506 (not R&D).",
+   "hrActions": [
+    "Map HR data flows to China (HRIS, payroll, benefits, badge/biometric systems, background checks) and document the s202.506 exemption",
+    "Identify China-resident staff or contractors whose roles give access to bulk US personal data (global HRIS/IT admins, customer-data engineers); treat their employment agreements as restricted transactions or narrow their access",
+    "Do not place global HRIS or identity administrators in China or Hong Kong; apply CISA controls (minimization, encryption, logging)",
+    "Screen HR vendors (payroll, analytics, benefits) for covered-person status",
+    "Support the annual audit and 10-year records; route suspected violations to Legal promptly (some reports are due within 14 days)",
+    "Base status on residence and employer, never on nationality, to avoid discrimination"
+   ],
+   "owner": "Privacy/Security + Legal + HRIS + Global Payroll + Procurement",
+   "cadence": "Ongoing; annual audit and certification",
+   "risk": "Civil penalties and criminal liability for willful violations; unmanaged admin access from China can itself be a violation.",
+   "source": {
+    "title": "DOJ NSD - Data Security Program Compliance Guide (Apr 11, 2025)",
+    "url": "https://www.justice.gov/opa/media/1396356/dl"
+   }
+  },
+  {
+   "id": "chips-act-incentives",
+   "title": "CHIPS Act incentives, guardrails and the 48D credit",
+   "area": "Industrial policy",
+   "rule": "CHIPS Act of 2022 (15 U.S.C. 4652); CHIPS national-security guardrails (15 CFR Part 231); IRC s48D as amended by P.L. 119-21 (July 2025)",
+   "requirement": "Manufacturing incentives went mainly to fabs, packaging and equipment makers. Award terms included workforce-development plans and, for applicants seeking over $150M, a childcare plan (2023 funding notice), plus 10-year guardrails limiting expansion and joint research or licensing with foreign entities of concern. The administration renegotiated awards in 2025 (e.g., Aug 2025 conversion of Intel grants into a roughly 9.9% federal equity stake); check whether workforce and childcare terms survive in any given award (verify). The 48D investment credit rose from 25% to 35% for property placed in service after 2025 (construction must begin before Jan 1, 2027); fabless designers generally do not qualify.",
+   "hrActions": [
+    "Confirm whether the company or any subsidiary holds CHIPS funding (including R&D or packaging programs) and, if so, track workforce/childcare commitments and reporting",
+    "If a recipient, route China joint research, licensing and talent arrangements through guardrail review",
+    "Plan for competition for process, packaging and test engineers near new US fabs (Arizona, Texas, Ohio, New York)",
+    "Use CHIPS-funded workforce programs (community college and university pipelines) for internships"
+   ],
+   "owner": "Finance/Tax + Government Affairs + Talent Acquisition + Legal",
+   "cadence": "Per award; annual talent planning",
+   "risk": "Guardrail breaches can trigger full clawback for recipients; for fabless firms the main risks are misread eligibility and talent-market effects.",
+   "source": {
+    "title": "BDO - Section 48D credit opportunities for semiconductor manufacturing companies",
+    "url": "https://www.bdo.com/insights/industries/technology/section-48d-credit-opportunities-for-semiconductor-manufacturing-and-production-equipment-companies"
+   }
+  },
+  {
+   "id": "outbound-investment",
+   "title": "US outbound investment rules (China semiconductors, AI, quantum)",
+   "area": "National security & data",
+   "rule": "31 CFR Part 850 (EO 14105), effective Jan 2, 2025; FY2026 NDAA outbound provisions (COINS Act - verify)",
+   "requirement": "US persons, including individuals, are prohibited from, or must notify Treasury within 30 days after, certain investments (equity, convertible debt, greenfield, JVs, some LP interests) in covered foreign persons in China, Hong Kong or Macau working in semiconductors and microelectronics (e.g., EDA, SME, advanced IC design, fabrication or packaging, supercomputers), quantum or AI. US persons also may not knowingly direct a transaction by a non-US person that would be prohibited. Publicly traded securities and small LP investments are excepted. Congress codified and expanded the program in the FY2026 NDAA; implementing rules are pending (verify).",
+   "hrActions": [
+    "Add outbound-investment questions to conflict-of-interest and outside-activity disclosures (personal angel or VC investments in Chinese chip/AI startups)",
+    "Set a recusal protocol for US-person executives and directors of non-US subsidiaries on China investment decisions",
+    "Have Legal review equity-for-services arrangements (advisory roles) in Chinese startups",
+    "Train corporate development and senior leaders"
+   ],
+   "owner": "Legal + Corporate Development + HR (conflict-of-interest program)",
+   "cadence": "Per transaction; annual COI certification",
+   "risk": "Civil penalties up to IEEPA maximums and divestment orders; individuals are directly liable.",
+   "source": {
+    "title": "U.S. Treasury - Outbound Investment Security Program",
+    "url": "https://home.treasury.gov/policy-issues/international/outbound-investment-program"
+   }
+  },
+  {
+   "id": "trade-secret-program",
+   "title": "Trade secret protection, DTSA notice and departing employees",
+   "area": "Trade secrets",
+   "rule": "Defend Trade Secrets Act (18 U.S.C. 1836; immunity notice 18 U.S.C. 1833(b)); Economic Espionage Act (18 U.S.C. 1831-1832); Cal. Civ. Code 3426 et seq.; Cal. Bus. & Prof. Code 16600/16600.5",
+   "requirement": "Trade-secret status depends on reasonable secrecy measures. Any employee or contractor agreement governing confidential information must include the DTSA whistleblower-immunity notice (or cross-reference a policy), or the employer cannot recover exemplary damages or attorney fees from that person. DOJ keeps prosecuting chip/AI theft: on Jan 29, 2026 ex-Google engineer Linwei Ding was convicted of seven counts of economic espionage and seven of trade-secret theft (TPU, GPU and SmartNIC designs) after affiliating with PRC companies and applying to a Shanghai talent plan. Non-competes are void in California, so protection rests on confidentiality, access control and investigation.",
+   "hrActions": [
+    "Use a PIIA with the DTSA immunity notice, Rule 21F-17 carve-outs and the Cal. Labor Code 2870 invention notice for California staff",
+    "Require new hires to certify they bring no prior-employer confidential information; add extra review for hires from direct competitors or Entity List companies",
+    "Run a departing-employee protocol: exit certification, device and badge return, access cut-off at notice, DLP review of recent downloads/cloud uploads, reminder letter",
+    "Operate insider-risk monitoring with Legal/Privacy oversight and notices consistent with local law (China PIPL, India DPDP Act, Taiwan PDPA, Canada)",
+    "Apply discipline and litigation holds consistently; coordinate law-enforcement referrals with Security and Legal"
+   ],
+   "owner": "Legal (IP/Employment) + Security/Insider Risk + HR Operations + IT",
+   "cadence": "Per hire and exit; ongoing monitoring",
+   "risk": "Weak measures can forfeit trade-secret status; a missing DTSA notice forfeits enhanced remedies.",
+   "source": {
+    "title": "DOJ - Former Google engineer found guilty of economic espionage and theft of AI technology (Jan 2026)",
+    "url": "https://www.justice.gov/opa/pr/former-google-engineer-found-guilty-economic-espionage-and-theft-confidential-ai-technology"
+   }
+  },
+  {
+   "id": "foreign-talent-outside-activities",
+   "title": "Foreign talent programs, outside activities and conflicts",
+   "area": "Trade secrets",
+   "rule": "CHIPS and Science Act s10632 (42 U.S.C. 19232) for federally funded research; company conflict-of-interest policy; Cal. Labor Code 96(k)/98.6 limits",
+   "requirement": "Covered individuals on federally funded R&D may not participate in malign foreign talent recruitment programs and must certify compliance (verify applicability if the company holds federal research awards). More broadly, undisclosed talent-plan participation, side ventures and advisory roles are recurring facts in chip and AI theft cases. Employers can require disclosure of outside work, investments and affiliations related to their business, within state limits on regulating lawful off-duty conduct.",
+   "hrActions": [
+    "Run an annual conflict-of-interest/outside-activity certification covering foreign talent programs, outside companies, advisory roles and investments",
+    "Require pre-approval for outside work in semiconductor or AI fields",
+    "Escalate red flags (founding a startup while employed, talent-plan applications) to Legal and Security",
+    "Apply the rules uniformly regardless of national origin"
+   ],
+   "owner": "Legal + HR + Security + Research Compliance (if federal awards)",
+   "cadence": "Annual certification; on change",
+   "risk": "Undisclosed conflicts enable IP loss and, for federal awardees, can lead to award termination and false-statement liability.",
+   "source": {
+    "title": "Cornell LII - 42 U.S.C. 19232 (malign foreign talent recruitment program prohibition)",
+    "url": "https://www.law.cornell.edu/uscode/text/42/19232"
+   }
+  },
+  {
+   "id": "taiwan-core-key-tech",
+   "title": "Taiwan national core key technology rules (brief)",
+   "area": "Trade secrets",
+   "rule": "Taiwan National Security Act (2022 amendments on economic espionage involving national core key technologies); Cross-Strait Act travel-approval rules for covered personnel - verify articles",
+   "requirement": "Taiwan criminalizes economic espionage involving government-designated national core key technologies (including advanced semiconductor process and related technologies) for the benefit of mainland China, Hong Kong, Macau or foreign hostile forces, with heavy prison terms and fines. Personnel on government-funded or commissioned core key technology projects need approval to travel to mainland China, including for a period after leaving (verify). Prosecutors used these provisions in 2025 in a case involving TSMC 2nm know-how (verify details). The Taiwan country file covers this in depth.",
+   "hrActions": [
+    "Identify Taiwan roles that touch designated technologies or government projects and issue local-language notices",
+    "Align Taiwan onboarding and exit procedures with the Trade Secrets Act and National Security Act",
+    "Handle travel approvals for covered personnel",
+    "Forbid use of prior-employer (e.g., foundry) data by hires from TSMC and other fabs"
+   ],
+   "owner": "Taiwan HR + Legal (Taiwan counsel) + Security",
+   "cadence": "Per hire, exit and travel request",
+   "risk": "Criminal exposure for employees and damaged relationships with Taiwan foundry partners.",
+   "source": {
+    "title": "Laws & Regulations Database of the Republic of China (Taiwan)",
+    "url": "https://law.moj.gov.tw/ENG/"
+   }
+  },
+  {
+   "id": "h1b-fee-talent",
+   "title": "H-1B $100,000 fee, new fee proposal and wage rules",
+   "area": "Immigration & talent",
+   "rule": "Proclamation 10973 (Sept 19, 2025), extended Sept 18, 2026; DHS weighted-selection rule (effective Feb 27, 2026); DHS proposed 'Fee for Certain H-1B Petitions' (Aug 25, 2026); DOL prevailing-wage proposal (Mar 27, 2026); executive order on layoffs (Sept 18, 2026)",
+   "requirement": "The $100,000 payment for new H-1B petitions for beneficiaries outside the US was upheld by the D.C. district court (Dec 2025) but vacated by the District of Massachusetts (June 8, 2026); the First Circuit denied a stay (July 24, 2026), and reports say it is not being collected (verify). On Sept 18, 2026 the President extended the proclamation to Sept 21, 2027 and ordered agencies to consider petitioners' recent or planned layoffs in H-1B decisions. DHS proposed a $103,265 fee on all cap-subject H-1B petitions, including change of status (comments about Sept 24, 2026); the FY2027 lottery was weighted by wage level; DOL proposed higher prevailing-wage levels (e.g., Level I moving from the 17th to the 34th percentile).",
+   "hrActions": [
+    "Model H-1B cost scenarios for 2027 hiring (US-educated F-1/OPT graduates, cap petitions, hires from abroad)",
+    "Consider higher wage levels for strategic hires to improve lottery odds and prepare for DOL wage increases",
+    "Plan RIFs with Immigration: document selection criteria and H-1B/LCA effects before layoffs",
+    "Use Canada, India and Taiwan hubs and L-1/O-1 options as alternatives; update the mobility policy",
+    "Track litigation and rulemaking weekly before committing to fees in offers"
+   ],
+   "owner": "Immigration/Global Mobility + Talent Acquisition + Total Rewards + Legal",
+   "cadence": "Ongoing; cap registration each March",
+   "risk": "Cost shocks and denials can derail hiring of foreign-born engineers, a large share of US chip design talent.",
+   "source": {
+    "title": "Federal Register - DHS proposed rule: Fee for Certain H-1B Petitions (Aug 25, 2026)",
+    "url": "https://www.federalregister.gov/documents/2026/08/25/2026-17324/fee-for-certain-h-1b-petitions"
+   }
+  },
+  {
+   "id": "security-clearance-foci",
+   "title": "Security clearances and FOCI (if government work)",
+   "area": "National security & data",
+   "rule": "NISPOM 32 CFR Part 117; SEAD 3 (reporting); DCSA FOCI process (SF-328)",
+   "requirement": "Only if the company holds or seeks a facility clearance for classified work: appoint a Facility Security Officer and Insider Threat Program Senior Official, run an insider-threat program, report changed conditions (key management personnel changes, foreign ownership, control or influence), and make sure cleared employees report foreign travel, contacts and adverse information. FOCI must be mitigated, and foreign nationals cannot access classified information.",
+   "hrActions": [
+    "Notify the FSO of key-management changes, cleared hires and terminations, and adverse information",
+    "Deliver annual insider-threat and security training for cleared staff",
+    "Coordinate debriefings at offboarding",
+    "Include FOCI review in equity-ownership and board changes"
+   ],
+   "owner": "Security (FSO) + HR + Legal",
+   "cadence": "Per event; annual training",
+   "risk": "Invalidation or revocation of the facility clearance and loss of government programs.",
+   "source": {
+    "title": "eCFR - 32 CFR Part 117 (NISPOM)",
+    "url": "https://www.ecfr.gov/current/title-32/part-117"
+   }
+  },
+  {
+   "id": "lab-ehs",
+   "title": "Lab, cleanroom and ESD safety for a fabless employer (brief)",
+   "area": "Health & safety",
+   "rule": "OSHA 29 CFR 1910.1200 (HazCom, updated May 2024; compliance dates extended Jan 15, 2026) and 1910.1450 (labs); Cal/OSHA 8 CCR 3203 (IIPP) and 5194; Cal. Labor Code 6401.9 (workplace violence prevention); ANSI/ESD S20.20 (industry standard)",
+   "requirement": "Fabless firms still run validation, characterization, reliability and failure-analysis labs (solvents and acids for decapsulation, compressed gases, lasers, X-ray, solder fumes, thermal chambers, high voltage) and send staff to foundry and OSAT cleanrooms. Employers need a written hazard communication program with SDSs, labels and training (OSHA pushed HazCom 2024 deadlines back four months, e.g., Jan 19 to May 19, 2026 - verify employer-specific dates), an IIPP and, in California, a workplace violence prevention plan. ESD programs protect product, not people, but need grounding and training. Reproductive hazards (e.g., certain glycol ethers, lead) call for informed, non-discriminatory handling of pregnancy: accommodations, no 'fetal protection' exclusions.",
+   "hrActions": [
+    "Track EHS training by lab role in the LMS and block lab access until it is complete",
+    "Do job hazard assessments and provide PPE; brief travelers on site rules at foundry/OSAT sites in Taiwan and China",
+    "Give reproductive-hazard notices and run a pregnancy accommodation process (PWFA/FEHA) that offers reassignment without forced exclusion",
+    "Keep injury and illness records (OSHA 300; post 300A Feb 1-Apr 30) and investigate incidents",
+    "Update the HazCom program and retrain when SDSs and labels change"
+   ],
+   "owner": "EHS + HR (Leave/Accommodations) + Facilities + Lab managers",
+   "cadence": "Ongoing; annual training; annual 300A",
+   "risk": "OSHA/Cal-OSHA citations, injury claims and discrimination claims from mishandled reproductive-hazard policies.",
+   "source": {
+    "title": "Federal Register - Hazard Communication Standard compliance-date extension (Jan 15, 2026)",
+    "url": "https://www.federalregister.gov/documents/2026/01/15/2026-00653/hazard-communication-standard"
+   }
+  }
+ ],
+ "globalFrameworks": [
+  {
+   "id": "rba-code-labor-ethics",
+   "title": "RBA Code of Conduct v8.0: labor and ethics",
+   "area": "Labor standards",
+   "rule": "Responsible Business Alliance Code of Conduct v8.0 (effective Jan 1, 2024)",
+   "requirement": "A customer-driven industry code. Labor: A1 freely chosen employment (no forced, bonded or trafficked labor; workers pay no recruitment fees and any fees found are repaid; no holding of ID documents; written terms in the worker's language before departure); A2 young workers (no child labor; under-18s kept from hazardous and night work); A3 working hours (at most 60 hours a week including overtime, except emergencies, and one day off in seven); A4 wages and benefits (legal minimums, overtime premiums, no disciplinary deductions, clear pay statements); A5 humane treatment; A6 non-discrimination and non-harassment (no pregnancy or medical tests used to discriminate); A7 freedom of association. It also covers Health & Safety, Environment, Ethics (business integrity, no improper advantage, whistleblower protection and non-retaliation, privacy, responsible minerals) and Management Systems, and applies to your own operations and your suppliers.",
+   "hrActions": [
+    "Gap-assess own sites (US, Canada, India, Taiwan, China) against the Code, especially hours for lab and test operations and for contractors in Asia",
+    "Adopt an employer-pays policy for recruitment fees, including agency and dispatch workers in Taiwan, China and India, and audit labor agents",
+    "Make sure grievance and whistleblower channels meet Code expectations (anonymous option, non-retaliation)",
+    "Map policies to Code clauses for customer questionnaires",
+    "Train Asia HR teams on migrant-worker protections"
+   ],
+   "owner": "Supply Chain Sustainability + HR (Global Policy) + Operations + Legal",
+   "cadence": "Annual self-assessment; as customers require",
+   "risk": "Failing customer audits can cost design wins and supplier qualification with major OEM and hyperscaler customers.",
+   "source": {
+    "title": "Responsible Business Alliance - Code of Conduct",
+    "url": "https://www.responsiblebusiness.org/code-of-conduct/"
+   }
+  },
+  {
+   "id": "rba-vap-customer-requirements",
+   "title": "RBA VAP audits and customer flow-down",
+   "area": "Labor standards",
+   "rule": "RBA Validated Assessment Program (VAP), Self-Assessment Questionnaire, Corrective Action Plans; customer supplier codes and contracts",
+   "requirement": "Customers often require suppliers (including fabless vendors and their foundry/OSAT partners) to complete RBA SAQs, pass VAP audits by independent RBA-approved firms (1-5 day onsite reviews with document review, worker and management interviews and site inspection), close priority findings through corrective action plans and closure audits, and cascade the Code to Tier-1 suppliers. RBA members commit to implementing the Code in their own operations and supply chains.",
+   "hrActions": [
+    "Keep audit-ready evidence: time and overtime records, payroll, contracts, recruitment-fee records, age verification, grievance logs, training records",
+    "Prepare managers and workers for interviews without coaching",
+    "Own labor-section corrective actions with target dates",
+    "Work with foundry and OSAT partners' HR on migrant-worker findings"
+   ],
+   "owner": "Supply Chain Sustainability + HR Operations + Site leaders",
+   "cadence": "As customers request; audit cycles vary (verify with each customer)",
+   "risk": "Priority findings (fees, excessive hours, held IDs) trigger customer escalation and possible loss of business.",
+   "source": {
+    "title": "Responsible Business Alliance - Validated Assessment Program",
+    "url": "https://www.responsiblebusiness.org/vap/"
+   }
+  },
+  {
+   "id": "ungp",
+   "title": "UN Guiding Principles on Business and Human Rights",
+   "area": "Human rights",
+   "rule": "UN Guiding Principles (2011), Principles 11-24 and 29",
+   "requirement": "Companies are expected to have a human-rights policy commitment approved at the most senior level, to carry out ongoing human-rights due diligence (identify, prevent, mitigate, track and communicate impacts on their own workers and supply chains) and to provide or take part in remediation, including operational-level grievance mechanisms. The UNGPs underpin the OECD Guidelines, the RBA Code and many customer and investor expectations.",
+   "hrActions": [
+    "Publish or refresh a human rights policy covering forced labor, fees, hours, discrimination, freedom of association, privacy and health & safety",
+    "Include HR risks (contract labor, dispatch workers, interns) in the human rights risk assessment",
+    "Make grievance mechanisms available to contractors and supply-chain workers",
+    "Track remediation to closure"
+   ],
+   "owner": "Legal/ESG + HR + Supply Chain",
+   "cadence": "Annual review",
+   "risk": "Weak due diligence undermines defenses to forced-labor import detentions and customer audits.",
+   "source": {
+    "title": "OHCHR - Guiding Principles on Business and Human Rights",
+    "url": "https://www.ohchr.org/sites/default/files/documents/publications/guidingprinciplesbusinesshr_en.pdf"
+   }
+  },
+  {
+   "id": "oecd-guidelines",
+   "title": "OECD Guidelines for Multinational Enterprises (2023 update)",
+   "area": "Human rights",
+   "rule": "OECD Guidelines for Multinational Enterprises on Responsible Business Conduct (updated June 8, 2023), Ch. IV Human Rights and Ch. V Employment and Industrial Relations; National Contact Points",
+   "requirement": "Government-backed recommendations for companies operating in or from adhering countries (the US and Canada adhere): respect freedom of association and collective bargaining, give information to worker representatives, avoid discrimination, give reasonable notice and consult on major changes such as collective layoffs, and carry out risk-based due diligence across the value chain. The 2023 update added technology and data, climate and stronger protection for people who raise concerns. Complaints ('specific instances') can be filed with National Contact Points.",
+   "hrActions": [
+    "Give reasonable notice and consultation in restructurings worldwide, beyond local minimums where feasible",
+    "Deal with worker representatives in good faith and without anti-union retaliation in every country",
+    "Map due diligence to the OECD six-step model",
+    "Monitor NCP cases in the sector"
+   ],
+   "owner": "HR (Employee Relations) + Legal + ESG",
+   "cadence": "Ongoing",
+   "risk": "NCP complaints lead to public findings; customers and investors reference the Guidelines.",
+   "source": {
+    "title": "OECD - Guidelines for Multinational Enterprises on Responsible Business Conduct (2023)",
+    "url": "https://www.oecd.org/en/publications/oecd-guidelines-for-multinational-enterprises-on-responsible-business-conduct_81f92357-en.html"
+   }
+  },
+  {
+   "id": "ilo-fundamental-principles",
+   "title": "ILO fundamental principles and rights at work",
+   "area": "Labor standards",
+   "rule": "ILO Declaration on Fundamental Principles and Rights at Work (1998, amended 2022); 10 fundamental conventions (C29, C87, C98, C100, C105, C111, C138, C155, C182, C187) plus the 2014 Forced Labour Protocol",
+   "requirement": "Five fundamental principles: freedom of association and collective bargaining; elimination of forced labor; abolition of child labor; elimination of discrimination in employment; and a safe and healthy working environment (added in 2022 with C155 and C187). They bind states rather than companies, but appear in the RBA Code, customer contracts, investor policies and trade rules; the US has ratified only two fundamental conventions (C105, C182).",
+   "hrActions": [
+    "Reference ILO standards in the global labor policy and supplier code",
+    "Treat occupational safety and health as a fundamental right in policies and metrics",
+    "Use the ILO forced-labor indicators in labor-agent due diligence"
+   ],
+   "owner": "HR Policy + ESG + Supply Chain",
+   "cadence": "Annual policy review",
+   "risk": "Gaps show up in customer audits and investor questionnaires.",
+   "source": {
+    "title": "ILO - Declaration on Fundamental Principles and Rights at Work",
+    "url": "https://www.ilo.org/ilo-declaration-fundamental-principles-and-rights-work"
+   }
+  },
+  {
+   "id": "iso-30414",
+   "title": "ISO 30414 human capital reporting",
+   "area": "Human capital reporting",
+   "rule": "ISO 30414:2025 (replaced ISO 30414:2018, withdrawn Aug 25, 2025)",
+   "requirement": "Voluntary guidelines for internal and external human capital reporting, covering areas such as compliance and ethics, costs, diversity, leadership, culture, health, safety and well-being, productivity, recruitment, mobility and turnover, skills, succession and workforce availability. Useful for consistent metric definitions behind 10-K Item 101(c) text and investor or customer questionnaires; certification is optional.",
+   "hrActions": [
+    "Use ISO 30414 definitions for the internal human capital dashboard and metric dictionary",
+    "Choose a subset suitable for external reporting and document the formulas",
+    "Review what changed in the 2025 edition",
+    "Assess readiness for assurance"
+   ],
+   "owner": "People Analytics + HR Leadership + Finance/ESG",
+   "cadence": "Annual",
+   "risk": "Inconsistent definitions produce unreliable disclosures and audit findings.",
+   "source": {
+    "title": "ISO - ISO 30414:2018 (withdrawn; see ISO 30414:2025)",
+    "url": "https://www.iso.org/standard/69338.html"
+   }
+  },
+  {
+   "id": "iso-45001",
+   "title": "ISO 45001 occupational health and safety management",
+   "area": "Health & safety",
+   "rule": "ISO 45001:2018 plus Amd 1:2024 (climate action); revision (ISO/DIS 45001) under way",
+   "requirement": "A management-system standard for occupational health and safety: hazard identification, worker participation and consultation, legal compliance, incident investigation and continual improvement. Customers and RBA audits often ask for it as evidence of health and safety management; certification is voluntary. The 2024 amendment requires considering climate change in the organization's context, and a full revision is expected.",
+   "hrActions": [
+    "Align lab and office safety programs with ISO 45001 clauses",
+    "Set up worker consultation (safety committees) in each country",
+    "Report leading and lagging safety indicators to leadership",
+    "Plan for the revised standard's transition"
+   ],
+   "owner": "EHS + HR + Facilities",
+   "cadence": "Annual management review; surveillance audits if certified",
+   "risk": "Without a recognized system, customer audits and incident defenses are weaker.",
+   "source": {
+    "title": "ISO - ISO 45001:2018",
+    "url": "https://www.iso.org/standard/63787.html"
+   }
+  },
+  {
+   "id": "forced-labor-uflpa-s211",
+   "title": "Forced-labor supply-chain rules (UFLPA; Canada S-211)",
+   "area": "Labor standards",
+   "rule": "Uyghur Forced Labor Prevention Act (P.L. 117-78, effective June 21, 2022); Tariff Act s307 (19 U.S.C. 1307); Canada Fighting Against Forced Labour and Child Labour in Supply Chains Act (S.C. 2023, c. 9)",
+   "requirement": "Goods made wholly or partly in Xinjiang or by UFLPA Entity List companies are presumed made with forced labor and barred from US import unless rebutted by clear and convincing evidence; electronics and semiconductor-containing goods are enforcement targets. Canada's Act requires entities meeting size tests (commonly two of: C$20M assets, C$40M revenue, 250 employees - verify) to file a report by May 31 each year on steps taken against forced and child labor; confirm whether the Canadian subsidiary is covered and whether 2025-26 amendments apply (verify).",
+   "hrActions": [
+    "Run labor due diligence on labor agents, dispatch and contract workers, and student interns at OSAT/foundry partners in China and Taiwan",
+    "Check that no HR vendor or labor agent is on the UFLPA Entity List",
+    "Provide HR inputs (training, policies, grievance data) for the Canadian report",
+    "Offer worker-voice tools for the contractor workforce"
+   ],
+   "owner": "Supply Chain Compliance + Trade + HR + Legal (Canada)",
+   "cadence": "Ongoing; Canada report by May 31",
+   "risk": "Shipment detentions, customer loss and penalties for false or missing Canadian reports.",
+   "source": {
+    "title": "DHS - Uyghur Forced Labor Prevention Act",
+    "url": "https://www.dhs.gov/uflpa"
+   }
+  },
+  {
+   "id": "fcpa-hiring",
+   "title": "Anti-corruption in hiring: relatives of officials ('princeling' cases)",
+   "area": "Anti-corruption",
+   "rule": "FCPA (15 U.S.C. 78dd-1; books and records and internal controls, 78m(b)); Foreign Extortion Prevention Act; EO 14209 (Feb 10, 2025); DOJ FCPA enforcement guidelines (June 9, 2025)",
+   "requirement": "Offering jobs, internships or other benefits to relatives or referrals of foreign officials (including employees of state-owned customers, foundries, labs and universities) to win business is giving a thing of value. The SEC fined Qualcomm $7.5M (2016) over 'must place' hires of Chinese officials' relatives, and JPMorgan paid about $264M (2016) over its referral-hiring program. DOJ paused and then refocused FCPA enforcement (June 2025 guidelines prioritize cartels, harm to US competitors, national security and serious misconduct), but the statute and SEC accounting provisions still apply, conduct can be charged later within limitation periods, and local laws in China, India and Taiwan apply regardless.",
+   "hrActions": [
+    "Ask in the ATS about relationships with government officials, SOE employees and customers; send flagged candidates to Compliance before offer",
+    "Route referrals from customers or officials through a documented, merit-based process",
+    "Keep internships open-application only; no customer-requested placements",
+    "Cover hiring risks in manager and sales anti-bribery training with annual certification",
+    "Keep hiring-decision records for at least five years"
+   ],
+   "owner": "Compliance + Talent Acquisition + Legal",
+   "cadence": "Per hire; annual training",
+   "risk": "Bribery and books-and-records liability, plus local anti-bribery exposure in China and India.",
+   "source": {
+    "title": "SEC press release 2016-36 - Qualcomm FCPA settlement (hiring relatives of officials)",
+    "url": "https://www.sec.gov/news/pressrelease/2016-36.html"
+   }
+  },
+  {
+   "id": "sanctions-screening",
+   "title": "Sanctions and restricted-party screening of people",
+   "area": "Sanctions",
+   "rule": "OFAC regulations (31 CFR Ch. V), SDN List and 50% rule; EAR Part 744; China Anti-Foreign Sanctions Law (2021)",
+   "requirement": "US persons may not deal with SDNs or entities 50% or more owned by them, or provide services involving comprehensively sanctioned places (e.g., Cuba, Iran, North Korea and the Crimea/so-called DNR/LNR regions of Ukraine - verify current list). Hiring, paying or contracting with a sanctioned individual, or letting remote workers operate from sanctioned regions, can violate OFAC rules. China's counter-sanctions law can penalize compliance with foreign sanctions, creating conflicts for the China subsidiary.",
+   "hrActions": [
+    "Screen contractors, freelancers, EOR workers and other payees (not only vendors) against consolidated lists at onboarding and periodically",
+    "Block remote work from sanctioned regions through policy and IP/geolocation controls",
+    "Screen expense reimbursements and travel involving sanctioned regions",
+    "Handle China counter-sanctions conflicts with Legal",
+    "Resolve name-match hits with documented review; never reject by nationality alone"
+   ],
+   "owner": "Trade Compliance + HR Operations + Payroll + Procurement",
+   "cadence": "At onboarding and periodically",
+   "risk": "Strict-liability civil penalties and reputational harm.",
+   "source": {
+    "title": "U.S. Treasury - Office of Foreign Assets Control",
+    "url": "https://ofac.treasury.gov/"
+   }
+  },
+  {
+   "id": "global-speak-up",
+   "title": "Global speak-up programs and government whistleblower awards",
+   "area": "Whistleblower",
+   "rule": "DOJ Criminal Division Corporate Whistleblower Awards Pilot Program (Aug 2024, expanded May 2025); SEC whistleblower program (Rules 21F); FinCEN whistleblower proposal (Apr 1, 2026) covering BSA, IEEPA sanctions and related laws",
+   "requirement": "Government award programs now cover corporate crimes including trade, tariff and customs fraud, sanctions violations, corporate immigration offenses and foreign corruption. A company that self-reports to DOJ within 120 days after receiving an internal report (and before DOJ contacts it) can still qualify for a declination, so fast, credible internal hotlines and investigations are needed in every country.",
+   "hrActions": [
+    "Run a global hotline with local-language intake and triage within days; escalate possible export, sanctions and FCPA matters to Legal at once to protect the 120-day window",
+    "Enforce non-retaliation and monitor what happens to reporters",
+    "Follow local privacy and labor rules for investigations in China, India, Taiwan and Canada",
+    "Report metrics to the audit committee"
+   ],
+   "owner": "Ethics & Compliance + Employee Relations/Investigations + Legal",
+   "cadence": "Ongoing",
+   "risk": "Slow internal handling forfeits self-disclosure credit, and retaliation creates separate liability.",
+   "source": {
+    "title": "DOJ - Criminal Division Corporate Whistleblower Awards Pilot Program",
+    "url": "https://www.justice.gov/criminal/criminal-division-corporate-whistleblower-awards-pilot-program"
+   }
+  }
+ ],
+ "recentChanges": [
+  {
+   "date": "2026-09",
+   "title": "H-1B $100K proclamation extended; order to weigh layoffs in H-1B decisions",
+   "detail": "On Sept 18, 2026 the President extended Proclamation 10973 to Sept 21, 2027 (the fee remains blocked by the June 2026 vacatur, per counsel - verify) and issued an executive order directing agencies to consider petitioners' past-year and planned layoffs of similarly situated US workers in H-1B adjudications, with DOL reviewing prior filings.",
+   "impact": "high",
+   "area": "semi"
+  },
+  {
+   "date": "2026-09",
+   "title": "SEC proposes rescinding Rule 14a-8 and modernizing proxy solicitation",
+   "detail": "Proposed Sept 16, 2026 (FR Sept 21): federal shareholder-proposal rule would be rescinded, leaving access to state law and bylaws; Rule 14a-4 discretionary-voting changes; 60-day comment period.",
+   "impact": "medium",
+   "area": "public"
+  },
+  {
+   "date": "2026-08",
+   "title": "DHS proposes $103,265 fee on cap-subject H-1B petitions",
+   "detail": "Proposed Aug 25, 2026 with a 30-day comment period; would apply to cap-subject petitions generally, including change of status for F-1/OPT graduates already in the US. Not yet in force.",
+   "impact": "medium",
+   "area": "semi"
+  },
+  {
+   "date": "2026-07",
+   "title": "EEOC proposes rescinding EEO-1 and other EEO reports",
+   "detail": "Proposed July 23, 2026 to rescind EEO-1 to EEO-6 reporting and related recordkeeping (hearing Aug 11; comments closed Aug 24, 2026). The 2025 EEO-1 collection had not opened as of Sept 2026; state pay-data reporting (e.g., California) is unaffected.",
+   "impact": "medium",
+   "area": "public"
+  },
+  {
+   "date": "2026-07",
+   "title": "Courts block the $100K H-1B fee",
+   "detail": "D. Mass. vacated the fee policy on June 8, 2026 (California v. Mullin); the First Circuit denied the government's stay request on July 24, 2026, so the fee is not being collected (verify), in tension with the D.D.C.'s Dec 2025 decision upholding it.",
+   "impact": "medium",
+   "area": "semi"
+  },
+  {
+   "date": "2026-05",
+   "title": "SEC proposes filer-status overhaul with scaled executive pay disclosure",
+   "detail": "Rel. 33-11419 (May 19, 2026): only companies with a public float of $2B or more would stay large accelerated filers; others would drop CD&A, pay ratio, pay versus performance, say-on-pay votes and SOX 404(b) attestation. Comments closed July 20, 2026.",
+   "impact": "high",
+   "area": "public"
+  },
+  {
+   "date": "2026-05",
+   "title": "SEC settles Rule 21F-17 case against Foot Locker",
+   "detail": "May 22, 2026: $148,000 penalty for separation agreements requiring departing employees to waive SEC whistleblower awards, showing whistleblower-impediment enforcement continues under Chair Atkins.",
+   "impact": "medium",
+   "area": "public"
+  },
+  {
+   "date": "2026-05",
+   "title": "SEC proposes optional semiannual reporting (Form 10-S)",
+   "detail": "May 5, 2026 proposal would let companies replace 10-Qs with a semiannual report due 40/45 days after the half-year; affects trading windows, 10b5-1 cooling-off and grant calendars if elected.",
+   "impact": "medium",
+   "area": "public"
+  },
+  {
+   "date": "2026-03",
+   "title": "DOL proposes higher prevailing wages; weighted H-1B lottery takes effect",
+   "detail": "DOL's Mar 27, 2026 proposal would raise prevailing-wage levels for H-1B, H-1B1, E-3 and PERM (Level I from 17th to 34th percentile). DHS's wage-weighted H-1B selection rule took effect Feb 27, 2026 for the FY2027 cap season.",
+   "impact": "medium",
+   "area": "semi"
+  },
+  {
+   "date": "2026-02",
+   "title": "Applied Materials agrees to $252M BIS penalty",
+   "detail": "Feb 12, 2026 settlement for illegally exporting semiconductor manufacturing equipment, described by BIS as the second-highest penalty it has imposed.",
+   "impact": "medium",
+   "area": "semi"
+  },
+  {
+   "date": "2026-01",
+   "title": "Ex-Google engineer convicted of economic espionage over AI chip designs",
+   "detail": "Jan 29, 2026: Linwei Ding convicted on 7 counts of economic espionage and 7 of trade-secret theft (TPU/GPU/SmartNIC technology) after affiliating with PRC companies; a model for insider-risk and outside-activity controls.",
+   "impact": "medium",
+   "area": "semi"
+  },
+  {
+   "date": "2026-01",
+   "title": "SEC Chair launches Regulation S-K review",
+   "detail": "Jan 13, 2026 initiative to modernize non-financial disclosure (Item 402 first); comments ran to Apr 13, 2026. Followed the June 26, 2025 executive compensation roundtable.",
+   "impact": "medium",
+   "area": "public"
+  },
+  {
+   "date": "2025-12",
+   "title": "Executive order targets proxy advisors",
+   "detail": "'Protecting American Investors From Foreign-Owned and Politically-Motivated Proxy Advisors' (FR Dec 16, 2025) directs the SEC to review proxy-advisor rules, especially DEI/ESG-based recommendations.",
+   "impact": "low",
+   "area": "public"
+  },
+  {
+   "date": "2025-11",
+   "title": "BIS suspends the Affiliates (50%) Rule for one year",
+   "detail": "Effective Nov 10, 2025 through Nov 9, 2026 as part of the US-China trade deal; restrictions automatically return Nov 10, 2026 unless BIS acts.",
+   "impact": "high",
+   "area": "semi"
+  },
+  {
+   "date": "2025-10",
+   "title": "DOJ Data Security Program affirmative obligations begin",
+   "detail": "From Oct 6, 2025, due diligence, independent audit and reporting duties (Subparts J-L) apply to restricted transactions, including employment agreements giving covered persons access to bulk US sensitive personal data.",
+   "impact": "high",
+   "area": "semi"
+  },
+  {
+   "date": "2025-09",
+   "title": "BIS issues the Affiliates Rule",
+   "detail": "Sept 29, 2025: entities 50% or more owned by Entity List or MEU parties automatically became subject to the same restrictions (later suspended).",
+   "impact": "high",
+   "area": "semi"
+  },
+  {
+   "date": "2025-09",
+   "title": "$100,000 payment imposed on new H-1B petitions",
+   "detail": "Proclamation 10973 (Sept 19, 2025) required a $100,000 payment for new H-1B petitions for beneficiaries outside the US, prompting litigation.",
+   "impact": "high",
+   "area": "semi"
+  },
+  {
+   "date": "2025-08",
+   "title": "ISO 30414:2025 replaces the 2018 human capital reporting standard",
+   "detail": "ISO withdrew ISO 30414:2018 on Aug 25, 2025 and published a new edition; update metric dictionaries that cite it.",
+   "impact": "low",
+   "area": "framework"
+  },
+  {
+   "date": "2025-07",
+   "title": "Cadence pleads guilty over EDA exports to China military university",
+   "detail": "July 28, 2025: over $140M in combined DOJ/BIS penalties; China-subsidiary employees used aliases for Entity-Listed NUDT and withheld information from compliance.",
+   "impact": "high",
+   "area": "semi"
+  },
+  {
+   "date": "2025-06",
+   "title": "DOJ issues new FCPA enforcement guidelines",
+   "detail": "June 9, 2025 guidelines (after the Feb 10, 2025 executive order pausing FCPA enforcement) prioritize cartels/TCOs, harm to US competitors and national security; the statute itself is unchanged.",
+   "impact": "medium",
+   "area": "framework"
+  },
+  {
+   "date": "2025-05",
+   "title": "BIS rescinds AI Diffusion Rule and tightens chip guidance",
+   "detail": "May 13, 2025: AI Diffusion Rule rescinded; guidance warned that using Huawei Ascend chips risks violating EAR General Prohibition 10.",
+   "impact": "medium",
+   "area": "semi"
+  },
+  {
+   "date": "2025-04",
+   "title": "DOJ Data Security Program takes effect",
+   "detail": "28 CFR Part 202 effective Apr 8, 2025, restricting data transactions with China and other countries of concern; HR/payroll intra-group transfers exempt under s202.506.",
+   "impact": "high",
+   "area": "semi"
+  },
+  {
+   "date": "2025-01",
+   "title": "Outbound investment rule and foundry due-diligence rule take effect",
+   "detail": "Treasury's 31 CFR Part 850 took effect Jan 2, 2025; BIS's Jan 16, 2025 due-diligence rule for advanced computing ICs created approved/authorized IC designer status (deadline later extended to Dec 31, 2026).",
+   "impact": "medium",
+   "area": "semi"
+  },
+  {
+   "date": "2024-12",
+   "title": "Fifth Circuit vacates Nasdaq board diversity rules",
+   "detail": "Dec 11, 2024 en banc decision vacated SEC approval of Nasdaq Rules 5605(f)/5606; the diversity matrix and comply-or-explain are no longer required.",
+   "impact": "medium",
+   "area": "public"
+  },
+  {
+   "date": "2024-09",
+   "title": "SEC charges seven public companies under Rule 21F-17",
+   "detail": "Sept 9, 2024: over $3M in combined penalties for employment and separation agreements that required award waivers or prior notice before contacting regulators.",
+   "impact": "high",
+   "area": "public"
+  }
+ ],
+ "watchlist": [
+  {
+   "title": "Final SEC filer-status and executive pay disclosure rule",
+   "detail": "Would scale pay disclosure and remove 404(b) for companies below a $2B float; next phase may address perquisites/security and pay versus performance for large filers.",
+   "expected": "Possible adoption late 2026, for the 2027 proxy season (verify)"
+  },
+  {
+   "title": "Semiannual reporting final rule",
+   "detail": "If adopted and elected, align blackout windows, 10b5-1 cooling-off, ESPP and grant calendars to the new cadence.",
+   "expected": "Late 2026-2027 (verify)"
+  },
+  {
+   "title": "Rule 14a-8 rescission",
+   "detail": "Comment period runs about 60 days after Sept 21, 2026 FR publication; shareholder proposals on pay and human capital would depend on state law and bylaws.",
+   "expected": "Comments about Nov 20, 2026; final rule 2027 at earliest"
+  },
+  {
+   "title": "BIS Affiliates Rule reimposition",
+   "detail": "50% ownership rule returns automatically unless BIS extends the suspension; HR vendor, contractor and research-partner screening needs ownership research.",
+   "expected": "Nov 10, 2026"
+  },
+  {
+   "title": "H-1B fee litigation and rulemaking",
+   "detail": "First Circuit appeal and D.C. Circuit appeal on the $100K fee; final $103,265 cap-petition fee rule; DOL prevailing-wage final rule; layoffs executive order implementation.",
+   "expected": "Q4 2026 through FY2028 cap season (Mar 2027)"
+  },
+  {
+   "title": "IRC 162(m) expansion to five additional employees",
+   "detail": "Applies to tax years beginning after Dec 31, 2026; final regulations from the Jan 2025 proposal still pending.",
+   "expected": "Jan 1, 2027 for calendar-year companies"
+  },
+  {
+   "title": "EEOC final action on rescinding EEO-1",
+   "detail": "Would end federal EEO-1 filing and related record preservation; state pay-data reporting continues.",
+   "expected": "Late 2026-2027 (verify)"
+  },
+  {
+   "title": "Outbound investment codification and new Treasury rules",
+   "detail": "FY2026 NDAA provisions (COINS Act) may widen covered technologies and countries; check effect on employee and executive personal investments.",
+   "expected": "2026-2027 (verify)"
+  },
+  {
+   "title": "Proxy advisor and investor policy shifts",
+   "detail": "SEC action under the Dec 2025 proxy-advisor executive order; ISS and Glass Lewis 2027 policies (Glass Lewis moving away from a single benchmark policy - verify).",
+   "expected": "Policy releases typically Nov-Dec 2026"
+  },
+  {
+   "title": "DOJ Data Security Program enforcement and FAQs",
+   "detail": "First enforcement actions, any change to the countries-of-concern list, and guidance on employment agreements and corporate-group exemption.",
+   "expected": "Ongoing"
+  }
+ ],
+ "calendar": [
+  {
+   "month": 1,
+   "title": "Year-end equity and tax forms; insider lists",
+   "detail": "Forms 3921 (ISO exercises) and 3922 (ESPP transfers) and W-2s to employees by Jan 31; refresh 409A specified-employee list (common Dec 31 identification, Apr 1 effective); send D&O questionnaires; from 2027 identify 162(m) covered employees including the top five others."
+  },
+  {
+   "month": 2,
+   "title": "Form 5 and year-end compensation decisions",
+   "detail": "Form 5 due within 45 days after fiscal year-end (about Feb 14); OSHA 300A posted Feb 1-Apr 30; compensation committee certifies prior-year bonus/PSU results and approves annual grants on the fixed calendar (mind 402(x) windows)."
+  },
+  {
+   "month": 3,
+   "title": "Form 10-K filing",
+   "detail": "Due 60/75/90 days after year-end (about Mar 1, Mar 16 or Mar 31 depending on filer status): Item 101(c) human capital, Exhibit 19 insider trading policy, Exhibit 97 clawback policy and cover checkboxes, Item 408(a) Q4 plan disclosure, ICFR report."
+  },
+  {
+   "month": 3,
+   "title": "H-1B cap registration",
+   "detail": "Registration period each March under wage-weighted selection (in effect from the FY2027 season); confirm fee status and wage levels before registering."
+  },
+  {
+   "month": 4,
+   "title": "Proxy statement",
+   "detail": "DEF 14A within 120 days of year-end (about Apr 30) if Part III is incorporated by reference: CD&A, SCT, pay ratio, pay versus performance, 402(x), say-on-pay, equity plan proposals, related-person transactions, delinquent Section 16 reports."
+  },
+  {
+   "month": 5,
+   "title": "Annual meeting and 8-K Item 5.07",
+   "detail": "Vote results within four business days; Q1 10-Q (40 or 45 days after quarter-end) with Item 408(a); California pay data report due the second Wednesday of May; Canada forced-labour report due May 31 if the entity is covered."
+  },
+  {
+   "month": 6,
+   "title": "Quarter-end blackout and mid-year equity review",
+   "detail": "Quarterly blackout typically starts about two weeks before quarter-end (also Mar, Sep, Dec); mid-year review of burn rate, share reserve and peer group with the compensation consultant (typical timing)."
+  },
+  {
+   "month": 7,
+   "title": "Benefit plan filings and proxy-advisor surveys",
+   "detail": "Form 5500 due July 31 for calendar-year plans (extension to Oct 15); ISS and Glass Lewis policy surveys typically run in summer."
+  },
+  {
+   "month": 8,
+   "title": "Q2 10-Q and trading window",
+   "detail": "Q2 10-Q with Item 408(a) disclosure; open window for pre-cleared trades and new 10b5-1 plan adoptions."
+  },
+  {
+   "month": 9,
+   "title": "Policy and template review",
+   "detail": "Annual review of insider trading, clawback, code of conduct and Rule 21F-17 carve-outs in employment templates; interim SOX testing of HR controls."
+  },
+  {
+   "month": 10,
+   "title": "H-1B start dates, DSP audit and open enrollment",
+   "detail": "Cap-subject H-1B employment can start Oct 1; annual Data Security Program audit and compliance certification (obligations since Oct 6, 2025); open enrollment; extended Form 5500 due Oct 15."
+  },
+  {
+   "month": 11,
+   "title": "Q3 10-Q and next-year pay design",
+   "detail": "Q3 10-Q with Item 408(a); ISS and Glass Lewis publish next-year policies (typical); compensation committee sets next-year plan design and metrics."
+  },
+  {
+   "month": 12,
+   "title": "Year-end compliance close-out",
+   "detail": "409A deferral elections by Dec 31; year-end SOX controls for bonus accruals and equity true-ups; 280G and 162(m) modeling; annual export/TCP training and insider list refresh."
+  },
+  {
+   "month": 12,
+   "title": "Export and sanctions re-screening",
+   "detail": "Re-screen HR vendors, contractors and research partners against Entity List, SDN, UFLPA and DSP covered-person lists; review license-conditioned employees and TCP access."
+  }
+ ],
+ "sources": [
+  {
+   "title": "SEC press release 2026-42 - Optional semiannual reporting proposal (May 5, 2026)",
+   "url": "https://www.sec.gov/newsroom/press-releases/2026-42-sec-proposes-amendments-permit-optional-semiannual-reporting-public-companies"
+  },
+  {
+   "title": "Federal Register - SEC Simplification of Filer Status proposal (May 21, 2026)",
+   "url": "https://www.federalregister.gov/documents/2026/05/21/2026-10222/enhancement-of-emerging-growth-company-accommodations-and-simplification-of-filer-status-for"
+  },
+  {
+   "title": "Morrison Foerster - SEC proposal would significantly reduce executive pay disclosure",
+   "url": "https://www.mofo.com/resources/insights/260622-sec-proposal-would-significantly-reduce-executive-pay-disclosure"
+  },
+  {
+   "title": "Sidley - SEC Chair Atkins announces initiative to reform Regulation S-K (Jan 2026)",
+   "url": "https://www.sidley.com/en/insights/newsupdates/2026/01/sec-chair-atkins-announces-initiative-to-reform-regulation-s-k"
+  },
+  {
+   "title": "SEC press release 2026-89 - Proposed rescission of Rule 14a-8",
+   "url": "https://www.sec.gov/newsroom/press-releases/2026-89-sec-proposes-rescission-shareholder-proposal-rule-reforms-proxy-solicitation-process"
+  },
+  {
+   "title": "SEC press release 2025-73 - Executive compensation roundtable (June 26, 2025)",
+   "url": "https://www.sec.gov/newsroom/press-releases/2025-73"
+  },
+  {
+   "title": "SEC press release 2024-118 - Seven public companies charged under Rule 21F-17",
+   "url": "https://www.sec.gov/newsroom/press-releases/2024-118"
+  },
+  {
+   "title": "SEC - Whistleblower protections and enforcement actions",
+   "url": "https://www.sec.gov/enforcement-litigation/whistleblower-program/whistleblower-protections"
+  },
+  {
+   "title": "Troutman Pepper Locke - SEC Foot Locker order (May 2026)",
+   "url": "https://www.troutman.com/insights/sec-foot-locker-order-underscores-continued-focus-on-whistleblower-protections/"
+  },
+  {
+   "title": "SEC press release 2022-192 - Clawback rules",
+   "url": "https://www.sec.gov/newsroom/press-releases/2022-192"
+  },
+  {
+   "title": "SEC press release 2022-222 - Rule 10b5-1 and insider trading disclosure",
+   "url": "https://www.sec.gov/newsroom/press-releases/2022-222"
+  },
+  {
+   "title": "SEC press release 2022-149 - Pay versus performance",
+   "url": "https://www.sec.gov/newsroom/press-releases/2022-149"
+  },
+  {
+   "title": "Nasdaq Rulebook - 5600 Series corporate governance",
+   "url": "https://listingcenter.nasdaq.com/rulebook/nasdaq/rules/nasdaq-5600-series"
+  },
+  {
+   "title": "Harvard Law School Forum - Fifth Circuit vacates Nasdaq board diversity rules",
+   "url": "https://corpgov.law.harvard.edu/2025/01/12/fifth-circuit-vacates-secs-approval-of-nasdaq-board-diversity-rules/"
+  },
+  {
+   "title": "Harvard Law School Forum - Preparing for the 2026 annual reporting and proxy season",
+   "url": "https://corpgov.law.harvard.edu/2026/02/17/preparing-for-the-2026-annual-reporting-and-proxy-season/"
+  },
+  {
+   "title": "Gibson Dunn - Five years of evolving Form 10-K human capital disclosures",
+   "url": "https://www.gibsondunn.com/five-years-of-evolving-form-10-k-human-capital-disclosures/"
+  },
+  {
+   "title": "SEC - EDGAR Next",
+   "url": "https://www.sec.gov/submit-filings/improving-edgar/edgar-next-improving-filer-access-account-management"
+  },
+  {
+   "title": "Federal Register - Proposed 162(m) regulations (Jan 16, 2025)",
+   "url": "https://www.federalregister.gov/documents/2025/01/16/2025-00728/certain-employee-remuneration-in-excess-of-1000000-under-internal-revenue-code-section-162m"
+  },
+  {
+   "title": "Federal Register - EEOC proposed rescission of EEO reports (July 23, 2026)",
+   "url": "https://www.federalregister.gov/documents/2026/07/23/2026-14937/removal-of-reporting-requirements"
+  },
+  {
+   "title": "Federal Register - Executive order on proxy advisors (Dec 16, 2025)",
+   "url": "https://www.federalregister.gov/documents/2025/12/16/2025-23093/protecting-american-investors-from-foreign-owned-and-politically-motivated-proxy-advisors"
+  },
+  {
+   "title": "eCFR - 15 CFR 734.13 (deemed exports)",
+   "url": "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-734/section-734.13"
+  },
+  {
+   "title": "eCFR - 15 CFR 744.6 (U.S.-person activities)",
+   "url": "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-744/section-744.6"
+  },
+  {
+   "title": "DOJ IER - Avoiding discrimination when complying with export control laws",
+   "url": "https://www.justice.gov/media/1287536/dl?inline"
+  },
+  {
+   "title": "Federal Register - One-year suspension of the Affiliates Rule (Nov 12, 2025)",
+   "url": "https://www.federalregister.gov/documents/2025/11/12/2025-19846/one-year-suspension-of-expansion-of-end-user-controls-for-affiliates-of-certain-listed-entities"
+  },
+  {
+   "title": "BIS - News and updates (Affiliates Rule, Cadence, Applied Materials, H200 policy)",
+   "url": "https://www.bis.gov/news-updates"
+  },
+  {
+   "title": "Federal Register - Revision to license review policy for advanced computing commodities (Jan 15, 2026)",
+   "url": "https://www.federalregister.gov/documents/2026/01/15/2026-00789/revision-to-license-review-policy-for-advanced-computing-commodities"
+  },
+  {
+   "title": "Federal Register - Extension of authorized IC designer status (Apr 9, 2026)",
+   "url": "https://www.federalregister.gov/documents/2026/04/09/2026-06851/extension-of-authorized-integrated-circuit-ic-designer-status-and-application-deadline-to-become-an"
+  },
+  {
+   "title": "DOJ - Cadence Design Systems guilty plea (July 28, 2025)",
+   "url": "https://www.justice.gov/opa/pr/cadence-design-systems-agrees-plead-guilty-and-pay-over-140-million-unlawfully-exporting"
+  },
+  {
+   "title": "eCFR - 28 CFR Part 202 (Data Security Program)",
+   "url": "https://www.ecfr.gov/current/title-28/chapter-I/part-202"
+  },
+  {
+   "title": "DOJ NSD - Data Security Program compliance guide",
+   "url": "https://www.justice.gov/opa/media/1396356/dl"
+  },
+  {
+   "title": "U.S. Treasury - Outbound Investment Security Program",
+   "url": "https://home.treasury.gov/policy-issues/international/outbound-investment-program"
+  },
+  {
+   "title": "DOJ - Linwei Ding convicted of economic espionage (Jan 2026)",
+   "url": "https://www.justice.gov/opa/pr/former-google-engineer-found-guilty-economic-espionage-and-theft-confidential-ai-technology"
+  },
+  {
+   "title": "Federal Register - DHS proposed H-1B petition fee (Aug 25, 2026)",
+   "url": "https://www.federalregister.gov/documents/2026/08/25/2026-17324/fee-for-certain-h-1b-petitions"
+  },
+  {
+   "title": "WR Immigration - New H-1B executive order and proclamation fee extension (Sept 2026)",
+   "url": "https://wolfsdorf.com/new-h-1b-executive-order-and-proclamation-fee-extension/"
+  },
+  {
+   "title": "Federal Register - H-1B weighted selection final rule (Dec 29, 2025)",
+   "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23853/weighted-selection-process-for-registrants-and-petitioners-seeking-to-file-cap-subject-h-1b"
+  },
+  {
+   "title": "Responsible Business Alliance - Code of Conduct",
+   "url": "https://www.responsiblebusiness.org/code-of-conduct/"
+  },
+  {
+   "title": "OECD - Guidelines for Multinational Enterprises on Responsible Business Conduct (2023)",
+   "url": "https://www.oecd.org/en/publications/oecd-guidelines-for-multinational-enterprises-on-responsible-business-conduct_81f92357-en.html"
+  },
+  {
+   "title": "ILO - Declaration on Fundamental Principles and Rights at Work",
+   "url": "https://www.ilo.org/ilo-declaration-fundamental-principles-and-rights-work"
+  },
+  {
+   "title": "DOJ - FCPA enforcement guidelines memo (June 9, 2025)",
+   "url": "https://www.justice.gov/dag/media/1403031/dl"
+  },
+  {
+   "title": "DOJ - Corporate Whistleblower Awards Pilot Program",
+   "url": "https://www.justice.gov/criminal/criminal-division-corporate-whistleblower-awards-pilot-program"
+  }
+ ]
+}

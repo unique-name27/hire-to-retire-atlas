@@ -1,0 +1,3194 @@
+{
+ "processes": [
+  {
+   "id": "OF-01",
+   "name": "Voluntary resignation & offboarding",
+   "stage": "Offboard",
+   "depth": "deep",
+   "summary": "Turns a resignation into a clean, compliant exit: confirm the resignation, decide on a counteroffer, fix the notice, garden leave and last-day terms, protect IP and controlled technology, then settle pay, equity and benefits by each jurisdiction's deadline and capture exit insight. Covers every voluntary exit worldwide (retirement is OF-08). Good looks like a confirmed last day within 1 business day of notice, final pay on time in 100% of cases, access removed by the end of the last day (at notice for high-risk leavers), and a signed return-of-property certification on file.",
+   "owner": "HRBP (process), People Ops (execution), Security with Legal (trade-secret triage)",
+   "trigger": "Employee gives written or verbal notice of resignation to the manager or HR, or submits it through the Darwinbox resignation workflow.",
+   "outputs": [
+    "Resignation acknowledgment letter confirming the last working day, notice/garden-leave terms and pay-through date",
+    "Darwinbox termination transaction with employee-stated and manager-view reason codes, regretted flag and rehire code",
+    "Completed T-OFFBOARD-CHECKLIST: knowledge transfer, access-removal timestamps, asset return and signed return/deletion certification",
+    "Trade-secret risk triage record (and ER-10 case file where high risk)",
+    "Final pay statement plus country exit documents (e.g., CA 1089 notice, ROE, relieving letter, Taiwan service certificate, 离职证明)",
+    "Exit survey response and exit interview notes (OF-07)"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "Equity platform",
+    "Benefits admin platform",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "E-signature",
+    "Survey platform",
+    "Immigration case system",
+    "Document management"
+   ],
+   "sla": "Resignation logged and last day confirmed within 1 business day; access off by end of last day; final pay by the work-location deadline (e.g., CA last day with 72h+ notice, India 2 working days, ON later of 7 days or next payday).",
+   "lanes": [
+    "Employee",
+    "Manager",
+    "HRBP",
+    "Security",
+    "People Ops",
+    "IT",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Submit written resignation",
+     "detail": "Employee submits the resignation through the Darwinbox workflow or in writing to the manager, stating the intended last day. The HRBP confirms verbal resignations in writing within 1 business day. In Canada, allow a short cooling-off conversation first, because a heat-of-the-moment resignation may not bind.",
+     "sla": "Day 0",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Notify HRBP; flag regretted status",
+     "detail": "Manager tells the HRBP the same day and classifies the exit as regretted or non-regretted using the defined criteria (calibrated rating, critical-skill list, succession gap). The manager also records the destination if known (direct competitor, PRC-linked firm, startup, outside the industry). Managers do not promise counteroffers or early release before HRBP guidance.",
+     "sla": "Same day",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "HRBP",
+     "type": "decision",
+     "label": "Counteroffer warranted?",
+     "detail": "HRBP and Dept Head decide within 2 business days, only for regretted, critical-skill employees, applying the CO-05 guardrails (market data, internal equity, pay-equity check). Skip the counter when the stated reason is the manager, the role or a relocation; money rarely fixes those.",
+     "sla": "2 bd",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Yes"
+      },
+      {
+       "to": "s6",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Present approved counteroffer",
+     "detail": "Manager and HRBP present the approved offer in writing (base adjustment and/or retention RSUs on a new vesting schedule) with a short decision deadline, typically 48 hours. For California employees, no stay-or-pay repayment terms (AB 692). Record the offer in the Comp planning tool.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Employee",
+     "type": "decision",
+     "label": "Accepts counteroffer?",
+     "detail": "If the employee accepts, they withdraw the resignation in writing and the HRBP cancels the transaction. In India, withdrawing a resignation before its effective date is common, so accepting a withdrawal is at company discretion under POL-52.",
+     "branches": [
+      {
+       "to": "s16",
+       "label": "Accepts, withdraws"
+      },
+      {
+       "to": "s6",
+       "label": "Declines"
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Confirm last day, notice, garden leave",
+     "detail": "HRBP sends an e-signed acknowledgment fixing the last working day and whether notice is worked, spent on garden leave or waived, with pay through that date. Early release is not neutral. In California it becomes a discharge (immediate final pay) unless pay continues through the notice period. In Ontario, waiving notice can amount to dismissal, so pay out at least the ESA portion. In India, recover a notice buyout only as the contract allows.",
+     "sla": "1 bd",
+     "control": "Darwinbox will not submit the transaction until the last day and the jurisdiction's final-pay deadline are recorded.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Security",
+     "type": "decision",
+     "label": "High trade-secret or export risk?",
+     "detail": "Security and Legal triage every engineering, product and sales exit on three factors. (1) Destination. (2) Access: RTL and netlists, PDK and foundry data, tapeout schedules, customer roadmaps, TCP-controlled technology. (3) A 30-90 day DLP look-back for bulk downloads, personal cloud uploads or USB use. High-risk exits go to ER-10; the rest keep normal last-day access removal.",
+     "sla": "2 bd",
+     "branches": [
+      {
+       "to": "s8",
+       "label": "High risk"
+      },
+      {
+       "to": "s9",
+       "label": "Standard"
+      }
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Security",
+     "type": "task",
+     "label": "Run ER-10 protocol; restrict access",
+     "detail": "Cut or restrict access at notice and move the employee to garden leave where the contract allows. Preserve and forensically image devices, extend the DLP review, and have Legal send a confidentiality reminder letter with DTSA and Rule 21F-17 carve-outs. Trade Compliance updates license provisos and the technology control plan register for foreign-national licence holders.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Execute knowledge-transfer plan",
+     "detail": "Manager and employee complete the knowledge-transfer section of T-OFFBOARD-CHECKLIST. Design files and scripts go into managed repositories. In-flight blocks and tapeout tasks are documented. EDA project permissions and customer/FAE relationships are reassigned, and open approvals are delegated. All transfer happens on company systems; nothing is copied to personal devices.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Enter termination; trigger tasks",
+     "detail": "People Ops submits the Darwinbox termination with reason codes, the regretted flag and the rehire code. This auto-creates IT, Facilities, Payroll, Benefits and Stock Admin tasks. Visa holders are flagged to Immigration the same day. Section 16 officers and NEOs are flagged to Legal for Form 8-K Item 5.02, due 4 business days from notice.",
+     "sla": "1 bd",
+     "control": "Visa-holder and Section 16 flags auto-route; Immigration and Legal acknowledge within 1 business day.",
+     "next": [
+      "s11"
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Run exit survey and interview",
+     "detail": "The T-EXIT-SURVEY invite goes out after notice with the country privacy notice. The HRBP, never the manager, holds the T-EXIT-INTERVIEW in the final week. Allegations of harassment, discrimination, retaliation, safety, fraud or export issues go to Employee Relations within 1 business day (OF-07).",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Send equity and benefits statements",
+     "detail": "People Ops sends one exit statement built from Stock Admin and Benefits inputs. Equity: unvested awards forfeit on the termination date per plan; each vested option's exercise deadline is stated (ISOs lose ISO status after 3 months); ESPP withdrawal and refund follow the plan; the insider trading policy still applies while the person holds MNPI. Benefits: end date, COBRA/Cal-COBRA or conversion rights, and the 401(k) 402(f) notice. China participants are removed from the SAFE Circular 7 registration.",
+     "sla": "Day -5",
+     "next": [
+      "s13"
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "IT",
+     "type": "task",
+     "label": "Remove access; recover assets",
+     "detail": "At the scheduled time on the last day (earlier if s8 applied), IT disables SSO, VPN, email, Git/EDA, cloud and lab-badge access. IT collects the laptop, tokens, dev boards and lab notebooks and gets the signed return-of-property and data-deletion certification. Remote leavers get a prepaid return kit (CA LC 2802). Final pay is never held back for unreturned items (CA LC 221).",
+     "sla": "Last day",
+     "control": "Timestamped deprovisioning ticket; weekly HRIS-to-identity reconciliation.",
+     "next": [
+      "s14"
+     ]
+    },
+    {
+     "id": "s14",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Pay final wages by local deadline",
+     "detail": "Payroll pays final wages, any required PTO or leave payout and earned commissions by the deadline for the work location: CA on the last day with 72h+ notice (otherwise within 72 hours); ON the later of 7 days or the next payday; BC within 6 days; India F&F within 2 working days; Taiwan immediately; China at termination. A second reviewer approves before release, and deductions are taken only where lawful.",
+     "control": "Maker-checker approval of final pay; deadline tracked on the off-cycle ticket.",
+     "next": [
+      "s15"
+     ]
+    },
+    {
+     "id": "s15",
+     "lane": "People Ops",
+     "type": "end",
+     "label": "Issue exit documents; close file",
+     "detail": "People Ops issues the country documents and files them in Document management under the retention schedule: US state separation or UI notices; CA 1089 notice and DE 2320; Canada ROE; India relieving/experience letter, Form 130 and PF exit; Taiwan service certificate on request plus insurance withdrawal; China 离职证明 plus social insurance transfer within 15 days."
+    },
+    {
+     "id": "s16",
+     "lane": "HRBP",
+     "type": "end",
+     "label": "Retained; withdrawal documented",
+     "detail": "HRBP records the withdrawal, cancels offboarding tasks and adds the employee to the regretted-risk watchlist for a stay conversation within 90 days (EN-03)."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Resignation intake and regretted classification",
+     "R": "Manager",
+     "A": "HRBP",
+     "C": "People Ops",
+     "I": "Dept Head"
+    },
+    {
+     "activity": "Counteroffer decision",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "Total Rewards",
+     "I": "Manager"
+    },
+    {
+     "activity": "Notice, garden leave and last-day terms",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "Legal",
+     "I": "People Ops; Payroll"
+    },
+    {
+     "activity": "Trade-secret and export risk triage (ER-10 escalation)",
+     "R": "Security",
+     "A": "Legal",
+     "C": "HRBP; Trade Compliance",
+     "I": "Manager"
+    },
+    {
+     "activity": "Knowledge transfer",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "IT"
+    },
+    {
+     "activity": "HRIS termination transaction and task orchestration",
+     "R": "People Ops",
+     "A": "HRBP",
+     "C": "Immigration; Legal",
+     "I": "Payroll; Stock Admin; Benefits"
+    },
+    {
+     "activity": "Access removal and asset recovery",
+     "R": "IT",
+     "A": "Security",
+     "C": "Facilities; People Ops",
+     "I": "Manager"
+    },
+    {
+     "activity": "Final pay and statutory exit documents",
+     "R": "Payroll",
+     "A": "People Ops",
+     "C": "HRBP",
+     "I": "Employee"
+    },
+    {
+     "activity": "Equity and benefits exit statements",
+     "R": "Stock Admin",
+     "A": "Total Rewards",
+     "C": "Benefits; Payroll",
+     "I": "Employee"
+    },
+    {
+     "activity": "Exit survey and interview",
+     "R": "HRBP",
+     "A": "HR Analytics",
+     "C": "Employee Relations",
+     "I": "Manager"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "The final-pay deadline is calculated from the work location and exit type when the termination is entered; Darwinbox blocks submission without a last day and notice date.",
+     "type": "preventive",
+     "evidence": "Darwinbox termination record with deadline field; off-cycle payroll ticket"
+    },
+    {
+     "id": "C2",
+     "control": "Every leaver's access is disabled by the end of the last day (at notice for high-risk leavers). A weekly reconciliation compares HRIS terminations with active identity, VPN and EDA accounts.",
+     "type": "detective",
+     "evidence": "ITSM deprovisioning ticket timestamps; weekly HRIS-to-IdP reconciliation (SOX ITGC)"
+    },
+    {
+     "id": "C3",
+     "control": "Trade-secret triage is completed before the last day for every engineering, product, sales and TCP-flagged exit.",
+     "type": "preventive",
+     "evidence": "Triage form in Case management with DLP review summary"
+    },
+    {
+     "id": "C4",
+     "control": "A second reviewer approves final pay, including PTO/leave payout and deductions, before release.",
+     "type": "preventive",
+     "evidence": "Payroll maker-checker approval log"
+    },
+    {
+     "id": "C5",
+     "control": "Equity forfeitures in the equity platform match the HRIS termination dates (stock-based compensation, SOX).",
+     "type": "detective",
+     "evidence": "Monthly HRIS-to-equity-platform termination reconciliation"
+    },
+    {
+     "id": "C6",
+     "control": "A signed return-of-property and confidentiality certification with DTSA notice and agency-reporting carve-outs is on file.",
+     "type": "preventive",
+     "evidence": "E-signed certification in Document management"
+    },
+    {
+     "id": "C7",
+     "control": "Visa-holder exits reach Immigration within 1 business day, so the LCA withdrawal, USCIS notice and return-fare offer (or the STEM OPT DSO report within 5 business days) happen on time.",
+     "type": "preventive",
+     "evidence": "Immigration case system entry with dates"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Final pay on time",
+     "target": "100% by the statutory deadline",
+     "why": "CA waiting-time penalties reach 30 days' wages; India wage-authority claims and Taiwan fines follow late payment."
+    },
+    {
+     "name": "Access removed by end of last day",
+     "target": "100% (high-risk leavers: at notice)",
+     "why": "Main control against trade-secret exfiltration and SOX ITGC findings."
+    },
+    {
+     "name": "Regretted attrition rate (annualized)",
+     "target": "At or below the plan target by function, e.g., <=6% in design engineering",
+     "why": "Tells leadership whether critical chip-design talent is leaving."
+    },
+    {
+     "name": "12-month retention of countered employees",
+     "target": ">=60% still employed 12 months after accepting",
+     "why": "Shows whether counteroffers buy real retention or only delay the exit."
+    },
+    {
+     "name": "Asset recovery within 10 business days",
+     "target": ">=98% of devices",
+     "why": "Unrecovered devices carry design data and controlled technology."
+    },
+    {
+     "name": "Exit survey response rate (voluntary leavers)",
+     "target": ">=50%",
+     "why": "Without enough responses, attrition analysis and actions have no basis."
+    }
+   ],
+   "considerations": [
+    "Don't reflexively accept a resignation 'effective immediately'. In California early release becomes a discharge with immediate final pay, and in Ontario waiving notice can be a dismissal. The default is to honour the notice or pay through it.",
+    "Counteroffer discipline: counter only for regretted, critical-skill employees, and don't match competitor equity dollar for dollar. Bengaluru VLSI and verification talent often receive counteroffers and notice buyouts from new employers, so decide fast and in writing.",
+    "Garden leave works in Canada (by contract or consent) and India (full pay during notice). In California it is lawful during notice but cannot be followed by any post-employment restraint. In Taiwan the employee stays employed and keeps accruing leave. China has no statutory garden leave, but the parties can agree an earlier release date, paid to that date.",
+    "Triage signals that should trigger ER-10: a direct competitor or PRC-linked destination; tapeout, RTL, PDK or customer-roadmap access; a DLP spike or personal-cloud uploads in the 30-90 days before notice; unusual after-hours repository cloning. For Taiwan leavers, add National Security Act core key technology reminders and any continuing mainland-travel approval duty for government-project staff.",
+    "Departing insiders stay bound by the insider trading policy while they hold MNPI. A Section 16 officer's resignation triggers an 8-K Item 5.02 within 4 business days of notice and final Form 4 activity, so route it to Legal the day notice is given.",
+    "The final-pay clock follows the work location, not HQ. A remote engineer in Colorado or Massachusetts has state-specific deadlines, and an India F&F that waits for clearance breaches the 2-working-day rule. Run clearance in parallel.",
+    "Never hold a relieving letter (India) or final pay (California LC 221) hostage to asset return or notice service. Pursue unreturned items through ER-10 and Legal.",
+    "Record both the employee-stated reason and the manager's view in separate fields. Overwriting one with the other corrupts regretted-attrition analytics and the 10-K human capital narrative.",
+    "Start knowledge transfer on day 1 of notice. Reassigning EDA licenses, foundry portal access and customer NDAs takes longer than document handover."
+   ],
+   "variations": [
+    {
+     "when": "Leaver is going to a direct competitor or PRC-linked company",
+     "how": "Garden leave where contractually available, access cut at notice, ER-10 forensic review and a Legal reminder letter. Taiwan leavers also get a National Security Act and Cross-Strait Act reminder. Non-competes are never threatened where void (CA, ON below C-suite, India)."
+    },
+    {
+     "when": "Section 16 officer or NEO resigns",
+     "how": "Legal files Form 8-K Item 5.02 within 4 business days, informs the Comp Committee, confirms clawback-policy status and handles Form 4 reporting. Communications are sequenced with the filing."
+    },
+    {
+     "when": "Visa holder (H-1B, L-1, O-1, STEM OPT)",
+     "how": "Immigration is notified the same day. For H-1B, the LCA is withdrawn, USCIS is notified and return transportation is offered, and the employee is told about the 60-day grace period. For STEM OPT, the DSO is notified within 5 business days and the final I-983 evaluation is submitted."
+    },
+    {
+     "when": "Resignation while on leave or with an open complaint",
+     "how": "HRBP confirms voluntariness in writing and ER reviews the file. Constructive-dismissal risk is checked: China LCL Art. 38 and Taiwan LSA Art. 14 allow immediate resignation with severance for employer breaches."
+    },
+    {
+     "when": "Employee withdraws the resignation before the effective date",
+     "how": "Accepted at company discretion under POL-52 (common in India). If the role is already backfilled, decline in writing; if accepted, reverse the Darwinbox transaction and cancel offboarding tasks."
+    },
+    {
+     "when": "Fully remote employee",
+     "how": "Prepaid device return kit, video exit interview, and final pay under the work-location rules; California reimbursement duties (LC 2802) cover shipping."
+    },
+    {
+     "when": "Resignation during probation",
+     "how": "China requires 3 days' notice in probation. India applies the contractual probation notice (often 7-30 days). Taiwan still applies the Art. 16 scale once tenure reaches 3 months."
+    }
+   ],
+   "countries": {
+    "us": "No statutory notice either way; two weeks is customary, and accepting a resignation early can start the state final-pay clock and, in some states (e.g., NY, IL), affect UI eligibility. Pay accrued vacation where state law requires it (CA, CO, IL, MA, NE), send the COBRA qualifying event to the administrator within 30 days plus the 402(f) rollover notice, and issue state separation notices where required (e.g., NY IA 12.3, NJ BC-10). For H-1B leavers, withdraw the LCA, notify USCIS and offer return transportation; for STEM OPT, notify the DSO within 5 business days. Non-competes are void in CA, MN, ND, OK and WY (WA from Jun 30, 2027), and enforcing an MA non-compete requires garden leave (50% of base) or other agreed consideration.",
+    "us-ca": "Final pay is due on the last day if the employee gave 72+ hours' notice, otherwise within 72 hours (mailed on request). If the company moves the date up, pay through the notice period or treat it as a discharge and pay immediately (LC 202; waiting-time penalty up to 30 days' wages under LC 203). Include accrued vacation/PTO (LC 227.3), meal/rest premiums, earned commissions and an itemized wage statement, and hand over the UI Code 1089 notice, DE 2320, HIPP and COBRA/Cal-COBRA notices. No non-compete or non-solicit may follow (B&P 16600/16600.5), no quit fees or repayment demands under agreements from 1 Jan 2026 (AB 692), and no withholding of pay for unreturned property (LC 221).",
+    "ca": "Neither the ON nor the BC ESA requires resignation notice; contracts usually set 2-4 weeks, and a resignation should be written and unequivocal. In ON, waiving the notice period early can amount to dismissal, so pay out at least the ESA-required portion; garden leave needs a contract term or the employee's consent. Final pay is due in ON by the later of 7 days or the next regular payday and in BC within 6 days after quitting, including vacation pay. File the electronic ROE within 5 calendar days after the end of the pay period with the interruption of earnings, using the correct reason code.",
+    "in": "The employee resigns under the contractual notice period (usually 60-90 days for engineers); the company may grant early release, accept a buyout (recovered only as the contract allows, within Code on Wages s.18 limits; no GST on notice-pay recovery) or use garden leave, but may not refuse the resignation indefinitely or withhold the relieving letter to coerce. F&F (salary, leave encashment and other 'wages') is due within 2 working days of the last working day (CoW s.17(2)), with clearance running in parallel, and gratuity (5+ years' service) within 30 days. Issue relieving and experience letters (Karnataka service certificate within 7 days of request), return original documents, and support Form 130 and PF transfer; post-exit non-competes are void (Contract Act s.27).",
+    "tw": "Employees on indefinite contracts resign with LSA Art. 16 notice (10/20/30 days by tenure); no employer acceptance is needed, and longer contractual notice periods or resignation penalties are generally unenforceable. Wages, overtime and unused annual leave are settled immediately on termination (Enforcement Rules Art. 9); withdraw Labor, EI, occupational accident insurance and NHI on the last day and report the pension stop within 7 days. Issue a service certificate on request with no unrequested adverse remarks (LSA Art. 19). A post-exit non-compete binds only if it meets Art. 9-1 (max 2 years, compensation of at least 50% of the average monthly wage); remind engineers of Trade Secrets Act and National Security Act duties.",
+    "cn": "The employee gives 30 days' written notice (3 days in probation) and the resignation takes effect without employer acceptance; the company can agree an earlier release date and pay to that date, but notice buyouts are not a statutory concept. Final wages, including untaken annual leave at 300%, are due in full at termination; there is no severance on ordinary resignation (LCL Art. 38 employer-breach resignations excepted). Issue the 离职证明 at termination, complete the personnel file and social insurance/housing fund transfer within 15 days (LCL Art. 50), and decide in writing whether to activate the non-compete (monthly compensation) or release it. Update SAFE Circular 7 for departing equity holders and keep exit documents at least 2 years."
+   },
+   "templates": [
+    "T-EXIT-SURVEY",
+    "T-EXIT-INTERVIEW",
+    "T-OFFBOARD-CHECKLIST"
+   ],
+   "policies": [
+    "POL-52",
+    "POL-55",
+    "POL-48",
+    "POL-05",
+    "POL-27",
+    "POL-28",
+    "POL-33",
+    "POL-18",
+    "POL-19",
+    "POL-49",
+    "POL-56"
+   ],
+   "related": [
+    "CO-05",
+    "ER-10",
+    "OF-05",
+    "OF-06",
+    "OF-07",
+    "OF-10",
+    "EQ-02",
+    "EQ-04",
+    "EQ-05",
+    "BN-06",
+    "MV-06",
+    "EN-03"
+   ]
+  },
+  {
+   "id": "OF-02",
+   "name": "Involuntary termination",
+   "stage": "Offboard",
+   "depth": "deep",
+   "summary": "Governs employer-initiated individual exits (for cause, for performance, or without cause) from recommendation through risk review, approval, statutory pre-steps, the meeting, pay and close-out. Group position eliminations follow OF-03. Good looks like a documented lawful reason and a signed ER/Legal risk review for every case, approval per the authority matrix, final pay and documents ready at the meeting, access cut as the meeting starts, and no missed statutory step (China union notice, Taiwan Art. 33 notification, India enquiry, Canada entitlement calculation).",
+   "owner": "HRBP (process), Employee Relations (risk review and quality), Legal (approval for all non-US and high-risk US cases)",
+   "trigger": "Manager or ER recommends termination after corrective action or a PIP, an investigation finding, or a without-cause business decision affecting one role.",
+   "outputs": [
+    "Pre-termination risk review (privileged where Legal directs), with comparator and protected-activity checks",
+    "Approval record per authority matrix",
+    "Termination packet: T-TERM-SCRIPT, termination letter (local language where required), T-SEP-TERMS separation terms",
+    "Statutory pre-step records (China union notice, Taiwan Art. 33 filing, India enquiry report, Canada entitlement calculation)",
+    "Access-removal log timestamped at the meeting; final pay proof",
+    "Darwinbox termination transaction with reason code and rehire eligibility"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Performance module (Darwinbox)",
+    "Case management / hotline",
+    "Payroll provider",
+    "Equity platform",
+    "Benefits admin platform",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "E-signature",
+    "Document management"
+   ],
+   "sla": "Recommendation to meeting: 5-10 business days in the US; 15-30+ days elsewhere to allow statutory steps (e.g., Taiwan 10-day Art. 33 notice); final pay at the meeting in California.",
+   "lanes": [
+    "Manager",
+    "HRBP",
+    "Employee Relations",
+    "Legal",
+    "Payroll",
+    "IT",
+    "Employee"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Manager",
+     "type": "start",
+     "label": "Submit termination recommendation",
+     "detail": "Manager sends the HRBP the evidence file: PIP and check-in records (T-PIP), prior warnings (ER-04), the investigation report (ER-02) or the business rationale for a without-cause exit. Nothing is said to the employee or team before approval.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Confirm category and evidence file",
+     "detail": "HRBP classifies the case as for cause, performance or without cause and checks the evidence against the local standard. US: at-will but documented. Canada: just cause is a high, proportionality-based bar. India: domestic enquiry for misconduct. China: Art. 39/40 grounds under rules adopted by democratic procedure. Taiwan: Art. 11/12 grounds with last-resort evidence. If the standard can't be met, the HRBP proposes a negotiated mutual separation instead.",
+     "sla": "2 bd",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Employee Relations",
+     "type": "task",
+     "label": "Run pre-termination risk review",
+     "detail": "ER completes the checklist: protected characteristics and comparator treatment; recent protected activity (complaints, hotline or SOX/Rule 21F reports, pay inquiries, Section 7 activity, workers' comp); leave status (FMLA/CFRA/PDL, maternity, China medical treatment period); accommodation requests; age 40+; visa status; open investigations. Ethics & Compliance confirms hotline history. In California, termination within 90 days of protected activity carries a retaliation presumption.",
+     "sla": "3 bd",
+     "control": "The signed risk checklist is attached to the Darwinbox request, and the workflow blocks scheduling without it.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Legal",
+     "type": "decision",
+     "label": "Approve termination?",
+     "detail": "Legal reviews all non-US and high-risk US cases. Approval follows the authority matrix: Dept Head, CHRO for Director and above, Comp Committee for Section 16 officers. Legal approves, sends the case back to fix documentation gaps, or rejects it and returns it to coaching or the PIP.",
+     "control": "Authority-matrix approvals captured by e-signature before any notice.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Approved"
+      },
+      {
+       "to": "s2",
+       "label": "Gaps: remediate"
+      },
+      {
+       "to": "s14",
+       "label": "Not approved"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Complete statutory pre-steps",
+     "detail": "Before the meeting, complete the local pre-steps. China: written notice to the enterprise union (LCL Art. 43), with its response on file. Taiwan: Art. 33 notification 10 days before separation for Art. 11 exits, and Art. 12 action within 30 days of learning the facts. India: domestic enquiry report and Karnataka s.39 notice for 6+ months' service. Canada: entitlement calculation (ESA notice, ON severance, common-law exposure including bonus and equity) after Legal tests the termination clause.",
+     "sla": "Day -10 to -2",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Prepare packet and meeting logistics",
+     "detail": "HRBP prepares the T-TERM-SCRIPT and the termination letter (in the local language where required; China and Taiwan letters cite the statutory ground). Add T-SEP-TERMS if severance is offered, plus a benefits/equity summary and EAP details. Schedule early in the week in a private room or on video, with an HRBP witness. Security attends only when an ER-07 threat assessment calls for it.",
+     "sla": "Day -2",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Prepare final pay for the meeting",
+     "detail": "Payroll calculates final wages and payouts. For California (and CO/MA), the check or pre-authorized direct deposit, including accrued PTO, is ready at the meeting. Other deadlines: India F&F within 2 working days; BC within 48 hours; ON the later of 7 days or the next payday; Taiwan immediately, with severance within 30 days; China at termination.",
+     "sla": "Day -1",
+     "control": "Maker-checker approval of final pay before the meeting.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "IT",
+     "type": "task",
+     "label": "Disable access as meeting starts",
+     "detail": "At the agreed minute, IT runs the pre-staged ticket: SSO, VPN, email, Git/EDA and cloud accounts, plus lab and cleanroom badges. High-risk leavers' devices are preserved for imaging, not wiped. Remote employees get a prepaid return kit.",
+     "sla": "Meeting start",
+     "control": "Deprovisioning timestamp within 15 minutes of the meeting start; exceptions go to Security.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Hold termination meeting",
+     "detail": "Manager follows the script and delivers the decision in under 15 minutes: a clear, truthful reason consistent with the file, no debate, full dignity. HRBP explains final pay, benefits end date, equity, the separation terms and review period, and collects the badge. The employee leaves with the letter and, in California, final pay.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Employee",
+     "type": "decision",
+     "label": "Signs separation terms?",
+     "detail": "Employee gets the full review period: OWBPA 21 days (45 for groups) plus 7-day revocation at age 40+; at least 5 business days in California; typically 5-10 business days in Canada and 3-7 days in India. Statutory amounts are paid whether or not the employee signs.",
+     "branches": [
+      {
+       "to": "s11",
+       "label": "Signed, not revoked"
+      },
+      {
+       "to": "s12",
+       "label": "Declined or lapsed"
+      }
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Pay severance after revocation",
+     "detail": "Payroll pays severance and any COBRA subsidy only after the release is effective, with local tax treatment (US supplemental withholding, Canada retiring allowance, India TDS). Stock Admin applies any Legal-approved equity treatment.",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Issue documents, notify, close",
+     "detail": "HRBP issues the statutory documents: state separation notices; CA 1089 notice and DE 2320; ROE; relieving letter; Taiwan involuntary separation certificate and service certificate; China 离职证明, with social insurance transfer within 15 days. HRBP also sends a neutral team and customer handoff message and sets the rehire code. Section 16 and NEO exits go to Legal for Form 8-K Item 5.02 within 4 business days.",
+     "next": [
+      "s13"
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "HRBP",
+     "type": "end",
+     "label": "Termination closed",
+     "detail": "Approvals, documents and payment proof are filed in Document management, and ER tracks any charge, claim or arbitration for 12 months."
+    },
+    {
+     "id": "s14",
+     "lane": "Employee Relations",
+     "type": "end",
+     "label": "Not approved: back to PIP/ER-04",
+     "detail": "ER records the decision, and the manager continues coaching, the PIP or corrective action with HRBP support."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Recommendation and evidence file",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "Employee Relations"
+    },
+    {
+     "activity": "Pre-termination risk review",
+     "R": "Employee Relations",
+     "A": "Legal",
+     "C": "HRBP; Ethics & Compliance",
+     "I": "Manager"
+    },
+    {
+     "activity": "Approval per authority matrix",
+     "R": "Legal",
+     "A": "Dept Head (CHRO for Director+; Comp Committee for Section 16 officers)",
+     "C": "HRBP",
+     "I": "Employee Relations"
+    },
+    {
+     "activity": "Statutory pre-steps (union notice, Art. 33, domestic enquiry, entitlement calculation)",
+     "R": "HRBP",
+     "A": "Legal",
+     "C": "Works Council/Union",
+     "I": "Employee Relations"
+    },
+    {
+     "activity": "Separation terms and release",
+     "R": "HRBP",
+     "A": "Legal",
+     "C": "Total Rewards",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Final pay and severance payment",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "HRBP",
+     "I": "Employee"
+    },
+    {
+     "activity": "Termination meeting",
+     "R": "Manager",
+     "A": "HRBP",
+     "C": "Security (only if threat assessed)",
+     "I": "IT"
+    },
+    {
+     "activity": "Access removal at meeting",
+     "R": "IT",
+     "A": "Security",
+     "C": "HRBP",
+     "I": "Manager"
+    },
+    {
+     "activity": "Documents, communications and close-out",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "Legal",
+     "I": "Stock Admin; Benefits"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "ER signs the pre-termination risk checklist (and Legal too for high-risk and non-US cases) before the meeting can be scheduled.",
+     "type": "preventive",
+     "evidence": "Signed checklist in Case management linked to the Darwinbox request"
+    },
+    {
+     "id": "C2",
+     "control": "Authority-matrix approval is recorded before notice: Dept Head, CHRO for Director and above, Comp Committee/Board for Section 16 officers.",
+     "type": "preventive",
+     "evidence": "E-signature approval trail"
+    },
+    {
+     "id": "C3",
+     "control": "Statutory pre-steps are verified before the meeting: China union notice, Taiwan Art. 33 receipt, India enquiry report, Canada entitlement calculation reviewed by Legal.",
+     "type": "preventive",
+     "evidence": "Copies in Document management referenced on the checklist"
+    },
+    {
+     "id": "C4",
+     "control": "A second reviewer approves final pay before the meeting; the California check or deposit is ready at the meeting.",
+     "type": "preventive",
+     "evidence": "Payroll approval log and off-cycle ticket"
+    },
+    {
+     "id": "C5",
+     "control": "Access-removal time is reconciled against the meeting time, and any gap over 15 minutes is escalated.",
+     "type": "detective",
+     "evidence": "ITSM ticket timestamps and Security exception log"
+    },
+    {
+     "id": "C6",
+     "control": "Separation agreements come only from Legal-approved T-SEP-TERMS versions (OWBPA, Gov Code 12964.5, Rule 21F-17 and Section 7 carve-outs); any deviation needs Legal sign-off.",
+     "type": "preventive",
+     "evidence": "Template version log and deviation approvals"
+    },
+    {
+     "id": "C7",
+     "control": "Each quarter, a privileged audit of involuntary terminations checks reason-code consistency, comparator treatment and protected-class distribution.",
+     "type": "detective",
+     "evidence": "HR Analytics privileged audit memo"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Risk review completed before notice",
+     "target": "100%",
+     "why": "Pretext and retaliation claims turn on what was checked before the decision."
+    },
+    {
+     "name": "Final pay compliance",
+     "target": "100% on time (CA at the meeting)",
+     "why": "Waiting-time penalties and PAGA exposure in CA; statutory fines in India and Taiwan."
+    },
+    {
+     "name": "Access disabled within 15 minutes of meeting start",
+     "target": ">=99%",
+     "why": "Protects design data and controlled technology at the highest-risk moment."
+    },
+    {
+     "name": "Claims or charges within 12 months",
+     "target": "<3% of involuntary terminations, trending down",
+     "why": "Direct measure of decision and process quality."
+    },
+    {
+     "name": "Release signature rate where severance offered",
+     "target": ">=85%",
+     "why": "Unsigned releases leave litigation exposure open."
+    },
+    {
+     "name": "Cycle time recommendation to meeting (US)",
+     "target": "<=10 business days",
+     "why": "Long delays after a decision raise leak, morale and retaliation-timing risk."
+    }
+   ],
+   "considerations": [
+    "The reason in the script, the letter, the Darwinbox code, the UI response and any later agency position statement must match. Shifting reasons are the most common evidence of pretext.",
+    "Timing is evidence. A termination soon after a complaint, a leave return or an accommodation request needs proof that the decision came first, plus Legal sign-off. The California 90-day retaliation presumption makes this acute.",
+    "At-will does not travel. Canada, India, China and Taiwan each need statutory grounds and/or notice and pay. Never use a US script or letter abroad; in China, Taiwan and India, negotiated mutual separation is the practical default when evidence is borderline.",
+    "Canadian cost depends on clause enforceability. Before calculating notice, Legal tests the clause against Waksdale, Dufault v. Ignace (2024 ONCA 915; SCC leave denied 2025) and Baker v. Van Dolder's / Li v. Wayfair (2026 ONCA 568). If the clause fails, Bardal notice of up to about 24 months applies, including bonus and equity that would have vested (Matthews), so model the equity cost first.",
+    "The meeting: early in the week, private, under 15 minutes, HRBP as witness, never by text. For remote staff, use video with the letter emailed at the same time. A bad-faith manner of dismissal adds damages in Canada (Honda v. Keays).",
+    "For-cause cases need a completed investigation and a chance for the employee to respond. In China, work rules must have gone through democratic procedure and been acknowledged. Taiwan Art. 12 has a 30-day clock from learning the facts. India requires a natural-justice domestic enquiry.",
+    "Whistleblowers: run a SOX 806 and Dodd-Frank protected-activity check before any adverse action. Use a decision-maker independent of the complaint. Never condition severance on waiving SEC awards (Rule 21F-17; Foot Locker, May 2026).",
+    "Accelerating equity in a severance deal is a modification (ASC 718) and, for NEOs, can be an 8-K Item 5.02(e) event. Route it through Stock Admin and Legal, not as a manager promise.",
+    "Security presence should follow an ER-07 threat assessment, not habit. Needless escorts humiliate the employee and show up in litigation.",
+    "H-1B terminations are not bona fide until USCIS is notified, the LCA is withdrawn and return transportation is offered. Until then, back-wage liability continues. The worker gets a 60-day grace period."
+   ],
+   "variations": [
+    {
+     "when": "Employee is pregnant, on protected leave or in a protected period",
+     "how": "China Art. 42 bars Art. 40/41 terminations; Taiwan LSA Art. 13 bars termination during maternity leave and occupational-injury treatment; India bars dismissal during maternity leave; US FMLA/CFRA/PDL interference risk. Legal pre-approval is required, usually defer or use a negotiated mutual separation."
+    },
+    {
+     "when": "US employee aged 40+ offered a release",
+     "how": "OWBPA terms: 21 days to consider and 7 to revoke, express ADEA reference, written advice to consult an attorney, and consideration beyond what is already owed."
+    },
+    {
+     "when": "Executive or Section 16 officer",
+     "how": "Comp Committee or Board approval, the severance-plan or employment-agreement terms (including cure periods for 'cause'), 280G and clawback checks, Form 8-K Item 5.02 within 4 business days, and Form 4 coordination."
+    },
+    {
+     "when": "Gross misconduct or workplace violence risk",
+     "how": "ER-07 threat assessment, suspension with pay pending the decision, Security at the meeting. Taiwan Art. 12 action within 30 days; China Art. 39 with a union notice record; Canada just-cause analysis before withholding ESA amounts (wilful misconduct only)."
+    },
+    {
+     "when": "Remote employee in another state or province",
+     "how": "Apply the work-location rules (e.g., CO immediate, MA same day, BC 48 hours), hold the meeting by video with the letter emailed simultaneously, and ship a prepaid return kit."
+    },
+    {
+     "when": "Recent complainant or whistleblower",
+     "how": "Independent review by Ethics & Compliance and Legal, a decision-maker with no involvement in the complaint, and a documented legitimate reason that predates the protected activity."
+    },
+    {
+     "when": "Termination during or at the end of probation",
+     "how": "China: documented failure of criteria disclosed at hire. Taiwan: still needs an Art. 11 ground plus notice and pro-rated severance. ON/BC: no ESA notice before 3 months' service, but check the contract's probation clause. India: contractual probation notice."
+    }
+   ],
+   "countries": {
+    "us": "Employment is at-will (Montana requires good cause after probation), but the reason must be lawful. Check protected activity (complaints; FMLA, ADA or PWFA requests; SOX/Dodd-Frank whistleblowing; Section 7; workers' comp) and comparator treatment; EEOC charges can arrive 180/300 days later. Pay final wages by the work-state deadline (CO immediate; MA same day; CT next business day; TX 6 days; NY/IL/NJ/PA next regular payday), issue state separation/UI notices (e.g., NY IA 12.3, NJ BC-10) and send the COBRA event to the administrator within 30 days. Releases from employees 40+ need OWBPA terms, non-supervisory severance terms must respect McLaren Macomb and Rule 21F-17, and H-1B exits need USCIS notice, LCA withdrawal and a return-fare offer (60-day grace period).",
+    "us-ca": "All wages, including accrued vacation/PTO, premiums and commissions, are due immediately at termination (LC 201, 227.3); late pay triggers up to 30 days' waiting-time penalties (LC 203), so have the check or pre-authorized direct deposit ready at the meeting, including for remote terminations. Hand over the UI Code 1089 notice, DE 2320, HIPP notice and the COBRA/Cal-COBRA and LC 2800.2 notices. The main exposures are FEHA discrimination, retaliation and failure to accommodate, Tameny public-policy claims and whistleblower retaliation (presumption within 90 days of protected activity); document human review of any ADS input. Releases need a Civil Code 1542 waiver, the Gov Code 12964.5 carve-out and 5 business days to consult an attorney, and undisputed wages cannot be released (LC 206.5).",
+    "ca": "There is no at-will employment: a without-cause exit requires ESA notice or pay (ON and BC up to 8 weeks), plus ON ESA severance (1 week per year up to 26 weeks at 5+ years; the C$2.5M payroll test is always met), plus common-law Bardal notice unless an enforceable clause limits entitlement. Legal tests the clause first: under Waksdale one ESA breach voids every termination provision; Dufault v. Ignace (2024 ONCA 915; SCC leave denied June 2025) voided a clause over 'sole discretion ... at any time' wording; and Baker v. Van Dolder's / Li v. Wayfair (2026 ONCA 568) held 'at any time/for any reason' valid where the contract repeatedly guarantees ESA minimums. Just cause is a high proportionality bar (McKinley), and ON ESA amounts are forfeited only for wilful misconduct. Continue benefits through the ESA notice period, and pay final wages in ON by the later of 7 days or the next payday, in BC within 48 hours.",
+    "in": "There is no at-will employment: non-workers (managerial or administrative staff, supervisors above INR 18,000) can be exited by 'termination simpliciter' on contractual notice or pay in lieu with a non-stigmatic letter, subject to Karnataka Shops Act s.39 (reasonable cause and 1 month's notice after 6+ months' service; appealable). Misconduct dismissal requires a domestic enquiry that follows natural justice. 'Workers' (often individual-contributor engineers) can go straight to the Industrial Tribunal, where reinstatement with back wages is a remedy, so mutual separation with ex gratia and a release is the default for borderline cases. Pay F&F within 2 working days (CoW s.17(2)) and gratuity within 30 days; no dismissal during maternity leave, and no retaliation against POSH complainants or witnesses.",
+    "tw": "Termination is lawful only on an LSA Art. 11 ground (e.g., contraction or losses, business change with no suitable post, clear incompetence, after considering redeployment) or an Art. 12 summary ground invoked within 30 days of learning the facts (no notice or severance). Art. 11 exits need Art. 16 notice (10/20/30 days or pay in lieu, plus up to 2 days a week of paid job-seeking leave), new-system severance within 30 days (0.5 month's average wage per year, capped at 6 months) and the Employment Services Act Art. 33 notification 10 days before separation. Issue the involuntary separation certificate (EI benefits) and a service certificate on request (LSA Art. 19). An invalid dismissal leaves the contract in force with back pay, and labor courts can order continued employment during the case.",
+    "cn": "Terminate only on a statutory ground: Art. 39 fault (serious violation of lawfully adopted and communicated rules, fraud, etc.) needs no notice or severance, while Art. 40 no-fault (incompetence after training or reassignment, illness after the medical period, objective change after failed consultation) needs 30 days' notice or one month's pay in lieu plus N (the N+1 package). Before any unilateral termination, notify the enterprise union in writing (LCL Art. 43), respect Art. 42 protected categories (pregnancy, medical treatment period, work injury, 15+ years' service within 5 years of the rising retirement age), and deliver a Chinese-language notice citing the ground. Unlawful termination costs 2N or reinstatement with back pay, so most exits use an Art. 36 mutual termination recording that the employer proposed it (N floor; market N+1 to N+3), followed by the 离职证明 and social insurance transfer within 15 days."
+   },
+   "templates": [
+    "T-TERM-SCRIPT",
+    "T-SEP-TERMS",
+    "T-OFFBOARD-CHECKLIST"
+   ],
+   "policies": [
+    "POL-53",
+    "POL-54",
+    "POL-13",
+    "POL-42",
+    "POL-02",
+    "POL-08",
+    "POL-35",
+    "POL-36",
+    "POL-55",
+    "POL-28",
+    "POL-49"
+   ],
+   "related": [
+    "PD-03",
+    "ER-02",
+    "ER-04",
+    "ER-07",
+    "ER-10",
+    "OF-03",
+    "OF-04",
+    "OF-05",
+    "OF-06",
+    "LV-01",
+    "LV-02",
+    "EQ-05",
+    "MV-06"
+   ]
+  },
+  {
+   "id": "OF-03",
+   "name": "Reduction in force",
+   "stage": "Offboard",
+   "depth": "deep",
+   "summary": "Plans and executes group position eliminations across the US, Canada, India, Taiwan and China. Covers the business case, objective selection by decisional unit, privileged adverse-impact review, statutory notices and consultations, packages, and communications to leavers, survivors, customers and investors. Good looks like no missed notice clock, defensible selections with accurate OWBPA disclosures, packages paid on time, and a Disclosure Committee assessment of Form 8-K and MNPI before anyone is told.",
+   "owner": "CHRO (accountable), HRBP (execution), Legal (privilege, thresholds, notices), FP&A/Finance (business case and restructuring accounting)",
+   "trigger": "Leadership approves a cost, restructuring, program-cancellation or site action affecting multiple roles.",
+   "outputs": [
+    "Approved business case and cost model, with restructuring accrual inputs (ASC 420/712)",
+    "T-RIF-SELECTION matrices per decisional unit and privileged adverse-impact memo",
+    "Statutory notices and filings: WARN/Cal-WARN, ON Form 1, BC group notice, India retrenchment notice and re-skilling fund transfer, China union explanation and labor-bureau report, Taiwan MRPA plan and Art. 33 notifications",
+    "Individual packets: T-SEP-TERMS, OWBPA group disclosure exhibit, final pay and severance calculations",
+    "Communications pack for leaders, leavers, survivors and customers, plus the Disclosure Committee's 8-K assessment",
+    "Post-RIF audit (payments, access, visas, filings, re-employment preference tracking)"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "BI / people analytics",
+    "Payroll provider",
+    "Equity platform",
+    "Benefits admin platform",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "Immigration case system",
+    "E-signature",
+    "Document management"
+   ],
+   "sla": "Decision to notification: 6-10 weeks where only US WARN applies; 10-16+ weeks when ON/BC group notice, Taiwan's 60-day MRPA plan or China's 30-day union explanation applies.",
+   "lanes": [
+    "CHRO",
+    "FP&A",
+    "Legal",
+    "HRBP",
+    "HR Analytics",
+    "Immigration",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "CHRO",
+     "type": "start",
+     "label": "Approve RIF business case",
+     "detail": "CEO and CHRO approve the rationale (program cancellation, site consolidation, cost target) and a need-to-know planning team. The team goes on a project insider list, because a material RIF can be MNPI. The Comp Committee or Board is briefed when the action is material or affects officers.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "FP&A",
+     "type": "task",
+     "label": "Model roles, costs and accruals",
+     "detail": "FP&A models positions by site and decisional unit, severance and notice costs (WARN pay in lieu, statutory amounts abroad), and restructuring accruals under ASC 420/712 with Finance. The Disclosure Committee assesses Form 8-K (e.g., Item 2.05 for material exit costs; verify with Securities counsel) and the 10-K/10-Q narrative.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Map thresholds and notice clocks",
+     "detail": "Legal establishes privilege and maps each site against the thresholds: WARN (90-day aggregation), Cal-WARN (30 days), NY/NJ/IL/WA mini-WARN, ON (4 weeks) and BC (2 months) group rules, India retrenchment and Chapter X, China Art. 41 and Taiwan MRPA (60-day window). The longest clock sets the earliest separation date.",
+     "sla": "Week 1",
+     "control": "Signed notice-plan memo per site before any selection is final.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Define decisional units and criteria",
+     "detail": "HRBP and Legal fix the decisional units and objective, job-related criteria in T-RIF-SELECTION: go-forward skills, calibrated performance, certifications. Leave, complaints, age proxies and visa status are never criteria. Apply India LIFO within each category unless reasons are recorded, China Art. 41 priority-retention groups and Taiwan non-discrimination rules.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Score and select with managers",
+     "detail": "Managers score every employee in the unit against the criteria with written rationale, and the HRBP calibrates across managers. Everyone selected is screened for protected situations: leave, pregnancy/maternity, China medical treatment period and near-retirement protection, work injury, pending complaints.",
+     "control": "Protected-status screen logged for every selected employee.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "HR Analytics",
+     "type": "task",
+     "label": "Run privileged adverse-impact test",
+     "detail": "At Legal's direction, HR Analytics compares selection rates within each decisional unit by age 40+, sex, race/ethnicity and national origin (plus FEHA categories in California), using the 4/5ths rule and significance tests. Results go only to Legal, labelled privileged.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Legal",
+     "type": "decision",
+     "label": "Adverse impact or risk found?",
+     "detail": "Legal reviews the results and individual risk cases. An unexplained disparity sends the unit back for re-scoring or a criteria review, never for demographic balancing.",
+     "control": "Adverse-impact sign-off before the list is final.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Yes: revisit selections"
+      },
+      {
+       "to": "s8",
+       "label": "Cleared"
+      }
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Immigration",
+     "type": "task",
+     "label": "Assess visa-holder impact",
+     "detail": "Immigration lists affected H-1B, L-1, O-1, TN and STEM OPT holders and pending PERM/I-140 cases. It plans bona fide termination steps (USCIS notice, LCA withdrawal, return-fare offer) and the 60-day grace period. It also times the RIF against pending H-1B filings, because the Sept 18, 2026 EO directs agencies to weigh past-year and planned layoffs. Work-permit holders in Canada and Taiwan are flagged too.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Legal",
+     "type": "task",
+     "label": "File notices; consult unions",
+     "detail": "Legal issues each notice: WARN/Cal-WARN (employees, state agency/EDD, workforce board, local officials; SB 617 content); ON Form 1 to the Director, plus posting; BC notice to employees, any union and the Minister; India retrenchment notice to the government; China 30-day explanation to the union or all employees, then the labor-bureau report (Shanghai: worker-representative notice 30 days before filing); Taiwan MRPA plan 60 days ahead, negotiation within 10 days, and Art. 33 notifications.",
+     "sla": "Day -60 to -10 by country",
+     "control": "Filing receipts retained per site.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Calculate packages and final pay",
+     "detail": "Payroll and Total Rewards compute statutory and enhanced amounts per person and each final-pay deadline. Examples: India 15 days' pay per year plus the re-skilling fund transfer within 10 days; Taiwan severance within 30 days; China N; ON ESA severance. Legal attaches the OWBPA exhibit (decisional unit, eligibility factors, job titles and ages of those selected and not selected) reconciled to HRIS.",
+     "control": "A second reviewer reconciles the OWBPA exhibit to HRIS.",
+     "next": [
+      "s11"
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Brief managers; notify employees",
+     "detail": "Managers are trained on the T-TERM-SCRIPT the day before. Notifications happen 1:1 or in small groups within one window per site. Each packet includes T-SEP-TERMS and, for US employees 40+, the 45/7-day review terms. Access changes are timed with IT, and EAP and outplacement are on site. Employees serving WARN or ON notice periods move to garden leave with pay and benefits continuing.",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "CHRO",
+     "type": "task",
+     "label": "Communicate to org and market",
+     "detail": "CHRO and CEO hold the all-hands and survivor briefing within hours of notification, timed with any 8-K or press release and Regulation FD. Customer-facing teams get handoff scripts. Insider-list restrictions lift only after public disclosure.",
+     "next": [
+      "s13"
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Pay packages; process exits",
+     "detail": "Payroll pays final wages by each deadline (California: immediately on the separation date) and severance once releases are effective. Stock Admin applies plan vesting treatment, and Benefits issues COBRA subsidies and continuation notices. Statutory documents (ROE, relieving letters, 离职证明, involuntary separation certificates) follow OF-05.",
+     "next": [
+      "s14"
+     ]
+    },
+    {
+     "id": "s14",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Support survivors; audit the RIF",
+     "detail": "Managers hold survivor 1:1s within a week, re-scope work and confirm retention actions for critical talent. Within 30 days, HRBP and Legal audit payments, access removal, filings, visa actions and re-employment preference tracking (India 1 year; China 6 months).",
+     "control": "Post-RIF audit report within 30 days.",
+     "next": [
+      "s15"
+     ]
+    },
+    {
+     "id": "s15",
+     "lane": "CHRO",
+     "type": "end",
+     "label": "RIF closed; audit filed",
+     "detail": "CHRO signs off the audit and lessons learned, and FP&A reconciles the restructuring accrual to actual payments."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Business case and approval",
+     "R": "FP&A",
+     "A": "CEO",
+     "C": "CHRO; Legal",
+     "I": "Board"
+    },
+    {
+     "activity": "Threshold mapping and notice plan",
+     "R": "Legal",
+     "A": "Legal",
+     "C": "HRBP; FP&A",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Selection criteria and decisions",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP; Legal",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Adverse-impact analysis (privileged)",
+     "R": "HR Analytics",
+     "A": "Legal",
+     "C": "HRBP",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Visa-holder impact and filings",
+     "R": "Immigration",
+     "A": "Legal",
+     "C": "HRBP",
+     "I": "Manager"
+    },
+    {
+     "activity": "Statutory notices and union/authority consultation",
+     "R": "Legal",
+     "A": "CHRO",
+     "C": "Works Council/Union; HRBP",
+     "I": "Finance"
+    },
+    {
+     "activity": "Package design and release terms",
+     "R": "Total Rewards",
+     "A": "CHRO",
+     "C": "Legal; FP&A",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Notification-day execution",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "IT; Security; EHS",
+     "I": "Employee"
+    },
+    {
+     "activity": "External and disclosure communications",
+     "R": "CHRO",
+     "A": "CEO",
+     "C": "Legal; Finance",
+     "I": "Board"
+    },
+    {
+     "activity": "Payments and post-RIF audit",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "HRBP; Stock Admin; Benefits",
+     "I": "HR Analytics"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Legal checks each site's thresholds and notice clocks, including aggregation windows (WARN 90 days, Cal-WARN 30 days, ON 4 weeks, BC 2 months, Taiwan 60 days), and signs off before any notification.",
+     "type": "preventive",
+     "evidence": "Signed notice-plan memo per site"
+    },
+    {
+     "id": "C2",
+     "control": "The adverse-impact analysis is completed and cleared under privilege before selections are final.",
+     "type": "preventive",
+     "evidence": "Privileged analysis memo with Legal sign-off"
+    },
+    {
+     "id": "C3",
+     "control": "A second reviewer reconciles the OWBPA disclosure exhibit to HRIS data (decisional unit, ages, titles, selected/not selected).",
+     "type": "preventive",
+     "evidence": "Reconciled exhibit with reviewer sign-off"
+    },
+    {
+     "id": "C4",
+     "control": "MNPI controls: the planning team is on the insider list and restricted from trading until disclosure, and the Disclosure Committee documents its 8-K assessment.",
+     "type": "preventive",
+     "evidence": "Insider list and Disclosure Committee minutes"
+    },
+    {
+     "id": "C5",
+     "control": "Restructuring accruals (ASC 420/712) are reconciled to actual severance payments each quarter.",
+     "type": "detective",
+     "evidence": "Finance reconciliation (SOX)"
+    },
+    {
+     "id": "C6",
+     "control": "A protected-status screen (leave, maternity, China medical period and near-retirement, work injury, open complaints) is run before the list is final.",
+     "type": "preventive",
+     "evidence": "Screening log per selected employee"
+    },
+    {
+     "id": "C7",
+     "control": "A post-RIF audit within 30 days confirms final-pay timeliness, access removal, visa actions and statutory filing receipts.",
+     "type": "detective",
+     "evidence": "Post-RIF audit report"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Statutory notices and filings on time",
+     "target": "100%",
+     "why": "Missed WARN/Form 1/MRPA clocks create back-pay liability, fines or invalid notices."
+    },
+    {
+     "name": "Final pay and severance by legal deadline",
+     "target": "100%",
+     "why": "Waiting-time penalties (CA), wage claims (India) and fines (Taiwan, China)."
+    },
+    {
+     "name": "Release execution rate",
+     "target": ">=90%",
+     "why": "Measures package adequacy and closes claim exposure."
+    },
+    {
+     "name": "Unresolved adverse-impact findings at notification",
+     "target": "0",
+     "why": "Selection must be defensible before anyone is told."
+    },
+    {
+     "name": "Regretted attrition among survivors, 6 months post-RIF",
+     "target": "<= pre-RIF baseline + 2 points",
+     "why": "Measures whether the RIF destroyed the capability it meant to protect."
+    },
+    {
+     "name": "Claims or charges from affected employees",
+     "target": "<2% within 12 months",
+     "why": "Tests whether selection and process quality held up."
+    }
+   ],
+   "considerations": [
+    "Decisional-unit design drives both the OWBPA disclosures and the adverse-impact results. Fix the units before scoring and don't redraw them after seeing results.",
+    "Criteria must be objective and forward-looking (skills the retained roadmap needs). Thinly calibrated 'low performer' labels and cost-based selection by salary often correlate with age, so test them.",
+    "Privilege is fragile. HR Analytics works at Legal's direction, drafts stay out of general email and Slack, and managers see only their own unit's scoring.",
+    "Notice clocks stack. ON notice isn't effective until the Director receives Form 1. China needs 30 days' union explanation before the labor-bureau report. Taiwan needs a 60-day plan plus negotiation within 10 days. Set one global announcement date by the longest clock, or use pay in lieu where the law allows (US WARN, ON individual notice).",
+    "A material RIF can be MNPI. Keep the planning team on the insider list, pre-clear any trading, and have the Disclosure Committee decide on 8-K treatment (Item 2.05 for material exit costs, verify; Item 5.02 for officer departures) before internal leaks force the timing.",
+    "H-1B: the Sept 18, 2026 EO makes past-year and planned layoffs a factor in H-1B and LCA adjudication. Sequence pending petitions with Immigration counsel, and complete bona fide termination steps for every affected H-1B holder.",
+    "India: classify each person as worker or non-worker by dominant duties, not title. Workers get 1 month's notice, 15 days' pay per year and the re-skilling fund contribution. Chapter X prior permission applies only to factories, mines and plantations with 300+ workers, but check whether any validation lab is registered as a factory. Never run a US-style same-day exit.",
+    "China: most MNCs run a voluntary mutual-termination program at N+1 to N+3 instead of an Art. 41 layoff, but they still notify the union and keep priority groups off the list. Shanghai's 2026 layoff-reporting rule adds a 30-day worker-representative step.",
+    "Survivors decide whether the RIF works. Explain the why and the go-forward plan within 24 hours, reassign orphaned work explicitly, and use targeted retention RSUs for critical skills.",
+    "Canada: common-law notice includes bonus and equity that would vest during the notice period unless plan wording clearly excludes it (Matthews), so model it in the business case."
+   ],
+   "variations": [
+    {
+     "when": "Full site closure",
+     "how": "US WARN plant closing (50+ at a single site) or Cal-WARN termination; the ON 10% exception does not apply to a permanent closure; China Art. 41 or a mutual-termination program; India closure of an industrial establishment with 50+ workers needs 60 days' notice."
+    },
+    {
+     "when": "Small RIF below all thresholds",
+     "how": "Individual process per country (OF-02). If two or more US employees aged 40+ are offered releases under the program, it is still a group program: 45/7 days and the decisional-unit disclosure apply."
+    },
+    {
+     "when": "Voluntary separation program first",
+     "how": "Offer voluntary packages before involuntary selection (China mutual termination; Taiwan mutual separation with the involuntary reason code so employees can claim EI benefits). OWBPA 45/7 and disclosures still apply to US voluntary programs."
+    },
+    {
+     "when": "Remote employees",
+     "how": "WARN attributes remote employees to the site they report to; NJ counts employees reporting to NJ sites; final pay follows each employee's work state or province."
+    },
+    {
+     "when": "Union, works committee or GRC present",
+     "how": "Consult under any collective agreement. BC notice goes to the union. India: notify the recognised union and GRC where relevant. China: union explanation and opinion record."
+    },
+    {
+     "when": "Taiwan mass redundancy thresholds met",
+     "how": "Submit the MRPA plan to the authority and the union or labor representatives and post it 60 days ahead; negotiate within 10 days or face an authority-convened committee; pay severance promptly, because responsible persons can face exit bans."
+    },
+    {
+     "when": "Officers or NEOs included",
+     "how": "Comp Committee approval, severance-plan terms, 280G review if change-in-control-related, and Form 8-K Item 5.02 within 4 business days."
+    }
+   ],
+   "countries": {
+    "us": "Federal WARN (100+ employees) requires 60 days' notice to employees, the state dislocated-worker unit and local government for a plant closing (50+ job losses at a site) or a mass layoff (500+, or 50-499 if at least 33% of the site), aggregated over 90 days; remote employees count at their reporting site. State mini-WARN laws are stricter: NY 90 days at 25+ losses (the form asks about AI/automation), NJ 90 days plus 1 week's severance per year of service, IL 75+ employees and 60 days, WA 60 days. Group releases from employees 40+ need 45 days to consider, 7 to revoke and a written disclosure of the decisional unit, eligibility factors, and job titles and ages of those selected and not selected. For H-1B holders, complete bona fide termination (60-day grace period); the Sept 18, 2026 EO directs agencies to weigh the layoffs in H-1B and LCA adjudication.",
+    "us-ca": "Cal-WARN covers establishments with 75+ employees in the prior 12 months and requires 60 days' notice of a mass layoff (50+ within 30 days, regardless of percentage), a relocation of 100+ miles or a termination. Notice goes to employees, EDD, the Local Workforce Development Board and city and county chief elected officials, with SB 617 content from 2026 (rapid-response coordination, board contacts, CalFresh). Violations cost up to 60 days' back pay and benefits plus a $500/day civil penalty. Final pay including accrued PTO is due immediately on the separation date (LC 201, 203); the adverse-impact review covers FEHA categories, and releases need Civil Code 1542, the Gov Code 12964.5 carve-out and OWBPA 45/7 disclosures.",
+    "ca": "ON mass termination (50+ employees at an establishment within 4 weeks) requires 8, 12 or 16 weeks' notice (50-199, 200-499, 500+), with Form 1 filed with the Director (notice is not effective until received) and posted, and employees get 3 unpaid job-seeking days during notice (since Nov 27, 2025). ESA severance still applies; the exception is 10% or less of the workforce, not caused by a permanent closure. BC group termination (50+ at a single location within 2 months) requires 8, 12 or 16 weeks' notice (50-100, 101-300, 301+) to each employee, any union and the Minister of Labour, on top of individual CLOS. Common-law notice (including bonus and equity during it) applies to every employee unless an enforceable clause limits it; issue ROEs within 5 calendar days after the pay-period end.",
+    "in": "Retrenching 'workers' with 1+ year's service requires 1 month's written notice with reasons (or pay in lieu), compensation of 15 days' average pay per completed year, notice to the appropriate government, LIFO within each category unless reasons are recorded, and 1 year's re-employment preference. The employer also pays 15 days' last-drawn wages into the Worker Re-skilling Fund within 10 days (IR Code ss.70-72, 83). Chapter X prior government permission applies only to factories, mines and plantations with 300+ workers, so a pure design office generally needs none (check any lab registered as a factory). Managers are exited contractually through negotiated packages; everyone gets F&F within 2 working days and gratuity within 30 days, and large Bengaluru layoffs draw labour-department and union scrutiny.",
+    "tw": "Individual redundancy uses LSA Art. 11(2) or (4), with Art. 16 notice, severance (0.5 month's average wage per year, capped at 6 months, within 30 days) and the Employment Services Act Art. 33 notification to the authority 10 days before separation. The Mass Redundancy Protection Act applies when, within a 60-day window, layoffs at a site exceed: 10 (sites under 30 staff); 1/3 or 20 in one day (30-199); 1/4 or 50 in one day (200-499); 1/5 or 80 in one day (500+); or 200 (or 100 in a day) enterprise-wide (verify thresholds against the current Act). The plan then goes to the labor authority and the union (or labor-management-meeting representatives, or all employees) and is posted 60 days ahead, with negotiation within 10 days. Issue involuntary separation certificates; unpaid statutory wages or severance can lead to exit bans for responsible persons.",
+    "cn": "An economic layoff under LCL Art. 41 (20+ employees, or fewer than 20 but 10%+ of the workforce) is limited to bankruptcy reorganization, serious operating difficulty, production change or major technical innovation, or another major objective change. Explain the plan to the union or all employees 30 days in advance, consider their opinions, and report to the labor bureau (Shanghai from Aug 2026: notify worker representatives 30 days before filing under 沪人社规〔2026〕14号). Retain priority groups (long fixed-term or open-ended contracts, sole earners supporting elderly or minor dependants), respect Art. 42 protected categories, pay N, and rehire laid-off staff first within 6 months. In practice MNCs run voluntary mutual-termination programs (N+1 to N+3) to avoid Art. 41 scrutiny, then issue the 离职证明 and transfer social insurance within 15 days."
+   },
+   "templates": [
+    "T-RIF-SELECTION",
+    "T-SEP-TERMS",
+    "T-TERM-SCRIPT",
+    "T-OFFBOARD-CHECKLIST"
+   ],
+   "policies": [
+    "POL-54",
+    "POL-53",
+    "POL-08",
+    "POL-05",
+    "POL-19",
+    "POL-27",
+    "POL-28",
+    "POL-46",
+    "POL-50"
+   ],
+   "related": [
+    "PL-04",
+    "OF-02",
+    "OF-04",
+    "OF-05",
+    "OF-06",
+    "ER-08",
+    "MV-06",
+    "EQ-04",
+    "EQ-05",
+    "DS-05",
+    "BN-06"
+   ]
+  },
+  {
+   "id": "OF-04",
+   "name": "Separation agreements & releases",
+   "stage": "Offboard",
+   "depth": "standard",
+   "summary": "Drafts, approves, delivers and administers separation agreements that exchange consideration beyond what is already owed for a release, using country templates with the required protected-rights carve-outs. Good looks like only Legal-approved templates in use, correct consideration and revocation periods, statutory amounts never conditioned on signature, and payment only after the release is effective.",
+   "owner": "Legal (templates and deviations), HRBP (delivery), Payroll (payment)",
+   "trigger": "Any exit where the company offers severance, ex gratia or enhanced terms (OF-02, OF-03, negotiated mutual separation, executive exit).",
+   "outputs": [
+    "Executed agreement from the current T-SEP-TERMS country version (bilingual where required)",
+    "Review/revocation period log with confirmed effective date",
+    "Payment instruction released after the effective date",
+    "Deviation approval record"
+   ],
+   "systems": [
+    "E-signature",
+    "Document management",
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "Equity platform"
+   ],
+   "sla": "Draft within 2 business days of package approval; payment within one payroll cycle after the release effective date.",
+   "lanes": [
+    "HRBP",
+    "Legal",
+    "Employee",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "HRBP",
+     "type": "start",
+     "label": "Request agreement with approved terms",
+     "detail": "HRBP sends Legal the approved package (severance, benefits subsidy, bonus and equity treatment, reference and announcement terms) with the exit type, country, age and role. Approval follows the authority matrix before any figure is shared with the employee.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Draft from country template",
+     "detail": "Legal drafts from the current T-SEP-TERMS version. The core: general release; Section 7, Rule 21F-17 and agency-reporting carve-outs; return of property; confidentiality limited to agreement terms and trade secrets; cooperation. Local elements: OWBPA, Civil Code 1542, Gov Code 12964.5, Canada retiring allowance, China Art. 36 mutual termination, Taiwan bilingual itemization.",
+     "sla": "2 bd",
+     "control": "Only current template versions; text outside variable fields is locked in the e-signature library.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Deliver with review period",
+     "detail": "HRBP delivers the agreement with a cover letter that itemizes the statutory amounts paid regardless and states the review period: OWBPA 21/45 days; CA 5 business days; typically 5-10 business days in Canada and 3-7 days in India. The letter recommends independent advice, and no one pressures the employee to sign at the meeting.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Employee",
+     "type": "decision",
+     "label": "Requests changes?",
+     "detail": "The employee or their counsel may ask for changes; HRBP logs the request and forwards it to Legal.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Yes"
+      },
+      {
+       "to": "s6",
+       "label": "No: signs"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Review and approve deviations",
+     "detail": "Legal approves, rejects or counters within its delegated authority (CHRO for amounts above the matrix). Under OWBPA, changes do not restart the 21/45-day period if the parties agree, so record that agreement.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Sign; revocation period runs",
+     "detail": "The employee signs on or after the separation date so the release covers the whole employment. Any 7-day OWBPA revocation period runs from signature, and the HRBP records the effective date on the payroll ticket.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Pay after effective date",
+     "detail": "Payroll pays within one payroll cycle after the effective date, with local tax treatment. For US executives, Legal checks 409A timing where the review window spans two tax years.",
+     "control": "Payment released only against a confirmed effective date with no revocation.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Legal",
+     "type": "end",
+     "label": "File executed agreement",
+     "detail": "The executed agreement, deviation approvals and payment proof are filed in Document management. Executive agreements are prepared on the assumption they will be filed publicly (8-K Item 5.02(e) or periodic-report exhibit)."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Template maintenance and carve-out audit",
+     "R": "Legal",
+     "A": "Legal (General Counsel)",
+     "C": "Employee Relations; HRBP",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Package parameters and approval",
+     "R": "HRBP",
+     "A": "Dept Head (CHRO for Director+)",
+     "C": "Total Rewards; Legal",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Delivery and review-period tracking",
+     "R": "HRBP",
+     "A": "Legal",
+     "C": "Employee Relations",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Negotiated deviations",
+     "R": "Legal",
+     "A": "CHRO",
+     "C": "HRBP; Finance",
+     "I": "Total Rewards"
+    },
+    {
+     "activity": "Payment after effective date",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "HRBP",
+     "I": "Stock Admin"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Only the current Legal-approved template version is used; the e-signature library locks text outside variable fields.",
+     "type": "preventive",
+     "evidence": "Template version log and e-signature library configuration"
+    },
+    {
+     "id": "C2",
+     "control": "Severance is released only after the review and revocation periods have lapsed with no revocation, confirmed in the payroll ticket.",
+     "type": "preventive",
+     "evidence": "Effective-date confirmation on payroll ticket"
+    },
+    {
+     "id": "C3",
+     "control": "An annual audit checks all templates and legacy agreements still in force for Rule 21F-17, McLaren Macomb, Speak Out Act and Gov Code 12964.5 compliance.",
+     "type": "detective",
+     "evidence": "Audit memo and remediation log"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Agreements without unapproved deviation",
+     "target": "100%",
+     "why": "Unvetted edits are where 21F-17 and NLRA violations creep in."
+    },
+    {
+     "name": "Severance paid within one payroll cycle of effective date",
+     "target": ">=98%",
+     "why": "Late consideration invites repudiation arguments and complaints."
+    },
+    {
+     "name": "Signature rate where offered",
+     "target": ">=85% (RIF >=90%)",
+     "why": "Shows whether packages and delivery are calibrated."
+    }
+   ],
+   "considerations": [
+    "Never condition statutory entitlements on signature: final wages and accrued vacation, ESA notice and severance, India F&F and gratuity, Taiwan statutory severance. Consideration must be something extra.",
+    "Carve-outs are non-negotiable. No waiver of SEC or other government awards and no prior notice to the company before contacting regulators (Rule 21F-17; the SEC fined Foot Locker $148,000 in May 2026 for award waivers). Section 7 rights for non-supervisory employees (McLaren Macomb). Speak Out Act. Gov Code 12964.5 language in California.",
+    "Have the employee sign on or after the last day so the release covers the whole employment. In California, never try to release undisputed wages (LC 206.5).",
+    "Draft executive agreements as if they will be filed publicly. Check 409A payment timing, 280G and clawback-policy acknowledgments.",
+    "China and Taiwan agreements need Chinese text that controls, or at least a bilingual version, and Quebec needs a French transaction. A mistranslated release is a weak release."
+   ],
+   "variations": [
+    {
+     "when": "US employee aged 40+",
+     "how": "OWBPA: plain language, express ADEA reference, written advice to consult an attorney, 21 days (45 for groups, with decisional-unit disclosures) and 7 days to revoke."
+    },
+    {
+     "when": "Executive or Section 16 officer",
+     "how": "Severance-plan or employment-agreement terms, Comp Committee approval, Form 8-K Item 5.02 (and 5.02(e) for material amendments), clawback-policy acknowledgment."
+    },
+    {
+     "when": "Employee has a pending charge, claim or lawsuit",
+     "how": "Legal handles it as a settlement. EEOC charge filing cannot be waived (monetary recovery can). CA CCP 1001 bars confidentiality of facts in filed sexual harassment or discrimination claims, and CCP 1002.5 bars no-rehire clauses for good-faith claimants."
+    },
+    {
+     "when": "China or Taiwan negotiated exit",
+     "how": "China: record that the employer proposed the termination (N floor). Taiwan: record the involuntary reason code so the employee can claim EI benefits. Consider recording the settlement in labor mediation for finality."
+    }
+   ],
+   "countries": {
+    "us": "A release must be knowing and voluntary and supported by new consideration: for employees 40+, OWBPA requires 21 days (45 for groups, with disclosures), 7 days to revoke, an ADEA reference and advice to consult an attorney, and FLSA wage claims generally cannot be released privately. Carve out non-releasable rights (EEOC/NLRB charges, SEC awards, UI, workers' comp, vested ERISA benefits), keep confidentiality and non-disparagement for non-supervisory employees within McLaren Macomb limits, and note that the Speak Out Act voids pre-dispute NDAs for sexual assault and harassment while NY/NJ/IL/WA restrict confidentiality of discrimination facts.",
+    "us-ca": "Include an express Civil Code 1542 waiver of unknown claims, the Gov Code 12964.5 (SB 331) carve-out ('Nothing in this agreement prevents you from discussing or disclosing information about unlawful acts in the workplace...'), notice of the right to consult an attorney and at least 5 business days to consider. Undisputed wages cannot be released (LC 206.5); LC 2802 reimbursement, workers' comp and representative PAGA claims are not waivable; CCP 1001 bars confidentiality of facts in filed sexual harassment or discrimination claims; and CCP 1002.5 bars no-rehire clauses for good-faith claimants.",
+    "ca": "Consideration must exceed ESA minimums, which are paid regardless and cannot be conditioned on signing; give reasonable time (5-10 business days is standard) and recommend independent legal advice, because courts set aside unconscionable releases. Structure lump sums as retiring allowances (withholding at 10%, 20% or 30% by amount outside Quebec), and use a French transaction under the Civil Code for Quebec employees.",
+    "in": "An agreement is enforceable if voluntary and supported by consideration beyond statutory dues (F&F wages, leave encashment, gratuity, PF, retrenchment compensation for workers), which are paid in full and never tied to signing. Give 3-7 days, advise the employee to take advice, and state gross and net amounts and tax treatment; for 'workers', a settlement reached in conciliation binds more firmly than a private one.",
+    "tw": "Settlement agreements (Civil Code Art. 736) are enforceable if voluntary and informed: accrued claims can be settled, but mandatory-law rights cannot be waived in advance, and fraud or duress allows rescission (Civil Code Art. 92). Use bilingual text itemizing statutory notice pay, severance and unused leave plus the ex gratia amount, and state the reason code for EI benefits.",
+    "cn": "Use an LCL Art. 36 mutual termination agreement (Chinese or bilingual, Chinese prevailing) that records the employer proposed the termination (N floor), the full release, social insurance and housing fund handling, the non-compete activation or release, confidentiality and the payment schedule. SPC Interpretation (I) Art. 35 upholds such settlements absent fraud, coercion, material misunderstanding or obvious unfairness, but waivers of social insurance or mandatory work-injury rights are void (Interpretation II Art. 19)."
+   },
+   "templates": [
+    "T-SEP-TERMS"
+   ],
+   "policies": [
+    "POL-54",
+    "POL-53",
+    "POL-02",
+    "POL-55",
+    "POL-06",
+    "POL-48"
+   ],
+   "related": [
+    "OF-02",
+    "OF-03",
+    "OF-05",
+    "EQ-05",
+    "EQ-06",
+    "ER-09"
+   ]
+  },
+  {
+   "id": "OF-05",
+   "name": "Final pay, benefits & equity at exit",
+   "stage": "Offboard",
+   "depth": "standard",
+   "summary": "Makes sure every leaver receives correct final wages, PTO or leave payout, statutory amounts, benefits-continuation notices, equity treatment and tax/social documents within each jurisdiction's deadline. Good looks like 100% on-time payment, no unlawful deductions, HRIS and equity-platform termination dates that match, and every statutory document issued.",
+   "owner": "Payroll (accountable), Benefits and Stock Admin (notices and equity), People Ops (trigger and documents)",
+   "trigger": "Termination transaction approved in Darwinbox (any exit type).",
+   "outputs": [
+    "Final pay calculation and itemized wage statement",
+    "PTO/leave payout per jurisdiction",
+    "Benefits end date and continuation/conversion notices",
+    "Equity termination statement (forfeiture, exercise deadlines, ESPP refund)",
+    "Statutory exit documents (e.g., ROE, CA 1089 notice, India Form 130 and PF exit, Taiwan insurance withdrawal, China social insurance transfer)"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "Equity platform",
+    "Benefits admin platform",
+    "Document management"
+   ],
+   "sla": "Per jurisdiction: CA immediate on discharge (72 hours on resignation without notice); India 2 working days; BC 48 hours (terminated) or 6 days (quit); ON later of 7 days or next payday; Taiwan immediate; China at termination.",
+   "lanes": [
+    "People Ops",
+    "Payroll",
+    "Benefits",
+    "Stock Admin",
+    "Employee"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Termination approved in HRIS",
+     "detail": "The approved Darwinbox termination (exit type, last day, work location, notice given) calculates the final-pay deadline and creates Payroll, Benefits and Stock Admin tasks.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Calculate final pay and payouts",
+     "detail": "Payroll computes wages to the last day, overtime and premiums, earned commissions under the written plan, required PTO/leave payout, notice pay and statutory severance. Deductions are taken only where lawful: none for unreturned property in California, and India deductions only within Code on Wages limits.",
+     "control": "Maker-checker review of every final pay calculation.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Payroll",
+     "type": "decision",
+     "label": "Deadline before next payroll?",
+     "detail": "Payroll compares the statutory deadline with the entity's next scheduled payroll date.",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Yes"
+      },
+      {
+       "to": "s5",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Run off-cycle payment",
+     "detail": "Payroll issues an off-cycle check or pre-authorized direct deposit by the deadline, e.g., at the meeting in California or within 2 working days in India.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Include in regular payroll",
+     "detail": "Final pay runs in the regular cycle only where that meets the deadline (e.g., ON next regular payday within the 7-day rule).",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "End coverage; send notices",
+     "detail": "Benefits sets coverage end dates and sends the COBRA qualifying event to the administrator within 30 days. It also issues conversion/portability, FSA run-out, HSA and 402(f) information. Outside the US, it processes insurance withdrawals and any continued medical cover in the package.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Stock Admin",
+     "type": "task",
+     "label": "Process equity at termination",
+     "detail": "Stock Admin records forfeiture of unvested awards on the HRIS termination date and confirms each vested option's exercise deadline. It processes ESPP withdrawal and refund per plan, updates China SAFE Circular 7 registration, and sends the exit statement to the personal email on file.",
+     "control": "Monthly HRIS-to-equity-platform termination reconciliation.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Issue statutory exit documents",
+     "detail": "People Ops issues the country documents (e.g., CA 1089/DE 2320, ROE, India Form 130 and PF exit, Taiwan insurance withdrawals, China social insurance transfer) and files proof of payment.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Receives final pay and documents",
+     "detail": "The employee has the final wage statement, benefits and equity statements and statutory documents, plus a named contact for questions."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Final pay calculation and deadline",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "People Ops; HRBP",
+     "I": "Employee"
+    },
+    {
+     "activity": "Benefits end and continuation notices",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "Vendor",
+     "I": "Employee"
+    },
+    {
+     "activity": "Equity termination processing",
+     "R": "Stock Admin",
+     "A": "Total Rewards",
+     "C": "Legal; Payroll",
+     "I": "Employee"
+    },
+    {
+     "activity": "Statutory exit documents",
+     "R": "People Ops",
+     "A": "HRBP",
+     "C": "Payroll",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Darwinbox auto-calculates the deadline from work location and exit type, and auto-creates an off-cycle ticket when the deadline falls before the next payroll.",
+     "type": "preventive",
+     "evidence": "Darwinbox deadline field and off-cycle ticket"
+    },
+    {
+     "id": "C2",
+     "control": "A second reviewer checks final pay, including PTO payout and any deductions, before release.",
+     "type": "preventive",
+     "evidence": "Payroll approval log"
+    },
+    {
+     "id": "C3",
+     "control": "A monthly reconciliation compares HRIS terminations with equity-platform forfeitures and benefits terminations (stock-based compensation, SOX).",
+     "type": "detective",
+     "evidence": "Reconciliation report with exceptions cleared"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Final pay on time",
+     "target": "100%",
+     "why": "Penalties accrue daily in CA and by fine in India, Taiwan and China."
+    },
+    {
+     "name": "Final pay corrections after release",
+     "target": "<1% of leavers",
+     "why": "Measures calculation quality and PTO/commission accuracy."
+    },
+    {
+     "name": "HRIS vs equity termination-date mismatches at month-end",
+     "target": "0",
+     "why": "Mismatches misstate stock-based compensation expense."
+    }
+   ],
+   "considerations": [
+    "The deadline follows the work location and the exit type. A remote engineer in Colorado (immediate on involuntary exit) or Massachusetts (same day) is not on HQ rules.",
+    "Commissions and bonuses are paid per the written plan (California requires written commission plans). In Canada, bonus earned during the common-law notice period is owed unless plan wording clearly excludes it.",
+    "The equity exit statement must list the vest-stop date, each option's exercise deadline (ISO status lapses after 3 months), ESPP refund handling, and the reminder that insider-trading rules still apply while the person holds MNPI. It also covers India TDS on any post-exit vesting and China SAFE repatriation.",
+    "Don't make final pay conditional on clearance or asset return. India's 2-working-day rule and California LC 221 both prohibit it in effect.",
+    "Group life and disability conversion windows are short (check each carrier's contract), so send them with the final pay, not weeks later."
+   ],
+   "variations": [
+    {
+     "when": "Employee dies in service",
+     "how": "Pay to the estate or lawful survivor under OF-09 rules; stop direct deposit to the deceased's account."
+    },
+    {
+     "when": "Employee on disability leave at exit",
+     "how": "Coordinate STD/LTD claim continuity with the carrier. In Canada, continue benefits through the ESA notice period and watch LTD exposure during common-law notice."
+    },
+    {
+     "when": "Severance paid in instalments",
+     "how": "ON ESA severance may be paid over up to 3 years only with written agreement or Director approval; US instalments need a 409A review."
+    }
+   ],
+   "countries": {
+    "us": "There is no federal final-pay deadline, so state law controls: CO immediate on involuntary exit (penalty the greater of 2x or $1,000), MA same day on involuntary exit (treble damages), TX 6 days, NY/IL/NJ/PA next payday, MN within 24 hours of demand. Pay out PTO where required (CA, CO, IL, MA, NE), send the COBRA event within 30 days (election notice within 44 days if employer-administered) plus the 402(f) notice, and state that ISOs must be exercised within 3 months to keep ISO status.",
+    "us-ca": "On discharge or layoff, all wages, accrued vacation/PTO and meal/rest premiums are due immediately; on resignation, they are due on the last day with 72+ hours' notice, otherwise within 72 hours (LC 201-203; up to 30 days' wages in waiting-time penalties), and direct deposit requires prior authorization. Give the itemized wage statement (LC 226), UI Code 1089 notice, DE 2320, HIPP and COBRA/Cal-COBRA/LC 2800.2 notices; forfeiting unvested equity is allowed, but clawing back paid or vested amounts can run into AB 692.",
+    "ca": "ON: wages, vacation pay, termination pay and severance by the later of 7 days or the next regular payday (severance in instalments over up to 3 years only with written agreement or Director approval); BC: within 48 hours if the employer terminates, 6 days if the employee quits. Continue benefits through the ON ESA notice period, file the ROE within 5 calendar days after the pay-period end, issue the T4 by end of February, and confirm equity forfeiture wording excludes the common-law notice period (Matthews).",
+    "in": "Wages including leave encashment are due within 2 working days of the last day (Code on Wages s.17(2); fines up to INR 50,000 for a first offence), and gratuity within 30 days of becoming payable (5 years' service, 1 year for fixed-term; INR 20 lakh ceiling), with interest if late. Issue Form 130 and Form 123 where applicable, update the EPFO exit date and support PF transfer; TDS applies to any post-exit RSU vesting.",
+    "tw": "Wages, overtime and unused annual leave are settled immediately on termination (Enforcement Rules Art. 9) and severance within 30 days (fines of NT$300,000-1,500,000 if unpaid); withdraw Labor/EI/occupational accident insurance and NHI on the last day and report the pension stop within 7 days. Unvested US RSUs usually lapse under plan terms; departed employees go into the January withholding filing, and foreign residents need departure tax clearance.",
+    "cn": "Final wages, including untaken annual leave at 300%, are due in full at termination (verify any short local grace period in Shenzhen), and economic compensation is payable when the handover is complete (LCL Art. 50), with the labor bureau able to order an additional 50-100% on unpaid amounts (LCL Art. 85). Transfer or suspend social insurance and housing fund within 15 days, and update SAFE Circular 7 so post-exit equity proceeds can be repatriated and taxed."
+   },
+   "templates": [
+    "T-OFFBOARD-CHECKLIST"
+   ],
+   "policies": [
+    "POL-28",
+    "POL-33",
+    "POL-27",
+    "POL-37",
+    "POL-05",
+    "POL-54"
+   ],
+   "related": [
+    "OF-01",
+    "OF-02",
+    "OF-03",
+    "OF-09",
+    "PY-02",
+    "PY-05",
+    "PY-04",
+    "EQ-02",
+    "EQ-03",
+    "BN-06"
+   ]
+  },
+  {
+   "id": "OF-06",
+   "name": "Access removal & asset recovery",
+   "stage": "Offboard",
+   "depth": "standard",
+   "summary": "Removes all logical and physical access and recovers company assets for every leaver on a timed schedule: at the meeting for involuntary and high-risk exits, at the end of the last day otherwise. Each step is documented for SOX ITGC, export-control and trade-secret purposes. Good looks like 100% of accounts disabled on schedule, devices recovered within 10 business days, a signed return certification, and lawful handling of unreturned equipment.",
+   "owner": "IT (execution), Security (timing and high-risk cases), People Ops (trigger)",
+   "trigger": "Darwinbox termination transaction with a scheduled cut time, or an immediate-cut request from HRBP or Security.",
+   "outputs": [
+    "Deprovisioning ticket with per-system timestamps (SSO, VPN, email, Git/EDA, cloud, foundry/customer portals, badges)",
+    "Asset return record (laptop, tokens, dev boards, samples, lab notebooks, badges)",
+    "Signed return-of-property and data-deletion certification",
+    "Export-control access closure and licence-proviso report where required",
+    "Weekly HRIS-to-identity reconciliation"
+   ],
+   "systems": [
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "Darwinbox (HRIS)",
+    "E-signature",
+    "Document management"
+   ],
+   "sla": "Involuntary or high-risk: disabled at meeting start or at notice; voluntary: by end of last working day; devices recovered within 10 business days.",
+   "lanes": [
+    "People Ops",
+    "Security",
+    "IT",
+    "Facilities",
+    "Employee",
+    "Trade Compliance"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Termination scheduled in HRIS",
+     "detail": "The Darwinbox termination creates a timed deprovisioning ticket in the ITSM tool, carrying the last day, the cut time and risk flags from HRBP or Security.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Security",
+     "type": "decision",
+     "label": "Immediate cut required?",
+     "detail": "An immediate cut applies to involuntary exits, RIF notifications, gross misconduct, and high-risk voluntary exits (competitor or PRC-linked destination, DLP alerts, TCP-controlled access).",
+     "branches": [
+      {
+       "to": "s3",
+       "label": "Yes"
+      },
+      {
+       "to": "s4",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "IT",
+     "type": "task",
+     "label": "Disable access at meeting or notice",
+     "detail": "IT disables SSO, VPN, email, Git/EDA, cloud consoles and foundry and customer portals at the meeting start or at notice. It rotates shared secrets and preserves the devices for imaging.",
+     "sla": "At meeting",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "IT",
+     "type": "task",
+     "label": "Disable access end of last day",
+     "detail": "IT disables all accounts at the scheduled time on the last working day, sets a neutral auto-reply, and delegates mailbox and file ownership to the manager under legal-hold rules.",
+     "sla": "Last day",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Facilities",
+     "type": "task",
+     "label": "Deactivate badges; clear lab access",
+     "detail": "Facilities deactivates building, lab and cleanroom badges, recovers keys, lockers and parking, and collects dev boards, samples and lab notebooks. EHS confirms any assigned hazardous materials or lasers are logged back in.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Return devices; sign certification",
+     "detail": "The employee returns laptop, phones, tokens and media in person or via a prepaid return kit (employer pays shipping; CA LC 2802). They sign the return and data-deletion certification, which preserves agency-reporting rights.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Trade Compliance",
+     "type": "task",
+     "label": "Close export-control records",
+     "detail": "Trade Compliance updates the technology control plan register and deemed-export license records, and files any licence-proviso report required when a licensed foreign national leaves.",
+     "sla": "1 bd",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Security",
+     "type": "task",
+     "label": "Reconcile and chase gaps",
+     "detail": "Security runs the weekly HRIS-to-identity reconciliation and closes orphan accounts within 24 hours. It pursues unreturned assets through reminder letters and Legal, never through final-pay deductions in California.",
+     "control": "Weekly reconciliation report (SOX ITGC).",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "IT",
+     "type": "end",
+     "label": "Access closed; ticket resolved",
+     "detail": "IT closes the ticket with all timestamps and the asset list, and preserved devices stay in chain-of-custody storage until Legal releases them."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Timing decision (immediate vs last day)",
+     "R": "HRBP",
+     "A": "Security",
+     "C": "Legal",
+     "I": "IT"
+    },
+    {
+     "activity": "Logical deprovisioning",
+     "R": "IT",
+     "A": "Security",
+     "C": "People Ops",
+     "I": "Manager"
+    },
+    {
+     "activity": "Physical access and asset recovery",
+     "R": "Facilities",
+     "A": "Security",
+     "C": "Manager; EHS",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Export-control record closure",
+     "R": "Trade Compliance",
+     "A": "Legal",
+     "C": "IT",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Reconciliation and unreturned assets",
+     "R": "IT",
+     "A": "Security",
+     "C": "Legal",
+     "I": "HRBP"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Each week, Darwinbox terminations are reconciled against Okta/AD, VPN and EDA license accounts, and exceptions are closed within 24 hours.",
+     "type": "detective",
+     "evidence": "Weekly reconciliation report (SOX ITGC)"
+    },
+    {
+     "id": "C2",
+     "control": "The HRIS auto-generates a timed deprovisioning ticket; the immediate-cut option requires Security confirmation.",
+     "type": "preventive",
+     "evidence": "ITSM ticket history"
+    },
+    {
+     "id": "C3",
+     "control": "High-risk leavers' devices are preserved, not wiped, until Legal and Security release them.",
+     "type": "preventive",
+     "evidence": "Chain-of-custody log"
+    },
+    {
+     "id": "C4",
+     "control": "Export-control access closure and any licence-proviso reporting are completed within 1 business day of exit.",
+     "type": "preventive",
+     "evidence": "TCP register update and filed report"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Accounts disabled on schedule",
+     "target": "100%",
+     "why": "Orphan accounts are a top SOX ITGC finding and an exfiltration path."
+    },
+    {
+     "name": "Devices recovered within 10 business days",
+     "target": ">=98%",
+     "why": "Unrecovered laptops carry design data and controlled technology."
+    },
+    {
+     "name": "Orphan accounts older than 24 hours",
+     "target": "0",
+     "why": "Tests the reconciliation control."
+    }
+   ],
+   "considerations": [
+    "Don't wipe a high-risk leaver's laptop before forensic imaging. Evidence of exfiltration is often only on the device.",
+    "BYOD: selectively wipe the corporate container via MDM and cover it in the privacy notice. That means separate PIPL consent where sensitive data is involved in China, DPDP s.7(i) legitimate use in India, and PDPA disclosure in Taiwan.",
+    "Look beyond SSO. Shared service accounts, code-signing keys, EDA license servers, foundry and PDK portals, and customer or partner portals need rotation or partner notification; foundry NDAs often require it.",
+    "California: reimburse return shipping (LC 2802) and never deduct unreturned equipment from final pay (LC 221). Elsewhere, deductions are equally risky (India authorized deductions only; China and Taiwan require wages paid in full).",
+    "Set a neutral auto-reply for 30 days and do not forward mail to personal accounts; preserve the mailbox for legal holds."
+   ],
+   "variations": [
+    {
+     "when": "RIF or WARN notice period",
+     "how": "Access is removed at notification and pay and benefits continue through the notice period (garden leave); badge access is limited to scheduled property returns."
+    },
+    {
+     "when": "Remote or international employee",
+     "how": "Local IT hub or courier collection in-country. Shipping devices containing personal information or controlled technology across borders (especially out of China) needs a PIPL and export review first."
+    },
+    {
+     "when": "Employee on leave at exit",
+     "how": "Access is already suspended; arrange courier return and certification by e-signature."
+    }
+   ],
+   "countries": {
+    "us": "Revoke access to controlled-technology repositories and record the date, and for foreign-national departures update deemed-export license records and the technology control plan (EAR 15 CFR 734.13(b)). Recover equipment with a signed return/deletion certification, and review 30-90 days of download activity before exit for key engineers (DTSA).",
+    "us-ca": "Revoke access immediately at separation and forensically image high-risk devices, but do not withhold or deduct final pay for unreturned items (LC 221). Reimburse return shipping and other necessary expenses (LC 2802), and disclose device and account review of former employees in the CCPA notice at collection.",
+    "ca": "Revoke access on the notice date or at the meeting, recover devices and certify return of data. Log exits of export-controlled technology holders under the technology control plan, because releases to third-country nationals in Canada are deemed reexports, and rely on confidentiality and breach-of-confidence remedies rather than non-competes (void in ON below the C-suite).",
+    "in": "Collect devices and badges and revoke access on the last working day, but run clearance in parallel so it never delays F&F within 2 working days. DPDP s.7(i) supports DLP and forensic review to protect trade secrets and IP, with proportionality and notice, and Karnataka bans retaining employees' original documents.",
+    "tw": "Recover devices, revoke access, obtain a written return and non-retention certification, and review recent downloads under the monitoring policy disclosed in the PDPA notice. Remind the employee of Trade Secrets Act and National Security Act exposure for core key technologies.",
+    "cn": "Use a handover checklist covering devices, lab notebooks and confidential data, with certified deletion from personal devices, and revoke access at exit; economic compensation is payable on completion of handover (LCL Art. 50). Device reviews involving personal information need a PIPL basis (separate consent for sensitive PI) and counsel review, given Counter-Espionage Law and Data Security Law sensitivities."
+   },
+   "templates": [
+    "T-OFFBOARD-CHECKLIST"
+   ],
+   "policies": [
+    "POL-55",
+    "POL-47",
+    "POL-48",
+    "POL-18",
+    "POL-46"
+   ],
+   "related": [
+    "OF-01",
+    "OF-02",
+    "OF-03",
+    "ER-10",
+    "ER-09",
+    "DS-04",
+    "HS-03"
+   ]
+  },
+  {
+   "id": "OF-07",
+   "name": "Exit survey & interview program",
+   "stage": "Offboard",
+   "depth": "deep",
+   "summary": "Runs the global exit listening program: who is invited and when, third-party survey plus HR interview, country privacy notices and consents, reporting thresholds, triage of allegations to ER and Ethics, and regretted-attrition analytics for leadership and the Board. Good looks like a response rate of at least 50% among voluntary leavers, every allegation triaged within 1 business day, no report cut below n=5, and quarterly insights with actions tracked to closure.",
+   "owner": "HR Analytics (program and reporting), HRBP (interviews and actions), Employee Relations and Ethics & Compliance (allegation triage)",
+   "trigger": "A termination with a notice date entered in Darwinbox (voluntary exits auto-invited; involuntary per rules), plus the quarterly reporting calendar.",
+   "outputs": [
+    "T-EXIT-SURVEY responses in the survey platform with notice and consent records",
+    "T-EXIT-INTERVIEW notes stored with restricted access",
+    "ER/Ethics case numbers for every allegation raised",
+    "Quarterly regretted-attrition and exit-insight report to the executive team; semiannual summary to the Comp Committee/Board",
+    "30-90 day post-exit pulse results",
+    "Action tracker with owners and closure status"
+   ],
+   "systems": [
+    "Survey platform",
+    "Darwinbox (HRIS)",
+    "BI / people analytics",
+    "Case management / hotline",
+    "Document management"
+   ],
+   "sla": "Survey invite within 1 business day of notice; interview before the last day; allegation triage within 1 business day; quarterly report within 15 business days of quarter end.",
+   "lanes": [
+    "People Ops",
+    "Employee",
+    "HRBP",
+    "Employee Relations",
+    "Ethics & Compliance",
+    "HR Analytics",
+    "CHRO"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Exit logged; eligibility checked",
+     "detail": "When a termination with a notice date is entered in Darwinbox, rules assign the listening track. Voluntary leavers get the survey and an interview. Involuntary leavers get an optional survey after exit only, and RIF leavers get a separate process-experience survey. Deaths and employees in active litigation (Legal flag) are excluded.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Send privacy notice and invite",
+     "detail": "The third-party survey platform sends the invite within 1 business day of notice, in the employee's language (English, Simplified or Traditional Chinese). It carries the country privacy notice and consent screens, including separate PIPL consent for cross-border transfer in China. The wording promises 'confidential, reported only in groups of 5 or more' and says allegations of misconduct will be acted on.",
+     "sla": "1 bd",
+     "control": "Notice acknowledgment and any required consent are captured before responses are accepted.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Complete exit survey",
+     "detail": "A 10-12 minute T-EXIT-SURVEY covering primary and secondary reasons from a fixed taxonomy, manager and career questions, pay competitiveness, destination type, and whether the employee would return. Sensitive topics (health, family) appear only as optional free text.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Conduct exit interview",
+     "detail": "An HRBP, never the employee's manager, holds a 30-45 minute T-EXIT-INTERVIEW in the final week. Regretted senior leavers and executives get a skip-level or external interviewer. Notes are factual, stored in restricted Document management, and never shared with the manager in identifiable form.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "HRBP",
+     "type": "decision",
+     "label": "Allegation or risk raised?",
+     "detail": "HRBP reviews survey free text and interview notes for allegations: harassment, discrimination, retaliation, safety, fraud, securities, export or data misuse. The employee's departure does not end the company's duty to act.",
+     "branches": [
+      {
+       "to": "s6",
+       "label": "Yes"
+      },
+      {
+       "to": "s8",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Employee Relations",
+     "type": "task",
+     "label": "Triage allegation within 1 bd",
+     "detail": "ER logs a case (ER-01), decides whether to investigate (ER-02), tells the employee how it will be handled, and confirms non-retaliation. India POSH complaints go to the Internal Committee; Taiwan harassment and bullying complaints follow the statutory channel.",
+     "sla": "1 bd",
+     "control": "Every flagged exit record carries a case number.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Ethics & Compliance",
+     "type": "task",
+     "label": "Route compliance and securities issues",
+     "detail": "Accounting, auditing and securities concerns go to the audit committee process (SOX 301). Export, sanctions and FCPA matters go to Legal immediately to protect the DOJ 120-day self-disclosure window. The employee is told that nothing restricts reporting to the SEC or other agencies (Rule 21F-17).",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "HR Analytics",
+     "type": "task",
+     "label": "Code and store responses",
+     "detail": "HR Analytics codes free text to the reason taxonomy and joins HRIS attributes: regretted flag, level, tenure, site, manager, performance, destination. Identifiable data stays under restricted access, analysis uses pseudonymized copies, and identifiable responses are deleted or anonymized per the retention schedule.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Send 30-90 day post-exit pulse",
+     "detail": "A 5-question pulse 30-90 days after the last day asks for the real reason in hindsight, whether the new role met expectations, and interest in returning. With the person's consent, boomerang interest routes to OF-10.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "HR Analytics",
+     "type": "task",
+     "label": "Analyze regretted attrition",
+     "detail": "Each quarter, HR Analytics analyzes regretted and total attrition by function, critical-skill cluster (analog/mixed-signal, physical design, verification, firmware), site, level and manager, with top reasons and competitor destinations. It cross-references engagement and stay-interview data and flags managers with repeat regretted exits.",
+     "next": [
+      "s11"
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "HR Analytics",
+     "type": "decision",
+     "label": "Every cut meets n>=5?",
+     "detail": "Any cut with fewer than 5 responses is suppressed or rolled up (site to country, quarter to year) before reporting. Free-text quotes appear only after de-identification.",
+     "control": "BI suppression rule blocks cuts with n<5.",
+     "branches": [
+      {
+       "to": "s12",
+       "label": "Yes"
+      },
+      {
+       "to": "s10",
+       "label": "No: roll up"
+      }
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "CHRO",
+     "type": "task",
+     "label": "Report to ELT and Board",
+     "detail": "CHRO presents the quarterly exit and regretted-attrition report to the executive team and a semiannual summary to the Comp Committee/Board. It uses the same metric definitions as the 10-K human capital section.",
+     "sla": "15 bd after quarter end",
+     "next": [
+      "s13"
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Agree actions with leaders",
+     "detail": "HRBPs agree 1-3 actions per function with named owners and dates (e.g., career-path fixes, manager coaching, pay-range reviews via CO-01/CO-05) and log them in the action tracker.",
+     "next": [
+      "s14"
+     ]
+    },
+    {
+     "id": "s14",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Close the loop with employees",
+     "detail": "Leaders share aggregated 'you said, we did' updates in town halls and team meetings. HRBPs track completion and re-measure the next quarter.",
+     "next": [
+      "s15"
+     ]
+    },
+    {
+     "id": "s15",
+     "lane": "HR Analytics",
+     "type": "end",
+     "label": "Cycle closed; actions tracked",
+     "detail": "HR Analytics archives the quarter's report and tracker status, and open actions roll into the next cycle."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Program design, questionnaire and reason taxonomy",
+     "R": "HR Analytics",
+     "A": "CHRO",
+     "C": "HRBP; Legal",
+     "I": "Dept Head"
+    },
+    {
+     "activity": "Privacy notices and consents by country",
+     "R": "People Ops",
+     "A": "Legal",
+     "C": "HR Analytics",
+     "I": "Employee"
+    },
+    {
+     "activity": "Survey administration and invites",
+     "R": "People Ops",
+     "A": "HR Analytics",
+     "C": "Vendor",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Exit interviews",
+     "R": "HRBP",
+     "A": "People Ops",
+     "C": "Manager",
+     "I": "HR Analytics"
+    },
+    {
+     "activity": "Allegation triage and investigation",
+     "R": "Employee Relations",
+     "A": "Ethics & Compliance",
+     "C": "Legal",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Compliance and securities routing",
+     "R": "Ethics & Compliance",
+     "A": "Legal",
+     "C": "Employee Relations",
+     "I": "Board"
+    },
+    {
+     "activity": "Analysis and reporting",
+     "R": "HR Analytics",
+     "A": "CHRO",
+     "C": "HRBP",
+     "I": "Board"
+    },
+    {
+     "activity": "Action planning and closing the loop",
+     "R": "Dept Head",
+     "A": "CHRO",
+     "C": "HRBP",
+     "I": "Manager"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "The country privacy notice is delivered, and consent captured where required (PIPL separate consent; sensitive items optional), before responses are accepted.",
+     "type": "preventive",
+     "evidence": "Notice/consent log in the survey platform"
+    },
+    {
+     "id": "C2",
+     "control": "Reports never show a cut with fewer than 5 respondents, and free text is shown only after de-identification.",
+     "type": "preventive",
+     "evidence": "BI suppression configuration and report QA checklist"
+    },
+    {
+     "id": "C3",
+     "control": "Each week, survey free text and interview notes are reviewed for allegation keywords, and any unrouted allegation is escalated.",
+     "type": "detective",
+     "evidence": "Triage log with case numbers"
+    },
+    {
+     "id": "C4",
+     "control": "Identifiable exit data is accessible only to HR Analytics and the assigned HRBP; managers never see identifiable responses.",
+     "type": "preventive",
+     "evidence": "Quarterly access review"
+    },
+    {
+     "id": "C5",
+     "control": "Each quarter, invite coverage is reconciled against voluntary terminations in HRIS.",
+     "type": "detective",
+     "evidence": "Coverage report"
+    },
+    {
+     "id": "C6",
+     "control": "Identifiable responses are deleted or anonymized when the retention period ends.",
+     "type": "preventive",
+     "evidence": "Retention job log"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Survey response rate (voluntary leavers)",
+     "target": ">=50%",
+     "why": "Below this, the reasons data is not representative."
+    },
+    {
+     "name": "Exit interviews completed for regretted leavers",
+     "target": ">=90%",
+     "why": "Regretted exits carry the most actionable insight."
+    },
+    {
+     "name": "Allegations triaged within 1 business day",
+     "target": "100%",
+     "why": "Unrouted allegations create legal and whistleblower exposure."
+    },
+    {
+     "name": "Regretted attrition vs plan",
+     "target": "At or below function targets",
+     "why": "Tracks retention of critical chip-design talent."
+    },
+    {
+     "name": "Action items closed on time",
+     "target": ">=80%",
+     "why": "Proves the program changes something."
+    },
+    {
+     "name": "Quarter end to report",
+     "target": "<=15 business days",
+     "why": "Stale insights don't get acted on."
+    }
+   ],
+   "considerations": [
+    "Use a third-party survey platform for candour and an HRBP interview for depth. For executives and top regretted leavers, use a skip-level or external interviewer.",
+    "Promise 'confidential, reported in aggregate', never 'anonymous'. Responses are linked to HRIS attributes, and allegations must be acted on.",
+    "Timing trade-off: a survey right after notice captures fresh reasons but guarded answers, while the 30-90 day post-exit pulse gets candour. Run both and compare.",
+    "Involuntary leavers: no interview at or near the termination meeting, only an optional survey after exit. RIF leavers get a process-experience survey, and anyone in or threatening litigation is excluded on Legal's flag.",
+    "Once HR hears an allegation, the company is on notice. A departure doesn't end the duty to investigate harassment, retaliation, securities fraud or export violations, and ignoring it looks bad in any later claim.",
+    "Privacy is not uniform. In China, a voluntary survey is unlikely to fall under the HR-necessity basis, so get notice and separate consent for sensitive PI and for cross-border transfer to a US vendor, plus a PIPIA. India's DPDP duties start 13 May 2027, but a voluntary survey should already be consent-based under the SPDI Rules. Apply BC PIPA standards across Canada; in California, give the CCPA notice at collection.",
+    "Keep the reason taxonomy stable (separating 'pull' factors such as comp or competitor offer from 'push' factors such as manager or workload) so trends and the 10-K human capital narrative stay comparable year over year.",
+    "Any AI used to code free text or predict attrition is an ADS under California CRD rules and, from 2027, ADMT under CPPA rules. Bias-test it and keep a human reviewer.",
+    "Board reporting should focus on regretted exits in critical skills and where they go: TSMC and MediaTek in Taiwan, state-backed domestic chip firms in China, GCC competitors in Bengaluru."
+   ],
+   "variations": [
+    {
+     "when": "Executive departure",
+     "how": "CHRO or an external interviewer conducts it, and results go only to the CEO and CHRO. Too few cases to include in analytics cuts; Section 16 and 8-K sensitivities apply."
+    },
+    {
+     "when": "Involuntary or RIF leavers",
+     "how": "Optional process-experience survey after exit only (clarity, dignity, support). Results feed OF-02/OF-03 process improvement, not attrition analytics."
+    },
+    {
+     "when": "Employee raises an allegation but asks for no action",
+     "how": "Explain the duty to act. ER assesses and protects the reporter's identity as far as possible, and non-retaliation is confirmed in writing."
+    },
+    {
+     "when": "China employees",
+     "how": "Simplified Chinese survey, a separate consent screen for cross-border transfer to the US vendor, and in-country storage if the vendor offers it (verify). Investigation data stays onshore unless counsel clears transfer."
+    },
+    {
+     "when": "Small sites (e.g., fewer than 5 leavers per quarter)",
+     "how": "Roll up to country or annual reporting. Never show site-level cuts that identify individuals."
+    },
+    {
+     "when": "Leaver going to a competitor with trade-secret risk",
+     "how": "Keep the exit interview separate from the ER-10 investigation. The interviewer only reminds the employee of confidentiality duties and does not question them about data."
+    },
+    {
+     "when": "Boomerang interest indicated",
+     "how": "With consent, tag the leaver for the alumni network and rehire pipeline (OF-10) and note their rehire eligibility code."
+    }
+   ],
+   "countries": {
+    "us": "Surveys are voluntary and the notes are discoverable, so keep them factual. Discrimination, harassment, retaliation, wage or whistleblower allegations go to ER within 1 business day. Ask about unreported compliance concerns and route accounting and securities matters to the audit committee process (SOX 301); nothing in the survey or exit certification may discourage contact with the SEC or other agencies (Rule 21F-17). NLRA Section 7 protects non-supervisory employees' criticism of pay and conditions, so never tie severance or references to exit feedback.",
+    "us-ca": "CCPA covers exit survey and interview data. Give a notice at collection (categories, purposes, retention), and honor post-exit requests to know, delete and correct within 45 days, subject to employment-law exceptions. AI coding or attrition prediction is an ADS under the CRD regulations (4-year record retention) and, from 1 Jan 2027, ADMT under the CPPA rules when it feeds significant decisions. Keep exit records tied to personnel decisions for 4 years (Gov Code 12946).",
+    "ca": "Ontario has no private-sector statute for employee data, so apply BC PIPA-level standards company-wide. BC PIPA allows collection that is reasonable for ending employment, with notice, but an optional survey should rely on express notice and voluntary participation, with access requests answered within PIPA timelines. Tell employees the data is processed by the US parent and its vendors. Quebec remote employees need Law 25 notices and a privacy impact assessment before transfer outside Quebec; PIPEDA does not cover provincially regulated employee data (Bill C-36 is pending).",
+    "in": "DPDP's notice, consent and rights duties start on 13 May 2027. Until then, follow the SPDI Rules (written consent for sensitive data, a published privacy policy, a grievance officer). A voluntary exit survey is not core employment processing, so use a clear notice and consent now and plan for DPDP consent-manager and 90-day rights handling. POSH allegations must go to the Internal Committee even though the complainant is leaving; attrition in Bengaluru VLSI and verification roles typically runs in the low-to-mid teens (%), so report regretted exits by skill cluster.",
+    "tw": "Give a PDPA notice at collection (purpose, categories, period, area including transfer to the US parent or vendor, rights), and get written consent for any sensitive data such as health. Provide Traditional Chinese versions. Route workplace bullying allegations (OSH Act chapter in force since 1 July 2026) and sexual harassment allegations to the statutory complaint process, and share competitor destinations and offer patterns (e.g., TSMC and MediaTek profit-sharing) with Total Rewards.",
+    "cn": "PIPL applies. The HR-necessity basis is unlikely to cover a voluntary exit survey, so give notice and obtain consent, with separate consent for any sensitive PI and for cross-border transfer to a US survey vendor or HRIS, backed by a PIPIA kept 3 years. Use Simplified Chinese and avoid questions on health, family or political views. Handle allegations locally with counsel, mindful of Data Security Law and Counter-Espionage Law limits on moving investigation data offshore."
+   },
+   "templates": [
+    "T-EXIT-SURVEY",
+    "T-EXIT-INTERVIEW"
+   ],
+   "policies": [
+    "POL-02",
+    "POL-46",
+    "POL-49",
+    "POL-50",
+    "POL-09",
+    "POL-01"
+   ],
+   "related": [
+    "OF-01",
+    "OF-02",
+    "OF-03",
+    "OF-10",
+    "EN-01",
+    "EN-03",
+    "ER-01",
+    "ER-02",
+    "ER-05",
+    "DS-05",
+    "DS-06"
+   ]
+  },
+  {
+   "id": "OF-08",
+   "name": "Retirement",
+   "stage": "Offboard",
+   "depth": "standard",
+   "summary": "Manages retirement exits: employee-initiated notice, statutory retirement rules where they exist (China's rising ages, Taiwan LSA retirement), pension and retirement-benefit claims, equity retirement provisions and knowledge transfer. Good looks like no age-based pressure where retirement is not mandatory, statutory pension steps done on time, and equity retirement terms applied exactly as written.",
+   "owner": "HRBP (process), Total Rewards and Stock Admin (retirement benefits and equity), People Ops (execution)",
+   "trigger": "Employee gives notice of intent to retire, or a statutory event occurs (China pension eligibility under the new retirement ages; Taiwan LSA retirement conditions).",
+   "outputs": [
+    "Retirement acknowledgment with last day and knowledge-transfer plan",
+    "Retirement benefit/pension claim support per country",
+    "Equity retirement eligibility determination and statement",
+    "Final pay and statutory documents via OF-05"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "Equity platform",
+    "Benefits admin platform",
+    "Document management"
+   ],
+   "sla": "Acknowledge within 2 business days; benefit and equity determinations issued 10 business days before the last day.",
+   "lanes": [
+    "Employee",
+    "HRBP",
+    "Total Rewards",
+    "Stock Admin",
+    "People Ops"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Give notice of retirement",
+     "detail": "The employee tells the manager or HRBP in writing when they intend to retire. Managers never start retirement conversations based on age. In China, voluntary early retirement needs 3 months' notice from the employee.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Confirm last day and transition plan",
+     "detail": "HRBP confirms the last day and a 3-6 month knowledge-transfer plan for critical roles (legacy product lines, analog IP, key customers). Any phased-retirement or consulting option goes through PL-05 classification review.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Total Rewards",
+     "type": "task",
+     "label": "Determine retirement benefits",
+     "detail": "Total Rewards confirms the benefits due: US 401(k) distribution options and any retiree medical; Taiwan old-system retirement pay; India gratuity and EPF/EPS; China pension application; Canada group RRSP/DPSP transfer.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Stock Admin",
+     "type": "decision",
+     "label": "Meets equity retirement definition?",
+     "detail": "Stock Admin checks age and service against each grant agreement's retirement definition, using HRIS hire date and date of birth.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Yes"
+      },
+      {
+       "to": "s6",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Stock Admin",
+     "type": "task",
+     "label": "Apply retirement vesting terms",
+     "detail": "Stock Admin applies the plan's retirement treatment (continued or pro-rata vesting, extended exercise window) and confirms withholding timing with Tax and Payroll (verify FICA timing for retirement-eligible awards).",
+     "control": "A second reviewer validates eligibility against plan terms and HRIS dates.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Process exit and statutory filings",
+     "detail": "People Ops processes the exit with reason code Retirement and final pay under OF-05, plus the country filings. China: pension application, with the contract ending on pension receipt. Taiwan: insurance withdrawal and pension report within 7 days. India: F&F within 2 working days and gratuity within 30 days.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "HRBP",
+     "type": "end",
+     "label": "Retirement recognized; file closed",
+     "detail": "Manager and HRBP hold a recognition event (EN-02) and invite the retiree to the alumni network (OF-10)."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Retirement notice and transition plan",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "Manager",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Retirement benefit and pension determination",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "Payroll",
+     "I": "Employee"
+    },
+    {
+     "activity": "Equity retirement vesting",
+     "R": "Stock Admin",
+     "A": "Total Rewards",
+     "C": "Legal; Payroll",
+     "I": "Employee"
+    },
+    {
+     "activity": "Statutory filings and final pay",
+     "R": "People Ops",
+     "A": "Payroll",
+     "C": "HRBP",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Before any statement is issued, a second reviewer validates equity retirement eligibility against the plan definition and HRIS dates.",
+     "type": "preventive",
+     "evidence": "Eligibility worksheet with reviewer sign-off"
+    },
+    {
+     "id": "C2",
+     "control": "In China, the retirement-age calculator (2025 NPCSC decision) and contribution-years check run before any contract end, and the contract ends only on pension receipt.",
+     "type": "preventive",
+     "evidence": "Calculation record and pension approval"
+    },
+    {
+     "id": "C3",
+     "control": "An annual review confirms no mandatory retirement is applied in the US or Canada.",
+     "type": "detective",
+     "evidence": "Annual audit memo"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Retirement benefit and pension filings on time",
+     "target": "100%",
+     "why": "Late filings delay retirees' income and create statutory exposure (China, Taiwan, India)."
+    },
+    {
+     "name": "Knowledge-transfer plan in place 30+ days before last day (critical roles)",
+     "target": ">=90%",
+     "why": "Long-tenure engineers often hold undocumented product and customer knowledge."
+    }
+   ],
+   "considerations": [
+    "Never ask about retirement plans in the US or Canada. Discuss retirement only when the employee raises it, and base succession on roles, not ages (ADEA, FEHA, human rights codes).",
+    "Define equity 'retirement' consistently in plan documents (e.g., minimum age plus service) and apply it mechanically. Retirement-eligible awards can change payroll-tax timing, so confirm with Tax.",
+    "Phased retirement or consulting needs a real classification review (PL-05; California ABC test). In China, work after pension receipt is a labor-service relationship, not a labor contract.",
+    "Start knowledge transfer early for long-tenure analog, legacy-product and customer-facing engineers; 3-6 months of overlap is typical."
+   ],
+   "variations": [
+    {
+     "when": "China employee reaches the new statutory age without minimum contribution years",
+     "how": "The contract continues until pension receipt; agreed deferral up to 3 years is documented in writing."
+    },
+    {
+     "when": "Taiwan employee with old-system (pre-July 2005) seniority",
+     "how": "Calculate old-system retirement pay from the reserve fund (Art. 55, verify formula) and pay within 30 days; new-system service is in the individual pension account."
+    },
+    {
+     "when": "Retiree returns as consultant or part-time",
+     "how": "Route through PL-05 and TA-10, and check whether the equity plan's continued-service rules affect retirement vesting."
+    }
+   ],
+   "countries": {
+    "us": "There is no mandatory retirement age: the ADEA protects employees 40+ (with a narrow exception for bona fide high-level policymaking executives with qualifying retirement benefits; verify thresholds), so retirement is employee-initiated. Provide 401(k) distribution and 402(f) rollover notices and COBRA/Medicare coordination information, and apply the equity plan's retirement definition exactly as written.",
+    "us-ca": "FEHA protects employees 40+ and bars mandatory retirement for most roles. Retirement is treated as a resignation for final pay (on the last day with 72+ hours' notice under LC 202), with the UI Code 1089, DE 2320, HIPP and COBRA/Cal-COBRA notices.",
+    "ca": "Neither ON nor BC has a mandatory retirement age, and forcing retirement is age discrimination under the human rights codes. Treat retirement as a resignation: final pay in ON by the later of 7 days or the next payday, in BC within 6 days, plus an ROE; group RRSP/DPSP balances transfer under plan rules.",
+    "in": "There is no statutory private-sector retirement age: the superannuation age (typically 58 or 60) comes from the contract, standing orders or policy, and gratuity is payable on superannuation within 30 days alongside F&F within 2 working days. Support EPF final settlement and the EPS pension claim.",
+    "tw": "An employer may compel retirement only on LSA Art. 54 grounds (age 65, or mental or physical incapacity), and employees may retire voluntarily under Art. 53 (e.g., 15 years' service at age 55, 25 years' service, or 10 years' service at age 60) (verify). Old-system seniority earns Art. 55 retirement pay within 30 days, new-system service is funded through the Labor Pension individual account, and the pension stop is reported within 7 days.",
+    "cn": "Statutory retirement ages are rising gradually from 1 Jan 2025 over 15 years (men 60 to 63; female cadres 55 to 58; female workers 50 to 55); voluntary early retirement of up to 3 years needs the employee's 3 months' notice, agreed deferral of up to 3 years is possible, and minimum contribution years rise from 15 toward 20 starting 2030. The contract ends when the employee starts receiving pension (reaching the age alone is not enough), and staff with 15+ years' service within 5 years of retirement age are protected from Art. 40/41 termination."
+   },
+   "templates": [
+    "T-OFFBOARD-CHECKLIST"
+   ],
+   "policies": [
+    "POL-52",
+    "POL-27",
+    "POL-37",
+    "POL-08"
+   ],
+   "related": [
+    "OF-05",
+    "OF-10",
+    "BN-04",
+    "EQ-02",
+    "PD-05",
+    "PL-05",
+    "EN-02"
+   ]
+  },
+  {
+   "id": "OF-09",
+   "name": "Death of an employee",
+   "stage": "Offboard",
+   "depth": "standard",
+   "summary": "A compassionate, coordinated response to an employee's death: one family liaison, workplace notification and support, incident reporting if work-related, and correct payment of wages, insurance, survivor benefits and equity to the lawful recipients. Good looks like a named liaison within 24 hours, no automated system messages reaching the family, and every entitlement paid to the right person under local law, with one written summary.",
+   "owner": "HRBP (family liaison and process), with Payroll, Benefits and Stock Admin (entitlements) and EHS (work-related deaths)",
+   "trigger": "Notification of an employee's death from family, a colleague, the manager or authorities.",
+   "outputs": [
+    "Named family liaison and contact log",
+    "HRIS 'deceased' status that stops automated communications, surveys and direct deposit",
+    "Final wages paid to the lawful recipient (estate, successor affidavit or nominee)",
+    "Insurance, survivor-benefit and equity claims filed; written entitlements summary to the family",
+    "Regulator incident report where work-related"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "Benefits admin platform",
+    "Equity platform",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "Document management"
+   ],
+   "sla": "Liaison assigned within 24 hours; entitlements summary to the family within 10 business days; payments within 30 days of receiving required documents.",
+   "lanes": [
+    "Manager",
+    "HRBP",
+    "EHS",
+    "People Ops",
+    "Payroll",
+    "Benefits",
+    "Stock Admin"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Manager",
+     "type": "start",
+     "label": "Notify HRBP of the death",
+     "detail": "The manager informs the HRBP immediately and confirms the facts respectfully. Nothing is announced to the team until the family agrees to what may be shared.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Assign family liaison",
+     "detail": "HRBP names one liaison, sends condolences and asks the family's communication preferences. HRBP also arranges EAP and grief support for the team and coordinates any memorial with the family's wishes and cultural or religious practices.",
+     "sla": "24 hours",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "EHS",
+     "type": "decision",
+     "label": "Work-related death?",
+     "detail": "EHS determines whether the death occurred at work, during work travel, or from a work-related cause (including sudden death at work in China).",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Yes"
+      },
+      {
+       "to": "s5",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "EHS",
+     "type": "task",
+     "label": "Report and investigate incident",
+     "detail": "EHS reports within the regulatory window: OSHA and Cal/OSHA 8 hours; Taiwan labor inspection 8 hours; China work-injury recognition application within 30 days. EHS then runs the HS-01 investigation, with Legal placing a hold.",
+     "sla": "8 hours",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Stop automated notices; update HRIS",
+     "detail": "People Ops sets 'deceased' status to stop system emails, exit surveys, payslip notifications and direct deposit. IT preserves the account and data. Company property is retrieved gently through the liaison.",
+     "control": "HRIS status change blocks automated workflows; confirmation logged.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Pay final wages to lawful payee",
+     "detail": "Payroll pays wages, accrued vacation and other amounts due to the lawful recipient under local rules: a successor affidavit (e.g., CA Probate Code 13600), the estate, or the registered nominee (India). Tax reporting is set with Payroll tax.",
+     "control": "Payment only against the required documents (death certificate, affidavit or letters, nomination) reviewed by Payroll and Legal.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "File life and survivor claims",
+     "detail": "Benefits files group life and AD&D claims, offers COBRA to dependents, and supports statutory survivor benefits: India gratuity and EDLI/PF; China funeral subsidy and survivor pension; Taiwan Labor Insurance death benefits; Canada CPP death benefit.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Stock Admin",
+     "type": "task",
+     "label": "Apply death terms to equity",
+     "detail": "Stock Admin applies the plan's death provisions (acceleration or continued vesting where provided, extended exercise window) and gives the estate transfer instructions and document requirements.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "HRBP",
+     "type": "end",
+     "label": "Entitlements summary to family",
+     "detail": "The liaison sends one written summary of all entitlements, amounts, forms and contacts, and follows up until every claim is paid."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Family liaison and communications",
+     "R": "HRBP",
+     "A": "CHRO",
+     "C": "Manager",
+     "I": "Dept Head"
+    },
+    {
+     "activity": "Work-related incident reporting",
+     "R": "EHS",
+     "A": "Legal",
+     "C": "HRBP; Security",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Final pay and tax to lawful recipient",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "Legal",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Insurance and survivor benefit claims",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "Vendor",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Equity estate processing",
+     "R": "Stock Admin",
+     "A": "Total Rewards",
+     "C": "Legal",
+     "I": "HRBP"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "'Deceased' status in the HRIS blocks automated emails, surveys and direct deposit to the deceased's account.",
+     "type": "preventive",
+     "evidence": "HRIS change log and workflow suppression confirmation"
+    },
+    {
+     "id": "C2",
+     "control": "Payment to an estate or survivor is released only against the required documents, reviewed by Payroll and Legal.",
+     "type": "preventive",
+     "evidence": "Document checklist per case"
+    },
+    {
+     "id": "C3",
+     "control": "Work-related deaths are reported within regulatory windows (8 hours US/CA/Taiwan; 30-day work-injury application in China).",
+     "type": "detective",
+     "evidence": "Agency submission receipts in the EHS log"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Liaison assigned within 24 hours",
+     "target": "100%",
+     "why": "The family's first experience of the company after the death."
+    },
+    {
+     "name": "Entitlements paid within 30 days of documents",
+     "target": ">=95%",
+     "why": "Delays add hardship at the worst time."
+    },
+    {
+     "name": "Automated messages reaching the deceased's contacts after notification",
+     "target": "0",
+     "why": "Tests the HRIS suppression control."
+    }
+   ],
+   "considerations": [
+    "The family decides what is shared and when. Respect cultural and religious practices on timing and contact, e.g., quick cremation customs in India and funeral customs in China.",
+    "Support the team: EAP and grief counselling, workload relief, and bereavement leave for colleagues or relatives employed by the company (CA 5 days; ON 2; BC 3; Taiwan 3-8 by relationship; China 1-3).",
+    "US tax: wages paid after death in the year of death generally carry FICA but not income-tax withholding and are reported to the recipient (verify with Payroll tax).",
+    "Preserve the mailbox and files. Family requests for personal photos or documents go through Legal and Privacy."
+   ],
+   "variations": [
+    {
+     "when": "Death at work or during business travel",
+     "how": "HS-02 crisis response with Security and the travel vendor (repatriation of remains, family travel), regulator reporting and a legal hold."
+    },
+    {
+     "when": "Deceased was a visa holder",
+     "how": "Immigration advises dependents on status implications (verify timelines) and the company offers practical relocation support."
+    },
+    {
+     "when": "Death after resignation notice or during leave",
+     "how": "Entitlements are calculated the same way. Check whether equity death provisions still apply before the termination date."
+    }
+   ],
+   "countries": {
+    "us": "Pay wages owed to the estate or a designated successor under state law (many states allow direct payment of small wage amounts to a surviving spouse or next of kin; verify state limits), and report a work-related fatality to OSHA within 8 hours. Offer COBRA to surviving dependents, process group life/AD&D and 401(k) beneficiary claims, and apply the equity plan's death provisions (commonly an extended exercise window).",
+    "us-ca": "Probate Code 13600 lets a surviving spouse or other successor collect unpaid wages, including accrued vacation, by affidavit up to a statutory cap (verify the current amount); otherwise pay the estate. Report a work-related death to Cal/OSHA within 8 hours, provide COBRA/Cal-COBRA notices to dependents, and keep any medical information confidential (CMIA).",
+    "ca": "Pay outstanding wages and vacation pay to the estate (verify provincial rules on paying next of kin without probate), and issue the ROE and the final-year T4. Help the family claim the CPP death and survivor benefits and group life.",
+    "in": "Pay F&F to the registered nominee: gratuity is payable on death with no 5-year minimum, and PF and EDLI are claimed by the nominee through EPFO (EDLI contribution 0.5%; verify current benefit amounts). If the death arises out of employment, employee compensation under the SS Code applies (or ESI dependants' benefit for covered employees).",
+    "tw": "Report a workplace death to the labor inspection agency within 8 hours; occupational deaths trigger LSA employer compensation duties (funeral expenses and death compensation; verify amounts), offset by Labor Insurance and occupational accident insurance benefits. Pay outstanding wages and unused leave to the heirs, and help the family with Labor Pension individual-account and Labor Insurance death-benefit claims (verify).",
+    "cn": "Pay outstanding wages to the lawful heirs; basic pension insurance provides a funeral subsidy and survivor pension to dependents under the Social Insurance Law (verify local amounts). Sudden death at work, or within 48 hours of onset at work, counts as a work injury; apply for recognition within 30 days to access the one-time death subsidy, funeral subsidy and dependants' pension (verify amounts)."
+   },
+   "templates": [
+    "T-OFFBOARD-CHECKLIST"
+   ],
+   "policies": [
+    "POL-35",
+    "POL-37",
+    "POL-28",
+    "POL-27",
+    "POL-51",
+    "POL-46"
+   ],
+   "related": [
+    "OF-05",
+    "BN-06",
+    "EQ-02",
+    "HS-01",
+    "HS-02",
+    "LV-04"
+   ]
+  },
+  {
+   "id": "OF-10",
+   "name": "Alumni, references & rehire eligibility",
+   "stage": "Offboard",
+   "depth": "standard",
+   "summary": "Governs what the company says about former employees (neutral references, employment verification, statutory letters and certificates), how rehire eligibility is set and used, and the alumni and boomerang program. Good looks like all references routed centrally, statutory certificates issued on time, documented and consistently reviewed rehire codes, and an alumni pipeline that produces boomerang hires.",
+   "owner": "People Ops (references, verification, certificates), HRBP (rehire eligibility), Recruiter (alumni and boomerang pipeline)",
+   "trigger": "Termination processed (rehire code required), a reference, verification or certificate request, or an alumni program cycle.",
+   "outputs": [
+    "Rehire eligibility code with documented reason in Darwinbox",
+    "Verification and reference response log",
+    "Statutory letters and certificates: India relieving/experience letters, China 离职证明, Taiwan service certificate, US state service letters on request",
+    "Opt-in alumni network and boomerang prospect pool in Greenhouse"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Greenhouse (ATS)",
+    "Document management",
+    "E-signature"
+   ],
+   "sla": "Rehire code set at termination; verification within 2 business days; Karnataka service certificate within 7 days of request; China certificate at termination.",
+   "lanes": [
+    "People Ops",
+    "HRBP",
+    "Manager",
+    "Recruiter"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Exit processed; code requested",
+     "detail": "When the termination is processed, Darwinbox prompts the HRBP for a rehire code and People Ops checks which statutory letters the country requires.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Set rehire eligibility code",
+     "detail": "HRBP sets Eligible, Eligible with review, or Not eligible. Not eligible needs documented misconduct (integrity, violence, trade-secret or export breach) and ER approval, and a manager cannot set it alone. RIF and performance exits default to Eligible or Eligible with review.",
+     "control": "'Not eligible' requires a documented reason and ER approval in the Darwinbox workflow.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Issue statutory exit letters",
+     "detail": "People Ops issues the country letters. India: relieving and experience letters (Karnataka service certificate within 7 days of request). China: 离职证明 at termination. Taiwan: service certificate on request, with no adverse remarks. US: state service letters on request (e.g., MN, MO).",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "People Ops",
+     "type": "decision",
+     "label": "Reference request type?",
+     "detail": "Requests are triaged: employment verification (dates, title) versus requests for a substantive reference or opinion.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Verification"
+      },
+      {
+       "to": "s6",
+       "label": "Substantive reference"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Verify dates and title only",
+     "detail": "People Ops or the verification vendor (DS-07) confirms dates of employment and last title. Salary is released only with the former employee's written consent.",
+     "sla": "2 bd",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Decline and redirect to People Ops",
+     "detail": "Managers do not give company references. They redirect the request to People Ops, which answers as a verification. Any exception (e.g., senior hires) needs Legal approval under POL-56.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Recruiter",
+     "type": "task",
+     "label": "Maintain alumni and boomerang pool",
+     "detail": "Recruiting invites leavers coded Eligible to the opt-in alumni network, with its own privacy notice, and tags boomerang interest from the exit pulse (OF-07) as a Greenhouse prospect pool.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Recruiter",
+     "type": "decision",
+     "label": "Rehire applicant eligible?",
+     "detail": "When a former employee applies, the recruiter checks the code and, for 'Eligible with review', gets HRBP and ER sign-off before the process continues (TA-10).",
+     "branches": [
+      {
+       "to": "s9",
+       "label": "Eligible"
+      },
+      {
+       "to": "s10",
+       "label": "Not eligible"
+      }
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Recruiter",
+     "type": "end",
+     "label": "Proceed with rehire (TA-10)",
+     "detail": "The rehire continues through TA-10 with service-credit, equity and background-check rules applied."
+    },
+    {
+     "id": "s10",
+     "lane": "HRBP",
+     "type": "end",
+     "label": "Decline, or review old code",
+     "detail": "The applicant is declined neutrally. Codes older than 3 years (other than integrity, violence or trade-secret matters) get an HRBP review before a final decision."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Rehire eligibility coding",
+     "R": "HRBP",
+     "A": "Employee Relations",
+     "C": "Manager",
+     "I": "Recruiter"
+    },
+    {
+     "activity": "Employment verification and references",
+     "R": "People Ops",
+     "A": "HRBP",
+     "C": "Legal",
+     "I": "Manager"
+    },
+    {
+     "activity": "Statutory letters and certificates",
+     "R": "People Ops",
+     "A": "HRBP",
+     "C": "Legal",
+     "I": "Employee"
+    },
+    {
+     "activity": "Alumni network and boomerang pipeline",
+     "R": "Recruiter",
+     "A": "Dept Head",
+     "C": "HRBP; HR Analytics",
+     "I": "Manager"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "'Not eligible' codes require a documented reason and ER approval, and are reviewed quarterly for consistency across protected groups.",
+     "type": "preventive",
+     "evidence": "Darwinbox audit trail and quarterly review memo"
+    },
+    {
+     "id": "C2",
+     "control": "References and verifications are answered only by People Ops or the verification vendor, and every response is logged.",
+     "type": "preventive",
+     "evidence": "Request and response log"
+    },
+    {
+     "id": "C3",
+     "control": "Statutory letter timeliness is tracked (Karnataka 7 days; China at termination; Taiwan on request).",
+     "type": "detective",
+     "evidence": "Certificate tracker report"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Statutory certificates issued on time",
+     "target": "100%",
+     "why": "Missed certificates carry fines (Karnataka) or damages (China Art. 89)."
+    },
+    {
+     "name": "Boomerang hires as % of experienced hires",
+     "target": "8-12%",
+     "why": "Alumni are pre-vetted, ramp faster and cost less to hire."
+    },
+    {
+     "name": "Verification turnaround <=2 business days",
+     "target": ">=95%",
+     "why": "Slow verification costs former employees jobs and invites complaints."
+    }
+   ],
+   "considerations": [
+    "A neutral policy (dates and title; salary only with consent) keeps defamation risk low. Where there is a genuine safety concern (e.g., documented violence), take Legal advice rather than staying silent or improvising.",
+    "Rehire codes are evidence. They must reflect documented conduct, not a manager's opinion, be consistent across groups, and never be used to punish complainants.",
+    "Don't hold relieving or experience letters hostage (India) or add adverse remarks to Taiwan service certificates or China termination certificates. Statutory letters say what the law requires.",
+    "Keep alumni data separate from HR records and opt-in only. Contact details are personal data under PIPL, DPDP, PDPA and CCPA, so each needs its own notice.",
+    "Boomerangs: set rules up front for service credit (vacation accrual, severance tenure, India gratuity continuity), new equity grants and background re-checks."
+   ],
+   "variations": [
+    {
+     "when": "Employee resigned during an open investigation",
+     "how": "Code 'Eligible with review' with an ER note, and never state unproven findings in any reference or certificate."
+    },
+    {
+     "when": "Boomerang within 12 months",
+     "how": "Apply the service-bridging policy, a new equity grant (no reinstatement of forfeited awards unless the plan allows), and an abbreviated background check."
+    },
+    {
+     "when": "Background-check vendor request (FCRA)",
+     "how": "Handled by the verification vendor under the standard verification scope; no opinion content."
+    }
+   ],
+   "countries": {
+    "us": "There is no federal reference mandate: adopt a neutral policy (dates and title) and answer state service-letter requests where required (e.g., MN within 10 working days of request; MO; verify other states). Route employment verifications through DS-07; truthful, documented, limited statements keep defamation risk low.",
+    "us-ca": "Truthful, good-faith references are privileged (Civ. Code 47(c)), but misrepresentations meant to stop someone getting a job are prohibited (LC 1050-1053). Settlement agreements with good-faith claimants cannot bar rehire except in narrow cases such as a documented sexual harassment finding (CCP 1002.5).",
+    "ca": "There is no statutory reference or service-letter duty (the ROE is the statutory separation document), but defamatory or bad-faith references can add damages. Confirm dates and title and stay consistent with the termination letter.",
+    "in": "Relieving and experience letters are market standard and must not be withheld to force notice-period service. Karnataka requires a service certificate within 7 days of request (2026 amendment) and bans retaining employees' original certificates.",
+    "tw": "On request, the employer must issue a certificate of service (dates, position) and may not refuse or add adverse remarks the employee did not ask for (LSA Art. 19). Employer-initiated exits also need the involuntary separation certificate for EI benefits.",
+    "cn": "Issue the 离职证明 at termination stating the contract term, termination date, position and years of service, and omit negative reasons unless required (LCL Art. 50). Failing to issue it and causing loss (e.g., a lost new job) attracts damages (Art. 89)."
+   },
+   "templates": [],
+   "policies": [
+    "POL-56",
+    "POL-49",
+    "POL-46",
+    "POL-16"
+   ],
+   "related": [
+    "TA-10",
+    "DS-07",
+    "OF-07",
+    "OF-01",
+    "OF-02",
+    "TA-02",
+    "DS-03"
+   ]
+  }
+ ]
+}

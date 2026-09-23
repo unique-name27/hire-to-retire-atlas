@@ -1,0 +1,344 @@
+{
+ "releases": [
+  {
+   "version": 8,
+   "date": "2026-09-23",
+   "title": "32 new templates and a library change log",
+   "summary": "Templates now cover every stage from job description to exit certification, with notes for all 13 jurisdictions.",
+   "items": [
+    {
+     "type": "changed",
+     "text": "What's changed now opens on a Library changes tab: release notes for every change to the library, filterable by type and area, plus a live list of proposals the team accepted or implemented. The legal-change timeline moved to its own tab."
+    },
+    {
+     "type": "added",
+     "text": "Process, policy and template pages have a Change history section listing each change that affected them, including linked templates and applied proposals."
+    },
+    {
+     "type": "changed",
+     "text": "Templates page grouped by lifecycle stage from recruiting to offboarding, with search, a format filter and a New marker on templates added in this release."
+    },
+    {
+     "type": "added",
+     "text": "Template pages have an On this page menu, a Copy text button for pasting into Word or email, and letter-style layout for offer letters, warnings and other correspondence."
+    },
+    {
+     "type": "changed",
+     "text": "Search now covers template sections and the change log."
+    },
+    {
+     "type": "added",
+     "ref": "T-JD",
+     "text": "New template: Job description template. Linked from PL-02, PL-03, TA-01."
+    },
+    {
+     "type": "added",
+     "ref": "T-INTERVIEW-KIT",
+     "text": "New template: Engineering interview kit and question bank. Linked from TA-03."
+    },
+    {
+     "type": "added",
+     "ref": "T-CANDIDATE-COMMS",
+     "text": "New template: Candidate communication templates. Linked from TA-03, TA-04, TA-11."
+    },
+    {
+     "type": "added",
+     "ref": "T-OFFER-LETTER",
+     "text": "New template: Offer letter template with country clauses. Linked from TA-04, ON-01."
+    },
+    {
+     "type": "added",
+     "ref": "T-REFERENCE-CHECK",
+     "text": "New template: Reference check guide. Linked from TA-05."
+    },
+    {
+     "type": "added",
+     "ref": "T-FCRA-NOTICES",
+     "text": "New template: Background check disclosure and adverse action notices. Linked from TA-05."
+    },
+    {
+     "type": "added",
+     "ref": "T-TECH-ACCESS",
+     "text": "New template: Technology access and deemed-export questionnaire. Linked from TA-06, ON-01, MV-04."
+    },
+    {
+     "type": "added",
+     "ref": "T-NEWHIRE-NOTICES",
+     "text": "New template: New-hire forms and notices by jurisdiction. Linked from ON-01, ON-02, ON-03."
+    },
+    {
+     "type": "added",
+     "ref": "T-DAY1-AGENDA",
+     "text": "New template: Day 1 and first-week agenda. Linked from ON-04."
+    },
+    {
+     "type": "added",
+     "ref": "T-PROBATION-REVIEW",
+     "text": "New template: Probation and confirmation review. Linked from ON-04."
+    },
+    {
+     "type": "added",
+     "ref": "T-GOALS",
+     "text": "New template: Goal-setting and check-in template. Linked from PD-01."
+    },
+    {
+     "type": "added",
+     "ref": "T-REVIEW-FORM",
+     "text": "New template: Performance review form (self and manager). Linked from PD-02."
+    },
+    {
+     "type": "added",
+     "ref": "T-CALIBRATION",
+     "text": "New template: Calibration session guide. Linked from PD-02, PD-04."
+    },
+    {
+     "type": "added",
+     "ref": "T-PROMO-CASE",
+     "text": "New template: Promotion nomination case. Linked from PD-04."
+    },
+    {
+     "type": "added",
+     "ref": "T-COMP-CHANGE",
+     "text": "New template: Off-cycle compensation change and retention request. Linked from CO-05, CO-02."
+    },
+    {
+     "type": "added",
+     "ref": "T-WORK-LOCATION",
+     "text": "New template: Remote work and work-location change request. Linked from MV-04."
+    },
+    {
+     "type": "added",
+     "ref": "T-ASSIGNMENT-LETTER",
+     "text": "New template: International assignment letter. Linked from MV-02."
+    },
+    {
+     "type": "added",
+     "ref": "T-TRANSFER",
+     "text": "New template: Internal transfer request and manager handoff. Linked from MV-01."
+    },
+    {
+     "type": "added",
+     "ref": "T-LOA-REQUEST",
+     "text": "New template: Leave of absence request and designation checklist. Linked from LV-01."
+    },
+    {
+     "type": "added",
+     "ref": "T-RTW-PLAN",
+     "text": "New template: Return-to-work plan. Linked from LV-03."
+    },
+    {
+     "type": "added",
+     "ref": "T-INCIDENT",
+     "text": "New template: Incident, injury and workplace-violence report and log. Linked from HS-01, ER-07, LV-04."
+    },
+    {
+     "type": "added",
+     "ref": "T-COMPLAINT-INTAKE",
+     "text": "New template: Complaint intake form. Linked from ER-01, ER-02, ER-03."
+    },
+    {
+     "type": "added",
+     "ref": "T-WITNESS-GUIDE",
+     "text": "New template: Witness interview guide. Linked from ER-02."
+    },
+    {
+     "type": "added",
+     "ref": "T-WARNING",
+     "text": "New template: Written warning / corrective action letter. Linked from ER-04, PD-03."
+    },
+    {
+     "type": "added",
+     "ref": "T-COI-FORM",
+     "text": "New template: Conflict of interest disclosure form. Linked from ER-06."
+    },
+    {
+     "type": "added",
+     "ref": "T-AI-VENDOR",
+     "text": "New template: HR vendor and AI tool assessment questionnaire. Linked from DS-06."
+    },
+    {
+     "type": "added",
+     "ref": "T-DSAR",
+     "text": "New template: HR data subject request response checklist. Linked from DS-02."
+    },
+    {
+     "type": "added",
+     "ref": "T-ATTESTATION",
+     "text": "New template: Annual Code of Conduct and policy attestation. Linked from PD-06, ER-06."
+    },
+    {
+     "type": "added",
+     "ref": "T-RESIGNATION-ACK",
+     "text": "New template: Resignation acknowledgment letter. Linked from OF-01, OF-05."
+    },
+    {
+     "type": "added",
+     "ref": "T-KT-PLAN",
+     "text": "New template: Knowledge transfer plan. Linked from OF-01, MV-01."
+    },
+    {
+     "type": "added",
+     "ref": "T-EXIT-CERT",
+     "text": "New template: Exit certification: property, confidential information and trade secrets. Linked from ER-10, OF-06, OF-01."
+    },
+    {
+     "type": "added",
+     "ref": "T-RIF-COMMS",
+     "text": "New template: Reduction-in-force communications pack. Linked from OF-03."
+    }
+   ]
+  },
+  {
+   "version": 7,
+   "date": "2026-09-23",
+   "title": "Link and navigation fixes",
+   "summary": "Tested every page, link and in-page menu entry.",
+   "items": [
+    {
+     "type": "fixed",
+     "text": "“On this page” menus now scroll the chosen section to just under the top bar and highlight the entry you clicked, including sections near the end of a page. Checked on 1,404 entries at two window sizes."
+    },
+    {
+     "type": "fixed",
+     "ref": "global.publicCompany",
+     "text": "Replaced a broken eCFR link for 17 CFR 229.404 (related-person transactions) with its full address in the public-company section."
+    },
+    {
+     "type": "checked",
+     "text": "All 496 internal link targets resolve. 374 of 384 external source links load; the other 9 block automated checks and were not changed."
+    }
+   ]
+  },
+  {
+   "version": 6,
+   "date": "2026-09-23",
+   "title": "Proposal applied to POL-16",
+   "summary": "First change made through the proposal workflow.",
+   "items": [
+    {
+     "type": "removed",
+     "ref": "POL-16",
+     "proposal": "pmudp61ufxto3m",
+     "text": "Removed clause 4.11 (candidate data privacy notice and retention) from POL-16 Recruitment & Selection. The agencies clause that was 4.12 is now 4.11. Candidate privacy and retention remain covered by TA-11 and POL-46."
+    }
+   ]
+  },
+  {
+   "version": 5,
+   "date": "2026-09-23",
+   "title": "Home page layouts",
+   "summary": "Overview is the default home page, with Process map and Workspace as alternatives.",
+   "items": [
+    {
+     "type": "added",
+     "text": "Process map home layout: all 97 processes on one screen by lifecycle stage, with checklist status."
+    },
+    {
+     "type": "added",
+     "text": "Workspace home layout: checklist progress, items assigned to you, proposals awaiting review and upcoming filing deadlines."
+    },
+    {
+     "type": "changed",
+     "text": "Overview home layout restored the coverage map and hire-to-retire map."
+    }
+   ]
+  },
+  {
+   "version": 3,
+   "date": "2026-09-22",
+   "title": "Seven jurisdictions added and a cleaner design",
+   "summary": "Coverage grew from 6 to 13 jurisdictions.",
+   "items": [
+    {
+     "type": "added",
+     "ref": "country.de",
+     "text": "Germany, including the EU layer (GDPR, pay transparency directive, AI Act, whistleblower directive)."
+    },
+    {
+     "type": "added",
+     "ref": "country.il",
+     "text": "Israel."
+    },
+    {
+     "type": "added",
+     "ref": "country.vn",
+     "text": "Vietnam."
+    },
+    {
+     "type": "added",
+     "ref": "country.us-tx",
+     "text": "Texas."
+    },
+    {
+     "type": "added",
+     "ref": "country.us-wa",
+     "text": "Washington."
+    },
+    {
+     "type": "added",
+     "ref": "country.us-co",
+     "text": "Colorado."
+    },
+    {
+     "type": "added",
+     "ref": "country.us-nc",
+     "text": "North Carolina."
+    },
+    {
+     "type": "changed",
+     "text": "Every process, policy and template gained a note for each new jurisdiction (97 processes, 57 policies, 16 templates).",
+     "scope": [
+      "process",
+      "policy",
+      "template"
+     ]
+    },
+    {
+     "type": "added",
+     "text": "136 legal obligations for the new jurisdictions added to the master checklist (now 438 items)."
+    },
+    {
+     "type": "changed",
+     "ref": "country.ca",
+     "text": "Canada relabelled as Toronto (Ontario) and Vancouver (British Columbia)."
+    },
+    {
+     "type": "added",
+     "text": "Display settings: Clean, Document, Compact and High contrast styles; four accent colours; light and dark modes."
+    }
+   ]
+  },
+  {
+   "version": 1,
+   "date": "2026-09-22",
+   "title": "First release",
+   "summary": "The library as first published.",
+   "items": [
+    {
+     "type": "added",
+     "text": "97 processes from workforce planning to offboarding, each with a swimlane flowchart; 22 deep dives with RACI, controls and KPIs."
+    },
+    {
+     "type": "added",
+     "text": "57 policies with draft wording, country addenda and design decisions."
+    },
+    {
+     "type": "added",
+     "text": "16 templates, including the interactive exit survey."
+    },
+    {
+     "type": "added",
+     "text": "148 legal obligations and research for US federal, California, Canada, India, Taiwan and China."
+    },
+    {
+     "type": "added",
+     "text": "Public-company and semiconductor requirements, compliance calendar and legal-change timeline."
+    },
+    {
+     "type": "added",
+     "text": "Shared proposals, votes, discussion and checklist tracking."
+    }
+   ]
+  }
+ ]
+}

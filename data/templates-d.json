@@ -1,0 +1,2142 @@
+{
+  "templates": [
+    {
+      "id": "T-INCIDENT",
+      "name": "Incident, injury and workplace-violence report and log",
+      "category": "Safety",
+      "format": "form",
+      "purpose": "Captures every injury, illness, near miss, dangerous occurrence and workplace-violence incident in one record, which then drives care, regulator notices, the OSHA 300 decision and the workers' comp claim in the right jurisdiction. The same record produces the California SB 553 violent incident log entry and a root-cause investigation with verified corrective actions.",
+      "audience": "Reporters and witnesses (Part 1); managers (scene control and immediate actions); EHS (classification, recordability, regulator notices); Leave & Accommodation claims staff; Security and Employee Relations for violent incidents; Legal for serious events.",
+      "when": "Part 1 is completed immediately, on the same shift, by the reporter or manager. EHS classifies within 1 hour for serious events and within 1 business day otherwise, and the investigation closes within 10 business days.",
+      "owner": "EHS (form and logs); Security and Employee Relations (violent incidents, ER-07); Leave & Accommodation (claims, LV-04)",
+      "sections": [
+        {
+          "title": "Report & incident details",
+          "items": [
+            {
+              "id": "i1",
+              "type": "field",
+              "text": "Report ID, date and time reported, and reporter's name, role and contact details",
+              "detail": "Anyone can report: employees, contractors, interns, visitors or hosts. Anonymous hazard reports are accepted through the Speak Up line, and no one is penalized for reporting."
+            },
+            {
+              "id": "i2",
+              "type": "field",
+              "text": "Reporter's relationship to the company",
+              "detail": "Employee / contractor or agency worker / intern / visitor / customer, foundry or OSAT staff."
+            },
+            {
+              "id": "i3",
+              "type": "field",
+              "text": "Date, time and exact location of the incident",
+              "detail": "Building, floor, lab or room; parking lot; home office; travel; customer, foundry or OSAT site. Remote and travel incidents count if they are work-related."
+            },
+            {
+              "id": "i4",
+              "type": "field",
+              "text": "Event type",
+              "detail": "Injury / illness or exposure / near miss / dangerous occurrence (fire, gas alarm, chemical release, electrical event) / workplace violence or threat / vehicle / property damage."
+            },
+            {
+              "id": "i5",
+              "type": "field",
+              "text": "What happened, in the reporter's words",
+              "detail": "Task being done, sequence of events, equipment and substances involved. Facts only, no blame."
+            },
+            {
+              "id": "i6",
+              "type": "field",
+              "text": "People involved and witnesses: names, roles and contact details",
+              "detail": "Names stay in this restricted case record. They never go into the California violent incident log."
+            },
+            {
+              "id": "i7",
+              "type": "field",
+              "text": "Evidence preserved: photos, CCTV, badge and alarm logs, equipment, SDS",
+              "detail": "For serious events, leave the scene undisturbed until EHS or Legal releases it. In Ontario, the scene of a critical injury must not be disturbed without an inspector's permission, except to save life or relieve suffering (OHSA s.51(2))."
+            }
+          ]
+        },
+        {
+          "title": "Injured person & injury details",
+          "items": [
+            {
+              "id": "i8",
+              "type": "field",
+              "text": "Injured person: name, ID, job title, department, manager, work location (country and state), employment type"
+            },
+            {
+              "id": "i9",
+              "type": "field",
+              "text": "Nature of the injury or illness and the body part affected",
+              "detail": "E.g., laceration to the left hand, chemical burn, lower-back strain, noise-induced hearing loss, psychological trauma after a violent incident."
+            },
+            {
+              "id": "i10",
+              "type": "field",
+              "text": "Object, substance or exposure that directly caused the harm",
+              "detail": "E.g., HF etchant, Class 4 laser beam, thermal chamber, pressurized gas line, stairs, keyboard (repetitive strain)."
+            },
+            {
+              "id": "i11",
+              "type": "field",
+              "text": "Treatment given",
+              "detail": "None / first aid on site (only the items on the 29 CFR 1904.7(b)(5)(ii) list) / clinic or physician / emergency room / inpatient hospitalization / fatality. Record the provider and whether the person returned to work the same day."
+            },
+            {
+              "id": "i12",
+              "type": "field",
+              "text": "Work status after the incident",
+              "detail": "Full duty / restricted duty or job transfer / days away / unknown. Update the record whenever the status changes."
+            },
+            {
+              "id": "i13",
+              "type": "field",
+              "text": "Days away and days of restricted work",
+              "detail": "Count calendar days, starting the day after the injury; OSHA caps the count at 180."
+            },
+            {
+              "id": "i14",
+              "type": "note",
+              "text": "Medical details go into the restricted claims file, not the personnel file. Managers are told work restrictions only."
+            }
+          ]
+        },
+        {
+          "title": "Immediate actions & regulator notice",
+          "items": [
+            {
+              "id": "i15",
+              "type": "check",
+              "text": "Care arranged: first aid, local emergency services, or an escort to a clinic. An injured person is never left alone or allowed to drive themselves."
+            },
+            {
+              "id": "i16",
+              "type": "check",
+              "text": "Unsafe work stopped, equipment isolated (lockout/tagout), gas or chemical areas evacuated, and the scene preserved for serious events."
+            },
+            {
+              "id": "i17",
+              "type": "check",
+              "text": "Violent incident: Security and police called where anyone is at risk, the perpetrator's site and system access suspended, affected employees moved to safety, and ER-07 threat assessment opened."
+            },
+            {
+              "id": "i18",
+              "type": "check",
+              "text": "EHS phoned about anything beyond first aid; Legal phoned about any fatality, hospitalization, amputation, eye loss, critical injury or inspector visit."
+            },
+            {
+              "id": "i19",
+              "type": "check",
+              "text": "Contractor or agency worker: the agency and host employer notified, and it is agreed who records the case (the employer that supervises the worker day to day records it on the OSHA 300 log)."
+            },
+            {
+              "id": "i20",
+              "type": "check",
+              "text": "Employee Assistance Programme and trauma support offered to the injured person, witnesses and the team."
+            },
+            {
+              "id": "i21",
+              "type": "field",
+              "text": "Regulator notification: authority, date and time notified, notified by, reference number",
+              "detail": "Federal OSHA: fatality within 8 hours; inpatient hospitalization, amputation or eye loss within 24 hours. Cal/OSHA: serious injury, illness or death within 8 hours (8 CCR 342). WA DOSH: death or hospitalization within 8 hours. Taiwan: a death, 3+ injured or 1+ hospitalized within 8 hours (OSH Act Art. 37). Ontario: critical injury or death immediately, then a written report (OHSA s.51; verify timing). Germany: deaths and mass accidents immediately. China: the enterprise head reports within 1 hour (verify). Vietnam: fatal and serious accidents immediately to the provincial labour authority and police. Israel: serious accidents to the OSH Administration."
+            },
+            {
+              "id": "i22",
+              "type": "field",
+              "text": "Time elapsed from event to notice, and the reason for any delay",
+              "detail": "The clock runs from when the company learns of the event, not from when this form is complete."
+            }
+          ]
+        },
+        {
+          "title": "Workplace violence incident log (California SB 553)",
+          "intro": "Complete for every workplace violence incident at a California site, including threats with no injury. Use the same fields for violent incidents in every country so ER-07 has one dataset. Leave out any personal identifying information that could identify a person involved; Cal/OSHA's general-industry standard, due by 31 Dec 2026, may add fields (verify).",
+          "items": [
+            {
+              "id": "i23",
+              "type": "field",
+              "text": "Date, time and specific location of the incident",
+              "detail": "E.g., parking lot, lobby, lab, office, company vehicle, offsite event."
+            },
+            {
+              "id": "i24",
+              "type": "field",
+              "text": "Workplace violence type",
+              "detail": "Type 1: person with no legitimate business at the site (criminal intent). Type 2: customer, client or visitor. Type 3: current or former employee, supervisor or manager. Type 4: someone with a personal relationship with an employee (partner, family member)."
+            },
+            {
+              "id": "i25",
+              "type": "field",
+              "text": "Detailed description of the incident"
+            },
+            {
+              "id": "i26",
+              "type": "field",
+              "text": "Classification of who committed the violence (no names)",
+              "detail": "Client or customer / family member or friend / stranger with criminal intent / coworker / supervisor or manager / partner or spouse / parent or relative / other."
+            },
+            {
+              "id": "i27",
+              "type": "field",
+              "text": "Circumstances at the time",
+              "detail": "Doing usual job duties, working in a poorly lit area, rushed, low staffing, isolated or working alone, unable to get help, in an unfamiliar or new location, working offsite."
+            },
+            {
+              "id": "i28",
+              "type": "field",
+              "text": "Type of incident",
+              "detail": "Physical attack (hitting, kicking, choking, pushing) / attack with a weapon or object / threat of physical force or of using a weapon / sexual assault or threat / animal attack / other."
+            },
+            {
+              "id": "i29",
+              "type": "field",
+              "text": "Consequences",
+              "detail": "Whether Security or law enforcement was contacted and how they responded; actions taken to protect employees from a continuing threat; any injuries."
+            },
+            {
+              "id": "i30",
+              "type": "field",
+              "text": "Log entry completed by: name, job title and date",
+              "detail": "Base the entry on accounts from the employees who experienced the incident, witness statements and the investigation findings."
+            },
+            {
+              "id": "i31",
+              "type": "check",
+              "text": "Post-incident investigation completed, the WVPP reviewed and corrected where the incident exposed a gap, employees given access to the log within 15 calendar days of a request, and the log and investigation records kept 5 years (LC 6401.9)."
+            }
+          ]
+        },
+        {
+          "title": "OSHA 300 recordability decision",
+          "items": [
+            {
+              "id": "i32",
+              "type": "field",
+              "text": "Establishment coverage: size and NAICS code",
+              "detail": "Employers with 10 or fewer employees, and establishments in the low-hazard industries listed in Appendix A to Subpart B, are exempt from keeping routine logs, but not from severe-injury reporting (verify each site's NAICS code)."
+            },
+            {
+              "id": "i33",
+              "type": "field",
+              "text": "Work-related? (Y/N) and basis",
+              "detail": "A case is presumed work-related if an event or exposure at work caused or significantly aggravated it (29 CFR 1904.5). Exceptions include voluntary wellness activity, commuting, and mental illness, which is recordable only if a physician or licensed provider gives an opinion that it is work-related. A home-office injury is work-related only if it arises from doing the work, not from the general home environment."
+            },
+            {
+              "id": "i34",
+              "type": "field",
+              "text": "New case, and recording criteria met?",
+              "detail": "Death, days away, restricted work or job transfer, medical treatment beyond first aid, loss of consciousness, or a significant injury or illness diagnosed by a physician or licensed provider (1904.7)."
+            },
+            {
+              "id": "i35",
+              "type": "field",
+              "text": "Decision: Recordable / Not recordable / Privacy case; decided by and date",
+              "detail": "Enter the case on the establishment's 300 log and complete the 301 or equivalent within 7 calendar days of learning of it. For privacy cases, write 'privacy case' instead of the name: intimate body part, sexual assault, mental illness, HIV, hepatitis or TB, contaminated needlestick, or another illness at the employee's request (1904.29(b)(7)). Cal/OSHA (8 CCR 14300) and WA (WAC 296-27) mirror these rules."
+            },
+            {
+              "id": "i36",
+              "type": "note",
+              "text": "Recordability is a legal test, not a severity rating. A single prescription-strength dose or one day of restricted work makes a minor injury recordable, while a serious-looking cut treated only with first aid does not."
+            }
+          ]
+        },
+        {
+          "title": "Workers' compensation claim triggers",
+          "intro": "The claim clock usually runs from the company's knowledge of the injury, not from the employee's claim. Record the date each step was done.",
+          "items": [
+            {
+              "id": "i37",
+              "type": "check",
+              "text": "US-CA: give the DWC-1 claim form within 1 working day of learning of the injury (LC 5401), send the Employer's Report (Form 5020) to the insurer within 5 days for injuries with lost time or treatment beyond first aid (LC 6409.1), and authorize up to $10,000 of treatment while liability is decided (LC 5402(c))."
+            },
+            {
+              "id": "i38",
+              "type": "check",
+              "text": "US-CO: file the Employer's First Report with the insurer within 10 days for lost time over 3 shifts or permanent impairment, and give the designated provider list (C.R.S. 8-43-101, 8-43-404(5)). US-NC: Industrial Commission Form 19 within 5 days where the injury causes more than 1 day's absence or medical costs over $4,000 (G.S. 97-92)."
+            },
+            {
+              "id": "i39",
+              "type": "check",
+              "text": "US-TX subscriber: DWC Form-001 to the carrier within 8 days of an injury causing more than 1 day of lost time, with a copy to the employee (Labor Code 409.005)."
+            },
+            {
+              "id": "i40",
+              "type": "check",
+              "text": "US-TX non-subscriber: no state claim. Pay benefits under the company's occupational injury plan, file DWC Form-007 by the 7th of the following month (5+ employees), keep Notice 5 posted and the annual DWC Form-005 filed, and route every injury to Legal, because the employee can sue in negligence and the company loses the contributory-negligence, assumption-of-risk and fellow-servant defenses (Labor Code 406.033)."
+            },
+            {
+              "id": "i41",
+              "type": "check",
+              "text": "US-WA: the treating provider files the L&I Report of Accident; respond to L&I's employer request promptly, and offer light duty that may qualify for Stay at Work wage reimbursement."
+            },
+            {
+              "id": "i42",
+              "type": "check",
+              "text": "Canada: Ontario WSIB Form 7 within 3 business days of learning of an injury needing health care beyond first aid or causing lost time or wage loss. BC WorkSafeBC employer's report within 3 days, plus a preliminary investigation within 48 hours and a full investigation report within 30 days (verify)."
+            },
+            {
+              "id": "i43",
+              "type": "check",
+              "text": "India: for ESI-covered employees (wages up to INR 21,000/month), file the ESIC accident report online promptly (verify form and timing). For everyone else, the employer owes compensation under SS Code Ch. VII, which replaced the Employee's Compensation Act 1923; notify the group personal accident or EC insurer and record the case in the accident register."
+            },
+            {
+              "id": "i44",
+              "type": "check",
+              "text": "China: apply to the local human resources and social security bureau for work-injury recognition within 30 days of the accident or occupational-disease diagnosis. If the company misses the deadline, the employee has 1 year to apply and the company bears the costs of the gap. Pay wages through the medical treatment period (usually up to 12 months) and don't terminate during it (LCL Art. 42)."
+            },
+            {
+              "id": "i45",
+              "type": "check",
+              "text": "Taiwan: occupational accident insurance must cover the employee from day 1. The employer pays medical costs and full wages during treatment (LSA Art. 59, offset by insurance benefits), can't terminate during treatment (LSA Art. 13), and helps the employee file the Bureau of Labor Insurance claim."
+            },
+            {
+              "id": "i46",
+              "type": "check",
+              "text": "Germany: send the Unfallanzeige to the Berufsgenossenschaft within 3 days of learning of a work or commuting accident causing death or more than 3 days' incapacity (§193 SGB VII), co-signed by the works council, with a copy to the state OSH authority. Refer the employee to a Durchgangsarzt where incapacity lasts beyond the accident day; pay continues for 6 weeks, then BG Verletztengeld."
+            },
+            {
+              "id": "i47",
+              "type": "check",
+              "text": "Israel: complete the employer's part of NII Form 250 promptly so the employee can claim injury allowance; the employer normally pays the first 12 days and NII reimburses it (verify). Commuting and home-office accidents can count as work injuries."
+            },
+            {
+              "id": "i48",
+              "type": "check",
+              "text": "Vietnam: investigate under Decree 39/2016 (company team for minor cases, authorities for fatal or multiple serious cases; verify thresholds), pay treatment costs and full salary during treatment, pay OSH Law Art. 38 compensation, and file the occupational accident insurance claim. Report accident statistics every 6 months and annually (verify deadlines)."
+            }
+          ]
+        },
+        {
+          "title": "Investigation & corrective action",
+          "items": [
+            {
+              "id": "i49",
+              "type": "field",
+              "text": "Investigation lead and team",
+              "detail": "EHS leads with the manager, plus the JHSC or JOHSC worker member (Ontario, BC), safety trustees or committee (Israel), works council and safety specialist (Germany), or OSH council (Vietnam). Security and ER join for violent incidents; suspected misconduct goes to ER-02 as a separate process."
+            },
+            {
+              "id": "i50",
+              "type": "field",
+              "text": "Evidence reviewed",
+              "detail": "Interviews, photos, CCTV, equipment and maintenance records, training records, SOPs, SDS, gas-monitoring and alarm logs, badge data, staffing levels."
+            },
+            {
+              "id": "i51",
+              "type": "field",
+              "text": "Root cause analysis: immediate cause, underlying causes, root cause",
+              "detail": "Use 5-whys or a fishbone diagram. Look for system causes (design, procedure, staffing, training, supervision), not just 'employee error'."
+            },
+            {
+              "id": "i52",
+              "type": "field",
+              "text": "Corrective and preventive actions: action, control level, owner, due date, verification method and date",
+              "detail": "Work down the hierarchy of controls: elimination, substitution, engineering controls, administrative controls, then PPE."
+            },
+            {
+              "id": "i53",
+              "type": "field",
+              "text": "Programs and risk assessments updated",
+              "detail": "IIPP and WVPP (California), Accident Prevention Program (Washington), Gefährdungsbeurteilung under the ArbSchG (Germany), OSH plan (Taiwan), Ontario violence program, chemical hygiene plan."
+            },
+            {
+              "id": "i54",
+              "type": "check",
+              "text": "The safety investigation is kept separate from discipline, and any post-incident drug testing is lawful and doesn't deter reporting (29 CFR 1904.35(b)(1)(iv))."
+            },
+            {
+              "id": "i55",
+              "type": "check",
+              "text": "No retaliation: reporting an injury or filing a claim is protected (OSH Act 11(c), LC 132a, Texas Labor Code 451.001, NC REDA). ER reviews any adverse action against the injured person or reporter before it happens."
+            },
+            {
+              "id": "i56",
+              "type": "check",
+              "text": "A lessons-learned note goes to similar labs and sites within 30 days."
+            }
+          ]
+        },
+        {
+          "title": "Closure & retention",
+          "items": [
+            {
+              "id": "i57",
+              "type": "check",
+              "text": "EHS verifies that corrective actions work before closing the case; overdue actions are escalated monthly."
+            },
+            {
+              "id": "i58",
+              "type": "check",
+              "text": "The OSHA 300A (or state equivalent) is certified by a company executive and posted from Feb 1 to Apr 30, and ITA data is submitted by Mar 2 where the establishment is covered."
+            },
+            {
+              "id": "i59",
+              "type": "field",
+              "text": "Retention",
+              "detail": "OSHA 300, 301 and 300A: 5 years after the end of the calendar year. California violent incident log, WVPP hazard and investigation records: 5 years (training records 1 year). Lab exposure and medical records: 30 years (29 CFR 1910.1020). Germany first-aid log (Verbandbuch): 5 years. Claims files: per DS-03, and until any claim or litigation ends."
+            },
+            {
+              "id": "i60",
+              "type": "check",
+              "text": "A legal hold is issued where litigation, an inspection or a disputed claim is foreseeable (ER-09)."
+            },
+            {
+              "id": "i61",
+              "type": "check",
+              "text": "The case is closed in the incident system, medical data sits in the restricted claims file, and no data leaves its country without a PIPL, PDPL or GDPR transfer basis."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "One record, many outputs: complete Part 1 once, and EHS derives the OSHA 300 entry, the California violent incident log, local accident registers and the claim from it.",
+        "Phone first, write later. The 8-hour regulator notices and California's 1-working-day DWC-1 rule run from the company's knowledge, so the manager calls EHS before finishing the form.",
+        "Keep the violent incident log free of names and other identifying details; those stay in the restricted ER-07 case file.",
+        "Keep safety investigations separate from discipline, and review incentive programs and drug testing so they don't discourage reporting. A high near-miss count is a sign of health.",
+        "Treat medical and injury data as sensitive in every country: store it in the restricted claims file and give managers work restrictions only.",
+        "Contractors, interns, visitors and customer or foundry staff injured in our labs are in scope. Agree in advance with agencies and host sites who records and who claims."
+      ],
+      "countryNotes": {
+        "us": "Report fatalities to federal OSHA within 8 hours and inpatient hospitalizations, amputations or eye loss within 24 hours; log cases within 7 days, keep records 5 years and post the 300A from Feb 1 to Apr 30. There is no federal workplace-violence standard, but violent-incident injuries are recorded like any other case and the General Duty Clause applies.",
+        "us-ca": "Report serious injuries, illnesses and deaths to Cal/OSHA within 8 hours (8 CCR 342) and give the DWC-1 within 1 working day (LC 5401). Log every workplace violence incident, including threats, under SB 553 (LC 6401.9), with 5-year retention and employee access within 15 days.",
+        "us-co": "Colorado has no state OSHA plan, so federal reporting and recordkeeping apply. File the Employer's First Report within 10 days for lost time over 3 shifts or permanent impairment, and give the designated provider list.",
+        "us-nc": "NCDOL's OSH Division (a state plan) takes fatality reports within 8 hours and hospitalization, amputation or eye-loss reports within 24 hours. File Industrial Commission Form 19 within 5 days where the injury causes more than 1 day's absence or medical costs over $4,000.",
+        "us-tx": "Federal OSHA applies. Subscribers file DWC Form-001 within 8 days of an injury causing more than 1 day of lost time; non-subscribers file DWC Form-007 monthly, lose common-law defenses and should send every injury to Legal.",
+        "us-wa": "Report deaths or inpatient hospitalizations to DOSH within 8 hours and amputations or eye loss within 24 hours (WAC 296-27). L&I is the exclusive insurer unless the company self-insures; the provider files the claim, and light duty can qualify for Stay at Work reimbursement.",
+        "ca": "Ontario: WSIB Form 7 within 3 business days, and immediate notice plus a written report for critical injuries and deaths, with the scene preserved (OHSA s.51; verify timing). BC: report to WorkSafeBC within 3 days and complete the employer investigations; both provinces require workplace violence programs.",
+        "de": "Send the Unfallanzeige to the Berufsgenossenschaft within 3 days for a death or more than 3 days' incapacity (§193 SGB VII), co-signed by the works council, and record every first-aid case in the Verbandbuch (keep 5 years). Update the ArbSchG risk assessment after incidents and review them at the quarterly safety committee.",
+        "il": "Complete the employer's part of NII Form 250 and notify serious accidents to the OSH Administration under the 1945 Notification Ordinance. Investigate with the safety trustees or committee where they exist; commuting and home-office injuries can be work injuries.",
+        "in": "Report fatal and serious accidents to the inspector under the OSH Code rules and keep an accident register. ESI-covered staff claim through ESIC, and others through the employer's SS Code Ch. VII liability; sexual violence also goes to the Internal Committee.",
+        "tw": "Report a death, 3+ injured or 1+ hospitalized within 8 hours (OSH Act Art. 37). The employer owes medical costs and full wages during treatment (LSA Art. 59) and can't terminate during it; sites with 100+ workers need a written violence-prevention plan (OSH Act Art. 6(2)).",
+        "cn": "Report production-safety accidents promptly (the enterprise head's 1-hour rule; verify) and apply for work-injury recognition within 30 days. Keep incident records in Chinese and in China, and don't terminate during the medical treatment period.",
+        "vn": "Report fatal and serious accidents immediately to the provincial labour authority and police, investigate under Decree 39/2016 and keep the accident log. The employer pays treatment costs, full salary during treatment and OSH Law Art. 38 compensation on top of insurance benefits."
+      },
+      "processes": [
+        "HS-01",
+        "ER-07",
+        "LV-04"
+      ],
+      "policies": [
+        "POL-51",
+        "POL-11",
+        "POL-02",
+        "POL-35",
+        "POL-36",
+        "POL-46",
+        "POL-49"
+      ]
+    },
+    {
+      "id": "T-COMPLAINT-INTAKE",
+      "name": "Complaint intake form",
+      "category": "Relations",
+      "format": "form",
+      "purpose": "Captures a concern completely and consistently at first contact, whatever the channel, and routes it to the right owner or statutory committee within 2 business days. It also records interim measures and the acknowledgment and non-retaliation messages, so the company can show it acted promptly and fairly.",
+      "audience": "Employee Relations and Ethics & Compliance intake staff, HRBPs, managers who receive a complaint, hotline vendor operators, and members of India's Internal Committee and Taiwan's complaint-handling bodies.",
+      "when": "At first contact, or within 1 business day of any concern however it is raised; a formal written complaint isn't needed. Triage is completed within 2 business days, and urgent safety matters are handled at once.",
+      "owner": "Employee Relations (intake and triage); Ethics & Compliance (hotline and SOX 301 matters)",
+      "sections": [
+        {
+          "title": "Intake details",
+          "items": [
+            {
+              "id": "i1",
+              "type": "field",
+              "text": "Case ID, date and time received, received by",
+              "detail": "Log the case in case management within 1 business day. Statutory clocks run from receipt."
+            },
+            {
+              "id": "i2",
+              "type": "field",
+              "text": "Intake channel",
+              "detail": "Speak Up hotline or web portal / email / manager / HRBP or ER / exit interview / India IC directly / Taiwan complaint channel / Germany AGG complaint office, HinSchG reporting office or works council / Israel sexual harassment commissioner / agency charge or lawyer's letter / anonymous letter or social media."
+            },
+            {
+              "id": "i3",
+              "type": "field",
+              "text": "Language used, and whether an interpreter is needed"
+            },
+            {
+              "id": "i4",
+              "type": "field",
+              "text": "Anonymous? (Y/N). If yes, how will follow-up happen?",
+              "detail": "Use the hotline case number and PIN for two-way messaging. Accept anonymous reports wherever lawful, and never try to identify the reporter."
+            },
+            {
+              "id": "i5",
+              "type": "field",
+              "text": "Complainant's name, ID, role, location, manager and preferred contact method (if not anonymous)"
+            },
+            {
+              "id": "i6",
+              "type": "field",
+              "text": "Complainant's relationship to the company",
+              "detail": "Employee / applicant / former employee / contractor / customer or supplier / other third party."
+            },
+            {
+              "id": "i7",
+              "type": "field",
+              "text": "Raised on someone else's behalf? By whom, and does the affected person know?"
+            }
+          ]
+        },
+        {
+          "title": "The concern",
+          "items": [
+            {
+              "id": "i8",
+              "type": "field",
+              "text": "What happened, in the complainant's own words",
+              "detail": "Quote words that were said. Don't summarize or label it; write 'harassment' only if the complainant used that word."
+            },
+            {
+              "id": "i9",
+              "type": "field",
+              "text": "When: dates and times, and whether it is ongoing",
+              "detail": "Note any time limits: India POSH complaints are due within 3 months of the last incident (extendable by 3); German AGG claims within 2 months."
+            },
+            {
+              "id": "i10",
+              "type": "field",
+              "text": "Where: site, lab, meeting, offsite event, chat or video platform, social media",
+              "detail": "Online conduct counts (Ontario OHSA since 2024; Taiwan's bullying chapter covers remote work)."
+            },
+            {
+              "id": "i11",
+              "type": "field",
+              "text": "Who: the people involved, their roles and their reporting relationship to the complainant",
+              "detail": "Flag it if anyone involved is a senior leader, in HR or ER, a board member, or a customer or vendor representative."
+            },
+            {
+              "id": "i12",
+              "type": "field",
+              "text": "Witnesses and others who may know: names and roles"
+            },
+            {
+              "id": "i13",
+              "type": "field",
+              "text": "Evidence available: messages, emails, photos, documents, recordings",
+              "detail": "Ask for copies. Don't ask for access to personal accounts or devices (CA LC 980; RCW 49.44.200). If a recording was made without all-party consent, escalate to Legal before using it."
+            },
+            {
+              "id": "i14",
+              "type": "field",
+              "text": "Prior reports: raised before? With whom, when, and what happened?"
+            },
+            {
+              "id": "i15",
+              "type": "field",
+              "text": "Outcome the complainant is looking for",
+              "detail": "Record it, and explain that the company decides the response after looking into the matter. It may act where others are at risk even if the complainant prefers it didn't."
+            },
+            {
+              "id": "i16",
+              "type": "field",
+              "text": "Allegation categories (select all that apply)",
+              "detail": "Sexual or other harassment / discrimination / retaliation / bullying / violence or threat / fraud, accounting or securities / bribery / conflict of interest / trade secrets or data / export control or sanctions / safety / wage and hour / privacy / other misconduct / interpersonal or management concern."
+            }
+          ]
+        },
+        {
+          "title": "Safety & retaliation risk",
+          "items": [
+            {
+              "id": "i17",
+              "type": "question",
+              "text": "Are you or anyone else in danger right now, or has anyone threatened violence?",
+              "detail": "If yes, call Security or emergency services and open an ER-07 threat assessment immediately; consider a workplace violence restraining order in California (CCP 527.8)."
+            },
+            {
+              "id": "i18",
+              "type": "question",
+              "text": "Has anything happened to you since you raised this, or are you worried that something will?",
+              "detail": "Record specifics. From now on, ER and Legal review any adverse action affecting the complainant before it happens."
+            },
+            {
+              "id": "i19",
+              "type": "question",
+              "text": "Do you still work with or report to the person involved? Do you need any changes while this is looked into?"
+            },
+            {
+              "id": "i20",
+              "type": "check",
+              "text": "Protected-activity flags checked: whistleblower, wage, safety or equal-pay complaint (90-day retaliation presumptions under CA LC 1102.5 and SB 497, and Colorado HB 25-1001), a SOX 806 securities report, or recent leave or an accommodation request."
+            }
+          ]
+        },
+        {
+          "title": "Triage & routing",
+          "items": [
+            {
+              "id": "i21",
+              "type": "field",
+              "text": "Risk tier",
+              "detail": "Tier 1: senior leader, accounting or securities, export control or sanctions, violence, sexual assault, or anything government-facing; Legal directs. Tier 2: harassment, discrimination, retaliation, trade secrets. Tier 3: interpersonal and policy issues."
+            },
+            {
+              "id": "i22",
+              "type": "field",
+              "text": "Routing decision",
+              "detail": "ER (harassment, discrimination, bullying, conduct) / Ethics & Compliance (fraud, bribery, conflicts, accounting; reported to the audit committee under SOX 301) / Legal (Tier 1, privilege, threatened litigation, agency charges) / Security (violence, theft, trade secrets, insider threat) / EHS (safety) / Trade Compliance (export control)."
+            },
+            {
+              "id": "i23",
+              "type": "field",
+              "text": "Statutory committee route",
+              "detail": "India: sexual harassment complaints by women go to the office's Internal Committee (POSH Act s.9), not the hotline team. Taiwan: sexual harassment follows the GEEA complaint procedure with notice to the local authority; bullying follows the OSH Act chapter in force from 1 July 2026, with MOL case registration. Israel: the sexual harassment commissioner. Germany: AGG complaint office and HinSchG reporting office. Vietnam: the procedure in the internal labour regulations."
+            },
+            {
+              "id": "i24",
+              "type": "field",
+              "text": "Investigator assigned, and independence check",
+              "detail": "No reporting line, prior involvement or personal relationship with the parties. Use an external investigator where an executive or HR is implicated."
+            },
+            {
+              "id": "i25",
+              "type": "field",
+              "text": "Legal-directed (privileged)? Legal hold needed? (Y/N for each)"
+            },
+            {
+              "id": "i26",
+              "type": "field",
+              "text": "Statutory acknowledgment and feedback dates",
+              "detail": "Germany HinSchG: acknowledge within 7 days, give feedback within 3 months. India POSH: the IC sends the complaint to the respondent within 7 working days. SOX-relevant matters go on the audit committee's quarterly report."
+            },
+            {
+              "id": "i27",
+              "type": "field",
+              "text": "Decision not to investigate, with the reason",
+              "detail": "Only where the matter is already resolved, outside the company's control, or too vague to act on after reasonable follow-up. Record the decision and tell the complainant."
+            }
+          ]
+        },
+        {
+          "title": "Interim measures",
+          "items": [
+            {
+              "id": "i28",
+              "type": "field",
+              "text": "Interim measures considered and taken, with reasons",
+              "detail": "Schedule or seating change, change of reporting line, remote work, no-contact instruction to both parties, paid administrative leave for the respondent, suspended system access, leave for the complainant if they ask for it. In India, the IC can recommend a transfer or up to 3 months' leave for the complainant (POSH Act s.12)."
+            },
+            {
+              "id": "i29",
+              "type": "field",
+              "text": "Respondent suspension: paid or unpaid, duration, local limits",
+              "detail": "Vietnam: up to 15 days (90 in special cases), after consulting the union, with a 50% salary advance (LC Art. 128). India: subsistence allowance under the standing orders. Canada and Germany: keep it paid to avoid constructive dismissal and pay claims."
+            },
+            {
+              "id": "i30",
+              "type": "note",
+              "text": "Interim measures must not disadvantage the complainant, so don't move or reschedule them against their wishes. Measures affecting the respondent are neutral and are not a finding."
+            }
+          ]
+        },
+        {
+          "title": "Acknowledgment & next steps",
+          "items": [
+            {
+              "id": "i31",
+              "type": "say",
+              "text": "Thank you for raising this. It isn't always easy to speak up, and you've done the right thing by telling us."
+            },
+            {
+              "id": "i32",
+              "type": "say",
+              "text": "I'll pass this to [Employee Relations / the Internal Committee / Ethics & Compliance], who will look into it fairly and promptly. I can't promise a particular outcome, but I can promise we'll take it seriously and keep you updated."
+            },
+            {
+              "id": "i33",
+              "type": "say",
+              "text": "We'll keep this as confidential as we can and share it only with people who need to know to look into it or act on it. I can't promise complete confidentiality, because we may need to speak to others."
+            },
+            {
+              "id": "i34",
+              "type": "say",
+              "text": "The Company doesn't tolerate retaliation against anyone who raises a concern in good faith or helps with an investigation. If anything happens that feels like retaliation, tell me or the Speak Up line straight away."
+            },
+            {
+              "id": "i35",
+              "type": "say",
+              "text": "Nothing in this process stops you from contacting a government agency, such as the EEOC, the SEC or a labor authority, or from talking about your own pay and working conditions."
+            },
+            {
+              "id": "i36",
+              "type": "say",
+              "text": "[Name] will contact you by [date]. If anything urgent happens before then, contact [channel]."
+            },
+            {
+              "id": "i37",
+              "type": "para",
+              "text": "Dear [Name], thank you for contacting us on [date] about [general description, without allegations]. [Team] will review your concern, and [investigator name] will contact you by [date]. We will handle this as confidentially as possible. The Company prohibits retaliation against anyone who raises a concern in good faith or takes part in an investigation, and nothing in this process limits your right to contact any government agency. If you experience anything you think may be retaliation, please contact [name, email] or the Speak Up line at [link]. [Signature]"
+            },
+            {
+              "id": "i38",
+              "type": "check",
+              "text": "Written acknowledgment sent within 2 business days (for non-anonymous complainants), with the Speak Up policy link; date sent and sender recorded."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Any expression of concern is a complaint. Don't wait for the word 'complaint', a written form or a particular channel.",
+        "Record the complainant's words, not your conclusion. Labels such as 'personality clash' in intake notes are hard to defend later.",
+        "Route before fact-finding: an India POSH complaint handled by the hotline team instead of the IC is a procedural defect that can undo the outcome.",
+        "Never promise absolute confidentiality or a particular outcome, and never ask anyone to stay silent about agency contacts or their own working conditions (Stericycle, Rule 21F-17).",
+        "Interim measures protect people and evidence, but must not disadvantage the complainant. Record why each measure was or wasn't taken.",
+        "Anonymous reports get the same triage. Use the vendor's two-way messaging for follow-up questions, and never try to unmask a reporter."
+      ],
+      "countryNotes": {
+        "us": "SOX 301 requires confidential, anonymous channels for accounting and auditing concerns, and nothing in the intake script may discourage SEC reporting or require notice to the company first (Rule 21F-17). Treat a securities-fraud report as SOX 806 protected activity from the moment it's logged.",
+        "us-ca": "Offer a route that bypasses the direct supervisor and commit to timely, impartial investigation (2 CCR 11023). Adverse action within 90 days of a whistleblower or wage complaint is presumed retaliatory (LC 1102.5, SB 497), so flag those cases at intake.",
+        "us-co": "Log every discrimination or harassment complaint (date, complainant, alleged harasser, substance) in a central repository kept at least 5 years (POWR Act). Adverse action within 90 days of a wage complaint is presumed retaliatory (HB 25-1001).",
+        "us-nc": "There is no state intake or hotline mandate. Send workers' comp, wage-hour, OSH and domestic-violence leave concerns to Employment Legal quickly, because REDA gives employees 180 days to file with NCDOL.",
+        "us-tx": "Route sexual harassment reports to HR at once: employers with 1+ employee and individual supervisors are liable if they fail to take immediate and appropriate corrective action (Labor Code 21.141-21.142).",
+        "us-wa": "WLAD defenses need a route that bypasses the supervisor, and neither intake scripts nor resolution agreements may stop anyone reporting illegal conduct (Silenced No More, RCW 49.44.211).",
+        "ca": "Ontario's OHSA program needs an alternative channel when the supervisor is the alleged harasser, and every complaint, including virtual harassment, must be investigated. BC requires written reporting procedures, and retaliating against someone who reports an offence to authorities is a crime (Criminal Code s.425.1).",
+        "de": "At 50+ employees the HinSchG reporting office must acknowledge reports within 7 days and give feedback within 3 months. AGG complaints go to the §13 complaint office, and employees may also complain to the works council (§85 BetrVG); give GDPR Art. 13/14 notices to the reporter and, when it won't compromise the inquiry, to the accused.",
+        "il": "Route sexual harassment complaints from any channel to the commissioner named in the bylaw, who must investigate promptly (Prevention of Sexual Harassment Regulations 1998). Reports of offences are protected under the Protection of Workers (Exposure of Offences) Law 1997.",
+        "in": "Sexual harassment complaints by women go to the IC in writing within 3 months of the incident (extendable by 3), and the IC helps a complainant put the complaint in writing; the hotline team must not resolve them. The global hotline also serves as the Companies Act s.177 vigil mechanism.",
+        "tw": "Sexual harassment complaints trigger GEEA duties, including notifying the local labor authority of the complaint and outcome, and bullying complaints from 1 July 2026 must be registered in MOL's system. Complaints against the highest-ranking responsible person can go directly to the local authority.",
+        "cn": "The Women's Rights Law (2022) Art. 25 requires a sexual harassment complaint channel. Hotline data sent to a US vendor needs a PIPL notice, a transfer basis and a PIPIA; keep intake notes in Chinese where they may become arbitration evidence.",
+        "vn": "Follow the complaint procedure in the registered internal labour regulations (Decree 145/2020 Arts. 84-85). Intake hosted in the US is a cross-border transfer that needs the ILR-based HR exemption or a transfer impact assessment under the PDPL."
+      },
+      "processes": [
+        "ER-01",
+        "ER-02",
+        "ER-03"
+      ],
+      "policies": [
+        "POL-02",
+        "POL-01",
+        "POL-09",
+        "POL-10",
+        "POL-11",
+        "POL-13",
+        "POL-46"
+      ]
+    },
+    {
+      "id": "T-WITNESS-GUIDE",
+      "name": "Witness interview guide",
+      "category": "Relations",
+      "format": "guide",
+      "purpose": "Gives investigators a structured, fair way to interview complainants, witnesses and respondents, so the evidence is complete, reliable and defensible. It supplies the opening and closing scripts, question sequence and note-taking standards used in every ER-02 investigation.",
+      "audience": "Employee Relations investigators, HRBPs assisting them, Ethics & Compliance, in-house and external counsel, external investigators, and (adapted to their rules) India IC and Taiwan investigation committee members.",
+      "when": "For every interview in an ER-02 investigation, once the investigation plan (T-INVESTIGATION) is set; re-used for follow-up interviews when new facts emerge.",
+      "owner": "Employee Relations",
+      "sections": [
+        {
+          "title": "Preparation",
+          "items": [
+            {
+              "id": "i1",
+              "type": "check",
+              "text": "Review the intake record, investigation plan and allegation list, and write down what this person is likely to know."
+            },
+            {
+              "id": "i2",
+              "type": "check",
+              "text": "Confirm the interview order (usually complainant, witnesses, respondent, then follow-ups) and plan to re-interview if new facts emerge."
+            },
+            {
+              "id": "i3",
+              "type": "check",
+              "text": "Book a private room or secure video link for 60-90 minutes, and schedule it so that others aren't alerted."
+            },
+            {
+              "id": "i4",
+              "type": "check",
+              "text": "Arrange a second person to take notes and, if needed, an independent interpreter who isn't a colleague of the parties."
+            },
+            {
+              "id": "i5",
+              "type": "check",
+              "text": "Ask about accommodation needs (accessibility, breaks, religious observance, time zone), and avoid scheduling during protected leave where possible."
+            },
+            {
+              "id": "i6",
+              "type": "check",
+              "text": "Representation: a union-represented US employee may ask for a Weingarten representative at an interview they reasonably believe could lead to discipline. Allow any representative that local law, a collective agreement or a works agreement provides."
+            },
+            {
+              "id": "i7",
+              "type": "check",
+              "text": "Select and copy the documents to show; don't show witnesses the full complaint."
+            },
+            {
+              "id": "i8",
+              "type": "check",
+              "text": "Decide on recording with Legal. California and Washington need all-party consent; in one-party-consent states (Colorado, North Carolina, Texas), still announce any recording."
+            },
+            {
+              "id": "i9",
+              "type": "note",
+              "text": "If Legal directs the investigation, counsel (or someone working at counsel's direction) conducts the interview and gives the Upjohn warning."
+            }
+          ]
+        },
+        {
+          "title": "Opening script",
+          "items": [
+            {
+              "id": "i10",
+              "type": "say",
+              "text": "Thank you for meeting with me. I'm [name], [role / firm]. [Name] is here to take notes."
+            },
+            {
+              "id": "i11",
+              "type": "say",
+              "text": "(Witness or complainant) I've been asked to look into some concerns. I haven't reached any conclusions, and being asked to speak with me doesn't mean you've done anything wrong."
+            },
+            {
+              "id": "i12",
+              "type": "say",
+              "text": "(Respondent) Some concerns have been raised about your conduct, and I want to hear your side before any conclusions are reached. I'll go through each point, and you'll have a full chance to respond."
+            },
+            {
+              "id": "i13",
+              "type": "say",
+              "text": "(Upjohn warning, when counsel interviews) I'm a lawyer for the Company, not for you personally. This conversation is covered by the Company's attorney-client privilege, but that privilege belongs to the Company, which may decide to waive it and share what you tell me with others, including government agencies. Nothing about this stops you from contacting a government agency yourself. Do you understand, and do you have any questions?"
+            },
+            {
+              "id": "i14",
+              "type": "say",
+              "text": "I'll keep what you tell me as confidential as I can, but I may need to share it with people who need to know to investigate and act, and the person concerned will get a fair chance to respond."
+            },
+            {
+              "id": "i15",
+              "type": "say",
+              "text": "While the investigation is open, I'd ask you not to discuss the questions I ask with other witnesses, so everyone's account stays their own. This doesn't stop you from talking about your own pay or working conditions, speaking to a lawyer or representative, or contacting any government agency, such as the EEOC, the NLRB or the SEC."
+            },
+            {
+              "id": "i16",
+              "type": "say",
+              "text": "The Company prohibits retaliation against anyone who raises a concern or takes part in an investigation, and that includes you. If anything happens that feels like retaliation, tell me or the Speak Up line straight away."
+            },
+            {
+              "id": "i17",
+              "type": "say",
+              "text": "Please tell me what you saw or heard yourself, and let me know when you're repeating what someone else told you. If you don't know or don't remember, just say so."
+            },
+            {
+              "id": "i18",
+              "type": "say",
+              "text": "You can ask for a break at any time. Do you have any questions before we start?"
+            }
+          ]
+        },
+        {
+          "title": "Questions: open, then specific",
+          "intro": "Move from open narrative to specific, closed questions. Ask one question at a time and don't lead.",
+          "items": [
+            {
+              "id": "i19",
+              "type": "prompt",
+              "text": "\"Tell me, in your own words, what happened.\"",
+              "detail": "Let the person finish without interrupting. Probes: 'What happened next?' 'What else?' 'Take me back to the start of that meeting.'"
+            },
+            {
+              "id": "i20",
+              "type": "prompt",
+              "text": "\"When and where did this happen?\"",
+              "detail": "Pin down dates using anchors such as projects, tape-outs, travel, meetings, calendar entries and messages."
+            },
+            {
+              "id": "i21",
+              "type": "prompt",
+              "text": "\"Who was there? Who else might have seen or heard something?\""
+            },
+            {
+              "id": "i22",
+              "type": "prompt",
+              "text": "\"What exactly was said or done? What words were used?\"",
+              "detail": "Ask for the exact words, tone and gestures. Ask the person to show you if that helps."
+            },
+            {
+              "id": "i23",
+              "type": "prompt",
+              "text": "\"How did you react, and how did the other person respond?\""
+            },
+            {
+              "id": "i24",
+              "type": "prompt",
+              "text": "\"Did you tell anyone at the time, or write anything down?\"",
+              "detail": "Reports and notes made at the time corroborate an account; get names and dates."
+            },
+            {
+              "id": "i25",
+              "type": "prompt",
+              "text": "\"Are there messages, emails, chats, photos or documents about this?\"",
+              "detail": "Ask the person to forward copies from company systems. Don't ask for access to personal accounts or devices."
+            },
+            {
+              "id": "i26",
+              "type": "prompt",
+              "text": "\"Has anything like this happened before, to you or anyone else?\""
+            },
+            {
+              "id": "i27",
+              "type": "question",
+              "text": "Specific points for this witness, e.g.: \"Were you in the [lab / meeting] on [date]? Did you hear [person] say '[words]'?\"",
+              "detail": "Put specific points only after the open account, and reveal no more of the allegation than you need to."
+            },
+            {
+              "id": "i28",
+              "type": "prompt",
+              "text": "Respondent: put each allegation with its specifics (date, place, words, conduct), then ask: \"What's your response?\" \"Is there anything that would help me understand what happened?\" \"Who else should I speak to, and what should I look at?\""
+            },
+            {
+              "id": "i29",
+              "type": "prompt",
+              "text": "\"Is there anything I haven't asked that you think I should know?\""
+            }
+          ]
+        },
+        {
+          "title": "Documents & credibility",
+          "items": [
+            {
+              "id": "i30",
+              "type": "prompt",
+              "text": "Showing a document: give the person time to read it, then ask: \"Do you recognize this? Who wrote it, and when? What did you understand it to mean?\"",
+              "detail": "Log which documents were shown, and don't leave copies with the witness."
+            },
+            {
+              "id": "i31",
+              "type": "prompt",
+              "text": "Inconsistencies: \"Earlier you mentioned [x], and [the document / timeline] suggests [y]. Can you help me understand that?\"",
+              "detail": "Raise inconsistencies neutrally, without saying who said what."
+            },
+            {
+              "id": "i32",
+              "type": "field",
+              "text": "Credibility observations",
+              "detail": "Record observations, not conclusions: inherent plausibility, corroboration, internal consistency and consistency with documents, motive to falsify, whether the person was in a position to see or hear, and past record. Demeanor carries little weight and may reflect culture, language or stress."
+            },
+            {
+              "id": "i33",
+              "type": "note",
+              "text": "Don't share your view of the evidence or other people's accounts during the interview, and don't hint at an outcome."
+            }
+          ]
+        },
+        {
+          "title": "Closing script",
+          "items": [
+            {
+              "id": "i34",
+              "type": "say",
+              "text": "Thank you. Is there anything you'd like to add or correct?"
+            },
+            {
+              "id": "i35",
+              "type": "say",
+              "text": "I'll send you a summary of what we discussed. Please review it and tell me by [date] if anything is inaccurate or missing."
+            },
+            {
+              "id": "i36",
+              "type": "say",
+              "text": "If you remember anything else, or receive messages or documents about this, please contact me directly."
+            },
+            {
+              "id": "i37",
+              "type": "say",
+              "text": "As I mentioned, please don't discuss the questions from this interview with other witnesses while the investigation is open. You're free to talk to a lawyer, a representative or any government agency, and please tell me straight away if anything happens that feels like retaliation."
+            },
+            {
+              "id": "i38",
+              "type": "say",
+              "text": "Next, I'll speak to others and review documents. [Complainant or respondent: We'll let you know when it's finished and what we can share about the outcome.] [Witness: I can't share the outcome with witnesses, but the people directly involved will be told.]"
+            },
+            {
+              "id": "i39",
+              "type": "check",
+              "text": "Straight after the interview, the investigator and note-taker compare notes and list follow-ups on the same day."
+            }
+          ]
+        },
+        {
+          "title": "Note-taking standards",
+          "items": [
+            {
+              "id": "i40",
+              "type": "check",
+              "text": "Record the date, start and end times, location or platform, everyone present (including representatives and interpreters) and the language used."
+            },
+            {
+              "id": "i41",
+              "type": "check",
+              "text": "Write down the questions and answers, using direct quotes for key statements. Record non-verbal events factually, e.g., 'paused for about 10 seconds' or 'showed a text message dated 3 May'."
+            },
+            {
+              "id": "i42",
+              "type": "check",
+              "text": "Leave out opinions, conclusions and personal comments; notes may be produced to the other party, an agency or a court."
+            },
+            {
+              "id": "i43",
+              "type": "check",
+              "text": "Mark notes 'Privileged & Confidential - Prepared at the direction of counsel' only when Legal is directing the investigation."
+            },
+            {
+              "id": "i44",
+              "type": "check",
+              "text": "Type up notes within 24 hours and file them in the restricted case folder. Don't keep personal copies or use personal devices."
+            },
+            {
+              "id": "i45",
+              "type": "check",
+              "text": "Send the witness a summary or statement to confirm or correct, and keep both versions. In China, Taiwan and Vietnam, a statement signed in the local language strengthens the evidence."
+            },
+            {
+              "id": "i46",
+              "type": "check",
+              "text": "Don't put interview content into any generative AI tool that hasn't been approved for confidential investigation data."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Ask open questions first and specific ones later. Leading or closed questions early on shape the account and weaken it as evidence.",
+        "NLRA limits in the US: under Stericycle, a blanket or mandatory confidentiality instruction to non-supervisory employees risks a Section 7 violation. Request rather than require confidentiality, tie it to the open investigation, and always carve out agency contacts and discussion of pay and working conditions (Rule 21F-17 for the SEC).",
+        "Give the Upjohn warning at the start of every counsel-led interview and note that it was given; without it, an employee may later claim the lawyer was acting for them.",
+        "Every respondent must hear every material allegation in enough detail to answer it. Skipping this weakens the finding everywhere and is fatal in India, Germany, Israel and Vietnam.",
+        "Interview in the person's language with an independent interpreter. Lost nuance is a common source of apparent 'inconsistency'.",
+        "Witnesses aren't told the outcome; the complainant and respondent are told what local rules require, e.g., written results in Ontario."
+      ],
+      "countryNotes": {
+        "us": "Weingarten rights apply only to union-represented employees who ask. Under Stericycle (still binding), request rather than require confidentiality, carve out Section 7 activity and agency contacts, and never discourage SEC reporting (Rule 21F-17).",
+        "us-ca": "Recording needs all-party consent (Penal Code 632), and investigators can't ask for access to personal social media (LC 980). Investigations must be timely and impartial, by qualified investigators, with documented findings (2 CCR 11023).",
+        "us-co": "Colorado needs only one party's consent to record, but announce any recording. Assess conduct against the POWR Act standard, which doesn't require 'severe or pervasive' conduct, and don't ask for personal social media access (C.R.S. 8-2-127).",
+        "us-nc": "Recording needs only one party's consent (G.S. 15A-287), and there is no investigation statute, so follow this guide. When interviewing managers, probe for REDA-protected activity such as workers' comp claims or wage-hour or safety complaints.",
+        "us-tx": "Texas needs only one party's consent to record (Penal Code 16.02), but announce it anyway. Start sexual harassment interviews immediately, given the 'immediate and appropriate corrective action' standard.",
+        "us-wa": "Recording needs all-party consent (RCW 9.73.030), and investigators can't demand personal social media access (RCW 49.44.200). Keep interview notes in the investigation file, because personnel-file records must be produced within 21 days on request (HB 1308).",
+        "ca": "Ontario requires an investigation appropriate to the circumstances and written results to both parties, and an inspector can order a third-party investigation if interviews fall short (OHSA s.55.3). Keep device and account reviews proportionate, given intrusion-upon-seclusion claims and BC PIPA.",
+        "de": "There is no general right to a works council member at investigation interviews, but works agreements often provide one, and employees may bring one to performance and career discussions (§82(2) BetrVG; verify). Before a suspicion dismissal, hear the employee on specific allegations, normally within about a week, because the 2-week §626(2) BGB clock runs once the facts are sufficiently known; protect the reporter's identity (§8 HinSchG).",
+        "il": "The sexual harassment commissioner investigates under the 1998 Regulations and gives written findings and recommendations to the employer, which decides. Any disciplinary outcome needs a separate hearing, and electronic evidence is limited by Isakov (no private webmail).",
+        "in": "Under the POSH Rules (r.7), the IC sends the complaint to the respondent within 7 working days, the respondent replies within 10, parties can't be represented by lawyers, and the inquiry must end within 90 days under natural justice. For other misconduct by 'workers', interviews feed a domestic enquiry with cross-examination rights.",
+        "tw": "Harassment investigations must be impartial and confidential and must let both parties state their views; bullying investigations from 1 July 2026 may need committees with at least half external members. Take signed statements in Traditional Chinese, and act within 30 days if an Art. 12 summary dismissal may follow.",
+        "cn": "Interview in Mandarin (or the witness's dialect) and take signed Chinese statements, which carry weight in arbitration; never restrict anyone's liberty or confiscate personal phones. Collect personal data under a PIPL notice and keep interview records in China unless a transfer basis exists.",
+        "vn": "Take signed Vietnamese statements. If discipline may follow, the employee may defend themselves or be represented by a lawyer or the union at the disciplinary meeting (LC Art. 122), so the notes must support a specific charge within the 6-month limitation period (12 months for finance, property or secrets)."
+      },
+      "processes": [
+        "ER-02"
+      ],
+      "policies": [
+        "POL-02",
+        "POL-09",
+        "POL-10",
+        "POL-13",
+        "POL-46",
+        "POL-47"
+      ]
+    },
+    {
+      "id": "T-WARNING",
+      "name": "Written warning / corrective action letter",
+      "category": "Relations",
+      "format": "letter",
+      "purpose": "Gives managers and Employee Relations a consistent written warning that states the issue, the expectation, the required improvement and the consequences, and gives the employee a real chance to respond. The pre-issue checklist catches consistency, retaliation and local-procedure problems before the letter goes out.",
+      "audience": "Managers (who sign and deliver it), HRBPs and Employee Relations (drafting and review), Legal (final warnings and protected-activity cases), and the employee.",
+      "when": "After an investigation or documented discussions show a conduct breach, or a gap that coaching hasn't fixed. Issue promptly, normally within 2 weeks of the facts being established and always within statutory limits such as Taiwan's 30 days.",
+      "owner": "Employee Relations (template and review); manager (issue and delivery)",
+      "sections": [
+        {
+          "title": "Pre-issue checklist",
+          "items": [
+            {
+              "id": "i1",
+              "type": "check",
+              "text": "Facts established: an investigation (ER-02) or documented observations support each point, and the employee has had a chance to give their side."
+            },
+            {
+              "id": "i2",
+              "type": "check",
+              "text": "Right tool: conduct goes through corrective action (ER-04), and a performance gap on its own normally goes to a PIP (PD-03). Use a warning for performance only where local practice needs one, e.g., a German Abmahnung before a performance dismissal."
+            },
+            {
+              "id": "i3",
+              "type": "check",
+              "text": "Consistency review: compare how similar breaches by others were handled over the last 2-3 years (level, location, protected characteristics), and document any difference."
+            },
+            {
+              "id": "i4",
+              "type": "check",
+              "text": "Protected-activity check: no complaint, whistleblowing, wage or safety report, leave, accommodation request, union or concerted activity, or workers' comp claim in the last 90 days, unless Legal has cleared it (CA SB 497 and Colorado HB 25-1001 presumptions; NLRA Section 7)."
+            },
+            {
+              "id": "i5",
+              "type": "check",
+              "text": "The rule or expectation cited is written, communicated and acknowledged: China, a handbook adopted through democratic procedure; Taiwan, filed work rules; Vietnam, registered internal labour regulations; India, standing orders or service rules."
+            },
+            {
+              "id": "i6",
+              "type": "check",
+              "text": "Local procedure mapped: India show-cause notice or domestic enquiry; Vietnam disciplinary meeting with union notice; Israel hearing; Germany Abmahnung content; Taiwan 30-day window; China union notice if termination may follow."
+            },
+            {
+              "id": "i7",
+              "type": "check",
+              "text": "Penalty is lawful: no fines or pay deductions (banned in Vietnam, need a works agreement in Germany, need payroll authorization in US states), and no unpaid suspension without a contractual or rules basis."
+            },
+            {
+              "id": "i8",
+              "type": "check",
+              "text": "Language and review: the letter is in the employee's working language (Chinese in China and Taiwan, Vietnamese in Vietnam, German where the employee needs it), the HRBP has reviewed it, and Legal has reviewed any final warning."
+            },
+            {
+              "id": "i9",
+              "type": "check",
+              "text": "Automated inputs: if a monitoring or ADS tool informed the decision, a person reviewed it and the rationale is documented (CRD ADS rules; Colorado SB 26-189 from 2027)."
+            }
+          ]
+        },
+        {
+          "title": "Letter",
+          "intro": "Replace everything in [square brackets]. Keep the tone factual and forward-looking, and delete paragraphs that don't apply.",
+          "items": [
+            {
+              "id": "i10",
+              "type": "para",
+              "text": "[Company letterhead] | STRICTLY CONFIDENTIAL | [Date] | To: [Employee name], [Employee ID], [Job title], [Department], [Location] | From: [Manager name], [Title] | Subject: [First / Final] written warning"
+            },
+            {
+              "id": "i11",
+              "type": "para",
+              "text": "This letter is a [first / final] written warning about [brief description of the conduct or performance issue]. On [date(s)], [specific facts: what you did or did not do, where, and who was affected, e.g., 'you left the Lab 3 gas cabinet unlocked and unattended during the 14:00-16:00 test run']."
+            },
+            {
+              "id": "i12",
+              "type": "para",
+              "text": "We have discussed this before. On [date], [manager / HRBP] spoke with you about [issue], and you agreed to [what was agreed]. [On [date], you received a [verbal warning / written reminder] about [issue].]"
+            },
+            {
+              "id": "i13",
+              "type": "para",
+              "text": "This does not meet [the expectations for your role / Section [x] of the [policy name, POL-xx] / Article [x] of the [Employee Handbook / Work Rules / Internal Labour Regulations]], which states that [quote or summarize the rule]. You acknowledged the [policy / handbook] on [date]."
+            },
+            {
+              "id": "i14",
+              "type": "para",
+              "text": "This matters because [impact on safety, customers, colleagues, schedule, security or compliance]."
+            },
+            {
+              "id": "i15",
+              "type": "para",
+              "text": "From now on, you must [specific, observable standard, e.g., 'follow the lab lockout procedure every time you leave a gas cabinet' or 'arrive by 09:30 on on-site days, or tell your manager before 09:00 if you will be late']."
+            },
+            {
+              "id": "i16",
+              "type": "para",
+              "text": "To help you, the Company will [training / coaching / weekly 1:1s / clearer written procedures / EAP information]. If anything is affecting your ability to meet these expectations, including a health or personal matter, please tell me or [HRBP name] so we can consider what support is available."
+            },
+            {
+              "id": "i17",
+              "type": "para",
+              "text": "We will review your progress on [date] and at our regular 1:1s. This warning will stay on your file for [12] months. After that, if there has been no further issue, it will not be relied on for future corrective action. [Adjust where local rules differ.]"
+            },
+            {
+              "id": "i18",
+              "type": "para",
+              "text": "If this [conduct / issue] happens again, or you do not meet the standards above, the Company may take further corrective action, up to and including termination of employment, [in line with applicable law and the [Work Rules / Handbook]]."
+            },
+            {
+              "id": "i19",
+              "type": "para",
+              "text": "You may respond to this letter in writing within [5] working days, and your response will be kept with it in your file. If you believe this warning is unfair, you can also raise it with [HRBP / your next-level manager] or through the Speak Up line. The Company prohibits retaliation for raising a concern."
+            },
+            {
+              "id": "i20",
+              "type": "para",
+              "text": "Nothing in this letter changes the terms of your employment [US: or the at-will nature of your employment], or limits your right to contact any government agency or to discuss your terms and conditions of employment. | [Manager name, title, signature] | cc: HRBP; personnel file"
+            }
+          ]
+        },
+        {
+          "title": "Acknowledgment block",
+          "items": [
+            {
+              "id": "i21",
+              "type": "para",
+              "text": "I acknowledge that I received this letter on [date]. My signature confirms receipt only; it does not mean I agree with the contents."
+            },
+            {
+              "id": "i22",
+              "type": "field",
+              "text": "Employee signature and date"
+            },
+            {
+              "id": "i23",
+              "type": "field",
+              "text": "Employee comments (optional), or 'written response attached'"
+            },
+            {
+              "id": "i24",
+              "type": "field",
+              "text": "Manager signature and date; HR witness name and signature",
+              "detail": "If the employee declines to sign, write 'Delivered on [date]; employee declined to sign' and have the witness initial it."
+            },
+            {
+              "id": "i25",
+              "type": "field",
+              "text": "Delivery method and proof of receipt",
+              "detail": "In person, email with read receipt, or courier. Germany: the warning must reach the employee, so keep proof of receipt. India and Vietnam: keep the dated acknowledgment or signed minutes."
+            },
+            {
+              "id": "i26",
+              "type": "field",
+              "text": "Language version(s) provided",
+              "detail": "If bilingual, state which version prevails."
+            }
+          ]
+        },
+        {
+          "title": "Delivery meeting",
+          "items": [
+            {
+              "id": "i27",
+              "type": "say",
+              "text": "I've asked to meet because we need to talk about [issue]. We've discussed it before and it hasn't improved, so I'm giving you a written warning today."
+            },
+            {
+              "id": "i28",
+              "type": "say",
+              "text": "I'd like to go through the letter with you, and I want to hear your side. You can also respond in writing within [5] working days."
+            },
+            {
+              "id": "i29",
+              "type": "say",
+              "text": "I want this resolved. Here's the support we'll provide, and we'll review progress together on [date]."
+            },
+            {
+              "id": "i30",
+              "type": "note",
+              "text": "Keep the meeting short and factual. Don't debate the evidence or raise issues that aren't in the letter; if new facts come up, pause and consult ER before issuing."
+            }
+          ]
+        },
+        {
+          "title": "After issue",
+          "items": [
+            {
+              "id": "i31",
+              "type": "check",
+              "text": "Letter, acknowledgment and any response filed in the restricted personnel file in Darwinbox. Copies must be produced within 30 days of a request in California (LC 1198.5) and 21 days in Washington (HB 1308)."
+            },
+            {
+              "id": "i32",
+              "type": "check",
+              "text": "Review date set in the manager's calendar, and progress documented at each check-in."
+            },
+            {
+              "id": "i33",
+              "type": "check",
+              "text": "ER logs the case for consistency reporting and watches for retaliation against the employee or anyone who took part."
+            },
+            {
+              "id": "i34",
+              "type": "check",
+              "text": "After the stated period, the warning is no longer relied on; in Germany, remove it on request if it is unjustified or outdated."
+            },
+            {
+              "id": "i35",
+              "type": "check",
+              "text": "For a final warning, map the local termination steps now: union notice in China, works council hearing in Germany, hearing in Israel, Art. 12 timing in Taiwan, disciplinary meeting in Vietnam."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Be specific: dates, facts and the rule breached. 'Poor attitude' won't support later action in any jurisdiction.",
+        "Run the pre-issue checklist every time. The consistency and protected-activity checks catch most retaliation and discrimination risk.",
+        "The employee signs for receipt, not agreement, and always gets the chance to respond in writing.",
+        "Outside the US, a warning is only as strong as the procedure behind it: properly adopted and filed rules, meetings held, and deadlines met.",
+        "Keep conduct and performance on separate tracks. A warning may refer to a missed PIP expectation, but it doesn't replace the PIP.",
+        "State an expiry period and honor it. A stale warning relied on years later looks like pretext."
+      ],
+      "countryNotes": {
+        "us": "Employment is at-will, but consistent documentation is the main defense to discrimination and retaliation claims. Never discipline for Section 7 activity such as discussing pay or raising group complaints, and keep the at-will and agency-contact savings language.",
+        "us-ca": "Legal reviews any warning within 90 days of wage, whistleblower or equal-pay protected activity (SB 497), and lawful off-duty conduct and off-duty cannabis use can't be disciplined (LC 96(k), Gov Code 12954). Warnings are personnel-file records, producible within 30 days (LC 1198.5).",
+        "us-co": "Don't discipline for lawful off-duty activity unless it conflicts with a bona fide occupational requirement or creates a conflict of interest (C.R.S. 24-34-402.5). Check timing against wage complaints (HB 25-1001) and FAMLI or HFWA leave.",
+        "us-nc": "At-will, with no progressive-discipline requirement. Check for REDA-protected activity and lawful off-duty tobacco or alcohol use (G.S. 95-28.2), and never fine through payroll without a G.S. 95-25.8 authorization.",
+        "us-tx": "At-will. Check for workers' comp claims (Labor Code 451.001), jury service and TCHRA complaints before issuing, and don't discipline for a firearm lawfully stored in a locked personal vehicle (Labor Code 52.061).",
+        "us-wa": "Keep paid sick leave, PFML and domestic-violence leave absences out of attendance warnings. Warnings are personnel-file records producible within 21 days, and former employees can demand a signed discharge-reason statement (HB 1308).",
+        "ca": "Just cause requires a proportionate response (McKinley), so clear warnings that name the consequence and give a real chance to improve are essential. Unpaid suspension without a contractual right risks constructive dismissal.",
+        "de": "An Abmahnung must describe the specific breach (date and conduct), demand that it stop and warn that repetition will put employment at risk; without the warning element it is only an admonition and won't support a dismissal. The works council isn't involved, but the employee can add a counter-statement to the file (§83(2) BetrVG) and demand removal of an unjustified warning; fines need a works agreement.",
+        "il": "Hold a hearing before any serious disciplinary step: written notice of the allegations, time to prepare and a real chance to respond. Follow any collective agreement or company disciplinary code strictly.",
+        "in": "For 'workers', issue a show-cause notice with specific allegations and consider the reply before issuing a warning; major penalties need a full domestic enquiry (charge sheet, enquiry officer, hearing, report, second show-cause, reasoned order). Cite the standing orders or service rules.",
+        "tw": "Only conduct listed in the filed work rules can be disciplined, penalties must be proportionate, and an LSA Art. 12 summary dismissal must follow within 30 days of learning the facts, so don't let a warning cycle run past that window for serious misconduct. Issue the letter in Traditional Chinese.",
+        "cn": "The warning must cite a handbook rule adopted through democratic procedure (LCL Art. 4) and acknowledged by the employee, or it won't support an Art. 39 dismissal. Get a signed Chinese acknowledgment or proof of delivery, and notify the union before any resulting termination (Art. 43).",
+        "vn": "Only reprimand, deferral of a pay rise for up to 6 months, demotion or dismissal are allowed, and fines or pay cuts are banned (LC Arts. 124, 127). A reprimand is a formal disciplinary decision: prove the fault, give the employee and union 5 working days' notice of the disciplinary meeting, keep signed minutes, and decide within 6 months (12 for finance, property or secrets)."
+      },
+      "processes": [
+        "ER-04",
+        "PD-03"
+      ],
+      "policies": [
+        "POL-13",
+        "POL-42",
+        "POL-02",
+        "POL-53",
+        "POL-01"
+      ]
+    },
+    {
+      "id": "T-COI-FORM",
+      "name": "Conflict of interest disclosure form",
+      "category": "Relations",
+      "format": "form",
+      "purpose": "Collects the outside interests and relationships that could conflict, or appear to conflict, with an employee's duties, so they can be reviewed and managed before they cause harm. It records the reviewer's decision and any mitigation, creating the audit trail expected of a Nasdaq-listed company.",
+      "audience": "All employees at hire; annually, directors, officers, people managers and staff in procurement, sales, R&D leadership and trade compliance; anyone whose circumstances change. Ethics & Compliance and managers review the forms.",
+      "when": "At onboarding, annually with the Code of Conduct certification, and within 30 days of any change (a new outside role, investment, relationship or significant gift).",
+      "owner": "Ethics & Compliance (with Legal for officers and directors)",
+      "sections": [
+        {
+          "title": "Discloser details",
+          "items": [
+            {
+              "id": "i1",
+              "type": "field",
+              "text": "Name, employee ID, job title, level, department, manager, work location"
+            },
+            {
+              "id": "i2",
+              "type": "field",
+              "text": "Disclosure type",
+              "detail": "New hire / annual / change in circumstances / response to a query."
+            },
+            {
+              "id": "i3",
+              "type": "field",
+              "text": "Role sensitivity (tick all that apply)",
+              "detail": "I approve spend or select vendors; I influence customer pricing or deals; I hire or evaluate others; I can access export-controlled technology, source code or tape-out data; I am a Section 16 officer or on an insider list."
+            },
+            {
+              "id": "i4",
+              "type": "note",
+              "text": "If in doubt, disclose. A disclosure is not an admission of wrongdoing, and most are approved, sometimes with conditions."
+            }
+          ]
+        },
+        {
+          "title": "Outside activities",
+          "items": [
+            {
+              "id": "i5",
+              "type": "question",
+              "text": "Do you have any outside employment, consulting, contracting or freelance work, paid or unpaid?",
+              "detail": "Give the organization, role and hours per month, and say whether it involves semiconductors, EDA or IP, or any customer, supplier or competitor."
+            },
+            {
+              "id": "i6",
+              "type": "question",
+              "text": "Do you sit on any board (company, start-up, non-profit, industry body or government body)?",
+              "detail": "Give the organization, role, compensation or equity and time commitment. Seats on for-profit boards need pre-approval."
+            },
+            {
+              "id": "i7",
+              "type": "question",
+              "text": "Do you hold any advisory role, such as an advisory board, expert-network calls or investor due-diligence calls?",
+              "detail": "Expert-network calls about semiconductors or our customers carry insider trading and confidentiality risk; list the network and the topics."
+            },
+            {
+              "id": "i8",
+              "type": "question",
+              "text": "Do you own or run a side business, or plan to start one?",
+              "detail": "Give the name and nature of the business, whether it sells to or competes with the company, and whether it uses company time, equipment or information."
+            },
+            {
+              "id": "i9",
+              "type": "question",
+              "text": "Do you teach, publish, speak or take part in standards bodies in a professional capacity?",
+              "detail": "Pre-clear any content that touches company technology, roadmaps or customers."
+            },
+            {
+              "id": "i10",
+              "type": "question",
+              "text": "Do you contribute to open-source projects, or develop inventions, apps or other IP outside work?",
+              "detail": "Give the project and license, and say whether it relates to the company's business or uses company resources. Your invention assignment agreement and local law (e.g., CA LC 2870, WA RCW 49.44.140) govern outside inventions."
+            }
+          ]
+        },
+        {
+          "title": "Financial interests",
+          "items": [
+            {
+              "id": "i11",
+              "type": "question",
+              "text": "Do you or an immediate family member hold a financial interest in a customer, supplier, distributor, foundry or OSAT partner, or competitor?",
+              "detail": "Include private shares, options, SAFEs, loans and profit shares. Exclude diversified funds and holdings under 1% of a listed company, unless you influence dealings with it."
+            },
+            {
+              "id": "i12",
+              "type": "question",
+              "text": "Have you invested in a start-up in semiconductors, EDA, IP, AI hardware or a related field?",
+              "detail": "Give the company, stake and date acquired, and say whether it could become a customer, supplier, competitor or acquisition target."
+            },
+            {
+              "id": "i13",
+              "type": "question",
+              "text": "Do you receive any income, royalty or loan from a business that deals with the company?"
+            },
+            {
+              "id": "i14",
+              "type": "question",
+              "text": "Have you taken part in a foreign government-sponsored talent program, or received foreign government research funding?",
+              "detail": "Required for staff on federally funded R&D (CHIPS Act malign foreign talent recruitment program restrictions; verify applicability), and relevant to national-security reviews in Taiwan."
+            }
+          ]
+        },
+        {
+          "title": "Relationships",
+          "items": [
+            {
+              "id": "i15",
+              "type": "question",
+              "text": "Do any relatives or household members work at the company?",
+              "detail": "Give their name, relationship, role and location, and say whether either of you can influence the other's hiring, pay, performance or promotion (POL-07)."
+            },
+            {
+              "id": "i16",
+              "type": "question",
+              "text": "Are you in a close personal or romantic relationship with a colleague where one of you has, or could have, influence over the other's work?",
+              "detail": "Disclose confidentially to HR; details stay with HR (POL-07)."
+            },
+            {
+              "id": "i17",
+              "type": "question",
+              "text": "Do any relatives or close associates work for a customer, supplier, competitor, government agency or state-owned enterprise that you deal with?",
+              "detail": "Include officials, regulators, procurement staff at state-owned customers (e.g., in China and Vietnam) and export-licensing agencies."
+            },
+            {
+              "id": "i18",
+              "type": "question",
+              "text": "Do you have a relationship with anyone in a competitor's recruiting or compensation team where pay, hiring or no-poach topics could come up?",
+              "detail": "Wage-fixing and no-poach agreements are criminal in the US (Sherman Act) and Canada (Competition Act s.45)."
+            }
+          ]
+        },
+        {
+          "title": "Gifts, hospitality & other benefits",
+          "items": [
+            {
+              "id": "i19",
+              "type": "question",
+              "text": "In the last 12 months, have you given or received any gift, meal, entertainment, travel or hospitality worth more than [US$100] (or the local equivalent) involving a customer, supplier, partner or government official?",
+              "detail": "Give the date, giver and recipient, value, business purpose and pre-approval reference. Anything given to a government official or state-owned enterprise employee needs pre-approval under POL-04, whatever its value."
+            },
+            {
+              "id": "i20",
+              "type": "question",
+              "text": "Has anyone who does, or wants to do, business with the company offered you a personal discount, loan, job, consulting role or other benefit?"
+            },
+            {
+              "id": "i21",
+              "type": "question",
+              "text": "Is there any other situation that could appear to influence your judgment at work?",
+              "detail": "E.g., a relative bidding for a contract, a personal dispute with a vendor, political office or candidacy, or a family business in the supply chain."
+            }
+          ]
+        },
+        {
+          "title": "Certification",
+          "items": [
+            {
+              "id": "i22",
+              "type": "field",
+              "text": "Nil return: I have no outside activities, interests or relationships to disclose (tick)"
+            },
+            {
+              "id": "i23",
+              "type": "para",
+              "text": "I have read the Code of Business Conduct and the Conflicts of Interest & Outside Activities Policy. The information in this form is complete and accurate to the best of my knowledge. I will update it within 30 days of any change, and I understand that failing to disclose a conflict may lead to corrective action."
+            },
+            {
+              "id": "i24",
+              "type": "para",
+              "text": "I understand that the Company will use this information only to identify and manage conflicts of interest, will share it only with people who need it for that purpose, and will keep it in line with the HR Privacy Notice and records retention schedule. Nothing in this form requires me to disclose lawful off-duty political, religious or union activity, or limits my right to communicate with any government agency."
+            },
+            {
+              "id": "i25",
+              "type": "field",
+              "text": "Employee signature and date"
+            }
+          ]
+        },
+        {
+          "title": "Reviewer decision & mitigation",
+          "items": [
+            {
+              "id": "i26",
+              "type": "field",
+              "text": "Reviewers (manager and Ethics & Compliance), date received, date decided",
+              "detail": "Target 10 business days. Officers and directors are reviewed by the General Counsel and, where required, the Nominating & Governance or Audit Committee."
+            },
+            {
+              "id": "i27",
+              "type": "field",
+              "text": "Assessment: No conflict / Potential conflict, manageable / Actual conflict, must be resolved",
+              "detail": "Consider the employee's influence, materiality, competition, use of company time, IP or information, and how it would look to a reasonable observer."
+            },
+            {
+              "id": "i28",
+              "type": "field",
+              "text": "Decision: Approved / Approved with conditions / Not approved",
+              "detail": "Give reasons in writing. If not approved, set the date by which the activity or interest must end."
+            },
+            {
+              "id": "i29",
+              "type": "field",
+              "text": "Mitigation measures",
+              "detail": "Recusal from decisions involving the entity; moving vendor or customer ownership to someone else; information barriers; divestment or a holding freeze; pre-clearance of trades under the insider trading policy; no use of company time, tools or information; a changed reporting line for related employees; a cap on outside hours."
+            },
+            {
+              "id": "i30",
+              "type": "field",
+              "text": "Officer and director check",
+              "detail": "Legal checks for Item 404 related-person transactions over $120,000, including employed relatives, and for code waivers that must be disclosed under Nasdaq Rule 5610."
+            },
+            {
+              "id": "i31",
+              "type": "field",
+              "text": "Next review date and monitoring owner"
+            },
+            {
+              "id": "i32",
+              "type": "check",
+              "text": "Decision sent to the employee in writing and filed in the restricted COI register; Finance controls are told, on a need-to-know basis, of conflicts affecting sales or procurement."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Ask about conflicts, not private lives. Every question should connect to company time, tools, information or IP, or to customers, suppliers, competitors or government contacts.",
+        "Most conflicts are managed, not prohibited. The aim is transparency and mitigation through recusal, reassignment or pre-clearance.",
+        "Expert-network and advisory calls are a leading source of leaks of material non-public information in semiconductors, so treat them as high-risk disclosures.",
+        "Keep COI data in a restricted register, not the personnel file, and share only what reviewers need.",
+        "Re-certify annually and whenever circumstances change; a stale disclosure is almost as risky as none.",
+        "Link outcomes to the insider trading policy and, for officers and directors, the related-person transaction process."
+      ],
+      "countryNotes": {
+        "us": "Nasdaq Rule 5610 requires a public code with disclosed executive waivers, and Item 404 requires disclosure of related-person transactions over $120,000. Staff on federally funded R&D may need malign foreign talent program certifications (verify).",
+        "us-ca": "Lawful off-duty conduct and political activity are protected (LC 96(k), 98.6, 1101-1102), so tie questions to company time, tools, IP, customers and competitors, and keep invention questions within LC 2870. The CCPA notice at collection must cover COI data.",
+        "us-co": "Lawful off-duty activity is protected unless a restriction relates to a bona fide occupational requirement or avoids a conflict of interest (C.R.S. 24-34-402.5), so frame every question around conflicts. Marriage to a co-worker is protected, subject to supervision exceptions.",
+        "us-nc": "There is no COI statute for private employers, and outside work can be restricted by policy, but lawful off-duty use of lawful products can't be the basis for action (G.S. 95-28.2).",
+        "us-tx": "Texas has no lawful off-duty conduct statute for private employers beyond voting protections, so COI rules are easier to enforce, and moonlighting limits can be backed by qualifying non-competes.",
+        "us-wa": "Don't restrict second jobs for employees earning under twice the state minimum wage, except for safety, scheduling or conflict reasons (RCW 49.62.070); outside-invention claims are limited by RCW 49.44.140.",
+        "ca": "There is no COI statute, but the fiduciary duties of senior technical leaders matter more given Ontario's non-compete ban. Competition Act s.45 makes wage-fixing and no-poach agreements crimes, so capture relationships with competitors' HR staff; collect data under a BC PIPA notice.",
+        "de": "Secondary work can be restricted only where a legitimate interest is affected, so require disclosure rather than impose blanket bans; hours for all employers count toward ArbZG limits. A standard disclosure questionnaire needs works council consent (§94 BetrVG) and a GDPR Art. 13 notice.",
+        "il": "Outside work can be restricted by the contract and the duty of loyalty. Collect financial and family details only with a notice that meets Amendment 13, and use them only for COI review.",
+        "in": "In-term exclusivity and anti-moonlighting clauses are enforceable (Contract Act s.27 bars only post-employment restraints), so capture outside work, directorships and start-up investments. Collect financial details with consent under the SPDI Rules until DPDP duties start in May 2027.",
+        "tw": "Require disclosure and pre-approval of side businesses and family-company roles, and treat undisclosed PRC-linked roles or investments as a national-security red flag. Capture roles on government-funded core key technology projects, which carry travel-approval duties.",
+        "cn": "Concurrent employment is an Art. 39 dismissal ground only if it seriously affects work or continues after the employer objects, and the handbook defines it. Undisclosed ties to customer staff raise commercial-bribery risk under the Anti-Unfair Competition Law; give a PIPL notice.",
+        "vn": "Employees may lawfully hold several labour contracts (LC Art. 19), so control conflicts through the contract and internal labour regulations and list undisclosed conflicts as a violation. Relationships with state-owned customers or officials raise bribery risk; collect data with PDPL consent or another legal basis."
+      },
+      "processes": [
+        "ER-06"
+      ],
+      "policies": [
+        "POL-03",
+        "POL-01",
+        "POL-07",
+        "POL-04",
+        "POL-05",
+        "POL-48",
+        "POL-46"
+      ]
+    },
+    {
+      "id": "T-AI-VENDOR",
+      "name": "HR vendor and AI tool assessment questionnaire",
+      "category": "Data",
+      "format": "form",
+      "purpose": "Assesses a new HR vendor, or a new AI feature in an existing tool, before it touches employee or candidate data, covering data flows, cross-border transfers, security, automated decision-making, bias testing and notices. The completed form is the evidence file for privacy, AI and works council approvals and for contract negotiation.",
+      "audience": "HR business owners (requesters), HR Technology, Procurement, Privacy, Information Security, Legal (employment and privacy), Trade Compliance, the Germany works council liaison, and the vendor, who answers the vendor-facing questions.",
+      "when": "Before contract signature or any pilot with real data, before an AI feature is switched on in Greenhouse, Darwinbox or another existing tool, and at renewal or any material change; high-risk tools are re-assessed every year.",
+      "owner": "HR Technology (process), with Privacy and Information Security (approval)",
+      "sections": [
+        {
+          "title": "Vendor & use case",
+          "items": [
+            {
+              "id": "i1",
+              "type": "field",
+              "text": "Vendor name, product and version, parent company, country of incorporation and ownership",
+              "detail": "Flag any owner of 50% or more that is in, or organized under the laws of, a country of concern."
+            },
+            {
+              "id": "i2",
+              "type": "field",
+              "text": "Business owner, requesting team, target go-live date, contract value and term"
+            },
+            {
+              "id": "i3",
+              "type": "field",
+              "text": "Use case in plain language",
+              "detail": "What the tool does, which HR process it supports (recruiting, onboarding, performance, pay, monitoring, learning, offboarding) and who will use it."
+            },
+            {
+              "id": "i4",
+              "type": "field",
+              "text": "Populations and jurisdictions in scope",
+              "detail": "Candidates, employees, contractors, former employees; list each location (us, us-ca, us-co, us-nc, us-tx, us-wa, ca, de, il, in, tw, cn, vn), plus NYC, Illinois or Quebec where relevant."
+            },
+            {
+              "id": "i5",
+              "type": "field",
+              "text": "New tool, or new feature in an existing tool?",
+              "detail": "AI features switched on in Greenhouse, Darwinbox or collaboration suites count as new tools for this assessment."
+            },
+            {
+              "id": "i6",
+              "type": "field",
+              "text": "Sub-processors and hosting providers, with their locations"
+            }
+          ]
+        },
+        {
+          "title": "Data & cross-border transfers",
+          "items": [
+            {
+              "id": "i7",
+              "type": "field",
+              "text": "Data categories processed",
+              "detail": "Identity and contact; job and pay; performance; recruiting data (CVs, assessments, interview video or audio); sensitive data (health, biometrics, race or ethnicity, religion, union membership, sexual orientation, precise location, government ID, financial account); monitoring data (keystrokes, screens, email, badge)."
+            },
+            {
+              "id": "i8",
+              "type": "field",
+              "text": "Volume (records per year, by country) and retention period",
+              "detail": "Needed for PIPL volume thresholds, DOJ bulk thresholds and retention alignment (California ADS data: 4 years)."
+            },
+            {
+              "id": "i9",
+              "type": "field",
+              "text": "Where data is stored and processed, and where it can be accessed from (including vendor support and engineering)"
+            },
+            {
+              "id": "i10",
+              "type": "field",
+              "text": "Transfer mechanism for each origin country",
+              "detail": "China: HR-management exemption, standard contract filing, certification or CAC assessment depending on volume, plus a PIPIA and separate consent where required (PIPL Arts. 38-39, 55). India: permitted unless the destination is restricted; SPDI consent now and DPDP processor terms from 13 May 2027. Vietnam: the ILR-based HR-management exemption, or a transfer impact assessment filed with the Ministry of Public Security within 60 days (PDPL, Decree 356). Germany: Art. 28 DPA plus EU-US Data Privacy Framework certification or SCCs with a transfer impact assessment. Israel: Transfer Abroad Regulations 2001. Taiwan: PDPA notice and no restriction order. Canada: BC PIPA notice, and a PIA for Quebec staff."
+            },
+            {
+              "id": "i11",
+              "type": "field",
+              "text": "DOJ Data Security Program screen (28 CFR 202)",
+              "detail": "Is the vendor, a sub-processor or any person with data access in, owned from, or employed by an entity organized in China (including Hong Kong and Macau), Russia, Iran, North Korea, Cuba or Venezuela (verify current list)? If the data meets bulk thresholds over 12 months (e.g., more than 1,000 people's biometrics, 10,000 people's health or financial data, or 100,000 people's covered identifiers), the deal is restricted or prohibited. The intra-group HR exemption (s202.506) doesn't cover third-party vendors."
+            }
+          ]
+        },
+        {
+          "title": "Security",
+          "items": [
+            {
+              "id": "i12",
+              "type": "field",
+              "text": "Certifications and reports",
+              "detail": "SOC 2 Type II (period covered), ISO 27001, latest penetration test summary, completed security questionnaire (e.g., CAIQ)."
+            },
+            {
+              "id": "i13",
+              "type": "field",
+              "text": "Access controls",
+              "detail": "SSO with our identity provider, MFA, role-based access, least privilege, logged admin access, and approval for vendor staff access to our data."
+            },
+            {
+              "id": "i14",
+              "type": "field",
+              "text": "Encryption in transit and at rest, key management, and separation from other customers' data"
+            },
+            {
+              "id": "i15",
+              "type": "field",
+              "text": "Incident notification commitment",
+              "detail": "The vendor tells us within 24-48 hours of discovery, so we can meet GDPR and Vietnam 72-hour, CERT-In 6-hour and US state breach deadlines."
+            },
+            {
+              "id": "i16",
+              "type": "field",
+              "text": "Is our data, including prompts and outputs, used to train or improve models for anyone else?",
+              "detail": "Required answer: no, unless we opt in in writing."
+            },
+            {
+              "id": "i17",
+              "type": "field",
+              "text": "Return and deletion at contract end, with certificate, and backup retention period"
+            }
+          ]
+        },
+        {
+          "title": "Automated decisions & bias",
+          "items": [
+            {
+              "id": "i18",
+              "type": "field",
+              "text": "Does the tool make, or substantially assist, decisions on hiring, promotion, pay, performance, discipline, scheduling, termination or monitoring?",
+              "detail": "If yes, it is an ADS, ADMT or AEDT under the California CRD and CCPA rules, NYC Local Law 144 and Colorado SB 26-189, and likely high-risk under EU AI Act Annex III(4). Complete the rest of this section."
+            },
+            {
+              "id": "i19",
+              "type": "field",
+              "text": "How it works",
+              "detail": "Inputs and features used, model type, outputs (score, rank, recommendation, flag), how outputs are shown to users, and known limitations."
+            },
+            {
+              "id": "i20",
+              "type": "field",
+              "text": "Human review",
+              "detail": "Who reviews outputs, their training, their authority and time to override, and how override rates are tracked. No fully automated rejection or discipline (GDPR Art. 22; Colorado human review from 2027)."
+            },
+            {
+              "id": "i21",
+              "type": "field",
+              "text": "Bias testing",
+              "detail": "Vendor testing: selection rates and impact ratios by sex, race or ethnicity and intersectional groups, plus age and disability where possible, with date, sample, method, results and fixes. Our own testing on company data before go-live and every year."
+            },
+            {
+              "id": "i22",
+              "type": "field",
+              "text": "NYC Local Law 144 (NYC candidates or employees)",
+              "detail": "Independent bias audit within 1 year before use, public audit summary on the careers site, and notice at least 10 business days before use describing the qualifications and characteristics assessed and how to request an alternative process or accommodation."
+            },
+            {
+              "id": "i23",
+              "type": "field",
+              "text": "California CRD ADS rules and CCPA ADMT",
+              "detail": "CRD (from 1 Oct 2025): discriminatory ADS outcomes violate FEHA, vendors can be the employer's agents, anti-bias testing is relevant evidence, ADS data is kept 4 years, and tools must not screen out people with disabilities without accommodation. CCPA: a risk assessment before processing, and from 1 Jan 2027 pre-use ADMT notice, an opt-out or human appeal, and access to information about the ADMT logic for significant employment decisions."
+            },
+            {
+              "id": "i24",
+              "type": "field",
+              "text": "Colorado SB 26-189 (from 1 Jan 2027)",
+              "detail": "Pre-use notice of ADMT in consequential employment decisions, a plain-language explanation within 30 days of an adverse decision, and rights to correct data and ask for human review; developers supply documentation. AG enforcement with a 60-day cure period."
+            },
+            {
+              "id": "i25",
+              "type": "field",
+              "text": "EU AI Act (Germany)",
+              "detail": "Emotion recognition at work has been banned since Feb 2025 and the AI literacy duty already applies. Employment uses listed in Annex III are high-risk, with deployer duties (human oversight, logging, input data quality, informing worker representatives and affected workers) from 2 Dec 2027 under the Digital Omnibus (Reg. (EU) 2026/1744)."
+            },
+            {
+              "id": "i26",
+              "type": "field",
+              "text": "Other AI and biometric laws",
+              "detail": "Illinois AI notice (HB 3773, from 1 Jan 2026); Texas TRAIGA ban on intentional discrimination; Ontario AI disclosure in job postings; PIPL Art. 24 transparency and right to refuse automated decisions; biometric laws (Illinois BIPA, Texas CUBI, WA RCW 19.375, Colorado C.R.S. 6-1-1314)."
+            }
+          ]
+        },
+        {
+          "title": "Works council, notices & assessments",
+          "items": [
+            {
+              "id": "i27",
+              "type": "field",
+              "text": "Germany works council",
+              "detail": "Any tool that can monitor behaviour or performance is co-determined (§87(1) no.6 BetrVG), AI selection guidelines need consent (§95(2a)), and the council may bring in an AI expert at company cost (§80(3)). Record the date the council was informed and the date the works agreement was signed or amended; no go-live before agreement."
+            },
+            {
+              "id": "i28",
+              "type": "field",
+              "text": "Other employee representation",
+              "detail": "Israel: consult the union where a collective agreement applies. Vietnam: dialogue with the grassroots union and monitoring rules in the internal labour regulations. China and Taiwan: handbook or work-rule changes adopted through the required procedure."
+            },
+            {
+              "id": "i29",
+              "type": "field",
+              "text": "Candidate and employee notices, and where each is published",
+              "detail": "CCPA notice at collection; NYC 10-business-day notice; Ontario posting disclosure; Illinois AI notice; GDPR Arts. 13-14; PIPL separate notice and consent; PDPL Art. 25; Israel Amendment 13 notice; Colorado pre-use notice from 2027."
+            },
+            {
+              "id": "i30",
+              "type": "field",
+              "text": "Accessibility and alternatives",
+              "detail": "An accommodation route for anyone who can't use the tool (ADA, AODA) and an alternative process or human review on request."
+            },
+            {
+              "id": "i31",
+              "type": "field",
+              "text": "Impact assessments completed, with dates and approvers",
+              "detail": "GDPR Art. 35 DPIA, China PIPIA, Vietnam DPIA filed within 60 days, CCPA risk assessment, Quebec PIA. Attach each one."
+            }
+          ]
+        },
+        {
+          "title": "Contract terms",
+          "items": [
+            {
+              "id": "i32",
+              "type": "check",
+              "text": "Data processing agreement: roles, purpose limits, confidentiality, sub-processor approval and flow-down, audit rights, and local terms (GDPR Art. 28, PIPL entrusted-processing contract, PDPL, DPDP processor clauses)."
+            },
+            {
+              "id": "i33",
+              "type": "check",
+              "text": "Transfer clauses and filings are in place before any data flows (SCCs, China standard contract, Vietnam transfer impact assessment)."
+            },
+            {
+              "id": "i34",
+              "type": "check",
+              "text": "CCPA service-provider terms: no selling or sharing, no training on our data, and deletion at exit with a certificate."
+            },
+            {
+              "id": "i35",
+              "type": "check",
+              "text": "AI terms: documentation and model cards, notice of material model changes, cooperation with bias testing and audits, decision logs kept 4 years for California, and support for adverse-decision explanations."
+            },
+            {
+              "id": "i36",
+              "type": "check",
+              "text": "Security: breach notice within 24-48 hours, agreed security standards, penetration testing, insurance, and indemnity for regulatory fines and third-party claims where negotiable."
+            },
+            {
+              "id": "i37",
+              "type": "check",
+              "text": "DOJ Data Security Program representations: no covered-person access to bulk US sensitive personal data, and notice of any ownership change."
+            },
+            {
+              "id": "i38",
+              "type": "check",
+              "text": "Trade Compliance has cleared any vendor access to technical data (e.g., engineering project or performance data containing controlled technology)."
+            }
+          ]
+        },
+        {
+          "title": "Approval",
+          "items": [
+            {
+              "id": "i39",
+              "type": "field",
+              "text": "Risk rating: Low / Medium / High",
+              "detail": "High: automated employment decisions, monitoring, biometrics, sensitive data, China or Vietnam transfers, or DOJ Data Security Program exposure."
+            },
+            {
+              "id": "i40",
+              "type": "field",
+              "text": "Approvals and dates",
+              "detail": "HR business owner; Privacy; Information Security; Legal (employment); Trade Compliance (technical data); works council (Germany); AI governance committee (high-risk tools)."
+            },
+            {
+              "id": "i41",
+              "type": "field",
+              "text": "Conditions of approval and go-live checklist",
+              "detail": "Notices published, filings made, reviewers trained on the human-review workflow, bias baseline captured."
+            },
+            {
+              "id": "i42",
+              "type": "field",
+              "text": "Re-assessment date",
+              "detail": "Every year for high-risk tools, and at renewal or any material change (a new AI feature, country or sub-processor)."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Assess the use case, not just the vendor: the same product can be low-risk for interview scheduling and high-risk for ranking candidates.",
+        "AI features switched on inside existing systems are the most common way unassessed AI enters HR, so they go through this form too.",
+        "The employer stays liable for discriminatory outcomes even when the vendor built the model (CRD agent rules, Title VII disparate impact), so insist on bias-testing data and run our own.",
+        "Keep a person with real authority and time in every consequential decision, and log overrides. Rubber-stamping isn't human review.",
+        "China and Vietnam transfer filings and German works agreements take months; start them at the pilot stage, not at go-live.",
+        "File the completed form, impact assessments and approvals in the POL-50 AI tool inventory, and re-assess on every material change."
+      ],
+      "countryNotes": {
+        "us": "NYC Local Law 144 requires an annual independent bias audit, a published summary and 10 business days' notice before an AEDT is used, and Illinois requires notice of AI use. The DOJ Data Security Program (28 CFR 202) restricts vendor agreements that give covered persons access to bulk US sensitive personal data.",
+        "us-ca": "CRD ADS rules (from 1 Oct 2025) make discriminatory ADS outcomes FEHA violations, treat vendors as agents and require 4-year retention of ADS data. CCPA risk assessments apply now, and ADMT pre-use notice, opt-out or appeal and access duties start on 1 Jan 2027.",
+        "us-co": "SB 26-189 (from 1 Jan 2027) requires pre-use ADMT notice, a plain-language explanation within 30 days of an adverse decision, correction and human review, with AG enforcement and a 60-day cure period. Biometric tools also need the C.R.S. 6-1-1314 policy and consent.",
+        "us-nc": "There is no AI-in-employment statute. Require vendor breach notice fast enough for the company to meet G.S. 75-65, and secure disposal (G.S. 75-64).",
+        "us-tx": "TRAIGA (from 1 Jan 2026) bans deploying AI with intent to discriminate; document each tool's purpose, testing and safeguards (NIST AI RMF alignment helps), and check biometric features for CUBI consent.",
+        "us-wa": "There is no AI-in-employment statute as of Sept 2026, but WLAD disparate impact and the biometric law (RCW 19.375) apply, and audio features need all-party consent. Expect 2027 bills following the AG's AI Task Force report.",
+        "ca": "Ontario job postings must disclose AI use in screening, assessment or selection (since 1 Jan 2026), and BC PIPA requires notice of purposes. Quebec Law 25 requires a PIA before transfers outside Quebec and notice of decisions based solely on automated processing.",
+        "de": "Any tool that can monitor behaviour or performance, including AI features switched on later, is co-determined (§87(1) no.6 BetrVG); run a DPIA, sign an Art. 28 DPA and cover US transfers. Under the AI Act, emotion recognition at work is banned, AI literacy applies now, and Annex III deployer duties start on 2 Dec 2027.",
+        "il": "Assess vendors against Amendment 13, the outsourcing rules in the Data Security Regulations 2017 and the Transfer Abroad Regulations 2001; the Privacy Protection Authority treats AI systems as fully subject to privacy law. Monitoring features must pass the Isakov proportionality test.",
+        "in": "Until DPDP duties start on 13 May 2027, the SPDI Rules require written consent for sensitive data and reasonable security; write DPDP processor obligations into contracts now. CERT-In's 6-hour incident reporting covers vendor incidents affecting Indian systems.",
+        "tw": "Disclose vendor processing and cross-border transfers in the PDPA notice, bind vendors to security maintenance measures, and get written consent or a statutory basis for health and other sensitive data.",
+        "cn": "Entrusted processing, automated decision-making and cross-border transfers each need a PIPIA kept for 3 years, and transfers need the HR-management exemption, a standard contract filing, certification or a CAC assessment depending on volume. Facial recognition needs separate consent and a non-biometric alternative.",
+        "vn": "File or update the DPIA within 60 days of starting processing, and file a transfer impact assessment with the Ministry of Public Security unless the ILR-based HR-management exemption applies. Disclose monitoring and automated tools to employees (PDPL Art. 25); biometric data is sensitive."
+      },
+      "processes": [
+        "DS-06"
+      ],
+      "policies": [
+        "POL-50",
+        "POL-46",
+        "POL-47",
+        "POL-16",
+        "POL-08",
+        "POL-49"
+      ]
+    },
+    {
+      "id": "T-DSAR",
+      "name": "HR data subject request response checklist",
+      "category": "Data",
+      "format": "checklist",
+      "purpose": "Takes the HR privacy desk through an employee's, applicant's or former employee's request to access, correct, delete or restrict their data, from identity verification to secure delivery. It sets the local deadline at intake and makes sure exemptions and redactions are applied consistently and documented.",
+      "audience": "The HR data subject request desk (Privacy Office and People Operations), HR Technology and system owners (searches), Legal (exemptions and disputes), Employee Relations (investigation files).",
+      "when": "Opened the day a request arrives through any channel (it doesn't need to cite a law), including personnel-file and payroll-record requests. Deadlines run from receipt.",
+      "owner": "Privacy Office with People Operations (HR data subject request desk)",
+      "sections": [
+        {
+          "title": "Receive & verify",
+          "items": [
+            {
+              "id": "i1",
+              "type": "check",
+              "text": "Log the request in the DSAR tracker on the day it arrives: requester, date received, channel and request type (access or copy, correction, deletion, restriction or objection, portability, consent withdrawal, ADMT or sale/sharing opt-out, personnel file, payroll records, discharge-reason statement)."
+            },
+            {
+              "id": "i2",
+              "type": "check",
+              "text": "Treat any request as valid, whatever its wording or channel (an email to a manager, an HR ticket, a lawyer's letter); managers and HRBPs forward it to the desk within 1 business day."
+            },
+            {
+              "id": "i3",
+              "type": "check",
+              "text": "Verify identity proportionately: current employees through SSO or an HRIS login; former employees and applicants by matching 2-3 data points already held. Don't ask for more data than needed, or for ID copies unless there is no alternative."
+            },
+            {
+              "id": "i4",
+              "type": "check",
+              "text": "Agents and lawyers: get the requester's signed authorization (CCPA authorized agents; lawyers' letters are common in disputes in Germany and Israel)."
+            },
+            {
+              "id": "i5",
+              "type": "check",
+              "text": "Ask for clarification only where the request is genuinely unclear, and record the date; don't assume the clock stops meanwhile (verify local rules)."
+            },
+            {
+              "id": "i6",
+              "type": "check",
+              "text": "Flag disputes: if the requester has a claim, dispute or investigation open, involve Legal before responding. California can refuse personnel-file inspection once the employee has sued over a personnel matter (LC 1198.5(n))."
+            }
+          ]
+        },
+        {
+          "title": "Log & clock",
+          "intro": "Set the deadline at intake from where the requester works and lives. Where several regimes apply, use the shortest.",
+          "items": [
+            {
+              "id": "i7",
+              "type": "check",
+              "text": "California CCPA (employees, applicants, contractors): confirm receipt within 10 business days and respond within 45 calendar days, extendable once by 45 with notice."
+            },
+            {
+              "id": "i8",
+              "type": "check",
+              "text": "California personnel file (LC 1198.5): inspection or copies within 30 days (up to 35 by agreement), now including training records (SB 513). Payroll records (LC 226): within 21 days. Signed employment instruments: a copy on request (LC 432). Penalties are $750."
+            },
+            {
+              "id": "i9",
+              "type": "check",
+              "text": "Washington: free personnel-file copies and a signed discharge-reason statement within 21 days (HB 1308). Colorado: personnel-file inspection at least once a year (C.R.S. 8-2-129). North Carolina and Texas: no statutory right; respond under policy within 30 days."
+            },
+            {
+              "id": "i10",
+              "type": "check",
+              "text": "Canada: PIPEDA 30 days, extendable by 30 with notice; BC PIPA 30 days (verify business-day counting), extendable. Ontario private-sector employees have no statutory right, so apply the 30-day standard; Quebec Law 25 covers Quebec staff."
+            },
+            {
+              "id": "i11",
+              "type": "check",
+              "text": "Germany (GDPR): 1 month from receipt, extendable by 2 months for complex or numerous requests, with notice and reasons inside the first month. Personnel-file inspection under §83 BetrVG on request."
+            },
+            {
+              "id": "i12",
+              "type": "check",
+              "text": "China (PIPL Arts. 44-47, 50): no fixed statutory deadline, so target 15 working days (verify) and give reasons for any refusal."
+            },
+            {
+              "id": "i13",
+              "type": "check",
+              "text": "India: a grievance officer under the SPDI Rules now; from 13 May 2027, DPDP Act rights of access, correction, erasure and grievance redressal, answered within 90 days."
+            },
+            {
+              "id": "i14",
+              "type": "check",
+              "text": "Taiwan (PDPA): access and copies within 15 days, correction or deletion within 30 days, each extendable once by the same period with written reasons (verify)."
+            },
+            {
+              "id": "i15",
+              "type": "check",
+              "text": "Vietnam (PDPL, Decree 356): acknowledge within 2 working days, then complete access or correction within 10 days, restriction or consent withdrawal within 15, and deletion within 20."
+            },
+            {
+              "id": "i16",
+              "type": "check",
+              "text": "Israel (Protection of Privacy Law ss.13-14): respond within the regulatory period (30 days, extendable; verify). Amendment 13 adds statutory damages for some failures."
+            }
+          ]
+        },
+        {
+          "title": "Scope & search",
+          "items": [
+            {
+              "id": "i17",
+              "type": "check",
+              "text": "Map the request to systems: Darwinbox (HRIS), Greenhouse (ATS), payroll providers, benefits and equity administrators, the LMS, performance and engagement tools, ER and hotline case management, IT tickets, badge logs, email and chat, shared drives, the EHS incident system."
+            },
+            {
+              "id": "i18",
+              "type": "check",
+              "text": "Send search instructions to system owners with a 5-business-day deadline, and record who searched what, when and with which terms."
+            },
+            {
+              "id": "i19",
+              "type": "check",
+              "text": "Include data held by processors (payroll, benefits, background checks, AI and assessment vendors) and request their extracts under the DPA."
+            },
+            {
+              "id": "i20",
+              "type": "check",
+              "text": "For email and chat, run targeted searches (name, employee ID, email aliases, nicknames) over the relevant period, and record why the search was proportionate. GDPR requires a reasonable and proportionate search, not every mention."
+            },
+            {
+              "id": "i21",
+              "type": "check",
+              "text": "CCPA responses cover data collected since 1 Jan 2022 unless that is impossible or disproportionate, and include categories, sources, purposes and recipients as well as the data itself."
+            },
+            {
+              "id": "i22",
+              "type": "check",
+              "text": "Collate and de-duplicate results in a restricted review folder with access logging."
+            }
+          ]
+        },
+        {
+          "title": "Exemptions & redactions",
+          "items": [
+            {
+              "id": "i23",
+              "type": "check",
+              "text": "Third-party data: redact other people's personal data (names, contact details, opinions about them) unless they consent or disclosure is reasonable, and never reveal complainants or witnesses in investigation files (GDPR Art. 15(4); BDSG §29; CCPA)."
+            },
+            {
+              "id": "i24",
+              "type": "check",
+              "text": "Privilege: withhold attorney-client privileged and work-product material and log it; Legal decides."
+            },
+            {
+              "id": "i25",
+              "type": "check",
+              "text": "Investigations and legal claims: withhold or delay material whose release would prejudice an open investigation, legal claim or law-enforcement matter, where local law allows (CCPA legal-claims exception; BDSG §34; PIPEDA s.9(3); verify elsewhere)."
+            },
+            {
+              "id": "i26",
+              "type": "check",
+              "text": "California personnel-file exclusions (LC 1198.5): records of an investigation into a possible criminal offense, letters of reference, and pre-employment ratings or reports. Where both the personnel-file right and CCPA apply, give the broader response."
+            },
+            {
+              "id": "i27",
+              "type": "check",
+              "text": "Trade secrets and confidential business information (compensation models, pay-range tools, security logs, export-controlled technical data) are withheld or summarized, while the requester's own data within them is disclosed."
+            },
+            {
+              "id": "i28",
+              "type": "check",
+              "text": "Deletion: apply retention and legal-hold exceptions (payroll, tax, I-9, OSHA, EEO and ADS records, and statutory retention elsewhere), delete what isn't needed, and tell the requester what was kept and why."
+            },
+            {
+              "id": "i29",
+              "type": "check",
+              "text": "Correction: fix factual errors. For disputed opinions such as ratings or investigation findings, add the employee's statement rather than rewrite the record (Washington and Germany give rebuttal rights)."
+            },
+            {
+              "id": "i30",
+              "type": "check",
+              "text": "Any refusal or partial refusal is documented with its legal basis and reviewed by Legal, and the response gives the reason and, where required, how to complain to the regulator."
+            }
+          ]
+        },
+        {
+          "title": "Response & secure delivery",
+          "items": [
+            {
+              "id": "i31",
+              "type": "para",
+              "text": "Dear [Name], We received your request of [date] to [access / correct / delete] your personal information. We have searched [systems] and enclose [a copy of your personal information / confirmation of the changes made]. [We have withheld or redacted [description] because [legal basis, e.g., it contains other people's personal information / it is legally privileged / it relates to an ongoing investigation].]"
+            },
+            {
+              "id": "i32",
+              "type": "para",
+              "text": "We use your information for [purposes]. We obtained it from [sources], share it with [categories of recipients, including service providers in [countries]] and keep it for [retention period or criteria]. You also have the right to [correct / delete / restrict / object / withdraw consent / appeal], and to complain to [regulator, e.g., the California Privacy Protection Agency or the competent German state data protection authority]. If you have any questions, contact [privacy desk email]."
+            },
+            {
+              "id": "i33",
+              "type": "check",
+              "text": "Deliver securely: an encrypted portal, or a password-protected file with the password sent separately; paper only by tracked courier; never to an unverified personal email. Use a commonly used electronic format where the law requires (GDPR Art. 15(3); CCPA portability)."
+            },
+            {
+              "id": "i34",
+              "type": "check",
+              "text": "No charge, except where the law allows a reasonable fee for manifestly unfounded, excessive or repeat requests; California personnel-file copies may be charged at the actual cost of reproduction, and Washington copies are free."
+            },
+            {
+              "id": "i35",
+              "type": "check",
+              "text": "A second reviewer checks the redactions, checks the response against the request, and confirms that no one else's data or privileged material is included."
+            }
+          ]
+        },
+        {
+          "title": "Record keeping",
+          "items": [
+            {
+              "id": "i36",
+              "type": "check",
+              "text": "Close the ticket with the dates (received, acknowledged, extended, responded), systems searched, exemptions applied, reviewer and a copy of the response."
+            },
+            {
+              "id": "i37",
+              "type": "check",
+              "text": "Keep request records for at least 24 months (CCPA regulations) and per the retention schedule elsewhere, without keeping extra copies of the disclosed data beyond what's needed to evidence the response."
+            },
+            {
+              "id": "i38",
+              "type": "check",
+              "text": "Report volume by type and country, on-time rate, median days and refusals to the Privacy Office every quarter."
+            },
+            {
+              "id": "i39",
+              "type": "check",
+              "text": "Send recurring gaps in systems, retention or notices to DS-03 and HR Technology for fixing."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Any request is a request: it doesn't need to cite a law, use a form or reach the privacy desk directly, so train managers and HRBPs to forward requests within 1 business day.",
+        "Set the deadline at intake from the shortest applicable regime. A California employee's payroll records (21 days) and personnel file (30 days) fall due before the CCPA's 45 days.",
+        "In disputes, an access request is often discovery by another route. Involve Legal early, but don't let the dispute delay a statutory response.",
+        "Redact consistently and log every withholding decision with its legal basis. Over-redaction invites regulator complaints; under-redaction breaches other people's privacy.",
+        "Investigation files need special care: protect complainants and witnesses, withhold privileged material, and disclose the requester's own data where the law requires.",
+        "The response package is itself sensitive personal data, so deliver it securely and keep evidence of exactly what was sent."
+      ],
+      "countryNotes": {
+        "us": "There is no federal employee access right, but many states grant personnel-file inspection with deadlines (e.g., IL, MN, OR, MA, MI, CT), so route those through the same desk and apply the local deadline.",
+        "us-ca": "CCPA rights to know, delete, correct and limit cover employees, applicants and contractors (45 days, extendable by 45). Personnel files are due within 30 days (LC 1198.5, including training records under SB 513) and payroll records within 21 days (LC 226), each with $750 penalties.",
+        "us-co": "The Colorado Privacy Act doesn't cover HR data. Current employees may inspect and copy their personnel file at least once a year, and former employees once after separation (C.R.S. 8-2-129).",
+        "us-nc": "North Carolina gives employees and applicants no statutory access, correction or deletion rights, so handle requests under company policy or other states' laws.",
+        "us-tx": "The TDPSA excludes employment data and there is no personnel-file right, so handle requests under policy; respond separately to subpoenas and TWC requests for payroll records.",
+        "us-wa": "HB 1308 gives employees and former employees (for 3 years) free personnel-file copies and a signed discharge-reason statement within 21 days, with statutory damages of $250-$1,000. Employees may request corrections once a year and add rebuttals.",
+        "ca": "BC PIPA gives employees access rights, handled by the privacy officer within 30 days (verify business-day counting); PIPEDA covers commercial data. Ontario private-sector employees have no statutory access right, but apply a consistent 30-day standard, and Quebec Law 25 covers any Quebec remote staff.",
+        "de": "GDPR access requests are due within 1 month (extendable by 2) with a copy of the data; they are routinely used as leverage in termination disputes, and failures lead to Art. 82 damages claims. Employees also have a separate personnel-file inspection right (§83 BetrVG), and BDSG §§29 and 34 allow limited refusals.",
+        "il": "Protection of Privacy Law ss.13-14 give access and correction rights within the regulatory period (verify the days), and Amendment 13 adds statutory damages of up to NIS 10,000 for some failures. Employees can also obtain payroll and attendance records through the Labor Court.",
+        "in": "Until 13 May 2027 the SPDI Rules require a grievance officer; from then, the DPDP Act gives access, correction, erasure and grievance rights answered within 90 days. Processing for employment under s.7(i) still carries these rights.",
+        "tw": "The PDPA gives rights to inquire, review, obtain copies, correct, stop processing and delete; access requests are generally due within 15 days and correction or deletion within 30, each extendable once (verify). Respond in Traditional Chinese.",
+        "cn": "PIPL Arts. 44-47 give rights to access, copy, correct, delete and port data, and refusals must give reasons (Art. 50). There is no fixed deadline, so target 15 working days (verify), and keep response data in China unless a transfer basis exists.",
+        "vn": "Under the PDPL and Decree 356, acknowledge within 2 working days and complete within 10 days (access, correction), 15 days (restriction, withdrawal) or 20 days (deletion). Employees can also ask for copies of documents about their working history at termination (LC Art. 48(3))."
+      },
+      "processes": [
+        "DS-02"
+      ],
+      "policies": [
+        "POL-46",
+        "POL-49",
+        "POL-56",
+        "POL-47"
+      ]
+    }
+  ]
+}

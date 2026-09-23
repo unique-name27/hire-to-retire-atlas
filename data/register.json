@@ -1,0 +1,3042 @@
+{
+ "items": [
+  {
+   "id": "R-001",
+   "name": "Job-posting pay-range & salary-history controls (US states & California)",
+   "type": "Control",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Postings for roles that may be filled in California (15+ employees, incl. remote and third-party postings) must show a good-faith pay scale, as must postings covered in CO, WA, NY, IL, MN, MD, HI, DC, NJ, VT, MA, VA (Jul 1, 2026), ME (Jul 29, 2026) and CT (Oct 1, 2026). Salary-history questions must be removed from Greenhouse forms, agency briefs and recruiter scripts wherever banned (incl. CA and VA).",
+   "owner": "Talent Acquisition (Recruiting Ops) + Total Rewards",
+   "cadence": "Per posting; quarterly ATS audit; Jan 1 range refresh",
+   "cite": "Cal. Labor Code 432.3 (SB 1162, SB 642); state pay-transparency and salary-history statutes",
+   "processes": [
+    "TA-01",
+    "CO-01"
+   ]
+  },
+  {
+   "id": "R-002",
+   "name": "Canadian job-posting rules: Ontario disclosures & 45-day outcome notice; BC pay range",
+   "type": "Control",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "Canada",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Ontario (25+ employees, since Jan 1, 2026): public postings must show pay or a range (max C$50,000 spread; exempt above C$200,000), disclose AI use in screening, state whether a vacancy exists and not require Canadian experience; interviewed applicants must hear the outcome within 45 days, with records kept 3 years. BC: every public posting must include expected pay or a range, and applicants may not be asked about pay history.",
+   "owner": "Talent Acquisition (Canada) + People Ops",
+   "cadence": "Per posting; 45-day follow-up per interviewed applicant; 3-year retention (ON)",
+   "cite": "ON ESA 2000 job-posting provisions (Working for Workers Four & Five Acts, 2024); BC Pay Transparency Act ss.4-5",
+   "processes": [
+    "TA-01",
+    "TA-03",
+    "TA-11"
+   ]
+  },
+  {
+   "id": "R-003",
+   "name": "Background-check disclosures & adverse-action notices (FCRA, ICRAA, CA Fair Chance Act)",
+   "type": "Notice",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Use a standalone FCRA disclosure and authorization (plus the separate ICRAA disclosure in California), a pre-adverse action notice with the report and CFPB Summary of Rights, a waiting period, then a final adverse action notice. In California (5+ employees) there is no criminal-history inquiry before a conditional offer, then a written individualized assessment and a preliminary notice giving 5 business days to respond.",
+   "owner": "Talent Acquisition + Background-check vendor + Employment Legal",
+   "cadence": "Per candidate",
+   "cite": "15 U.S.C. 1681b(b), 1681m; Cal. Civ. Code 1786 et seq.; Cal. Gov Code 12952; 2 CCR 11017.1",
+   "processes": [
+    "TA-05"
+   ]
+  },
+  {
+   "id": "R-004",
+   "name": "Automated hiring & assessment tools: bias audits, notices and ADS records",
+   "type": "Control",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "NYC LL 144 requires an annual independent bias audit, a public summary and candidate notice 10 business days before use; Illinois requires notice of AI use from Jan 1, 2026; Colorado SB 26-189 notice and adverse-decision explanation duties start Jan 1, 2027. California CRD rules (Oct 1, 2025) make the employer liable for vendor ADS and require ADS data to be kept 4 years.",
+   "owner": "TA Ops + HR Analytics + Employment Legal + Privacy",
+   "cadence": "Before deployment; annual bias audit; per candidate notice",
+   "cite": "NYC Local Law 144 of 2021; 775 ILCS 5/2-102(L); Colorado SB 26-189; 2 CCR 11008.1-11009",
+   "processes": [
+    "TA-03",
+    "DS-06"
+   ]
+  },
+  {
+   "id": "R-005",
+   "name": "Export-control role flag & nondiscriminatory U.S.-person question",
+   "type": "Control",
+   "domain": "Recruit",
+   "tier": "semi",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Trade Compliance sets an export-control flag on every requisition and job code with access to EAR/ITAR-controlled technology or source code. Only for flagged roles, ask a uniform U.S.-person question solely to assess export authorization, separately from Form I-9, and never post 'U.S. citizens only' unless a law, regulation or government contract requires it (DOJ IER guidance, Mar 2024).",
+   "owner": "Trade Compliance + Talent Acquisition + Employment Legal",
+   "cadence": "Per requisition; annual audit of postings and ATS knockout questions",
+   "cite": "EAR 15 CFR 734.13-734.15, 772.1; INA s274B (8 U.S.C. 1324b)",
+   "processes": [
+    "PL-02",
+    "TA-01",
+    "TA-06"
+   ]
+  },
+  {
+   "id": "R-006",
+   "name": "Deemed-export / deemed-reexport license determination before start or access",
+   "type": "Control",
+   "domain": "Recruit",
+   "tier": "semi",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Before a foreign person (H-1B, L-1, O-1, TN or F-1/OPT holders in the US, and third-country nationals in the Canada, India, Taiwan and China offices) receives controlled technology or source code, Trade Compliance decides whether a license is needed for the person's latest citizenship or permanent residency. Start dates and IT, lab and repository access are gated on clearance or a license, re-screened on transfer, new project, promotion or status change, and records are kept 5 years.",
+   "owner": "Trade Compliance + Immigration + IT/Security",
+   "cadence": "Per hire, transfer, project change and immigration-status change",
+   "cite": "EAR 15 CFR 734.13(b), 734.14(b), Part 762; ECCNs 3A090/4A090/3E001",
+   "processes": [
+    "TA-06",
+    "MV-01",
+    "MV-05",
+    "ON-03"
+   ]
+  },
+  {
+   "id": "R-007",
+   "name": "Form I-129 Part 6 deemed-export certification",
+   "type": "Filing",
+   "domain": "Recruit",
+   "tier": "semi",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "For every H-1B, H-1B1, L-1 and O-1A petition, extension and amendment, the petitioner certifies under penalty of perjury whether an EAR/ITAR license is required and that access will be blocked until it is obtained. Part 6 must rest on Trade Compliance's written classification of the actual job duties and be kept in the immigration file, not the I-9.",
+   "owner": "Immigration + Trade Compliance",
+   "cadence": "Per petition, extension and amendment",
+   "cite": "USCIS Form I-129, Part 6; EAR Part 734",
+   "processes": [
+    "TA-07",
+    "MV-06"
+   ]
+  },
+  {
+   "id": "R-008",
+   "name": "H-1B cap registration, LCA notice posting & public access file",
+   "type": "Filing",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Register cap candidates in the March USCIS window ($215 per registration; wage-weighted selection since Feb 27, 2026) after confirming the status of the $100,000 proclamation payment (vacated June 2026, proclamation extended to Sep 21, 2027) and the proposed $103,265 cap-petition fee (verify). For each LCA, post the worksite notice for 10 business days (or electronically) and keep the public access file.",
+   "owner": "Immigration + outside immigration counsel + Total Rewards (wage level)",
+   "cadence": "Annual (March registration; Apr 1-Jun 30 petitions); per LCA",
+   "cite": "INA 214(g); 8 CFR 214.2(h)(8)(iii); 20 CFR 655.734, 655.760; Proclamation 10973",
+   "processes": [
+    "TA-07",
+    "MV-06"
+   ]
+  },
+  {
+   "id": "R-009",
+   "name": "Foreign-national work authorization filings (Canada, India, Taiwan, China)",
+   "type": "Filing",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "Multi-country",
+   "countries": [
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Canada: submit LMIA-exempt offers in the IRCC Employer Portal (C$230 compliance fee) and keep records 6 years. Taiwan: WDA work permit or Employment Gold Card plus ARC before start; China: Foreigner's Work Permit, Z visa and residence permit within 30 days of entry; India: Employment visa (salary generally above USD 25,000) and e-FRRO registration within 14 days of arrival for stays of 180+ days.",
+   "owner": "Immigration/Global Mobility + local HR",
+   "cadence": "Per hire and renewal; permit-expiry diary",
+   "cite": "IRPR ss.209.11-209.12; Taiwan Employment Services Act Art. 46 & Foreign Professionals Act; PRC Exit-Entry Administration Law; India Immigration and Foreigners Act 2025",
+   "processes": [
+    "TA-07",
+    "MV-02",
+    "MV-03"
+   ]
+  },
+  {
+   "id": "R-010",
+   "name": "Government-official & related-person hiring screen",
+   "type": "Control",
+   "domain": "Recruit",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "The ATS asks whether a candidate is related to a government official, an employee of a state-owned customer, foundry or university, or a director or executive officer. Flagged candidates go to Compliance before offer (FCPA 'princeling' risk), and relatives of directors or executive officers paid over $120,000 go to Legal and the Audit Committee for Item 404 review and proxy disclosure.",
+   "owner": "Ethics & Compliance + Talent Acquisition + Legal (Securities)",
+   "cadence": "Per requisition/offer; annual proxy data pull",
+   "cite": "FCPA 15 U.S.C. 78dd-1, 78m(b); Reg S-K Item 404; Nasdaq Rule 5630",
+   "processes": [
+    "TA-10",
+    "TA-04",
+    "TA-08"
+   ]
+  },
+  {
+   "id": "R-011",
+   "name": "India National Career Service vacancy notification",
+   "type": "Filing",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Report vacancies to the career centre (National Career Service) before filling them, as the Social Security Code rules require in place of the 1959 Employment Exchanges Act; build the step into the Greenhouse posting workflow for Indian entities (verify form and timing under the final rules).",
+   "owner": "Talent Acquisition (India) + India HR Ops",
+   "cadence": "Per vacancy",
+   "cite": "Code on Social Security 2020 (employment information & vacancy reporting); SS (Central) Rules 2026",
+   "processes": [
+    "TA-01"
+   ]
+  },
+  {
+   "id": "R-012",
+   "name": "Taiwan disability employment quota",
+   "type": "Program",
+   "domain": "Recruit",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Private employers with 67+ employees must employ persons with disabilities equal to at least 1% of headcount (minimum 1), or pay the monthly shortfall (the minimum wage per missing person) into the disability employment fund.",
+   "owner": "Taiwan HR + Talent Acquisition",
+   "cadence": "Monthly headcount check; annual workforce plan",
+   "cite": "People with Disabilities Rights Protection Act Art. 38, 43",
+   "processes": [
+    "PL-01",
+    "TA-01"
+   ]
+  },
+  {
+   "id": "R-013",
+   "name": "Form I-9 & E-Verify: completion, reverification & annual internal audit",
+   "type": "Control",
+   "domain": "Onboard",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Complete Section 1 by day 1 and Section 2 within 3 business days on the 01/20/25 edition, use E-Verify where required (FAR clause, state mandates, STEM OPT) with cases created by day 3, and retain forms for the later of 3 years after hire or 1 year after termination; run an annual privileged internal I-9 audit. In California, notify employees within 72 hours of a federal I-9 inspection notice and never run E-Verify before an offer.",
+   "owner": "People Ops + Immigration + Employment Legal",
+   "cadence": "Per hire; reverification diary; annual audit",
+   "cite": "8 U.S.C. 1324a; 8 CFR 274a.2; FAR 52.222-54; Cal. Labor Code 90.2, 1019.1",
+   "processes": [
+    "ON-02",
+    "DS-03"
+   ]
+  },
+  {
+   "id": "R-014",
+   "name": "State new-hire reporting, registrations & hire notices",
+   "type": "Filing",
+   "domain": "Onboard",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Report new hires to the state within 20 days (some states are shorter), register for withholding, UI, PFML and local taxes in each remote employee's work state before the first payroll, and issue state hire notices such as the NY Labor Law 195(1) wage notice in the employee's primary language.",
+   "owner": "Payroll + People Ops",
+   "cadence": "Per hire; per new work state",
+   "cite": "42 U.S.C. 653a; NY Labor Law 195(1); state tax and UI codes",
+   "processes": [
+    "ON-03",
+    "MV-04"
+   ]
+  },
+  {
+   "id": "R-015",
+   "name": "California new-hire notice pack",
+   "type": "Notice",
+   "domain": "Onboard",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "At hire give non-exempt employees the LC 2810.5 wage notice (changes within 7 days), plus the CRD sexual-harassment pamphlet, SDI (DE 2515) and PFL (DE 2511) brochures, the workers' comp new-employee pamphlet, the CRD victims' leave notice, the lactation policy, the SB 294 notice and the emergency-contact designation.",
+   "owner": "People Ops (California)",
+   "cadence": "Per hire",
+   "cite": "Cal. Labor Code 2810.5, 3551, 1034, 1550 et seq.; Gov Code 12950, 12945.8; UI Code 2613",
+   "processes": [
+    "ON-01",
+    "ON-03"
+   ]
+  },
+  {
+   "id": "R-016",
+   "name": "Ontario new-hire information statement & 30-day document delivery",
+   "type": "Notice",
+   "domain": "Onboard",
+   "tier": "legal",
+   "scope": "Ontario",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Employers with 25+ employees give written employer name(s), contact details, work location, starting pay, pay period and payday and anticipated hours before day one where practicable (since Jul 1, 2025). Every hire gets the current ESA poster and, at 25+, the disconnecting-from-work and electronic-monitoring policies within 30 days.",
+   "owner": "People Ops (Canada)",
+   "cadence": "Per hire",
+   "cite": "ON ESA 2000 s.2 and new-employee information provisions; Parts VII.0.1 and XI.1",
+   "processes": [
+    "ON-01",
+    "ON-03"
+   ]
+  },
+  {
+   "id": "R-017",
+   "name": "India statutory appointment letter",
+   "type": "Record",
+   "domain": "Onboard",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Issue a letter of appointment in the prescribed form to every employee at joining (and to existing staff who lack one) stating designation, worker or non-worker category, wages showing the 50% 'wages' component and PF/ESI/gratuity entitlements. In Karnataka, verify original certificates and return them the same day, since retaining them is banned from Sep 2026.",
+   "owner": "India HR Ops",
+   "cadence": "Per hire; one-time catch-up for existing staff",
+   "cite": "OSH Code 2020 s.6(1)(f); OSH (Central) Rules 2026; Karnataka Shops & Commercial Establishments (Amendment) Act 2026",
+   "processes": [
+    "ON-03",
+    "ON-01"
+   ]
+  },
+  {
+   "id": "R-018",
+   "name": "China written labor contract within one month",
+   "type": "Control",
+   "domain": "Onboard",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Sign a Chinese or bilingual written labor contract with the statutory terms on or before day one and never later than one month after start (otherwise double wages accrue), deliver a signed copy, and diary expiry dates and the count of fixed terms (the employee can demand an open-ended contract after two consecutive fixed terms).",
+   "owner": "China HR + Legal",
+   "cadence": "Per hire and renewal; monthly expiry report",
+   "cite": "Labor Contract Law Arts. 10, 14, 17, 82; SPC Interpretation II Arts. 6-11",
+   "processes": [
+    "ON-03",
+    "MV-05"
+   ]
+  },
+  {
+   "id": "R-019",
+   "name": "Confidentiality, invention assignment & clean-hire certification before access",
+   "type": "Control",
+   "domain": "Onboard",
+   "tier": "legal",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Before system or lab access, execute the confidentiality and invention assignment agreement with the DTSA immunity notice, Rule 21F-17 carve-out, Cal. Labor Code 2870 notice and Gov Code 12964.5 carve-out (US), moral-rights waiver (Canada), stamp duty paid (India) and service-invention terms (Taiwan, China). Collect a prior-inventions schedule and a signed certification that the hire brings no prior-employer confidential information (extra review for hires from foundries, direct competitors or Entity-Listed companies).",
+   "owner": "Legal (IP/Employment) + People Ops + Security",
+   "cadence": "Per hire (Day 1 at the latest); annual template review",
+   "cite": "18 U.S.C. 1833(b); Cal. Labor Code 2870-2872; Copyright Act (Canada) s.14.1; Karnataka Stamp Act 1957; Taiwan Trade Secrets Act; PRC Patent Law Arts. 6, 15",
+   "processes": [
+    "ON-01",
+    "ON-04",
+    "TA-04",
+    "ER-10"
+   ]
+  },
+  {
+   "id": "R-020",
+   "name": "Annual statutory rate & threshold update control",
+   "type": "Control",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Before each effective date, update payroll, pay ranges and intern rates for minimum wages, exempt thresholds and social-insurance caps: California $17.40 and exempt floor $72,384 (Jan 1, 2027); BC C$18.25 (Jun 1); Ontario C$17.95 (Oct 1, 2026); Taiwan NT$29,500 (Jan 1, 2026); Shenzhen RMB 2,700 (Sep 1, 2026); India EPF wage ceiling INR 25,000 (Sep 17, 2026); plus the 2026 CPP/EI and US Social Security wage bases.",
+   "owner": "Payroll + Total Rewards",
+   "cadence": "Monthly legislative scan; before each effective date",
+   "cite": "Cal. Labor Code 1182.12, 515; ON and BC ESA; Taiwan Minimum Wage Act; Guangdong minimum wage notice (2026); S.O. 5109(E)",
+   "processes": [
+    "PY-01",
+    "CO-01"
+   ]
+  },
+  {
+   "id": "R-021",
+   "name": "Form W-2/W-3, Forms 941/940 & OBBBA overtime reporting",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Furnish W-2s to employees and file W-2/W-3 with SSA by Jan 31 (with Form 941 for Q4 and Form 940), and file Form 941 quarterly. The 2026 W-2s issued in Jan 2027 must report qualified FLSA overtime premium (code TT) and tips, so the FLSA-required premium must be tracked separately from state or contractual overtime.",
+   "owner": "Payroll + Tax",
+   "cadence": "Quarterly (941); annual by Jan 31",
+   "cite": "IRC 6051, 3402; IRC 224-225 (OBBBA, P.L. 119-21); 2026 Form W-2 instructions",
+   "processes": [
+    "PY-04",
+    "PY-03"
+   ]
+  },
+  {
+   "id": "R-022",
+   "name": "California wage statement & meal/rest premium controls",
+   "type": "Control",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "Each itemized wage statement must show gross and net wages, hours and rates, deductions, pay period, last-4 SSN or ID, legal employer name and address, and the paid-sick-leave balance. Missed or late meal and rest breaks must trigger an automatic one-hour premium at the regular rate, and non-exempt staff are paid at least semi-monthly within 7 days of period close.",
+   "owner": "Payroll + Timekeeping admin",
+   "cadence": "Every pay cycle; quarterly audit",
+   "cite": "Cal. Labor Code 204, 226, 226.7, 246(i), 512; IWC Wage Order 4",
+   "processes": [
+    "PY-01",
+    "PY-03"
+   ]
+  },
+  {
+   "id": "R-023",
+   "name": "Canada: CRA source-deduction remittances & T4/T4A slips",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Canada",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Withhold and remit income tax, CPP/CPP2 and EI on the remitter schedule (accelerated remitters up to 4 times a month). Issue T4 slips (including RSU and retiring-allowance income) and T4A slips and file them with the summary by the last day of February (electronic above 5 slips; RL-1 for any Quebec staff).",
+   "owner": "Payroll (Canada)",
+   "cadence": "Per remittance schedule; annual by end of February",
+   "cite": "Income Tax Act s.153; Income Tax Regulations ss.200, 205; CPP Act; EI Act",
+   "processes": [
+    "PY-04",
+    "PY-01"
+   ]
+  },
+  {
+   "id": "R-024",
+   "name": "India salary TDS: monthly deposit, Form 138 returns & Form 130 (formerly Form 16)",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Withhold TDS on salary under s.392 of the Income-tax Act 2025 (in force Apr 1, 2026) and deposit it by the 7th of the next month (Apr 30 for March). File quarterly Form 138 (formerly 24Q) by Jul 31, Oct 31, Jan 31 and May 31, and issue Form 130 (formerly Form 16) to employees by Jun 15.",
+   "owner": "Payroll (India) + Tax",
+   "cadence": "Monthly; quarterly; annual (Jun 15)",
+   "cite": "Income-tax Act 2025 ss.392-395; Income-tax Rules 2026",
+   "processes": [
+    "PY-04"
+   ]
+  },
+  {
+   "id": "R-025",
+   "name": "India professional tax & Labour Welfare Fund",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Karnataka PT is INR 200/month on salary of INR 25,000+ and INR 300 in February (INR 2,500 annual cap), remitted by the 20th; Telangana PT is remitted by the 10th. Karnataka LWF (INR 20 employee + INR 40 employer) is due Jan 15 and Telangana LWF Jan 31 (verify current rates).",
+   "owner": "Payroll (India)",
+   "cadence": "Monthly (PT); annual in January (LWF)",
+   "cite": "Karnataka Tax on Professions, Trades, Callings and Employments Act 1976; Karnataka Labour Welfare Fund Act 1965; Telangana equivalents",
+   "processes": [
+    "PY-01",
+    "PY-04"
+   ]
+  },
+  {
+   "id": "R-026",
+   "name": "India wage payment timing, wage slips & statutory bonus",
+   "type": "Control",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Pay monthly wages to all employees before the 7th of the following month, issue electronic wage slips in the prescribed form and keep deductions to authorised items within the 50% cap. Pay statutory bonus (employees up to INR 21,000/month; 8.33%-20%) by Nov 30 for a March year-end.",
+   "owner": "Payroll (India) + India HR Ops",
+   "cadence": "Monthly; annual bonus by Nov 30",
+   "cite": "Code on Wages 2019 ss.17, 18 and Ch. IV (bonus); Code on Wages (Central) Rules 2026",
+   "processes": [
+    "PY-01",
+    "CO-03"
+   ]
+  },
+  {
+   "id": "R-027",
+   "name": "Taiwan withholding statements & NHI supplementary premium",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "File the prior year's income-tax withholding and NHI supplementary premium statements with the tax authority by Jan 31 and issue statements to employees by Feb 10. Withhold the 2.11% supplementary premium on bonuses above 4x the monthly insured amount in a year, and pay the employer's 2.11% on payroll above total insured salaries.",
+   "owner": "Payroll (Taiwan)",
+   "cadence": "Monthly; annual (Jan 31 / Feb 10)",
+   "cite": "Taiwan Income Tax Act Art. 89, 92; NHI Act Art. 31, 34",
+   "processes": [
+    "PY-04",
+    "CO-03"
+   ]
+  },
+  {
+   "id": "R-028",
+   "name": "Taiwan employee roster, wage & minute-level attendance records; overtime consents",
+   "type": "Record",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Keep the statutory employee roster (5 years after departure), wage records and attendance recorded to the minute, including remote work (5 years each). Obtain labor-management-meeting or union consent for overtime and flexible schedules, and file use of the 54 h/month and 138 h/quarter overtime extension with the authority at 30+ employees.",
+   "owner": "Taiwan HR + Payroll",
+   "cadence": "Continuous; consents renewed at labor-management meetings",
+   "cite": "LSA Art. 7, 23, 30, 32; Labor Incident Act Art. 38",
+   "processes": [
+    "PY-03",
+    "DS-03"
+   ]
+  },
+  {
+   "id": "R-029",
+   "name": "China IIT monthly withholding & annual reconciliation support",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Withhold IIT monthly on the cumulative method (special additional deductions; separate taxation of the annual one-off bonus and listed-company equity income available through Dec 31, 2027) and file and pay by the 15th of the following month. Support employees' annual reconciliation from Mar 1 to Jun 30.",
+   "owner": "Payroll (China) + Tax",
+   "cadence": "Monthly (15th); annual (Mar 1-Jun 30)",
+   "cite": "PRC Individual Income Tax Law; MOF/STA Announcements 2023 Nos. 25 and 30",
+   "processes": [
+    "PY-04",
+    "EQ-02"
+   ]
+  },
+  {
+   "id": "R-030",
+   "name": "China special working-hours system approval",
+   "type": "Filing",
+   "domain": "Pay",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Flexible hours (sales, FAE and senior staff) or comprehensive hours (24/7 test and lab shifts) require approval from the local HR bureau before use. Without approval the standard 8/40 schedule, the 36 h/month overtime cap and 150/200/300% premiums apply.",
+   "owner": "China HR + Legal",
+   "cadence": "Before use; renew per approval term (verify local term)",
+   "cite": "PRC Labor Law Arts. 36-44; 1994 MOL Measures on Approval of Non-standard Working Hours",
+   "processes": [
+    "PY-03"
+   ]
+  },
+  {
+   "id": "R-031",
+   "name": "SOX ICFR key controls: payroll & incentive accruals",
+   "type": "Control",
+   "domain": "Pay",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "HR-owned in-scope controls must operate and be evidenced: independent review of payroll variance and off-cycle reports, approval of pay changes and terminations, commission capitalization (ASC 340-40), bonus and severance/restructuring accruals (ASC 420/712), and key-report (IPE) completeness. Obtain SOC 1 Type II reports for payroll, benefits and equity vendors and operate the complementary user-entity controls.",
+   "owner": "Payroll + HR Ops + Finance (Controller) + Internal Audit",
+   "cadence": "Per pay cycle; quarterly; annual management assessment",
+   "cite": "SOX s302, s404; PCAOB AS 2201; ASC 340-40, 420, 712",
+   "processes": [
+    "PY-01",
+    "PY-02",
+    "CO-03",
+    "CO-04",
+    "OF-03"
+   ]
+  },
+  {
+   "id": "R-032",
+   "name": "California pay data report (CRD)",
+   "type": "Filing",
+   "domain": "Reward",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "Employers with 100+ employees (and those using 100+ labor-contractor workers, in a separate report) file by the second Wednesday of May (May 12, 2027). Penalties are mandatory under SB 464; the 2027 report moves to 23 SOC-based job categories with exempt status, employment type and weeks worked, and demographic data must be stored separately from personnel files.",
+   "owner": "HR Analytics + Total Rewards + Employment Legal",
+   "cadence": "Annual (snapshot in Q4; file in May)",
+   "cite": "Cal. Gov Code 12999 (SB 973, SB 1162, SB 464)",
+   "processes": [
+    "CO-06",
+    "DS-05"
+   ]
+  },
+  {
+   "id": "R-033",
+   "name": "California pay-scale requests & job title/wage history records",
+   "type": "Record",
+   "domain": "Reward",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "Give any employee the pay scale for their current position on request, and keep each employee's job title and wage rate history for the length of employment plus 3 years for Labor Commissioner inspection.",
+   "owner": "Total Rewards + People Ops",
+   "cadence": "On request; continuous retention",
+   "cite": "Cal. Labor Code 432.3 (SB 1162, SB 642)",
+   "processes": [
+    "CO-01",
+    "CO-05",
+    "DS-03"
+   ]
+  },
+  {
+   "id": "R-034",
+   "name": "BC pay transparency report (Nov 1)",
+   "type": "Filing",
+   "domain": "Reward",
+   "tier": "legal",
+   "scope": "BC",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Employers with 50+ BC employees (counted at Jan 1, 2026) must publish a gender pay-gap report covering hourly pay, overtime and bonus gaps for the prior calendar year on their website or in the workplace by Nov 1, 2026 and annually after; non-compliant employers may be publicly named.",
+   "owner": "Total Rewards + HR Analytics (Canada)",
+   "cadence": "Annual (Nov 1)",
+   "cite": "BC Pay Transparency Act (SBC 2023); Pay Transparency Regulation",
+   "processes": [
+    "CO-06",
+    "DS-05"
+   ]
+  },
+  {
+   "id": "R-035",
+   "name": "Ontario pay equity maintenance",
+   "type": "Program",
+   "domain": "Reward",
+   "tier": "legal",
+   "scope": "Ontario",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Employers with 10+ Ontario employees must establish and maintain pay equity between female and male job classes of equal or comparable value (job-to-job or proportional comparison) and re-check after reorganizations or when new job classes are created.",
+   "owner": "Total Rewards + Legal (Canada)",
+   "cadence": "Annual check; on job-class change",
+   "cite": "Ontario Pay Equity Act",
+   "processes": [
+    "CO-06",
+    "PL-03"
+   ]
+  },
+  {
+   "id": "R-036",
+   "name": "India 50% 'wages' structure test",
+   "type": "Control",
+   "domain": "Reward",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "If excluded components (HRA, conveyance, statutory bonus, employer PF, overtime, commission and similar) exceed 50% of total remuneration, the excess counts as 'wages' for PF, gratuity and other statutory calculations (from Nov 21, 2025). Test every salary structure at hire, at the annual review and on restructuring.",
+   "owner": "Total Rewards + Payroll (India)",
+   "cadence": "Annual comp cycle; per new structure",
+   "cite": "Code on Wages 2019 s.2(y); Code on Social Security s.2(88); MoLE FAQs (Mar 16, 2026)",
+   "processes": [
+    "CO-01",
+    "CO-02"
+   ]
+  },
+  {
+   "id": "R-037",
+   "name": "Taiwan profit bonus & employee-compensation ratio",
+   "type": "Control",
+   "domain": "Reward",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "When the Taiwan entity makes a net profit, fault-free employees must receive a bonus or profit share, and a Taiwan company must state an employee-compensation percentage of profit in its articles and resolve the distribution each year. Pay year-end bonuses before the Lunar New Year holiday.",
+   "owner": "Total Rewards + Taiwan Finance/Legal",
+   "cadence": "Annual (year-end resolution; pay before Lunar New Year)",
+   "cite": "LSA Art. 29; Company Act Art. 235-1",
+   "processes": [
+    "CO-03"
+   ]
+  },
+  {
+   "id": "R-038",
+   "name": "Proxy CD&A, executive compensation tables & say-on-pay",
+   "type": "Filing",
+   "domain": "Reward",
+   "tier": "public",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "The DEF 14A (within 120 days of fiscal year-end if Part III is incorporated by reference) must include CD&A for the NEOs, the Summary Compensation Table and other Item 402 tables, perquisites of $10,000+ at aggregate incremental cost, the 402(s) compensation-risk statement, consultant disclosure and the say-on-pay vote, with results on 8-K Item 5.07 within four business days. The May 2026 SEC proposal would scale this back for filers below a $2B public float (verify outcome).",
+   "owner": "Total Rewards + Legal (Securities) + Corporate Secretary",
+   "cadence": "Annual proxy (about Apr 30); perquisite tracking year-round",
+   "cite": "Reg S-K Item 402(a)-(t), 402(s), 407(e); Exchange Act s14A; Form 8-K Item 5.07",
+   "processes": [
+    "CO-07"
+   ]
+  },
+  {
+   "id": "R-039",
+   "name": "CEO pay ratio & pay versus performance",
+   "type": "Filing",
+   "domain": "Reward",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Identify the median employee from all worldwide employees (US, Canada, India, Taiwan, China) on a date in the last three months of the fiscal year using a consistently applied measure (re-usable up to 3 years; 5% non-US de minimis). Compute five years of 'compensation actually paid' with year-end and vest-date equity fair values for pay versus performance, tagged in Inline XBRL.",
+   "owner": "Total Rewards + Global Payroll + Stock Admin + HR Analytics",
+   "cadence": "Annual proxy",
+   "cite": "Dodd-Frank s953(a)-(b); Reg S-K Item 402(u), 402(v)",
+   "processes": [
+    "CO-07",
+    "DS-05"
+   ]
+  },
+  {
+   "id": "R-040",
+   "name": "Executive tax-limit monitoring: 409A specified employees, 162(m) & 280G",
+   "type": "Control",
+   "domain": "Reward",
+   "tier": "public",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Refresh the 409A specified-employee list each year (common convention: Dec 31 identification, Apr 1 effective) so separation payments to them are delayed six months. For tax years beginning after Dec 31, 2026, identify 162(m) covered employees including the five highest-paid others, and run annual 280G estimates for executives with change-in-control agreements.",
+   "owner": "Total Rewards + Tax + Employment Legal",
+   "cadence": "Annual (Dec-Jan); per CIC agreement",
+   "cite": "IRC 409A; IRC 162(m) as amended by ARPA s9708; IRC 280G, 4999",
+   "processes": [
+    "CO-07",
+    "OF-04",
+    "EQ-02"
+   ]
+  },
+  {
+   "id": "R-041",
+   "name": "Export-compliance gates in sales incentive plans",
+   "type": "Control",
+   "domain": "Reward",
+   "tier": "semi",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Sales and FAE incentive plans must deny credit for unscreened or unlicensed orders, provide forfeiture or clawback for export or sanctions violations, and add compliance modifiers for China/APAC leaders; local sales staff must not both book orders and clear screening (lessons from the Cadence 2025 plea and the Applied Materials 2026 BIS penalty).",
+   "owner": "Total Rewards + Trade Compliance + Sales Ops",
+   "cadence": "Annual plan design; per violation",
+   "cite": "ECRA (50 U.S.C. 4801 et seq.); EAR Part 764; DOJ Corporate Enforcement Policy",
+   "processes": [
+    "CO-04",
+    "EQ-06"
+   ]
+  },
+  {
+   "id": "R-042",
+   "name": "Section 16 reporting: Form 4 within 2 business days (Forms 3/5, EDGAR Next)",
+   "type": "Filing",
+   "domain": "Equity",
+   "tier": "public",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Directors and Rule 16a-1(f) officers file Form 3 within 10 days of becoming insiders, Form 4 within two business days of grants, tax withholding, exercises, open-market trades and gifts, and Form 5 within 45 days of fiscal year-end. HR tells Legal the same day an officer is appointed, promoted into Section 16 status or departs, and maintains powers of attorney and EDGAR Next (Login.gov) delegations.",
+   "owner": "Legal (Securities) + Stock Admin + People Ops",
+   "cadence": "Per transaction; annual Form 5",
+   "cite": "Exchange Act s16(a); Rules 16a-1 to 16a-13; Reg S-K Item 405; EDGAR Next",
+   "processes": [
+    "EQ-05",
+    "ON-03"
+   ]
+  },
+  {
+   "id": "R-043",
+   "name": "Insider trading disclosures: 10-K Exhibit 19, Item 408(a) & 408(b)",
+   "type": "Filing",
+   "domain": "Equity",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "File the insider trading policy as 10-K Exhibit 19 and state whether policies govern trading by directors, officers, employees and the company (Item 408(b)). Disclose each quarter any director or officer adoption or termination of a Rule 10b5-1 plan or non-Rule 10b5-1 trading arrangement with material terms (Item 408(a)), plus the hedging policy (Item 407(i)).",
+   "owner": "Legal (Securities) + Stock Admin",
+   "cadence": "Quarterly (10-Q/10-K); annual Exhibit 19",
+   "cite": "Reg S-K Items 408(a)-(b), 407(i), 601(b)(19); Rule 10b5-1(c)",
+   "processes": [
+    "EQ-04"
+   ]
+  },
+  {
+   "id": "R-044",
+   "name": "Designated-insider lists & quarterly blackout notices",
+   "type": "Notice",
+   "domain": "Equity",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Maintain designated-insider lists by role, including engineers and sales staff who see design wins, customer forecasts or tape-out results, send blackout-start and open-window notices each quarter (blackouts typically start about two weeks before quarter-end), and enforce pre-clearance through the equity broker; translate for non-US staff.",
+   "owner": "Legal (Securities) + Stock Admin + HR Communications",
+   "cadence": "Quarterly; on role change",
+   "cite": "Reg S-K Item 408(b); Exchange Act Rule 10b-5; SEC v. Panuwat (2024)",
+   "processes": [
+    "EQ-04",
+    "MV-01"
+   ]
+  },
+  {
+   "id": "R-045",
+   "name": "Clawback policy: 10-K Exhibit 97, Item 402(w) & executive acknowledgments",
+   "type": "Filing",
+   "domain": "Equity",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "File the Rule 10D-1 / Nasdaq 5608 clawback policy as 10-K Exhibit 97 with the cover-page restatement checkboxes, disclose any recovery analysis under Item 402(w), keep signed acknowledgments from every executive officer, and retain each incentive award's metrics and payout calculations for at least three years.",
+   "owner": "Total Rewards + Legal + Finance (Controller)",
+   "cadence": "Annual 10-K; per new executive officer; on restatement",
+   "cite": "Exchange Act s10D; Rule 10D-1; Nasdaq Rule 5608; Reg S-K Items 402(w), 601(b)(97)",
+   "processes": [
+    "EQ-06",
+    "CO-07"
+   ]
+  },
+  {
+   "id": "R-046",
+   "name": "Equity grant calendar, Item 402(x) window control & Rule 16b-3 approvals",
+   "type": "Control",
+   "domain": "Equity",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Grant on a fixed calendar approved by the compensation committee, and block executive option grants from four business days before to one business day after a 10-Q, 10-K or MNPI 8-K (otherwise Item 402(x) tabular disclosure applies). The committee of non-employee directors approves every insider grant and net-settlement feature to preserve the Rule 16b-3 exemption.",
+   "owner": "Stock Admin + Total Rewards + Legal (Securities)",
+   "cadence": "Per grant cycle; annual proxy disclosure",
+   "cite": "Reg S-K Item 402(x); Exchange Act s16(b); Rule 16b-3",
+   "processes": [
+    "EQ-01",
+    "EQ-05"
+   ]
+  },
+  {
+   "id": "R-047",
+   "name": "Equity plan shareholder approval, inducement grants & Form S-8",
+   "type": "Filing",
+   "domain": "Equity",
+   "tier": "public",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Shareholder approval is required to adopt or materially amend equity plans (and ISO plans and 423 ESPPs within 12 months under the Code). Inducement grants need approval by independent directors or the independent compensation committee and a prompt press release with material terms (verify timing), and share-reserve increases need a Form S-8.",
+   "owner": "Total Rewards + Stock Admin + Legal (Securities)",
+   "cadence": "Annual proxy; per plan change or inducement grant",
+   "cite": "Nasdaq Rule 5635(c), IM-5635-1; IRC 422, 423; Form S-8",
+   "processes": [
+    "EQ-01",
+    "TA-09"
+   ]
+  },
+  {
+   "id": "R-048",
+   "name": "Forms 3921/3922 & ESPP/ISO statutory limit monitoring",
+   "type": "Filing",
+   "domain": "Equity",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Furnish Forms 3921 (ISO exercises) and 3922 (ESPP transfers) to employees by Jan 31 and file with the IRS (Feb 28, or Mar 31 if e-filed). Monitor the $25,000 ESPP accrual limit and the $100,000 ISO exercisability limit, and track disqualifying dispositions for W-2 reporting.",
+   "owner": "Stock Admin + Payroll + Tax",
+   "cadence": "Annual (Jan 31); per offering and grant",
+   "cite": "IRC 6039, 422, 423",
+   "processes": [
+    "EQ-03",
+    "EQ-02"
+   ]
+  },
+  {
+   "id": "R-049",
+   "name": "SOX equity controls: ASC 718 & cap-table reconciliation",
+   "type": "Control",
+   "domain": "Equity",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Each quarter reconcile the equity administration system to the cap table and ASC 718 expense (grant-date fair value, forfeitures, modifications, PSU probability, ESPP), and process terminations and leaves promptly so vesting stops on time.",
+   "owner": "Stock Admin + Finance (Controller) + Internal Audit",
+   "cadence": "Quarterly",
+   "cite": "SOX s404; ASC 718; PCAOB AS 2201",
+   "processes": [
+    "EQ-01",
+    "EQ-02",
+    "OF-05"
+   ]
+  },
+  {
+   "id": "R-050",
+   "name": "SAFE Circular 7 equity plan registration & quarterly filings",
+   "type": "Filing",
+   "domain": "Equity",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Before PRC employees participate in parent RSU, option or ESPP plans, register the plan with SAFE through a domestic agent (usually the WFOE), open a special FX account for proceeds, update the registration for material changes and departing participants, and file quarterly participation/FX reports (verify local deadline).",
+   "owner": "Stock Admin + China HR + Finance/Treasury",
+   "cadence": "Initial registration; quarterly (Jan/Apr/Jul/Oct); per change",
+   "cite": "SAFE Circular 7 (Hui Fa [2012] No. 7)",
+   "processes": [
+    "EQ-01",
+    "EQ-03",
+    "OF-05"
+   ]
+  },
+  {
+   "id": "R-051",
+   "name": "Country equity tax & exchange-control compliance (Canada, India, Taiwan, China)",
+   "type": "Control",
+   "domain": "Equity",
+   "tier": "legal",
+   "scope": "Multi-country",
+   "countries": [
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Withhold through local payroll at vest, exercise or purchase (India perquisite TDS; China IIT with separate listed-equity taxation through 2027; Taiwan vesting income; Canada RSU income and the C$200,000 stock-option deduction cap) and meet India FEMA ODI/LRS rules for ESPP purchases (verify). In Canada, plan forfeiture terms must unambiguously exclude the common-law notice period.",
+   "owner": "Stock Admin + Global Payroll + Tax + Legal",
+   "cadence": "Per vest/exercise/purchase; annual country sub-plan review",
+   "cite": "Income Tax Act (Canada) s.7, 110(1)(d); Matthews v. Ocean Nutrition 2020 SCC 26; India Income-tax Act 2025 and FEMA; Caishui [2005] No. 35; Taiwan Income Tax Act",
+   "processes": [
+    "EQ-02",
+    "EQ-03",
+    "OF-05"
+   ]
+  },
+  {
+   "id": "R-052",
+   "name": "ACA Forms 1094-C/1095-C",
+   "type": "Filing",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "At 50+ FTEs, furnish Forms 1095-C by the extended date (about Mar 2) and e-file Forms 1094-C/1095-C with the IRS by Mar 31, reflecting offers of affordable (9.96% for 2026), minimum-value coverage to at least 95% of full-time employees. State individual-mandate reporting (e.g., California) runs on separate deadlines.",
+   "owner": "Benefits + Payroll + Benefits admin vendor",
+   "cadence": "Annual (March)",
+   "cite": "IRC 4980H, 6055, 6056",
+   "processes": [
+    "BN-01",
+    "BN-02"
+   ]
+  },
+  {
+   "id": "R-053",
+   "name": "Form 5500, PCORI fee & RxDC reporting",
+   "type": "Filing",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "File Form 5500 for each ERISA plan by the last day of the 7th month after plan-year end (Jul 31 for calendar plans; Form 5558 extends to Oct 15), pay the PCORI fee on Form 720 by Jul 31 for self-insured plans, and submit prescription drug (RxDC) data by Jun 1.",
+   "owner": "Benefits + Finance + plan auditor/TPA",
+   "cadence": "Annual (Jun 1; Jul 31; Oct 15 if extended)",
+   "cite": "ERISA 104; 29 CFR 2520; IRC 4376; CAA 2021 (RxDC)",
+   "processes": [
+    "BN-04",
+    "BN-05"
+   ]
+  },
+  {
+   "id": "R-054",
+   "name": "Group health plan participant notices (COBRA, Part D, CHIP, WHCRA, SBC)",
+   "type": "Notice",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Give the COBRA general notice within 90 days of coverage and election notices within 44 days of a qualifying event if the employer administers (20+ employees; Cal-COBRA for small insured plans), the Medicare Part D creditable coverage notice by Oct 15, and the CHIP, WHCRA, SBC and HIPAA privacy (every 3 years) notices at enrollment.",
+   "owner": "Benefits + Benefits admin platform",
+   "cadence": "Per enrollment and qualifying event; annual (by Oct 15 / open enrollment)",
+   "cite": "IRC 4980B; 29 CFR 2590.606-1 to -4; 42 CFR 423.56; PHSA 2715",
+   "processes": [
+    "BN-01",
+    "BN-02",
+    "BN-06"
+   ]
+  },
+  {
+   "id": "R-055",
+   "name": "ERISA & HIPAA plan documentation (SPD/SMM, NQTL analysis, HIPAA firewall)",
+   "type": "Record",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Maintain written plan documents and SPDs with SMMs within 210 days after plan-year end, mental-health parity NQTL comparative analyses, HIPAA plan-sponsor firewall amendments, privacy and security policies and business associate agreements, and the retirement plan fiduciary committee charter and minutes; keep ERISA records 6 years.",
+   "owner": "Benefits + Employment Legal (ERISA) + Privacy",
+   "cadence": "Annual review; per plan amendment",
+   "cite": "ERISA 102, 104, 107, 712; CAA 2021; 45 CFR 164.504(f)",
+   "processes": [
+    "BN-04",
+    "BN-05"
+   ]
+  },
+  {
+   "id": "R-056",
+   "name": "California benefit mandates: CalSavers, FTB coverage reporting, commuter benefit & SF HCSO",
+   "type": "Filing",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "File the CalSavers exemption when a 401(k) is offered, file Forms 1094/1095 with the Franchise Tax Board by Mar 31 for self-insured coverage, offer a qualifying commuter benefit at 50+ full-time Bay Area employees (San Francisco ordinance at 20+), and make SF Health Care Security Ordinance expenditures for SF-based staff (20+) with the annual report (verify date).",
+   "owner": "Benefits + Payroll (California)",
+   "cadence": "Annual (Mar 31; HCSO report); at plan change",
+   "cite": "Cal. Gov Code 100000 et seq. (CalSavers); Rev. & Tax. Code 61000 et seq.; Gov Code 65081; BAAQMD Reg. 14 Rule 1; SF Admin. Code ch. 14",
+   "processes": [
+    "BN-05",
+    "BN-02"
+   ]
+  },
+  {
+   "id": "R-057",
+   "name": "India EPF & ESI monthly contributions and returns",
+   "type": "Filing",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Deposit EPF (12% + 12% on 'wages', mandatory up to INR 25,000/month from Sep 17, 2026; EPS diversion up to INR 2,083) and ESI (3.25% + 0.75% up to INR 21,000) and file the electronic challan-cum-return by the 15th of the following month. Enrol joiners (UAN, Form 11) and cover international workers on full salary.",
+   "owner": "Payroll (India) + India HR Ops",
+   "cadence": "Monthly (15th); per hire",
+   "cite": "EPF & MP Act 1952 / Code on Social Security Ch. III-IV; EPF Scheme paras 26, 83; S.O. 5109(E) (Sep 17, 2026)",
+   "processes": [
+    "BN-01",
+    "PY-01"
+   ]
+  },
+  {
+   "id": "R-058",
+   "name": "India gratuity funding, actuarial valuation & nominations",
+   "type": "Program",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Fund gratuity (15 days' wages per completed year after 5 years; after 1 year for fixed-term staff) through a trust or insurer, obtain an annual actuarial valuation on the Code 'wages' base, collect gratuity and PF nominations at joining, and pay within 30 days of it becoming payable.",
+   "owner": "Total Rewards + Finance + Payroll (India)",
+   "cadence": "Annual valuation (March); per hire and exit",
+   "cite": "Code on Social Security 2020 Ch. V (ss.53-58); MoLE FAQs (2026)",
+   "processes": [
+    "BN-04",
+    "OF-05"
+   ]
+  },
+  {
+   "id": "R-059",
+   "name": "Taiwan day-one social insurance enrollment & labor pension reporting",
+   "type": "Filing",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Enroll Labor Insurance, Employment Insurance, Occupational Accident Insurance and NHI effective the first day of work at the correct insured-salary grade, report labor pension contributions (at least 6% employer to the individual account) within 7 days of hire or separation, and re-grade on the Jan 1 table changes.",
+   "owner": "Taiwan HR + Payroll",
+   "cadence": "Per hire and exit; annual grade update (Jan 1)",
+   "cite": "Labor Insurance Act; Labor Occupational Accident Insurance and Protection Act; NHI Act; Labor Pension Act Art. 6, 14, 18",
+   "processes": [
+    "BN-01",
+    "OF-05"
+   ]
+  },
+  {
+   "id": "R-060",
+   "name": "Taiwan Employee Welfare Committee & welfare fund",
+   "type": "Committee",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Enterprises are expected to set aside employee welfare funds (from capital, revenue and a 0.5% wage deduction) administered by an employee welfare committee that funds festival gifts, travel and allowances; enforcement against foreign-owned service entities varies, so confirm scope with Taiwan counsel (verify).",
+   "owner": "Taiwan HR + Finance",
+   "cadence": "Committee meetings per charter; annual budget",
+   "cite": "Employee Welfare Fund Act",
+   "processes": [
+    "BN-05",
+    "EN-02"
+   ]
+  },
+  {
+   "id": "R-061",
+   "name": "China social insurance & housing fund: registration, contributions & annual base adjustment",
+   "type": "Filing",
+   "domain": "Benefits",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Register every employee, including foreigners, within 30 days of hire and contribute on actual prior-year average wage within the city floor and cap. Re-declare bases each year (Shanghai 2026-27: RMB 7,546-37,731 from Jul 1 with retroactive top-up by Sep 30; Shenzhen declaration by end-June) and file the WFOE annual SAMR report, including social insurance data, by Jun 30.",
+   "owner": "China HR + Payroll/HR agency",
+   "cadence": "Per hire; monthly; annual (Jun-Sep)",
+   "cite": "Social Insurance Law Art. 58; Regulations on Management of Housing Provident Fund; SPC Interpretation II Art. 19",
+   "processes": [
+    "BN-01",
+    "BN-05",
+    "PY-01"
+   ]
+  },
+  {
+   "id": "R-062",
+   "name": "FMLA notices & poster",
+   "type": "Notice",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "At 50+ employees, post the FMLA notice, describe FMLA rights in the handbook, and give the eligibility, rights-and-responsibilities and designation notices within 5 business days of learning a leave may qualify; keep FMLA records 3 years in confidential files.",
+   "owner": "Leave administration (Benefits) + People Ops",
+   "cadence": "Per leave request; poster continuously",
+   "cite": "29 CFR 825.300, 825.500",
+   "processes": [
+    "LV-01",
+    "LV-03"
+   ]
+  },
+  {
+   "id": "R-063",
+   "name": "State paid family/medical leave & sick-leave registrations and notices",
+   "type": "Filing",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Register and remit contributions for state PFML programs where employees work (MN and DE benefits from Jan 1, 2026; ME from May 1, 2026; MD contributions from Jan 1, 2027) and issue each state's PFML and paid-sick-leave notices at hire and on change; California SDI/PFL is withheld at 1.3% with no wage cap.",
+   "owner": "Payroll + Leave administration",
+   "cadence": "Per new work state; per program launch; at hire",
+   "cite": "State PFML and paid sick leave statutes; Cal. UI Code 984",
+   "processes": [
+    "LV-01",
+    "PY-01",
+    "MV-04"
+   ]
+  },
+  {
+   "id": "R-064",
+   "name": "California leave notices (CFRA/PDL, victims' leave, lactation, PSL poster)",
+   "type": "Notice",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "Employers with 5+ employees that have a handbook must describe CFRA and PDL rights in it and post the CRD notices. Give the CRD victims' leave notice at hire, annually, on request and on disclosure (verify 25+ threshold), keep the lactation policy in the handbook and give it to anyone asking about parental leave, and post the current DLSE paid-sick-leave poster.",
+   "owner": "People Ops + Leave administration (California)",
+   "cadence": "At hire; annual; handbook refresh",
+   "cite": "Cal. Gov Code 12945, 12945.2, 12945.8; Labor Code 1034, 247; 2 CCR 11049, 11095",
+   "processes": [
+    "LV-01",
+    "LV-05"
+   ]
+  },
+  {
+   "id": "R-065",
+   "name": "India maternity benefit intimation & creche facility",
+   "type": "Notice",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Inform every woman employee in writing and electronically of her maternity benefits (26 weeks, nursing breaks, WFH where the work allows) at appointment. At 50+ employees provide a creche (own or pooled) with 4 visits a day, or the creche allowance (at least INR 500/child/month under the central rules).",
+   "owner": "India HR Ops + Benefits",
+   "cadence": "Per hire; continuous facility",
+   "cite": "Code on Social Security 2020 Ch. VI and s.67; SS (Central) Rules 2026",
+   "processes": [
+    "LV-01",
+    "BN-05",
+    "ON-01"
+   ]
+  },
+  {
+   "id": "R-066",
+   "name": "India holiday list display & leave year-end processing",
+   "type": "Notice",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Display the annual national and festival holiday list (Karnataka: about 5 national + 5 festival holidays, chosen after consulting employees) and the weekly-off roster before the year starts, and at year-end apply the 30-day carry-forward for workers and encash the excess.",
+   "owner": "India HR Ops + Payroll",
+   "cadence": "Annual (December)",
+   "cite": "Karnataka Industrial Establishments (National & Festival Holidays) Act 1963; OSH Code 2020 s.32",
+   "processes": [
+    "LV-05"
+   ]
+  },
+  {
+   "id": "R-067",
+   "name": "Taiwan annual leave written statement & payout",
+   "type": "Notice",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Give each employee the annual written statement of annual leave entitlement and use, and pay out unused leave at year-end (unless deferral was agreed) by the regular payday or within 30 days, and at separation.",
+   "owner": "Taiwan HR + Payroll",
+   "cadence": "Annual (year-end); at separation",
+   "cite": "LSA Art. 38; Enforcement Rules Art. 24-1",
+   "processes": [
+    "LV-05",
+    "OF-05"
+   ]
+  },
+  {
+   "id": "R-068",
+   "name": "China untaken annual leave settlement",
+   "type": "Control",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Schedule statutory annual leave (5/10/15 days by cumulative service); by year-end either obtain a written carry-over agreement or pay 300% for untaken days, and pro-rate and pay out on exit.",
+   "owner": "China HR + Payroll",
+   "cadence": "Annual (Dec-Jan); at exit",
+   "cite": "Regulations on Paid Annual Leave for Employees (2008) and Implementation Measures",
+   "processes": [
+    "LV-05",
+    "OF-05"
+   ]
+  },
+  {
+   "id": "R-069",
+   "name": "AODA employment standards program (accommodation plans, RTW, emergency info, training)",
+   "type": "Program",
+   "domain": "Leave",
+   "tier": "legal",
+   "scope": "Ontario",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Train all Ontario staff on the IASR and the Human Rights Code, tell applicants and employees that accommodation is available, provide individualized workplace emergency response information and, at 50+ employees, keep documented individual accommodation plans, a return-to-work process, accessibility policies and a multi-year accessibility plan.",
+   "owner": "People Ops (Canada) + L&D + Leave administration",
+   "cadence": "Per hire and accommodation; plan reviewed at least every 5 years",
+   "cite": "AODA 2005; O. Reg. 191/11 (IASR) ss.7, 22-29",
+   "processes": [
+    "LV-02",
+    "LV-03",
+    "PD-06"
+   ]
+  },
+  {
+   "id": "R-070",
+   "name": "California harassment prevention training",
+   "type": "Training",
+   "domain": "Grow",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "Employers with 5+ employees give supervisors 2 hours and non-supervisors 1 hour of interactive training within 6 months of hire or promotion and every 2 years (seasonal and temporary staff within 30 days or 100 hours), covering abusive conduct, gender identity and expression and sexual orientation; keep records 2 years.",
+   "owner": "L&D + Employee Relations",
+   "cadence": "Within 6 months of hire/promotion; every 2 years",
+   "cite": "Cal. Gov Code 12950.1 (SB 1343); 2 CCR 11024",
+   "processes": [
+    "PD-06",
+    "ON-04"
+   ]
+  },
+  {
+   "id": "R-071",
+   "name": "Multi-state harassment training (NY, IL, CT, DE, ME)",
+   "type": "Training",
+   "domain": "Grow",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us"
+   ],
+   "requirement": "For remote employees in these states: NY annual interactive training; IL annual; CT 2 hours within 6 months of hire (3+ employees); DE within 1 year of hire and every 2 years (50+); ME within 1 year of hire (15+); keep completion records.",
+   "owner": "L&D + People Ops",
+   "cadence": "Annual or per state cycle",
+   "cite": "NY Labor Law 201-g; 775 ILCS 5/2-109; CT Gen. Stat. 46a-54; 19 Del. C. 711A; 26 MRSA 807",
+   "processes": [
+    "PD-06"
+   ]
+  },
+  {
+   "id": "R-072",
+   "name": "India POSH awareness & Internal Committee training",
+   "type": "Training",
+   "domain": "Grow",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Run POSH awareness sessions at induction and annually for all staff and capacity-building for Internal Committee members as part of the employer's duties; completion counts feed the IC annual report.",
+   "owner": "India HR + L&D + Internal Committee",
+   "cadence": "At induction; annual",
+   "cite": "POSH Act 2013 s.19; POSH Rules 2013 r.13",
+   "processes": [
+    "PD-06",
+    "ER-03"
+   ]
+  },
+  {
+   "id": "R-073",
+   "name": "Code of conduct training, annual certification & waiver control",
+   "type": "Training",
+   "domain": "Grow",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Nasdaq requires a public code covering all directors, officers and employees with an enforcement mechanism: run code training and annual certification in local languages, and route executive exceptions (outside boards, related-party hires) to Legal as potential waivers needing board approval and disclosure within four business days (8-K Item 5.05 or website).",
+   "owner": "Ethics & Compliance + L&D + Legal",
+   "cadence": "At hire; annual certification; per waiver",
+   "cite": "Nasdaq Rule 5610; SOX s406; Form 8-K Item 5.05",
+   "processes": [
+    "PD-06",
+    "ER-06"
+   ]
+  },
+  {
+   "id": "R-074",
+   "name": "Insider trading & MNPI training",
+   "type": "Training",
+   "domain": "Grow",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Brief designated insiders and new officers at onboarding and annually on blackouts, pre-clearance, 10b5-1 plans, Section 16 and Rule 144 duties, Regulation FD and 'shadow trading' in customers', suppliers' or competitors' stock, and collect acknowledgments.",
+   "owner": "Legal (Securities) + L&D + Stock Admin",
+   "cadence": "At hire or insider designation; annual",
+   "cite": "Exchange Act Rule 10b-5; Regulation FD; Reg S-K Item 408(b); SEC v. Panuwat (2024)",
+   "processes": [
+    "PD-06",
+    "EQ-04"
+   ]
+  },
+  {
+   "id": "R-075",
+   "name": "Export-control, TCP & travel-security training",
+   "type": "Training",
+   "domain": "Grow",
+   "tier": "semi",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Deliver role-based export training for engineering, FAE, sales and support (advanced-computing rules, EAR 744.6 U.S.-person restrictions, Entity List) at onboarding with annual refreshers and local-language attestations in China, Taiwan and India, TCP briefings with signed acknowledgments for flagged employees, and pre-travel device and data briefings for China and foundry/OSAT visits.",
+   "owner": "Trade Compliance + L&D + Security",
+   "cadence": "At onboarding; annual; before travel",
+   "cite": "EAR Parts 734, 744; BIS TCP guidance; PRC Counter-Espionage Law (2023)",
+   "processes": [
+    "PD-06",
+    "ON-04",
+    "HS-02"
+   ]
+  },
+  {
+   "id": "R-076",
+   "name": "Anti-bribery training & certification",
+   "type": "Training",
+   "domain": "Grow",
+   "tier": "legal",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Train managers, sales, FAE and recruiting staff on the FCPA, India's Prevention of Corruption Act ('adequate procedures' defence), China's commercial-bribery rules and hiring-related risks, with annual certification and a gifts and hospitality register.",
+   "owner": "Ethics & Compliance + L&D",
+   "cadence": "At hire for in-scope roles; annual",
+   "cite": "FCPA 15 U.S.C. 78dd-1; India Prevention of Corruption Act 1988 s.9; PRC Anti-Unfair Competition Law (2025)",
+   "processes": [
+    "PD-06",
+    "TA-10"
+   ]
+  },
+  {
+   "id": "R-077",
+   "name": "Federal, state & California workplace postings",
+   "type": "Notice",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Post the EEOC 'Know Your Rights', FLSA, FMLA, EPPA, USERRA and OSHA notices plus state and local notices and the California set (CRD, Labor Commissioner whistleblower hotline notice, paid sick leave, minimum wage, paydays), with electronic access for remote employees in each state.",
+   "owner": "People Ops + Facilities",
+   "cadence": "Continuous; check each Jan 1 and Jul 1",
+   "cite": "29 CFR 1601.30, 516.4, 825.300, 1903.2; Cal. Labor Code 1102.8, 207, 247.5",
+   "processes": [
+    "DS-08",
+    "ON-01"
+   ]
+  },
+  {
+   "id": "R-078",
+   "name": "SB 294 Workplace Know Your Rights notice (Feb 1) & emergency contact",
+   "type": "Notice",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "Give a stand-alone notice on the Labor Commissioner template to all employees by Feb 1 each year and at hire (and to any union), let employees designate an emergency contact to be told if they are arrested or detained at work, and keep records 3 years; penalties run up to $500 per employee.",
+   "owner": "People Ops + Employee Relations (California)",
+   "cadence": "Annual (by Feb 1); at hire",
+   "cite": "Cal. Labor Code 1550 et seq. (SB 294)",
+   "processes": [
+    "ON-01",
+    "ER-01"
+   ]
+  },
+  {
+   "id": "R-079",
+   "name": "Ontario disconnecting-from-work written policy",
+   "type": "Notice",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Ontario",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Employers with 25+ Ontario employees on Jan 1 must have a written disconnecting-from-work policy by Mar 1 of that year showing its preparation date and any change dates, give it to employees within 30 days (new hires within 30 days of hire) and keep copies 3 years after it stops applying.",
+   "owner": "People Ops (Canada) + HR Policy",
+   "cadence": "Annual headcount test (Jan 1); in place by Mar 1",
+   "cite": "ON ESA 2000 Part VII.0.1 (Working for Workers Act, 2021)",
+   "processes": [
+    "DS-08",
+    "ON-01"
+   ]
+  },
+  {
+   "id": "R-080",
+   "name": "SOX 301 complaint procedures & global speak-up hotline",
+   "type": "Program",
+   "domain": "Relations",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "The audit committee must have procedures for confidential, anonymous employee submissions on accounting and auditing matters. Operate a multilingual hotline (anonymous where lawful) with quarterly case metrics to the audit committee, and escalate possible export, sanctions and FCPA matters to Legal at once to protect DOJ's 120-day self-report window.",
+   "owner": "Ethics & Compliance + Employee Relations + Audit Committee",
+   "cadence": "Continuous; quarterly audit committee reporting",
+   "cite": "SOX s301 (Rule 10A-3); SOX s806; DOJ Corporate Whistleblower Awards Pilot Program (2024-25)",
+   "processes": [
+    "ER-01",
+    "ER-05"
+   ]
+  },
+  {
+   "id": "R-081",
+   "name": "Protected-activity check before adverse action",
+   "type": "Control",
+   "domain": "Relations",
+   "tier": "best",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Before any termination, demotion, transfer or discipline, check for recent protected activity (SOX or SEC reports, wage or safety complaints, harassment complaints, leave, accommodation requests). California presumes retaliation within 90 days of protected activity, and Ontario, BC, India (POSH), Taiwan and China laws also bar reprisal for complaints and leave.",
+   "owner": "Employee Relations + Employment Legal + HRBP",
+   "cadence": "Per adverse action",
+   "cite": "SOX s806 (18 U.S.C. 1514A); Cal. Labor Code 98.6, 1102.5; ON ESA s.74; POSH Act 2013; Taiwan GEEA Art. 36",
+   "processes": [
+    "ER-04",
+    "OF-02",
+    "OF-03"
+   ]
+  },
+  {
+   "id": "R-082",
+   "name": "India POSH Internal Committee: constitution, display & annual report",
+   "type": "Committee",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Every workplace with 10+ employees must constitute an IC (senior woman Presiding Officer, 2+ employee members, 1 external member, at least half women, 3-year terms) and display its details. The IC files a calendar-year annual report with the employer and the District Officer (commonly by Jan 31; confirm), and complaint statistics go in the board's report.",
+   "owner": "India HR + Internal Committee + Company Secretary",
+   "cadence": "Continuous; annual report (January); reconstitute every 3 years",
+   "cite": "POSH Act 2013 ss.4, 19, 21-22, 26; POSH Rules 2013 r.14; Companies (Accounts) Rules (amended 2025)",
+   "processes": [
+    "ER-03"
+   ]
+  },
+  {
+   "id": "R-083",
+   "name": "India Grievance Redressal Committee",
+   "type": "Committee",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Establishments with 20+ workers must have a GRC of up to 10 members split equally between employer and workers (women represented in proportion) that resolves grievances within 30 days (grievances may be raised within 1 year); it is also a condition of the Karnataka IT/ITeS standing-orders exemption.",
+   "owner": "India HR + Employee Relations",
+   "cadence": "Continuous; per grievance (30 days)",
+   "cite": "Industrial Relations Code 2020 s.4; IR (Central) Rules 2026",
+   "processes": [
+    "ER-01",
+    "ER-08"
+   ]
+  },
+  {
+   "id": "R-084",
+   "name": "India standing orders / Karnataka IT exemption conditions & disciplinary reporting",
+   "type": "Filing",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Establishments with 300+ workers need certified or model standing orders. IT/ITeS units relying on the Karnataka exemption (to June 2029; status under the IR Code to verify) must keep a POSH IC and GRC, report suspensions, discharges, terminations, demotions and dismissals to the Deputy Labour Commissioner and furnish service-condition data.",
+   "owner": "India HR + Employee Relations + Legal",
+   "cadence": "Per disciplinary action; per notification renewal",
+   "cite": "IR Code 2020 Ch. IV; Karnataka notification LD 328 LET 2023 (Jun 10, 2024)",
+   "processes": [
+    "ER-04",
+    "OF-02"
+   ]
+  },
+  {
+   "id": "R-085",
+   "name": "India designated equal-opportunity officers & policies",
+   "type": "Program",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Publish an equal opportunity policy for persons with disabilities (liaison officer at 20+ employees), adopt a transgender equal opportunity policy with a designated complaint officer, and at 100+ persons designate an HIV/AIDS complaints officer and keep HIV status confidential.",
+   "owner": "India HR + Legal",
+   "cadence": "Continuous; annual review",
+   "cite": "RPwD Act 2016 s.21; Transgender Persons (Protection of Rights) Act 2019 ss.9-11; HIV and AIDS (Prevention and Control) Act 2017",
+   "processes": [
+    "LV-02",
+    "ER-01"
+   ]
+  },
+  {
+   "id": "R-086",
+   "name": "Taiwan work rules approval & posting (30+)",
+   "type": "Filing",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Employers with 30+ employees must adopt work rules covering hours, leave, wages, overtime, discipline, attendance, termination, severance, retirement, welfare and safety, submit them to the local labor authority for approval within 30 days of reaching 30 employees, refile on amendment and post them; global policies are not enforceable locally unless incorporated.",
+   "owner": "Taiwan HR + Legal",
+   "cadence": "On reaching threshold; per amendment; annual review",
+   "cite": "LSA Art. 70-71; Enforcement Rules Art. 37",
+   "processes": [
+    "DS-08",
+    "ER-04"
+   ]
+  },
+  {
+   "id": "R-087",
+   "name": "Taiwan labor-management meetings (quarterly)",
+   "type": "Committee",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Hold labor-management meetings at least every 3 months with elected employee representatives equal in number to management, report membership to the local authority, and (absent a union) use the meeting to approve overtime, flexible working-hours schemes and shift-rest adjustments.",
+   "owner": "Taiwan HR + Works Council/Union (employee representatives)",
+   "cadence": "Quarterly; elections per term",
+   "cite": "LSA Art. 83; Regulations for Implementing Labor-Management Meetings",
+   "processes": [
+    "ER-08",
+    "PY-03"
+   ]
+  },
+  {
+   "id": "R-088",
+   "name": "Taiwan sexual-harassment & workplace-bullying prevention measures",
+   "type": "Program",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "At 10+ employees publicize harassment and (from Jul 1, 2026) bullying complaint channels; at 30+ adopt and post prevention measures, complaint and investigation procedures and disciplinary rules. Notify the local authority of harassment complaints and outcomes, register bullying cases in MOL's system, and route complaints against the top executive to the authority.",
+   "owner": "Taiwan HR + Employee Relations",
+   "cadence": "Continuous; per complaint; annual review",
+   "cite": "Gender Equality in Employment Act Art. 13, 32-1 (2023 amend.); OSH Act workplace bullying chapter (Dec 2025); Workplace Bullying Prevention Measures Standards",
+   "processes": [
+    "ER-03",
+    "ER-02"
+   ]
+  },
+  {
+   "id": "R-089",
+   "name": "China employee handbook adopted via democratic procedure",
+   "type": "Control",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Rules on pay, hours, leave, safety, discipline and training must be discussed with the employee congress or all employees, finalized after consultation with the union or employee representatives and publicized with signed acknowledgment, or they cannot support Art. 39 dismissals; adopt changes before Jan 1 each year.",
+   "owner": "China HR + Legal + Works Council/Union",
+   "cadence": "Per amendment; annual (Q4)",
+   "cite": "Labor Contract Law Art. 4; SPC Interpretation (I) on Labor Disputes (2020) Art. 50",
+   "processes": [
+    "DS-08",
+    "ER-04",
+    "ER-08"
+   ]
+  },
+  {
+   "id": "R-090",
+   "name": "China trade union funds (2% of payroll)",
+   "type": "Filing",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Pay union funds of 2% of total payroll (or preparatory funds where no enterprise union exists), commonly collected by the tax bureau with monthly or quarterly tax filings (verify local collection practice in Shanghai and Shenzhen).",
+   "owner": "Payroll (China) + Finance",
+   "cadence": "Monthly or quarterly",
+   "cite": "PRC Trade Union Law",
+   "processes": [
+    "PY-01",
+    "ER-08"
+   ]
+  },
+  {
+   "id": "R-091",
+   "name": "China anti-sexual harassment system",
+   "type": "Program",
+   "domain": "Relations",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Adopt anti-harassment rules, training, a confidential complaint channel, prompt investigation and handling, victim support and anti-retaliation measures, embedded in the democratically adopted handbook.",
+   "owner": "China HR + Employee Relations",
+   "cadence": "Continuous; annual training",
+   "cite": "Law on the Protection of Women's Rights and Interests (2022) Art. 25; Special Provisions on Labor Protection of Female Employees (2012) Art. 11",
+   "processes": [
+    "ER-03",
+    "PD-06"
+   ]
+  },
+  {
+   "id": "R-092",
+   "name": "OSHA injury logs: 300A posting & ITA e-submission",
+   "type": "Filing",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Establishments with more than 10 employees (unless partially exempt) record injuries on Forms 300/301 within 7 days, post the certified 300A from Feb 1 to Apr 30 and keep records 5 years. Submit 300A data electronically by Mar 2 where the establishment has 250+ employees, or 20-249 in designated industries.",
+   "owner": "EHS + Facilities",
+   "cadence": "Continuous log; annual (Mar 2 ITA; Feb 1-Apr 30 posting)",
+   "cite": "29 CFR 1904.7, 1904.32, 1904.41; 8 CCR 14300 et seq.",
+   "processes": [
+    "HS-01",
+    "LV-04"
+   ]
+  },
+  {
+   "id": "R-093",
+   "name": "Serious injury, fatality & work-injury reporting (all jurisdictions)",
+   "type": "Filing",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Report within statutory clocks: OSHA fatality 8 hours and in-patient hospitalization 24 hours; Cal/OSHA serious injury 8 hours; Ontario WSIB Form 7 within 3 business days; WorkSafeBC within 3 days; Taiwan labor inspection within 8 hours (death, 3+ injured or 1+ hospitalized); China work-injury recognition within 30 days; India fatal and serious accidents to the inspector per the OSH rules.",
+   "owner": "EHS + Leave administration + local HR",
+   "cadence": "Per incident",
+   "cite": "29 CFR 1904.39; 8 CCR 342; WSIA s.21; Taiwan OSH Act Art. 37; PRC Regulations on Work-Related Injury Insurance Art. 17; OSH Code 2020 s.10",
+   "processes": [
+    "HS-01",
+    "LV-04"
+   ]
+  },
+  {
+   "id": "R-094",
+   "name": "California IIPP & indoor heat illness prevention plan",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "Every California employer needs a written Injury & Illness Prevention Program (responsible person, hazard assessment and correction, training, communication, enforcement, records), plus a written heat plan where indoor areas reach 82°F, with assessment and controls at 87°F, or at 82°F where cleanroom gowning restricts heat removal.",
+   "owner": "EHS + Facilities (California)",
+   "cadence": "Continuous; annual review; on new hazards",
+   "cite": "8 CCR 3203, 3396; Cal. Labor Code 6401.7",
+   "processes": [
+    "HS-03"
+   ]
+  },
+  {
+   "id": "R-095",
+   "name": "California Workplace Violence Prevention Plan: annual review, incident log & training",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "Maintain a written, site-specific WVPP developed with employee involvement, review it at least annually and after incidents, keep a violent incident log and post-incident investigations, deliver annual interactive training, and keep hazard and incident records 5 years (training records 1 year).",
+   "owner": "EHS + Security + Employee Relations",
+   "cadence": "Annual review and training; per incident",
+   "cite": "Cal. Labor Code 6401.9 (SB 553)",
+   "processes": [
+    "ER-07",
+    "HS-03"
+   ]
+  },
+  {
+   "id": "R-096",
+   "name": "Lab chemical safety: HazCom 2024 update, Chemical Hygiene Plan & radiation/laser registrations",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Characterization, failure-analysis and reliability labs need a written Hazard Communication program updated for the 2024 rule (extended compliance dates; verify), a Chemical Hygiene Plan and Chemical Hygiene Officer, written emergency action and fire prevention plans (more than 10 employees), a laser safety program and state registration of X-ray equipment; lab access stays blocked until training is complete.",
+   "owner": "EHS + Lab managers + Facilities",
+   "cadence": "Annual review; on SDS or label changes; per new equipment",
+   "cite": "29 CFR 1910.1200, 1910.1450, 1910.38-39; 8 CCR 5191, 5194; state radiation control rules",
+   "processes": [
+    "HS-03",
+    "ON-04"
+   ]
+  },
+  {
+   "id": "R-097",
+   "name": "Ontario OHS policy & violence/harassment programs: annual review & postings",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "Ontario",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Keep a written OHS policy and program and workplace violence and harassment policies and programs (virtual harassment included since Oct 2024) with a violence risk assessment, review them at least annually, post them where there are 6+ workers with the OHSA and 'Prevention Starts Here' poster, and give workers and supervisors basic OHS awareness training.",
+   "owner": "EHS + People Ops (Canada) + JHSC",
+   "cadence": "Annual review (January); per hire training",
+   "cite": "ON OHSA ss.25(2)(i)-(j), 32.0.1-32.0.8; O. Reg. 297/13",
+   "processes": [
+    "HS-03",
+    "ER-03",
+    "ER-07"
+   ]
+  },
+  {
+   "id": "R-098",
+   "name": "BC OHS program, bullying & harassment procedures, first aid & working alone",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "BC",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Keep a bullying and harassment policy with reporting and investigation procedures reviewed annually, a formal OHS program at 50+ workers (20+ where there is moderate hazard such as labs), a first-aid assessment, working-alone procedures, and new and young worker orientation before work starts.",
+   "owner": "EHS + People Ops (Canada) + JOHSC",
+   "cadence": "Annual review; per hire orientation",
+   "cite": "BC Workers Compensation Act Part 2; OHS Regulation Part 3 (s.3.1, s.3.23); WorkSafeBC policies D3-115-2 (verify numbering)",
+   "processes": [
+    "HS-03",
+    "ER-03"
+   ]
+  },
+  {
+   "id": "R-099",
+   "name": "Canada joint health & safety committees",
+   "type": "Committee",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "Canada",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Ontario requires a JHSC with certified members at 20+ workers (a health and safety representative at 6-19); BC requires a JOHSC at 20+ workers (a worker representative at 10-19). Committees meet regularly, inspect the workplace and take part in incident investigations and program reviews.",
+   "owner": "EHS + People Ops (Canada)",
+   "cadence": "ON: meetings at least quarterly with monthly inspections; BC: monthly meetings (verify)",
+   "cite": "ON OHSA s.9; BC Workers Compensation Act Part 2",
+   "processes": [
+    "HS-01",
+    "HS-03"
+   ]
+  },
+  {
+   "id": "R-100",
+   "name": "Taiwan OSH management, health services & Art. 6(2) prevention plans",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Designate OSH management personnel for the site's risk category (labs and test areas are higher risk), contract physician and nurse services at 50-299 workers and employ nurses at 300+, give new hires OSH training (typically at least 3 hours), and keep workplace violence, overwork, musculoskeletal and maternal-health prevention plans (written at 100+ workers).",
+   "owner": "EHS + Taiwan HR",
+   "cadence": "Annual plan review (December); per hire training",
+   "cite": "OSH Act Art. 6(2), 23, 30-32; Labor Health Protection Rules; Regulations of Occupational Safety and Health Management",
+   "processes": [
+    "HS-03",
+    "LV-02"
+   ]
+  },
+  {
+   "id": "R-101",
+   "name": "Statutory health examinations (Taiwan, China, India)",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "Multi-country",
+   "countries": [
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Taiwan: employer-paid pre-employment and periodic exams (every 5 years under 40, every 3 years at 40-64, yearly at 65+), records kept 7+ years; China: pre-, on- and exit-job occupational health exams for lab and test staff exposed to chemicals, radiation or noise (no termination without the exit exam; no HBV or pregnancy tests); India: free annual check-ups for employees 40+ where the rules prescribe them (verify Karnataka final rules).",
+   "owner": "EHS + local HR",
+   "cadence": "Per hire; periodic; at exit (China)",
+   "cite": "Taiwan OSH Act Art. 20; PRC Occupational Disease Prevention Law and Labor Contract Law Art. 42; OSH Code 2020 s.6(1)(c)",
+   "processes": [
+    "HS-03",
+    "ON-01",
+    "OF-02"
+   ]
+  },
+  {
+   "id": "R-102",
+   "name": "China work safety responsibility system & lab hazardous chemicals",
+   "type": "Program",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Designate responsible persons, deliver safety training and hazard checks (a safety management function or full-time safety staff at 100+ employees), control storage and handling of lab chemicals, gases and lasers, and keep pregnant and nursing employees out of prohibited work.",
+   "owner": "EHS + China HR + Facilities",
+   "cadence": "Continuous; annual training",
+   "cite": "Work Safety Law (2021); Regulations on Safe Management of Hazardous Chemicals; Special Provisions on Labor Protection of Female Employees (2012)",
+   "processes": [
+    "HS-03"
+   ]
+  },
+  {
+   "id": "R-103",
+   "name": "India OSH Code establishment registration & lab factory licensing",
+   "type": "Filing",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Register establishments with 10+ workers electronically under the OSH Code (Karnataka Shops Act registration is now digital with lifetime validity). A validation, test or reliability lab with 20+ workers using power counts as a 'factory' and needs licensing, a safety committee or officer and hazardous-process controls.",
+   "owner": "India HR Ops + EHS + Facilities",
+   "cadence": "On setup or expansion; on change of headcount or activity",
+   "cite": "OSH Code 2020 ss.2-3; Karnataka Shops & Commercial Establishments (Amendment) Act 2026",
+   "processes": [
+    "HS-03"
+   ]
+  },
+  {
+   "id": "R-104",
+   "name": "India night-shift, women's consent & 24x7 notification conditions",
+   "type": "Control",
+   "domain": "Safety",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Women may work 7pm-6am (OSH Code) or 8pm-6am (Karnataka Shops Act) only with prior written consent, safe transport and security. Units relying on the Karnataka 24x7 notification (valid to Sep 2027) must keep 8 h/day and 48 h/week, 10 h/day with overtime, 50 overtime hours a quarter, a rotating weekly off, a POSH IC and wages paid to bank accounts.",
+   "owner": "India HR + Facilities/Security",
+   "cadence": "Per night-shift roster; renewal diary (Sep 2027)",
+   "cite": "OSH Code 2020 s.43; Karnataka Shops Act s.25 (amended 2026); Karnataka 24x7 notification (Sep 27, 2024)",
+   "processes": [
+    "PY-03",
+    "HS-02"
+   ]
+  },
+  {
+   "id": "R-105",
+   "name": "CCPA/CPRA employee & applicant privacy program (notice, rights, risk assessments, ADMT)",
+   "type": "Program",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "Give a notice at collection with retention periods per category and a privacy policy, answer requests to know, delete, correct and limit within 45 days, and run CPPA risk assessments before high-risk processing such as employee monitoring or ADMT (existing processing by Dec 31, 2027; attestations Apr 1, 2028). From Jan 1, 2027 give pre-use ADMT notices with opt-out or appeal for hiring, pay, promotion, discipline and termination decisions.",
+   "owner": "Privacy + HR Ops + HR Analytics",
+   "cadence": "At collection; annual notice refresh; per new processing",
+   "cite": "Cal. Civ. Code 1798.100 et seq.; 11 CCR 7000 et seq., 7150-7157, 7200-7222",
+   "processes": [
+    "DS-02",
+    "DS-06",
+    "TA-11"
+   ]
+  },
+  {
+   "id": "R-106",
+   "name": "Ontario electronic monitoring policy",
+   "type": "Notice",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "Ontario",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Employers with 25+ Ontario employees on Jan 1 must have a written policy by Mar 1 stating whether and how employees are monitored electronically, in what circumstances and for what purposes, give copies within 30 days and keep it 3 years after it stops applying.",
+   "owner": "Privacy + IT Security + People Ops (Canada)",
+   "cadence": "Annual headcount test (Jan 1); in place by Mar 1; on tooling change",
+   "cite": "ON ESA 2000 Part XI.1 (Working for Workers Act, 2022)",
+   "processes": [
+    "DS-08",
+    "ER-10"
+   ]
+  },
+  {
+   "id": "R-107",
+   "name": "Biometric data controls (timeclocks, lab & cleanroom access)",
+   "type": "Control",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "Multi-country",
+   "countries": [
+    "us",
+    "us-ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Before collecting fingerprint or face data: Illinois BIPA requires a public retention and destruction schedule and written consent (similar Texas and Washington rules); China requires separate consent, a non-biometric alternative, a PIPIA and CAC filing above 100,000 individuals; India's SPDI Rules and Taiwan's PDPA require written consent for sensitive data.",
+   "owner": "Privacy + Security + Facilities",
+   "cadence": "Before deployment; annual review",
+   "cite": "740 ILCS 14; PRC Facial Recognition Technology Security Measures (Jun 1, 2025); India SPDI Rules 2011 r.5; Taiwan PDPA Art. 6",
+   "processes": [
+    "DS-06",
+    "ON-03"
+   ]
+  },
+  {
+   "id": "R-108",
+   "name": "BC PIPA privacy officer & employee information practices",
+   "type": "Program",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "BC",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Designate a person responsible for PIPA compliance, keep privacy policies and a complaint process, and tell employees the purposes before collecting employee personal information (collection without consent is allowed only if reasonable for the employment relationship).",
+   "owner": "Privacy + People Ops (Canada)",
+   "cadence": "Continuous; annual review",
+   "cite": "BC Personal Information Protection Act ss.4-5, 13-16, 19",
+   "processes": [
+    "DS-02"
+   ]
+  },
+  {
+   "id": "R-109",
+   "name": "India SPDI compliance & DPDP readiness (May 13, 2027)",
+   "type": "Program",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Until DPDP substantive duties start, publish a privacy policy, get written consent for sensitive personal data (health, biometrics, financial) and appoint a grievance officer. By May 13, 2027 implement DPDP notices, security safeguards, 72-hour breach reports to the Board, data-principal rights (90 days) and erasure when the purpose ends (consent managers start Nov 13, 2026).",
+   "owner": "Privacy + India HR + IT Security",
+   "cadence": "Continuous; readiness milestones Nov 2026 and May 2027",
+   "cite": "IT Act s.43A; SPDI Rules 2011; DPDP Act 2023; DPDP Rules 2025",
+   "processes": [
+    "DS-02",
+    "DS-03"
+   ]
+  },
+  {
+   "id": "R-110",
+   "name": "China PIPL HR compliance file (PIPIA, cross-border transfer pathway, audits)",
+   "type": "Record",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Keep PIPIAs (3 years) for sensitive PI, entrusted processing by payroll and HR vendors and cross-border transfers; document the HR-management exemption for transfers to US HQ and the global HRIS, or use the standard contract, certification or security assessment by volume; obtain separate consents; and run risk-based PI compliance self-audits.",
+   "owner": "Privacy + China HR + Legal",
+   "cadence": "Before new processing or transfer; periodic audit",
+   "cite": "PIPL Arts. 38-39, 54-56; CAC Provisions on Cross-Border Data Flows (2024); Certification Measures (Jan 1, 2026); PI Compliance Audit Measures (May 1, 2025)",
+   "processes": [
+    "DS-06",
+    "DS-02"
+   ]
+  },
+  {
+   "id": "R-111",
+   "name": "Taiwan PDPA security maintenance & breach notification",
+   "type": "Program",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Keep documented security maintenance measures (access control, audits, training, incident plan; fines up to NT$15M) and notify affected individuals of breaches now; prepare for PDPC reporting once the 2025 amendment takes effect (draft rules propose 72 hours for sensitive data, 10,000+ records or 100+ people; verify).",
+   "owner": "Privacy + IT Security + Taiwan HR",
+   "cadence": "Continuous; annual review",
+   "cite": "Personal Data Protection Act Art. 12, 27, 48 (2023 and 2025 amendments)",
+   "processes": [
+    "DS-02",
+    "DS-06"
+   ]
+  },
+  {
+   "id": "R-112",
+   "name": "DOJ Data Security Program diligence, audit & records",
+   "type": "Control",
+   "domain": "Data",
+   "tier": "semi",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Map HR, payroll, benefits and badge/biometric data flows to China and document the s202.506 corporate-group exemption. Treat employment or vendor agreements that give China-resident staff or other covered persons access to bulk US sensitive personal data as restricted transactions (CISA controls, written program, annual independent audit, 10-year records) or remove the access, and never base status on nationality.",
+   "owner": "Privacy/Security + Legal + HRIS + Global Payroll",
+   "cadence": "Annual audit and certification (October); per new data flow or role",
+   "cite": "28 CFR Part 202 (EO 14117), Subparts J-L",
+   "processes": [
+    "DS-04",
+    "DS-06",
+    "MV-02"
+   ]
+  },
+  {
+   "id": "R-113",
+   "name": "HR data breach & cyber incident response playbook",
+   "type": "Program",
+   "domain": "Data",
+   "tier": "best",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Keep one playbook with each jurisdiction's clock: India CERT-In 6 hours (ICT logs kept 180 days in India) and DPDP 72-hour reports from May 2027; US state breach laws (some 30-45 days) and SEC 8-K Item 1.05 for material incidents; PIPL notification and the amended Cybersecurity Law (Jan 1, 2026); Taiwan PDPA notices; PIPEDA real-risk-of-significant-harm reporting.",
+   "owner": "Privacy + IT Security + Legal + HR Ops",
+   "cadence": "Annual tabletop; per incident",
+   "cite": "CERT-In Directions (Apr 28, 2022); state breach laws; Form 8-K Item 1.05; PIPL Art. 57; PIPEDA s.10.1",
+   "processes": [
+    "DS-02",
+    "HS-02"
+   ]
+  },
+  {
+   "id": "R-114",
+   "name": "Confidential medical, I-9 & demographic data segregation",
+   "type": "Control",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Keep medical, genetic, accommodation and FMLA records in confidential files separate from personnel files, keep I-9s in a separate binder or system, and (California, from 2026) store race, ethnicity and sex data collected for pay data reporting separately from personnel files.",
+   "owner": "HR Ops + HRIS + Leave administration",
+   "cadence": "Continuous; annual access audit",
+   "cite": "ADA 42 U.S.C. 12112(d)(3)(B); GINA 29 CFR 1635.9; 29 CFR 825.500(g); Cal. Gov Code 12999 (SB 464); Cal. Civ. Code 56.20",
+   "processes": [
+    "DS-01",
+    "DS-04",
+    "LV-02"
+   ]
+  },
+  {
+   "id": "R-115",
+   "name": "EEO-1 Component 1 report (rescission proposed)",
+   "type": "Filing",
+   "domain": "Data",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Employers with 100+ employees file workforce demographic data when the EEOC opens the collection. The 2025 collection had not opened as of Sep 2026 and the EEOC proposed rescinding EEO-1 through EEO-6 on Jul 23, 2026 (comments closed Aug 24, 2026), but the requirement stands until a final rule, and California pay data reporting continues regardless.",
+   "owner": "HR Analytics + Employment Legal",
+   "cadence": "Annual when opened (historically May-June); monitor final rule",
+   "cite": "29 CFR 1602.7; EEOC NPRM (Jul 23, 2026)",
+   "processes": [
+    "DS-05"
+   ]
+  },
+  {
+   "id": "R-116",
+   "name": "10-K human capital disclosure & metric evidence binder",
+   "type": "Filing",
+   "domain": "Data",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Disclose the number of employees and a description of human capital resources, including measures management uses, to the extent material. Reconcile every figure to Darwinbox as of the stated date and keep a metric dictionary (ISO 30414:2025 definitions) with queries, snapshots and reviewer sign-off for the Disclosure Committee and auditors, with DEI wording matched to programs actually run.",
+   "owner": "HR Analytics + HR Leadership + Legal (Securities) + Finance (SEC Reporting)",
+   "cadence": "Annual (10-K, Feb-Mar); ad hoc for material events",
+   "cite": "Reg S-K Item 101(c)(2)(ii); SOX s302; ISO 30414:2025",
+   "processes": [
+    "DS-05"
+   ]
+  },
+  {
+   "id": "R-117",
+   "name": "SOX HRIS, payroll & equity-system access reviews and segregation of duties",
+   "type": "Control",
+   "domain": "Data",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "No single user may be able to create a worker, change pay and approve payroll. Run quarterly user-access reviews for Darwinbox, the payroll provider and the equity platform, remove access promptly on termination or transfer, and keep review evidence for the auditors.",
+   "owner": "HRIS + IT + Internal Audit",
+   "cadence": "Quarterly",
+   "cite": "SOX s404; PCAOB AS 2201",
+   "processes": [
+    "DS-04",
+    "OF-06"
+   ]
+  },
+  {
+   "id": "R-118",
+   "name": "Compensation committee charter, independence & advisor assessment",
+   "type": "Committee",
+   "domain": "Governance",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "A compensation committee of at least two independent directors operates under a written charter reviewed annually. Before retaining a compensation consultant or counsel it considers the six Rule 10C-1 independence factors, the CEO is absent from deliberations on CEO pay, and consultant role, fees and conflicts are disclosed.",
+   "owner": "Total Rewards + Corporate Secretary + Legal",
+   "cadence": "Annual charter review and advisor questionnaires; meetings per committee calendar",
+   "cite": "Nasdaq Rule 5605(d); Exchange Act Rule 10C-1; Reg S-K Item 407(e)(3)",
+   "processes": [
+    "CO-07",
+    "CO-02"
+   ]
+  },
+  {
+   "id": "R-119",
+   "name": "SOX 302 HR sub-certifications & Disclosure Committee workforce briefing",
+   "type": "Control",
+   "domain": "Governance",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Each quarter HR, Payroll and Stock Admin leaders sub-certify their in-scope controls and disclose deficiencies, and HR briefs the Disclosure Committee on material workforce events (RIFs, export-control limits on hiring, H-1B cost exposure, key-talent loss) for risk factors and MD&A.",
+   "owner": "CHRO + Payroll + Stock Admin + Finance (SEC Reporting)",
+   "cadence": "Quarterly (before each 10-Q/10-K)",
+   "cite": "SOX s302 (Rule 13a-14); Rule 13a-15",
+   "processes": [
+    "DS-05",
+    "OF-03"
+   ]
+  },
+  {
+   "id": "R-120",
+   "name": "Form 8-K Item 5.02 officer & director change trigger",
+   "type": "Filing",
+   "domain": "Governance",
+   "tier": "public",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Within four business days of notice or decision (not the effective date), disclose departures and appointments of the PEO, president, PFO, PAO, COO or any NEO and material compensatory arrangements with the PEO, PFO or an NEO (retention awards, off-cycle CEO grants, severance amendments); HR starts the Legal workflow the moment an executive resigns or a decision is made.",
+   "owner": "Legal (Securities) + CHRO + Total Rewards",
+   "cadence": "Per event (4 business days)",
+   "cite": "Form 8-K Items 5.02(a)-(f); Reg S-K Item 601(b)(10)",
+   "processes": [
+    "TA-09",
+    "OF-02",
+    "OF-04"
+   ]
+  },
+  {
+   "id": "R-121",
+   "name": "Rule 21F-17 & protected-rights template review",
+   "type": "Control",
+   "domain": "Governance",
+   "tier": "public",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Each year audit every agreement and policy template worldwide (offer letters, PIIAs, NDAs, separation and release agreements, codes, investigation scripts, exit certifications) for a protected-rights carve-out allowing contact with the SEC and other agencies without notice and receipt of government awards. Also check NLRA Section 7 savings clauses (Stericycle, McLaren Macomb), the Speak Out Act and Cal. Gov Code 12964.5, and keep a version log including legacy agreements.",
+   "owner": "Employment Legal + Employee Relations + HR Ops",
+   "cadence": "Annual (September); per new template",
+   "cite": "Exchange Act Rule 21F-17(a); NLRA s7; 42 U.S.C. 19401-19404; Cal. Gov Code 12964.5",
+   "processes": [
+    "OF-04",
+    "DS-08",
+    "ER-02"
+   ]
+  },
+  {
+   "id": "R-122",
+   "name": "Technology Control Plan & license-conditioned employee register",
+   "type": "Program",
+   "domain": "Governance",
+   "tier": "semi",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Maintain a TCP that identifies controlled technology and source code, segregates it physically and logically (badge zones, repository ACLs, EDA project permissions), controls visitors and candidate lab tours and audits access. Keep a restricted register of employees on deemed-export licenses (scope, expiry, provisos, exit reporting) and review the TCP annually.",
+   "owner": "Trade Compliance + IT Security + Facilities + HR Ops",
+   "cadence": "Annual TCP review; continuous access feed from the HRIS",
+   "cite": "BIS deemed-export guidance and license conditions; EAR Part 762; ITAR 22 CFR 126.18 (if applicable)",
+   "processes": [
+    "TA-06",
+    "MV-01",
+    "OF-06",
+    "DS-04"
+   ]
+  },
+  {
+   "id": "R-123",
+   "name": "EAR 744.6 U.S.-person support review",
+   "type": "Control",
+   "domain": "Governance",
+   "tier": "semi",
+   "scope": "Multi-country",
+   "countries": [
+    "us",
+    "us-ca",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Identify U.S.-person employees (citizens and green-card holders) whose work, assignment or outside activity could support advanced-node IC development or production at fabs in China or Macau, and clear assignments, secondments and consulting or board roles with Trade Compliance before they start (no license exceptions apply).",
+   "owner": "Trade Compliance + Employment Legal + Global Mobility",
+   "cadence": "Per assignment, outside-activity request and exit",
+   "cite": "EAR 15 CFR 744.6(c)(2); 15 CFR 772.1",
+   "processes": [
+    "MV-02",
+    "ER-06",
+    "OF-01"
+   ]
+  },
+  {
+   "id": "R-124",
+   "name": "Restricted-party screening of HR vendors, contractors & payees (Affiliates Rule returns Nov 10, 2026)",
+   "type": "Control",
+   "domain": "Governance",
+   "tier": "semi",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Screen recruiters, staffing and EOR firms, background-check, payroll and benefits providers, training vendors, university partners, contractors, consultants and other payees against the Entity List, MEU, SDN (50% rule), UFLPA and DSP covered-person lists before engagement and periodically. Complete ownership research before the BIS Affiliates Rule suspension lapses on Nov 10, 2026, and never reject by nationality alone.",
+   "owner": "Trade Compliance + Procurement + HR Ops",
+   "cadence": "Before engagement; periodic re-screen (at least annually, December)",
+   "cite": "EAR Supp. 4 to Part 744, 744.21; OFAC 31 CFR Ch. V; 28 CFR Part 202; UFLPA",
+   "processes": [
+    "PL-05",
+    "DS-06",
+    "BN-05"
+   ]
+  },
+  {
+   "id": "R-125",
+   "name": "Outbound-investment & foreign-talent-program questions in COI certification",
+   "type": "Control",
+   "domain": "Governance",
+   "tier": "semi",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Add questions on personal investments in Chinese semiconductor, AI or quantum companies (US persons may not make prohibited investments and must notify Treasury within 30 days of notifiable ones), foreign talent-plan participation, advisory roles and side ventures to the annual conflict-of-interest certification, and escalate red flags to Legal and Security.",
+   "owner": "Legal + Ethics & Compliance + Security",
+   "cadence": "Annual certification; on change",
+   "cite": "31 CFR Part 850 (EO 14105); CHIPS and Science Act s10632 (if federal R&D awards)",
+   "processes": [
+    "ER-06"
+   ]
+  },
+  {
+   "id": "R-126",
+   "name": "Taiwan national core key technology roster & cross-strait travel approvals",
+   "type": "Control",
+   "domain": "Governance",
+   "tier": "semi",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Identify Taiwan roles touching listed national core key technologies (e.g., AI/HPC chip design, chiplet interconnect, advanced packaging; list expanded 2024-26, verify final items), issue local-language notices, apply enhanced access controls, and handle mainland-China travel approvals for staff on government-funded or commissioned projects, including after they leave (verify).",
+   "owner": "Taiwan HR + Legal (Taiwan counsel) + Security",
+   "cadence": "Per hire, project assignment, travel request and exit",
+   "cite": "Taiwan National Security Act Art. 3, 8; Act Governing Relations between the People of the Taiwan Area and the Mainland Area Art. 9, 91",
+   "processes": [
+    "TA-06",
+    "HS-02",
+    "OF-01"
+   ]
+  },
+  {
+   "id": "R-127",
+   "name": "Conditional defense-work programs: ITAR registration & facility clearance (FSO, insider threat, FOCI)",
+   "type": "Program",
+   "domain": "Governance",
+   "tier": "semi",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Only if the company has USML defense articles or services, or classified work: register with DDTC and license any foreign-person access to technical data (China is under a policy of denial); for a facility clearance appoint an FSO and Insider Threat Program Senior Official, run insider-threat training, report changed conditions and key-management changes, and mitigate FOCI.",
+   "owner": "Trade Compliance (Empowered Official) + Security (FSO) + HR Ops",
+   "cadence": "Per program and hire; annual training",
+   "cite": "ITAR 22 CFR Parts 120-130; NISPOM 32 CFR Part 117; SEAD 3",
+   "processes": [
+    "TA-06",
+    "OF-06"
+   ]
+  },
+  {
+   "id": "R-128",
+   "name": "RBA self-assessment, VAP audit evidence & human-rights due diligence",
+   "type": "Filing",
+   "domain": "Governance",
+   "tier": "semi",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Complete RBA Self-Assessment Questionnaires and customer-requested VAP audits against Code v8.0 (60-hour weekly cap including overtime, one day off in seven, no recruitment fees, no held IDs, grievance channels) and close priority findings through corrective action plans. Keep a human-rights policy and due diligence consistent with the UN Guiding Principles, OECD Guidelines and ILO fundamental principles.",
+   "owner": "Supply Chain Sustainability + HR Ops + Legal/ESG",
+   "cadence": "Annual SAQ; audit cycles per customer",
+   "cite": "RBA Code of Conduct v8.0; RBA Validated Assessment Program; UN Guiding Principles 11-24; OECD Guidelines for MNEs (2023)",
+   "processes": [
+    "PY-03",
+    "ER-01",
+    "PL-05"
+   ]
+  },
+  {
+   "id": "R-129",
+   "name": "Recruitment-fee & labor-agent due diligence (contract and dispatch labor)",
+   "type": "Control",
+   "domain": "Governance",
+   "tier": "semi",
+   "scope": "Multi-country",
+   "countries": [
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "Adopt an employer-pays policy so workers pay no recruitment fees (and repay any found), audit labor agents, dispatch and contract workers and student interns at partner sites, confirm no agent is on the UFLPA Entity List, and keep China dispatched workers within the 10% cap and temporary, auxiliary or substitute roles.",
+   "owner": "HR Ops + Supply Chain Sustainability + Procurement",
+   "cadence": "Before engagement; annual audit",
+   "cite": "RBA Code v8.0 A1; UFLPA (P.L. 117-78); PRC Labor Contract Law Arts. 63, 66; Interim Provisions on Labor Dispatch (2014)",
+   "processes": [
+    "PL-05"
+   ]
+  },
+  {
+   "id": "R-130",
+   "name": "Canada forced & child labour supply-chain report (May 31)",
+   "type": "Filing",
+   "domain": "Governance",
+   "tier": "legal",
+   "scope": "Canada",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "If the Canadian entity meets the size tests (commonly two of C$20M assets, C$40M revenue and 250 employees; verify), file and publish a report by May 31 on steps taken to prevent forced and child labour, with HR inputs on policies, training and grievance data.",
+   "owner": "Legal (Canada) + Supply Chain Compliance + HR",
+   "cadence": "Annual (May 31)",
+   "cite": "Fighting Against Forced Labour and Child Labour in Supply Chains Act (S.C. 2023, c. 9)",
+   "processes": [
+    "DS-05"
+   ]
+  },
+  {
+   "id": "R-131",
+   "name": "Federal contractor & DEI compliance (AAPs, VETS-4212, EO 14173 certification, statement review)",
+   "type": "Filing",
+   "domain": "Governance",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "If a federal contractor: Section 503 AAP (50+ employees and $50K contract; coverage threshold $20K from Sep 21, 2026), VEVRAA AAP ($200K), VETS-4212 by Sep 30, state job listing and the EO 14173 certification of no illegal DEI programs (False Claims Act exposure). For everyone, review ERGs, fellowships and internships for open eligibility and align DEI language across the 10-K, proxy, sustainability report and careers site.",
+   "owner": "Employment Legal + HR Analytics + Talent Acquisition",
+   "cadence": "Annual (VETS-4212 Aug 1-Sep 30); per contract; annual statement review",
+   "cite": "41 CFR 60-300, 60-741 (as amended Aug 21, 2026); EO 14173; Title VII; 42 U.S.C. 1981",
+   "processes": [
+    "TA-08",
+    "DS-05"
+   ]
+  },
+  {
+   "id": "R-132",
+   "name": "AODA accessibility compliance report",
+   "type": "Filing",
+   "domain": "Governance",
+   "tier": "legal",
+   "scope": "Ontario",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Private-sector organizations with 20+ Ontario employees file the online accessibility compliance report every 3 years (next due Dec 31, 2026, then 2029), confirming accessibility policies, training records, the multi-year plan (50+) and WCAG 2.0 AA public websites.",
+   "owner": "People Ops (Canada) + Legal + Web/IT",
+   "cadence": "Every 3 years (Dec 31, 2026)",
+   "cite": "AODA 2005; O. Reg. 191/11",
+   "processes": [
+    "DS-08",
+    "LV-02"
+   ]
+  },
+  {
+   "id": "R-133",
+   "name": "India annual labour returns & electronic statutory registers",
+   "type": "Filing",
+   "domain": "Governance",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Keep the Codes' unified electronic registers (employee, wages, attendance/muster roll, overtime, deductions, leave) available for web-based inspection and file the annual unified returns under the Labour Codes and state rules (verify Karnataka and Telangana due dates once final rules issue).",
+   "owner": "India HR Ops + Payroll",
+   "cadence": "Continuous registers; annual returns (verify due date)",
+   "cite": "Code on Wages and OSH Code (Central) Rules 2026; Karnataka draft rules 2026",
+   "processes": [
+    "DS-03",
+    "PY-04"
+   ]
+  },
+  {
+   "id": "R-134",
+   "name": "Federal WARN & state mini-WARN notices (with disclosure timing)",
+   "type": "Notice",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "At 100+ employees, give 60 days' notice to employees, the state dislocated-worker unit and local government of a plant closing (50+ at a site) or mass layoff (500+, or 50-499 and at least 33%), aggregated over 90 days; state laws are stricter (e.g., NY 90 days at 25+, NJ 90 days plus mandatory severance). Time notices with 8-K and earnings disclosure under Reg FD, and check H-1B/LCA effects under the Sep 18, 2026 layoffs EO.",
+   "owner": "Employee Relations + Employment Legal + Legal (Securities) + Immigration",
+   "cadence": "Per RIF",
+   "cite": "29 U.S.C. 2101-2109; 20 CFR 639; NY Labor Law 860; N.J.S.A. 34:21-1 et seq.; Regulation FD",
+   "processes": [
+    "OF-03"
+   ]
+  },
+  {
+   "id": "R-135",
+   "name": "Cal-WARN notices (SB 617 content)",
+   "type": "Notice",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "Covered establishments (75+ employees in the prior 12 months) give 60 days' written notice of a mass layoff (50+ within 30 days, any percentage), relocation (100+ miles) or termination to employees, EDD, the Local Workforce Development Board and city and county chief elected officials. From 2026 the notice must say whether rapid-response services will be coordinated within 30 days and include board contacts and CalFresh information.",
+   "owner": "Employee Relations + Employment Legal (California)",
+   "cadence": "Per RIF",
+   "cite": "Cal. Labor Code 1400-1408 (SB 617)",
+   "processes": [
+    "OF-03"
+   ]
+  },
+  {
+   "id": "R-136",
+   "name": "OWBPA group-termination disclosures",
+   "type": "Notice",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "Releases from workers aged 40+ need 21 days to consider (45 days in group programs) and 7 days to revoke; group programs must include a written disclosure of the decisional unit, eligibility factors and the job titles and ages of those selected and not selected.",
+   "owner": "Employment Legal + HR Analytics + Employee Relations",
+   "cadence": "Per separation with release; per group program",
+   "cite": "29 U.S.C. 626(f); 29 CFR 1625.22",
+   "processes": [
+    "OF-03",
+    "OF-04"
+   ]
+  },
+  {
+   "id": "R-137",
+   "name": "California final pay & separation notice pack",
+   "type": "Control",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "California",
+   "countries": [
+    "us-ca"
+   ],
+   "requirement": "On discharge or layoff pay all wages, accrued vacation and premiums immediately (on resignation: the last day with 72+ hours' notice, otherwise within 72 hours), since waiting-time penalties run up to 30 days' wages. Give the UI Code 1089 change-of-status notice, EDD DE 2320, the HIPP notice and COBRA/Cal-COBRA and LC 2800.2 conversion notices.",
+   "owner": "Payroll + People Ops + Benefits (California)",
+   "cadence": "Per separation",
+   "cite": "Cal. Labor Code 201-203, 227.3, 2800.2; UI Code 1089; Welf. & Inst. Code 14124.94",
+   "processes": [
+    "OF-05",
+    "OF-01",
+    "OF-02"
+   ]
+  },
+  {
+   "id": "R-138",
+   "name": "Canadian group termination notices (Ontario Form 1; BC notice to Minister)",
+   "type": "Filing",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Canada",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Ontario: 50+ terminations at an establishment within 4 weeks need 8/12/16 weeks' notice, a Form 1 filed with the Director (notice is ineffective until received) and posted, plus 3 unpaid job-seeking days. BC: 50+ at a location within 2 months need 8/12/16 weeks' notice to employees, any union and the Minister of Labour, on top of individual notice.",
+   "owner": "Employee Relations + Legal (Canada)",
+   "cadence": "Per group termination",
+   "cite": "ON ESA s.58 and O. Reg. 288/01; BC ESA s.64",
+   "processes": [
+    "OF-03"
+   ]
+  },
+  {
+   "id": "R-139",
+   "name": "Record of Employment (ROE) within 5 days",
+   "type": "Filing",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Canada",
+   "countries": [
+    "ca"
+   ],
+   "requirement": "Issue an electronic ROE within 5 calendar days after the end of the pay period in which an interruption of earnings occurs (termination, layoff or leave); for monthly or 13-period payrolls, by the earlier of that date or 15 days after the interruption; keep records 6 years.",
+   "owner": "Payroll (Canada)",
+   "cadence": "Per interruption of earnings",
+   "cite": "Employment Insurance Regulations s.19",
+   "processes": [
+    "OF-05",
+    "LV-01"
+   ]
+  },
+  {
+   "id": "R-140",
+   "name": "India retrenchment notice & Worker Re-skilling Fund deposit",
+   "type": "Filing",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Retrenching a 'worker' with 1+ year's service needs 1 month's written notice with reasons (or pay in lieu), compensation of 15 days' average pay per completed year, notice to the appropriate government, and 15 days' last-drawn wages paid into the Worker Re-skilling Fund within 10 days, with a 1-year re-employment preference.",
+   "owner": "Employee Relations (India) + Payroll + Legal",
+   "cadence": "Per retrenchment",
+   "cite": "IR Code 2020 ss.70-72, 83; IR (Central) Rules 2026",
+   "processes": [
+    "OF-03"
+   ]
+  },
+  {
+   "id": "R-141",
+   "name": "India full & final settlement, gratuity & service certificate",
+   "type": "Control",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "India",
+   "countries": [
+    "in"
+   ],
+   "requirement": "Pay wages due (salary, leave encashment and other 'wages') within 2 working days of resignation, dismissal, retrenchment or closure, pay gratuity within 30 days, and in Karnataka issue a service certificate within 7 days of request (relieving letter is market practice); also issue Form 130 and support PF transfer.",
+   "owner": "Payroll (India) + India HR Ops",
+   "cadence": "Per separation",
+   "cite": "Code on Wages 2019 s.17(2); Code on Social Security ss.53-56; Karnataka Shops Act (amended Sep 2026)",
+   "processes": [
+    "OF-05",
+    "OF-01"
+   ]
+  },
+  {
+   "id": "R-142",
+   "name": "Taiwan layoff notification (10 days) & mass redundancy plan (60 days)",
+   "type": "Filing",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Report every LSA Art. 11 layoff (name, role, reason, need for job assistance) to the local authority and public employment service at least 10 days before separation (fines NT$30,000-150,000). Where Mass Redundancy Protection Act thresholds are met within 60 days, give the plan to the authority, union or representatives and employees 60 days ahead and negotiate within 10 days.",
+   "owner": "Taiwan HR + Employee Relations + Legal",
+   "cadence": "Per layoff",
+   "cite": "Employment Services Act Art. 33; Mass Redundancy Protection Act Art. 2, 4, 5",
+   "processes": [
+    "OF-03"
+   ]
+  },
+  {
+   "id": "R-143",
+   "name": "Taiwan separation certificates & insurance withdrawal",
+   "type": "Record",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Taiwan",
+   "countries": [
+    "tw"
+   ],
+   "requirement": "Issue a certificate of service on request (no unrequested adverse remarks) and an involuntary separation certificate for Art. 11/13 terminations and employer-initiated mutual separations so employees can claim unemployment benefits; withdraw Labor, EI, accident insurance and NHI on the last day, stop pension contributions within 7 days, and pay severance within 30 days.",
+   "owner": "Taiwan HR + Payroll",
+   "cadence": "Per separation",
+   "cite": "LSA Art. 17, 19; Employment Insurance Act Art. 11, 25; Labor Pension Act Art. 12, 18",
+   "processes": [
+    "OF-05",
+    "OF-01"
+   ]
+  },
+  {
+   "id": "R-144",
+   "name": "China economic layoff report & union notification before unilateral termination",
+   "type": "Filing",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Before any unilateral termination give written notice to the enterprise union (or local union per practice). For economic layoffs of 20+ employees or 10%+ of the workforce, explain the situation 30 days ahead to the union or all employees, report the plan to the labor bureau (Shanghai: notify worker representatives 30 days before filing, from Aug 2026) and apply priority-retention and 6-month rehire rules.",
+   "owner": "China HR + Legal + Works Council/Union",
+   "cadence": "Per termination or layoff",
+   "cite": "Labor Contract Law Arts. 41, 43; SPC Interpretation (I) Art. 47; Shanghai 沪人社规〔2026〕14号",
+   "processes": [
+    "OF-02",
+    "OF-03"
+   ]
+  },
+  {
+   "id": "R-145",
+   "name": "China termination certificate & 15-day file/social-insurance transfer",
+   "type": "Record",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "China",
+   "countries": [
+    "cn"
+   ],
+   "requirement": "Issue a termination certificate at separation (contract term, termination date, position, years of service), complete personnel-file and social insurance/housing fund transfer or suspension within 15 days, update SAFE Circular 7 for departing equity participants, and keep terminated contracts and termination records at least 2 years.",
+   "owner": "China HR + Payroll/HR agency",
+   "cadence": "Per separation",
+   "cite": "Labor Contract Law Arts. 50, 89; LCL Implementing Regulations Art. 24",
+   "processes": [
+    "OF-05",
+    "OF-01"
+   ]
+  },
+  {
+   "id": "R-146",
+   "name": "Post-employment non-compete decisions (China, Taiwan, Washington)",
+   "type": "Control",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "Multi-country",
+   "countries": [
+    "us",
+    "us-ca",
+    "tw",
+    "cn"
+   ],
+   "requirement": "China: at exit activate the non-compete (notify scope, start monthly compensation, generally 30-50% of prior average pay under the 2025 MOHRSS Guidelines) or release it (3 extra months if released mid-term); Taiwan: enforce only Art. 9-1-compliant restraints (written, max 2 years, at least 50% of average monthly wage). US: never enforce void non-competes (California), and send Washington notices to affected current and former workers by Oct 1, 2027 (ban effective Jun 30, 2027).",
+   "owner": "Employment Legal + HRBP + Payroll",
+   "cadence": "Per separation; WA notices by Oct 1, 2027",
+   "cite": "PRC Labor Contract Law Arts. 23-24; SPC Interpretation (I) Arts. 36-39; Taiwan LSA Art. 9-1; WA ESHB 1155 (2026); Cal. B&P 16600-16600.5",
+   "processes": [
+    "OF-04",
+    "ER-10"
+   ]
+  },
+  {
+   "id": "R-147",
+   "name": "Sponsored-worker termination steps (H-1B, STEM OPT)",
+   "type": "Filing",
+   "domain": "Offboard",
+   "tier": "legal",
+   "scope": "US",
+   "countries": [
+    "us",
+    "us-ca"
+   ],
+   "requirement": "For a bona fide H-1B termination, notify USCIS, withdraw the LCA and offer return transportation (otherwise back-wage liability continues); for STEM OPT, notify the DSO within 5 business days and submit the final I-983 evaluation; coordinate RIF timing with pending petitions under the Sep 18, 2026 layoffs EO.",
+   "owner": "Immigration + Employee Relations",
+   "cadence": "Per separation",
+   "cite": "20 CFR 655.731(c)(7)(ii); 8 CFR 214.1(l)(2); 8 CFR 214.2(f)(12)",
+   "processes": [
+    "OF-02",
+    "OF-03",
+    "MV-06"
+   ]
+  },
+  {
+   "id": "R-148",
+   "name": "Export-controlled access deprovisioning & license exit reporting",
+   "type": "Control",
+   "domain": "Offboard",
+   "tier": "semi",
+   "scope": "Global",
+   "countries": [
+    "us",
+    "us-ca",
+    "ca",
+    "in",
+    "tw",
+    "cn"
+   ],
+   "requirement": "At notice (for high-risk departures) or on the last day, revoke access to controlled repositories, EDA projects and labs and record the date, report departures of license-conditioned employees as license provisos require, update the TCP register, and remind U.S.-person engineers joining Chinese fabs or equipment makers of their personal EAR 744.6 license obligations.",
+   "owner": "Trade Compliance + IT/Security + HR Ops",
+   "cadence": "Per separation",
+   "cite": "EAR 15 CFR 734.13(b), 744.6, Part 762",
+   "processes": [
+    "OF-06",
+    "ER-10",
+    "OF-01"
+   ]
+  }
+ ]
+}

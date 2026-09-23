@@ -1,0 +1,1854 @@
+{
+ "templates": [
+  {
+   "id": "T-ATTESTATION",
+   "name": "Annual Code of Conduct and policy attestation",
+   "category": "Governance",
+   "format": "form",
+   "purpose": "The annual certification in which every employee, officer and director confirms they have read and followed the Code of Business Conduct and the core compliance policies, and discloses conflicts, gifts and exceptions. It gives the Audit Committee evidence for the Nasdaq 5610 / SOX 406 code program and feeds conflict-of-interest review (ER-06), without discouraging anyone from reporting to regulators.",
+   "audience": "All employees, officers and directors, and contingent workers with system access (completers); Ethics & Compliance (owner and reviewer); L&D (LMS campaign); managers and HRBPs (follow-up); Legal (disclosure review).",
+   "when": "Annual campaign with a 30-day window (launched in Q1); within 30 days of hire as part of onboarding; and within 5 business days of moving into a designated-insider, people-manager or controlled-technology role.",
+   "owner": "Ethics & Compliance (content, disclosure review, escalation); L&D (LMS administration); HRBPs (completion follow-up)",
+   "sections": [
+    {
+     "title": "Employee details",
+     "intro": "Prefilled from Darwinbox wherever possible.",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Full legal name",
+       "detail": "Prefilled from Darwinbox; the employee corrects errors before certifying."
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Employee ID and employing entity",
+       "detail": "Prefilled. The legal entity decides which local addendum and language version are shown."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Job title, grade and department"
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Work country and site",
+       "detail": "Drives the language version, local policy addenda and the escalation path."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Manager and HRBP",
+       "detail": "Prefilled; used for reminders and escalation."
+      },
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Population",
+       "detail": "Employee / officer (Section 16) / director / contingent worker with system access. Officers and directors also complete the annual D&O questionnaire; this form does not replace it."
+      },
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Designated insider status",
+       "detail": "Prefilled from the Stock Admin list: Section 16 officer, designated insider (blackouts and pre-clearance) or none."
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Access to export-controlled technology",
+       "detail": "Prefilled from the Technology Control Plan register: yes/no and ECCN group. 'Yes' adds the deemed-export certification in the next section."
+      }
+     ]
+    },
+    {
+     "title": "Policies acknowledged",
+     "intro": "Each line links to the current version, and the LMS unlocks the box only after the policy has been opened.",
+     "items": [
+      {
+       "id": "i9",
+       "type": "check",
+       "text": "I have read and understand the Code of Business Conduct and Ethics (POL-01), version [x] dated [date], and the local addendum for my country.",
+       "detail": "Nasdaq 5610 / SOX 406 code of ethics covering directors, officers and employees."
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "I have read and understand the Insider Trading Policy (POL-05), including blackout periods, pre-clearance if I am a designated insider, and the ban on trading in any company's securities, including customers, suppliers and competitors, while I have material non-public information about it.",
+       "detail": "The policy is filed as 10-K Exhibit 19. The 'shadow trading' example (SEC v. Panuwat, 2024) matters here, because engineers and sales staff see design wins and customer forecasts."
+      },
+      {
+       "id": "i11",
+       "type": "check",
+       "text": "I have read and understand the Anti-Harassment (POL-09) and Respectful Workplace (POL-10) policies, including how to report concerns and the ban on retaliation.",
+       "detail": "Link the local versions: California translation into any language spoken by 10%+ of a facility (2 CCR 11023); the India POSH policy and Internal Committee contacts; Taiwan's sexual-harassment and 2026 workplace-bullying measures; the harassment section of Vietnam's internal labour regulations; the Israeli sexual-harassment bylaw."
+      },
+      {
+       "id": "i12",
+       "type": "check",
+       "text": "I have read and understand the Export Control and Deemed Exports policy (POL-18). Showing or sending controlled technology or source code to a foreign person, including a colleague in the same office, can be an export that needs a license."
+      },
+      {
+       "id": "i13",
+       "type": "check",
+       "text": "I have read and understand the Employee Privacy and HR Data Protection (POL-46) and Confidential Information, IP and Inventions (POL-48) policies, including which systems are approved for Company data and the ban on putting confidential data into unapproved AI tools."
+      },
+      {
+       "id": "i14",
+       "type": "check",
+       "text": "I have read and understand the Anti-Bribery and Anti-Corruption policy (POL-04), including the rules on gifts and hospitality and on offering jobs or internships to relatives of government officials or customer employees.",
+       "detail": "FCPA 'princeling' hiring cases show that a job offer can be a thing of value."
+      },
+      {
+       "id": "i15",
+       "type": "check",
+       "text": "I have read and understand the Conflicts of Interest and Outside Activities policy (POL-03), including what I must disclose and when."
+      },
+      {
+       "id": "i16",
+       "type": "check",
+       "text": "I have read and understand the Speak Up and Non-Retaliation policy (POL-02), and I know how to raise a concern, including anonymously where local law allows."
+      }
+     ]
+    },
+    {
+     "title": "Certification statements",
+     "intro": "The employee ticks each statement. If a statement can't be ticked, the disclosure section opens; submission is not blocked.",
+     "items": [
+      {
+       "id": "i17",
+       "type": "check",
+       "text": "During the past 12 months (or since I joined), I have complied with the Code and the policies listed above, except as disclosed in the next section."
+      },
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "I have not bought or sold securities of [Company] or any other company while I had material non-public information about it, and I have followed the blackout and pre-clearance rules that apply to me."
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "I have not offered, promised, given, requested or accepted any bribe, kickback or improper payment or benefit, directly or through anyone else, and I have recorded gifts and hospitality as the policy requires."
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "I have not released controlled technology, source code or technical data to anyone, whether by email, screen share, lab visit or repository access, without first confirming authorization with Trade Compliance.",
+       "detail": "Shown only to people flagged with controlled-technology access; everyone else sees a one-line awareness statement."
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "I have protected confidential information, trade secrets and personal data, used only approved systems and devices, and promptly reported any suspected data incident or lost equipment."
+      },
+      {
+       "id": "i22",
+       "type": "check",
+       "text": "I have not brought in, used or shared confidential information belonging to a former employer or any other third party without authorization.",
+       "detail": "This matters most for hires from foundries, EDA vendors and competitors."
+      },
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "I have disclosed every actual or potential conflict of interest and outside activity the policy requires, including earlier disclosures that are still ongoing."
+      },
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "I have completed the mandatory training assigned to me for this cycle, or I have a completion plan agreed with my manager."
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "I understand that breaching the Code or these policies can lead to disciplinary action, up to and including termination, in line with local law and my site's work rules."
+      }
+     ]
+    },
+    {
+     "title": "Exceptions and disclosures",
+     "intro": "Answer every question. A 'yes' is not an admission of wrongdoing, and most disclosures are approved, sometimes with simple safeguards; not disclosing is what breaches the policy.",
+     "items": [
+      {
+       "id": "i26",
+       "type": "question",
+       "text": "Do you, or does a member of your household or immediate family, have a financial interest in, or a job, board seat, advisory or consulting role with, a customer, supplier, distributor, foundry, OSAT, EDA vendor or competitor of the Company?",
+       "detail": "Exclude diversified funds and holdings below [1%] of a listed company (verify the threshold with Legal). If yes: name the company and the person, describe the interest, and say whether you deal with that company in your job."
+      },
+      {
+       "id": "i27",
+       "type": "question",
+       "text": "Do you have any outside employment, consulting, expert-network engagement, advisory or board role, academic appointment or side business, paid or unpaid?",
+       "detail": "Include start-ups, open-source work that touches Company technology, and paid expert-network calls. Outside boards for officers and directors also go to the Nominating and Governance Committee."
+      },
+      {
+       "id": "i28",
+       "type": "question",
+       "text": "Have you taken part in, applied to or been approached by a government-sponsored talent recruitment program, or accepted research funding, a title or payment from a foreign government, university or state-owned enterprise?",
+       "detail": "Relevant to CHIPS Act s10632 certifications on federally funded research and to trade-secret risk; route every 'yes' to Legal. Ask everyone the same question and never target by nationality."
+      },
+      {
+       "id": "i29",
+       "type": "question",
+       "text": "Does a relative, or someone you have a close personal relationship with, work for the Company, or for a customer or supplier you deal with?",
+       "detail": "POL-07. Record whether either person is in the other's reporting line or influences their hiring, pay or performance."
+      },
+      {
+       "id": "i30",
+       "type": "question",
+       "text": "Have you given or received any gift, meal, travel or entertainment above the policy threshold ([amount]) that was not pre-approved and recorded, or any gift of cash or a cash equivalent?"
+      },
+      {
+       "id": "i31",
+       "type": "question",
+       "text": "Have you had any dealings with a government official, including employees of state-owned customers, foundries, labs or universities, that the Anti-Bribery policy requires you to log and that are not yet logged?"
+      },
+      {
+       "id": "i32",
+       "type": "question",
+       "text": "Are you aware of anything you believe may breach the Code, the law or Company policy that you have not yet raised through a Speak Up channel?",
+       "detail": "A 'yes' takes you to Speak Up intake (ER-01), where you can report anonymously where local law allows. This question covers internal channels only. You are never asked whether you have contacted a regulator."
+      },
+      {
+       "id": "i33",
+       "type": "field",
+       "text": "Details for each 'yes' answer",
+       "detail": "Free text, with attachments for any approvals already given. Include only the third-party personal data that is needed."
+      },
+      {
+       "id": "i34",
+       "type": "field",
+       "text": "Previously disclosed matters",
+       "detail": "Prefilled from the ER-06 register. For each one, confirm it is unchanged, has changed (describe how) or has ended."
+      },
+      {
+       "id": "i35",
+       "type": "note",
+       "text": "Disclosures are confidential. Only Ethics & Compliance and Legal see them, plus the employee's manager or HRBP where a mitigation plan needs their involvement."
+      }
+     ]
+    },
+    {
+     "title": "Your right to report",
+     "intro": "This statement appears word for word in every language version. Local teams may add local-law references but may not edit it otherwise.",
+     "items": [
+      {
+       "id": "i36",
+       "type": "para",
+       "text": "Nothing in the Code of Business Conduct, this attestation, any Company policy or any agreement you have with the Company prohibits or restricts you from reporting possible violations of law or regulation to, filing a charge or complaint with, communicating with, or providing information or documents to any government agency, regulator or self-regulatory organization. This includes the U.S. Securities and Exchange Commission, the Department of Justice, the Equal Employment Opportunity Commission, the National Labor Relations Board, the Occupational Safety and Health Administration and equivalent authorities in your country. Nor does it restrict you from taking part in any investigation or proceeding they conduct."
+      },
+      {
+       "id": "i37",
+       "type": "para",
+       "text": "You do not need the Company's permission to make such a report, and you do not need to tell the Company that you have made one. Nothing in any Company document limits your right to receive an award from a government agency for information you provide."
+      },
+      {
+       "id": "i38",
+       "type": "para",
+       "text": "Under the Defend Trade Secrets Act (18 U.S.C. 1833(b)), you will not be held criminally or civilly liable under any federal or state trade secret law for disclosing a trade secret (a) in confidence to a government official or to an attorney, solely for the purpose of reporting or investigating a suspected violation of law, or (b) in a complaint or other document filed under seal in a lawsuit or other proceeding."
+      },
+      {
+       "id": "i39",
+       "type": "para",
+       "text": "If you are a non-supervisory employee in the United States, nothing in the Code limits your right to discuss your wages, hours or other terms and conditions of employment, or to engage in other concerted activity protected by Section 7 of the National Labor Relations Act. Nothing in the Code prevents you from discussing or disclosing information about unlawful acts in the workplace, such as harassment, discrimination or any other conduct you have reason to believe is unlawful."
+      },
+      {
+       "id": "i40",
+       "type": "para",
+       "text": "The Company does not tolerate retaliation against anyone who raises a concern in good faith, internally or with a government authority, or who takes part in an investigation. [Local protections, e.g. Germany: Hinweisgeberschutzgesetz, including the external reporting office at the Federal Office of Justice; Israel: Protection of Employees (Exposure of Offences) Law 1997 (verify); Canada: Criminal Code s.425.1; California: Labor Code 1102.5.]"
+      },
+      {
+       "id": "i41",
+       "type": "para",
+       "text": "To raise a concern, contact your manager, HR, Ethics & Compliance at [email], or the Speak Up hotline at [phone / web address], which is open 24/7 in [languages] and anonymous where local law allows. For accounting, internal control or auditing matters you can also contact the Audit Committee at [address]."
+      },
+      {
+       "id": "i42",
+       "type": "note",
+       "text": "Never add a question asking whether the employee has contacted, complained to or given information to a regulator, and never require notice to the Company first. Under Rule 21F-17 the SEC treats that wording itself as impeding whistleblowers, whether or not it is ever enforced."
+      }
+     ]
+    },
+    {
+     "title": "Language, completion tracking and escalation",
+     "intro": "The LMS and Ethics & Compliance complete these fields; the employee sees them read-only.",
+     "items": [
+      {
+       "id": "i43",
+       "type": "field",
+       "text": "Language version",
+       "detail": "English; Simplified Chinese (China); Traditional Chinese (Taiwan); Vietnamese; German; Hebrew (Arabic on request); Hindi or Kannada on request (India); French for any Quebec-based remote employee. Each version has a translation certificate and effective date, and the local-language version prevails for local-law purposes."
+      },
+      {
+       "id": "i44",
+       "type": "field",
+       "text": "Accessibility or format accommodation",
+       "detail": "Screen-reader version, extra time, paper form or interpreter. Requests are handled under POL-36, and the time they take doesn't count toward late completion."
+      },
+      {
+       "id": "i45",
+       "type": "field",
+       "text": "Campaign and cycle",
+       "detail": "e.g. ATT-2027. New hires: assigned in Darwinbox on Day 1, due within 30 days. Moves into insider, people-manager or controlled-technology roles: assigned within 5 business days."
+      },
+      {
+       "id": "i46",
+       "type": "field",
+       "text": "Assigned date, due date and completion timestamp",
+       "detail": "Standard window: 30 calendar days. Completion is an LMS e-signature under SSO. The HRBP scans and attaches paper forms within 5 business days."
+      },
+      {
+       "id": "i47",
+       "type": "field",
+       "text": "Disclosure routing and triage SLA",
+       "detail": "None / conflict of interest to the ER-06 queue / gifts or government dealings to Ethics & Compliance / possible violation to ER-01 intake / trading issue to Legal. Triage within 10 business days. Possible export, sanctions or FCPA issues go to Legal the same day to protect the DOJ 120-day self-reporting window."
+      },
+      {
+       "id": "i48",
+       "type": "field",
+       "text": "Reviewer decision",
+       "detail": "Approved / approved with mitigation (describe it, name an owner and set a review date) / not approved (required action) / referred for investigation. The employee receives the decision in writing."
+      },
+      {
+       "id": "i49",
+       "type": "field",
+       "text": "Reminder and escalation log",
+       "detail": "Automatic reminders to the employee on days 7, 14 and 21; the manager on day 21; the HRBP and department head on day 30; a named list to the function's executive on day 45; and the Chief Compliance Officer on day 60 for action under POL-13."
+      },
+      {
+       "id": "i50",
+       "type": "field",
+       "text": "Director and officer status",
+       "detail": "Tracked separately and reported to the Audit and Nominating and Governance Committees. Any waiver of the Code for a director or executive officer needs board approval and disclosure on Form 8-K Item 5.05 (or the website) within 4 business days."
+      },
+      {
+       "id": "i51",
+       "type": "check",
+       "text": "Report completion by country, function and level to the Audit Committee each cycle. The target is 100% within 60 days of launch, with an explanation for every outstanding officer or director.",
+       "owner": "Ethics & Compliance"
+      },
+      {
+       "id": "i52",
+       "type": "check",
+       "text": "Handle persistent non-completion through the Standards of Conduct process (POL-13). Never deduct pay, and link completion to bonus eligibility only where the written plan and local law allow it.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i53",
+       "type": "check",
+       "text": "Keep completed attestations and disclosure decisions for the retention period set in the records schedule (DS-03), with access limited to Ethics & Compliance, Legal and auditors.",
+       "owner": "Ethics & Compliance"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Keep the attestation to 15-20 minutes: prefill identity data, link to policies instead of pasting them in, and show the insider and controlled-technology statements only to the people they apply to.",
+    "The protected-rights statement is fixed text approved by Legal. The SEC kept enforcing Rule 21F-17 through 2026 (e.g. Foot Locker, May 2026) and treats restrictive wording itself as the violation, so audit every language version and every legacy acknowledgment still in force.",
+    "The value of the certification is the disclosures it surfaces. Treat a 'yes' as a normal outcome, answer within the SLA and track mitigation plans. A 'no' followed later by an undisclosed conflict is a signal to investigate.",
+    "The attestation proves notice; it does not make a rule enforceable. To support discipline, a policy must be locally effective: adopted through China's democratic procedure, incorporated in Taiwan's filed work rules and Vietnam's registered internal labour regulations, co-determined with German works councils, and consistent with the standing orders for Indian 'workers'.",
+    "Answers from directors and officers feed the D&O questionnaire and the Item 404 related-person review. Any Code waiver for them is a board decision that must be disclosed within 4 business days.",
+    "Disclosure answers are personal data about the employee and about third parties such as relatives and outside companies. Give a privacy notice, keep free text to a minimum, restrict access, and check cross-border transfer rules (China PIPL separate consent, Vietnam PDPL) before sending answers to US reviewers.",
+    "Don't schedule the campaign during year-end close, Lunar New Year, Tet or the main German and Israeli holiday periods, and never launch it alongside a RIF or reorganization announcement."
+   ],
+   "countryNotes": {
+    "us": "The Code must be public and meet Nasdaq 5610 / SOX 406, and waivers for directors or executive officers need board approval and 8-K Item 5.05 disclosure within 4 business days. Keep the Rule 21F-17, DTSA and NLRA Section 7 language unchanged in every version.",
+    "us-ca": "Add the Gov Code 12964.5 carve-out for disclosing unlawful workplace acts and cite Labor Code 1102.5 whistleblower protection. Translate the harassment policy into any language spoken by 10%+ of a facility's workforce (2 CCR 11023), and give a CCPA notice at collection for disclosure data.",
+    "us-co": "Make sure no confidentiality wording in the Code restricts disclosure of discriminatory or unfair employment practices (POWR Act, C.R.S. 24-34-407). Keep attestation and training records for 5 years; they support the POWR prevention-program defense.",
+    "us-nc": "No state-specific attestation content is required. Keep signed acknowledgments of the wage, PTO and bonus policies as proof of advance written notice (G.S. 95-25.12, 95-25.13), and remember REDA's 180-day retaliation remedy when handling disclosures.",
+    "us-tx": "No state-specific attestation rule applies. In the harassment acknowledgment, stress that Texas extends sexual-harassment liability to employers of 1+ and to individual supervisors (Labor Code 21.141-21.142).",
+    "us-wa": "Carve out the Silenced No More rights (RCW 49.44.211) from any confidentiality wording. Keep attestation training free of political or union content, which the captive-audience ban (RCW 49.44.250) makes voluntary.",
+    "ca": "English works in Ontario and BC, but Quebec-based remote employees need a French version (Bill 96). List the Ontario electronic monitoring policy among the acknowledged policies, give a BC PIPA notice for disclosure data, and reference Criminal Code s.425.1 in the speak-up statement.",
+    "de": "Rules on employee conduct in the Code are co-determined (§87(1) no.1 BetrVG), and LMS tracking of completion falls under §87(1) no.6, so agree the attestation and its workflow with the works council. Provide a German version, add the HinSchG internal channel and the Federal Office of Justice external channel, and give a GDPR Art. 13 notice.",
+    "il": "Provide a Hebrew version (Arabic where employees need it), with the sexual-harassment bylaw acknowledgment and the Protection of Employees (Exposure of Offences) Law 1997 reference (verify). Give the expanded Amendment 13 privacy notice for disclosure data.",
+    "in": "English is fine, but display the POSH policy and Internal Committee details in English and Kannada (or Telugu). Disclosure data can rely on DPDP s.7(i) employment use; get SPDI consent for any sensitive data until May 2027. Conduct rules used against 'workers' must match the standing orders.",
+    "tw": "Provide a Traditional Chinese version, and discipline only for conduct covered by the work rules filed with the authority (30+ employees), so incorporate the Code by reference in them. Add the national core key technology and Cross-Strait Act travel-approval reminders for covered staff, and give a PDPA notice.",
+    "cn": "Provide a Simplified Chinese version, with Chinese prevailing. The Code and conduct rules must go through democratic procedure (LCL Art. 4) and be made known to employees before they can support an Art. 39 dismissal. Get separate PIPL consent before disclosure answers are transferred to US reviewers.",
+    "vn": "Provide a Vietnamese version. Conduct rules used for discipline must be in the registered internal labour regulations (LC Arts. 118-119) consulted with the grassroots union. Give a PDPL notice for disclosure data, and cover US routing under the Decree 356 HR-management exemption or a filed TIA."
+   },
+   "processes": [
+    "PD-06",
+    "ER-06"
+   ],
+   "policies": [
+    "POL-45",
+    "POL-01",
+    "POL-02",
+    "POL-03",
+    "POL-04",
+    "POL-05",
+    "POL-09",
+    "POL-18",
+    "POL-46",
+    "POL-48"
+   ]
+  },
+  {
+   "id": "T-RESIGNATION-ACK",
+   "name": "Resignation acknowledgment letter",
+   "category": "Offboard",
+   "format": "letter",
+   "purpose": "A standard letter confirming receipt of a resignation and setting out, in one place, the last day, notice and garden-leave terms, final pay and leave, equity, benefits, return of property, continuing obligations and the documents the employee will receive. Bracketed options and a country clause section keep it accurate in every jurisdiction, and sending it within one business day starts the final-pay and document clocks on a known date.",
+   "audience": "HRBPs and People Ops (issuers); resigning employees (recipients); managers (copied); Payroll, Stock Admin and Benefits (supply the figures).",
+   "when": "Within 1 business day of receiving a written resignation (OF-01), once the HRBP has confirmed the last day with the manager. Reissue it if the last day changes. Don't use it for involuntary exits, mutual separations or RIFs.",
+   "owner": "People Ops (template and issue); HRBP (content check); Legal (country clauses)",
+   "sections": [
+    {
+     "title": "Opening and acknowledgment",
+     "items": [
+      {
+       "id": "i1",
+       "type": "para",
+       "text": "[Date]. Private and confidential. To: [Employee full name] (Employee ID [ID]), [personal email or home address]."
+      },
+      {
+       "id": "i2",
+       "type": "para",
+       "text": "Dear [First name], thank you for your letter of [date received] resigning from your position as [Job title] in [Department] at [Company legal entity]. This letter confirms that we have received your resignation and sets out the arrangements for your departure.",
+       "detail": "This wording works everywhere: in Taiwan, China and Vietnam a resignation takes effect at the end of notice without acceptance. Germany: a resignation is valid only in wet-ink writing (§623 BGB), so if it arrived by email, ask for a signed original before confirming dates."
+      },
+      {
+       "id": "i3",
+       "type": "para",
+       "text": "We are sorry to see you go, and we are grateful for your contributions, especially [specific contribution].",
+       "detail": "Optional. The manager supplies one specific line; leave it out if the relationship is strained."
+      },
+      {
+       "id": "i4",
+       "type": "para",
+       "text": "If you wish to withdraw your resignation, please tell [Manager name] and [HRBP name] in writing before [date]. The Company will consider the request but is not obliged to accept it.",
+       "detail": "Withdrawals and counteroffers are common in India and Israel. Any counteroffer must go through CO-05 first."
+      }
+     ]
+    },
+    {
+     "title": "Last day, notice and garden leave",
+     "items": [
+      {
+       "id": "i5",
+       "type": "para",
+       "text": "Your notice period under [your employment agreement / applicable law] is [X weeks / days / months], so your last day of employment will be [Termination Date] (the 'Termination Date').",
+       "detail": "Taiwan: 10/20/30 days by tenure. China: 30 days (3 in probation). Vietnam: 45/30/3 days by contract type. Israel: 1 month after 12 months' service. Germany: 4 weeks to the 15th or month-end, or the longer contractual period. India: per contract, usually 60-90 days. No statutory resignation notice in the US or under the ON and BC ESAs."
+      },
+      {
+       "id": "i6",
+       "type": "para",
+       "text": "[Option A: working notice] Until the Termination Date you will continue in your role, and you will agree a knowledge transfer plan with [Manager name] this week.",
+       "detail": "Use T-KT-PLAN."
+      },
+      {
+       "id": "i7",
+       "type": "para",
+       "text": "[Option B: garden leave] From [garden leave start date] until the Termination Date you will be on paid garden leave. You remain an employee and will continue to receive your salary and benefits. You are not required or permitted to work, to access Company systems or premises, or to contact customers, suppliers or colleagues about Company business unless [Manager name] asks you to. [Your remaining [X] days of annual leave are to be taken during garden leave.]",
+       "detail": "Use only where the contract or policy allows it or the employee agrees (Canada). Germany: make the release (Freistellung) irrevocable and state the leave offset. Taiwan: leave keeps accruing during garden leave. California: no post-employment non-compete or non-solicit can follow."
+      },
+      {
+       "id": "i8",
+       "type": "para",
+       "text": "[Option C: early release] The Company does not require you to work the full notice period. Your employment will end on [Termination Date], and you will receive [pay in lieu of the remaining notice / your salary through [original notice end date]].",
+       "detail": "Check first. CA and CO treat an early release as employer-initiated, so final pay is due immediately. In Ontario, waiving notice can amount to a dismissal, so pay the notice out. In Israel the employer generally pays notice it waives. Germany needs a wet-ink Aufhebungsvertrag. In Texas, record that the resignation stands."
+      },
+      {
+       "id": "i9",
+       "type": "para",
+       "text": "Until the Termination Date, all your obligations as an employee continue, including confidentiality, the Code of Business Conduct, the Insider Trading Policy and the duty not to work for or assist a competitor.",
+       "detail": "Germany: statutory competition ban until the contract ends (§60 HGB). India and China: restrictions during employment are enforceable."
+      }
+     ]
+    },
+    {
+     "title": "Pay, leave, equity and benefits",
+     "items": [
+      {
+       "id": "i10",
+       "type": "para",
+       "text": "Your final pay will cover salary through the Termination Date, [accrued but unused vacation/PTO], [earned commissions] and approved expenses, less required withholdings. It will be paid [on your last day / by [date]] by [direct deposit / check to your home address]. [Any statutory severance or gratuity due to you will be paid by [date].]",
+       "detail": "CA: on the last day with 72+ hours' notice, otherwise within 72 hours. CO, NC, TX: next regular payday. WA: end of the pay period. Ontario: later of 7 days or next payday. BC: within 6 days. Germany: normal pay date. Israel: by the 9th of the following month. India: within 2 working days. Taiwan: immediately. China: at termination. Vietnam: within 14 working days."
+      },
+      {
+       "id": "i11",
+       "type": "para",
+       "text": "Our records show [X days / hours] of accrued, unused [vacation / annual leave / PTO] as of [date]. [This will be paid with your final pay. / Please agree with your manager when to take it before the Termination Date. / Under [policy / applicable law], accrued [PTO] is not paid out.]",
+       "detail": "Always paid out in CA and CO. NC: paid unless a written forfeiture policy was given in advance. TX and WA: as the written policy says. Also paid out: ON/BC vacation pay, Germany untaken leave (§7(4) BUrlG), the Israeli leave and convalescence balance, Indian leave encashment, and unused leave in Taiwan, China and Vietnam."
+      },
+      {
+       "id": "i12",
+       "type": "para",
+       "text": "[Bonus and commissions] Under the [plan name], [earned commissions through the Termination Date will be paid on the normal schedule / you must be employed on the payment date to receive the [year] bonus / a pro-rated bonus of [amount] will be paid on [date]].",
+       "detail": "Confirm with Total Rewards. German target bonuses are usually pro-rated; Taiwan and China year-end bonuses follow the work rules or handbook; NC and TX commissions follow the written plan."
+      },
+      {
+       "id": "i13",
+       "type": "para",
+       "text": "Equity: vesting of your [RSUs / stock options / PSUs] stops on the Termination Date, and unvested awards are forfeited on that date under the [plan name] and your award agreements. You will have [3 months] after the Termination Date to exercise vested stock options; any not exercised by [date] will lapse. Incentive stock options exercised more than 3 months after employment ends are taxed as non-qualified options. [Your ESPP contributions for the current offering period will be refunded.] [Stock Admin] will send you an equity statement with the exact numbers.",
+       "detail": "Canada: before stating forfeiture, check that the award wording clearly excludes the common-law notice period (Matthews). Israel: shares held by the Section 102 trustee stay with the trustee. China: SAFE Circular 7 update. India: TDS on any exercise."
+      },
+      {
+       "id": "i14",
+       "type": "para",
+       "text": "The Insider Trading Policy continues to apply after you leave to any material non-public information you have about [Company] or its customers, suppliers or partners. [As a designated insider, you may not trade [Company] securities until the trading window opens on [date].]"
+      },
+      {
+       "id": "i15",
+       "type": "para",
+       "text": "Benefits: your [medical, dental and vision] coverage ends on [date]. [You will receive a COBRA election notice from [administrator] [and Cal-COBRA information].] You will also receive information on converting or continuing life and disability insurance, and on your [401(k) / pension] account, from [provider].",
+       "detail": "Ontario: benefits continue through any ESA notice period if the employee is released early. China: social insurance continues through the termination month. Taiwan: insurance and NHI withdrawal takes effect on the Termination Date."
+      },
+      {
+       "id": "i16",
+       "type": "para",
+       "text": "[Repayment] Under your [sign-on / relocation / training] agreement dated [date], [amount] is repayable because you are leaving before [date]. We will send you a separate statement; nothing will be deducted from your final pay unless the law and a signed authorization allow it. [Or: No repayment applies.]",
+       "detail": "California bars stay-or-pay terms (AB 692). Washington: from 30 June 2027, repayment triggered by taking other work is a void noncompete. China: only pro-rated training service-period damages are allowed."
+      }
+     ]
+    },
+    {
+     "title": "Return of property and continuing obligations",
+     "items": [
+      {
+       "id": "i17",
+       "type": "para",
+       "text": "Please return all Company property by [Termination Date / garden leave start date], including your laptop, phone, badge, security tokens, lab equipment, evaluation boards, engineering samples, documents and notebooks. [IT] will contact you to arrange [an in-person return / a prepaid return kit]. Your final pay does not depend on returning property."
+      },
+      {
+       "id": "i18",
+       "type": "para",
+       "text": "Please don't delete Company information from your devices or accounts, and don't copy, forward or upload Company files to personal devices, personal email or personal cloud storage. If Company information is on any personal device or account, tell [IT / your HRBP] so we can remove it securely. On your last day we will ask you to sign an exit certification confirming this.",
+       "detail": "Use T-EXIT-CERT."
+      },
+      {
+       "id": "i19",
+       "type": "para",
+       "text": "Your obligations under your [Proprietary Information and Inventions Agreement / confidentiality agreement] dated [date] continue after your employment ends. You must not use or disclose the Company's confidential information or trade secrets, including design data, source code, roadmaps, customer information and personnel data, and you must continue to comply with export control laws for any controlled technology you know. [Your obligation not to solicit Company employees for [period] under section [x] of that agreement also continues.]",
+       "detail": "Include the non-solicit sentence only where it is enforceable locally: never in California; narrow ones only in Ontario and BC; employee (not customer) non-solicits in India. Never mention a non-compete in this letter. Where a valid one exists (Germany with Karenzentschädigung, Taiwan Art. 9-1, China with monthly compensation, or NC, TX, CO or WA where the statutory conditions are met), send the separate activation or release letter."
+      },
+      {
+       "id": "i20",
+       "type": "para",
+       "text": "Nothing in this letter or in any agreement with the Company prevents you from reporting possible violations of law to, or communicating with, any government agency, including the SEC, or from receiving an award from a government agency for information you provide, and you do not need to tell the Company that you have done so. [Add the DTSA immunity notice if your PIIA does not already include it.]"
+      },
+      {
+       "id": "i21",
+       "type": "note",
+       "text": "Don't mention non-compete clauses that are void or not being enforced: California (B&P 16600, 16600.5), Ontario (ESA s.67.2, below C-suite), India (Contract Act s.27), Colorado below the pay threshold, and Washington from 30 June 2027. Referring to a void clause can itself be a violation (California 16600.1 and 16600.5; Colorado $5,000 per worker)."
+      }
+     ]
+    },
+    {
+     "title": "Exit survey, documents and contacts",
+     "items": [
+      {
+       "id": "i22",
+       "type": "para",
+       "text": "We value your honest feedback. On [date] you will receive an invitation at your personal email to a short, confidential exit survey[, and [HRBP name] may invite you to an exit interview]. Taking part is voluntary and will not affect your final pay, references or rehire eligibility.",
+       "detail": "T-EXIT-SURVEY and T-EXIT-INTERVIEW (OF-07)."
+      },
+      {
+       "id": "i23",
+       "type": "para",
+       "text": "You will receive your final payslip or wage statement, an equity statement, information on continuing benefits, your year-end tax form for [year] ([W-2 / T4 / Form 130 / Lohnsteuerbescheinigung / Form 106 / Taiwan withholding statement / PIT withholding certificate]) and the country documents described below."
+      },
+      {
+       "id": "i24",
+       "type": "para",
+       "text": "Future employers can verify your employment through [verification service / email]. In line with our References and Employment Verification policy, we confirm your dates of employment and job title[, and your final salary with your written consent].",
+       "detail": "POL-56. Managers don't give personal references unless HR approves."
+      },
+      {
+       "id": "i25",
+       "type": "para",
+       "text": "Please keep your personal email, address and phone number up to date in [Darwinbox / the alumni portal] until [date], so that tax forms, benefits notices and equity messages reach you. If you have questions, contact [HRBP name] at [email]."
+      },
+      {
+       "id": "i26",
+       "type": "para",
+       "text": "We wish you every success. Yours sincerely, [Name], [Title], [Company legal entity]. Enclosures: [list]. Receipt: I acknowledge that I have received this letter. [Signature] [Date]",
+       "detail": "The signature confirms receipt only, not agreement with the contents."
+      }
+     ]
+    },
+    {
+     "title": "Country clauses",
+     "intro": "Add the clause for the employee's work country after the exit survey section, in the local language or bilingual.",
+     "items": [
+      {
+       "id": "i27",
+       "type": "para",
+       "text": "India: On completion of your notice period we will issue your relieving letter and experience letter. Your full-and-final settlement, including salary and leave encashment, will be paid within 2 working days of your last working day, and gratuity, if you are eligible, within 30 days. [Karnataka: you may ask for a service certificate at any time, and we will issue it within 7 days of your request.] We will update your exit date on the EPFO portal so that you can transfer or withdraw your provident fund, and we will return any original documents you gave us.",
+       "detail": "Never withhold the relieving letter to force notice-period service or recover notice pay; recover any contractual notice buyout separately. Form 130 (formerly Form 16) follows after the financial year."
+      },
+      {
+       "id": "i28",
+       "type": "para",
+       "text": "China: On your last day we will issue a termination certificate (离职证明) stating your contract term, termination date, position and years of service. Within 15 days of the Termination Date we will complete the transfer of your personnel file and of your social insurance and housing fund accounts. Your final wages, including pay for untaken annual leave, will be paid on [date]. [Non-compete: a separate notice confirms whether the Company [activates / releases] the non-compete in your labor contract.]",
+       "detail": "The resignation takes effect after 30 days' notice (3 in probation) whether or not the Company accepts it. Issue the Chinese version, which prevails."
+      },
+      {
+       "id": "i29",
+       "type": "para",
+       "text": "Taiwan: Under Article 19 of the Labor Standards Act you may ask for a certificate of service at any time, and we will issue it promptly. Your wages and pay for unused annual leave will be settled on [date]. We will withdraw you from Labor Insurance, Employment Insurance, Occupational Accident Insurance and National Health Insurance effective the Termination Date, and report the end of your labor pension contributions.",
+       "detail": "Issue the Chinese version. Enforce a non-compete only with Art. 9-1 compensation, in a separate letter."
+      },
+      {
+       "id": "i30",
+       "type": "para",
+       "text": "Germany: You are entitled to a written employment reference (Arbeitszeugnis) on request (§109 GewO). Please tell us whether you would like a simple reference covering the type and duration of your employment, or a qualified reference that also covers your performance and conduct. We will transmit the employment certificate (Arbeitsbescheinigung) electronically to the Federal Employment Agency and give you a leave certificate (Urlaubsbescheinigung). You must register as a job-seeker with the Agentur für Arbeit at least 3 months before your employment ends, or within 3 days of learning the end date if it is less than 3 months away, and you must actively look for work (§2(2) no.3, §38(1) SGB III).",
+       "detail": "Issue the letter in German. The reference must be true and benevolent, and an electronic version with a qualified e-signature is allowed with the employee's consent. Resigning usually triggers a 12-week block on unemployment benefit (§159 SGB III); refer questions to the Agentur."
+      },
+      {
+       "id": "i31",
+       "type": "para",
+       "text": "Israel: We will file Form 161 (notice of termination of employer-employee relations) with the Israel Tax Authority and give you a copy. We will send release letters to your pension fund, including its severance (Section 14) component, and to your study fund (keren hishtalmut), so the balances are released to you. Your final salary, pay for unused annual leave and your convalescence pay balance will be paid by [the 9th of the month after your last month]. [Equity held by the Section 102 trustee remains with the trustee; see your equity statement.]",
+       "detail": "Issue a Hebrew version. Resignations for health reasons, relocation, a material worsening of conditions, or within 9 months after childbirth count as dismissals for severance, so check the reason before issuing."
+      },
+      {
+       "id": "i32",
+       "type": "para",
+       "text": "Vietnam: Within 14 working days of the Termination Date we will pay all amounts owed to you, including pay for untaken annual leave. In the same period we will confirm your social insurance contribution period, close your record with Vietnam Social Security, and return your social insurance book and any original documents, so that you can claim unemployment insurance if you are eligible. [Foreign employees: we will notify the labour authority that your work permit has ended and arrange cancellation of your temporary residence card.]",
+       "detail": "Issue a Vietnamese version. Resignation notice is 45 days (indefinite contract), 30 days (12-36-month contract) or 3 working days (under 12 months)."
+      },
+      {
+       "id": "i33",
+       "type": "para",
+       "text": "Canada: We will issue your Record of Employment electronically to Service Canada within 5 calendar days after the end of the pay period in which your employment ends; you can view it in My Service Canada Account. Your final pay, including vacation pay, will be paid [Ontario: by the later of 7 days after your last day or your next regular payday / British Columbia: within 6 days after your last day]. Your T4 for [year] will be issued by the end of February.",
+       "detail": "The ESAs require no resignation notice; if the Company shortens the notice period in Ontario, pay it out. Quebec remote employees need a French version."
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Send the letter within 1 business day. Confirming the date promptly fixes the final-pay clock (India: 2 working days after the last working day; California: 72 hours without notice) and heads off disputes about when notice started.",
+    "Say 'received and acknowledge', not 'accept'. Acceptance isn't legally required in Taiwan, China or Vietnam; in Germany, check the wet-ink original first; in the US, 'acceptance' doesn't bar a later withdrawal request.",
+    "Never shorten the notice period without checking the consequences: an early release can make the exit employer-initiated (CA, CO), amount to a dismissal (Ontario), require payment of the notice (Israel) or affect UI charging (TX, NY, IL).",
+    "Final pay, relieving letters, termination certificates and ROEs never depend on returning property, signing the exit certification or completing knowledge transfer. Recover property separately.",
+    "Choose the obligations paragraph for the employee's jurisdiction and never mention a void non-compete. A valid post-employment restriction is handled in a separate activation or release letter approved by Legal.",
+    "Generate the letter from the Darwinbox template with merge fields. The HRBP resolves every bracketed option (none may remain), and the signed copy goes in the personnel file.",
+    "For a Section 16 officer or named executive officer, start the Legal 8-K Item 5.02 workflow (4 business days from notice) before sending, and write the letter on the assumption it could be filed."
+   ],
+   "countryNotes": {
+    "us": "No statutory resignation notice; final pay follows the work state's deadline and COBRA notices come from the administrator. For H-1B holders, Immigration withdraws the LCA and petition after the last day; flag STEM OPT exits to the DSO within 5 business days.",
+    "us-ca": "Final pay, including all accrued vacation, is due on the last day if the employee gave 72+ hours' notice and within 72 hours otherwise (LC 202); an early release is treated as a discharge, with immediate pay. Don't mention non-competes or non-solicits, and don't demand stay-or-pay repayments (AB 692).",
+    "us-co": "Final wages, including all earned vacation, are due on the next regular payday (C.R.S. 8-4-109(1)(b); Nieto) and can't be withheld because notice wasn't given. Mention a non-compete only if it meets C.R.S. 8-2-113.",
+    "us-nc": "Final pay is due by the next regular payday, and commissions on the first payday after they become calculable (G.S. 95-25.7). Accrued vacation is payable unless a written forfeiture policy was given in advance, and enforceable written covenants can be restated.",
+    "us-tx": "Final pay is due by the next regular payday after a resignation, with vacation only if the written policy provides it (Labor Code 61.014). If the Company converts the resignation into a termination, the deadline becomes 6 days; reasonable non-competes (Bus. & Com. Code 15.50) can be restated.",
+    "us-wa": "Final pay is due at the end of the established pay period, with PTO payout per the written policy (RCW 49.48.010). Until 29 June 2027, refer only to noncompetes that meet RCW 49.62; from 30 June 2027 refer to none, and don't claim repayments triggered by the employee taking other work.",
+    "ca": "The ON and BC ESAs require no resignation notice. Final pay is due by the later of 7 days or the next payday (ON) or within 6 days (BC), and the ROE within 5 days after the pay period ends. Never refer to a non-compete for Ontario employees below the C-suite.",
+    "de": "Confirm receipt of a wet-ink resignation (§623 BGB) in German, and include the Arbeitszeugnis, Arbeitsbescheinigung, Urlaubsbescheinigung and job-seeker registration notice (§38 SGB III). Make any garden leave irrevocable with the leave offset stated, and decide the post-contractual non-compete before the last day (a waiver under §75a HGB still costs one year's compensation).",
+    "il": "After 12 months' service the employee owes 1 month's notice, and an employer that waives it generally pays it. File Form 161 and release pension, severance and study-fund balances promptly, pay final amounts by the 9th of the following month, and check whether the reason for resigning counts as a dismissal for severance.",
+    "in": "Issue relieving and experience letters and pay the full-and-final settlement within 2 working days of the last working day (Code on Wages s.17(2)), gratuity within 30 days, and a Karnataka service certificate within 7 days of request. Post-exit non-competes are void (Contract Act s.27), so refer to confidentiality and employee non-solicitation only.",
+    "tw": "Notice is 10, 20 or 30 days by tenure (LSA Arts. 15-16), and acceptance isn't required. Settle wages and unused leave immediately, withdraw insurance and NHI on the last day, issue the Art. 19 service certificate on request, and provide a Chinese version.",
+    "cn": "The resignation takes effect after 30 days' notice (3 in probation) without acceptance. Issue the termination certificate at exit, transfer the personnel file and social insurance/housing fund within 15 days, and activate or release any non-compete in writing (a release during the restriction period costs 3 extra months' compensation).",
+    "vn": "Notice is 45, 30 or 3 working days by contract type (LC Art. 35), with no acceptance needed. Settle everything, close the SI record and return the SI book within 14 working days (Art. 48), and provide a Vietnamese version; foreign employees also need work permit and residence card steps."
+   },
+   "processes": [
+    "OF-01",
+    "OF-05"
+   ],
+   "policies": [
+    "POL-52",
+    "POL-55",
+    "POL-28",
+    "POL-33",
+    "POL-27",
+    "POL-37",
+    "POL-48",
+    "POL-56"
+   ]
+  },
+  {
+   "id": "T-KT-PLAN",
+   "name": "Knowledge transfer plan",
+   "category": "Offboard",
+   "format": "checklist",
+   "purpose": "A structured plan for handing a departing or transferring employee's responsibilities, documents, projects, relationships and lab assets to named successors before the last day, so tape-outs, customer commitments and lab work don't stall. It also keeps the hand-off within access, export-control and trade-secret rules, with no shared passwords and no personal copies.",
+   "audience": "Departing or transferring employees (authors); managers (accountable); named successors; HRBPs (tracking); IT and Security (access changes); Trade Compliance (controlled technology); receiving managers for internal transfers.",
+   "when": "Drafted within 3 business days of an accepted resignation (OF-01) or an approved internal transfer (MV-01), reviewed weekly through the notice period, and signed off by successors and the manager before the last day or transfer date. For garden leave or immediate exits, compress it into days 1-3 and have the manager fill the gaps.",
+   "owner": "Manager (accountable); departing employee (author); HRBP (tracks completion in the Darwinbox offboarding or transfer case)",
+   "sections": [
+    {
+     "title": "Plan setup",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Confirm the last working day or transfer date, the notice period and any garden-leave start, and plan the hand-off weeks backwards from that date.",
+       "owner": "Manager",
+       "when": "Day 1"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "Name one KT owner and, for each responsibility, a successor. Where no successor exists yet, name an interim owner.",
+       "owner": "Manager",
+       "when": "Day 1"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "Classify the departure as routine or flagged. Flagged means joining a competitor or customer, or having access to crown-jewel design data or controlled technology. Flagged KT runs under Security supervision (ER-10), using supervised sessions and no bulk exports.",
+       "owner": "HRBP",
+       "when": "Day 1"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "Check with Legal whether the employee is a custodian under a legal hold (ER-09). If so, preserve data in place; don't reorganize or delete it.",
+       "owner": "HRBP",
+       "when": "Day 2"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Keep the plan in the team's approved document system, shared with the HRBP and successors, never on a personal drive.",
+       "owner": "Employee",
+       "when": "Day 2"
+      },
+      {
+       "id": "i6",
+       "type": "check",
+       "text": "Internal transfers: agree with the receiving manager how much time goes to KT (e.g. 50% for 2 weeks) and the effective date. Access changes follow the KT, not the other way round.",
+       "detail": "MV-01. Re-run the export-control check if the new role needs different technology access.",
+       "owner": "Manager",
+       "when": "Day 3"
+      }
+     ]
+    },
+    {
+     "title": "Responsibilities inventory",
+     "items": [
+      {
+       "id": "i7",
+       "type": "check",
+       "text": "List every recurring responsibility with its frequency, effort, stakeholders, successor and hand-off status.",
+       "owner": "Employee",
+       "when": "Week 1"
+      },
+      {
+       "id": "i8",
+       "type": "check",
+       "text": "List the approvals and authorities the employee holds (PO and expense approvals, release and tape-out sign-offs, ECO approvals, code-review ownership, on-call rotations) and reassign each one in its system.",
+       "owner": "Manager",
+       "when": "Week 1"
+      },
+      {
+       "id": "i9",
+       "type": "prompt",
+       "text": "What do you know that nobody else on the team knows?",
+       "detail": "Probe for single points of failure: legacy test benches, characterization scripts, undocumented workarounds, vendor escalation paths, tribal knowledge about a customer's quirks. Each answer becomes a documentation or walkthrough task.",
+       "owner": "Manager",
+       "when": "Week 1"
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "Transfer ownership of the recurring meetings the employee leads, with agendas and distribution lists.",
+       "owner": "Employee",
+       "when": "Week 1"
+      },
+      {
+       "id": "i11",
+       "type": "check",
+       "text": "Start replacement for any compliance or safety role the employee holds: fire warden, first aider, lab EHS coordinator, export-control point of contact, POSH Internal Committee member (India), labor-management meeting representative (Taiwan).",
+       "owner": "HRBP",
+       "when": "Week 1"
+      }
+     ]
+    },
+    {
+     "title": "Documents, repositories and data",
+     "items": [
+      {
+       "id": "i12",
+       "type": "check",
+       "text": "Inventory the repositories (Git, Perforce), EDA project directories, design databases, simulation and regression setups, and wikis the employee owns, and transfer ownership to the successor or a team account.",
+       "owner": "Employee",
+       "when": "Week 1"
+      },
+      {
+       "id": "i13",
+       "type": "check",
+       "text": "Move work files from local disks into the right Company repository. Nothing goes to personal cloud storage, personal email or USB drives.",
+       "owner": "Employee",
+       "when": "Week 1"
+      },
+      {
+       "id": "i14",
+       "type": "check",
+       "text": "Document build, simulation and regression flows in the repository README: commands, environments, EDA license features used, known failures and workarounds.",
+       "owner": "Employee",
+       "when": "Week 2"
+      },
+      {
+       "id": "i15",
+       "type": "check",
+       "text": "Transfer ownership of shared drives, documents, issue boards, dashboards, scheduled jobs and service accounts. Don't delete mailboxes or files.",
+       "owner": "IT",
+       "when": "Week 2"
+      },
+      {
+       "id": "i16",
+       "type": "check",
+       "text": "Before any export-controlled technical data or source code is handed over, confirm with Trade Compliance that the successor is authorized (license determination and TCP access), and record the transfer.",
+       "detail": "A walkthrough of controlled technology for a foreign-national successor is itself a release (deemed export).",
+       "owner": "Trade Compliance",
+       "when": "Week 1"
+      },
+      {
+       "id": "i17",
+       "type": "check",
+       "text": "Managers only: move any personal data they hold (candidate files, performance notes, investigation material) to HR or an authorized successor. Never forward it to personal email.",
+       "owner": "Manager",
+       "when": "Week 2"
+      }
+     ]
+    },
+    {
+     "title": "In-flight projects and contacts",
+     "items": [
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "For each in-flight project, record status, next milestones (tape-out, silicon bring-up, qualification, customer samples), open risks, pending decisions and the successor.",
+       "owner": "Employee",
+       "when": "Week 1"
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "List customer, partner, foundry, OSAT and vendor contacts, with relationship history and open commitments (NDAs, SOWs, RMAs, design-win follow-ups).",
+       "owner": "Employee",
+       "when": "Week 1"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "Hold joint introduction calls with the successor for each key external contact.",
+       "owner": "Employee",
+       "when": "Week 2"
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "Send contacts the approved transition note naming the new point of contact. Give no reason for the departure and don't mention where the employee is going.",
+       "owner": "Manager",
+       "when": "Week 2"
+      },
+      {
+       "id": "i22",
+       "type": "check",
+       "text": "Update the named contact on open purchase orders, contracts, NDAs, licenses and regulatory filings with Procurement and Legal.",
+       "owner": "Manager",
+       "when": "Week 2"
+      },
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "Reassign open escalations, support tickets, RMAs and CRM opportunities, with context notes.",
+       "owner": "Employee",
+       "when": "Week 2"
+      }
+     ]
+    },
+    {
+     "title": "Lab equipment and samples",
+     "items": [
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "Inventory assigned lab equipment (oscilloscopes, probe stations, evaluation boards, test fixtures, thermal chambers) with asset tags, locations and calibration status, and transfer it to the successor in the asset system.",
+       "owner": "Employee",
+       "when": "Week 1"
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "Log engineering samples, prototype silicon and wafers by lot and part number, quantity, location and project or customer, then transfer custody with a signed log and bring back anything held off-site.",
+       "owner": "Employee",
+       "when": "Week 2"
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "Save bench setups (photos, firmware versions, instrument settings, test programs) to the repository.",
+       "owner": "Employee",
+       "when": "Week 2"
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "Hand over EHS responsibilities for chemicals, lasers or X-ray equipment, update the permit and training rosters, and make sure the successor has completed the required safety training before working alone.",
+       "owner": "Facilities",
+       "when": "Week 2"
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Remote or home lab equipment: IT or Facilities sends a prepaid return kit by D-5.",
+       "owner": "Facilities",
+       "when": "D-5"
+      }
+     ]
+    },
+    {
+     "title": "Credentials and access hand-off",
+     "items": [
+      {
+       "id": "i29",
+       "type": "note",
+       "text": "Never share passwords, MFA tokens, SSH keys or other personal credentials, even with the successor, and never log in as the departing employee. Every successor works under their own identity."
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "The successor requests their own access through the normal ITSM/Okta workflow before the hand-off session.",
+       "owner": "Manager",
+       "when": "Week 1"
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "Move ownership of shared and service accounts in the vault to the successor, and rotate their secrets after the transfer.",
+       "owner": "IT",
+       "when": "Week 2"
+      },
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "Transfer and re-key cloud resources, CI/CD pipelines, EDA license groups, certificates, domains and API keys.",
+       "owner": "IT",
+       "when": "Week 2"
+      },
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Re-key or reassign code-signing keys, HSM tokens and lab controller accounts with Security.",
+       "owner": "Security",
+       "when": "Final week"
+      },
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "After the last day, IT sets up the auto-reply and mailbox delegation to the manager. Credentials are never shared to do this.",
+       "owner": "IT",
+       "when": "D0"
+      }
+     ]
+    },
+    {
+     "title": "Walkthroughs and timeline by notice week",
+     "items": [
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Record walkthroughs (design architecture, test flows, lab setup) on the approved meeting platform, and store them in the team repository under the retention schedule. Announce the recording at the start and get consent where the law requires it.",
+       "detail": "All-party consent is needed in California and Washington. German recording tools are co-determined with the works council.",
+       "owner": "Employee",
+       "when": "Week 1"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "Week 1: inventory complete, successors named, access requested, walkthrough schedule agreed and export-control checks done.",
+       "owner": "Manager",
+       "when": "Week 1"
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Week 2: the employee leads with the successor shadowing; external introductions completed; documentation drafted.",
+       "owner": "Employee",
+       "when": "Week 2"
+      },
+      {
+       "id": "i38",
+       "type": "check",
+       "text": "Week 3, or the final week of a 2-week notice: reverse shadowing, with the successor leading; repository, lab and sample custody transferred; open items closed.",
+       "owner": "Successor",
+       "when": "Week 3"
+      },
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "Final 3 days: successor sign-offs, manager review and a list of residual items with owners and due dates; equipment returned.",
+       "owner": "Manager",
+       "when": "D-3"
+      },
+      {
+       "id": "i40",
+       "type": "check",
+       "text": "Long notice periods (India 60-90 days, Germany often 3 months): finish KT in the first 3-4 weeks, then consider garden leave or early release under local rules rather than stretching the hand-off.",
+       "owner": "HRBP",
+       "when": "Week 4"
+      }
+     ]
+    },
+    {
+     "title": "Successor and manager sign-off",
+     "items": [
+      {
+       "id": "i41",
+       "type": "field",
+       "text": "Successor sign-off (one per responsibility)",
+       "detail": "'I have received the hand-off for [responsibility], I have my own access, and I can do it without the departing employee.' Name, signature, date."
+      },
+      {
+       "id": "i42",
+       "type": "field",
+       "text": "Manager sign-off and residual risk",
+       "detail": "Low / medium / high, with open items, owners and due dates."
+      },
+      {
+       "id": "i43",
+       "type": "field",
+       "text": "Departing employee confirmation",
+       "detail": "'All my Company work product is in Company systems, and I have kept no copies.' This links to the exit certification (T-EXIT-CERT)."
+      },
+      {
+       "id": "i44",
+       "type": "check",
+       "text": "File the signed plan in the offboarding or transfer case and close the KT task in Darwinbox.",
+       "owner": "HRBP",
+       "when": "D0"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "KT starts the day notice is accepted, not in the final week. Plan it backwards from the last day, and don't let the notice period drift without milestones.",
+    "For flagged departures, KT is not a reason to keep access to crown-jewel data: run supervised sessions, move to garden leave early and let the manager complete the documentation.",
+    "Every successor needs their own access. Shared passwords defeat access logs, SOX evidence and deemed-export controls, and after the last day they look like unauthorized access by a former employee.",
+    "Walkthrough recordings are Company records that can contain controlled technology and personal data: restrict access, apply retention, and get recording consent or works council agreement where needed.",
+    "KT time is working time. Non-exempt employees (most engineers in Taiwan and China, and non-exempt US staff) are paid overtime for extra hours, within the local caps and approvals.",
+    "Never make final pay, a relieving letter or a termination certificate depend on finishing KT. Unfinished items go on the residual list with a new owner.",
+    "Internal transfers carry the same risks: complete the KT before access changes, then remove access the old role needed and the new one doesn't."
+   ],
+   "countryNotes": {
+    "us": "A foreign-national successor needs a deemed-export license determination before receiving controlled technology or source code (EAR 734.13). For internal transfers of H-1B holders, check with Immigration whether the new role needs an amended petition before the move (verify).",
+    "us-ca": "Recording walkthroughs needs all-party consent (Penal Code 632). Non-exempt staff's KT hours are paid overtime, and final pay stays on the LC 202 schedule whether or not KT is complete.",
+    "us-co": "No KT-specific rules. Non-exempt employees' KT hours count as time worked, and final pay can't be delayed for unfinished hand-offs (C.R.S. 8-4-109).",
+    "us-nc": "One-party consent applies to recordings (G.S. 15A-287), but announce them anyway. Final pay is due by the next regular payday regardless of KT status.",
+    "us-tx": "One-party consent applies to recordings (Penal Code 16.02). Delete a departing employee's biometric lab-access templates on schedule (CUBI), and don't hold final pay for unfinished KT.",
+    "us-wa": "Recording private conversations needs all-party consent (RCW 9.73.030), so announce recordings and confirm consent. Final pay is due at the end of the pay period whatever the KT status.",
+    "ca": "The employer can require work during a resignation notice period. Cover recorded walkthroughs in the Ontario electronic monitoring policy and the BC PIPA notice, and provide French materials for Quebec-based remote staff.",
+    "de": "Recording and screen-capture tools used for walkthroughs are co-determined with the works council (§87(1) no.6 BetrVG). With 3-month notice periods common, finish KT early and then use an irrevocable release (Freistellung); the statutory competition ban applies until the contract ends.",
+    "il": "Notice is usually 1 month. Reserve duty call-ups can interrupt KT, so name interim owners for every item, and give notice under the Privacy Protection Law for recorded sessions.",
+    "in": "With 60-90-day notice periods, front-load KT, then consider early release or garden leave. KT can't be used to delay the relieving letter or the 2-working-day full-and-final settlement, and a departing POSH Internal Committee member must be replaced.",
+    "tw": "Notice periods are only 10-30 days, so compress the plan. Overtime for KT needs labor-management meeting consent and is paid at LSA premiums, and national core key technology data can go only to authorized successors.",
+    "cn": "Work handover (工作交接) is a statutory duty, and economic compensation, where due, is payable when handover is complete (LCL Art. 50); wages are not delayed. Use a signed handover checklist, and check PIPL and data-export rules before sending data to a successor abroad.",
+    "vn": "Notice is 45 days for indefinite contracts, and resignations cluster after the Tet bonus, so plan KT capacity. Transfers of personal data to successors abroad follow the PDPL, and the 14-working-day settlement isn't delayed for KT."
+   },
+   "processes": [
+    "OF-01",
+    "MV-01"
+   ],
+   "policies": [
+    "POL-52",
+    "POL-48",
+    "POL-18",
+    "POL-47",
+    "POL-55",
+    "POL-43"
+   ]
+  },
+  {
+   "id": "T-EXIT-CERT",
+   "name": "Exit certification: property, confidential information and trade secrets",
+   "category": "Offboard",
+   "format": "form",
+   "purpose": "A signed certification from every departing employee that Company property has been returned, Company information has been removed from personal devices and accounts, and no design data, source code or other confidential material has been kept, with a written reminder of continuing confidentiality and export-control obligations. It is one of the 'reasonable measures' that preserve trade-secret protection in every country, and it supports quick action if something later goes missing.",
+   "audience": "All departing employees (signers); HRBPs and People Ops (collection); IT and Security (asset and data confirmation); Legal and Trade Compliance (flagged departures).",
+   "when": "At the exit meeting on the last day (D0), after IT has logged the returned assets. For involuntary exits, at or right after the termination meeting. Flagged departures (ER-10) also sign a version at notice.",
+   "owner": "Legal (template); HRBP / People Ops (collection); Security (flagged departures)",
+   "sections": [
+    {
+     "title": "Employee and exit details",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Full name and employee ID"
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Job title, department and manager"
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Work country and site",
+       "detail": "Selects the language version and country addendum."
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Last day of employment"
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Flagged departure (admin only)",
+       "detail": "Yes/no, from the ER-10 risk review. 'Yes' means Security and Legal review this form before the case closes."
+      },
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Access to export-controlled technology (admin only)",
+       "detail": "Yes/no and ECCN group, from the TCP register. 'Yes' adds the ECCN reference to the export-control paragraph."
+      },
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Legal hold (admin only)",
+       "detail": "Yes/no, from the ER-09 register. 'Yes' means nothing is deleted; IT preserves it instead."
+      }
+     ]
+    },
+    {
+     "title": "Device and property return",
+     "intro": "IT completes this section from the asset register. The employee confirms each line.",
+     "items": [
+      {
+       "id": "i8",
+       "type": "check",
+       "text": "Laptops and docking stations (asset tags: [ ])"
+      },
+      {
+       "id": "i9",
+       "type": "check",
+       "text": "Mobile phones, tablets and SIM cards"
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "Badges, access cards, keys and parking permits"
+      },
+      {
+       "id": "i11",
+       "type": "check",
+       "text": "Security tokens, smart cards, hardware MFA keys, and code-signing or HSM tokens"
+      },
+      {
+       "id": "i12",
+       "type": "check",
+       "text": "Lab equipment, evaluation boards, test fixtures, probe cards and tools"
+      },
+      {
+       "id": "i13",
+       "type": "check",
+       "text": "Engineering samples, prototype silicon, wafers and packaged parts"
+      },
+      {
+       "id": "i14",
+       "type": "check",
+       "text": "External drives, USB sticks, SD cards and other storage media, including personal media that ever held Company information (IT will wipe them and return them)"
+      },
+      {
+       "id": "i15",
+       "type": "check",
+       "text": "Paper documents, lab notebooks, design notes, printouts and photos of whiteboards or screens"
+      },
+      {
+       "id": "i16",
+       "type": "check",
+       "text": "Corporate credit card (cancelled) and any other item on the asset register"
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "Items not returned, with the reason and agreed return date",
+       "detail": "IT sends a prepaid return kit and escalates at D+14. Final pay is never withheld or reduced for unreturned items unless local law and a prior written authorization allow a deduction."
+      }
+     ]
+    },
+    {
+     "title": "Company information on personal devices and accounts",
+     "intro": "Disclosure comes first, deletion second. Deleting without telling IT can destroy evidence and breach a legal hold.",
+     "items": [
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "I have identified every personal device and account that has ever held Company information: phones, computers, tablets, personal email, messaging apps (e.g. WhatsApp, WeChat, LINE, Zalo, Telegram) and personal cloud storage (e.g. Google Drive, iCloud, Dropbox, OneDrive, Baidu Netdisk)."
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "Before deleting anything, I told IT or HR about the Company information on those devices and accounts and followed IT's instructions for removing it, so that nothing the Company needs, or that is under a legal hold, is destroyed."
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "I have removed the Company work profile or device-management profile and the Company apps from my personal phone, with IT's help."
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "In the last [90] days I have not forwarded Company emails or files to personal accounts, or uploaded them to personal cloud storage or AI tools, except as disclosed below."
+      },
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "Disclosures",
+       "detail": "Any Company information that was on a personal device or account: what it was, where it was, and when and how it was removed or returned. Write 'None' if there is nothing to disclose."
+      }
+     ]
+    },
+    {
+     "title": "No retention of design data, source code or confidential information",
+     "items": [
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "I have not kept copies, in any form, of the Company's design data (RTL, netlists, GDSII, layout, schematics, IP blocks), source code, firmware, test programs, scripts, or simulation or characterization data."
+      },
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "I have not kept customer, supplier, foundry or partner confidential information, including information received under NDA, process design kits, and EDA tools or license files."
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "I have not kept roadmaps, pricing, product or business plans, non-public financial information, or personnel data such as colleagues' pay or performance."
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "I understand that my duty not to use or disclose trade secrets applies even to information I did not write down or take with me. It does not stop me from using the general skills, knowledge and experience I gained in my job."
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "I have not accessed Company systems since [date] except for assigned work, and I will not try to access them after my last day."
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "If I later find any Company information in my possession, I will contact [Legal email] without delay, and I will not open, use or delete it."
+      }
+     ]
+    },
+    {
+     "title": "Continuing obligations and your rights",
+     "items": [
+      {
+       "id": "i29",
+       "type": "para",
+       "text": "Your obligations under the [Proprietary Information and Inventions Agreement / confidentiality agreement] dated [date] continue after your employment ends. You must not use or disclose the Company's confidential information or trade secrets, and inventions covered by that agreement remain assigned to the Company."
+      },
+      {
+       "id": "i30",
+       "type": "para",
+       "text": "Some of the technology you worked with is controlled under U.S. export control laws (the Export Administration Regulations) and may also be controlled under local law [ECCN: [ ]]. These obligations apply to you personally, wherever you work next: you may not export, re-export or release controlled technology or source code, including by sharing it with a foreign person or taking it to another country, without the required authorization."
+      },
+      {
+       "id": "i31",
+       "type": "para",
+       "text": "If you have material non-public information about [Company] or its customers, suppliers or partners, you may not trade their securities, or pass the information on to others, until it is public or no longer material."
+      },
+      {
+       "id": "i32",
+       "type": "para",
+       "text": "Notice under the Defend Trade Secrets Act (18 U.S.C. 1833(b)): an individual shall not be held criminally or civilly liable under any federal or state trade secret law for the disclosure of a trade secret that (A) is made (i) in confidence to a federal, state or local government official, either directly or indirectly, or to an attorney, and (ii) solely for the purpose of reporting or investigating a suspected violation of law; or (B) is made in a complaint or other document filed in a lawsuit or other proceeding, if such filing is made under seal. An individual who files a lawsuit for retaliation by an employer for reporting a suspected violation of law may disclose the trade secret to the individual's attorney and use the trade secret information in the court proceeding, if the individual files any document containing the trade secret under seal and does not disclose the trade secret, except pursuant to court order."
+      },
+      {
+       "id": "i33",
+       "type": "para",
+       "text": "Nothing in this certification or in any agreement with the Company prohibits or restricts you from reporting possible violations of law or regulation to, filing a charge or complaint with, communicating with, or providing information or documents to any government agency, including the SEC, or from receiving an award for information provided to a government agency. You do not need the Company's permission, and you do not need to tell the Company that you have done so. Nothing here prevents you from discussing or disclosing information about unlawful acts in the workplace."
+      },
+      {
+       "id": "i34",
+       "type": "para",
+       "text": "[Where a post-employment restriction applies and is enforceable in your country, it is set out in a separate letter.] This certification does not create any restriction on your future employment."
+      }
+     ]
+    },
+    {
+     "title": "Forensic review acknowledgment",
+     "items": [
+      {
+       "id": "i35",
+       "type": "para",
+       "text": "As explained in the [Electronic Monitoring and Acceptable Use Policy], Company devices, systems and accounts may be monitored. As part of its standard exit process, and only as local law [and the applicable works agreement] permit, the Company may review activity logs and preserve or forensically image the Company devices and accounts you used, for example to confirm that information was not copied or removed. The Company will not access your personal devices or personal accounts without your consent or a court order."
+      },
+      {
+       "id": "i36",
+       "type": "question",
+       "text": "Do you agree that IT may remove Company information from the personal devices you listed above, under IT's supervision? Yes / No.",
+       "detail": "Consent must be voluntary. Where it isn't (for example, most employee consent under the GDPR, or in Israel), offer the alternative: the employee deletes the data, supervised, and certifies it. Refusing has no effect on pay or documents."
+      },
+      {
+       "id": "i37",
+       "type": "note",
+       "text": "Where local law doesn't allow routine exit review (see the country addenda and country notes), delete the bracketed review sentence. Don't collect consent as a workaround."
+      }
+     ]
+    },
+    {
+     "title": "Country addenda",
+     "intro": "Add the addendum for the employee's work country. Other countries are covered in the country notes.",
+     "items": [
+      {
+       "id": "i38",
+       "type": "para",
+       "text": "Taiwan: Some of the technology you worked with may be designated a national core key technology under the National Security Act [(e.g. AI/HPC chip design, chiplet interconnect, advanced packaging; verify the current list)]. Obtaining, using or disclosing it for the benefit of mainland China, Hong Kong, Macau or foreign hostile forces without authorization is a serious criminal offence, separate from liability under the Trade Secrets Act. [If you worked on a government-commissioned or subsidized core key technology project, you need approval before travelling to mainland China for the period the law sets after you leave (Cross-Strait Act Art. 9).]",
+       "detail": "Issue in Traditional Chinese. Include the bracketed travel sentence only for staff on covered projects."
+      },
+      {
+       "id": "i39",
+       "type": "para",
+       "text": "China: Your confidentiality obligations under your labor contract and the Anti-Unfair Competition Law continue after you leave. [A separate notice confirms whether the Company activates or releases the non-compete in your labor contract.] Your work handover (工作交接) is complete when this certification and the handover checklist are signed; any economic compensation due is paid when handover is complete (LCL Art. 50).",
+       "detail": "Issue in Chinese, with Chinese prevailing. Wages and the termination certificate are not delayed for handover."
+      },
+      {
+       "id": "i40",
+       "type": "para",
+       "text": "India: Your confidentiality obligations continue after you leave. The Company processes the information in this certification for employment purposes and to protect its trade secrets (DPDP Act s.7(i)). Your relieving letter and full-and-final settlement do not depend on signing this form.",
+       "detail": "Post-exit non-competes are void (Contract Act s.27); refer to confidentiality and employee non-solicitation only."
+      },
+      {
+       "id": "i41",
+       "type": "note",
+       "text": "Germany: Use the forensic review sentence only if a works agreement covers the tools (§87(1) no.6 BetrVG) and a DPIA supports the review. Keep review proportionate and limited to Company systems, and don't access private content where private use of Company IT is permitted (verify the current telecom-secrecy position). Issue the form in German or bilingual, and handle any post-contractual non-compete separately (§§74 ff. HGB, with Karenzentschädigung)."
+      },
+      {
+       "id": "i42",
+       "type": "para",
+       "text": "Israel: Your obligations under the Commercial Torts Law 1999 and your invention assignment agreement, including your waiver of compensation under section 134 of the Patents Law, continue after you leave. Any review of Company devices follows the Company's written monitoring policy, is proportionate, and never includes access to your private mailbox or private files.",
+       "detail": "Issue in Hebrew. The Isakov limits apply even to Company devices."
+      },
+      {
+       "id": "i43",
+       "type": "note",
+       "text": "California: remove every reference to non-competes and customer non-solicits (void under B&P 16600 and 16600.5, even if signed elsewhere). Limit the certification to property, confidentiality and trade secrets, keep the carve-out for disclosing unlawful workplace acts (Gov Code 12964.5), and respect the LC 2870 invention carve-out."
+      }
+     ]
+    },
+    {
+     "title": "Signature",
+     "items": [
+      {
+       "id": "i44",
+       "type": "field",
+       "text": "Employee certification and signature",
+       "detail": "'I certify that the statements above are true and complete to the best of my knowledge.' Signature, printed name and date (e-signature allowed)."
+      },
+      {
+       "id": "i45",
+       "type": "field",
+       "text": "HR representative or witness signature and date"
+      },
+      {
+       "id": "i46",
+       "type": "field",
+       "text": "IT confirmation",
+       "detail": "Asset tags received, date and time, and the time access was disabled."
+      },
+      {
+       "id": "i47",
+       "type": "field",
+       "text": "Language version and copy provided",
+       "detail": "Language used; confirmation that the employee received a copy."
+      },
+      {
+       "id": "i48",
+       "type": "note",
+       "text": "If the employee declines to sign, don't withhold pay or exit documents. Record the refusal, give them the obligations reminder anyway, and tell Legal if the departure is flagged."
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Use the certification for every departure, not just suspected ones. Consistent use is part of the 'reasonable secrecy measures' that trade-secret protection depends on (DTSA, GeschGehG, Taiwan Trade Secrets Act, China AUCL).",
+    "Never ask the employee to state that they have not filed a complaint with, or given information to, a government agency, and never require them to notify the Company before contacting one. The SEC treats such wording in exit documents as impeding whistleblowers (Rule 21F-17).",
+    "The DTSA immunity notice must appear here or in a referenced policy; without it, the Company can't recover exemplary damages or attorney fees from the employee in a DTSA case.",
+    "Signing is never a condition of final pay, a relieving letter, a termination certificate or an ROE. A refusal is recorded and escalated, never bargained over.",
+    "Personal devices: disclosure first, supervised removal second. Self-deletion before disclosure can destroy evidence and breach a legal hold.",
+    "For flagged departures, pair the form with a DLP lookback, forensic imaging before re-imaging and a Legal-approved reminder letter. False statements on the form become key evidence if misappropriation is found later.",
+    "Use the local-language version as the signed original in China, Taiwan, Vietnam, Germany and Israel, and keep the signed form in the personnel file for the retention period (DS-03)."
+   ],
+   "countryNotes": {
+    "us": "Include the DTSA notice and the Rule 21F-17 and NLRA Section 7 carve-outs, and cite the relevant state trade-secret act in the reminder letter. Remind foreign nationals leaving the US that export-control obligations stay with them.",
+    "us-ca": "No non-compete or non-solicit references (B&P 16600, 16600.5; LC 925); include the Gov Code 12964.5 carve-out and respect the LC 2870 invention carve-out. Give a CCPA notice at collection covering device review, and get all-party consent before recording the exit meeting.",
+    "us-co": "Refer only to non-competes that meet C.R.S. 8-2-113 ($130,014 in 2026 when enforced, trade-secret purpose, separate notice); presenting a void covenant is a misdemeanor with a $5,000-per-worker penalty. Deduct unreturned property only under a prior written agreement.",
+    "us-nc": "Written, signed non-competes and non-solicits supported by consideration can be restated, and the NC Trade Secrets Protection Act (G.S. 66-152) supports fast injunctions. No deductions for unreturned equipment without a G.S. 95-25.8 authorization.",
+    "us-tx": "Reaffirm enforceable Texas covenants (Bus. & Com. Code 15.50) and TUTSA protection. Deduct unreturned property only with prior written authorization (Labor Code 61.018), and delete biometric templates under CUBI.",
+    "us-wa": "Until 29 June 2027, refer only to noncompetes that meet RCW 49.62; from 30 June 2027 all are void, and threatening enforcement costs at least $5,000 plus fees. Include the Silenced No More carve-out (RCW 49.44.211) and rely on the WA UTSA and DTSA.",
+    "ca": "Ontario bans non-competes below the C-suite (ESA s.67.2), and BC courts rarely enforce them, so certify confidentiality and narrow non-solicits only. Disclose exit review in the Ontario electronic monitoring policy and the BC PIPA notice.",
+    "de": "Issue in German or bilingual. Forensic review needs a works agreement for the tools (§87(1) no.6 BetrVG), a DPIA and proportionality; GeschGehG protection depends on appropriate secrecy measures such as this form, and any post-contractual non-compete needs Karenzentschädigung and a separate letter.",
+    "il": "Issue in Hebrew. Device review follows Isakov (a written policy, proportionality, transparency, no private mailboxes), and trade secrets are protected under the Commercial Torts Law; non-competes pass only the Checkpoint legitimate-interest test.",
+    "in": "Device review can rely on DPDP s.7(i) (protecting trade secrets, preventing corporate espionage) with notice and proportionality. Post-exit non-competes are void (Contract Act s.27), and the relieving letter is never conditional on signing.",
+    "tw": "Issue in Traditional Chinese, with the Trade Secrets Act and National Security Act core key technology reminder and any Cross-Strait Act travel-approval duty. Enforce a non-compete only if it meets Art. 9-1, and give a PDPA notice for any review.",
+    "cn": "Issue in Chinese, with the AUCL confidentiality reminder and the signed handover checklist. Activate or release any non-compete in writing, give a PIPL notice for device review, and get separate consent before review results are transferred abroad.",
+    "vn": "Issue in Vietnamese, relying on the LC Art. 21(2) confidentiality agreement and IP Law trade-secret protection; post-exit non-competes are of uncertain enforceability. Exit review must be disclosed monitoring under PDPL Art. 25, and asset recovery can't delay the 14-working-day settlement."
+   },
+   "processes": [
+    "ER-10",
+    "OF-06",
+    "OF-01"
+   ],
+   "policies": [
+    "POL-55",
+    "POL-48",
+    "POL-18",
+    "POL-47",
+    "POL-46",
+    "POL-02",
+    "POL-05"
+   ]
+  },
+  {
+   "id": "T-RIF-COMMS",
+   "name": "Reduction-in-force communications pack",
+   "category": "Offboard",
+   "format": "script",
+   "purpose": "Everything managers, HR and Communications need to announce a reduction in force consistently: preparation, the notification-meeting script, what not to say, the employee FAQ, the survivor meeting, external holding lines and the internal announcement, all sequenced against WARN and country consultation deadlines. It keeps every message aligned with the approved business rationale, the selection record and the Company's public disclosures.",
+   "audience": "Managers delivering notifications; HRBPs and Employee Relations; Internal and Corporate Communications; Investor Relations; Legal and the Disclosure Committee; sales and account leaders who handle customer outreach.",
+   "when": "Prepared once the RIF is approved and selection is final (OF-03, T-RIF-SELECTION), and used from manager briefing (D-3) through survivor follow-ups (D+14). In countries that require consultation or authority notice, no individual is told they are selected until that country's legal gate opens.",
+   "owner": "HR (RIF program lead) with Corporate Communications; Legal and the Disclosure Committee approve every external and internal message before use",
+   "sections": [
+    {
+     "title": "Manager preparation checklist",
+     "intro": "Complete before notification day. The HRBP confirms each item in the RIF tracker.",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Attend the manager briefing and rehearse the notification script with your HRBP at least once.",
+       "owner": "Manager",
+       "when": "D-3"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "Confirm your notification list, meeting times, rooms or video links, and the HRBP attending each meeting. Each meeting is one-to-one and lasts 10-15 minutes.",
+       "owner": "Manager",
+       "when": "D-2"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "Check each packet: local-language letter, severance offer and release, benefits summary, equity statement, FAQ and contact sheet, with names, dates and amounts verified.",
+       "owner": "HRBP",
+       "when": "D-2"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "Confirm with IT when access will be cut (meeting start or end) and that courier return kits are ready for remote employees.",
+       "owner": "Manager",
+       "when": "D-1"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Make sure Immigration is available on notification day for visa holders, and that the list of affected visa holders has gone to Immigration.",
+       "owner": "HRBP",
+       "when": "D-1"
+      },
+      {
+       "id": "i6",
+       "type": "check",
+       "text": "Keep everything confidential: no hints, no early warnings and no changes to lists. Report any leak to your HRBP immediately. RIF information may be material non-public information, and everyone involved is on the insider list.",
+       "owner": "Manager",
+       "when": "D-3"
+      },
+      {
+       "id": "i7",
+       "type": "check",
+       "text": "Know your country's gate: in Germany, China (Art. 41), Taiwan (mass redundancy), Vietnam and India (retrenchment of workers), notifications wait until consultation and authority filings allow them.",
+       "owner": "Manager",
+       "when": "D-3"
+      },
+      {
+       "id": "i8",
+       "type": "check",
+       "text": "Plan your own support: EAP contact, a buffer between meetings, and time with your HRBP at the end of the day.",
+       "owner": "Manager",
+       "when": "D-1"
+      }
+     ]
+    },
+    {
+     "title": "Notification meeting talking points",
+     "items": [
+      {
+       "id": "i9",
+       "type": "say",
+       "text": "Thanks for joining. I have some difficult news to share, and I'm going to get straight to it."
+      },
+      {
+       "id": "i10",
+       "type": "say",
+       "text": "As [Company] announced [today / this morning], we are reducing [the size of / specific teams in] [organization] because of [approved business reason]. I'm sorry to tell you that your position is one of those affected.",
+       "detail": "Use only the approved business reason, word for word."
+      },
+      {
+       "id": "i11",
+       "type": "say",
+       "text": "This decision is based on [the business needs of the team / the elimination of the [X] function], not on your performance.",
+       "detail": "Say this only if it is true for everyone in the group and matches the selection records."
+      },
+      {
+       "id": "i12",
+       "type": "say",
+       "text": "Your employment will end on [date]. [Until then you will be on paid [notice / garden leave] and are not expected to work.] [Until then we'll ask you to help transition [x].]"
+      },
+      {
+       "id": "i13",
+       "type": "say",
+       "text": "[HRBP name] will take you through your package, which includes [severance / notice pay], benefits and equity, and you'll have everything in writing. You have [45 days / the local review period] to consider the separation agreement, and we encourage you to talk to a lawyer or adviser before you sign."
+      },
+      {
+       "id": "i14",
+       "type": "say",
+       "text": "Your access to [systems] [ends at the end of this meeting / will end on [date]]. [HRBP name] will explain how to collect your personal items and return equipment."
+      },
+      {
+       "id": "i15",
+       "type": "say",
+       "text": "I know this is a lot to take in. What questions can I answer now? Anything we can't answer today, [HRBP name] will follow up in writing by [date]."
+      },
+      {
+       "id": "i16",
+       "type": "say",
+       "text": "Thank you for everything you've contributed here. I'm sorry this is the news."
+      }
+     ]
+    },
+    {
+     "title": "What not to say",
+     "items": [
+      {
+       "id": "i17",
+       "type": "note",
+       "text": "Don't say 'This wasn't my decision', 'I fought for you' or 'You're lucky, the package is good'. It undercuts the decision and suggests other motives."
+      },
+      {
+       "id": "i18",
+       "type": "note",
+       "text": "Don't give reasons that differ from the documented selection criteria, and don't compare the employee with colleagues who are staying."
+      },
+      {
+       "id": "i19",
+       "type": "note",
+       "text": "Don't mention age, 'fresh blood', energy, individual salary cost, family, leave, pregnancy, disability, visa status, complaints, union activity or any other protected characteristic or activity."
+      },
+      {
+       "id": "i20",
+       "type": "note",
+       "text": "Don't promise anything that hasn't been approved: rehire, references beyond policy, more severance, contractor work or immigration outcomes."
+      },
+      {
+       "id": "i21",
+       "type": "note",
+       "text": "Don't discuss financial results, other teams, further rounds or anything not yet public; that is MNPI and a Regulation FD risk. If asked about future cuts, say: 'I can't speculate. [HRBP] can tell you what has been announced.'"
+      },
+      {
+       "id": "i22",
+       "type": "note",
+       "text": "Don't suggest the employee resign or call the exit 'voluntary'. In China and Vietnam especially, pressured resignations are a known way of avoiding severance, and authorities and courts treat them as unlawful terminations."
+      },
+      {
+       "id": "i23",
+       "type": "note",
+       "text": "Don't notify anyone by email, chat, text, voicemail or group call, or let people learn of it from an access cut or the press."
+      }
+     ]
+    },
+    {
+     "title": "Employee FAQ",
+     "intro": "Share this FAQ with affected employees in their packet and at their personal email, in the local language. Update it daily during the first week.",
+     "items": [
+      {
+       "id": "i24",
+       "type": "question",
+       "text": "Why was my role selected?",
+       "detail": "Answer: the decision followed [the elimination of the function / defined business criteria] applied consistently across [the decisional unit]. US employees aged 40+ receive the OWBPA disclosure of the job titles and ages of those selected and not selected in the decisional unit."
+      },
+      {
+       "id": "i25",
+       "type": "question",
+       "text": "When is my last day, and will I be paid through my notice period?",
+       "detail": "Answer: [date]. You will be paid [through the WARN / Cal-WARN / WA mini-WARN notice period / through ESA and contractual notice in Canada / through the statutory notice period in your country], whether or not you are asked to work."
+      },
+      {
+       "id": "i26",
+       "type": "question",
+       "text": "When will I receive my final pay?",
+       "detail": "Answer by jurisdiction: CA and CO on the separation date, including accrued vacation; TX within 6 calendar days; NC next regular payday; WA end of the pay period; ON later of 7 days or next payday; BC within 48 hours; India within 2 working days; Taiwan immediately, with severance within 30 days; China at termination; Vietnam within 30 days for restructuring; Germany and Israel on the normal pay date."
+      },
+      {
+       "id": "i27",
+       "type": "question",
+       "text": "What severance will I receive, and what do I need to do to get it?",
+       "detail": "Answer: statutory amounts (notice, statutory severance, payable leave) are paid regardless. The additional severance of [formula] is paid in exchange for signing the separation agreement within [review period]; in the US, you have 7 days to revoke after signing."
+      },
+      {
+       "id": "i28",
+       "type": "question",
+       "text": "What happens to my health insurance and other benefits?",
+       "detail": "Answer: coverage ends on [date]. [The Company will pay [X] months of COBRA premiums.] Ontario benefits continue through the ESA notice period; local plans follow the country summary in your packet."
+      },
+      {
+       "id": "i29",
+       "type": "question",
+       "text": "What happens to my equity?",
+       "detail": "Answer: vesting stops on your termination date unless your package says otherwise, and you have [3 months] to exercise vested options. ESPP contributions for the current period are refunded. The Insider Trading Policy still applies to any MNPI you have."
+      },
+      {
+       "id": "i30",
+       "type": "question",
+       "text": "I'm on a work visa. What happens to my status?",
+       "detail": "Answer: Immigration will contact you within 1 business day. H-1B holders generally have a grace period of up to 60 days (or until their I-94 expires, if sooner), and the Company will offer to pay reasonable return transportation. Green card processes in progress will stop; outside the US, work permits and residence cards are cancelled under local rules (verify each case)."
+      },
+      {
+       "id": "i31",
+       "type": "question",
+       "text": "Will I get a reference? What will the Company tell future employers?",
+       "detail": "Answer: we confirm dates of employment and job title (and salary with your consent) under our References policy. Local documents: India relieving and experience letters, Taiwan service certificate, China termination certificate, Germany Arbeitszeugnis on request."
+      },
+      {
+       "id": "i32",
+       "type": "question",
+       "text": "Can I apply for other roles here, or be rehired later?",
+       "detail": "Answer: yes, you can apply for open roles [now / after your last day] and will be marked eligible for rehire. China Art. 41 layoffs carry a 6-month rehiring priority, and retrenched Indian 'workers' have a 1-year re-employment preference."
+      },
+      {
+       "id": "i33",
+       "type": "question",
+       "text": "Can I claim unemployment benefits?",
+       "detail": "Answer: usually yes. We will provide the documents you need: California DE 2320 and UI Code 1089 notice, Canada ROE, Germany Arbeitsbescheinigung, Taiwan involuntary separation certificate, Vietnam social insurance book."
+      },
+      {
+       "id": "i34",
+       "type": "question",
+       "text": "What support is available to me?",
+       "detail": "Answer: [outplacement for X months], the EAP, and job-search time during notice: Ontario 3 unpaid job-seeking days; Taiwan job-seeking leave of up to 2 paid days a week during notice (LSA Art. 16)."
+      },
+      {
+       "id": "i35",
+       "type": "question",
+       "text": "Who can I contact with questions after today?",
+       "detail": "Answer: the RIF help desk at [email], your HRBP [name], the benefits administrator [contact] and Stock Admin [contact]. We'll send updated FAQs to your personal email."
+      }
+     ]
+    },
+    {
+     "title": "Survivor team meeting talking points",
+     "items": [
+      {
+       "id": "i36",
+       "type": "say",
+       "text": "Earlier today, we told [number / some] colleagues in [team] that their roles are affected by the reduction [Company] announced.",
+       "detail": "Name individuals only with their agreement."
+      },
+      {
+       "id": "i37",
+       "type": "say",
+       "text": "These were hard decisions, made because [approved business reason]. They are not a reflection on the people who are leaving."
+      },
+      {
+       "id": "i38",
+       "type": "say",
+       "text": "Our colleagues who are leaving are being treated with respect and are receiving [notice, severance, benefits support and outplacement]."
+      },
+      {
+       "id": "i39",
+       "type": "say",
+       "text": "Here's what changes for us: [reassigned responsibilities, new priorities, what we stop doing]. I'll meet each of you one-to-one this week to go through your work."
+      },
+      {
+       "id": "i40",
+       "type": "say",
+       "text": "I can't discuss individual colleagues' situations. Please be respectful and don't share internal details or speculation outside the Company."
+      },
+      {
+       "id": "i41",
+       "type": "say",
+       "text": "[Only if the Disclosure Committee confirms it is true:] We have no plans for further reductions beyond what was announced today.",
+       "detail": "Otherwise say: 'I can't speculate about the future, but I'll tell you what I can, when I can.'"
+      },
+      {
+       "id": "i42",
+       "type": "say",
+       "text": "If you have concerns, talk to me, [HRBP name] or use Speak Up. The EAP is available at [contact]."
+      },
+      {
+       "id": "i43",
+       "type": "note",
+       "text": "Hold survivor meetings within 2 hours of the last notification in each team, by video or in person. Avoid 'fresh start' or 'stronger team' language."
+      }
+     ]
+    },
+    {
+     "title": "External holding statement and internal announcement",
+     "intro": "Legal, Corporate Communications, IR and the Disclosure Committee approve all text before use.",
+     "items": [
+      {
+       "id": "i44",
+       "type": "para",
+       "text": "Customer and partner holding statement (reactive; account teams use it only when asked): '[Company] has made organizational changes to focus on [priority areas]. We remain fully committed to our customers and partners, and your support and delivery commitments are unchanged. [Your point of contact going forward is [name].] We don't comment on individual employment matters.'"
+      },
+      {
+       "id": "i45",
+       "type": "para",
+       "text": "Media and analyst holding line (authorized spokespeople only): '[Company] is reducing about [number] positions, about [x]% of its workforce, as part of [reason]. We are supporting affected employees with [severance, benefits continuation and transition support]. [Further information is in our Form 8-K / press release dated [date].]' All other employees refer inquiries to [Corporate Communications email]."
+      },
+      {
+       "id": "i46",
+       "type": "para",
+       "text": "Internal announcement (from [CEO / function leader]), subject 'Changes to our organization': 'Team, today we are making difficult changes to [organization] because [approved business reason]. We are reducing about [number] roles across [functions / locations]. Everyone directly affected in [countries notifying today] will hear from their manager by [time and time zone] today. In [countries in consultation], we are beginning [consultation with employee representatives / the required notification process] and will share more when it is complete.'"
+      },
+      {
+       "id": "i47",
+       "type": "para",
+       "text": "'Colleagues who are leaving will receive [severance, extended benefits, outplacement and equity treatment], and every affected employee will be treated with respect. If you are not affected, your manager will meet with your team today. Please treat departing colleagues with care, and don't share internal details externally until [Company] has announced them publicly. The Insider Trading Policy applies to this information until then. Thank you, [Name].'"
+      },
+      {
+       "id": "i48",
+       "type": "note",
+       "text": "Publish the internal announcement only after any required 8-K or press release is public, or at the same moment, and only after the first notifications in the earliest time zone have started. Don't post it to channels that include contractors or external guests."
+      }
+     ]
+    },
+    {
+     "title": "Timing and sequencing checklist",
+     "intro": "Work backwards from the latest legal gate. D0 is the first notification day in each country.",
+     "items": [
+      {
+       "id": "i49",
+       "type": "check",
+       "text": "Disclosure Committee check before any public statement, internal announcement, WARN notice or authority filing: decide whether the RIF or its charges are material and require an 8-K (Item 2.05 within 4 business days of committing to the plan, or 7.01/8.01) or a press release, and set timing against earnings and trading windows.",
+       "detail": "Add everyone who knows about the RIF to the insider list and blackout until it is public.",
+       "owner": "Legal / Disclosure Committee",
+       "when": "D-60"
+      },
+      {
+       "id": "i50",
+       "type": "check",
+       "text": "Legal confirms, for each country, the consultation and notification steps and the earliest date an individual may be notified. That date is the gate in the RIF tracker.",
+       "owner": "Legal",
+       "when": "D-60"
+      },
+      {
+       "id": "i51",
+       "type": "check",
+       "text": "US WARN: count employment losses per site over 30 and 90 days; give 60 days' notice to affected employees, the state dislocated-worker unit and the chief local elected official, or pay in lieu. Cal-WARN: 75+ employee establishments, 50+ layoffs within 30 days, notices with SB 617 content. WA mini-WARN: 50+ WA employees, notice to ESD. CO, NC and TX: federal WARN only.",
+       "owner": "Legal",
+       "when": "D-60"
+      },
+      {
+       "id": "i52",
+       "type": "check",
+       "text": "US group releases: prepare the OWBPA decisional-unit disclosure exhibit (45 days to consider, 7 to revoke) and run the adverse-impact review before finalizing the lists (T-RIF-SELECTION).",
+       "owner": "Employee Relations",
+       "when": "D-30"
+      },
+      {
+       "id": "i53",
+       "type": "check",
+       "text": "Germany: inform and consult the works council in writing, attempt an Interessenausgleich and agree a Sozialplan where the operational-change thresholds are met, and complete the §102 BetrVG hearing. File a complete mass dismissal notice with the Agentur für Arbeit after consultation ends and before any notice is received; defects make every dismissal void. Notices must be wet-ink.",
+       "owner": "Legal",
+       "when": "D-90"
+      },
+      {
+       "id": "i54",
+       "type": "check",
+       "text": "China: for Art. 41 layoffs (20+ employees or 10%+), explain the plan to the union or all employees 30 days in advance, consider their views and report the plan to the labor bureau (Shanghai: notify worker representatives 30 days before filing from Aug 2026). Notify the union before any unilateral termination (Art. 43). Most MNCs run mutual termination programs instead.",
+       "owner": "HRBP",
+       "when": "D-45"
+      },
+      {
+       "id": "i55",
+       "type": "check",
+       "text": "India: for 'workers' with 1+ year's service, give 1 month's written notice with reasons or pay in lieu, notify the appropriate government (IR Code s.70), pay 15 days' wages per year plus 15 days' wages into the Worker Re-skilling Fund, and apply last-in-first-out by category unless reasons are recorded. Managers exit under their contracts.",
+       "owner": "HRBP",
+       "when": "D-35"
+      },
+      {
+       "id": "i56",
+       "type": "check",
+       "text": "Taiwan: file the Employment Services Act Art. 33 notice 10 days before each Art. 11 separation. Where Mass Redundancy Protection Act thresholds are met, give the plan to the authority, the union or representatives and employees 60 days ahead and negotiate within 10 days. Give Art. 16 notice and job-seeking leave.",
+       "owner": "HRBP",
+       "when": "D-60"
+      },
+      {
+       "id": "i57",
+       "type": "check",
+       "text": "Canada: an Ontario mass termination (50+ in 4 weeks) needs Form 1 filed with the Director and posted, with 8, 12 or 16 weeks' notice. A BC group termination (50+ in 2 months) needs notice to employees, any union and the Minister, with 8, 12 or 16 weeks. Individual ESA and common-law notice applies on top.",
+       "owner": "Legal",
+       "when": "D-60"
+      },
+      {
+       "id": "i58",
+       "type": "check",
+       "text": "Vietnam: prepare the Art. 44 labour-use plan, consult the grassroots union and publish the plan within 15 days. Give 30 days' prior notice to the provincial People's Committee and the employees, calculate the job-loss allowance and settle within 30 days.",
+       "owner": "HRBP",
+       "when": "D-45"
+      },
+      {
+       "id": "i59",
+       "type": "check",
+       "text": "Israel: no WARN-type regime, but hold an individual hearing (with a written invitation) for each affected employee before the decision, get permits for protected employees, and consult a representative or organizing union before layoffs.",
+       "owner": "Employee Relations",
+       "when": "D-30"
+      },
+      {
+       "id": "i60",
+       "type": "check",
+       "text": "Notification-day sequence: 8-K or press release (if any), then the leader's internal announcement, then one-to-one notifications starting in the earliest time zone, then survivor meetings, then customer outreach by account teams, with the holding statements on standby.",
+       "owner": "HR RIF lead",
+       "when": "D0"
+      },
+      {
+       "id": "i61",
+       "type": "check",
+       "text": "After notification day: update the FAQ daily for the first week, staff the help desk, log WARN and authority notices with proof of delivery, and hold survivor one-to-ones and team check-ins.",
+       "owner": "HRBP",
+       "when": "D+14"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Every message comes from one approved business rationale and the documented selection record. Inconsistent reasons across managers, FAQs and public statements are the main evidence of pretext in RIF litigation.",
+    "The Disclosure Committee gate comes first. A RIF can be MNPI: restrict the planning group, put everyone involved under blackout, and time internal and external messages with any 8-K (Item 2.05) and Regulation FD obligations.",
+    "In consultation countries, announcing individual selections before the process is complete can void dismissals (Germany §17 KSchG), defeat meaningful consultation (China, Vietnam, Taiwan) or trigger union disputes (Israel). The global announcement must say those countries are still in process.",
+    "Sequence across time zones so nobody learns from the press, an access cut or a colleague. Notify in one-to-one meetings on the same day for each decisional unit, never by mass video call.",
+    "Visa holders need same-day Immigration support. Since the September 18, 2026 executive order made layoffs a factor in H-1B and LCA adjudication, Immigration also reviews the RIF's effect on pending petitions.",
+    "US employees keep NLRA Section 7 rights to discuss the layoff and their terms of employment. Social media reminders may cover only MNPI and genuinely confidential information, not talking about the RIF itself.",
+    "Localize everything: letters, FAQs and announcements in the local language, local dates and currencies, and local support such as job-seeking leave and unemployment documents.",
+    "Survivors decide whether the RIF damages retention. Hold team meetings the same day and one-to-ones within the week, and promise 'no further cuts' only when it's true and approved."
+   ],
+   "countryNotes": {
+    "us": "Federal WARN applies at 100+ employees: 60 days' notice to employees, the state dislocated-worker unit and local officials. Group releases need OWBPA decisional-unit disclosures (45 + 7 days), and H-1B exits need LCA withdrawal, USCIS notice and a return-fare offer.",
+    "us-ca": "Cal-WARN covers establishments with 75+ employees and layoffs of 50+ within 30 days regardless of percentage: 60 days' notice to employees, EDD, the Local Workforce Development Board and city and county officials, with SB 617 content. Final pay, including vacation, is due on the separation date, together with the UI Code 1089 notice and DE 2320.",
+    "us-co": "No mini-WARN; federal WARN notices go to employees, CDLE and the local chief elected official. Final pay with all accrued vacation is due immediately, and confidentiality terms in group releases must meet the POWR Act.",
+    "us-nc": "No mini-WARN; federal WARN notices go to employees, the NC Commerce dislocated worker unit and the chief local elected official. Final pay is due by the next regular payday, and pay cuts used instead of layoffs need written notice one pay period ahead.",
+    "us-tx": "No mini-WARN; federal WARN notices go to employees, TWC and the local chief elected official. Layoffs count as discharges, so final pay is due within 6 calendar days (Labor Code 61.014).",
+    "us-wa": "The WA mini-WARN (chapter 49.45 RCW) applies at 50+ full-time WA employees: 60 days' notice to ESD and to employees or their union. Employees on PFML can't be selected except under the statutory exceptions, and volunteers who respond to a written RIF announcement can claim UI (HB 2264).",
+    "ca": "An Ontario mass termination (50+ in 4 weeks) needs Form 1 before notice is effective, 8, 12 or 16 weeks' notice and a workplace posting; employees get 3 unpaid job-seeking days. A BC group termination needs notice to the Minister, and individual ESA and common-law notice applies in both provinces.",
+    "de": "Works council consultation must be complete before a full §17 KSchG notice goes to the Agentur für Arbeit, and defects void every dismissal. Add the Interessenausgleich and Sozialplan, a §102 hearing per employee and wet-ink notices, and tell no one they are selected before the gates open.",
+    "il": "No WARN regime, but each employee needs an individual hearing (shimua) with a written invitation, and protected employees (pregnancy, reservists) need permits. Consult a representative or organizing union before layoffs, and never time a RIF to undermine organizing.",
+    "in": "Retrenching 'workers' requires 1 month's notice with reasons, notice to the government, retrenchment compensation, the Re-skilling Fund payment and a 1-year re-employment preference. Offices below the Chapter X thresholds need no prior permission, and full-and-final settlement is due within 2 working days.",
+    "tw": "File the ESA Art. 33 notice 10 days before each layoff; mass redundancy thresholds require a plan 60 days ahead and negotiation. Give Art. 16 notice with paid job-seeking leave of up to 2 days a week, and the involuntary separation certificate, all in Chinese.",
+    "cn": "Art. 41 layoffs need a 30-day explanation to the union or all employees and a report to the labor bureau, with priority-retention groups and 6-month rehiring priority; the union must be notified before any unilateral termination. Most MNCs use mutual termination at N-plus packages instead.",
+    "vn": "Structural or economic terminations need an Art. 44 labour-use plan consulted with the union and published within 15 days, and 30 days' notice to the provincial People's Committee and the employees. Pay the job-loss allowance (1 month per non-UI year, 2-month minimum) and settle within 30 days, with all documents in Vietnamese."
+   },
+   "processes": [
+    "OF-03"
+   ],
+   "policies": [
+    "POL-54",
+    "POL-53",
+    "POL-14",
+    "POL-05",
+    "POL-19",
+    "POL-56",
+    "POL-02"
+   ]
+  }
+ ]
+}

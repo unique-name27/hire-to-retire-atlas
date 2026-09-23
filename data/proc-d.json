@@ -1,0 +1,3992 @@
+{
+ "processes": [
+  {
+   "id": "BN-01",
+   "name": "New-hire benefits enrollment",
+   "stage": "Benefits",
+   "depth": "standard",
+   "summary": "Enrolls every new hire in statutory social insurance from the first day of work and in company health, insurance and retirement plans within the local election window. Covers the US (ACA-compliant waiting period, 30-day elections, 401(k) auto-enrollment), Canada day-one group benefits, India EPF/ESI and group mediclaim, and Taiwan/China statutory enrollment plus supplemental cover. Good looks like: no coverage gaps, no late statutory registrations and correct deductions on the first payroll.",
+   "owner": "Benefits (process), Total Rewards (plan design), Payroll (deductions and statutory remittances)",
+   "trigger": "Hire transaction completed in Darwinbox (ON-03), or a rehire or move into a benefits-eligible class",
+   "outputs": [
+    "Eligibility determination and benefit class in Darwinbox",
+    "Statutory registrations (BLI/NHI, social insurance/housing fund, EPF UAN/ESI) with filing receipts",
+    "Elections, dependant, beneficiary and nomination records",
+    "Carrier EDI enrollment file and ID cards",
+    "Payroll deduction and imputed-income setup"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Benefits admin platform",
+    "Payroll provider",
+    "Document management"
+   ],
+   "sla": "Statutory: Day 1 (TW), within 30 days (CN), first contribution cycle (IN); US/CA elections within 30 days of hire with coverage by the first of the month after hire",
+   "lanes": [
+    "People Ops",
+    "Benefits",
+    "Vendor",
+    "Employee",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Complete hire transaction in Darwinbox",
+     "detail": "People Ops finalises the hire (ON-03) with legal entity, work location, scheduled hours and employee class, which fires the eligibility feed to the benefits platform and local brokers. The transaction cannot be approved with work location or hours blank, because those two fields drive most eligibility errors.",
+     "sla": "Day -5 to Day 1",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Determine eligibility and benefit class",
+     "detail": "Benefits maps the hire to a class (full-time, part-time, intern, variable-hour, expat, fixed-term) under the plan documents and POL-37. US variable-hour and intern populations go into the ACA look-back measurement method rather than being guessed, and anyone expected to work 30+ hours a week is offered coverage within 90 days.",
+     "control": "Eligibility rules are configured in the platform, not decided case by case.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Register statutory schemes from Day 1",
+     "detail": "TW: Labor, Employment and Occupational Accident Insurance plus NHI effective the first day, and the labor pension report within 7 days. CN: social insurance and housing fund within 30 days on the actual wage base. IN: EPF Form 11/UAN for everyone up to INR 25,000/month and all international workers, ESI up to INR 21,000, plus gratuity and PF nominations. Canada CPP/EI and California SDI start through payroll.",
+     "sla": "Day 1 (TW); 30 days (CN)",
+     "control": "Statutory filing receipts saved to the employee record.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Open election window and send notices",
+     "detail": "The benefits platform (US/Canada) or local broker (India/Taiwan/China) opens the new-hire event with a 30-day window and personalised costs. The US packet includes the SBC, COBRA general notice (within 90 days of coverage), HIPAA special enrollment rights, CHIP notice and the 401(k) auto-enrollment/QDIA notice; India shows mediclaim family floater options including optional parents cover.",
+     "sla": "Day 1",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Elect plans and add dependants",
+     "detail": "Employee elects medical, dental, vision, life/disability, FSA/HSA (US), flex credits (Canada) and 401(k) or group RRSP deferrals, and adds dependants with proof. Dependants' health data is collected with notice and consent (DPDP, PIPL, PDPA), and beneficiaries and nominations are captured in the same session.",
+     "sla": "Within 30 days of hire",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Benefits",
+     "type": "decision",
+     "label": "Elections received by deadline?",
+     "detail": "Benefits checks incomplete events on day 25 and sends a final reminder; after the window closes the event locks. Late elections wait for open enrollment (BN-02) or a qualifying life event (BN-03).",
+     "branches": [
+      {
+       "to": "s8",
+       "label": "Yes"
+      },
+      {
+       "to": "s7",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Apply default coverage",
+     "detail": "Apply plan defaults: employee-only core coverage where the plan document provides it, Canadian mandatory core (basic life, AD&D, LTD), India employee-plus-family floater, and 401(k) auto-enrollment at the default rate for plans subject to IRC 414A. Tell the employee what was defaulted and when they can next change it.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Set up deductions and imputed income",
+     "detail": "Payroll loads pre-tax Section 125 deductions, 401(k) deferrals and imputed income for group-term life over $50,000 and non-tax dependants (US), Canadian taxable benefits for the T4, and India perquisite and NPS treatment. First-payroll deductions are compared with elections before the payroll closes (PY-01).",
+     "control": "First-payroll deduction-to-election reconciliation.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Transmit to carriers and reconcile",
+     "detail": "The platform sends EDI files to carriers and brokers confirm Canada, India, Taiwan and China supplemental enrollments. Benefits reconciles Darwinbox hires, platform events and carrier acknowledgements weekly and fixes rejects within 5 business days so ID cards arrive before the first claim.",
+     "sla": "Weekly",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Coverage active and confirmed",
+     "detail": "Employee receives a confirmation statement and ID cards or e-cards, and the record is complete in Darwinbox and the platform. Later issues go to Benefits support, not a new enrollment event."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Eligibility and benefit class determination",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "People Ops; Legal",
+     "I": "Employee"
+    },
+    {
+     "activity": "Statutory registrations (TW, CN, IN, CA SDI, CPP/EI)",
+     "R": "Payroll",
+     "A": "Benefits",
+     "C": "People Ops",
+     "I": "Finance"
+    },
+    {
+     "activity": "Election window, notices and carrier files",
+     "R": "Vendor",
+     "A": "Benefits",
+     "C": "Legal",
+     "I": "Employee"
+    },
+    {
+     "activity": "Deductions and imputed income setup",
+     "R": "Payroll",
+     "A": "Benefits",
+     "C": "Vendor",
+     "I": "Finance"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Weekly three-way reconciliation of Darwinbox hires, benefits platform events and carrier acknowledgements",
+     "type": "detective",
+     "evidence": "Reconciliation report with reject log and resolution dates"
+    },
+    {
+     "id": "C2",
+     "control": "Statutory enrollment timeliness: TW insurance effective Day 1 and pension report within 7 days; CN social insurance/housing fund within 30 days; IN EPF/ESI in the first contribution cycle",
+     "type": "detective",
+     "evidence": "Filing receipts and monthly exception list reviewed by the Benefits lead"
+    },
+    {
+     "id": "C3",
+     "control": "Dependant eligibility proof (marriage or birth certificate, partnership affidavit) required before a dependant is covered",
+     "type": "preventive",
+     "evidence": "Verification documents in the vendor's restricted repository"
+    },
+    {
+     "id": "C4",
+     "control": "First-payroll deduction amounts match elections",
+     "type": "detective",
+     "evidence": "Payroll variance report signed off before close"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Coverage effective on target date",
+     "target": ">= 99% of new hires",
+     "why": "Gaps create out-of-pocket claims and early-tenure complaints."
+    },
+    {
+     "name": "Statutory registrations on time",
+     "target": "100%",
+     "why": "Late TW/CN registration makes the employer liable for lost benefits and back contributions."
+    },
+    {
+     "name": "Carrier file reject rate",
+     "target": "< 1% of records",
+     "why": "Rejects are the main cause of missing ID cards and denied claims."
+    }
+   ],
+   "considerations": [
+    "Offer US coverage from date of hire or the first of the following month; anything near the ACA 90-day waiting-period cap looks uncompetitive for engineering hires and adds compliance risk.",
+    "Use the ACA look-back measurement method for interns, part-time lab technicians and other variable-hour staff; misclassifying a 30+ hour employee risks 4980H penalties ($3,340 / $5,010 per year in 2026).",
+    "401(k) auto-enrollment is mandatory only for plans established after Dec 29, 2022 (IRC 414A); legacy plans can still auto-enroll, which usually lifts participation among early-career engineers.",
+    "From 17 Sep 2026 the India EPF mandatory ceiling is INR 25,000/month: update Darwinbox eligibility rules and CTC templates, and remember international workers contribute on full salary from day one.",
+    "Collect dependant data once in Darwinbox and push it to vendors; re-keying dependants into broker spreadsheets for India, Taiwan and China is where privacy breaches and coverage errors happen.",
+    "In China, commercial supplementary medical cannot replace statutory social insurance and cash in lieu of contributions is void, so never offer an opt-out."
+   ],
+   "variations": [
+    {
+     "when": "Cross-border or relocating hire (ON-05, MV-03)",
+     "how": "Bridge gaps: the BC MSP waiting period (rest of the arrival month plus 2 months) needs interim private cover; Taiwan NHI covers foreign employees with an ARC from the start date; China enrolls foreigners (there is no US-China totalization agreement)."
+    },
+    {
+     "when": "Rehire",
+     "how": "US: an employee returning after a break of less than 13 weeks is treated as continuing for ACA purposes and resumes coverage without a new waiting period; elsewhere restart statutory registration and restore nominations."
+    },
+    {
+     "when": "Acquisition hires",
+     "how": "Map seller plans to ours, waive waiting periods in supplemental plans and credit deductibles already met where carriers allow."
+    },
+    {
+     "when": "Interns and fixed-term staff",
+     "how": "US: measure hours under the look-back method; Canada, India, Taiwan and China statutory schemes apply regardless of term, and India requires fixed-term parity with permanent staff."
+    }
+   ],
+   "countries": {
+    "us": "Offer affordable minimum-value coverage to at least 95% of full-time (30+ hours) employees with a waiting period of no more than 90 days (2026 affordability 9.96%), and give the SBC, COBRA general notice within 90 days of coverage and HIPAA special enrollment rights (30 days). New 401(k) plans must auto-enroll under IRC 414A.",
+    "us-ca": "Withhold SDI at 1.3% of all wages (no wage ceiling since 2024), give the DE 2515 and DE 2511 brochures at hire, and file the CalSavers exemption because a 401(k) is offered. SF-based staff trigger HCSO health expenditures, and Bay Area Air District employers with 50+ full-time employees must offer a commuter benefit.",
+    "ca": "Enrol hires in group benefits on day one (market practice) with extended health, dental, vision, life, AD&D, STD/LTD and EAP; LTD is often employee-paid so benefits are received tax-free. Relocating BC hires face the MSP waiting period (rest of the arrival month plus 2 months), so provide interim private coverage.",
+    "in": "Enrol EPF (Form 11, UAN, Aadhaar/KYC) for everyone up to INR 25,000/month from 17 Sep 2026 and all international workers, and ESI for employees up to INR 21,000; collect gratuity and PF nominations at joining. Group mediclaim (family floater of INR 5-10 lakh, parents optional) is universal GCC practice and needs consent for dependants' health data.",
+    "tw": "Enroll Labor Insurance, Employment Insurance, Occupational Accident Insurance and NHI effective the first day of work at the correct insured-salary grade (late enrollment makes the employer liable for lost benefits) and report the labor pension contribution (at least 6%) within 7 days. Supplemental group life, accident and medical cover is expected by candidates comparing TSMC and MediaTek packages.",
+    "cn": "Register social insurance and housing fund within 30 days in the city of employment on the actual prior-year wage base (Shanghai 2026-27: RMB 7,546-37,731), including foreign employees. Supplementary commercial medical and enterprise annuity are optional add-ons, and any waiver of statutory coverage is void."
+   },
+   "templates": [],
+   "policies": [
+    "POL-37",
+    "POL-28",
+    "POL-46"
+   ],
+   "related": [
+    "ON-03",
+    "ON-01",
+    "BN-02",
+    "BN-03",
+    "BN-04",
+    "PY-01"
+   ]
+  },
+  {
+   "id": "BN-02",
+   "name": "Annual open enrollment",
+   "stage": "Benefits",
+   "depth": "standard",
+   "summary": "Runs the annual US open enrollment for the next plan year (November for a January 1 start) and the matching annual re-elections and renewals in Canada, India, Taiwan and China. Covers contribution setting against ACA affordability, loading new IRS limits, required ERISA/ACA notices (SBC, Medicare Part D by Oct 15), decision support, dependant verification and payroll cut-over. Good looks like: notices on time, no deduction errors on the first January payroll, and employees who understand what they chose.",
+   "owner": "Benefits (process), Total Rewards (plan design and contributions), Payroll (deduction cut-over)",
+   "trigger": "Renewal decisions approved in BN-05, normally by end of August for a January 1 plan year",
+   "outputs": [
+    "Approved plan-year design and contribution rates with ACA affordability test",
+    "Annual notice package with distribution proof (SBC, Part D, CHIP, WHCRA, HIPAA privacy)",
+    "Tested platform configuration and new limit tables",
+    "Employee elections and dependant verification results",
+    "Deduction file for the first payroll of the plan year"
+   ],
+   "systems": [
+    "Benefits admin platform",
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "Survey platform",
+    "Document management"
+   ],
+   "sla": "Contributions approved by Aug 31; Part D notice by Oct 15; 2-3 week window in November; deductions live on the first January payroll",
+   "lanes": [
+    "Total Rewards",
+    "Benefits",
+    "Vendor",
+    "Employee",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Total Rewards",
+     "type": "start",
+     "label": "Approve plan design and contributions",
+     "detail": "Total Rewards takes renewal results from BN-05 and sets employee contributions by tier; the lowest-cost self-only option is tested against next year's ACA affordability percentage (2026: 9.96%; confirm the 2027 figure). CHRO and Finance approve, and any benefit reduction is flagged for early communication.",
+     "sla": "By Aug 31",
+     "control": "Documented affordability test before rates are approved.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Load new plan-year limits",
+     "detail": "Load the 2027 IRS limits when published (verify each figure; 2026 reference: 401(k) $24,500, catch-up $8,000, ages 60-63 $11,250, HSA $4,400/$8,750, health FSA $3,400 with $680 carryover, dependent care FSA $7,500 and not indexed). Confirm the Roth catch-up flag for employees whose prior-year FICA wages exceed the threshold ($150,000 for 2025 wages, indexed).",
+     "sla": "Within 5 bd of IRS release",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Configure and test OE platform",
+     "detail": "Vendor configures plans, rates, eligibility and EDI changes; Benefits runs test cases (new hire, part-timer, employee on leave, HSA with general FSA conflict, domestic partner imputed income) and signs off UAT before the window opens.",
+     "control": "UAT sign-off before go-live.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Distribute notices and decision support",
+     "detail": "Send the Medicare Part D creditable coverage notice by Oct 15, plus SBCs, CHIP, WHCRA and wellness notices and the HIPAA privacy notice when due (every 3 years). Run webinars, an HSA/HDHP cost modeller and FAQs, and mail packets to employees on leave.",
+     "sla": "Part D by Oct 15",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Make elections in window",
+     "detail": "Employees review and elect during a 2-3 week window; FSA and HSA contributions need active re-election, while other plans roll over in a passive year. Changes after close need a qualifying life event (BN-03).",
+     "sla": "November",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Benefits",
+     "type": "decision",
+     "label": "New dependants added?",
+     "detail": "The platform flags every newly added spouse, partner or child for verification before the plan year starts.",
+     "branches": [
+      {
+       "to": "s7",
+       "label": "Yes"
+      },
+      {
+       "to": "s8",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Verify dependant eligibility",
+     "detail": "Vendor requests proof (marriage certificate, birth certificate, tax return) with a 30-45 day deadline and drops unverified dependants prospectively with notice. Run a full-population audit every 3 years rather than every year.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Audit elections and carrier files",
+     "detail": "Benefits reviews exception reports (HSA with a general-purpose FSA, tiers inconsistent with dependants, missing Roth catch-up coding, carrier rejects) and has the vendor correct them before confirmation statements go out.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Load plan-year deductions",
+     "detail": "Payroll loads the new deduction file for the first payroll of the plan year and compares totals with the prior year by plan and tier; variances above tolerance are investigated before close (PY-01).",
+     "control": "First-payroll deduction reconciliation.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Employee",
+     "type": "end",
+     "label": "New plan-year coverage live",
+     "detail": "Confirmation statements issue and ID cards are reissued where carriers changed. A short pulse on clarity feeds next year's communication plan."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Plan design and contribution approval",
+     "R": "Total Rewards",
+     "A": "CHRO",
+     "C": "Finance; Legal",
+     "I": "Benefits"
+    },
+    {
+     "activity": "Annual notices and decision support",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "Legal; Vendor",
+     "I": "Employee"
+    },
+    {
+     "activity": "Platform configuration and UAT",
+     "R": "Vendor",
+     "A": "Benefits",
+     "C": "Payroll",
+     "I": "HR Analytics"
+    },
+    {
+     "activity": "Dependant verification",
+     "R": "Vendor",
+     "A": "Benefits",
+     "C": "Legal",
+     "I": "Employee"
+    },
+    {
+     "activity": "Deduction cut-over",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "Benefits",
+     "I": "Total Rewards"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "ACA affordability test of the lowest-cost self-only premium before contributions are approved",
+     "type": "preventive",
+     "evidence": "Affordability model with approver sign-off"
+    },
+    {
+     "id": "C2",
+     "control": "Annual notice calendar with proof of distribution (Part D by Oct 15; CMS creditable coverage disclosure within 60 days of plan year start)",
+     "type": "detective",
+     "evidence": "Distribution log and CMS confirmation"
+    },
+    {
+     "id": "C3",
+     "control": "UAT sign-off of platform configuration and limits before the window opens",
+     "type": "preventive",
+     "evidence": "Signed UAT scripts"
+    },
+    {
+     "id": "C4",
+     "control": "Reconciliation of elections to first-payroll deductions",
+     "type": "detective",
+     "evidence": "Payroll variance report"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Election/deduction error rate",
+     "target": "< 0.5% of enrolled employees",
+     "why": "January errors create retro deductions and erode trust."
+    },
+    {
+     "name": "Notices distributed on time",
+     "target": "100%",
+     "why": "Late Part D or SBC notices carry penalties and audit findings."
+    },
+    {
+     "name": "New dependants verified or removed",
+     "target": ">= 98%",
+     "why": "Ineligible dependants are a direct cost leak."
+    },
+    {
+     "name": "Employee understanding of benefits (pulse)",
+     "target": ">= 4.0 / 5",
+     "why": "Use of HSA and wellbeing offerings depends on comprehension."
+    }
+   ],
+   "considerations": [
+    "As of Sept 2026 some 2027 limits may not be published; build the platform with placeholders and reload within 5 business days of IRS release rather than delaying the window.",
+    "2027 is the first plan year under the final Roth catch-up regulations (good-faith compliance covered 2026): use deemed Roth elections for catch-ups above the FICA wage threshold, and make payroll pass prior-year W-2 Box 3 wages to the recordkeeper.",
+    "Passive enrollment is fine in a stable year, but force active enrollment when changing carriers or plan designs; it also cleans stale dependant data.",
+    "Engineer-heavy populations pick HDHP/HSA plans when modellers show tax savings; pair the modeller with out-of-pocket examples to avoid surprise complaints later.",
+    "Put non-US re-elections (Canada flex credits, India parental top-ups) in the same calendar so data freezes and communications are coordinated."
+   ],
+   "variations": [
+    {
+     "when": "Carrier or plan design change",
+     "how": "Run active enrollment, reissue ID cards and give new SBCs; material mid-year SBC changes need 60 days' advance notice, and an SMM is due within 210 days after the plan year ends."
+    },
+    {
+     "when": "Canada flex plan",
+     "how": "Annual flex-credit re-election, with taxable-benefit coding checked for the T4 (employer-paid life and lifestyle spending accounts)."
+    },
+    {
+     "when": "India mediclaim renewal",
+     "how": "Re-elect parental cover and top-ups at the policy renewal date, update dependants and collect consent for dependants' health data."
+    },
+    {
+     "when": "Employee on leave during OE",
+     "how": "Send the packet to personal contact details; elections take effect normally and premiums follow the LV-01 arrangement."
+    }
+   ],
+   "countries": {
+    "us": "Send the Medicare Part D creditable coverage notice by Oct 15 plus SBC, CHIP, WHCRA and (every 3 years) HIPAA privacy notices, and recheck ACA affordability against next year's percentage. Load new HSA, FSA, dependent care FSA ($7,500 from 2026, not indexed) and 401(k) limits and confirm Roth catch-up coding.",
+    "us-ca": "California open enrollment runs October-November; check the CalSavers exemption and SF HCSO expenditure rates at each renewal. Self-insured plans file Forms 1094/1095 with the Franchise Tax Board by 31 March for the state individual mandate.",
+    "ca": "There is no statutory open enrollment; flex or credit-based plans re-elect annually, and employer-paid group term life and lifestyle spending accounts are taxable benefits on the T4 (private health and dental premiums are taxable only in Quebec).",
+    "in": "Group mediclaim re-election (parents, top-ups) follows the policy renewal date, and the April tax-regime choice decides whether employer NPS contributions (up to 14%) and old-regime allowances are worth electing.",
+    "tw": "Statutory schemes have no open enrollment; supplemental group insurance renews annually, and MOL/NHIA publish next year's insured-salary grade tables in November for loading on January 1.",
+    "cn": "There is no open enrollment; social insurance and housing fund bases reset each July (Shanghai 2026-27 base RMB 7,546-37,731, retroactive top-ups due by 30 Sept 2026), and supplementary medical and enterprise annuity renew annually."
+   },
+   "templates": [],
+   "policies": [
+    "POL-37",
+    "POL-46"
+   ],
+   "related": [
+    "BN-05",
+    "BN-01",
+    "BN-03",
+    "BN-04",
+    "PY-01"
+   ]
+  },
+  {
+   "id": "BN-03",
+   "name": "Qualifying life events",
+   "stage": "Benefits",
+   "depth": "standard",
+   "summary": "Processes mid-year benefit changes after a qualifying life event (marriage, birth or adoption, divorce, death of a dependant, loss or gain of other coverage, relocation). Applies the Section 125 consistency rule and HIPAA special enrollment windows in the US and the equivalent carrier and statutory updates elsewhere. Good looks like: newborns covered from birth, changes processed within 5 business days of complete proof, and linked leave or COBRA steps triggered automatically.",
+   "owner": "Benefits (process), benefits administration vendor (US processing), People Ops (non-US dependant and nomination records)",
+   "trigger": "Employee reports an event in the benefits platform or Darwinbox, or a Darwinbox change (marital status, address) flags a possible event",
+   "outputs": [
+    "Approved or denied life-event record with supporting documents",
+    "Updated elections and dependants with effective dates",
+    "Retro deduction or refund in payroll",
+    "Updated beneficiaries and statutory nominations (PF, gratuity)",
+    "Linked triggers: leave case (LV-01), COBRA notice (BN-06), death process (OF-09)"
+   ],
+   "systems": [
+    "Benefits admin platform",
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "Document management"
+   ],
+   "sla": "Employee reports within 30 days (60 days for Medicaid/CHIP events); processed within 5 business days of complete documentation",
+   "lanes": [
+    "Employee",
+    "Vendor",
+    "People Ops",
+    "Payroll",
+    "Benefits"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Report life event within window",
+     "detail": "Employee reports the event and its date in the benefits platform (US) or Darwinbox (other countries), normally within 30 days (60 days for Medicaid/CHIP events). Darwinbox changes to marital status or address prompt the employee to check whether a benefits event applies.",
+     "sla": "Within 30 days of event",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Validate event and requested change",
+     "detail": "Vendor checks that the event is a permitted change under the cafeteria plan (Treas. Reg. 1.125-4) and that the requested change is consistent with it, for example adding a spouse after marriage but not dropping an unrelated plan. HSA contribution changes are allowed at any time prospectively.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Vendor",
+     "type": "decision",
+     "label": "Documentation valid and timely?",
+     "detail": "Vendor reviews proof and dates; pending events stay open for up to 30 days for missing documents.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Valid"
+      },
+      {
+       "to": "s4",
+       "label": "Missing proof"
+      },
+      {
+       "to": "s10",
+       "label": "Late or inconsistent"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Submit missing documents",
+     "detail": "Employee uploads the certificate, court order or loss-of-coverage letter. If nothing arrives within 30 days the event is denied and the next opportunity is open enrollment.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Process elections and effective dates",
+     "detail": "Birth, adoption or placement coverage is retroactive to the event date when elected within 30 days; other changes are usually effective the first of the month after the request. Vendor updates carriers by EDI and issues a confirmation statement.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Update non-US dependants and nominations",
+     "detail": "Canada: add or remove dependants and beneficiaries with the carrier within the contract window. India: add spouse or newborn to the mediclaim floater and update PF e-nomination and gratuity nomination on marriage. Taiwan: add or remove NHI dependants. China: update supplementary commercial cover, since statutory employee medical insurance generally covers only the employee (verify local children's schemes).",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Adjust deductions and retro amounts",
+     "detail": "Payroll applies new deduction amounts and any retro catch-up or refund, spread per policy, and updates imputed income for non-tax dependants such as domestic partners (US).",
+     "control": "Retro adjustments covering more than 2 pay periods reviewed by Benefits.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Trigger linked processes",
+     "detail": "Birth or adoption opens a leave case (LV-01: FMLA/CFRA bonding, PFL, EI, Taiwan parental leave, China maternity insurance). Divorce or a child aging out starts the COBRA path (BN-06), and the death of an employee or dependant routes to OF-09 and life insurance claims.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Coverage updated and confirmed",
+     "detail": "Employee receives the confirmation statement and new ID cards where needed; the dependant record in Darwinbox matches the carrier."
+    },
+    {
+     "id": "s10",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Change denied with next opportunity",
+     "detail": "Employee receives a written denial with the reason (late, inconsistent or unsupported) and the next chance to change (open enrollment or a future event); appeals go to the Benefits lead."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Event validation and election processing (US)",
+     "R": "Vendor",
+     "A": "Benefits",
+     "C": "Legal",
+     "I": "Employee"
+    },
+    {
+     "activity": "Non-US dependant, beneficiary and nomination updates",
+     "R": "People Ops",
+     "A": "Benefits",
+     "C": "Vendor",
+     "I": "Employee"
+    },
+    {
+     "activity": "Retro deductions and imputed income",
+     "R": "Payroll",
+     "A": "Benefits",
+     "C": "Finance",
+     "I": "Employee"
+    },
+    {
+     "activity": "Linked leave, COBRA and death triggers",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "HRBP; Legal",
+     "I": "Manager"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Consistency-rule and deadline check before any mid-year change is approved",
+     "type": "preventive",
+     "evidence": "Event record with documents and approver"
+    },
+    {
+     "id": "C2",
+     "control": "Monthly review of retro deductions or refunds spanning more than 2 pay periods",
+     "type": "detective",
+     "evidence": "Payroll retro report with Benefits sign-off"
+    },
+    {
+     "id": "C3",
+     "control": "Divorce and age-out events passed to the COBRA administrator promptly after the employee's notice",
+     "type": "detective",
+     "evidence": "COBRA event log with dates"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Processing time from complete proof",
+     "target": "<= 5 business days for 95% of events",
+     "why": "Delays leave families uninsured when they need care."
+    },
+    {
+     "name": "Newborns covered from date of birth",
+     "target": "100% of timely reported births",
+     "why": "Retroactive birth coverage is a legal right and a trust moment."
+    },
+    {
+     "name": "Denials overturned on appeal",
+     "target": "< 5%",
+     "why": "A high overturn rate means rules or communications are unclear."
+    }
+   ],
+   "considerations": [
+    "Communicate the 30-day clock when the event happens, not only in the SPD: tie reminders to Darwinbox marital-status and address changes and to leave requests for birth or adoption.",
+    "Apply the consistency rule strictly but explain it; a one-line reason plus the next opportunity cuts escalations from engineers who challenge denials.",
+    "A move between countries is a transfer (MV-03), not a US life event: end home-country coverage and enroll in host-country plans without a gap.",
+    "Keep dependant documents in the vendor's restricted repository, not in email or Darwinbox attachments visible to HRBPs."
+   ],
+   "variations": [
+    {
+     "when": "Birth or adoption",
+     "how": "Coverage is retroactive to the event date if elected within 30 days; the event also opens LV-01 bonding or parental leave and, in Taiwan and China, statutory leave and insurance claims."
+    },
+    {
+     "when": "Divorce or legal separation",
+     "how": "Remove the spouse from the end of the month of the decree; the employee must notify within 60 days to preserve the former spouse's 36-month COBRA right."
+    },
+    {
+     "when": "Loss of other coverage",
+     "how": "Special enrollment within 30 days of the loss with proof of the loss date; coverage starts the first of the following month."
+    },
+    {
+     "when": "Death of employee or dependant",
+     "how": "Route to OF-09; dependants get a 36-month COBRA offer in the US and life insurance claims start on carrier forms."
+    }
+   ],
+   "countries": {
+    "us": "Section 125 allows mid-year changes only for permitted events consistent with the change, and HIPAA special enrollment gives 30 days (60 days for Medicaid/CHIP) with birth or adoption coverage retroactive to the event. Divorce or a child aging out needs employee notice within 60 days to preserve COBRA.",
+    "us-ca": "Birth or adoption usually also triggers PDL/CFRA and an EDD PFL claim (route to LV-01), and California insured plans must cover registered domestic partners on the same terms as spouses (verify with the carrier).",
+    "ca": "Carriers typically require dependant additions within 31 days or treat them as late applicants needing medical evidence (verify the contract); update life insurance beneficiaries at the same time.",
+    "in": "Update PF e-nomination and gratuity nomination on marriage and add a spouse or newborn to the mediclaim family floater within the insurer's window, with consent for dependants' health details.",
+    "tw": "Add or remove NHI dependants through the employer's insurance unit; childbirth also triggers maternity, paternity and parental leave and a Labor Insurance childbirth benefit claim (verify amount).",
+    "cn": "Statutory employee medical insurance generally does not cover dependants (verify local children's schemes), so update supplementary commercial cover; marriage and childbirth trigger marriage leave (Shanghai 10 days) and maternity insurance claims."
+   },
+   "templates": [],
+   "policies": [
+    "POL-37",
+    "POL-35",
+    "POL-46"
+   ],
+   "related": [
+    "BN-01",
+    "BN-02",
+    "BN-06",
+    "LV-01",
+    "OF-09",
+    "DS-01"
+   ]
+  },
+  {
+   "id": "BN-04",
+   "name": "Retirement plan governance",
+   "stage": "Benefits",
+   "depth": "standard",
+   "summary": "Governs the company's retirement plans as a fiduciary: the US 401(k) committee, investment and fee oversight, plan operation (deferrals, limits, testing), filings and disclosures, and oversight of non-US retirement and gratuity arrangements. Covers SECURE 2.0 changes including mandatory Roth catch-up from 2026 and auto-enrollment for new plans, Canada group RRSP/DPSP, India PF and gratuity funding, Taiwan labor pension and China enterprise annuity. Good looks like: a documented prudent process, zero late deposits and clean testing and filings.",
+   "owner": "Retirement plan committee (fiduciary, chaired by the CFO), Total Rewards (plan sponsor administration), Benefits (non-US plans)",
+   "trigger": "Quarterly committee cycle and the annual compliance calendar (plan year end, testing, Form 5500), plus any law change or plan event",
+   "outputs": [
+    "Committee charter, quarterly minutes and investment policy statement reviews",
+    "Fee benchmarking and 404a-5 participant disclosures",
+    "Nondiscrimination and limit testing results with corrections",
+    "Form 5500 with audit report and Summary Annual Report",
+    "Plan amendments and participant notices",
+    "Annual non-US plan review (RRSP/DPSP, PF and gratuity valuation, TW pension, CN annuity)"
+   ],
+   "systems": [
+    "Payroll provider",
+    "Benefits admin platform",
+    "Darwinbox (HRIS)",
+    "Equity platform",
+    "Document management"
+   ],
+   "sla": "Committee meets quarterly; deferrals remitted within 3 business days of payday (target); Form 5500 by Jul 31 (Oct 15 with Form 5558)",
+   "lanes": [
+    "Total Rewards",
+    "Vendor",
+    "Legal",
+    "Payroll",
+    "Finance",
+    "Benefits"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Total Rewards",
+     "type": "start",
+     "label": "Convene quarterly plan committee",
+     "detail": "Total Rewards schedules the committee (CFO chair, Controller, CHRO delegate, Legal) under its charter with a standing agenda: investments, fees, operations, compliance and legal updates. Members complete fiduciary training on appointment and every 2 years.",
+     "sla": "Quarterly",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Deliver investment and fee reports",
+     "detail": "The 3(21) or 3(38) adviser and the recordkeeper report fund performance against the IPS, watch-list status, fee benchmarks, participation and deferral statistics. A recordkeeping RFP or formal benchmark runs at least every 3 years.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Total Rewards",
+     "type": "task",
+     "label": "Review funds, fees and operations",
+     "detail": "The committee reviews reports, operational exceptions (late deposits, loan defaults, missed deferrals) and legal changes, and records its reasoning in the minutes; a documented process is the fiduciary defense.",
+     "control": "Minutes record each decision and its rationale.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Total Rewards",
+     "type": "decision",
+     "label": "Changes to plan or lineup needed?",
+     "detail": "Decision covers fund changes, fee renegotiation, plan design (match, safe harbor, Roth, auto-escalation) and required legal amendments.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Yes"
+      },
+      {
+       "to": "s6",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Amend plan and notify participants",
+     "detail": "Legal drafts amendments (including SECURE 2.0 conforming amendments by the applicable deadline; verify) for Board or delegate approval. Participants receive an SMM, fund-change or QDIA notice (30 days) and a blackout notice at least 30 days before any recordkeeper conversion.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Remit deferrals and code catch-ups",
+     "detail": "Payroll remits deferrals and loan repayments as soon as they can be segregated (target within 3 business days of payday), applies the 2026 limits ($24,500 deferral, $8,000 catch-up, $11,250 at ages 60-63) and routes catch-ups as Roth for employees whose prior-year FICA wages exceeded $150,000.",
+     "control": "Deposit timeliness checked every payroll.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Run nondiscrimination and limit tests",
+     "detail": "The recordkeeper runs ADP/ACP, top-heavy, 402(g) and 415(c) tests using the $160,000 HCE threshold and the plan's compensation definition. Failed tests are corrected within 2.5 months after plan year end to avoid excise tax, unless the plan uses a safe harbor design.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Finance",
+     "type": "task",
+     "label": "Complete plan audit and Form 5500",
+     "detail": "Finance engages the plan auditor (required for large plans with 100+ participants) and files Form 5500 by July 31, or October 15 with Form 5558; the Summary Annual Report follows, and the recordkeeper's SOC 1 Type II report is reviewed.",
+     "sla": "Jul 31 / Oct 15",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Oversee non-US retirement plans",
+     "detail": "Annual review of Canada group RRSP/DPSP (match, DPSP vesting of no more than 2 years, 60-day contribution deadline), India PF remittance by the 15th and gratuity trust or insurer funding with actuarial valuation, Taiwan 6% labor pension and old-system reserve top-up by 31 March, and any China enterprise annuity. Results go to the committee once a year.",
+     "sla": "Annual",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Total Rewards",
+     "type": "end",
+     "label": "Minutes and filings archived",
+     "detail": "Minutes, reports, amendments, test results and filings are kept in document management for at least 6 years (ERISA), and open actions roll into the next agenda."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Fiduciary oversight of investments and fees",
+     "R": "Total Rewards",
+     "A": "Finance (CFO, committee chair)",
+     "C": "Legal; Vendor",
+     "I": "Board"
+    },
+    {
+     "activity": "Plan amendments and participant notices",
+     "R": "Legal",
+     "A": "Total Rewards",
+     "C": "Vendor",
+     "I": "Employee"
+    },
+    {
+     "activity": "Deferral remittance and catch-up coding",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "Vendor",
+     "I": "Total Rewards"
+    },
+    {
+     "activity": "Testing, audit and Form 5500",
+     "R": "Vendor",
+     "A": "Finance",
+     "C": "Total Rewards; Legal",
+     "I": "Board"
+    },
+    {
+     "activity": "Non-US retirement and gratuity oversight",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "Finance; Legal",
+     "I": "HRBP"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Deferral and loan remittance date compared with payday every payroll; late deposits escalated for correction",
+     "type": "detective",
+     "evidence": "Remittance log and exception tickets"
+    },
+    {
+     "id": "C2",
+     "control": "Committee meets at least quarterly with minutes, IPS review and annual fee benchmarking",
+     "type": "detective",
+     "evidence": "Signed minutes and adviser reports"
+    },
+    {
+     "id": "C3",
+     "control": "Annual mapping of the plan's compensation definition to payroll earnings codes (RSU/ESPP income, bonuses, sign-on)",
+     "type": "preventive",
+     "evidence": "Earnings-code map signed by Payroll and Total Rewards"
+    },
+    {
+     "id": "C4",
+     "control": "Review of the recordkeeper's SOC 1 Type II report and complementary user-entity controls",
+     "type": "detective",
+     "evidence": "SOC review memo"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Late deposits",
+     "target": "0 per year",
+     "why": "Late deferrals are prohibited transactions that need correction and Form 5500 disclosure."
+    },
+    {
+     "name": "Participation rate",
+     "target": ">= 90% of eligible employees",
+     "why": "Shows plan effectiveness and helps pass ADP/ACP testing."
+    },
+    {
+     "name": "All-in plan cost",
+     "target": "At or below peer median in benchmark",
+     "why": "Excessive fees are the most common fiduciary litigation theory."
+    },
+    {
+     "name": "Corrective refunds from testing",
+     "target": "0 (or safe harbor design)",
+     "why": "Refunds to HCE engineers are a visible dissatisfier."
+    }
+   ],
+   "considerations": [
+    "Equity-heavy pay is the main operational trap: decide explicitly whether RSU and ESPP income is plan compensation and make payroll earnings codes match the plan document, or every vest becomes an operational failure.",
+    "An HCE-heavy engineering workforce often fails ADP/ACP; a safe harbor match is usually cheaper than annual refunds and lets HCEs defer the maximum.",
+    "Mandatory Roth catch-up (IRC 414(v)(7)) needs payroll to pass prior-year FICA wages (W-2 Box 3) to the recordkeeper, and a plan without a Roth feature cannot offer catch-ups to those employees at all.",
+    "Auto-enrollment is mandatory only for 401(k) plans established after Dec 29, 2022 (IRC 414A); check any plan acquired or created in a transaction.",
+    "Non-US plans are not ERISA plans but still need governance: India gratuity liabilities must be revalued on the Code 'wages' base, and a China enterprise annuity needs collective consultation before adoption."
+   ],
+   "variations": [
+    {
+     "when": "Recordkeeper or fund lineup change",
+     "how": "Blackout notice at least 30 days ahead, fund-mapping or QDIA notice, and a balance reconciliation after conversion."
+    },
+    {
+     "when": "Acquisition with its own 401(k)",
+     "how": "Decide merge versus terminate before closing, since terminating afterwards triggers successor-plan limits, and plan the testing transition."
+    },
+    {
+     "when": "Missed deferrals or operational error",
+     "how": "Correct under EPCRS (self-correction where eligible) and record the correction in the minutes."
+    },
+    {
+     "when": "US-Canada cross-border employee",
+     "how": "Review treaty treatment of 401(k) and RRSP contributions and any certificate of coverage before continuing home-plan participation."
+    }
+   ],
+   "countries": {
+    "us": "Maintain the ERISA plan document and SPD (SMM within 210 days after plan year end), fiduciary charter, minutes, fee benchmarking and 404a-5 disclosures, and file Form 5500 by July 31. 2026 limits are $24,500 deferral, $8,000 catch-up ($11,250 at 60-63), 415(c) $72,000, 401(a)(17) $360,000 and HCE $160,000, with Roth catch-up required above $150,000 of prior-year FICA wages (final regulations generally from 2027).",
+    "us-ca": "Because a qualified 401(k) is offered, file the CalSavers exemption to stop penalty notices; plan governance otherwise follows federal ERISA.",
+    "ca": "Group RRSP with a DPSP match (commonly 50-100% of contributions up to 3-6% of salary) and DPSP vesting of no more than 2 years; RRSP room is 18% of prior-year earnings up to the annual limit (verify 2026), and prior-year contributions must be remitted by the 60-day deadline (about Mar 1-2).",
+    "in": "EPF is 12% + 12% of 'wages' with EPS capped at INR 2,083/month on INR 25,000 from 17 Sep 2026, deposited by the 15th; gratuity (15 days' wages per completed year after 5 years, 1 year for fixed-term, ceiling INR 20 lakh) should be funded through a trust or insurer and valued annually on the Code wages base.",
+    "tw": "Contribute at least 6% of monthly wage (wage cap NT$150,000) to each eligible employee's Labor Pension individual account and report within 7 days of hire or separation; top up any old-system reserve shortfall by 31 March and confirm coverage for foreign professionals under the 2025 amendments.",
+    "cn": "Basic pension runs through social insurance (Shanghai employer share about 16%); an enterprise annuity is optional, must pass collective consultation, and is capped at 8% of payroll for the employer and 12% combined (verify the 2018 Measures)."
+   },
+   "templates": [],
+   "policies": [
+    "POL-37",
+    "POL-23",
+    "POL-49"
+   ],
+   "related": [
+    "BN-05",
+    "BN-01",
+    "PY-01",
+    "PY-04",
+    "OF-08",
+    "MV-03"
+   ]
+  },
+  {
+   "id": "BN-05",
+   "name": "Global benefits renewal & vendor management",
+   "stage": "Benefits",
+   "depth": "standard",
+   "summary": "Manages the annual renewal of all group benefit contracts and the lifecycle of benefits vendors (brokers, carriers, TPAs, benefits platform, EAP, retirement providers) across the six jurisdictions. Covers experience review, benchmarking, renew-or-market decisions, contract and data-protection terms, budget approval and ongoing service oversight. Good looks like: renewals decided 60+ days before the effective date, cost trend at or below market, and every vendor under a signed DPA with measured service levels.",
+   "owner": "Benefits (process), Total Rewards (strategy and decision), Legal and Security (contract and data terms), Finance (budget)",
+   "trigger": "Renewal calendar: 150 days before each contract's effective date, or a vendor performance or pricing issue",
+   "outputs": [
+    "Renewal analysis with claims experience and market benchmark per country",
+    "Renew/market decision memo and approved budget",
+    "Executed contracts, DPAs/BAAs and broker compensation disclosures",
+    "Implementation plan feeding open enrollment (BN-02)",
+    "Quarterly vendor scorecards and vendor register"
+   ],
+   "systems": [
+    "Benefits admin platform",
+    "Document management",
+    "BI / people analytics",
+    "E-signature"
+   ],
+   "sla": "Decision 90 days before effective date; contracts signed 60 days before; quarterly scorecards",
+   "lanes": [
+    "Benefits",
+    "Vendor",
+    "Total Rewards",
+    "Legal",
+    "Finance"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Benefits",
+     "type": "start",
+     "label": "Launch renewal by country",
+     "detail": "Benefits opens each renewal 150 days before the effective date from a global calendar (US January 1; Canada, India, Taiwan and China by policy year), confirms census data from Darwinbox and briefs brokers on objectives.",
+     "sla": "Day -150",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Deliver experience and renewal quotes",
+     "detail": "Brokers deliver claims experience, large claims, trend, carrier renewal offers and peer benchmarks for the markets we actually hire in: Bay Area chip and big tech, Canadian tech, Bengaluru GCCs, TSMC and MediaTek in Taiwan, and MNC tech in Shanghai and Shenzhen.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Model options and competitiveness",
+     "detail": "Benefits models plan design, contribution and funding options (fully insured versus self-funded with stop-loss in the US) and competitive position, and flags any change that reduces benefits for early communication.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Total Rewards",
+     "type": "decision",
+     "label": "Renew or go to market?",
+     "detail": "Total Rewards decides using price, service history, competitiveness and time since the last market test.",
+     "branches": [
+      {
+       "to": "s6",
+       "label": "Renew"
+      },
+      {
+       "to": "s5",
+       "label": "Go to market"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Run RFP and select carrier",
+     "detail": "The broker runs the RFP with standard questions on price, network, service, data security and implementation; finalists present and Benefits scores them with Security and Legal input. Test the market every 3-5 years even when renewals look fine.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Negotiate contract, DPA and security terms",
+     "detail": "Legal and Security require a DPA (a HIPAA BAA for US health vendors), SOC 1 or SOC 2 reports, breach-notice terms, PIPL entrusted-processing terms and a cross-border mechanism for China, DPDP-ready terms for India, CAA broker compensation disclosure, and screening against DOJ Data Security Program covered-person rules.",
+     "control": "No employee data leaves our systems before the DPA and security review are complete.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Finance",
+     "type": "task",
+     "label": "Approve budget and accruals",
+     "detail": "FP&A and Finance approve the per-country cost and accruals; increases above budget tolerance go to the CHRO and CFO.",
+     "sla": "Day -90",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Implement and communicate changes",
+     "detail": "Benefits signs contracts by e-signature, updates plan setup in Darwinbox and the platform, EDI feeds and local enrollment files, and hands employee communications to BN-02 (US) or local HR teams.",
+     "sla": "Day -60",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Monitor vendor SLAs quarterly",
+     "detail": "Quarterly scorecards cover claim turnaround, service-center performance, accuracy, escalations and data incidents; repeated misses trigger remediation plans and fee holdbacks where the contract allows.",
+     "sla": "Quarterly",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Benefits",
+     "type": "end",
+     "label": "Renewal documented and filed",
+     "detail": "Decision memo, contracts, disclosures and scorecards are filed in document management and summarized in Total Rewards' annual benefits review."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Renewal strategy and renew/market decision",
+     "R": "Total Rewards",
+     "A": "CHRO",
+     "C": "Finance; Benefits",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Broker, RFP and carrier management",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "Legal",
+     "I": "Vendor"
+    },
+    {
+     "activity": "Contract, DPA and security review",
+     "R": "Legal",
+     "A": "Total Rewards",
+     "C": "Security",
+     "I": "Benefits"
+    },
+    {
+     "activity": "Budget approval",
+     "R": "FP&A",
+     "A": "Finance",
+     "C": "Total Rewards",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Vendor performance oversight",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "Vendor",
+     "I": "HR Analytics"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Broker and consultant compensation disclosed in writing before contracting (CAA 2021 for US group health plans)",
+     "type": "preventive",
+     "evidence": "Signed disclosure on file"
+    },
+    {
+     "id": "C2",
+     "control": "DPA/BAA executed and security review passed before any employee data is sent to a vendor",
+     "type": "preventive",
+     "evidence": "Security review ticket and signed DPA"
+    },
+    {
+     "id": "C3",
+     "control": "Each country's main contracts competitively tested at least every 5 years, or a waiver documented",
+     "type": "detective",
+     "evidence": "Vendor register with last market-test date"
+    },
+    {
+     "id": "C4",
+     "control": "Gifts and hospitality from brokers and carriers logged and pre-approved above threshold",
+     "type": "detective",
+     "evidence": "Gifts register (POL-04)"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Renewal cost trend vs market trend",
+     "target": "At or below broker-reported market trend",
+     "why": "Shows negotiation and plan management value."
+    },
+    {
+     "name": "Renewals decided on time",
+     "target": "100% at least 60 days before effective date",
+     "why": "Late decisions compress communication and enrollment."
+    },
+    {
+     "name": "Vendor SLA attainment",
+     "target": ">= 95% of scorecard metrics met",
+     "why": "Service failures land on employees and HR."
+    }
+   ],
+   "considerations": [
+    "Benchmark against the market each site actually competes in, not a global average: TSMC and MediaTek in Hsinchu, other GCCs in Bengaluru, Bay Area chip and big tech in California.",
+    "Data flows are the hidden risk: China employee data leaving the country needs PIPL notice, separate consent, a PIPIA and a transfer mechanism, and US bulk personal data must not reach vendors that are covered persons under the DOJ Data Security Program.",
+    "For a self-funded US plan, write RxDC (Jun 1), PCORI (Jul 31) and MHPAEA NQTL analyses into the TPA's contract deliverables rather than assuming the TPA handles them.",
+    "Once premiums are large enough, consider multinational pooling for group life, disability and medical across Canada, India, Taiwan and China; pool dividends offset renewal increases.",
+    "Keep one vendor register with contract dates, DPA status, SOC report dates and owners; it doubles as SOX evidence for payroll-adjacent vendors."
+   ],
+   "variations": [
+    {
+     "when": "New country or entity",
+     "how": "Set up statutory schemes first, then supplemental cover through the pooling network or a local broker, with DPA and data residency confirmed."
+    },
+    {
+     "when": "Carrier exits or fails mid-contract",
+     "how": "Emergency marketing through the broker, continuity-of-care letters and a special enrollment if plan options change."
+    },
+    {
+     "when": "Acquisition",
+     "how": "Inventory acquired plans and contracts, keep them through the current plan year, then harmonize at the next renewal."
+    },
+    {
+     "when": "Self-funded US medical",
+     "how": "Renew stop-loss and TPA together, review large-claim lasers, and update the plan document and SBC."
+    }
+   ],
+   "countries": {
+    "us": "Obtain CAA broker compensation disclosures and SOC reports; self-funded plans file RxDC by June 1, pay PCORI by July 31 and keep MHPAEA NQTL comparative analyses, and Forms 1094-C/1095-C are e-filed by March 31.",
+    "us-ca": "Insured plans follow California mandates and Cal-COBRA rules for small groups, and the renewal checklist should include SF HCSO expenditure rates and the Bay Area commuter benefit.",
+    "ca": "Benchmark extended health, dental, paramedical and mental health (often C$1,000-2,500+), life, STD/LTD, EAP and HSA/LSA, and confirm carrier contracts allow continuation through ESA and common-law notice periods; a qualifying STD plan may earn an EI premium reduction (verify).",
+    "in": "Renew group mediclaim (family floater INR 5-10 lakh, parents optional), term life and accident or employee compensation cover against GCC norms, and update vendor contracts for DPDP duties that start on 13 May 2027.",
+    "tw": "Supplemental group life, accident and medical insurance and enhanced health checks are expected; festival gifts and bonuses run through the Employee Welfare Committee, not the insurance budget.",
+    "cn": "Supplementary medical and enterprise annuity vendors process sensitive PI, so contracts need PIPL entrusted-processing terms, a PIPIA and a cross-border mechanism (standard contract or certification) for data sent to the US."
+   },
+   "templates": [],
+   "policies": [
+    "POL-37",
+    "POL-46",
+    "POL-04",
+    "POL-03"
+   ],
+   "related": [
+    "BN-02",
+    "BN-04",
+    "BN-01",
+    "DS-06"
+   ]
+  },
+  {
+   "id": "BN-06",
+   "name": "Benefits continuation (COBRA)",
+   "stage": "Benefits",
+   "depth": "standard",
+   "summary": "Continues health coverage for employees and dependants who lose eligibility (termination, reduced hours, divorce, age-out, death) through COBRA, Cal-COBRA and non-US equivalents, including severance-funded premium subsidies. Covers timely notices, election and premium administration, and conversion or portability outside the US. Good looks like: every qualifying event noticed within the statutory window, subsidies matching the separation agreement, and no surprise coverage gaps.",
+   "owner": "Benefits (process), COBRA administrator (notices and administration), Payroll (subsidy funding), People Ops (event data)",
+   "trigger": "Qualifying event: termination other than for gross misconduct, reduction in hours, death, divorce or legal separation, dependant aging out, Medicare entitlement",
+   "outputs": [
+    "Qualifying event notice to the administrator",
+    "COBRA/Cal-COBRA election notice plus HIPP and LC 2800.2 notices (California)",
+    "Election and premium payment records",
+    "Severance subsidy setup matching the separation agreement",
+    "Non-US continuation, conversion and statutory withdrawal records"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Benefits admin platform",
+    "Payroll provider",
+    "Document management"
+   ],
+   "sla": "Employer to administrator within 30 days; election notice within 14 days (44 days if employer-administered); 60-day election window",
+   "lanes": [
+    "People Ops",
+    "Benefits",
+    "Vendor",
+    "Payroll",
+    "Employee"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Record qualifying event in Darwinbox",
+     "detail": "People Ops records the termination, hours change or death with the correct reason and coverage end date (normally the end of the month), which feeds the benefits platform nightly. Divorce and age-out events come from the employee or the platform (BN-03).",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Notify COBRA administrator",
+     "detail": "Benefits confirms the event reached the administrator and submits manual events within 30 days of the qualifying event. The gross-misconduct exclusion is rarely used and needs Legal sign-off.",
+     "sla": "Within 30 days",
+     "control": "Weekly reconciliation of terminations to COBRA events.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Send election notice",
+     "detail": "The administrator sends the COBRA election notice within 14 days (44 days in total when the employer administers) with premiums (up to 102%) and deadlines. In California add Cal-COBRA terms for small insured plans, the HIPP notice and the LC 2800.2 continuation and conversion notice.",
+     "sla": "14 days",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Benefits",
+     "type": "decision",
+     "label": "Severance includes premium subsidy?",
+     "detail": "Benefits checks the signed separation agreement or severance plan (OF-04) for subsidy months, tiers and early-end terms.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Yes"
+      },
+      {
+       "to": "s6",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Set up severance subsidy",
+     "detail": "Payroll and Benefits set up the subsidy exactly as the agreement states (months, tiers, early end on new coverage), paid either as employer premiums to the administrator or as a taxable cash equivalent, and diarize the end date.",
+     "control": "Subsidy terms checked line by line against the signed agreement.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Elect coverage and pay premiums",
+     "detail": "Qualified beneficiaries have 60 days from the later of loss of coverage or the notice to elect, 45 days after election for the first premium and a 30-day grace period for later premiums; coverage is retroactive once paid.",
+     "sla": "60 days",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Administer coverage and end dates",
+     "detail": "The administrator tracks the 18, 29 (disability) or 36-month maximum, collects premiums and sends early-termination notices when coverage ends for non-payment, new group coverage or the maximum period.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Run non-US continuation and conversion",
+     "detail": "Canada: continue benefits through the Ontario ESA notice period, then communicate life and health conversion deadlines. India: mediclaim ends at exit, so share insurer portability options. Taiwan: withdraw insurances on the last day. China: transfer or suspend social insurance and housing fund within 15 days.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Continuation elected or expired",
+     "detail": "The record closes when the beneficiary waives, the election period lapses or maximum coverage ends; documents are kept under POL-49."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Qualifying event capture and administrator notice",
+     "R": "People Ops",
+     "A": "Benefits",
+     "C": "Payroll",
+     "I": "Vendor"
+    },
+    {
+     "activity": "Election notices and COBRA administration",
+     "R": "Vendor",
+     "A": "Benefits",
+     "C": "Legal",
+     "I": "Employee"
+    },
+    {
+     "activity": "Severance premium subsidy",
+     "R": "Payroll",
+     "A": "Total Rewards",
+     "C": "Legal; HRBP",
+     "I": "Employee"
+    },
+    {
+     "activity": "Non-US continuation, conversion and statutory withdrawal",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "Legal",
+     "I": "HRBP"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Weekly reconciliation of Darwinbox terminations and hours changes to COBRA events",
+     "type": "detective",
+     "evidence": "Reconciliation report"
+    },
+    {
+     "id": "C2",
+     "control": "Election notice timeliness tracked against the 44-day limit with proof of mailing",
+     "type": "detective",
+     "evidence": "Administrator mailing log"
+    },
+    {
+     "id": "C3",
+     "control": "Severance subsidy setup matched to the signed separation agreement before the first payment",
+     "type": "preventive",
+     "evidence": "Subsidy checklist signed by Benefits"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Election notices within statutory window",
+     "target": "100%",
+     "why": "Late notices carry per-day penalties and extend claim exposure."
+    },
+    {
+     "name": "Subsidy setup accuracy",
+     "target": "100% match to agreements",
+     "why": "Errors breach separation agreements and start disputes."
+    },
+    {
+     "name": "Substantiated coverage gaps reported by former employees",
+     "target": "0",
+     "why": "Gaps at exit damage the employer brand and create claims."
+    }
+   ],
+   "considerations": [
+    "Paying the subsidy as a taxable cash equivalent is simpler and avoids nondiscrimination questions for self-insured plans under IRC 105(h) (verify with benefits counsel); always stop the subsidy when new group coverage starts.",
+    "Align end dates across medical, dental, vision and FSA; end of month is kinder and easier to administer than the termination date.",
+    "In a RIF, bulk-load events and check that WARN pay-in-lieu periods, subsidy periods and coverage end dates line up.",
+    "In Canada the real risk is LTD during the common-law notice period; confirm the carrier allows continuation or price the uninsured risk into the settlement.",
+    "Managers should never promise coverage terms in exit conversations; point to the notice and the Benefits contact."
+   ],
+   "variations": [
+    {
+     "when": "Reduction in force (OF-03)",
+     "how": "Bulk event file, uniform subsidy terms in the RIF package, and Cal-WARN benefits exposure checked if notice is short."
+    },
+    {
+     "when": "Death of an employee (OF-09)",
+     "how": "Dependants receive a 36-month COBRA offer; many employers subsidize 3-6 months as bereavement support."
+    },
+    {
+     "when": "Disability extension",
+     "how": "A beneficiary determined disabled by SSA within the first 60 days of COBRA gets 29 months, at up to 150% of cost for months 19-29."
+    },
+    {
+     "when": "Canadian termination",
+     "how": "Continue benefits through statutory notice (Ontario), negotiate longer continuation in settlements, then issue conversion notices."
+    }
+   ],
+   "countries": {
+    "us": "COBRA applies at 20+ employees: the employer notifies the administrator within 30 days, the election notice goes out within 14 days (44 if employer-administered), the election window is 60 days and coverage lasts 18/29/36 months. Add the 402(f) rollover notice, FSA run-out, HSA portability and life and disability conversion information.",
+    "us-ca": "Cal-COBRA covers insured plans with 2-19 employees, and at termination the HIPP notice and LC 2800.2 continuation/conversion notice go out with the UI Code 1089 notice of change in employment status.",
+    "ca": "The Ontario ESA requires benefit plan contributions to continue through the statutory notice period and common-law damages include benefits for reasonable notice; communicate life and health conversion deadlines from the carrier contract.",
+    "in": "There is no statutory health continuation, so mediclaim ends at exit; pay full and final settlement within 2 working days and gratuity within 30 days, and support PF transfer or withdrawal.",
+    "tw": "Withdraw Labor Insurance, Employment Insurance, occupational accident insurance and NHI on the last day and report the pension stop within 7 days; issue the involuntary separation certificate for Employment Insurance benefits on Art. 11 or 13 exits.",
+    "cn": "Transfer or suspend social insurance and housing fund within 15 days of termination (LCL Art. 50) alongside the termination certificate; supplementary commercial medical ends under the policy terms."
+   },
+   "templates": [],
+   "policies": [
+    "POL-37",
+    "POL-53",
+    "POL-54"
+   ],
+   "related": [
+    "OF-05",
+    "OF-03",
+    "OF-04",
+    "OF-09",
+    "BN-03"
+   ]
+  },
+  {
+   "id": "LV-01",
+   "name": "Leave of absence",
+   "stage": "Leave",
+   "depth": "deep",
+   "summary": "One front door for every leave of absence: employees ask once (US through the leave vendor, other countries through Darwinbox), and the leave team determines eligibility across all overlapping regimes, certifies and designates the leave, coordinates pay with statutory benefits, continues benefits and equity, protects the job and plans the return. Covers US federal and state leaves (FMLA, CFRA, PDL, PFL/SDI, bereavement, reproductive loss, USERRA), Canadian ESA leaves with EI, India maternity, Taiwan's day- and hour-based leaves and China's maternity and medical treatment periods. Good looks like: notices on time, no pay or benefit errors, zero leave-related retaliation findings and a planned return.",
+   "owner": "Benefits - Leave & Accommodation team (process), leave vendor (US administration), Payroll (pay), HRBP (job protection and reinstatement)",
+   "trigger": "Employee request (30 days' notice where foreseeable), manager or HR awareness of a possible qualifying reason, or a work injury that also qualifies",
+   "outputs": [
+    "Eligibility and rights notice for each applicable regime",
+    "Certification on file in a restricted medical record",
+    "Designation notice with concurrent-leave mapping and dates",
+    "Darwinbox leave status and payroll instructions (paid/unpaid, top-up, statutory offsets)",
+    "Benefits continuation and premium arrangement",
+    "Return-to-work plan and reinstatement confirmation"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Benefits admin platform",
+    "Payroll provider",
+    "Timekeeping",
+    "Equity platform",
+    "Document management"
+   ],
+   "sla": "Eligibility/rights notice within 5 business days of the request; designation within 5 business days of complete certification; pay set up before the first affected payroll",
+   "lanes": [
+    "Employee",
+    "Vendor",
+    "Benefits",
+    "Manager",
+    "Payroll",
+    "Stock Admin",
+    "HRBP"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Request leave through single intake",
+     "detail": "Employee requests leave through the vendor portal or phone line (US) or the Darwinbox leave module (Canada, India, Taiwan, China), with 30 days' notice where foreseeable. Managers who learn of a possible qualifying reason route it to intake within 2 business days; the employee never has to name the law.",
+     "sla": "Day 0",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Screen eligibility across all regimes",
+     "detail": "US: the vendor tests FMLA (50 employees within 75 miles, 12 months, 1,250 hours), CFRA and PDL (5+ employees), state PFML and sick leave, bereavement, reproductive loss and USERRA against the work location. Elsewhere the leave team applies Ontario/BC ESA, the SS Code, Taiwan LSA and Gender Equality in Employment Act, and PRC national plus Shanghai/Shenzhen rules configured in Darwinbox.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Send eligibility and rights notice",
+     "detail": "Issue the eligibility and rights-and-responsibilities notice within 5 business days, stating the certification required, premium obligations and any fitness-for-duty requirement. Non-US entitlements are confirmed in writing through Darwinbox (for example India's maternity benefit terms or Taiwan leave approval).",
+     "sla": "5 bd",
+     "control": "Notice timeliness tracked in the vendor SLA report.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Vendor",
+     "type": "decision",
+     "label": "Certification required?",
+     "detail": "Medical or supporting certification is needed for own or family serious health conditions and long illness leaves, but not for bereavement, bonding with proof of birth, or obvious short needs.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Yes"
+      },
+      {
+       "to": "s6",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Return certification",
+     "detail": "Employee returns provider certification within 15 calendar days (FMLA/CFRA; CFRA certification cannot demand the diagnosis), a practitioner certificate for Ontario long-term illness leave, or local medical or birth documents. Ontario cannot require a note for the 3 ESA sick days and BC cannot for short absences; certifications go only to the vendor or the restricted Darwinbox folder.",
+     "sla": "15 calendar days",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Benefits",
+     "type": "decision",
+     "label": "Statutory entitlement available?",
+     "detail": "The leave team confirms remaining entitlement in each regime; exhausted or ineligible cases are never closed without an accommodation review.",
+     "branches": [
+      {
+       "to": "s7",
+       "label": "Yes"
+      },
+      {
+       "to": "s13",
+       "label": "No or exhausted"
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Designate leave and confirm dates",
+     "detail": "Issue the designation notice within 5 business days of complete information, mapping concurrent regimes (FMLA with CFRA; PDL not concurrent with CFRA; PFL is wage replacement, not job protection), the amount counted and any intermittent schedule. Managers see dates and status only.",
+     "sla": "5 bd",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Plan coverage without medical detail",
+     "detail": "Manager plans work coverage, delegations and approvals (including export-controlled project access and on-call rotations) and agrees contact preferences. No work requests during leave and no questions about the condition.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Coordinate pay with statutory benefits",
+     "detail": "Payroll sets paid or unpaid status and company top-ups so nobody is overpaid: integrate with California SDI/PFL (vacation cannot be required first), top up Canadian EI only through the registered SUB plan and file the ROE within 5 calendar days, apply ESI for covered India staff, Taiwan's Employment Insurance parental allowance and China maternity allowance, with employer top-up to salary where required.",
+     "sla": "Before next payroll close",
+     "control": "Leave pay changes reviewed by a second payroll analyst.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Continue benefits and collect premiums",
+     "detail": "Group health continues on the same terms during FMLA, CFRA, PDL and USERRA (up to 24 months), with arrears or direct billing for unpaid periods. Canada continues benefit contributions and seniority unless the employee opts out; Taiwan parental leave lets the employee keep social insurance with premium relief and deferral (verify), and China statutory insurance continues.",
+     "next": [
+      "s11"
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "Stock Admin",
+     "type": "task",
+     "label": "Apply equity vesting leave rules",
+     "detail": "Stock Admin records the leave in the equity platform: vesting continues during statutory and company-paid leave, and any tolling for long non-statutory personal leave follows the plan and local counsel (never for Canadian ESA leaves). Check blackout and 10b5-1 timing for insiders going on leave.",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "Vendor",
+     "type": "decision",
+     "label": "Extension requested or leave exhausted?",
+     "detail": "Vendor or leave team monitors usage, recertification dates and extension requests two weeks before the scheduled end.",
+     "branches": [
+      {
+       "to": "s14",
+       "label": "No - return as planned"
+      },
+      {
+       "to": "s13",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Assess extended leave as accommodation",
+     "detail": "Before any action at exhaustion, HRBP and the leave team run the accommodation process (LV-02): the ADA and FEHA treat finite extra leave as a possible accommodation, and Canadian human rights law requires accommodation to undue hardship. Approved extensions go back to designation; denials are documented with Legal.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s14",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Confirm return date and reinstatement",
+     "detail": "Two weeks before return, manager and HRBP confirm the same or an equivalent (US) or comparable (Canada) role, pay and grade, any fitness-for-duty certificate announced in the designation notice, and lactation or phased-return needs.",
+     "sla": "Return - 10 bd",
+     "control": "Reinstatement equivalence checked by HRBP.",
+     "next": [
+      "s15"
+     ]
+    },
+    {
+     "id": "s15",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Close leave and restore pay",
+     "detail": "Payroll ends the leave status, restarts salary and deductions, recovers premium arrears within policy caps, stops SUB and top-up payments and reconciles statutory offsets.",
+     "next": [
+      "s16"
+     ]
+    },
+    {
+     "id": "s16",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Employee returns to work",
+     "detail": "Employee is active in Darwinbox and the return plan passes to LV-03."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Intake and eligibility determination",
+     "R": "Vendor (US) / Benefits (non-US)",
+     "A": "Benefits (Leave & Accommodation lead)",
+     "C": "HRBP",
+     "I": "Manager"
+    },
+    {
+     "activity": "Certification review and medical confidentiality",
+     "R": "Vendor",
+     "A": "Benefits (Leave & Accommodation lead)",
+     "C": "Legal",
+     "I": "Employee"
+    },
+    {
+     "activity": "Designation and concurrent-leave mapping",
+     "R": "Vendor",
+     "A": "Benefits (Leave & Accommodation lead)",
+     "C": "Legal",
+     "I": "Manager; Payroll"
+    },
+    {
+     "activity": "Pay coordination and top-ups",
+     "R": "Payroll",
+     "A": "Total Rewards",
+     "C": "Benefits",
+     "I": "Employee"
+    },
+    {
+     "activity": "Benefits continuation and premium arrears",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "Vendor; Payroll",
+     "I": "Employee"
+    },
+    {
+     "activity": "Equity vesting treatment during leave",
+     "R": "Stock Admin",
+     "A": "Total Rewards",
+     "C": "Legal",
+     "I": "Employee"
+    },
+    {
+     "activity": "Extended leave as accommodation",
+     "R": "HRBP",
+     "A": "Benefits (Leave & Accommodation lead)",
+     "C": "Legal; Manager",
+     "I": "Employee"
+    },
+    {
+     "activity": "Reinstatement and adverse-action review",
+     "R": "HRBP",
+     "A": "Legal",
+     "C": "Employee Relations; Manager",
+     "I": "Payroll"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Eligibility, rights and designation notices issued within 5 business days",
+     "type": "detective",
+     "evidence": "Vendor SLA report and Darwinbox notice log reviewed monthly"
+    },
+    {
+     "id": "C2",
+     "control": "Certifications stored only in the vendor system or restricted Darwinbox folder; managers see dates and status only",
+     "type": "preventive",
+     "evidence": "Role-based access configuration and quarterly access review"
+    },
+    {
+     "id": "C3",
+     "control": "Every leave-related pay change (paid/unpaid, top-up, statutory offset) reviewed by a second payroll analyst before close",
+     "type": "preventive",
+     "evidence": "Payroll change log with reviewer"
+    },
+    {
+     "id": "C4",
+     "control": "Termination, demotion, PIP or RIF selection of an employee on, or recently back from, protected leave requires Legal review",
+     "type": "preventive",
+     "evidence": "Legal sign-off in the case record"
+    },
+    {
+     "id": "C5",
+     "control": "Protected-period flags block termination transactions in Darwinbox for China (pregnancy, maternity, nursing, medical treatment period) and Taiwan (maternity leave, occupational injury treatment)",
+     "type": "preventive",
+     "evidence": "Darwinbox workflow rule and exception log"
+    },
+    {
+     "id": "C6",
+     "control": "Canadian ROE filed within 5 calendar days after the pay period with an interruption of earnings, and SUB plan registered before top-ups are paid",
+     "type": "detective",
+     "evidence": "ROE submission log and Service Canada SUB registration"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Notice timeliness",
+     "target": ">= 98% within 5 business days",
+     "why": "Late notices weaken the employer's ability to count leave and invite interference claims."
+    },
+    {
+     "name": "Request-to-designation time",
+     "target": "Median <= 7 business days",
+     "why": "Employees plan pay and care around the decision."
+    },
+    {
+     "name": "Leave pay accuracy",
+     "target": ">= 99.5% of leave pay periods without correction",
+     "why": "Overpayments are hard to recover from people on leave; underpayments hurt trust."
+    },
+    {
+     "name": "Retention 12 months after parental leave",
+     "target": ">= 90%",
+     "why": "Shows whether return planning and flexibility work."
+    },
+    {
+     "name": "Leave-related retaliation or interference findings",
+     "target": "0 substantiated",
+     "why": "The core legal risk of the process."
+    }
+   ],
+   "considerations": [
+    "One front door, two engines: the US vendor handles the multi-state PFML and sick-leave matrix and the leave team runs non-US rules in Darwinbox, but employees and managers see one policy (POL-35), one intake and one status page.",
+    "California stacking is the biggest planning item: PDL (up to 4 months) and CFRA bonding (12 weeks) do not run concurrently, so a birthing parent can have about 7 months of job protection, while PFL and SDI replace wages but give no job protection of their own.",
+    "Design company paid parental leave as a top-up that integrates with SDI/PFL, EI (through a registered SUB plan), ESI and Taiwan/China statutory allowances; paying full salary on top of statutory benefits creates overpayments and, in Canada, EI clawbacks.",
+    "Engineers on tape-out or customer-escalation schedules often want intermittent or partial leave; configure Darwinbox for hours (Taiwan family care leave hourly up to 56 hours) and single days (Taiwan parental leave up to 30 days per parent from 2026) instead of forcing full-day or full-week blocks.",
+    "Medical confidentiality is non-negotiable: Taiwan's PDPA and China's PIPL treat health data as sensitive (separate consent, and a PIPIA before transfer to US systems), and India needs consent under the SPDI Rules now and DPDP from 13 May 2027.",
+    "Keep equity vesting running through statutory leaves; any tolling for non-statutory personal leave must be in the plan, communicated at grant and checked locally, because Canadian courts read forfeiture terms strictly (Matthews v. Ocean Nutrition).",
+    "Never let leave exhaustion auto-terminate anyone: route to accommodation review (ADA/FEHA, Canadian duty to accommodate), and in China remember the medical treatment period bars Art. 40 termination.",
+    "RIFs and reorganizations that touch people on leave need decisions made on legitimate criteria, ideally before the leave began, and selection must not count protected absence against performance (Taiwan bars adverse appraisal for up to 10 sick days a year from 2026).",
+    "Update the Shanghai handbook through democratic procedure: sick pay there now follows contract or handbook terms after the 1995/2000 notices lapsed on 15 Aug 2026, with a floor of 80% of minimum wage."
+   ],
+   "variations": [
+    {
+     "when": "Pregnancy and bonding in California",
+     "how": "PDL covers the disability period (up to 4 months), then CFRA gives 12 weeks of bonding; SDI then PFL (up to 8 weeks) replace 70-90% of wages (max $1,765/week in 2026), company paid leave tops up, and FMLA runs alongside where eligible."
+    },
+    {
+     "when": "Military service (USERRA)",
+     "how": "No certification is needed to start; reemployment rights cover up to 5 cumulative years, health continuation up to 24 months, and 401(k) make-up contributions are due on return."
+    },
+    {
+     "when": "Work-related injury (LV-04)",
+     "how": "Workers' comp governs wage replacement and FMLA/CFRA is designated concurrently where eligible; Taiwan work-injury leave is on full pay (LSA Art. 59) and China's work-injury rules apply during the stoppage period."
+    },
+    {
+     "when": "Intermittent or reduced-schedule leave",
+     "how": "Track in hours in Timekeeping; exempt US salary may be reduced for unpaid intermittent FMLA hours without losing the exemption; recertify at reasonable intervals."
+    },
+    {
+     "when": "Employee on H-1B or another work visa",
+     "how": "Coordinate with Immigration before unpaid leave or schedule changes so wage and status obligations are checked (MV-06)."
+    },
+    {
+     "when": "Serious personal illness in Canada",
+     "how": "Ontario long-term illness leave (27 weeks after 13 weeks' employment, practitioner certificate) or BC serious personal illness or injury leave (27 weeks); coordinate STD/LTD and EI sickness benefits and continue benefits."
+    },
+    {
+     "when": "Maternity in Shanghai or Shenzhen",
+     "how": "Apply 158 days (Shanghai) or 178 days (Guangdong) plus paternity leave (10/15 days) and childcare leave (5/10 days a year until age 3); claim maternity allowance and top up to salary where required."
+    }
+   ],
+   "countries": {
+    "us": "FMLA (50+ employees within 75 miles; 12 months and 1,250 hours) gives 12 weeks (26 for military caregivers) of job-protected leave with group health continued; notices are due within 5 business days and certification within 15 calendar days. Layer state PFML (MN and DE benefits from Jan 1, 2026, ME from May 1, 2026; WA job protection at 25+ employees from 2026) and state sick-leave laws by work location. USERRA protects up to 5 cumulative years of service with up to 24 months of health continuation, and ADA leave beyond FMLA can be a reasonable accommodation.",
+    "us-ca": "CFRA (5+ employees; 12 months and 1,250 hours) gives 12 weeks, including care for grandparents, siblings, adult children and a designated person, and PDL gives up to 4 months per pregnancy separate from CFRA. EDD pays SDI for up to 52 weeks and PFL for up to 8 weeks at 70-90% of wages (max $1,765/week in 2026), and employers cannot require vacation to be used first (AB 2123). Bereavement leave is 5 days within 3 months and reproductive loss leave 5 days per event (max 20 days in 12 months), both after 30 days' service.",
+    "ca": "Ontario ESA: pregnancy 17 weeks, parental up to 61/63 weeks, family caregiver 8 weeks, critical illness 17/37 weeks, family medical 28 weeks and long-term illness 27 weeks (since June 19, 2025). BC: compassionate care 27 weeks, critical illness 16/36 weeks and serious personal illness or injury 27 weeks (since Nov 28, 2025). EI pays 55% up to about C$729/week (2026) for 35 standard weeks or 33% over 61 extended weeks; top-ups need a registered SUB plan, and benefits and seniority continue during leave with reinstatement to the same or a comparable job.",
+    "in": "Under SS Code Ch. VI, maternity leave is 26 weeks (no more than 8 before delivery) for the first two children, 12 weeks from the third child, 12 weeks for adoption of a child under 3 months or a commissioning mother, 6 weeks for miscarriage and 1 extra month for related illness, after 80 days worked in the prior 12 months. Pay is the average daily wage, and ESI pays maternity and sickness benefits for employees earning up to INR 21,000/month. There is no statutory paternity leave, and nursing breaks continue until the child is 15 months.",
+    "tw": "Maternity leave is 8 weeks (full pay after 6 months' service, half pay before), with 7 days each of paid prenatal check-up and paternity leave. Unpaid parental leave runs up to 2 years per child under 3 with an Employment Insurance allowance totalling 80% for up to 6 months per parent, and from 2026 up to 30 days per parent can be taken in single days on 5 days' notice. Family care leave (7 days a year) can be taken hourly up to 56 hours, and termination is barred during maternity leave and occupational-injury treatment.",
+    "cn": "National maternity leave is 98 days (15 prenatal; +15 for a difficult birth; +15 per additional baby); Shanghai totals 158 days with 10 days' paternity and 5 days a year of childcare leave to age 3, and Guangdong/Shenzhen 178 days with 15 days' paternity and 10 days a year of childcare leave. Maternity allowance comes from maternity insurance, with employer top-up where it is below salary. Medical treatment periods of 3-24 months are protected; Shanghai sick pay now follows contract or handbook terms (floor 80% of minimum wage) and Shenzhen requires at least 60% of normal wage."
+   },
+   "templates": [
+    "T-ACCOMMODATION"
+   ],
+   "policies": [
+    "POL-35",
+    "POL-34",
+    "POL-33",
+    "POL-36",
+    "POL-37",
+    "POL-27",
+    "POL-46"
+   ],
+   "related": [
+    "LV-02",
+    "LV-03",
+    "LV-04",
+    "BN-03",
+    "PY-01",
+    "EQ-02",
+    "MV-06"
+   ]
+  },
+  {
+   "id": "LV-02",
+   "name": "Workplace accommodation",
+   "stage": "Leave",
+   "depth": "deep",
+   "summary": "Handles requests for workplace adjustments linked to disability, pregnancy and related conditions, lactation or religion, from candidates and employees, through a documented and confidential interactive process. Covers ADA, PWFA, FEHA and Title VII religious accommodation (Groff), Canada's duty to accommodate to undue hardship and AODA, India's RPwD Act, Taiwan's maternal-health and disability rules and China's female-employee protections, including lab and cleanroom situations. Good looks like: acknowledgement within 2 business days, decisions within 10 business days, effective accommodations delivered promptly, and medical information kept separate.",
+   "owner": "Benefits - Leave & Accommodation team (process), HRBP (interactive process), Legal (denials and undue hardship), EHS (lab and reproductive-hazard assessments)",
+   "trigger": "Any request or expressed need for a change at work linked to a medical condition, pregnancy, lactation, disability or religious practice (a verbal request is enough), or HR/manager awareness of an obvious need",
+   "outputs": [
+    "Confidential accommodation case using T-ACCOMMODATION",
+    "Medical information limited to functional limitations, in a restricted file",
+    "Interactive process notes with options considered",
+    "Written decision with effective and review dates",
+    "Fulfilment tickets (equipment, workspace, schedule, access)",
+    "AODA individual accommodation plan (Ontario)"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Document management",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "Timekeeping",
+    "Greenhouse (ATS)"
+   ],
+   "sla": "Acknowledge within 2 business days; decision within 10 business days of complete information; standard equipment delivered within 10 business days",
+   "lanes": [
+    "Employee",
+    "Benefits",
+    "HRBP",
+    "EHS",
+    "Manager",
+    "Legal",
+    "Facilities"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Request accommodation in any form",
+     "detail": "Employee (or a candidate through the recruiter) asks for an adjustment in any words or channel, and managers who hear a request or see an obvious need route it to the Leave & Accommodation team within 1 business day. The T-ACCOMMODATION form helps but is never a precondition.",
+     "sla": "Day 0",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Acknowledge and open confidential case",
+     "detail": "The case manager acknowledges within 2 business days, opens a restricted case outside the personnel file, explains confidentiality and next steps, and puts any urgent interim measure in place (seating, breaks, a remote day).",
+     "sla": "2 bd",
+     "control": "Case opened in the restricted repository.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Benefits",
+     "type": "decision",
+     "label": "Medical documentation needed?",
+     "detail": "Documentation is requested only when the limitation or need is not obvious; pregnancy needs covered by PWFA, lactation and religious requests normally go straight to the interactive meeting.",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Yes - need not obvious"
+      },
+      {
+       "to": "s6",
+       "label": "No - obvious, PWFA or religious"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Request limited medical information",
+     "detail": "Ask the provider only about functional limitations, expected duration and suggested adjustments, not the diagnosis. Ontario and BC sick-note limits apply to short absences, not to information reasonably needed to accommodate.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Provide provider information",
+     "detail": "Employee returns the provider questionnaire within 15 business days; the case manager follows up rather than closing silently, and delays do not stop interim measures.",
+     "sla": "15 bd",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Hold interactive process meeting",
+     "detail": "HRBP and the case manager meet the employee to understand limitations, essential functions and options, then consult the manager on operational facts without sharing medical details. Every option considered and the reason for each outcome goes into T-ACCOMMODATION.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "EHS",
+     "type": "decision",
+     "label": "Lab, cleanroom or hazard involved?",
+     "detail": "EHS screens whether the role involves chemicals, gases, lasers, X-ray, high voltage, cleanroom gowning or other exposures relevant to the request.",
+     "branches": [
+      {
+       "to": "s8",
+       "label": "Yes"
+      },
+      {
+       "to": "s9",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "EHS",
+     "type": "task",
+     "label": "Assess hazards and safe alternatives",
+     "detail": "EHS reviews the job hazard analysis: reproductive hazards (certain glycol ethers, lead, solvents), heat under cleanroom gowning, religious head coverings and beard covers with gowning, lasers and ESD footwear with orthotics. Offer informed choices and reassignment options; never impose a blanket 'fetal protection' exclusion.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Evaluate options with HR",
+     "detail": "Manager and HRBP test options against essential functions and business needs: schedule changes, remote days, equipment, task swaps, temporary suspension of an essential function (PWFA), leave (LV-01), or reassignment to a vacant role as a last resort.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Benefits",
+     "type": "decision",
+     "label": "Effective option without undue hardship?",
+     "detail": "The case manager confirms whether the requested or an equally effective option can be provided.",
+     "branches": [
+      {
+       "to": "s12",
+       "label": "Yes"
+      },
+      {
+       "to": "s11",
+       "label": "No or partial"
+      }
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Review proposed denial or alternative",
+     "detail": "Legal reviews any denial or any alternative different from the request against the applicable standard: ADA/FEHA undue hardship, 'substantial increased costs' under Groff v. DeJoy for religion, and Canada's high undue-hardship bar (cost, health and safety). The analysis is written before the decision issues.",
+     "control": "No denial without Legal sign-off.",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Issue written decision",
+     "detail": "The case manager sends the decision with the accommodation, start date, responsibilities, review date and how to ask for changes; denials give reasons and the alternatives offered. Ontario records an individual accommodation plan.",
+     "next": [
+      "s13"
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "Facilities",
+     "type": "task",
+     "label": "Implement workspace and equipment",
+     "detail": "Facilities and IT fulfil tickets (ergonomic equipment, assistive software, accessible parking, lactation room access, quiet space, prayer room booking); People Ops updates schedules or remote status in Darwinbox and Timekeeping.",
+     "sla": "10 bd",
+     "next": [
+      "s14"
+     ]
+    },
+    {
+     "id": "s14",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Apply accommodation and protect employee",
+     "detail": "Manager implements schedule and task changes, adjusts goals fairly and keeps the reason confidential from the team. Any adverse action within 6 months of the request goes through Employee Relations review.",
+     "next": [
+      "s15"
+     ]
+    },
+    {
+     "id": "s15",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Monitor and review",
+     "detail": "Check effectiveness at 30 days, then at the review date or when circumstances change (pregnancy stage, return from leave, new role); temporary PWFA measures end on schedule with notice.",
+     "sla": "30 days",
+     "next": [
+      "s16"
+     ]
+    },
+    {
+     "id": "s16",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Accommodation in place and recorded",
+     "detail": "The case closes with outcome and dates recorded; medical records stay in the restricted file under POL-49 retention."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Route request and open confidential case",
+     "R": "Manager",
+     "A": "Benefits (Leave & Accommodation lead)",
+     "C": "HRBP",
+     "I": "Employee"
+    },
+    {
+     "activity": "Request and review medical information",
+     "R": "Benefits (case manager)",
+     "A": "Benefits (Leave & Accommodation lead)",
+     "C": "Legal",
+     "I": "Employee"
+    },
+    {
+     "activity": "Interactive process meetings",
+     "R": "HRBP",
+     "A": "Benefits (Leave & Accommodation lead)",
+     "C": "Manager; EHS",
+     "I": "Employee"
+    },
+    {
+     "activity": "Lab and reproductive-hazard assessment",
+     "R": "EHS",
+     "A": "EHS (Head of EHS)",
+     "C": "Benefits; Legal",
+     "I": "Manager"
+    },
+    {
+     "activity": "Undue hardship, denial or alternative decision",
+     "R": "Benefits (case manager)",
+     "A": "Legal",
+     "C": "HRBP; Dept Head",
+     "I": "Manager"
+    },
+    {
+     "activity": "Equipment, workspace and IT fulfilment",
+     "R": "Facilities",
+     "A": "Benefits (Leave & Accommodation lead)",
+     "C": "IT",
+     "I": "Manager"
+    },
+    {
+     "activity": "Schedule and remote-status changes in systems",
+     "R": "People Ops",
+     "A": "HRBP",
+     "C": "Payroll",
+     "I": "Manager"
+    },
+    {
+     "activity": "Candidate accommodation during hiring",
+     "R": "Recruiter",
+     "A": "Benefits (Leave & Accommodation lead)",
+     "C": "TA Coordinator",
+     "I": "Manager"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Accommodation and medical records kept in a restricted repository separate from personnel files (ADA, CMIA, PDPA, PIPL)",
+     "type": "preventive",
+     "evidence": "Access control list and quarterly access review"
+    },
+    {
+     "id": "C2",
+     "control": "Acknowledgement within 2 business days and decision within 10 business days of complete information",
+     "type": "detective",
+     "evidence": "Case aging report reviewed weekly"
+    },
+    {
+     "id": "C3",
+     "control": "Any denial, or an alternative different from the request, reviewed and signed off by Legal",
+     "type": "preventive",
+     "evidence": "Written undue-hardship analysis in the case file"
+    },
+    {
+     "id": "C4",
+     "control": "Pregnancy and reproductive-hazard decisions made case by case with an EHS assessment; no blanket exclusions",
+     "type": "preventive",
+     "evidence": "EHS assessment and employee acknowledgement"
+    },
+    {
+     "id": "C5",
+     "control": "Adverse actions within 6 months after a request routed to Employee Relations",
+     "type": "detective",
+     "evidence": "Employee Relations review log"
+    },
+    {
+     "id": "C6",
+     "control": "Ontario individual accommodation plans documented (AODA IASR, 50+ employees)",
+     "type": "preventive",
+     "evidence": "Individual accommodation plan on file"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Acknowledgement within 2 business days",
+     "target": ">= 98%",
+     "why": "Delay is the most common failure-to-engage allegation."
+    },
+    {
+     "name": "Request-to-decision time",
+     "target": "Median <= 10 business days",
+     "why": "Shows whether the interactive process keeps moving."
+    },
+    {
+     "name": "Effective accommodation rate",
+     "target": ">= 90% resolved with the requested or an effective alternative",
+     "why": "Shows the process solves problems rather than filtering requests."
+    },
+    {
+     "name": "Equipment fulfilment time",
+     "target": "<= 10 business days",
+     "why": "An approved but undelivered accommodation is still a failure."
+    },
+    {
+     "name": "Accommodation-related charges or complaints",
+     "target": "0 substantiated",
+     "why": "Primary legal risk indicator."
+    }
+   ],
+   "considerations": [
+    "Train managers that any expression of need is a request ('since my surgery I can't stand at the bench all day'); the clock starts then, not when a form arrives.",
+    "PWFA: do not demand documentation when the need is obvious, and consider temporary suspension of an essential function. The EEOC rule's elective-abortion provisions were vacated (W.D. La., May 21, 2025) and the EEOC's 2026 agenda targets narrowing 'related medical conditions', so apply the current rule until it changes; California FEHA and PDL are broader anyway.",
+    "Religious requests after Groff v. DeJoy (2023) can be refused only for 'substantial increased costs'; typical semiconductor cases are tape-out or on-call schedules on holy days, prayer breaks during long lab sessions, and head coverings or beards under cleanroom gowning.",
+    "Judge remote work as an accommodation on essential functions, not general return-to-office policy: validation and failure-analysis roles need the lab, while RTL design and verification often do not.",
+    "Bring EHS in early on lab and cleanroom cases: reproductive-hazard exposure, heat stress in gowning and ESD requirements have safe alternatives more often than managers assume.",
+    "Mental-health requests are rising: offer flexible hours, quiet space, EAP and clear written priorities, and never apply '100% healed' return rules.",
+    "Automated assessments in hiring (coding tests, video tools) must offer an alternative on request; California's CRD ADS rules make this an accommodation duty (TA-03).",
+    "Keep diagnoses out of Darwinbox, email and chat: managers get the adjustment and the review date, nothing more.",
+    "Feed accommodation data (with consent) into Taiwan's disability quota tracking (67+ employees, 1%) and India's RPwD equal opportunity policy so hiring and retention of people with disabilities is visible."
+   ],
+   "variations": [
+    {
+     "when": "Pregnancy and lactation",
+     "how": "US: PWFA/PDL adjustments and PUMP Act breaks; California: private non-bathroom lactation space with surface, seating, electricity, sink and refrigerator access; Taiwan: maternal health assessment and no night work 10pm-6am; China: no extended hours or night work from 7 months and a 1-hour nursing break until age 1; India: nursing breaks until 15 months."
+    },
+    {
+     "when": "Religious practice",
+     "how": "No medical documentation; consider shift swaps, floating holidays, prayer space and dress adjustments compatible with gowning, and send any refusal to Legal under the Groff standard."
+    },
+    {
+     "when": "Candidate during hiring",
+     "how": "Recruiter routes the request from Greenhouse to the case manager; offer alternative interview formats or extra assessment time, and state the availability of accommodation in Ontario recruitment (AODA)."
+    },
+    {
+     "when": "Leave as an accommodation",
+     "how": "Finite additional leave after FMLA or ESA entitlements run out is decided here and administered through LV-01."
+    },
+    {
+     "when": "Temporary restrictions after injury",
+     "how": "Coordinate modified duty with workers' comp restrictions (LV-04) and the return plan (LV-03)."
+    },
+    {
+     "when": "Remote work or relocation request",
+     "how": "Decide the accommodation here first, then MV-04 handles tax, payroll and export-control consequences of the work location."
+    }
+   ],
+   "countries": {
+    "us": "The ADA and PWFA (15+ employees) require an interactive process; under PWFA, avoid documentation when the need is obvious and consider leave, telework and temporary suspension of essential functions. The PWFA rule's elective-abortion provisions were vacated on May 21, 2025 and the EEOC plans an NPRM narrowing 'related medical conditions', so apply the current regulations until amended. Religious accommodation under Title VII uses the Groff v. DeJoy 'substantial increased costs' standard, and the PUMP Act gives lactation breaks and a private non-bathroom space for 1 year after birth.",
+    "us-ca": "FEHA (5+ employees) makes failure to engage in a timely, good-faith interactive process a separate violation, and the written procedure must cover disability, pregnancy and religion, including requests arising from AI or automated assessments. PDL includes reasonable accommodation and transfer. Labor Code 1030-1034 requires a lactation policy and a private non-bathroom space near the work area with a surface, seating, electricity, and access to a sink and refrigerator.",
+    "ca": "The Ontario and BC Human Rights Codes require accommodation on protected grounds (disability, family status, creed and others) to the point of undue hardship, judged on cost and health and safety, and the employer must show a genuine search for options as well as the result. AODA requires documented individual accommodation plans and a return-to-work process (50+ employees), individualized workplace emergency response information and notice of accommodation in recruitment. Ontario cannot require a medical note for the 3 ESA sick days but may ask for information reasonably needed to accommodate.",
+    "in": "The RPwD Act 2016 s.21 requires every establishment to publish an equal opportunity policy (preferably on its website) and provide reasonable accommodation, and private establishments with 20+ employees appoint a liaison officer (verify against the current RPwD Rules). ESI eligibility extends to INR 25,000/month for persons with disability, and maternity-related accommodations include nursing breaks to 15 months and WFH by agreement. Health information needs consent under the SPDI Rules now and DPDP from 13 May 2027.",
+    "tw": "Employers with 67+ employees must employ persons with disabilities equal to at least 1% of headcount or pay the shortfall into the disability employment fund (People with Disabilities Rights Protection Act Art. 38, 43). OSH Act Art. 30-31 requires risk assessment and job adjustment for pregnant and post-partum (1 year) workers, with a written program at 100+ workers and hazardous sites, and pregnant or breastfeeding employees may not work nights (10pm-6am). Health data is sensitive under the PDPA and needs a statutory basis or written consent.",
+    "cn": "The Employment Promotion Law bars disability discrimination, and the Special Provisions on Labor Protection of Female Employees bar extended hours and night work from 7 months of pregnancy, count prenatal visits as working time, give a 1-hour daily nursing break until the child turns 1 and prohibit listed exposures for pregnant and nursing staff. Disability employment quotas and the related fund levy are set locally (verify Shanghai and Shenzhen ratios). Medical information is sensitive PI under PIPL, needing separate consent and a PIPIA before any transfer to US systems."
+   },
+   "templates": [
+    "T-ACCOMMODATION"
+   ],
+   "policies": [
+    "POL-36",
+    "POL-57",
+    "POL-08",
+    "POL-46",
+    "POL-35",
+    "POL-38"
+   ],
+   "related": [
+    "LV-01",
+    "LV-03",
+    "LV-04",
+    "HS-03",
+    "TA-03",
+    "MV-04",
+    "ER-01"
+   ]
+  },
+  {
+   "id": "LV-03",
+   "name": "Return to work",
+   "stage": "Leave",
+   "depth": "standard",
+   "summary": "Brings employees back from medical, parental, military or injury leave to the same or an equivalent role, with pay, access and benefits working on day one. Covers fitness-for-duty documentation, reinstatement checks, phased returns and accommodations, and fair treatment in performance and pay cycles. Good looks like: systems and pay working on the first day, a planned first 30 days, and high retention a year later.",
+   "owner": "Benefits - Leave & Accommodation team (process), HRBP (reinstatement), Manager (reboarding)",
+   "trigger": "Scheduled leave end 10 business days away, an early-return request, or a provider release to work",
+   "outputs": [
+    "Confirmed return date and reinstatement record (role, grade, pay, location)",
+    "Fitness-for-duty or restriction note where required",
+    "Reactivated Darwinbox status, system access and badge",
+    "Restarted pay and deductions with arrears plan",
+    "Phased return or accommodation plan",
+    "30-day check-in note"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "Benefits admin platform",
+    "Timekeeping"
+   ],
+   "sla": "Return confirmed 10 business days ahead; systems active on the return day; 30-day check-in",
+   "lanes": [
+    "Benefits",
+    "Employee",
+    "Manager",
+    "People Ops",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Benefits",
+     "type": "start",
+     "label": "Confirm return date",
+     "detail": "The case manager confirms the return date with the employee 10 business days ahead, checks for any extension request and alerts the manager and People Ops.",
+     "sla": "Return - 10 bd",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Benefits",
+     "type": "decision",
+     "label": "Fitness or restriction note needed?",
+     "detail": "Only if the designation notice announced it (FMLA) or the uniform policy for that condition or job requires it, for example lab or safety-sensitive roles.",
+     "branches": [
+      {
+       "to": "s3",
+       "label": "Yes"
+      },
+      {
+       "to": "s4",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Provide fitness-for-duty note",
+     "detail": "Employee provides a provider release listing any restrictions; the case manager reviews it and shares only the restrictions with the manager.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Prepare reinstatement and reboarding",
+     "detail": "Manager and HRBP confirm the same or an equivalent role, pay, grade and reporting line; if the role changed during leave (reorganization, new manager) the reason is documented and Legal reviews it. Build a 2-week reboarding plan covering project context, tool changes and lab re-certification.",
+     "control": "HRBP compares pre-leave and return records.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Reactivate status and access",
+     "detail": "People Ops ends the leave status in Darwinbox from the return date, restores accounts, badge and lab access through ITSM, and assigns any mandatory training that lapsed during leave.",
+     "sla": "Return day",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Restart pay and deductions",
+     "detail": "Payroll restarts salary and benefit deductions, sets up premium arrears recovery within policy caps, ends top-up or SUB payments and records the return in Timekeeping.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Benefits",
+     "type": "decision",
+     "label": "Phased return or accommodation?",
+     "detail": "Triggered by restrictions, an employee request or the nature of the absence (long illness, injury).",
+     "branches": [
+      {
+       "to": "s8",
+       "label": "Yes"
+      },
+      {
+       "to": "s9",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Agree phased or modified plan",
+     "detail": "The case manager agrees a phased schedule or modified duties with end dates through LV-02 and T-ACCOMMODATION; Ontario employers with 50+ employees document the AODA return-to-work process.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Hold 30-day check-in",
+     "detail": "Manager reviews workload, lactation or care needs and goals, pro-rates objectives for the leave period and confirms the employee is in the current compensation and performance cycle.",
+     "sla": "Return + 30 days",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Fully back at work",
+     "detail": "The leave case closes; any continuing accommodation stays open in LV-02 with its own review date."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Return date and fitness documentation",
+     "R": "Benefits",
+     "A": "HRBP",
+     "C": "Legal",
+     "I": "Manager"
+    },
+    {
+     "activity": "Reinstatement to same or equivalent role",
+     "R": "Manager",
+     "A": "HRBP",
+     "C": "Legal; Employee Relations",
+     "I": "Employee"
+    },
+    {
+     "activity": "Status and access reactivation",
+     "R": "People Ops",
+     "A": "HRBP",
+     "C": "IT",
+     "I": "Manager"
+    },
+    {
+     "activity": "Pay and deduction restart",
+     "R": "Payroll",
+     "A": "Total Rewards",
+     "C": "Benefits",
+     "I": "Employee"
+    },
+    {
+     "activity": "Phased return or accommodation plan",
+     "R": "Benefits",
+     "A": "HRBP",
+     "C": "Manager; EHS",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Reinstatement equivalence check (role, grade, pay, location) before return; any change needs Legal review",
+     "type": "preventive",
+     "evidence": "Return checklist in the case file"
+    },
+    {
+     "id": "C2",
+     "control": "First-payroll reconciliation of pay, deductions and arrears after return",
+     "type": "detective",
+     "evidence": "Payroll exception report"
+    },
+    {
+     "id": "C3",
+     "control": "Fitness-for-duty requests limited to conditions and jobs defined in policy and announced in advance",
+     "type": "preventive",
+     "evidence": "Designation notice template and policy matrix"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Systems and access ready on return day",
+     "target": ">= 98% of returns",
+     "why": "Day-one friction tells the employee they were forgotten."
+    },
+    {
+     "name": "Retention 12 months after return",
+     "target": ">= 90%",
+     "why": "Main outcome measure of the leave experience."
+    },
+    {
+     "name": "Post-return payroll corrections",
+     "target": "< 1% of returns",
+     "why": "Arrears and deduction errors are common and avoidable."
+    }
+   ],
+   "considerations": [
+    "Include people on leave in merit, bonus and promotion cycles; pro-rate goals for time away but never mark anyone down for protected leave (Taiwan bars adverse appraisal for up to 10 sick days a year from 2026).",
+    "Avoid '100% healed' rules and automatic termination when someone cannot return on the planned date; move to accommodation review first.",
+    "Long absences (6+ months) need real reboarding: toolchain and flow changes, project handovers and lab safety re-certification.",
+    "Lactation needs are predictable; book the room and agree break times before the first day back.",
+    "If the role changed during leave because of a reorganization, document that the decision was made on legitimate grounds unrelated to the leave."
+   ],
+   "variations": [
+    {
+     "when": "Return from parental leave",
+     "how": "Lactation space and breaks, optional phased return, India creche access at 50+ employees, China 1-hour nursing break to age 1, and no night work in Taiwan while breastfeeding."
+    },
+    {
+     "when": "Return from work injury",
+     "how": "Modified duty matching workers' comp restrictions (LV-04); check Ontario WSIA re-employment obligations (verify thresholds)."
+    },
+    {
+     "when": "Employee does not return",
+     "how": "Contact in writing, check for extension or accommodation, then treat as resignation or separation only under local rules and after HRBP and Legal review (OF-01, OF-02)."
+    }
+   ],
+   "countries": {
+    "us": "FMLA restores the same or an equivalent position with equivalent pay and benefits; a fitness-for-duty certification may be required only if announced in the designation notice, and ADA return-to-work exams must be job-related.",
+    "us-ca": "CFRA and PDL give reinstatement to the same or a comparable position (PFL alone does not), and a lactation space meeting Labor Code 1030-1034 must be ready on the return date.",
+    "ca": "Ontario and BC ESA require reinstatement to the same or a comparable job with seniority credited for the leave, and AODA requires a documented return-to-work process for disability absences at 50+ employees.",
+    "in": "No dismissal during maternity leave; nursing breaks continue until the child is 15 months, WFH can be agreed where the work allows, and a creche (4 visits a day) is required at 50+ employees.",
+    "tw": "Reinstate after parental leave and do not treat protected leave adversely (Gender Equality in Employment Act Art. 21, 36), and keep pregnant or breastfeeding employees off night work (10pm-6am).",
+    "cn": "Nursing employees with a child under 1 get a 1-hour daily nursing break and no extended hours or night work, and the employer cannot terminate under LCL Art. 40 or 41 during pregnancy, maternity or nursing periods."
+   },
+   "templates": [
+    "T-ACCOMMODATION"
+   ],
+   "policies": [
+    "POL-35",
+    "POL-36",
+    "POL-51",
+    "POL-38"
+   ],
+   "related": [
+    "LV-01",
+    "LV-02",
+    "LV-04",
+    "MV-04",
+    "PY-01",
+    "CO-02"
+   ]
+  },
+  {
+   "id": "LV-04",
+   "name": "Occupational injury & workers' comp claims",
+   "stage": "Leave",
+   "depth": "standard",
+   "summary": "Manages work-related injury and illness claims from first report to closure: claim forms, insurer or board filings, wage replacement, medical management, modified duty and return to work. Covers US state workers' comp (California DWC-1 within 1 working day), Ontario WSIB and WorkSafeBC reporting within 3 days, India ESI and employer compensation liability, Taiwan occupational accident insurance and China work-injury recognition within 30 days. Good looks like: every claim filed on time, injured employees paid correctly and back to meaningful work quickly.",
+   "owner": "Benefits (claims process), EHS (recording and investigation through HS-01), Payroll (wage continuation), carrier or statutory board (adjudication)",
+   "trigger": "Employee reports a work-related injury or illness, or the company learns of one, including remote-work and business-travel injuries",
+   "outputs": [
+    "Claim form given to the employee (e.g., DWC-1) and employer report to carrier or board",
+    "OSHA 300/301 or local register entry through HS-01",
+    "Claim number, compensability decision and benefit schedule",
+    "Modified-duty offer and return-to-work plan",
+    "Wage continuation and statutory offset records",
+    "Claim closure and reserve review"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "Case management / hotline",
+    "Document management",
+    "Timekeeping"
+   ],
+   "sla": "Claim form within 1 working day (California); board report within 3 days (Ontario, BC); China recognition application within 30 days",
+   "lanes": [
+    "Employee",
+    "Manager",
+    "Benefits",
+    "EHS",
+    "Vendor",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Report injury or illness",
+     "detail": "Employee reports to the manager or EHS immediately or by the end of the shift, including remote-work and business-travel injuries; late reports are still accepted and never penalized.",
+     "sla": "Same shift",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Arrange care and notify",
+     "detail": "Manager gets first aid or medical care (emergency services first), then notifies EHS and Benefits the same day through the incident form. Managers do not decide whether an injury is work-related.",
+     "sla": "Same day",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Give claim form and file report",
+     "detail": "California: give the DWC-1 within 1 working day and report to the carrier. Ontario: WSIB Form 7 within 3 business days; BC: WorkSafeBC within 3 days. India: ESI accident report for covered staff or notice to the employee compensation insurer; Taiwan: occupational accident insurance claim; China: work-injury recognition application within 30 days.",
+     "sla": "1-3 days",
+     "control": "Filing date tracked against the statutory deadline.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "EHS",
+     "type": "task",
+     "label": "Record and assess reportability",
+     "detail": "EHS records the case (OSHA 300/301 within 7 calendar days or the local register) and assesses regulator reporting through HS-01; investigation findings feed prevention, not the claim decision.",
+     "sla": "7 days",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Adjudicate claim and pay benefits",
+     "detail": "The carrier or TPA, WSIB, WorkSafeBC, ESIC, Taiwan's Bureau of Labor Insurance or the local social insurance bureau decides compensability and pays medical and wage benefits; Benefits supplies wage data and job descriptions promptly.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Vendor",
+     "type": "decision",
+     "label": "Lost time or restrictions?",
+     "detail": "Based on the treating provider's work status report.",
+     "branches": [
+      {
+       "to": "s7",
+       "label": "Yes"
+      },
+      {
+       "to": "s9",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Coordinate leave and modified duty",
+     "detail": "Benefits designates FMLA/CFRA concurrently where eligible (LV-01) and offers modified duty matching the restrictions (LV-03). Taiwan work-injury leave is on full pay with termination barred during treatment; China pays original wages during the stoppage-with-pay period (generally up to 12 months; verify).",
+     "sla": "Modified duty offer within 5 bd",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Apply wage continuation and offsets",
+     "detail": "Payroll applies the company wage-continuation or top-up policy net of statutory benefits (for example Taiwan employer liability offset by occupational accident insurance under LSA Art. 59), avoiding double pay and keeping benefit deductions running.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Benefits",
+     "type": "task",
+     "label": "Close claim and confirm full duty",
+     "detail": "Benefits confirms full duty or permanent restrictions, closes the claim with the carrier or board, reviews reserves with the broker and passes lessons to EHS.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Back at work, claim closed",
+     "detail": "Employee is at full or permanently adjusted duty and the claim file is closed and retained."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Claim forms and carrier or board filings",
+     "R": "Benefits",
+     "A": "Total Rewards",
+     "C": "EHS",
+     "I": "Manager"
+    },
+    {
+     "activity": "Recordkeeping and regulator reporting",
+     "R": "EHS",
+     "A": "EHS (Head of EHS)",
+     "C": "Legal",
+     "I": "Benefits"
+    },
+    {
+     "activity": "Wage continuation and statutory offsets",
+     "R": "Payroll",
+     "A": "Benefits",
+     "C": "Finance",
+     "I": "Employee"
+    },
+    {
+     "activity": "Modified duty and return to work",
+     "R": "Manager",
+     "A": "HRBP",
+     "C": "Benefits; EHS",
+     "I": "Employee"
+    },
+    {
+     "activity": "Adjudication and claim cost management",
+     "R": "Vendor",
+     "A": "Benefits",
+     "C": "Legal; Finance",
+     "I": "HRBP"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Statutory filing deadlines tracked for each claim (DWC-1 1 working day, WSIB Form 7 3 business days, WorkSafeBC 3 days, China 30 days)",
+     "type": "detective",
+     "evidence": "Claims log with notice and filing dates"
+    },
+    {
+     "id": "C2",
+     "control": "No discipline, incentive loss or testing practice that deters injury reporting (29 CFR 1904.35(b)(1)(iv))",
+     "type": "preventive",
+     "evidence": "Employee Relations review of actions within 90 days of a claim; annual incentive program review"
+    },
+    {
+     "id": "C3",
+     "control": "Wage continuation reconciled to statutory benefits each pay period to prevent double payment",
+     "type": "detective",
+     "evidence": "Payroll offset reconciliation"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Claims filed within statutory deadline",
+     "target": "100%",
+     "why": "Late filing shifts costs to the employer (China) and draws penalties."
+    },
+    {
+     "name": "Lost-time claims offered modified duty within 5 business days",
+     "target": ">= 90%",
+     "why": "Early return shortens claims and improves recovery."
+    },
+    {
+     "name": "Median lost days per lost-time claim",
+     "target": "Downward trend year on year",
+     "why": "Measures both safety and claim management."
+    }
+   ],
+   "considerations": [
+    "Home-office injuries in the course of work are compensable, so buy coverage in every state where an employee works (monopolistic state funds in ND, OH, WA and WY).",
+    "For travel to foundry and OSAT sites in Taiwan and China, confirm home-country workers' comp covers work abroad and add travel medical and assistance so claims are not stranded in the host country.",
+    "In India only staff at or below INR 21,000/month are in ESI; everyone else is covered by employer liability under SS Code Ch. VII, so buy employee compensation or group personal accident insurance.",
+    "In China a sudden death at work or within 48 hours of onset counts as work injury, and late recognition applications leave the employer paying benefits for the delay.",
+    "Keep medical details in the claim file only; managers get restrictions and dates."
+   ],
+   "variations": [
+    {
+     "when": "Occupational disease (lab chemical exposure, repetitive strain)",
+     "how": "Longer latency; the China 30-day window runs from diagnosis, and exposed China staff need exit health exams before separation."
+    },
+    {
+     "when": "Injury while travelling abroad",
+     "how": "The assistance vendor manages care, the home-country carrier is notified and any host-country reporting runs through HS-02."
+    },
+    {
+     "when": "Fatality or serious injury",
+     "how": "Immediate regulator notice through HS-01, family support and OF-09; Legal manages communications and privilege."
+    }
+   ],
+   "countries": {
+    "us": "Workers' comp is state-based (monopolistic funds in ND, OH, WA and WY) and covers remote workers; record work-related cases on the OSHA 300 log within 7 days, keep records 5 years and post the 300A from Feb 1 to Apr 30.",
+    "us-ca": "Give the DWC-1 claim form within 1 working day of learning of the injury (Labor Code 5401) and report serious injuries, illnesses or deaths to Cal/OSHA within 8 hours.",
+    "ca": "Ontario: report to WSIB (Form 7) within 3 business days of learning of an injury needing health care beyond first aid or causing lost time. BC: report to WorkSafeBC within 3 days, investigate and keep first-aid records.",
+    "in": "ESI covers employees earning up to INR 21,000/month; for others the employer is liable for compensation under SS Code Ch. VII, and fatal or serious accidents must be reported to the inspector within the rule timelines with an accident register kept.",
+    "tw": "No-fault employer liability for medical costs and wage replacement (LSA Art. 59) is offset by employer-paid occupational accident insurance benefits; work-injury leave is on full pay and termination is barred during treatment.",
+    "cn": "Apply for work-injury recognition within 30 days of the accident or occupational-disease diagnosis (Work-Related Injury Insurance Regulations Arts. 15, 17), with sudden death at work within 48 hours counted as work injury; uninsured employers pay the benefits themselves."
+   },
+   "templates": [],
+   "policies": [
+    "POL-51",
+    "POL-35",
+    "POL-36",
+    "POL-46"
+   ],
+   "related": [
+    "HS-01",
+    "LV-01",
+    "LV-03",
+    "LV-02",
+    "HS-02",
+    "PY-01"
+   ]
+  },
+  {
+   "id": "LV-05",
+   "name": "PTO & holiday administration",
+   "stage": "Leave",
+   "depth": "standard",
+   "summary": "Administers paid time off and public holidays in every country: annual holiday calendars, accrual and entitlement rules in Darwinbox, requests and approvals, vacation pay and holiday premiums, leave-year settlement and payout at exit. Covers California's no-forfeiture rule, flexible PTO design, Canadian vacation pay (4%/6%), India's Labour Code accrual and encashment, Taiwan's seniority-based leave with year-end payout and 16 holidays, and China's 13 holidays and 300% pay for untaken leave. Good looks like: correct balances, statutory minimums actually taken or paid, and no surprises at exit.",
+   "owner": "People Ops (process and configuration), Total Rewards (policy), Payroll (vacation pay and payouts), Managers (approvals)",
+   "trigger": "Annual holiday-calendar cycle, each time-off request, leave-year end, and every separation",
+   "outputs": [
+    "Country holiday calendars published before the year starts",
+    "Tested accrual and entitlement rules in Darwinbox",
+    "Approved requests and accurate balances",
+    "Leave-year settlement (Taiwan payout, China 300% pay, India encashment)",
+    "Exit payout calculations",
+    "Quarterly vacation liability report for Finance"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Timekeeping",
+    "Payroll provider",
+    "BI / people analytics"
+   ],
+   "sla": "Holiday calendars by Dec 1 (China within 2 weeks of the State Council schedule); requests decided within 2 business days; settlement on the first payroll after leave-year end",
+   "lanes": [
+    "People Ops",
+    "Employee",
+    "Manager",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Publish country holiday calendars",
+     "detail": "People Ops publishes next year's calendars: US company holidays (10-12 plus floating days), Ontario's 9 and BC's 11 statutory holidays, Karnataka national and festival holidays displayed before the year starts, Taiwan's 16 national holidays with make-up days, and China's 13 statutory days with the State Council's swapped workdays.",
+     "sla": "By Dec 1",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Configure accrual rules in Darwinbox",
+     "detail": "Configure and test rules by country and tenure: California vacation vesting with a cap plus separate sick leave; Ontario and BC 2-3 weeks with 4%/6% vacation pay; India 1 day per 20 days worked with 30-day carry-forward; Taiwan 3 to 30 days by seniority; China 5/10/15 days by cumulative service.",
+     "control": "Configuration changes tested and approved before go-live (PY-01).",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Request time off",
+     "detail": "Employee requests time off in Darwinbox. Taiwan employees decide when to take statutory annual leave, and China and Canada entitlements must be scheduled so they are actually taken.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Manager",
+     "type": "decision",
+     "label": "Approve request?",
+     "detail": "Manager decides within 2 business days based on coverage, not on whether leave is 'deserved'.",
+     "branches": [
+      {
+       "to": "s6",
+       "label": "Approve"
+      },
+      {
+       "to": "s5",
+       "label": "Propose other dates"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Agree alternative dates",
+     "detail": "Manager proposes alternative dates with a business reason (tape-out, customer escalation) and records it. Statutory minimums cannot be refused outright and must be taken within Ontario's 10-month or BC's 12-month window.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Pay vacation pay and holiday premiums",
+     "detail": "Payroll pays vacation pay (Canada 4%/6% on most wages, including non-discretionary bonuses), holiday work premiums (BC 1.5x plus an average day's pay, Taiwan double pay, China 300%) and non-exempt holiday rules from Timekeeping.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Run leave-year settlement",
+     "detail": "At leave-year end Taiwan pays out unused statutory leave (or defers one year by agreement) and issues the written annual leave statement; China pays 300% for untaken leave unless the employee waived it in writing; India carries forward up to 30 days and encashes the rest; California carries balances forward under the cap.",
+     "sla": "First payroll after year end",
+     "control": "Settlement reconciled before payroll close.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Pay out balances at separation",
+     "detail": "Final pay includes accrued vacation: California at the final rate with final wages (Labor Code 227.3), Taiwan immediately, China pro-rated with 300% for untaken days, India within the 2-working-day full and final settlement, and Ontario/BC outstanding vacation pay.",
+     "control": "Final-pay checklist includes a vacation balance sign-off.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "People Ops",
+     "type": "end",
+     "label": "Balances reconciled and reported",
+     "detail": "People Ops reconciles balances to payroll and gives Finance the vacation liability each quarter; HR Analytics reports usage by team so low-usage teams get attention."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Holiday calendars and accrual rules",
+     "R": "People Ops",
+     "A": "Total Rewards",
+     "C": "Legal; Payroll",
+     "I": "Employee"
+    },
+    {
+     "activity": "Time-off approvals",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Vacation pay, premiums and leave-year settlement",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "People Ops",
+     "I": "Employee"
+    },
+    {
+     "activity": "Exit payouts",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "People Ops; HRBP",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Accrual and holiday configuration changes tested against country rule sets and approved before go-live",
+     "type": "preventive",
+     "evidence": "Test scripts and approval in the change log"
+    },
+    {
+     "id": "C2",
+     "control": "Leave-year statutory settlement (Taiwan payout, China 300%, India encashment) reconciled before payroll close",
+     "type": "detective",
+     "evidence": "Settlement reconciliation signed by the Payroll lead"
+    },
+    {
+     "id": "C3",
+     "control": "Final pay reviewed for accrued vacation before release",
+     "type": "preventive",
+     "evidence": "Final-pay checklist"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Statutory minimum leave taken or paid",
+     "target": "100% (Ontario, BC, India, Taiwan, China)",
+     "why": "Unpaid statutory leave is a wage claim."
+    },
+    {
+     "name": "Exit payout and balance errors",
+     "target": "0 exit payout errors; < 0.5% balance corrections",
+     "why": "California exit errors trigger waiting-time penalties."
+    },
+    {
+     "name": "Average PTO days taken",
+     "target": ">= 15 days per employee per year",
+     "why": "Burnout indicator in tape-out-driven teams."
+    }
+   ],
+   "considerations": [
+    "Flexible or 'unlimited' PTO works only in the US and only if it is genuinely unlimited, not earned and not capped (McPherson v. EF Intercultural); Canada, India, Taiwan and China still need statutory tracking and vacation pay, so run 'flexible' there as the statutory minimum plus discretionary days.",
+    "Combining sick leave and vacation into one PTO bank in California makes the whole bank payable at exit; keep paid sick leave separate if payout cost matters.",
+    "Canadian vacation pay on non-discretionary bonuses and commissions is a common underpayment for engineers and sales staff; configure payroll to calculate it automatically.",
+    "China annual leave depends on cumulative service with all employers, so collect prior-employment evidence at hire; Taiwan employees choose their timing, so managers can negotiate but not assign dates.",
+    "India's Code 'wages' definition affects the leave encashment base; recheck CTC structures where basic pay is below 50% of remuneration."
+   ],
+   "variations": [
+    {
+     "when": "Mid-year cross-border transfer (MV-03)",
+     "how": "Settle the home-country balance under home law (Taiwan payout, China pro-rata), then start host-country accrual; do not carry balances across entities without legal review."
+    },
+    {
+     "when": "Non-exempt lab or shift staff working holidays",
+     "how": "Pay premiums or give substitute days by country: BC 1.5x plus an average day's pay, Taiwan double pay, China 300% with no substitution, India double pay or a substitute day."
+    },
+    {
+     "when": "Leave during notice period or RIF",
+     "how": "Ontario and BC vacation pay accrues during statutory notice; China and Taiwan pay out untaken leave at separation; California pays out on the last day."
+    }
+   ],
+   "countries": {
+    "us": "There is no federal vacation mandate, but CO, IL, MA, MT, NE and other states treat accrued vacation as wages, and about 19 states plus DC and many cities mandate paid sick leave with accrual, carryover and notice rules a single PTO policy must meet.",
+    "us-ca": "Vacation vests as earned: caps are allowed but forfeiture is not, and accrued vacation is paid at the final rate at separation (Labor Code 227.3); paid sick leave gives at least 40 hours/5 days a year (80-hour cap or front-loading) with no payout.",
+    "ca": "Ontario gives 2 weeks with 4% vacation pay (3 weeks and 6% after 5 years), taken within 10 months; BC gives 2 weeks (4%) after 12 months and 3 weeks (6%) after 5 years, taken within 12 months. Ontario has 9 and BC 11 statutory holidays, and BC holiday work is paid at 1.5x plus an average day's pay (BC high-tech professionals are exempt from Part 5).",
+    "in": "OSH Code s.32 gives workers with 180+ days in the year 1 day of leave per 20 days worked, a 30-day carry-forward and uncapped encashment of the excess; Karnataka requires about 10 paid holidays (26 Jan, 1 May, 15 Aug, 2 Oct, 1 Nov plus festival holidays) displayed before the year, and polling days are paid holidays.",
+    "tw": "Annual leave rises with seniority from 3 days (after 6 months) to 30 days; the employee chooses when to take it, unused days are paid out at year end (or deferred one year by agreement) and on termination, and a written annual statement is mandatory. There are 16 national holidays with make-up days when they fall on a day off, and holiday work is paid double.",
+    "cn": "Annual leave is 5/10/15 days by cumulative service after 12 months' continuous work, pro-rated for joiners and leavers, and untaken leave not waived in writing is paid at 300%. There are 13 statutory holidays under the State Council schedule, and holiday work is paid at 300% with no time-off substitution."
+   },
+   "templates": [],
+   "policies": [
+    "POL-33",
+    "POL-34",
+    "POL-28",
+    "POL-29"
+   ],
+   "related": [
+    "PY-01",
+    "PY-03",
+    "OF-05",
+    "LV-01",
+    "MV-03",
+    "DS-01"
+   ]
+  },
+  {
+   "id": "HS-01",
+   "name": "Incident & injury reporting",
+   "stage": "Safety",
+   "depth": "standard",
+   "summary": "Captures every workplace incident, injury, near miss and unsafe condition, gets people care, meets regulator reporting deadlines, investigates root causes and drives corrective action. Covers offices, labs, remote work and travel in all six jurisdictions and feeds claims (LV-04) and the EHS program (HS-03). Good looks like: plenty of near-miss reports, on-time regulator notices and corrective actions that are closed and verified.",
+   "owner": "EHS (process), line managers (scene control and corrective actions), Legal (serious incidents and regulator contact)",
+   "trigger": "Any injury, illness, near miss, dangerous occurrence, violent incident or hazard observation reported by anyone, including contractors and visitors",
+   "outputs": [
+    "Incident record with classification and timestamps",
+    "Regulator notifications where required",
+    "Investigation report with root cause",
+    "Corrective and preventive actions with owners and dates",
+    "OSHA 300/301 and local registers; WVPP violent incident log (California)"
+   ],
+   "systems": [
+    "Case management / hotline",
+    "Darwinbox (HRIS)",
+    "Document management",
+    "BI / people analytics"
+   ],
+   "sla": "Serious incidents triaged within 1 hour; regulator notices within statutory limits (as short as 8 hours); investigation within 10 business days; OSHA 300 entry within 7 days",
+   "lanes": [
+    "Employee",
+    "Manager",
+    "EHS",
+    "Legal"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Report incident or near miss",
+     "detail": "Anyone reports through the manager, the EHS form or the hotline immediately; anonymous hazard reports are accepted and no one is penalized for reporting.",
+     "sla": "Immediately",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Secure scene and arrange care",
+     "detail": "Manager gets first aid or emergency services, stops unsafe work, isolates equipment (lockout/tagout), preserves the scene for serious events and phones EHS for anything beyond first aid.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "EHS",
+     "type": "task",
+     "label": "Classify severity and reportability",
+     "detail": "EHS classifies the event (first aid, recordable, lost time, serious, dangerous occurrence, violent incident), starts the claim path (LV-04) and checks the site's regulator reporting rules.",
+     "sla": "1 hour for serious events",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "EHS",
+     "type": "decision",
+     "label": "Regulator-reportable event?",
+     "detail": "Based on severity and each jurisdiction's criteria (fatality, hospitalization, amputation, critical injury, multiple casualties, dangerous occurrence).",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Yes"
+      },
+      {
+       "to": "s7",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "EHS",
+     "type": "task",
+     "label": "Notify regulator within deadline",
+     "detail": "EHS files the notice: federal OSHA within 8 hours for a fatality or 24 hours for hospitalization, amputation or eye loss; Cal/OSHA within 8 hours; Taiwan labor inspection within 8 hours; Ontario and BC board or ministry reports; India inspector per the rules; China local emergency-management authority (verify timing).",
+     "sla": "8-24 hours",
+     "control": "Notice time logged against event time.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Manage inspection and privilege",
+     "detail": "Legal coordinates inspector visits, document requests and witness interviews, and directs the investigation of serious incidents under privilege where appropriate.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "EHS",
+     "type": "task",
+     "label": "Investigate root cause",
+     "detail": "EHS leads a proportionate investigation (interviews, photos, equipment and training records, 5-whys) with the manager and, where required, the joint health and safety committee. Violent incidents also go into the California WVPP incident log and to ER-07.",
+     "sla": "10 bd",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Complete corrective actions",
+     "detail": "Manager owns agreed actions (engineering controls, procedure changes, retraining) with due dates; EHS verifies effectiveness before closure.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "EHS",
+     "type": "task",
+     "label": "Record, log and trend",
+     "detail": "EHS records the case on OSHA 300/301 within 7 days (and local registers), has the 300A certified and posted from Feb 1 to Apr 30, submits ITA data by Mar 2 where covered, and reports leading and lagging indicators to leadership.",
+     "sla": "7 days",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "EHS",
+     "type": "end",
+     "label": "Incident closed, lessons shared",
+     "detail": "Closure requires completed and verified actions; a short lessons-learned note goes to similar labs and sites."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Initial response and scene control",
+     "R": "Manager",
+     "A": "EHS",
+     "C": "Security",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Regulator notification",
+     "R": "EHS",
+     "A": "Legal",
+     "C": "HRBP",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Root-cause investigation",
+     "R": "EHS",
+     "A": "Dept Head",
+     "C": "Employee Relations; Legal",
+     "I": "Manager"
+    },
+    {
+     "activity": "Corrective actions",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "EHS; Facilities",
+     "I": "Employee"
+    },
+    {
+     "activity": "Recordkeeping and 300A certification",
+     "R": "EHS",
+     "A": "Dept Head (site executive)",
+     "C": "Legal",
+     "I": "HR Analytics"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Serious incidents triaged and reportability decided within 1 hour, with timestamps",
+     "type": "preventive",
+     "evidence": "Incident record timestamps"
+    },
+    {
+     "id": "C2",
+     "control": "OSHA 300 entries within 7 days; 300A certified by a company executive and posted Feb 1-Apr 30",
+     "type": "detective",
+     "evidence": "Signed 300A and posting evidence"
+    },
+    {
+     "id": "C3",
+     "control": "Corrective actions tracked to verified closure, with overdue actions escalated monthly",
+     "type": "detective",
+     "evidence": "Corrective action aging report"
+    },
+    {
+     "id": "C4",
+     "control": "Incentive programs and post-incident drug testing reviewed so they do not deter reporting",
+     "type": "preventive",
+     "evidence": "Annual program review record"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Total recordable incident rate (TRIR)",
+     "target": "Below prior year and industry benchmark",
+     "why": "Headline safety outcome."
+    },
+    {
+     "name": "Near-miss to recordable ratio",
+     "target": ">= 10:1",
+     "why": "Many near-miss reports signal a healthy reporting culture."
+    },
+    {
+     "name": "Corrective actions closed on time",
+     "target": ">= 90%",
+     "why": "Open actions mean the same incident will recur."
+    },
+    {
+     "name": "Regulator notices on time",
+     "target": "100%",
+     "why": "Late notices bring penalties and inspection risk."
+    }
+   ],
+   "considerations": [
+    "Make reporting easy and blame-free; the fastest safety gains in labs come from near misses (spills, gas alarms, ESD events) that never became injuries.",
+    "Keep the safety investigation separate from discipline; if misconduct appears, hand it to Employee Relations (ER-02) under its own process.",
+    "Remote-work injuries are recordable if work-related, and incidents at foundry or OSAT sites also sit in the host's system; agree information sharing in advance.",
+    "California workplace violence incidents need the WVPP violent incident log and a post-incident investigation, with records kept 5 years.",
+    "Contractors, interns and visitors in our labs are covered by this process even when they are not on our payroll."
+   ],
+   "variations": [
+    {
+     "when": "Workplace violence or threat",
+     "how": "Security and ER-07 lead the threat response; EHS logs the incident and updates the WVPP."
+    },
+    {
+     "when": "Chemical exposure or spill in a lab",
+     "how": "Spill response under the chemical hygiene plan, exposure monitoring and medical consultation, with US exposure records kept 30 years."
+    },
+    {
+     "when": "Incident during travel or at a customer or foundry site",
+     "how": "Host-site procedures first, with the travel assistance vendor and HS-02 support; home-country recording and claim follow."
+    }
+   ],
+   "countries": {
+    "us": "Report fatalities within 8 hours and inpatient hospitalization, amputation or eye loss within 24 hours; record cases within 7 days on Forms 300/301, keep them 5 years, post the 300A from Feb 1 to Apr 30 and e-submit by Mar 2 where covered.",
+    "us-ca": "Report serious injuries, illnesses or deaths to Cal/OSHA within 8 hours (8 CCR 342), and keep the WVPP violent incident log with post-incident investigation and 5-year records.",
+    "ca": "Ontario: WSIB Form 7 within 3 business days, and critical injuries or deaths need immediate notice to the Ministry, JHSC and any union plus a written report (OHSA s.51; verify timing). BC: report to WorkSafeBC within 3 days, investigate and keep first-aid records.",
+    "in": "Report fatal and serious accidents to the inspector within the OSH Code rule timelines and keep an accident register; labs that count as 'factories' carry stricter reporting and safety-officer duties.",
+    "tw": "Report a death, 3+ injured or 1+ hospitalized to the labor inspection agency within 8 hours (OSH Act Art. 37); bullying complaints from 1 July 2026 need case registration in MOL's system.",
+    "cn": "Report production-safety accidents promptly to the local emergency-management authority (the accident-reporting regulations use a 1-hour rule for the enterprise head; verify) and apply for work-injury recognition within 30 days."
+   },
+   "templates": [],
+   "policies": [
+    "POL-51",
+    "POL-11",
+    "POL-02"
+   ],
+   "related": [
+    "LV-04",
+    "HS-03",
+    "HS-02",
+    "ER-07",
+    "ER-02"
+   ]
+  },
+  {
+   "id": "HS-02",
+   "name": "Crisis response & duty of care",
+   "stage": "Safety",
+   "depth": "standard",
+   "summary": "Protects employees during crises: natural disasters (Taiwan earthquakes and typhoons, California earthquakes and wildfires, Bengaluru flooding), pandemics, civil unrest, violent threats and incidents during travel. Covers detection, crisis team activation, accounting for employees, evacuation and medical support, pay and leave during closures, EAP and after-action review. Good looks like: every affected employee accounted for within hours, clear pay rules, and playbooks that improve after each event.",
+   "owner": "Security (crisis management and travel risk), HRBP (people support), People Ops (rosters), EHS (site emergency plans)",
+   "trigger": "Alert from the travel risk vendor, a government warning (e.g., a Taiwan typhoon work-suspension announcement), a site emergency, a pandemic declaration or a credible threat",
+   "outputs": [
+    "Crisis activation log and decisions",
+    "Affected-employee roster and accounting status",
+    "Evacuation and support actions",
+    "Country pay, leave and remote-work instructions",
+    "EAP and critical-incident support offered",
+    "After-action review and playbook updates"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Travel/mobility vendor",
+    "Case management / hotline",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "Payroll provider"
+   ],
+   "sla": "Crisis team convened within 1 hour; 100% of affected employees accounted for within 4 hours; pay instructions before the next payroll close; after-action review within 2 weeks",
+   "lanes": [
+    "Security",
+    "People Ops",
+    "Employee",
+    "Manager",
+    "HRBP"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Security",
+     "type": "start",
+     "label": "Detect event and alert",
+     "detail": "Security monitors the travel risk vendor, government alerts (Taiwan CWA typhoon and earthquake warnings, local work-suspension announcements), site alarms and threat reports, and triages severity against the crisis playbook.",
+     "sla": "Continuous",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Security",
+     "type": "decision",
+     "label": "Activate crisis team?",
+     "detail": "Activation criteria: people injured or at risk, a site closed, or travellers in an affected area.",
+     "branches": [
+      {
+       "to": "s3",
+       "label": "Yes - people at risk"
+      },
+      {
+       "to": "s9",
+       "label": "No - log and monitor"
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Pull affected-employee roster",
+     "detail": "People Ops pulls employees, contractors and interns by work site and home location from Darwinbox, and travellers from the travel booking feed, with emergency contacts.",
+     "sla": "1 hour",
+     "control": "Roster taken from system data, not spreadsheets.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Confirm safety via check-in",
+     "detail": "Employees answer the mass-notification check-in (SMS, app, email) or call the hotline; managers phone anyone who has not responded.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Manager",
+     "type": "decision",
+     "label": "Everyone accounted for and safe?",
+     "detail": "Managers confirm status for each team member on the roster.",
+     "branches": [
+      {
+       "to": "s7",
+       "label": "Yes"
+      },
+      {
+       "to": "s6",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Security",
+     "type": "task",
+     "label": "Escalate search and support",
+     "detail": "Security escalates to the assistance vendor, local authorities and site leads for evacuation, medical support or search; HRBP contacts next of kin with care, and fatalities move to OF-09.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Apply pay, leave and EAP support",
+     "detail": "HRBP issues country instructions: office closure and remote work, pay during closures (US exempt salary rules, Taiwan typhoon work suspension, China stoppage wage rules), emergency leave, salary advances for displaced employees, and EAP or critical-incident counselling.",
+     "sla": "Before next payroll close",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Security",
+     "type": "task",
+     "label": "Debrief and update playbooks",
+     "detail": "Security runs an after-action review with HR, EHS, IT and site leads within 2 weeks covering roster accuracy, response times and communication gaps, and updates playbooks and drills.",
+     "sla": "2 weeks",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Security",
+     "type": "end",
+     "label": "Event closed",
+     "detail": "The event log is closed and metrics go to the crisis steering group."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Crisis activation and decisions",
+     "R": "Security",
+     "A": "CEO",
+     "C": "CHRO; Legal; EHS",
+     "I": "Board"
+    },
+    {
+     "activity": "Employee accounting",
+     "R": "Manager",
+     "A": "HRBP",
+     "C": "People Ops",
+     "I": "Security"
+    },
+    {
+     "activity": "Traveller assistance and evacuation",
+     "R": "Vendor",
+     "A": "Security",
+     "C": "HRBP; Legal",
+     "I": "Manager"
+    },
+    {
+     "activity": "Pay, leave and closure rules",
+     "R": "HRBP",
+     "A": "Total Rewards",
+     "C": "Payroll; Legal",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Work location, personal phone and emergency contacts validated in Darwinbox twice a year",
+     "type": "detective",
+     "evidence": "Data-quality report and completion rate"
+    },
+    {
+     "id": "C2",
+     "control": "International travel booked through the approved travel channel so travellers can be located",
+     "type": "preventive",
+     "evidence": "Travel compliance report"
+    },
+    {
+     "id": "C3",
+     "control": "Annual crisis exercise and evacuation or earthquake drill at every site",
+     "type": "detective",
+     "evidence": "Exercise report with actions"
+    },
+    {
+     "id": "C4",
+     "control": "Emergency contact and health-status data collected with notice and consent (PIPL, DPDP, PDPA)",
+     "type": "preventive",
+     "evidence": "Privacy notice and consent records"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Employees accounted for within 4 hours",
+     "target": ">= 99%",
+     "why": "Core duty-of-care outcome."
+    },
+    {
+     "name": "Emergency contact completeness",
+     "target": ">= 95% of employees",
+     "why": "Accounting fails without reachable contacts."
+    },
+    {
+     "name": "Trips booked through the approved channel",
+     "target": ">= 95%",
+     "why": "Untracked travellers cannot be found in a crisis."
+    },
+    {
+     "name": "Drill completion",
+     "target": "100% of sites annually",
+     "why": "Plans that are not practised do not work."
+    }
+   ],
+   "considerations": [
+    "Set closure pay rules before an event: US exempt staff must receive the full weekly salary for a week in which they worked and the employer closed, and most companies also pay non-exempt staff for short closures to avoid hardship.",
+    "Taiwan typhoon days: when the local government announces a work suspension, employees cannot be forced to attend or treated as absent; decide in advance whether the day is paid (most MNCs pay) and how those who must work are compensated (verify MOL natural-disaster guidance).",
+    "Hsinchu and the Bay Area are both earthquake zones: include lab gas shut-off, chemical storage and cleanroom evacuation in drills, and keep remote-work kits ready.",
+    "China travel carries device and data risk under the Counter-Espionage Law and Data Security Law; brief travellers on device handling and cross-border data before customer-fab visits.",
+    "Pandemic playbooks should pre-define remote-work triggers, sick-leave extensions and minimal, consent-based health-data collection."
+   ],
+   "variations": [
+    {
+     "when": "Natural disaster at a site",
+     "how": "Close the site, move to remote work, account for everyone, pay under closure rules and offer emergency advances and EAP; Taiwan follows government work-suspension announcements."
+    },
+    {
+     "when": "Traveller incident abroad",
+     "how": "The assistance vendor locates and evacuates, home-country workers' comp or travel medical pays for care, and HRBP supports the family."
+    },
+    {
+     "when": "Pandemic or public health emergency",
+     "how": "Activate remote work, adjust sick leave, use the accommodation process for high-risk employees and limit health-data collection."
+    },
+    {
+     "when": "Violent threat or active incident",
+     "how": "Security and ER-07 lead; California employees may leave under Labor Code 1139, and the WVPP incident log is updated."
+    }
+   ],
+   "countries": {
+    "us": "Exempt employees must receive the full weekly salary for any week in which they worked and the employer closed, and sites with more than 10 employees need a written emergency action plan (29 CFR 1910.38).",
+    "us-ca": "Employees may refuse to report to, or may leave, a workplace during an emergency condition if they reasonably believe it is unsafe and cannot be barred from using phones to seek help (Labor Code 1139); the WVPP covers active threats.",
+    "ca": "Workers may refuse unsafe work under the Ontario OHSA and BC regulations, AODA requires individualized workplace emergency response information for employees with disabilities, and BC requires working-alone procedures.",
+    "in": "Night-shift employees need safe transport, well-lit premises and displayed emergency contacts (keep cab security despite Karnataka's 2026 deregulation), and Bengaluru monsoon flooding should trigger remote-work instructions.",
+    "tw": "When the local government announces a typhoon or disaster work suspension, employees cannot be compelled to work or penalized for absence (verify MOL guidance on pay), and workers may withdraw from imminent danger without adverse treatment (OSH Act Art. 18; verify).",
+    "cn": "Brief travellers on device handling and cross-border data under the Counter-Espionage Law (2023) and Data Security Law; for work stoppages not caused by employees, pay normal wages for the first pay cycle, then at least minimum wage if work is provided or a local living allowance (Interim Provisions on Wage Payment Art. 12; verify local rates)."
+   },
+   "templates": [],
+   "policies": [
+    "POL-41",
+    "POL-51",
+    "POL-11",
+    "POL-46",
+    "POL-38"
+   ],
+   "related": [
+    "HS-01",
+    "ER-07",
+    "MV-02",
+    "OF-09",
+    "LV-01"
+   ]
+  },
+  {
+   "id": "HS-03",
+   "name": "Lab & EHS safety program",
+   "stage": "Safety",
+   "depth": "standard",
+   "summary": "Runs the EHS management system for offices and hardware labs (validation, characterization, reliability, failure analysis, RF and photonics): hazard inventory, written programs, role-based training gates for lab access, inspections, safety committees, health surveillance and an annual review. Covers ESD, lasers, X-ray, high voltage, chemicals and HazCom, reproductive hazards, California IIPP and WVPP, Taiwan occupational health services, and Ontario/BC joint health and safety committees. Good looks like: nobody enters a lab untrained, inspection findings close on time, and customer RBA and ISO 45001 audits pass.",
+   "owner": "EHS (program), lab managers (daily compliance), Security (lab access), Facilities (engineering controls)",
+   "trigger": "Annual EHS cycle, a new lab, equipment or chemical, a hire or transfer into a lab role, a regulatory change or an incident finding",
+   "outputs": [
+    "Site hazard and chemical inventory",
+    "Written programs (IIPP, WVPP, Chemical Hygiene Plan, HazCom/WHMIS, laser, ESD, emergency action)",
+    "Job hazard analyses and PPE assessments",
+    "Training records that gate lab access",
+    "Inspection and committee minutes with corrective actions",
+    "Health examination records and annual management review"
+   ],
+   "systems": [
+    "LMS",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "Document management",
+    "Darwinbox (HRIS)",
+    "BI / people analytics"
+   ],
+   "sla": "Training before lab access; monthly lab inspections; findings closed within 30 days; annual program review",
+   "lanes": [
+    "EHS",
+    "Manager",
+    "Employee",
+    "Security",
+    "Facilities"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "EHS",
+     "type": "start",
+     "label": "Maintain hazard and chemical inventory",
+     "detail": "EHS keeps the site inventory of chemicals (decapsulation acids, solvents), compressed and toxic gases, lasers by class, X-ray sources, high-voltage benches, thermal chambers and cleanroom areas; any new item gets a pre-use hazard review.",
+     "sla": "Annual and on change",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "EHS",
+     "type": "task",
+     "label": "Maintain written programs",
+     "detail": "Keep current: IIPP and WVPP (California), Chemical Hygiene Plan and HazCom (updated for HazCom 2024), WHMIS (Canada), laser safety (ANSI Z136), radiation registrations, ESD (ANSI/ESD S20.20), emergency action and fire plans, the Taiwan OSH plan and the China safety responsibility system.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Complete job hazard analysis",
+     "detail": "The lab manager completes a job hazard analysis and PPE assessment for each lab role, defines required training and flags reproductive-hazard exposures for informed notices.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Complete role-based safety training",
+     "detail": "Employee completes LMS modules (general safety, HazCom/WHMIS, lab-specific, laser or X-ray where relevant) and a practical sign-off; Taiwan new hires get general OSH training (typically 3+ hours) and Ontario workers basic awareness training.",
+     "control": "Completion and practical sign-off recorded in the LMS.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Security",
+     "type": "decision",
+     "label": "Training and sign-off complete?",
+     "detail": "The badge system checks the LMS feed for the role's required training.",
+     "branches": [
+      {
+       "to": "s6",
+       "label": "Yes"
+      },
+      {
+       "to": "s4",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Security",
+     "type": "task",
+     "label": "Grant lab badge access",
+     "detail": "Security grants lab access by role only after the LMS confirms completion, and access expires automatically when refreshers lapse or the employee transfers out.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "EHS",
+     "type": "task",
+     "label": "Inspect labs and run committees",
+     "detail": "EHS and lab managers inspect monthly; the Ontario JHSC and BC JOHSC (20+ workers) meet and inspect on their statutory cadence, and Taiwan occupational health services run to headcount thresholds.",
+     "sla": "Monthly",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Facilities",
+     "type": "task",
+     "label": "Correct hazards and maintain controls",
+     "detail": "Facilities fixes findings and maintains fume hoods, gas detection, eyewash stations and showers, grounding and interlocks, keeping certification records.",
+     "sla": "30 days",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "EHS",
+     "type": "task",
+     "label": "Run annual review and health checks",
+     "detail": "Annual management review of metrics, audits and legal changes aligned to ISO 45001, plus health examinations under local rules (Taiwan periodic exams, China pre-, on- and exit-job exams for exposed staff, India check-ups where prescribed).",
+     "sla": "Annual",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "EHS",
+     "type": "end",
+     "label": "Program reviewed for the year",
+     "detail": "The signed annual review, updated programs and next year's objectives are filed and shared with leadership, and with customers on request (RBA)."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Written programs and annual review",
+     "R": "EHS",
+     "A": "Dept Head (site leader)",
+     "C": "Legal; HRBP",
+     "I": "Manager"
+    },
+    {
+     "activity": "Lab access gating",
+     "R": "Security",
+     "A": "EHS",
+     "C": "Manager",
+     "I": "Employee"
+    },
+    {
+     "activity": "Training assignment and tracking",
+     "R": "EHS",
+     "A": "Manager",
+     "C": "L&D",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Safety committees and inspections",
+     "R": "EHS",
+     "A": "Dept Head (site leader)",
+     "C": "Employee representatives",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Reproductive-hazard and pregnancy adjustments",
+     "R": "Benefits",
+     "A": "EHS",
+     "C": "Legal",
+     "I": "Manager"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Lab badge access blocked until LMS training and practical sign-off are complete",
+     "type": "preventive",
+     "evidence": "Monthly access-to-training reconciliation"
+    },
+    {
+     "id": "C2",
+     "control": "Annual review and sign-off of the IIPP, WVPP, Chemical Hygiene Plan and HazCom program",
+     "type": "detective",
+     "evidence": "Signed review record"
+    },
+    {
+     "id": "C3",
+     "control": "Monthly lab inspections with corrective actions tracked to closure",
+     "type": "detective",
+     "evidence": "Inspection checklists and corrective action log"
+    },
+    {
+     "id": "C4",
+     "control": "Health examinations completed on schedule for exposed staff, and China exit exams completed before separation",
+     "type": "preventive",
+     "evidence": "Health examination register"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Lab access holders with complete training",
+     "target": "100%",
+     "why": "Untrained access is behind most lab injuries."
+    },
+    {
+     "name": "Inspection findings closed within 30 days",
+     "target": ">= 90%",
+     "why": "Measures hazard-correction discipline."
+    },
+    {
+     "name": "Lost-time lab injuries",
+     "target": "0",
+     "why": "Outcome measure for the lab program."
+    },
+    {
+     "name": "Committee meetings held on statutory cadence",
+     "target": "100%",
+     "why": "Legal requirement in Ontario, BC and Taiwan."
+    }
+   ],
+   "considerations": [
+    "Fabless does not mean hazard-free: decapsulation, solvents, compressed gases, lasers, X-ray inspection, thermal chambers and high-voltage benches are real risks, and engineers often work alone late during bring-up, so add working-alone rules.",
+    "Reproductive hazards need informed, non-discriminatory handling: notices, exposure assessment and voluntary reassignment options, never pregnancy-based exclusion (LV-02).",
+    "Cleanroom gowning counts as clothing that restricts heat removal under California's indoor heat standard, which then applies from 82°F; check lab temperature plans.",
+    "Engineers visiting foundry and OSAT cleanrooms in Taiwan and China must complete host-site training and our travel briefing first.",
+    "In India a lab with 20+ workers using power becomes a 'factory' with licensing and safety-officer duties, so plan Bengaluru lab headcount growth with EHS.",
+    "Customers increasingly ask for RBA Code and ISO 45001 evidence; an audit-ready program protects design wins."
+   ],
+   "variations": [
+    {
+     "when": "New lab, class 3B/4 laser or X-ray equipment",
+     "how": "Pre-start hazard review, laser safety officer sign-off, state radiation registration and updated training before first use."
+    },
+    {
+     "when": "Pregnant or nursing employee in a lab",
+     "how": "EHS assessment and LV-02 accommodation, Taiwan maternal health program and China's prohibited-work list, with no forced exclusion."
+    },
+    {
+     "when": "Office-only site without labs",
+     "how": "Scale down to ergonomics, emergency action, violence and harassment programs and first aid."
+    },
+    {
+     "when": "Work at third-party fabs or customer sites",
+     "how": "Host-site rules plus our travel safety briefing, with incidents reported in both systems (HS-01)."
+    }
+   ],
+   "countries": {
+    "us": "OSHA requires a Chemical Hygiene Plan and Chemical Hygiene Officer for labs, HazCom 2024 updates (verify compliance dates), written emergency action and fire prevention plans above 10 employees, and in practice an ANSI Z136 laser program and state X-ray registration.",
+    "us-ca": "A written IIPP (8 CCR 3203) with inspections and training and a site-specific WVPP with annual interactive training and an incident log (Labor Code 6401.9) are mandatory; Cal/OSHA must adopt a general-industry workplace violence standard by 31 Dec 2026, and the indoor heat standard applies at 82°F with cleanroom gowning.",
+    "ca": "Ontario needs a JHSC with certified members at 20+ workers (a representative at 6-19), a written OHS policy reviewed annually and WHMIS training; BC needs a JOHSC at 20+ workers (a representative at 10-19) and a formal OHS program at 50+, or 20+ where there is at least moderate hazard such as a lab.",
+    "in": "Register under the OSH Code at 10+ workers; validation or test labs with 20+ workers using power (40+ without) are 'factories' needing licensing, a safety officer or committee and hazardous-process controls, and annual health check-ups apply to employees aged 40+ where the rules prescribe them.",
+    "tw": "Labs and test areas are high-risk under the OSH management rules, so keep an OSH plan and designated management staff (verify committee and dedicated-unit thresholds, e.g., 100+ workers); 50-299 workers need contracted physician/nurse services and 300+ must employ nurses, with written violence-prevention and maternal-health programs at 100+.",
+    "cn": "The Work Safety Law requires a responsibility system with a safety function or full-time safety staff above 100 employees, and exposed lab or test staff need pre-, on- and exit-job occupational health exams (no termination without the exit exam) plus hazardous-chemical storage and training controls."
+   },
+   "templates": [],
+   "policies": [
+    "POL-51",
+    "POL-45",
+    "POL-36",
+    "POL-11"
+   ],
+   "related": [
+    "HS-01",
+    "LV-02",
+    "LV-04",
+    "PD-06",
+    "HS-02"
+   ]
+  }
+ ]
+}

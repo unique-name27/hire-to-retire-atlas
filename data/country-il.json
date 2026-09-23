@@ -1,0 +1,955 @@
+{
+ "id": "il",
+ "name": "Israel",
+ "shortName": "Israel",
+ "region": "EMEA",
+ "parent": null,
+ "lastVerified": "2026-09",
+ "summary": "Israel has no at-will employment. Every dismissal needs a good-faith pre-dismissal hearing (shimua) and statutory severance of one month's salary per year of service, which is usually pre-funded through Section 14 pension deposits. Dismissing a pregnant employee, one in fertility treatment or one on or just back from maternity leave needs a permit from the Ministry of Labor, and dismissing a reservist during or just after duty needs one from an employment committee. Much of the working law sits in economy-wide extension orders (pension, convalescence pay, travel, reservist protections) that change year to year. The Labor Courts actively enforce overtime, privacy (Isakov) and equality rights. For an engineering R&D center, reserve duty since October 2023 is the dominant operational and legal issue. US-HQ employers most often go wrong by treating engineers as automatically overtime-exempt, skipping the hearing, granting RSUs or ESPP outside a Section 102 trustee plan (which loses capital-gains treatment), and reacting to Histadrut organizing in ways the courts treat as unlawful interference.",
+ "ratings": {
+  "termination": 4,
+  "representation": 3,
+  "privacy": 4,
+  "payTransparency": 2,
+  "workingTime": 4,
+  "leave": 3,
+  "immigration": 2,
+  "changeVelocity": 4
+ },
+ "ratingNotes": {
+  "termination": "No at-will. A pre-dismissal hearing is required by case law, and statutory severance applies to every dismissal after 1 year. Dismissing pregnant, fertility-treatment, maternity-leave and reservist employees needs a permit. The courts award compensation for procedural and good-faith defects.",
+  "representation": "A union representing one-third of a bargaining unit is representative. The courts strictly bar employer interference while employees organize. Histadrut organizing in tech is growing (Nokia ruling June 2025; SAP Israel dispute 2026), and extension orders bind all employers.",
+  "privacy": "Amendment 13 (in force 14 Aug 2025) added PPA fines, DPO duties and wider notice duties. The Data Security Regulations 2017 set security levels. Isakov (2011) and a 2025 National Labor Court camera ruling set strict limits on employee monitoring.",
+  "payTransparency": "There is no pay-range posting law. The Equal Pay Law requires an annual gender pay-gap report from employers with more than 518 employees, and courts are shifting the burden to employers to justify gaps.",
+  "workingTime": "Engineers are covered by the Hours of Work and Rest Law unless they genuinely hold a management or special-trust role. Global overtime must reflect the hours actually worked. Without attendance records the burden of proof shifts to the employer, and work on the weekly rest day needs a permit.",
+  "leave": "Statutory annual leave is modest (12 working days a year for a 5-day week in years 1-5). The heavy items are 26 weeks' maternity leave (NII-paid for up to 15 weeks), reserve duty absences, sick pay with a waiting day, and reservist-spouse leave under the extension orders.",
+  "immigration": "The B-1 expert visa and the HIT fast track (about 6-10 working days) work well for high-tech. The salary floor is twice the average wage: NIS 27,132/month from 1 Jan 2026.",
+  "changeVelocity": "Reservist extension orders are reissued each year (2024, 2025, 2026). Other recent changes: Privacy Amendment 13 (Aug 2025), new Section 102 reporting (2025), NI rate rises (2025), convalescence pay raised to NIS 451.50 (Aug 2026), and a new minimum wage every April."
+ },
+ "keyFacts": [
+  {
+   "label": "Employment model",
+   "value": "No at-will employment. Employment is contractual but overlaid by protective statutes, economy-wide extension orders and implied duties of good faith, and the Labor Courts review dismissals for process (the hearing) and good faith. Tech staff are almost always on personal contracts. A collective agreement applies only where a union is representative (one-third of the bargaining unit) or an extension order extends it."
+  },
+  {
+   "label": "Contracts & offer letters",
+   "value": "The Notice to Employee and Job Candidate (Terms of Employment and Screening and Admission Procedures) Law 2002 requires written notice of the key terms (employer, start date, role, supervisor, pay components, hours and weekly rest, social benefits and fund names, and any collective agreement) within 30 days of hire, and written notice of changes. Market practice is a personal employment agreement containing a Section 14 clause, a global-overtime or special-trust clause, confidentiality, an invention assignment with an explicit s.134 royalty waiver, and restrictive covenants."
+  },
+  {
+   "label": "Probation",
+   "value": "There is no statutory probation. A contractual probation period, commonly 3-6 months, is allowed, but a hearing is still expected before termination (a lighter standard applies) and statutory notice accrues from day 1. Pension contributions start within the first 3-6 months under the extension order (verify retroactivity rules)."
+  },
+  {
+   "label": "Notice (employer)",
+   "value": "Advance Notice for Dismissal and Resignation Law 2001, monthly-paid staff: 1 day per month of service in months 1-6; 6 days plus 2.5 days per month in months 7-12; 1 full month after 12 months. Pay in lieu is allowed. Contracts often give engineers and managers 30-60 days. Dismissals cannot be served during protected periods such as maternity leave or reserve duty."
+  },
+  {
+   "label": "Notice (employee)",
+   "value": "The same statutory notice applies to resignations. If the employee leaves without notice, the employer may offset pay for the unserved notice against final amounts due (s.7). If the employer releases a resigning employee early, it generally must pay the notice period. Paid garden leave is allowed."
+  },
+  {
+   "label": "Statutory severance",
+   "value": "Severance Pay Law 1963: one month's last salary per year of service (pro rata) after 1 year, on dismissal and on qualifying resignations such as health, relocation, material deterioration of conditions, within 9 months after childbirth, or retirement age. It is due on termination, with late-payment compensation after 15 days. Under a Section 14 general approval, monthly severance deposits replace severance for the covered salary: 8.33% gives a full release and 6% releases 72%. It is tax-exempt up to a cap per year of service (NIS 13,750 in 2025; verify the 2026 figure)."
+  },
+  {
+   "label": "Working hours & overtime",
+   "value": "Hours of Work and Rest Law 1951 plus the 2018 extension order: a 42-hour week. Overtime is paid at 125% for the first 2 hours a day and 150% after that, within the overtime permit caps (verify the current caps). Weekly rest is 36 consecutive hours (Shabbat for Jewish employees), and work on it pays at least 150% and needs a Ministry permit. The s.30(a)(5) management/special-trust exemption is read narrowly. Global overtime is lawful only if it reflects the hours actually worked, and payslips must show hours."
+  },
+  {
+   "label": "Minimum wage",
+   "value": "NIS 6,443.85/month from 1 Apr 2026: NIS 35.40/hour at 182 hours, or NIS 297.40/day for a 5-day week. It is updated each April to 47.5% of the average wage (Minimum Wage Law 1987). It matters mainly for interns and support staff."
+  },
+  {
+   "label": "Annual leave",
+   "value": "Annual Leave Law 1951 (as amended 2016), 5-day week: 12 working days a year in years 1-5 (16 calendar days), 14 in year 6 and 15 in year 7, rising to 20. Leave must include a block of at least 7 consecutive days, unused days can generally be carried into the next 2 years, and unused leave is paid out on exit. Market practice in high-tech is 18-25 days. The reservist extension orders let reservists carry leave forward without employer consent."
+  },
+  {
+   "label": "Public holidays",
+   "value": "Jewish holidays are official rest days (Law and Administration Ordinance s.18A): Rosh Hashanah (2 days), Yom Kippur, Sukkot, Simchat Torah, Pesach (first and seventh days) and Shavuot, plus Independence Day. Monthly staff keep full pay, and under the extension order hourly and daily staff get 9 paid holidays after 3 months. Non-Jewish employees may take the holidays of their own religion instead. Election day is a paid rest day."
+  },
+  {
+   "label": "Sick leave",
+   "value": "Sick Pay Law 1976: accrues at 1.5 days per month up to 90 days. Day 1 is unpaid, days 2-3 are paid at 50% and day 4 onward at 100%, against a medical certificate. The sick balance also covers a child's illness (8 days a year, more for single parents) and a parent's or spouse's illness (6 days a year). There is no payout on exit, and dismissal during paid sick leave is prohibited."
+  },
+  {
+   "label": "Parental leave",
+   "value": "Women's Employment Law 1954: 26 weeks' maternity leave (15 weeks if under 12 months' seniority), of which up to 15 weeks are paid by the NII maternity allowance depending on contribution history. The partner can share the leave from week 6 and take one overlapping week. Dismissal during pregnancy (6+ months' seniority) or fertility treatment needs a permit from the Ministry of Labor's Commissioner for Women's Employment. Dismissal or a cut in role or hours is barred during the leave and for 60 days after return. A nursing hour and a father's 5-day absence around the birth also apply."
+  },
+  {
+   "label": "Social insurance / mandatory benefits",
+   "value": "NII plus health tax, 2026: employees pay 4.27% up to NIS 7,703/month and 12.17% on the part above, up to the NIS 51,910 ceiling; employers pay 4.51% and 7.6%. Mandatory pension under the extension order: employee 6%, employer 6.5% plus 6% (or 8.33%) for severance. Also mandatory: convalescence pay (NIS 451.50/day for 2026), travel reimbursement (up to NIS 22.60/day), and salary continuation during reserve duty, reimbursed by NII."
+  },
+  {
+   "label": "Payroll frequency & final pay",
+   "value": "Monthly salary must be paid by the 9th of the following month (Wage Protection Law 1958), and late wages attract heavy compensation. A detailed payslip is mandatory, showing hours, pension and leave balances. Final salary is due on the normal payday. Severance is due at termination, with late compensation after 15 days. Pension and Section 14 funds are released with Form 161 and a release letter, and unused leave and convalescence pay are paid out."
+  },
+  {
+   "label": "Employee representation",
+   "value": "Collective Agreements Law 1957: a union with at least one-third of the employees in a bargaining unit is representative, and the employer must bargain in good faith. The courts forbid employer interference during organizing (Pelephone, 2013). Histadrut organizing in tech has grown: the National Labor Court upheld representation at Nokia (June 2025), and SAP Israel's 2026 attempt to exit its collective agreements triggered a dispute. There are no works councils."
+  },
+  {
+   "label": "Data privacy law",
+   "value": "Protection of Privacy Law 1981, as amended by Amendment 13 (in force 14 Aug 2025): expanded notice duties, narrower database registration, DPOs for some organisations, PPA administrative fines and statutory damages. The Data Security Regulations 2017 add security levels and severe-incident reporting, and the Transfer Abroad Regulations 2001 govern transfers. Monitoring follows Isakov (National Labor Court 2011): a written policy, legitimacy, proportionality, transparency, and no access to private mailboxes."
+  },
+  {
+   "label": "Record retention",
+   "value": "Keep payroll, attendance and leave records at least 7 years, the general limitation period for wage claims. Discrimination claims can be brought for 5 years (since Dec 2024), and tax records follow the Income Tax Ordinance bookkeeping rules (verify the period). Without attendance records, the employer bears the burden on overtime claims of up to 15 h/week and 60 h/month (Wage Protection Law s.26B)."
+  },
+  {
+   "label": "Non-competes & IP",
+   "value": "A non-compete is enforced only to protect a legitimate interest such as trade secrets, special training, specific consideration or a fiduciary duty (Checkpoint v. Frenkel, National Labor Court 1999), and courts rarely enforce a bare non-compete against an engineer. The Commercial Torts Law 1999 protects trade secrets. Service inventions belong to the employer (Patents Law s.132), but s.134 compensation can be claimed before the Compensation and Royalties Committee unless waived, so use an explicit waiver. The employer owns copyright in works made in the course of employment (Copyright Act 2007 s.34)."
+  },
+  {
+   "label": "Language requirements",
+   "value": "Hebrew is the working legal language. English contracts are common and valid if the employee understands them, but the statutory notices, the sexual-harassment bylaw and workplace postings should be in Hebrew, with Arabic or another language where employees need it. Labor Court proceedings are in Hebrew."
+  },
+  {
+   "label": "Regulator(s)",
+   "value": "Ministry of Labor (Wage Enforcement Administration, Commissioner for Women's Employment Law, Occupational Safety and Health Administration); Equal Employment Opportunities Commission; Employment Committee (reservist dismissal permits); National Insurance Institute (Bituach Leumi); Israel Tax Authority (Section 102 plan approvals); Privacy Protection Authority; Population and Immigration Authority; Israel Innovation Authority (R&D grants); Home Front Command (emergency rules); regional Labor Courts and the National Labor Court."
+  }
+ ],
+ "mandatoryPolicies": [
+  {
+   "name": "Written notice of employment terms",
+   "requirement": "Give every employee written notice of their key terms within 30 days of starting and written notice of any change. Candidates put through screening processes have rights to information about them. Missing notices draw administrative fines and weaken the employer's position in litigation.",
+   "source": "Notice to Employee and Job Candidate (Terms of Employment and Screening and Admission Procedures) Law 2002; Increased Enforcement of Labor Laws Law 2011",
+   "level": "required"
+  },
+  {
+   "name": "Sexual harassment prevention bylaw (takanon) and commissioner",
+   "requirement": "Employers with 25+ employees must adopt a bylaw based on the regulations' template, post it and give it to employees. Every employer must appoint a trained commissioner to receive complaints, investigate promptly, protect complainants from retaliation and act on the findings. Amendment 16 (Jan 2025) extended duties to employees of service contractors.",
+   "source": "Prevention of Sexual Harassment Law 1998 s.7; Prevention of Sexual Harassment (Employer Obligations) Regulations 1998",
+   "level": "required"
+  },
+  {
+   "name": "Mandatory pension enrolment",
+   "requirement": "Enrol every employee in a pension plan: employee 6%, employer 6.5% plus 6% severance (8.33% under a full Section 14 arrangement), on at least the salary up to the average wage (market practice is full salary). Contributions start within 3-6 months of hire depending on existing fund membership. Deposit and report to the clearing house on time.",
+   "source": "Extension Order for Comprehensive Pension Insurance in the Economy (2008, as amended 2016-2017)",
+   "level": "required"
+  },
+  {
+   "name": "Section 14 severance arrangement",
+   "requirement": "Adopt the Section 14 general approval in writing from the start of employment so the monthly severance deposits replace statutory severance (8.33% gives a full release) and funds are released to the employee on exit. The contract should say so explicitly.",
+   "source": "Severance Pay Law 1963 s.14; General Approval on Employer Payments to Pension Funds (1998, as amended)",
+   "level": "expected"
+  },
+  {
+   "name": "Working hours, attendance recording and overtime",
+   "requirement": "Record the hours of all employees who are not validly exempt, pay overtime or a genuine global-overtime supplement, keep within the permit caps, and get permits for work on the weekly rest day. Document the basis for any special-trust exemption.",
+   "source": "Hours of Work and Rest Law 1951 ss.2, 16, 12, 30(a)(5); Wage Protection Law 1958 ss.24, 26B",
+   "level": "required"
+  },
+  {
+   "name": "Payslip and wage payment",
+   "requirement": "Pay monthly salary by the 9th of the following month, issue a detailed payslip (hours, overtime, deductions, pension, leave and sick balances), and make only permitted deductions. Late wages carry late-payment compensation and administrative fines.",
+   "source": "Wage Protection Law 1958 ss.9, 17, 24, 25",
+   "level": "required"
+  },
+  {
+   "name": "Convalescence pay and travel reimbursement",
+   "requirement": "After 1 year of service, pay convalescence pay by seniority (5-10 days a year) at NIS 451.50/day for 2026. Reimburse commuting at public-transport cost, up to NIS 22.60 per working day, unless the employee lives within 500 m.",
+   "source": "Extension orders on convalescence pay (rate update published 18 Aug 2026) and on employer participation in travel expenses (2016)",
+   "level": "required"
+  },
+  {
+   "name": "Equal opportunity and non-discrimination",
+   "requirement": "No discrimination in hiring, conditions, promotion, training, dismissal or severance on grounds including sex, sexual orientation, personal status, pregnancy, fertility treatment, parenthood, age, race, religion, nationality, place of residence, views, and reserve service (the employee's or a spouse's). Advertisements must be neutral. Claims can be brought for 5 years.",
+   "source": "Employment (Equal Opportunities) Law 1988 ss.2-4, 9",
+   "level": "required"
+  },
+  {
+   "name": "Gender pay-gap report",
+   "requirement": "Employers with more than 518 employees in Israel must prepare an annual report on the average pay gap by gender and employee group, and share it with employees. Check the Israeli entity headcount each year.",
+   "source": "Equal Pay for Female and Male Employees Law 1996 (Amendment 2020)",
+   "level": "required"
+  },
+  {
+   "name": "Employment of persons with disabilities",
+   "requirement": "Employers with 100+ employees must work toward appropriate representation of employees with significant disabilities (3%) and appoint a person in charge of their employment (verify the current extension-order terms). All employers must make reasonable accommodations in recruitment and employment.",
+   "source": "Equal Rights for Persons with Disabilities Law 1998 s.8-9; Extension Order for Increasing Employment of Persons with Disabilities (2014)",
+   "level": "required"
+  },
+  {
+   "name": "Reservist protections",
+   "requirement": "Do not dismiss a reservist, cut their role or pay, or put them on unpaid leave during reserve service or for 30 days after (60 days if they served 60+ cumulative days in the year, under the 2024-2026 extension orders) without an Employment Committee permit. Do not discriminate because of the employee's or a spouse's service. Keep paying salary and claim reimbursement from NII.",
+   "source": "Discharged Soldiers (Reinstatement in Employment) Law 1949; Reserve Service Law 2008; Employment (Equal Opportunities) Law 1988; Reservists Extension Order 2026 (signed 28 Apr 2026)",
+   "level": "required"
+  },
+  {
+   "name": "Pregnancy, fertility-treatment and maternity protection",
+   "requirement": "Get a permit from the Commissioner for Women's Employment Law before dismissing, or cutting the role or pay of, an employee who is pregnant (6+ months' seniority) or in fertility treatment. Do not dismiss or cut the role or hours of anyone during maternity or parental leave or for 60 days after. Allow absence for pregnancy checks and the daily nursing hour.",
+   "source": "Women's Employment Law 1954 ss.6, 7, 9",
+   "level": "required"
+  },
+  {
+   "name": "Employee privacy notice and data security",
+   "requirement": "Give notice at collection (Amendment 13 content). Keep a database definitions document, a data security procedure, access controls and periodic audits at the database's security level, report severe incidents to the PPA, and assess whether a DPO is needed.",
+   "source": "Protection of Privacy Law 1981 ss.11, 17 (Amendment 13, 2025); Protection of Privacy (Data Security) Regulations 2017",
+   "level": "required"
+  },
+  {
+   "name": "IT, email and camera monitoring policy",
+   "requirement": "Lawful monitoring needs a clear written policy communicated in advance, stated purposes, proportionality, and separate mailboxes for professional and private use. Private webmail must not be accessed. Cameras need a documented purpose and privacy assessment and must not cover rest areas.",
+   "source": "Isakov-Inbar v. State of Israel (National Labor Court 2011); National Labor Court 41179-01-24 (2025); PPA Guideline on workplace surveillance (2017)",
+   "level": "expected"
+  },
+  {
+   "name": "Whistleblower protection",
+   "requirement": "Do not retaliate against employees who report offences or improper conduct in good faith. Post the prescribed notice of employee rights (required at 25+ employees; verify) and run an internal reporting channel (also needed for the SOX/SEC parent).",
+   "source": "Protection of Workers (Exposure of Offences of Unethical Conduct and Improper Administration) Law 1997",
+   "level": "required"
+  },
+  {
+   "name": "Occupational safety programme",
+   "requirement": "Have a written safety management plan where the regulations require one (verify the threshold for office and R&D sites), safety trustees or a committee at the prescribed headcounts, a risk assessment, first aid, safety training, and a lab safety programme for hardware, laser and chemical areas.",
+   "source": "Organization of Supervision of Work Law 1954; Safety Management Plan Regulations 2013; Safety Committees and Safety Trustees Regulations",
+   "level": "required"
+  },
+  {
+   "name": "Emergency and Home Front Command procedures",
+   "requirement": "Maintain a shelter/protected-space plan, follow Home Front Command activity levels, and do not dismiss or penalise employees who are absent because of Home Front Command instructions (including parents of young children when schools close).",
+   "source": "Protection of Employees in Emergency Law 2006 (verify title); Civil Defence Law 1951",
+   "level": "required"
+  },
+  {
+   "name": "Pre-dismissal hearing and disciplinary procedure",
+   "requirement": "Before any dismissal or material disciplinary step: written invitation stating the reasons, access to the relevant material, reasonable preparation time, the right to bring a representative, an open-minded decision and minutes. Omitting it exposes the employer to compensation claims.",
+   "source": "National Labor Court case law (duty of good faith and natural justice)",
+   "level": "expected"
+  },
+  {
+   "name": "Section 102 equity plan and trustee",
+   "requirement": "File the Israeli sub-plan with the Israel Tax Authority at least 30 days before the first grant, appoint an approved trustee, deposit grants on time, and file the new electronic quarterly (within 120 days of quarter-end) and annual (30 Apr) reports from 2025.",
+   "source": "Income Tax Ordinance s.102; Income Tax Rules (Tax Benefits in Share Issuance to Employees) 2003; ITA reporting rules effective 1 Jan 2025",
+   "level": "expected"
+  },
+  {
+   "name": "Invention assignment and royalty waiver",
+   "requirement": "Every employment agreement should confirm employer ownership of service inventions and copyright, require prompt invention disclosure, and include an explicit waiver of s.134 compensation that names the section, to limit Compensation and Royalties Committee claims.",
+   "source": "Patents Law 1967 ss.131-134; Copyright Act 2007 s.34",
+   "level": "expected"
+  },
+  {
+   "name": "Contractor and manpower-agency compliance",
+   "requirement": "Check contractor compliance for guarding, cleaning and catering services (client liability, with contracts updated from Jan 2025). Agency-placed workers are generally treated as the client's employees after 9 months, and service contractors' staff are covered by the sexual-harassment duties.",
+   "source": "Employment of Workers by Manpower Contractors Law 1996 s.12A; Increased Enforcement of Labor Laws Law 2011 ss.25-26",
+   "level": "required"
+  },
+  {
+   "name": "Anti-bribery",
+   "requirement": "Keep a policy, training, gifts and hospitality rules, and controls against bribing Israeli or foreign public officials (in addition to the FCPA).",
+   "source": "Penal Law 1977 ss.290-291A",
+   "level": "expected"
+  },
+  {
+   "name": "Remote and hybrid work policy",
+   "requirement": "No statute governs remote work. Set eligibility, hours reporting (overtime rules still apply), expense and travel treatment, equipment, data security, monitoring limits and home-office safety in writing.",
+   "source": "Hours of Work and Rest Law 1951; Protection of Privacy Law 1981; National Labor Court case law",
+   "level": "expected"
+  }
+ ],
+ "stages": {
+  "hiring": [
+   {
+    "req": "Non-discriminatory ads, screening and interviews",
+    "detail": "Keep job ads gender-neutral. Do not ask about pregnancy, family plans, fertility treatment, age, religion, place of residence, political views, or reserve-duty obligations or unit (the employee's or a spouse's). Train interviewers, because a rejected candidate can sue without proving damage and the employer may have to show the decision was based on relevant grounds.",
+    "cite": "Employment (Equal Opportunities) Law 1988 ss.2, 4, 9, 10"
+   },
+   {
+    "req": "Candidate screening disclosures",
+    "detail": "Tell candidates what screening will be used (assessment centres, placement institutes, online tests) and handle requests for information about their results. Collect only data relevant to the role, and give an Amendment 13 privacy notice at collection.",
+    "cite": "Notice to Employee and Job Candidate (Terms of Employment and Screening and Admission Procedures) Law 2002; Protection of Privacy Law s.11"
+   },
+   {
+    "req": "No criminal-record demands",
+    "detail": "Employers may not ask candidates to produce a police record extract (te'udat yosher) unless a specific law authorises it for the role. Build background checks around education and employment verification with consent, not criminal checks.",
+    "cite": "Criminal Register and Rehabilitation of Offenders Law 1981"
+   },
+   {
+    "req": "Medical, genetic and polygraph limits",
+    "detail": "Genetic testing cannot be required. Medical questions must be limited to fitness for the specific role, with reasonable accommodation for candidates with disabilities in admission tests. Polygraph tests are permissible only with genuine, freely given consent and are unsuitable as a hiring condition.",
+    "cite": "Genetic Information Law 2000; Equal Rights for Persons with Disabilities Law 1998 s.8; Labor Court case law"
+   },
+   {
+    "req": "Offer and employment agreement",
+    "detail": "Use an Israeli-law employment agreement covering: Section 14 severance arrangement, salary components (base vs global overtime), special-trust status only where genuine, pension and keren hishtalmut rates, notice, confidentiality, invention assignment with an explicit s.134 waiver, and restrictive covenants tied to legitimate interests. Deliver the statutory notice of terms within 30 days.",
+    "cite": "Notice to Employee Law 2002; Severance Pay Law s.14; Patents Law s.134"
+   },
+   {
+    "req": "Foreign experts (B-1 / HIT)",
+    "detail": "Sponsor foreign engineers through the B-1 expert route or the HIT high-tech track (about 6-10 working days). Pay at least twice the average wage (NIS 27,132/month from 1 Jan 2026), provide health insurance and meet housing rules. HIT spouses can get open work authorisation, and total stay is generally limited to 63 months.",
+    "cite": "Foreign Workers Law 1991; Entry into Israel Law 1952; Population and Immigration Authority expert procedures"
+   },
+   {
+    "req": "Export-control screening",
+    "detail": "Releasing US-origin controlled technology to Israeli nationals in Israel is a reexport to Israel; releasing it to third-country nationals, including dual nationals from D:5 countries, may be a deemed reexport needing a licence. Israel is not in the most favourable EAR country groups, so classify advanced-computing and semiconductor technology before provisioning access (verify current country-group status).",
+    "cite": "US EAR 15 CFR 734.14, Part 740 Supp. 1; Israel Import and Export Order (Control of Dual-Purpose Goods, Services and Technology) 2006"
+   },
+   {
+    "req": "Agency and manpower contractor use",
+    "detail": "Workers placed by a manpower agency for more than 9 months are generally deemed the client's employees. Prefer direct hire for ongoing engineering roles, and give contractors' staff equal sexual-harassment protection.",
+    "cite": "Employment of Workers by Manpower Contractors Law 1996 s.12A; Prevention of Sexual Harassment Law (Amendment 16, 2025)"
+   }
+  ],
+  "onboarding": [
+   {
+    "req": "Tax card (Form 101)",
+    "detail": "Collect Form 101 at hire and each January (credit points, other income, residency). Without it, withhold at the maximum rate. Handle new immigrants' and returning residents' credits.",
+    "cite": "Income Tax Ordinance; Income Tax (Deductions from Salary) Regulations"
+   },
+   {
+    "req": "Pension, severance and study-fund enrolment",
+    "detail": "Enrol the employee in their chosen pension fund (or the default fund) within the extension-order timeline, sign the Section 14 annex, and open a keren hishtalmut (market practice: 7.5% employer, 2.5% employee). Report through the pension clearing house.",
+    "cite": "Comprehensive Pension Extension Order; Severance Pay Law s.14; Supervision of Financial Services (Provident Funds) Law 2005"
+   },
+   {
+    "req": "Statutory notice of terms",
+    "detail": "Deliver the written notice of employment terms within 30 days (it can be combined with the signed agreement if it covers all the prescribed items), and deliver notices of later changes.",
+    "cite": "Notice to Employee Law 2002 ss.1-3"
+   },
+   {
+    "req": "Sexual-harassment bylaw and commissioner",
+    "detail": "Give every new hire the bylaw and the commissioner's contact details, include them in induction training, and keep acknowledgments. Brief managers on their reporting duty.",
+    "cite": "Prevention of Sexual Harassment Law s.7; Regulations 1998"
+   },
+   {
+    "req": "Privacy notice and monitoring policy",
+    "detail": "Provide the Amendment 13 employee privacy notice (controller identity, purposes, whether providing data is mandatory, rights) and the IT, email and camera policy before monitoring begins. Get acknowledgment, but do not rely on consent as the basis for monitoring.",
+    "cite": "Protection of Privacy Law s.11 (Amendment 13); Isakov (National Labor Court 2011)"
+   },
+   {
+    "req": "IP, confidentiality and equity documents",
+    "detail": "Sign the invention assignment and confidentiality agreement (including a prior-inventions list and an explicit s.134 waiver). For equity recipients, sign the Section 102 undertaking in the Israeli sub-plan, which trustee grants require.",
+    "cite": "Patents Law ss.131-134; Income Tax Ordinance s.102"
+   },
+   {
+    "req": "Safety and emergency induction",
+    "detail": "Give safety training on hazards (labs, lasers, chemicals, ESD, electrical) and a briefing on the site's protected spaces and Home Front Command alert procedures. Record who attended.",
+    "cite": "Organization of Supervision of Work Law 1954; Organization of Supervision of Work (Provision of Information and Training to Employees) Regulations 1999"
+   },
+   {
+    "req": "Reservist status and planning",
+    "detail": "Without discriminating, invite employees to tell HR about expected reserve service so HR can plan coverage, pay continuation and NII reimbursement. Do not use it in any hiring or promotion decision.",
+    "cite": "Reserve Service Law 2008; Employment (Equal Opportunities) Law 1988"
+   }
+  ],
+  "payAndPayroll": [
+   {
+    "req": "Pay on time",
+    "detail": "Monthly salary is due at the end of the month and must be paid by the 9th of the next month. Late wages accrue late-payment compensation at punitive rates, and repeated failures bring administrative fines.",
+    "cite": "Wage Protection Law 1958 ss.9, 17"
+   },
+   {
+    "req": "Detailed payslip with hours",
+    "detail": "The payslip must show every pay component, hours worked and overtime, deductions, employer pension and study-fund contributions, and leave and sick balances. Without attendance records, an overtime claim of up to 60 h/month is presumed.",
+    "cite": "Wage Protection Law ss.24, 26B"
+   },
+   {
+    "req": "Overtime and global overtime",
+    "detail": "Non-exempt engineers get 125% for the first 2 overtime hours a day and 150% after. A global overtime supplement must be separately stated, reasonable, and reconciled against actual hours. Pay any shortfall, because courts disregard labels that do not reflect reality.",
+    "cite": "Hours of Work and Rest Law 1951 s.16; case law"
+   },
+   {
+    "req": "Minimum wage floor",
+    "detail": "Base pay excluding overtime, travel and other excluded items must meet NIS 6,443.85/month from 1 Apr 2026 (NIS 35.40/hour). This is relevant for interns, students and support staff.",
+    "cite": "Minimum Wage Law 1987"
+   },
+   {
+    "req": "Convalescence pay",
+    "detail": "After 1 year, pay per seniority (5 days in year 1, 6 in years 2-3, 7 in years 4-10, up to 10) at NIS 451.50/day for the 2026 year. The rate update was published on 18 Aug 2026, so pay the differences retroactively for 2026. On exit, pay any balance due, including up to 2 prior years.",
+    "cite": "Convalescence pay extension order (private sector), 2026 update"
+   },
+   {
+    "req": "Travel reimbursement",
+    "detail": "Reimburse the cost of commuting by public transport for days actually worked, up to NIS 22.60/day (or the cheaper monthly pass), unless the employee lives within 500 m. It is taxable and can be built into salary only with an advance written agreement that still meets minimum wage.",
+    "cite": "Extension order on employer participation in travel expenses (2016)"
+   },
+   {
+    "req": "Withholding and monthly filings",
+    "detail": "Withhold income tax, NII and health tax. NII 2026 employee share is 4.27% up to NIS 7,703 and 12.17% up to NIS 51,910; employer share is 4.51% and 7.6%. The top marginal rate including the 3% surtax is 50% above NIS 721,560/yr. Remit and file Form 102 by the 15th of the following month.",
+    "cite": "Income Tax Ordinance; National Insurance Law 1995; NII 2026 rate table"
+   },
+   {
+    "req": "Reserve duty pay",
+    "detail": "Keep paying reservists' salary on the normal payday and claim reimbursement from NII (tagmul miluim, up to the daily maximum) with Form 3010. From 1 Apr 2026, private employers also receive 20% of the daily benefit toward social-benefit costs (NI Law Amendment 265).",
+    "cite": "National Insurance Law Part 3 (reserve duty benefits); NI Law Amendment 265 (2026)"
+   },
+   {
+    "req": "Permitted deductions only",
+    "detail": "Deduct only items permitted by law or with written consent for specific purposes (e.g., employee loans, meal cards). Recover advances or notice shortfall from final pay only where the law or the contract clearly permits.",
+    "cite": "Wage Protection Law s.25; Advance Notice Law s.7"
+   }
+  ],
+  "timeAndLeave": [
+   {
+    "req": "Annual leave administration",
+    "detail": "Apply the seniority table (12 working days for a 5-day week in years 1-5, rising to 20), require a 7-consecutive-day block each year, track carry-over (up to 2 further years), and pay out unused leave on exit. Reservists and wartime circumstances allow carry-forward without employer consent under the extension orders.",
+    "cite": "Annual Leave Law 1951; Reservists Extension Orders 2024-2026"
+   },
+   {
+    "req": "Sick leave and family illness",
+    "detail": "Accrue 1.5 days a month (cap 90). Pay day 1 at 0%, days 2-3 at 50% and day 4 onward at 100% against a medical certificate. Allow use of the balance for a child's illness (8 days a year, more for single parents) and for a spouse's or parent's illness (6 days).",
+    "cite": "Sick Pay Law 1976; Sick Pay (Absence Due to Child's Illness) Law 1993; related parent and spouse laws"
+   },
+   {
+    "req": "Maternity, partner and nursing rights",
+    "detail": "Allow 26 weeks' maternity leave (NII-paid for up to 15 weeks), the partner's shared and overlapping options, absence for pregnancy checks and fertility treatment, the daily nursing hour after return, and the father's absence of up to 5 days around the birth. Stop the notice clock during protected periods.",
+    "cite": "Women's Employment Law 1954 ss.6-7; National Insurance Law (maternity allowance)"
+   },
+   {
+    "req": "Reserve duty absence",
+    "detail": "Reserve duty is a protected absence and does not break continuity for seniority rights. Update rosters, keep role and pay unchanged, and apply the post-duty dismissal protection (30 days by statute; 60 days if the employee served 60+ cumulative days in the calendar year, under the 2026 extension order).",
+    "cite": "Discharged Soldiers (Reinstatement in Employment) Law 1949; Reservists Extension Order 2026"
+   },
+   {
+    "req": "Reservists' spouses",
+    "detail": "Spouses (with a child under 14, a disabled dependant or an ill parent) of reservists who served 31+ days in the year get 2-8 days of paid absence and one hour a day of absence during the service. Spouse protections against dismissal and discrimination also apply.",
+    "cite": "Reservists Extension Orders 2025-2026; Employment (Equal Opportunities) Law 1988"
+   },
+   {
+    "req": "Holidays and weekly rest",
+    "detail": "Publish the annual holiday calendar (Jewish holidays and Independence Day). Let non-Jewish employees choose their own religion's holidays, treat election day as a paid rest day, and get a permit before scheduling Jewish employees on Shabbat or holidays (e.g., for lab or tape-out support).",
+    "cite": "Law and Administration Ordinance s.18A; Hours of Work and Rest Law ss.7, 9, 12"
+   },
+   {
+    "req": "Emergency absences",
+    "detail": "Employees absent in line with Home Front Command instructions (e.g., a parent staying home with a young child during school closures, or areas under restrictions) cannot be dismissed for that reason. Follow government compensation schemes for wages paid during emergencies (verify each event's scheme).",
+    "cite": "Protection of Employees in Emergency Law 2006 (verify title); Property Tax and Compensation Fund Law 1961 (compensation schemes)"
+   }
+  ],
+  "benefits": [
+   {
+    "req": "Mandatory pension",
+    "detail": "Employee 6%, employer 6.5% pension plus 6% severance (8.33% for a full Section 14 arrangement). High-tech employers usually contribute on full salary and include disability (ovdan kosher avoda) cover in the pension or a managers' policy.",
+    "cite": "Comprehensive Pension Extension Order"
+   },
+   {
+    "req": "Section 14 arrangement",
+    "detail": "Use 8.33% severance deposits on the full salary so the funds fully replace statutory severance and are released on exit. Top up where the deposits covered only part of the salary (e.g., components excluded from the pension base).",
+    "cite": "Severance Pay Law s.14; General Approval"
+   },
+   {
+    "req": "Keren hishtalmut (study fund)",
+    "detail": "Market practice in high-tech: 7.5% employer and 2.5% employee. The employer contribution is tax-free up to the recognised salary ceiling (about NIS 15,712/month; verify), and the fund is withdrawable tax-free after 6 years. Many employers contribute on full salary, and the excess is taxed as a benefit.",
+    "cite": "Income Tax Ordinance study-fund exemption (verify ceiling); market practice"
+   },
+   {
+    "req": "Supplementary health, meals and car",
+    "detail": "Market practice: group supplementary health or life insurance, meal cards (Cibus/10bis), leased cars or car allowances for seniors (the car benefit 'shovi shimush' is taxed), and wellness budgets. Report taxable benefits monthly.",
+    "cite": "Income Tax Ordinance s.2(2); Income Tax (Value of Vehicle Use) Regulations"
+   },
+   {
+    "req": "Section 102 equity",
+    "detail": "Grant RSUs and options under an ITA-approved Section 102 capital-gains trustee sub-plan: the Israeli-resident employee pays 25% on gains after a 24-month holding from grant, while the grant-date value (30-day average for listed shares) is taxed as salary. ESPP generally needs a specific tax ruling. Grants outside the trustee route are taxed as salary at up to 50% plus NI.",
+    "cite": "Income Tax Ordinance s.102, s.3(i); 2003 Rules"
+   },
+   {
+    "req": "Reservist support (market practice)",
+    "detail": "Many high-tech employers top up reservists (grants, family support, extended equity vesting treatment or bonus proration protection) beyond the statutory salary continuation. Document eligibility so that other groups are not treated unequally.",
+    "cite": "Market practice; Reserve Service Law 2008"
+   }
+  ],
+  "performanceAndConduct": [
+   {
+    "req": "Structured performance management",
+    "detail": "Document expectations, feedback and a reasonable improvement period (a PIP). Courts review whether a performance dismissal followed a fair, good-faith process and was not a pretext, especially for protected employees such as older workers, parents and reservists.",
+    "cite": "Labor Court good-faith case law; Employment (Equal Opportunities) Law"
+   },
+   {
+    "req": "Disciplinary hearing",
+    "detail": "Before a dismissal or serious sanction, send a written invitation stating the allegations, allow reasonable time to prepare and access to material, allow a representative, keep minutes, and decide only after considering the response.",
+    "cite": "National Labor Court case law (shimua)"
+   },
+   {
+    "req": "Sexual-harassment complaints",
+    "detail": "The commissioner investigates promptly and reports to management, which decides and acts within the regulatory timelines (verify). Protect complainants and witnesses from retaliation. 2025 rulings extend the duty to third-party harassment and require conduct rules for social events.",
+    "cite": "Prevention of Sexual Harassment Law ss.7-8; Regulations 1998; Labor Court 2025 rulings"
+   },
+   {
+    "req": "Whistleblower protection",
+    "detail": "Treat good-faith reports as protected; retaliation can lead to reinstatement and punitive damages. Route reports through a channel that also meets SOX/SEC needs.",
+    "cite": "Protection of Workers (Exposure of Offences) Law 1997"
+   },
+   {
+    "req": "Monitoring and investigations",
+    "detail": "Run investigations under the written monitoring policy. Mailbox reviews should be proportionate and targeted, never access private webmail, and cameras need a documented purpose and assessment. Evidence gathered unlawfully may be excluded.",
+    "cite": "Isakov (National Labor Court 2011); National Labor Court 41179-01-24 (2025)"
+   },
+   {
+    "req": "Disability accommodation",
+    "detail": "Make genuine accommodation efforts and document the alternatives considered before any adverse action. The employer bears the burden of showing a dismissal was unrelated to disability.",
+    "cite": "Equal Rights for Persons with Disabilities Law s.8; National Labor Court 7843-10-24 (2025)"
+   },
+   {
+    "req": "Union neutrality",
+    "detail": "During an organizing campaign, managers must not interfere, express opposition, promise benefits or make changes aimed at deterring organizing. Protect union activists. Route all union matters through labor counsel.",
+    "cite": "Collective Agreements Law 1957 s.33J; Pelephone (National Labor Court 2013)"
+   }
+  ],
+  "termination": [
+   {
+    "req": "Pre-dismissal hearing",
+    "detail": "Hold a documented hearing for every dismissal, including redundancy and performance cases. A missing or sham hearing typically costs 1-3+ months' salary in compensation, and more in aggravated cases.",
+    "cite": "National Labor Court case law"
+   },
+   {
+    "req": "Notice or pay in lieu",
+    "detail": "Give written notice per the Advance Notice Law or the contract, whichever is longer. Notice cannot be given during protected absences (maternity leave, reserve duty, paid sick leave).",
+    "cite": "Advance Notice for Dismissal and Resignation Law 2001"
+   },
+   {
+    "req": "Severance and fund release",
+    "detail": "Pay one month's salary per year of service, net of Section 14 fund balances, and release the pension and severance funds with Form 161 and a release letter. Late severance attracts late-payment compensation after 15 days.",
+    "cite": "Severance Pay Law 1963 ss.12, 14, 20"
+   },
+   {
+    "req": "Permits for protected employees",
+    "detail": "A permit is needed from: the Commissioner for Women's Employment Law (pregnancy, fertility treatment); the Employment Committee (reservists during duty and 30/60 days after; spouses under the temporary provisions; bereaved family members). Dismissal is prohibited outright during maternity leave and 60 days after.",
+    "cite": "Women's Employment Law s.9; Discharged Soldiers Law 1949; Families of Soldiers Fallen in Combat Law (Amendment 2025)"
+   },
+   {
+    "req": "Collective redundancies",
+    "detail": "There is no statutory collective-redundancy regime. In unionized workplaces the employer must consult and bargain in good faith, and unions can declare disputes and strike (see the SAP Israel dispute, 2026). In non-union workplaces, hold individual hearings, use objective selection criteria, and screen for discrimination and protected status.",
+    "cite": "Collective Agreements Law 1957; Settlement of Labor Disputes Law 1957; case law"
+   },
+   {
+    "req": "Age and retirement",
+    "detail": "Compulsory retirement age is 67. Handle any request to keep working past 67 through a documented, individual process, because refusal can raise a presumption of discrimination (Shaare Zedek, National Labor Court 2025).",
+    "cite": "Retirement Age Law 2004; Employment (Equal Opportunities) Law"
+   },
+   {
+    "req": "Discrimination risk review",
+    "detail": "Screen each dismissal for protected characteristics, including reserve service, parenthood, age and disability. Claims can be brought for 5 years, and compensation without proof of damage is available.",
+    "cite": "Employment (Equal Opportunities) Law 1988 (limitation extended to 5 years, Dec 2024)"
+   }
+  ],
+  "exit": [
+   {
+    "req": "Final pay",
+    "detail": "On the normal payday, pay final salary, unused annual leave, any convalescence balance, notice pay in lieu and other amounts due. Pay severance at termination (net of the Section 14 release). Reconcile global overtime against actual hours.",
+    "cite": "Wage Protection Law; Annual Leave Law s.13; Severance Pay Law s.20"
+   },
+   {
+    "req": "Form 161 and fund release",
+    "detail": "File Form 161 (notice of termination of employer-employee relations) with the ITA and give it to the employee so they can claim the severance tax exemption or continuity, and send release letters to the pension and severance funds.",
+    "cite": "Income Tax Ordinance s.9(7a); ITA Form 161"
+   },
+   {
+    "req": "Form 106 and NII confirmation",
+    "detail": "Issue Form 106 (annual payroll statement) for the year of exit, and complete the NII employment-and-wage confirmation for unemployment claims on request (verify the form number).",
+    "cite": "Income Tax Ordinance; National Insurance Law (unemployment insurance)"
+   },
+   {
+    "req": "Waiver and settlement letters",
+    "detail": "A waiver letter (kitav vitur) does not waive non-waivable statutory rights, and courts read it narrowly. Use a settlement agreement with added consideration, a clear list of payments and time for advice. For enforceability, have it approved by a Labor Court.",
+    "cite": "Labor Court case law on waiver letters"
+   },
+   {
+    "req": "Return of property and IP reminders",
+    "detail": "Collect devices and access, remind the employee in writing of confidentiality and invention obligations, and review any non-compete against the Checkpoint legitimate-interest test before trying to enforce it.",
+    "cite": "Commercial Torts Law 1999; Checkpoint v. Frenkel (National Labor Court 1999)"
+   },
+   {
+    "req": "Equity at exit",
+    "detail": "Tell leavers the post-termination exercise windows. Shares held under Section 102 stay with the trustee, and a sale within 24 months from grant loses capital-gains treatment. Payroll withholding applies where the ordinary-income portion is realised.",
+    "cite": "Income Tax Ordinance s.102"
+   }
+  ],
+  "recordsAndPrivacy": [
+   {
+    "req": "Amendment 13 privacy notice",
+    "detail": "Update employee and candidate notices: controller identity and contacts, purposes, recipients, whether providing data is mandatory and the consequences of refusing, and access and correction rights.",
+    "cite": "Protection of Privacy Law s.11 (Amendment 13, in force 14 Aug 2025)"
+   },
+   {
+    "req": "Data security level and documentation",
+    "detail": "Classify the HR database (health data, such as sick notes, makes it at least medium level), keep a database definitions document and a security procedure, restrict access, audit periodically, and report severe incidents to the PPA.",
+    "cite": "Protection of Privacy (Data Security) Regulations 2017"
+   },
+   {
+    "req": "DPO and registration assessment",
+    "detail": "Document whether a DPO is required. The PPA's position is that routine HR processing does not trigger it, but systematic monitoring or large-scale sensitive data may. Registration is now limited to specific database types, so confirm none applies.",
+    "cite": "Protection of Privacy Law (Amendment 13); PPA draft DPO guidance"
+   },
+   {
+    "req": "Transfers to the US parent",
+    "detail": "Transfer employee data abroad only on a permitted basis (e.g., a written undertaking from the recipient group company or consent), with an intra-group data transfer agreement and security terms.",
+    "cite": "Protection of Privacy (Transfer of Data to Databases Abroad) Regulations 2001"
+   },
+   {
+    "req": "Monitoring governance",
+    "detail": "Keep a written policy that separates professional from personal use, set camera placement from a privacy assessment (no rest areas), be cautious with biometric attendance and offer alternatives, and review AI analytics against PPA guidance.",
+    "cite": "Isakov (2011); PPA surveillance guideline (2017); National Labor Court 41179-01-24 (2025)"
+   },
+   {
+    "req": "Retention schedule",
+    "detail": "Keep payroll, attendance and leave records at least 7 years, documentation relevant to discrimination claims 5+ years, and tax records per the Income Tax Ordinance. Delete unsuccessful candidates' data once the purpose and limitation needs have passed.",
+    "cite": "Prescription Law 1958; Employment (Equal Opportunities) Law; Protection of Privacy Law"
+   },
+   {
+    "req": "Criminal-record and sensitive data",
+    "detail": "Do not request or keep criminal-record extracts, and treat health, biometric and reserve-service data as sensitive with restricted access.",
+    "cite": "Criminal Register and Rehabilitation of Offenders Law 1981; Protection of Privacy Law"
+   }
+  ],
+  "healthSafety": [
+   {
+    "req": "Safety management plan and organisation",
+    "detail": "Prepare a written safety management plan and risk survey where the regulations require one (verify thresholds for office and R&D sites). Appoint safety trustees or a safety committee at the prescribed headcount, and a safety officer where required.",
+    "cite": "Organization of Supervision of Work Law 1954; Safety Management Plan Regulations 2013; Safety Committees and Safety Trustees Regulations"
+   },
+   {
+    "req": "Lab safety",
+    "detail": "For hardware validation, laser, ESD, electrical and chemical areas: risk assessments, training, PPE, hazardous-substance handling, and environmental and medical monitoring where exposure thresholds are met.",
+    "cite": "Work Safety Ordinance 1970; Occupational Safety regulations (chemical agents, electricity)"
+   },
+   {
+    "req": "Home Front Command readiness",
+    "detail": "Maintain protected spaces or shelters, alert procedures and headcount tracking, and follow activity-level instructions (gathering limits, remote work). Update business continuity plans for missile alerts and call-ups.",
+    "cite": "Civil Defence Law 1951; Home Front Command guidelines"
+   },
+   {
+    "req": "Work accidents",
+    "detail": "Report work accidents to NII (Form 250) and, for serious accidents, to the Labour Ministry. Commuting and home-office accidents can qualify as work injuries.",
+    "cite": "National Insurance Law (work injury); Accident and Occupational Disease Notification Ordinance 1945"
+   },
+   {
+    "req": "Psychosocial risk and wellbeing",
+    "detail": "Provide resilience and mental-health support after 2023-2025 wartime events, and train managers to support returning reservists and bereaved employees in line with the 2025 Families of Fallen Soldiers amendment.",
+    "cite": "Market practice; Families of Soldiers Fallen in Combat Law (Amendment 2025)"
+   },
+   {
+    "req": "Remote-work safety",
+    "detail": "Give ergonomic guidance and have employees confirm their home workstation is suitable. The employer's safety duties and NII work-injury coverage extend to home offices.",
+    "cite": "Work Safety Ordinance; National Insurance Law"
+   }
+  ]
+ },
+ "terminationDeepDive": {
+  "voluntary": "The employee resigns in writing and gives notice under the Advance Notice Law (1 month after 12 months' service) or a longer contractual period. The employer may waive the notice but generally must then pay for the notice period, or it may put the employee on paid garden leave. An employee who leaves without notice owes the equivalent of the unserved notice, which the employer can offset against final amounts (s.7). Resignation normally gives no statutory severance, but the Section 14 fund balance is released to the employee anyway. Resignations for health, relocation, material deterioration of conditions or within 9 months after childbirth are treated as dismissals for severance. Counter-offers and resignation withdrawals are common, so confirm acceptance in writing.",
+  "involuntary": "No at-will: every dismissal needs a legitimate reason (performance, conduct, redundancy) and a good-faith process. That means a written invitation to a hearing (shimua) stating the reasons, reasonable preparation time, the right to be accompanied, an open-minded decision, and written notice. A missing or flawed hearing, or a pretextual reason, leads to compensation (commonly 1-3+ months' salary, more for discrimination). Reinstatement is rare in the private non-union sector but possible for discrimination, whistleblower retaliation or union activity. Permits are needed for: pregnant employees and those in fertility treatment (Commissioner for Women's Employment Law); reservists during duty and 30/60 days after, and some reservists' spouses (Employment Committee); and bereaved families of fallen soldiers under the 2025 amendment. Dismissal is barred outright during maternity leave and for 60 days after. Summary dismissal without severance for serious misconduct needs strong evidence and may be reviewed by the court. Severance may be denied in whole or part only under Severance Pay Law ss.16-17 or a collective agreement.",
+  "redundancy": "Israel has no statutory collective-redundancy or WARN-type notification regime. Redundancies follow the individual process: a hearing for each affected employee, notice, severance, and objective selection criteria checked for discrimination and protected status (reservists, pregnancy and parents, older workers, employees with disabilities). Where a union is representative or organizing, the employer must consult and bargain in good faith before layoffs, and unions can declare a dispute and strike after 15 days' notice. The 2026 SAP Israel dispute over withdrawing from collective agreements shows the risk. Announcing layoffs or restructuring during an organizing campaign is high-risk under s.33J and the Pelephone line of cases. Voluntary retirement programmes with enhanced terms are common in unionized tech companies.",
+  "finalPayTiming": "Final salary, unused leave, the convalescence balance and notice pay are due on the regular payday for the last month, by the 9th of the following month under the Wage Protection Law. Severance is due on the termination date, and late-payment compensation accrues if it is paid more than 15 days late (Severance Pay Law s.20). Pension and Section 14 funds should be released promptly with Form 161 and release letters. Late wages and severance attract late-payment compensation (linkage plus a high percentage) that courts can reduce but often award, plus Wage Enforcement administrative fines.",
+  "requiredDocuments": [
+   "Written hearing invitation and hearing minutes",
+   "Written dismissal notice stating the termination date (or written acceptance of resignation)",
+   "Final payslip showing leave payout, convalescence, notice pay and severance",
+   "Form 161 (notice of termination of employer-employee relations) filed with the ITA and delivered to the employee",
+   "Letters releasing pension, severance (Section 14) and study-fund balances to the employee",
+   "Form 106 annual payroll statement for the year of exit",
+   "NII employment and wage confirmation for unemployment insurance on request (verify form)",
+   "Permit from the Commissioner or Employment Committee where the employee is protected",
+   "Settlement/waiver agreement (if any) and equity exit statement (Section 102 trustee status, exercise windows)"
+  ],
+  "releaseAgreements": "Statutory (cogent) rights such as severance, notice, leave payout and overtime cannot be waived in advance, and the courts read waiver letters (kitav vitur) signed at exit narrowly. A waiver is effective only if the employee understood it, it was given freely, and it covered rights the employee knew about. Best practice is a settlement agreement with consideration beyond statutory entitlements, an itemised payment list, a reasonable review period (commonly a few days) and a recommendation to take legal advice. For maximum finality, file a joint motion for the Labor Court to approve the settlement as a judgment. Employees can generally reopen releases for undisclosed or miscalculated statutory amounts. Give non-disparagement and confidentiality terms carve-outs for protected reports.",
+  "typicalPackage": "Market practice for Israeli high-tech and semiconductor layoffs: statutory severance (the Section 14 release plus any top-up), full notice pay, and an ex gratia payment commonly of 1-3 months' salary, often scaled by tenure, with more for senior staff and in unionized companies under collective agreements. Packages often also include continued pension and keren contributions through notice, the unused leave and convalescence payout, pro-rated bonus, and extended option exercise windows or partial vesting acceleration at the parent's discretion. Reservists, pregnant employees and other protected groups are often excluded from selection or given enhanced terms."
+ },
+ "recentChanges": [
+  {
+   "date": "2026-08",
+   "title": "Private-sector convalescence pay raised to NIS 451.50/day",
+   "detail": "The extension order updating the private-sector rate for the 2026 recuperation year was published on 18 Aug 2026 (up from NIS 418). The Ministry of Labor says the rate applies by the period covered, not the payment date, so employers that already paid 2026 convalescence at the old rate must pay the difference.",
+   "impact": "medium"
+  },
+  {
+   "date": "2026-04",
+   "title": "2026 reservist extension order and NII social-benefit indemnity",
+   "detail": "The extension order was signed on 28 Apr 2026, published 29 Apr and generally effective from 1 Jan 2026. It adds 30 days of dismissal protection beyond the statutory 30 for reservists with 60+ cumulative days in the calendar year (and 7+ consecutive days), restricts unpaid leave, gives spouses 2-8 paid absence days, and lets employees carry forward unused leave. NI Law Amendment 265 pays private employers 20% of the reservist daily benefit toward pension and fund costs from 1 Apr 2026.",
+   "impact": "high"
+  },
+  {
+   "date": "2026-04",
+   "title": "Minimum wage NIS 6,443.85/month",
+   "detail": "The minimum wage rose about 3.3% on 1 Apr 2026 (NIS 35.40/hour at 182 hours) under the 47.5%-of-average-wage formula. Also from 1 Apr 2026, maternity leave is extended by 5 weeks where the child qualifies for disability allowance.",
+   "impact": "low"
+  },
+  {
+   "date": "2026-03",
+   "title": "SAP Israel moves to exit its collective agreements",
+   "detail": "In late February 2026, SAP Israel notified the Histadrut that it would withdraw from its collective agreements (in place since 2017), suspend the voluntary retirement track and start a 60-day process. The union threatened a formal labour dispute and strikes. The dispute signals how hard it is to unwind high-tech collective agreements.",
+   "impact": "medium"
+  },
+  {
+   "date": "2026-01",
+   "title": "2026 NII thresholds and foreign-expert wage",
+   "detail": "The NII reduced-rate threshold is NIS 7,703/month and the ceiling NIS 51,910/month (employee 4.27%/12.17%, employer 4.51%/7.6%). The foreign-expert minimum salary rose to NIS 27,132/month (twice the average wage) for new, renewal and pending B-1 applications from 1 Jan 2026.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-12",
+   "title": "National Labor Court: service recipients and collective bargaining",
+   "detail": "In the Koach LaOvdim case (National Labor Court 5448-04-25, Dec 2025) the court held that service recipients can be treated as employers for collective bargaining purposes, and that the State must engage with unions before publishing tenders. The ruling widens union reach over outsourced services.",
+   "impact": "low"
+  },
+  {
+   "date": "2025-08",
+   "title": "Privacy Protection Law Amendment 13 in force",
+   "detail": "In force from 14 Aug 2025. It expands notice duties (controller identity, purposes, consequences of refusal, rights), narrows database registration, requires DPOs for certain organisations, gives the PPA administrative fining powers, and adds statutory damages (up to NIS 10,000 for certain breaches). Board oversight of data protection is expected, and the PPA issued draft DPO and AI guidance.",
+   "impact": "high"
+  },
+  {
+   "date": "2025-06",
+   "title": "National Labor Court upholds Histadrut representation at Nokia Israel",
+   "detail": "On 10 Jun 2025, a unanimous National Labor Court confirmed the Histadrut as the representative union at Nokia Solutions and Networks Israel. It rejected a rival internal body formed with management support and said the recognition criteria must not be relaxed. This strengthens organizing in multinational tech subsidiaries.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-03",
+   "title": "National Labor Court sets test for workplace cameras",
+   "detail": "In the Elkaner case (National Labor Court 41179-01-24, Mar 2025), installing cameras requires a multi-step assessment: a legitimate purpose, evaluation of the privacy intrusion, and employee notification or consent. This builds on the Isakov principles.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-01",
+   "title": "Section 102 electronic filing and reporting rules",
+   "detail": "From 1 Jan 2025, equity plans are filed electronically with an expanded questionnaire. Companies must file quarterly award reports within 120 days of quarter-end (first due 29 Jul 2025) and annual reports by 30 Apr, for both trustee and non-trustee grants.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-01",
+   "title": "Tax and NI changes for 2025-2027",
+   "detail": "Income-tax brackets and credit points are frozen for 2025-2027 (verify), an additional 2% surtax applies to capital income above NIS 721,560 on top of the 3% surtax, and NI reduced-tier rates increased (employee 1.04%, employer 4.51%). These affect net pay and Section 102 sale proceeds for senior engineers.",
+   "impact": "medium"
+  },
+  {
+   "date": "2025-01",
+   "title": "Sexual harassment law Amendment 16 and fallen soldiers' families protection",
+   "detail": "Amendment 16, effective Jan 2025, extends prevention duties to service recipients for contractors' employees. The Families of Soldiers Fallen in Combat Law amendment (passed 28 Jan 2025) bars dismissing bereaved family members, or cutting their role or income, for 3 months without an Employment Committee permit, and restricts dismissal and unpaid leave for up to a year.",
+   "impact": "medium"
+  },
+  {
+   "date": "2024-12",
+   "title": "Limitation period for discrimination claims extended to 5 years",
+   "detail": "From 1 Dec 2024, employees can bring discrimination claims under the Equal Employment Opportunities Law within 5 years (previously 3). Job applicants keep a 3-year period. Extend retention of hiring and promotion documentation accordingly.",
+   "impact": "medium"
+  },
+  {
+   "date": "2024-08",
+   "title": "Statutory expansion of reservist and spouse protections",
+   "detail": "The August 2024 legislation bars reducing a reservist's role or income, voids dismissals based on a spouse's reserve service, adds spouse service as a protected ground in the Equal Employment Opportunities Law, and (temporarily) requires Employment Committee permits to dismiss or put on unpaid leave spouses of reservists with young children in qualifying service.",
+   "impact": "high"
+  }
+ ],
+ "watchlist": [
+  {
+   "title": "2027 reservist protections",
+   "detail": "The 2024, 2025 and 2026 extension orders each covered one calendar year. Watch for a new collective agreement or extension order for 2027 and for any statutory permanence of the 60-day post-service protection and spouse leave.",
+   "expected": "Q1-Q2 2027"
+  },
+  {
+   "title": "Privacy enforcement after Amendment 13",
+   "detail": "Watch for PPA enforcement actions and fines, final DPO guidance, AI and employee-monitoring guidance (including remote-worker monitoring), and any regulations on sensitive-database notifications.",
+   "expected": "2026-2027"
+  },
+  {
+   "title": "Knesset elections and the labour legislative agenda",
+   "detail": "Knesset elections are due by late October 2026 (verify the date). Election day is a paid rest day, and pending labour bills may lapse or restart with the new Knesset.",
+   "expected": "Oct 2026 onward"
+  },
+  {
+   "title": "High-tech unionization and collective disputes",
+   "detail": "Watch the outcome of the SAP Israel dispute and further Histadrut organizing campaigns at multinational R&D centers. Courts continue to police employer neutrality and representation rules.",
+   "expected": "Ongoing"
+  },
+  {
+   "title": "Gender pay-gap reporting expansion",
+   "detail": "The 2020 amendment allows the government to lower the 518-employee threshold. Monitor for regulations extending reporting to smaller employers and for case law shifting the burden to employers to justify gaps.",
+   "expected": "Uncertain"
+  },
+  {
+   "title": "Special-trust and global-overtime litigation",
+   "detail": "Regional Labor Court rulings continue to reject contractual 'special trust' labels for employees without real managerial authority, and to scrutinise global overtime that does not track hours. Review engineer classifications annually.",
+   "expected": "Ongoing"
+  },
+  {
+   "title": "Section 102 guidance for ESPP and listed-parent RSUs",
+   "detail": "Watch for ITA circulars or ruling practice on ESPP under s.102, the capital-income surtax on s.102 gains, and the post-2025 reporting system.",
+   "expected": "2026-2027"
+  }
+ ],
+ "calendar": [
+  {
+   "month": 1,
+   "title": "Every month: payroll, withholding and pension deposits",
+   "detail": "Pay salaries by the 9th. File Form 102 and pay tax/NII withholding by the 15th. Deposit pension, severance and study-fund contributions and report through the clearing house by the regulatory deadline (verify)."
+  },
+  {
+   "month": 1,
+   "title": "New year payroll parameters and Form 101",
+   "detail": "Apply the new NII thresholds and ceiling, the tax parameters and the foreign-expert minimum salary (NIS 27,132 from 1 Jan 2026), and collect updated Form 101 from every employee."
+  },
+  {
+   "month": 1,
+   "title": "Reserve-duty year reset",
+   "detail": "Cumulative reserve-day counts for dismissal protection and spouse leave generally reset each calendar year under the extension orders. Confirm the new year's order and update trackers."
+  },
+  {
+   "month": 3,
+   "title": "Form 106 to employees",
+   "detail": "Issue annual payroll statements (Form 106) for the prior tax year by the end of March (verify the deadline)."
+  },
+  {
+   "month": 4,
+   "title": "Minimum wage update, Section 102 annual report, Form 126",
+   "detail": "The minimum wage changes on 1 Apr. The Section 102 annual equity report is due 30 Apr. File the employer's annual withholding report (Form 126) by its deadline (verify)."
+  },
+  {
+   "month": 4,
+   "title": "Pesach and Independence Day",
+   "detail": "Pesach (first and seventh days) and Independence Day fall in Mar-May. Publish closure plans and remember holiday pay for hourly staff."
+  },
+  {
+   "month": 6,
+   "title": "Gender pay-gap report",
+   "detail": "Employers with more than 518 Israeli employees prepare the annual gender pay-gap report (commonly due by 1 Jun; verify) and share it with employees."
+  },
+  {
+   "month": 6,
+   "title": "Convalescence pay",
+   "detail": "Most private employers pay convalescence in June-July for the recuperation year. For 2026, pay the differences at NIS 451.50/day after the August 2026 update."
+  },
+  {
+   "month": 7,
+   "title": "Section 102 quarterly report",
+   "detail": "Quarterly equity award reports are due within 120 days of quarter-end: about 29 Jul (Q1), 28 Oct (Q2), 28 Jan (Q3) and 30 Apr (Q4) (verify the exact dates)."
+  },
+  {
+   "month": 9,
+   "title": "High Holidays",
+   "detail": "Rosh Hashanah, Yom Kippur, Sukkot and Simchat Torah fall in Sep-Oct. Plan permits for any essential Shabbat or holiday work, confirm the holiday choices of non-Jewish employees, and handle reduced hours on holiday eves under company practice."
+  },
+  {
+   "month": 10,
+   "title": "Knesset election day (2026)",
+   "detail": "Election day is a paid rest day. Elections are due by late Oct 2026 (verify the date). Employees required to work get special pay under the elections law."
+  },
+  {
+   "month": 12,
+   "title": "Leave and attendance year-end",
+   "detail": "Review leave balances against the carry-over rules and reservist carry-forward rights, reconcile global overtime against recorded hours, and refresh sexual-harassment and privacy training."
+  }
+ ],
+ "gotchas": [
+  "Treating every engineer as overtime-exempt. The s.30(a)(5) special-trust exemption covers only genuine senior managers or roles of special personal trust, and a global overtime supplement must reflect the hours actually worked. Without attendance records the employer bears the burden, with a presumption of up to 60 overtime hours a month.",
+  "Skipping or rubber-stamping the pre-dismissal hearing (shimua). Even redundancy and probation terminations need a genuine hearing, and a US-style same-day exit meeting is almost guaranteed to cost compensation.",
+  "Granting RSUs, options or ESPP from the US plan without an ITA-filed Section 102 sub-plan and trustee. Employees then lose 25% capital-gains treatment and are taxed at up to 50% plus NI, and the filing must precede grants by 30 days.",
+  "Dismissing, cutting pay or role, or putting on unpaid leave a reservist or a reservist's spouse without checking the statutory and extension-order protection windows and Employment Committee permit requirements, or letting reserve service influence ratings, bonuses or RIF selection.",
+  "Responding to Histadrut organizing with US-style campaigns (captive meetings, anti-union messaging, new benefits). Israeli courts treat these as unlawful interference under s.33J and can issue injunctions.",
+  "Relying on a broad non-compete. Checkpoint v. Frenkel permits enforcement only for a real legitimate interest, so protect IP through trade-secret controls, specific consideration, garden leave and confidentiality instead.",
+  "Using a US invention assignment without an explicit waiver of s.134 compensation, which leaves the door open to royalty claims before the Compensation and Royalties Committee.",
+  "Running email, DLP or camera monitoring without a written, communicated policy, or accessing an employee's private webmail. Isakov makes such evidence potentially inadmissible and exposes the employer to damages.",
+  "Forgetting the extension-order entitlements that US payroll templates miss: convalescence pay (NIS 451.50/day in 2026), travel reimbursement, pension from the first months with 8.33% Section 14 severance deposits, and payout of unused leave.",
+  "Asking candidates for a police certificate or about reserve duty or family plans. The first is prohibited, and the others create discrimination exposure with a 5-year limitation period for employees."
+ ],
+ "semiconductorNotes": [
+  "Reserve duty and business continuity: a large share of engineers can be called up at short notice (including emergency call-ups) for long rotations. Build tape-out and verification coverage plans, cross-training and documentation. Keep ratings, bonus and RSU decisions reserve-neutral, apply the statutory and extension-order protections, and claim NII reimbursement for salary paid.",
+  "Israel Innovation Authority grants: chip-design R&D funded under the R&D Law carries restrictions on transferring know-how and IP abroad and on manufacturing abroad, with redemption fees. Coordinate IP assignments to the US parent, secondments and restructuring with the IIA approval rules (verify the current fee formulas).",
+  "Export controls: EAR applies to US-origin EDA, design data and advanced-computing technology released in Israel. Israel is not in the most favourable EAR country groups, and releasing technology to non-Israeli nationals (including dual nationals) can be a deemed reexport. Israel's own dual-use (Wassenaar-based) and defense export controls apply to exports from Israel (verify licence needs for advanced-computing items).",
+  "Talent and compensation: the design market (Haifa/Yokneam, Herzliya/Tel Aviv, Petah Tikva, Jerusalem) competes with large US chip companies. Total rewards lean on Section 102 RSUs, keren hishtalmut on full salary, cars and bonuses. Model the 24-month s.102 holding period and the 3% plus 2% surtaxes for senior engineers.",
+  "IP and trade secrets: pair employer ownership of service inventions (Patents Law s.132) with explicit s.134 waivers, invention-disclosure workflows, access controls on design databases, and exit forensics that respect Isakov limits. Enforce through the Commercial Torts Law rather than broad non-competes.",
+  "Labs and 24/7 work: validation or bring-up labs running nights, Shabbat or holidays need weekly-rest permits for Jewish employees and overtime compliance, and lab safety programmes (lasers, chemicals, high voltage) under the Work Safety Ordinance and regulations.",
+  "Security and emergencies: maintain protected spaces near labs, Home Front Command procedures, remote-access continuity for design environments during escalations, and employee-assistance support for staff affected by the 2023-2025 conflicts."
+ ],
+ "sources": [
+  {
+   "title": "National Insurance Institute - Minimum Wage (rates from 1 Apr 2026)",
+   "url": "https://www.btl.gov.il/English%20Homepage/Mediniyut/GeneralInformation/Pages/MinimumWage.aspx"
+  },
+  {
+   "title": "National Insurance Institute - Contribution rates for salaried employees (2026)",
+   "url": "https://www.btl.gov.il/English%20Homepage/Insurance/Ratesandamount/Pages/forSalaried.aspx"
+  },
+  {
+   "title": "Shibolet - New extension order regarding reservists, spouses and annual leave (2026)",
+   "url": "https://www.shibolet.com/en/new-extension-order-regarding-reservists-their-spouses-and-annual-leave-accrual-for-2026-onward/"
+  },
+  {
+   "title": "Arnon, Tadmor-Levy - Extended protections for employees on reserve duty 2025",
+   "url": "https://arnontl.com/news/extended-protections-for-employees-on-military-reserve-duty-2025/"
+  },
+  {
+   "title": "Herzog - Rights of reservists and their spouses; families of fallen soldiers (Feb 2025)",
+   "url": "https://herzoglaw.co.il/en/news-and-insights/rights-of-reservists-and-their-spouses-protections-for-family-members-of-soldiers-who-fell-in-war/"
+  },
+  {
+   "title": "Lockton - Israel expands employment protections for reservists and spouses (Aug 2024)",
+   "url": "https://global.lockton.com/us/en/news-insights/israel-expands-employment-protections-for-reservists-and-their-spouses"
+  },
+  {
+   "title": "Mondaq - Update to the recuperation pay rate for 2026 in the private sector",
+   "url": "https://www.mondaq.com/employee-rights-labour-relations/1840890/update-to-the-recuperation-pay-rate-for-2026-in-the-private-sector"
+  },
+  {
+   "title": "Herzog - Labour law year in review 2025, looking ahead to 2026",
+   "url": "https://herzoglaw.co.il/en/news-and-insights/labour-law-year-in-review-2025-looking-ahead-to-2026/"
+  },
+  {
+   "title": "Barnea - Employment law: everything you need to know for the beginning of 2025",
+   "url": "https://barlaw.co.il/practice_areas/employment/client_updates/employment-law-everything-you-need-to-know-for-the-beginning-of-2025/"
+  },
+  {
+   "title": "Herzog - Israeli employment law privacy update (Amendment 13)",
+   "url": "https://herzoglaw.co.il/en/news-and-insights/israeli-employment-law-did-you-know-privacy-update/"
+  },
+  {
+   "title": "Ius Laboris - Major amendment to privacy law in Israel",
+   "url": "https://iuslaboris.com/insights/major-amendment-to-privacy-law-in-israel/"
+  },
+  {
+   "title": "Mondaq - Annual privacy review 2025, outlook for 2026",
+   "url": "https://www.mondaq.com/privacy-protection/1733296/annual-privacy-review-2025-outlook-for-2026"
+  },
+  {
+   "title": "IAPP - Israeli DPA guidelines on workplace surveillance",
+   "url": "https://iapp.org/news/a/israeli-dpa-guidelines-on-workplace-surveillance"
+  },
+  {
+   "title": "Herzog - New and amended Section 102 rules",
+   "url": "https://herzoglaw.co.il/en/news-and-insights/new-and-amended-102-rules/"
+  },
+  {
+   "title": "Baker McKenzie Global Equity Matrix - Israel RS/RSU",
+   "url": "https://resourcehub.bakermckenzie.com/en/resources/global-equity-matrix/emea/israel/topics/rsrsu"
+  },
+  {
+   "title": "NASPP - Hiring in Israel: how Section 102 shapes equity compensation",
+   "url": "https://www.naspp.com/blog/hiring-in-israel--how-section-102-shapes-equity-compensation"
+  },
+  {
+   "title": "PwC Worldwide Tax Summaries - Israel individual taxes on personal income",
+   "url": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income"
+  },
+  {
+   "title": "Histadrut - National Labor Court upholds union representation at Nokia Israel",
+   "url": "https://global.histadrut.org.il/news/histadrut-secures-major-legal-victory-national-labor-court-upholds-union-representation-at-nokia-israel/"
+  },
+  {
+   "title": "Histadrut - SAP Israel is playing with fire in move against collective agreements",
+   "url": "https://global.histadrut.org.il/news/sap-israel-is-playing-with-fire-in-move-against-collective-agreements/"
+  },
+  {
+   "title": "Envoy - Israel minimum prevailing wage for foreign experts increased for 2026",
+   "url": "https://www.envoyglobal.com/news-alert/israel-minimum-prevailing-wage-for-foreign-experts-increased-for-2026/"
+  },
+  {
+   "title": "Kan-Tor & Acco - B-1 work visa (expert and HIT tracks)",
+   "url": "https://ktalegal.com/practice-areas/israel-immigration/b-1-work-visa/"
+  },
+  {
+   "title": "Kol Zchut - Travel expense reimbursement (Hebrew)",
+   "url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%94%D7%95%D7%A6%D7%90%D7%95%D7%AA_%D7%A0%D7%A1%D7%99%D7%A2%D7%94"
+  },
+  {
+   "title": "Kol Zchut - Maternity leave (Hebrew)",
+   "url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%A4%D7%A9%D7%AA_%D7%9C%D7%99%D7%93%D7%94"
+  },
+  {
+   "title": "Goldfarb Gross Seligman - Waiver of consideration for service inventions",
+   "url": "https://www.goldfarb.com/waiver-of-consideration-for-service-inventions/"
+  },
+  {
+   "title": "Mercer - Israel gender pay gap reporting",
+   "url": "https://www.mercer.com/en-us/insights/law-and-policy/israel-to-expand-gender-pay-gap-reporting/"
+  }
+ ]
+}

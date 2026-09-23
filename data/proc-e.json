@@ -1,0 +1,4526 @@
+{
+ "processes": [
+  {
+   "id": "PD-01",
+   "name": "Goal setting & check-ins",
+   "stage": "Grow",
+   "depth": "standard",
+   "summary": "Sets cascaded company, team and individual goals each half-year and keeps a documented rhythm of check-ins in the Darwinbox performance module, so year-end reviews rest on dated evidence rather than recall. Covers all regular employees globally; interns and fixed-term staff use a lighter version. Good looks like 3-5 measurable goals per person approved within 30 days of cycle start, quarterly check-ins for at least 85% of employees, and no surprises at review time.",
+   "owner": "HRBP (process), Managers (execution), People Ops (system configuration)",
+   "trigger": "Executive OKRs approved for the half (January and July), a new hire's start date, or an internal job change",
+   "outputs": [
+    "Approved individual goals in the Performance module (Darwinbox)",
+    "Documented check-in notes (monthly 1:1s, at least quarterly)",
+    "Goal revisions with reason and audit trail",
+    "Goal-setting and check-in completion dashboard by org",
+    "Job-family goal guidance (engineering OKRs, sales quota linkage)"
+   ],
+   "systems": [
+    "Performance module (Darwinbox)",
+    "Darwinbox (HRIS)",
+    "BI / people analytics"
+   ],
+   "sla": "Goals approved within 30 calendar days of cycle start or hire/transfer; check-ins at least quarterly",
+   "lanes": [
+    "People Ops",
+    "Manager",
+    "Employee",
+    "HRBP",
+    "HR Analytics"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Open goal cycle in Darwinbox",
+     "detail": "Publish approved company and org OKRs in the Performance module, set cycle dates and eligibility (hires after the cut-off get a pro-rated cycle) and send manager guidance with good and bad goal examples by job family.",
+     "sla": "Day 0",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Cascade team objectives",
+     "detail": "Run a team session translating org OKRs into 3-5 team objectives. Engineering objectives should reference outcomes such as tape-out readiness, verification coverage or silicon bring-up milestones, not activity counts.",
+     "sla": "Day 0-10",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Draft 3-5 individual goals",
+     "detail": "Draft SMART goals linked to a team objective, with weights, plus one development goal. Sales roles reference the CO-04 quota plan instead of restating it.",
+     "sla": "Day 10-20",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Review and approve goals",
+     "detail": "Check measurability, weighting and consistency with peers at the same level; approve in Darwinbox or return with comments. Reject goals that depend on unrecorded overtime for non-exempt staff or on attendance metrics.",
+     "sla": "Day 20-30",
+     "control": "Goals count toward the review only after manager approval; edits are logged.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "HRBP",
+     "type": "decision",
+     "label": "Goals approved within 30 days?",
+     "detail": "HRBP reviews the completion dashboard by org at day 30 and flags managers with missing or unapproved goals.",
+     "branches": [
+      {
+       "to": "s7",
+       "label": "Yes"
+      },
+      {
+       "to": "s6",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Escalate overdue goal setting",
+     "detail": "Send reminders to the manager, then escalate to the Dept Head with a list of employees without approved goals; set a 10-day catch-up date.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Hold documented check-ins",
+     "detail": "Monthly 1:1s with at least a quarterly check-in recorded in Darwinbox: progress, blockers, feedback given and support offered. Notes should be dated, factual and job-related because they become evidence in PD-02 and PD-03.",
+     "sla": "At least quarterly",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Update progress and request changes",
+     "detail": "Employee updates goal status before each check-in. Material changes (re-prioritized project, re-org, extended leave) go through the goal-change workflow so the record shows why the target moved.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "HR Analytics",
+     "type": "task",
+     "label": "Report completion and quality",
+     "detail": "Publish a monthly dashboard of goal approval and check-in completion by org; HRBPs sample 10 goals per org each half for quality and flag orgs under 85% before mid-year.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "People Ops",
+     "type": "end",
+     "label": "Lock goals and feed review",
+     "detail": "At cycle end, goals and check-in notes lock and flow into the PD-02 review form; late changes need HRBP approval."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Company/org OKR publication and cycle setup",
+     "R": "People Ops",
+     "A": "CHRO",
+     "C": "Dept Heads, HR Analytics",
+     "I": "All employees"
+    },
+    {
+     "activity": "Individual goal drafting and approval",
+     "R": "Employee",
+     "A": "Manager",
+     "C": "HRBP",
+     "I": "Dept Head"
+    },
+    {
+     "activity": "Check-in documentation",
+     "R": "Manager, Employee",
+     "A": "Manager",
+     "C": "HRBP",
+     "I": "HR Analytics"
+    },
+    {
+     "activity": "Completion reporting and escalation",
+     "R": "HR Analytics",
+     "A": "HRBP",
+     "C": "People Ops",
+     "I": "Dept Heads"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Goal approval workflow: goals count toward the review only after manager approval; changes after approval are logged with reason",
+     "type": "preventive",
+     "evidence": "Darwinbox goal audit trail"
+    },
+    {
+     "id": "C2",
+     "control": "Monthly check-in compliance review; orgs below 85% quarterly check-in completion escalated to Dept Head",
+     "type": "detective",
+     "evidence": "Dashboard snapshot and escalation emails"
+    },
+    {
+     "id": "C3",
+     "control": "AI goal-suggestion or productivity-scoring features enabled only after DS-06 review; no automated ratings derived from goal data",
+     "type": "preventive",
+     "evidence": "DS-06 AI tool assessment record"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Goals approved within 30 days",
+     "target": ">= 95% of eligible employees",
+     "why": "Late goals mean reviews are judged against targets set after the fact."
+    },
+    {
+     "name": "Quarterly check-in completion",
+     "target": ">= 85%",
+     "why": "Documented check-ins are the evidence base for fair ratings and any later PIP."
+    },
+    {
+     "name": "'I know what is expected of me' (engagement item)",
+     "target": ">= 80% favorable",
+     "why": "Tests whether goals are actually understood, not just entered."
+    }
+   ],
+   "considerations": [
+    "Keep goals few and outcome-based; a 12-goal list shows no prioritization and is useless in calibration.",
+    "Do not duplicate the sales quota in the performance form; reference the CO-04 plan so payout and rating signals cannot conflict.",
+    "Check-in notes are discoverable and in California are part of the personnel file; write observations, never speculation about health, family or immigration status.",
+    "Adjust or pro-rate goals for protected leave instead of scoring against a full-year target (FMLA/CFRA, Taiwan sick-leave protection, Canada statutory leaves).",
+    "Chip schedules slip for reasons outside an individual's control (foundry capacity, silicon bugs); score contribution and quality of work, not only milestone dates."
+   ],
+   "variations": [
+    {
+     "when": "New hire or internal transfer mid-cycle",
+     "how": "Goals set within 30 days of start or transfer with pro-rated weights; the ON-04 30/60/90 plan can serve as the first-cycle goals."
+    },
+    {
+     "when": "Sales and FAE roles",
+     "how": "The CO-04 quota and territory plan is the primary goal; add 1-2 non-quota goals such as account planning and export/anti-bribery compliance."
+    },
+    {
+     "when": "Employee on extended leave",
+     "how": "Pause the cycle; reset goals within 30 days of return (LV-03) and exclude the leave period from assessment."
+    }
+   ],
+   "countries": {
+    "us": "No statutory goal-setting rules; keep goals job-related and remember NLRA Section 7 protects non-supervisory employees who discuss goals, workload or pay. AI tools that score goals or productivity for IL, CO or NYC staff can trigger notice duties (IL HB 3773 from Jan 2026; CO SB 26-189 from Jan 2027).",
+    "us-ca": "Goal and check-in records are part of the personnel file employees can inspect within 30 days (LC 1198.5). Never set goals that require non-exempt staff to work off the clock or skip meal and rest breaks.",
+    "ca": "No statutory rules, but clear, acknowledged expectations are the starting point for any later performance-management or cause argument (McKinley v. BC Tel). Ontario employers with 25+ employees must disclose in the electronic monitoring policy any system telemetry used to track goals.",
+    "in": "No statutory process; many individual-contributor engineers are 'workers' under the Labour Codes, so written goals and dated check-ins are the basis for any later performance action. Karnataka IT establishments using the standing-orders exemption should route goal-related grievances through the GRC.",
+    "tw": "Courts reviewing an LSA Art. 11(5) incompetence dismissal look for objective standards communicated in advance, so issue goals in writing (bilingual, Chinese prevailing). From 2026 up to 10 days of sick leave a year cannot lower appraisals, so keep attendance out of goals.",
+    "cn": "Objective, communicated standards are a precondition for an LCL Art. 40(2) incompetence process; have employees e-confirm goals and keep the record. Performance rules that affect pay or discipline must go through democratic procedure and be publicized (LCL Art. 4)."
+   },
+   "templates": [
+    "T-ONBOARD-PLAN"
+   ],
+   "policies": [
+    "POL-42",
+    "POL-50",
+    "POL-29"
+   ],
+   "related": [
+    "PD-02",
+    "PD-03",
+    "ON-04",
+    "CO-04",
+    "LV-03"
+   ]
+  },
+  {
+   "id": "PD-02",
+   "name": "Performance review & calibration",
+   "stage": "Grow",
+   "depth": "deep",
+   "summary": "Runs the annual (optionally semiannual) review cycle in the Darwinbox performance module: self, manager and peer input, calibration against guidance distributions, bias and leave-protection checks, locked ratings that feed the annual compensation review (CO-02) and bonus (CO-03), and documented review conversations. Applies to all regular employees in the US, Canada, India, Taiwan and China, with local overlays for leave, language and termination-evidence rules. Good looks like on-time completion, calibrated and explainable ratings with no unexplained adverse impact, and every employee receiving a written review they have acknowledged.",
+   "owner": "HRBP (process and calibration), People Ops (cycle administration), Dept Heads (rating approval), Legal/Employee Relations (high-risk review)",
+   "trigger": "Annual review calendar (fiscal year-end; optional mid-year cycle) opened by People Ops after PD-01 goals close",
+   "outputs": [
+    "Self, peer and manager reviews in the Performance module (Darwinbox)",
+    "Calibrated, locked ratings with calibration notes",
+    "Adverse-impact and leave-status analytics pack",
+    "Ratings file reconciled into the comp planning tool for CO-02/CO-03",
+    "Employee-acknowledged written reviews (local language where needed)",
+    "Appeal and PIP referral log"
+   ],
+   "systems": [
+    "Performance module (Darwinbox)",
+    "Darwinbox (HRIS)",
+    "Comp planning tool",
+    "BI / people analytics",
+    "Case management / hotline"
+   ],
+   "sla": "8-10 weeks from launch to conversations: self/peer 2 weeks, drafts 2 weeks, calibration 3 weeks, conversations within 3 weeks of lock",
+   "lanes": [
+    "People Ops",
+    "Employee",
+    "Manager",
+    "HR Analytics",
+    "HRBP",
+    "Dept Head",
+    "Legal"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "People Ops",
+     "type": "start",
+     "label": "Launch review cycle in Darwinbox",
+     "detail": "Configure forms, 5-point scale, eligibility cut-off (e.g., hired after 1 Oct = not rated), rater assignments and languages (English, Traditional and Simplified Chinese). Import goals and check-ins from PD-01 and flag employees on leave or with pending accommodations for special handling.",
+     "sla": "Week 0",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Complete self-assessment",
+     "detail": "Summarize results against goals with evidence, behaviors and development needs. Employees on leave may submit on return; their deadline pauses.",
+     "sla": "Weeks 0-2",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Request peer feedback",
+     "detail": "Select 3-5 peers including cross-functional partners (e.g., physical design for an RTL engineer). Peer input informs the manager, is summarized to the employee and is never a vote.",
+     "sla": "Weeks 0-2",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Draft review and proposed rating",
+     "detail": "Write an evidence-based review citing dated examples from check-ins. AI drafting is allowed only in approved tools under POL-50: the manager edits and owns the text and decides the rating, and no health, leave or peer-identifying data is pasted into prompts. Rate only on time worked; exclude protected leave periods.",
+     "sla": "Weeks 2-4",
+     "control": "Form requires manager attestation that the rating is a human decision and any AI draft was reviewed.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "HR Analytics",
+     "type": "task",
+     "label": "Run pre-calibration bias analytics",
+     "detail": "Produce distributions by org, level, gender, age 40+, race/ethnicity (US, where lawfully held), leave status, visa status, location and part-time status, with four-fifths flags and deviations from guidance. Use aggregated, de-identified views for China and India under local privacy rules.",
+     "sla": "Week 4",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Facilitate calibration sessions",
+     "detail": "Dept Head, managers and HRBP calibrate bottom ratings first, then top ratings, against written level criteria. Guidance distribution (e.g., 15-20% top two ratings, 5-10% below expectations) is not forced; deviations need a written rationale. HRBP runs bias interrupters and records factual notes.",
+     "sla": "Weeks 4-7",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Dept Head",
+     "type": "decision",
+     "label": "Ratings consistent and supported?",
+     "detail": "Dept Head confirms each rating is supported by evidence and consistent across teams and groups.",
+     "branches": [
+      {
+       "to": "s9",
+       "label": "Yes"
+      },
+      {
+       "to": "s8",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Revise rating or add evidence",
+     "detail": "Manager adds dated evidence or adjusts the rating; changes return to the next calibration session.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Review high-risk ratings",
+     "detail": "Employment counsel and Employee Relations review below-expectations ratings for employees with protected activity in the last 12 months (CA: 90-day presumption), on or recently back from protected leave, with pending accommodations, or in China/Taiwan where the rating may support an incompetence process.",
+     "sla": "Week 7",
+     "control": "No below-expectations rating in the high-risk population is released without ER/Legal sign-off.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Dept Head",
+     "type": "task",
+     "label": "Approve and lock final ratings",
+     "detail": "Dept Head approves; People Ops locks ratings in Darwinbox and transfers them to the comp planning tool for CO-02/CO-03 with a record-count reconciliation. Post-lock changes need HRBP and Dept Head approval with a reason.",
+     "sla": "Week 8",
+     "control": "Rating lock and reconciliation to comp planning (ratings drive bonus accruals reviewed under SOX).",
+     "next": [
+      "s11"
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Hold review conversation",
+     "detail": "Deliver the written review in a 1:1 (video for remote staff) within 3 weeks of lock, in the employee's working language; focus on evidence and development. HRBP preps managers for below-expectations conversations. Pay letters follow via CO-02.",
+     "sla": "Weeks 8-11",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Acknowledge and add comments",
+     "detail": "Employee e-acknowledges receipt (not agreement) in Darwinbox and may add comments within 10 business days. In China and Taiwan the acknowledgment is key evidence; if the employee refuses, the manager records delivery with a witness.",
+     "next": [
+      "s13"
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "HRBP",
+     "type": "decision",
+     "label": "Appeal or below expectations?",
+     "detail": "HRBP checks for a formal appeal and for below-expectations ratings that need follow-up.",
+     "branches": [
+      {
+       "to": "s14",
+       "label": "Appeal filed"
+      },
+      {
+       "to": "s15",
+       "label": "Below expectations"
+      },
+      {
+       "to": "s16",
+       "label": "Neither"
+      }
+     ]
+    },
+    {
+     "id": "s14",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Resolve appeal within 30 days",
+     "detail": "Skip-level manager and HRBP review the evidence and calibration notes, meet the employee and issue a written outcome; ER takes over if the appeal alleges discrimination or retaliation (ER-01).",
+     "next": [
+      "s16"
+     ]
+    },
+    {
+     "id": "s15",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Route to coaching or PIP",
+     "detail": "Agree next steps with the manager: documented coaching for first-time low ratings, or PD-03 PIP after ER screening. Never launch a PIP in the same meeting as the review.",
+     "next": [
+      "s16"
+     ]
+    },
+    {
+     "id": "s16",
+     "lane": "People Ops",
+     "type": "end",
+     "label": "Close cycle and archive records",
+     "detail": "Archive reviews, calibration notes and analytics under the retention schedule (CA: 4 years for ADS data; CN: at least 2 years after contract end) and publish cycle metrics."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Cycle design, forms and rating scale",
+     "R": "People Ops",
+     "A": "CHRO",
+     "C": "HRBP, Legal, HR Analytics",
+     "I": "All employees"
+    },
+    {
+     "activity": "Self-assessment and peer input",
+     "R": "Employee",
+     "A": "Manager",
+     "C": "Peers",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Draft review and proposed rating",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "HR Analytics"
+    },
+    {
+     "activity": "Bias and leave-status analytics",
+     "R": "HR Analytics",
+     "A": "HRBP",
+     "C": "Legal",
+     "I": "Dept Head"
+    },
+    {
+     "activity": "Calibration sessions",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "Managers, HR Analytics",
+     "I": "CHRO"
+    },
+    {
+     "activity": "High-risk rating review",
+     "R": "Employee Relations",
+     "A": "Legal",
+     "C": "HRBP",
+     "I": "Manager"
+    },
+    {
+     "activity": "Final rating approval and lock",
+     "R": "Dept Head",
+     "A": "CHRO",
+     "C": "HRBP, Total Rewards",
+     "I": "Managers"
+    },
+    {
+     "activity": "Ratings transfer to CO-02/CO-03",
+     "R": "People Ops",
+     "A": "Total Rewards",
+     "C": "HR Analytics",
+     "I": "Finance"
+    },
+    {
+     "activity": "Review delivery and acknowledgment",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "Employee"
+    },
+    {
+     "activity": "Appeals",
+     "R": "HRBP",
+     "A": "Dept Head (skip-level)",
+     "C": "Employee Relations, Legal",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Pre-calibration adverse-impact analysis (four-fifths flags) by protected group, leave status and visa status, reviewed before ratings lock",
+     "type": "detective",
+     "evidence": "Analytics pack and calibration notes"
+    },
+    {
+     "id": "C2",
+     "control": "Rating lock after Dept Head approval; post-lock changes require HRBP + Dept Head approval with reason",
+     "type": "preventive",
+     "evidence": "Darwinbox audit log"
+    },
+    {
+     "id": "C3",
+     "control": "ER/Legal review of below-expectations ratings for employees with recent protected activity, protected leave or pending accommodation",
+     "type": "preventive",
+     "evidence": "ER review log in case management"
+    },
+    {
+     "id": "C4",
+     "control": "Leave-protection check: no rating based on FMLA/CFRA/statutory leave or on up to 10 Taiwan sick days",
+     "type": "preventive",
+     "evidence": "HRBP calibration checklist"
+    },
+    {
+     "id": "C5",
+     "control": "AI drafting governance: approved tools only, manager attestation of human decision, no sensitive data in prompts",
+     "type": "preventive",
+     "evidence": "POL-50 attestation field; DS-06 tool approval"
+    },
+    {
+     "id": "C6",
+     "control": "Record-count and rating reconciliation between Darwinbox and the comp planning tool",
+     "type": "detective",
+     "evidence": "Reconciliation signed by Total Rewards"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Reviews completed by deadline",
+     "target": ">= 98% of eligible employees",
+     "why": "Late reviews delay pay decisions and weaken the evidence trail."
+    },
+    {
+     "name": "Calibration coverage",
+     "target": "100% of orgs with 10+ employees",
+     "why": "Uncalibrated orgs drift into rating inflation or harshness."
+    },
+    {
+     "name": "Unexplained adverse impact in final ratings",
+     "target": "0 groups below four-fifths without documented review",
+     "why": "Ratings drive pay, promotion and RIF selection; disparities are litigation exhibits."
+    },
+    {
+     "name": "Review conversations held within 3 weeks of lock",
+     "target": ">= 95%",
+     "why": "Unexplained ratings drive disengagement and appeals."
+    },
+    {
+     "name": "Appeals filed / upheld",
+     "target": "< 3% filed; resolved within 30 days",
+     "why": "A spike signals unclear criteria or poor calibration."
+    },
+    {
+     "name": "'My review was fair' (post-cycle pulse)",
+     "target": ">= 70% favorable",
+     "why": "Perceived fairness predicts retention of engineers."
+    }
+   ],
+   "considerations": [
+    "Use a guidance distribution, not forced ranking: forced curves in teams under about 25 people create arbitrary low ratings and exhibits for plaintiffs; allow deviation with written rationale.",
+    "Calibrate the bottom first and require dated evidence from check-ins for every below-expectations rating; these ratings feed PD-03 and RIF selection and carry the most legal risk.",
+    "Deliver the rating and development conversation before or separately from the pay letter where the calendar allows; bundling turns the conversation into a pay negotiation.",
+    "Employees who worked less than about 3 months of the cycle because of leave should be 'not rated' with bonus handled under the plan, not defaulted to 'meets' or penalized.",
+    "AI-drafted reviews: CRD ADS regulations treat algorithmic tools used in promotion or pay decisions as within FEHA, and CCPA ADMT duties start 1 Jan 2027; keep humans deciding, keep inputs and outputs for 4 years in CA, and never let tools infer ratings from telemetry.",
+    "Engineering peer feedback over-rewards visible work (architecture, customer escalations) and under-rewards verification, DFT and infrastructure; calibrate across job families with level criteria.",
+    "Ratings feed RIF selection and visa-heavy teams draw scrutiny for national-origin and citizenship bias (EEOC, DOJ IER, DOL Project Firewall); include visa status in the adverse-impact check.",
+    "In China and Taiwan a below-expectations rating is the first exhibit in an incompetence dismissal; objective criteria, translation and acknowledgment matter more than narrative quality.",
+    "Calibration notes are discoverable: record evidence and decisions, never comments about age, family plans, accent, health or 'culture fit'."
+   ],
+   "variations": [
+    {
+     "when": "Semiannual cycle",
+     "how": "Mid-year uses a lighter check (no rating or a provisional rating, no calibration below Director level); the annual cycle carries the formal rating that feeds CO-02."
+    },
+    {
+     "when": "Hired after the cycle cut-off",
+     "how": "Not rated; manager gives written onboarding feedback; bonus pro-rated under CO-03 plan rules."
+    },
+    {
+     "when": "Employee on leave at cycle time",
+     "how": "Rate on the period worked (or 'not rated'); defer the conversation until return (LV-03); HRBP sensitivity review before lock."
+    },
+    {
+     "when": "Sales and FAE roles",
+     "how": "Quota attainment from CO-04 informs but does not mechanically set the rating; compliance behaviors (export screening, gifts) are rated explicitly."
+    },
+    {
+     "when": "Executives and Section 16 officers",
+     "how": "CEO rates the executive team and presents to the Comp Committee under CO-07; the Board evaluates the CEO."
+    },
+    {
+     "when": "Employee on a PIP or under investigation",
+     "how": "Rate normally with ER input; do not wait for the PIP or investigation to end, and do not reference unproven allegations."
+    },
+    {
+     "when": "China rating-scale change",
+     "how": "Changes to the scale or its pay consequences go through democratic procedure and are publicized before use (LCL Art. 4)."
+    }
+   ],
+   "countries": {
+    "us": "At-will employment does not reduce risk here: ratings are the main evidence in discrimination and retaliation claims, and Muldrow v. St. Louis (2024) lowered the harm threshold for job-change claims, so review calibration outcomes for adverse impact. FMLA leave cannot be counted against the employee in ratings (29 CFR 825.220(c)); rate on time worked. Automated performance tools can trigger IL HB 3773 notice duties (from Jan 2026) and CO SB 26-189 duties (from Jan 2027), and NYC LL 144 bias audits apply to tools that screen NYC promotion candidates.",
+    "us-ca": "CRD ADS regulations (effective 1 Oct 2025) make discriminatory outcomes from AI or algorithmic tools used in promotion and pay decisions FEHA violations, including through vendors; keep a human decision-maker and ADS records for 4 years, and prepare for CCPA ADMT notice and opt-out/appeal duties from 1 Jan 2027. CFRA and PDL leave cannot be held against the employee, and adverse action (including a low rating that cuts pay or leads to a PIP) within 90 days of wage, whistleblower or equal-pay protected activity carries a rebuttable presumption of retaliation (LC 98.6, 1102.5). Reviews are part of the personnel file producible within 30 days (LC 1198.5).",
+    "ca": "There is no at-will employment, so a documented, acknowledged review history is the foundation of any later performance-management or cause argument, which requires clear expectations, warnings and a real chance to improve (McKinley). Seniority and service keep accruing during statutory leaves in Ontario and BC, and a low rating linked to leave, disability or family status invites human rights complaints (1-year limit at the HRTO and BC Tribunal). Ontario's electronic monitoring policy must disclose any electronic data used in ratings.",
+    "in": "There is no statutory appraisal process; many Bengaluru GCCs run appraisals on the April-March financial year, so if the global cycle is calendar-based, communicate increment timing clearly (market practice). For 'workers' (many individual-contributor engineers), a poor rating later used to support dismissal must survive natural-justice scrutiny, so ratings must be evidence-based and communicated. Rating-linked pay outcomes must not differ by gender for the same or similar work (Code on Wages s.3).",
+    "tw": "From 1 Jan 2026, taking up to 10 days of sick leave a year cannot lead to adverse appraisal, promotion or transfer outcomes (Regulations of Leave-Taking by Workers Art. 9-1), and pregnancy, parental leave or complaints cannot be penalized. Ratings are a core exhibit in any LSA Art. 11(5) dismissal, where courts expect objective standards, coaching and consideration of reassignment. Deliver reviews in Traditional Chinese or bilingual form and keep the acknowledgment.",
+    "cn": "An LCL Art. 40(2) incompetence process requires objective, communicated standards and evidence of failure, so the rating scale, criteria and consequences should be adopted through democratic procedure, publicized (LCL Art. 4) and each review acknowledged in writing. Employees in Art. 42 protected categories (pregnancy, medical treatment period, pending occupational-disease exam) should not face rating-driven adverse action. Transferring review data to US systems needs a PIPL notice and separate consent for cross-border transfer unless the HR-management exemption genuinely applies."
+   },
+   "templates": [
+    "T-PIP"
+   ],
+   "policies": [
+    "POL-42",
+    "POL-50",
+    "POL-08",
+    "POL-24",
+    "POL-35",
+    "POL-46"
+   ],
+   "related": [
+    "PD-01",
+    "PD-03",
+    "PD-04",
+    "PD-05",
+    "CO-02",
+    "CO-03",
+    "CO-07",
+    "LV-03"
+   ]
+  },
+  {
+   "id": "PD-03",
+   "name": "Performance improvement plan",
+   "stage": "Grow",
+   "depth": "deep",
+   "summary": "A structured, time-boxed plan (30, 60 or 90 days) to close a documented performance gap after coaching has failed, with ER/Legal risk screening before issue, SMART goals, real support, weekly documented check-ins and a defined outcome (success, extension, reassignment or exit). Global process with mandatory country overlays: China's Art. 40(2) training-or-adjustment sequence, Taiwan's last-resort principle, India's natural-justice expectations and Canada's without-cause economics. Good looks like PIPs that genuinely rescue a meaningful share of employees and, where they do not, an exit that is defensible in the relevant forum.",
+   "owner": "HRBP (process), Employee Relations (risk and quality), Legal (non-US and high-risk sign-off), Manager (execution)",
+   "trigger": "Below-expectations rating (PD-02) or a sustained, documented gap after at least 30 days of informal coaching",
+   "outputs": [
+    "ER risk screen record",
+    "Signed/acknowledged PIP document (T-PIP, local language)",
+    "Weekly check-in summaries",
+    "Training or job-adjustment record (mandatory in China)",
+    "Written outcome letter (close, extend, reassign or exit)",
+    "Hand-off file to OF-02/OF-04 where applicable"
+   ],
+   "systems": [
+    "Performance module (Darwinbox)",
+    "Case management / hotline",
+    "Document management",
+    "E-signature",
+    "LMS"
+   ],
+   "sla": "ER screen within 5 business days of request; PIP of 30/60/90 days; outcome decision within 5 business days of PIP end",
+   "lanes": [
+    "Manager",
+    "Employee Relations",
+    "Legal",
+    "HRBP",
+    "Employee",
+    "L&D"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Manager",
+     "type": "start",
+     "label": "Identify sustained performance gap",
+     "detail": "Manager brings dated evidence (missed deliverables, quality metrics, check-in notes) to the HRBP. Conduct issues go to ER-04 corrective action, not a PIP.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Document pre-PIP coaching",
+     "detail": "At least 30 days of documented coaching with clear expectations and offered support, confirmed in follow-up emails, unless the gap is severe and already documented in PD-02.",
+     "sla": "30+ days",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Employee Relations",
+     "type": "task",
+     "label": "Run ER risk screen",
+     "detail": "Check protected activity in the last 12 months (complaints, whistleblowing, wage claims, concerted activity), leave taken or requested, accommodation or pregnancy disclosures, age 40+ comparators, visa status, recent transfers and prior ratings. Flag the CA 90-day retaliation presumption.",
+     "sla": "5 bd",
+     "control": "No PIP is issued without a completed ER screen.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Legal",
+     "type": "decision",
+     "label": "Proceed with PIP?",
+     "detail": "Employment counsel decides on the screen outcome (mandatory for all non-US PIPs and high-risk US cases).",
+     "branches": [
+      {
+       "to": "s6",
+       "label": "Proceed"
+      },
+      {
+       "to": "s5",
+       "label": "Mitigate first"
+      },
+      {
+       "to": "s16",
+       "label": "Negotiated exit"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Resolve leave or accommodation issues",
+     "detail": "Run the interactive process (LV-02), defer the PIP until 30 days after return from leave, or change the reviewer if the manager is the subject of a complaint; then re-baseline evidence.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Draft PIP with SMART goals",
+     "detail": "Use T-PIP: 3-5 measurable goals tied to role level criteria, interim milestones, support offered, check-in schedule, duration (60 days standard for engineers; 90 for senior or long-cycle roles) and a country-specific consequences statement. Translate for Taiwan and China.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Review PIP document",
+     "detail": "Confirm goals are objective and achievable in the window, the consequences wording fits local law (no at-will language outside the US), and the local-language version controls where required.",
+     "sla": "3 bd",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Deliver PIP meeting",
+     "detail": "Manager and HRBP meet the employee, explain the gap, goals, support and timeline, and hand over the document. Keep it private and factual; offer EAP information.",
+     "control": "HRBP attends every PIP delivery meeting.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Acknowledge and respond",
+     "detail": "Employee e-signs receipt (not agreement) and may submit written comments or their own action plan within 3 business days; comments are attached to the file.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "L&D",
+     "type": "task",
+     "label": "Provide training or support",
+     "detail": "Deliver targeted training, a mentor or tooling help. In China this is the statutory training step: record content, hours and attendance; in Taiwan it supports the last-resort showing.",
+     "next": [
+      "s11"
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Hold weekly documented check-ins",
+     "detail": "30-minute weekly check-ins with a written summary to the employee within 1 business day; HRBP joins the mid-point review. Pause the PIP clock for protected leave.",
+     "sla": "Weekly",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "Manager",
+     "type": "decision",
+     "label": "Goals met at PIP end?",
+     "detail": "Manager and HRBP assess each goal against the written measures.",
+     "branches": [
+      {
+       "to": "s13",
+       "label": "Met"
+      },
+      {
+       "to": "s11",
+       "label": "Partly met; extend once"
+      },
+      {
+       "to": "s14",
+       "label": "Not met"
+      }
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "Manager",
+     "type": "end",
+     "label": "Close PIP successfully",
+     "detail": "Issue a close-out letter confirming success and return to normal check-ins; any recurrence within 6 months restarts at coaching with ER input."
+    },
+    {
+     "id": "s14",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Consider reassignment or adjustment",
+     "detail": "Identify suitable vacancies or job adjustments and document the offer and response. Mandatory before an Art. 40(2) exit in China, expected in Taiwan and good practice everywhere.",
+     "next": [
+      "s15"
+     ]
+    },
+    {
+     "id": "s15",
+     "lane": "Employee Relations",
+     "type": "decision",
+     "label": "Exit route approved?",
+     "detail": "ER and Legal review the full file against the country standard before any termination decision.",
+     "branches": [
+      {
+       "to": "s16",
+       "label": "Terminate"
+      },
+      {
+       "to": "s11",
+       "label": "Reassigned; reassess"
+      }
+     ]
+    },
+    {
+     "id": "s16",
+     "lane": "Legal",
+     "type": "end",
+     "label": "Hand off to OF-02 or OF-04",
+     "detail": "Legal approves the exit route and hands the file to OF-02 (involuntary termination) or OF-04 (separation agreement), including union notice in China and the 10-day notification in Taiwan."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Pre-PIP coaching and evidence",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "Employee Relations"
+    },
+    {
+     "activity": "ER risk screen",
+     "R": "Employee Relations",
+     "A": "Legal",
+     "C": "HRBP, Manager",
+     "I": "Dept Head"
+    },
+    {
+     "activity": "PIP drafting",
+     "R": "Manager, HRBP",
+     "A": "HRBP",
+     "C": "Employee Relations, L&D",
+     "I": "Dept Head"
+    },
+    {
+     "activity": "Legal review of PIP (non-US and high-risk)",
+     "R": "Legal (employment counsel)",
+     "A": "Legal",
+     "C": "Employee Relations",
+     "I": "HRBP"
+    },
+    {
+     "activity": "PIP delivery and weekly check-ins",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "Employee Relations"
+    },
+    {
+     "activity": "Training and support",
+     "R": "L&D",
+     "A": "Manager",
+     "C": "HRBP",
+     "I": "Employee"
+    },
+    {
+     "activity": "Outcome decision",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP, Employee Relations, Legal",
+     "I": "CHRO (Director+ roles)"
+    },
+    {
+     "activity": "Reassignment or job adjustment",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "Legal, Works Council/Union (CN)",
+     "I": "Employee"
+    },
+    {
+     "activity": "Termination hand-off",
+     "R": "Employee Relations",
+     "A": "Legal",
+     "C": "HRBP, Payroll, Immigration",
+     "I": "Manager"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "ER risk screen completed and documented before any PIP is issued",
+     "type": "preventive",
+     "evidence": "ER screen form in case management"
+    },
+    {
+     "id": "C2",
+     "control": "Legal sign-off on every PIP outside the US and on US PIPs flagged high-risk",
+     "type": "preventive",
+     "evidence": "Legal approval in the case file"
+    },
+    {
+     "id": "C3",
+     "control": "PIP content standard: SMART goals, support, duration, local-language version, approved T-PIP version",
+     "type": "preventive",
+     "evidence": "Template version ID in document management"
+    },
+    {
+     "id": "C4",
+     "control": "Mid-point audit of weekly check-in documentation",
+     "type": "detective",
+     "evidence": "Check-in log reviewed by HRBP"
+    },
+    {
+     "id": "C5",
+     "control": "Quarterly adverse-impact review of PIP issuance and outcomes by protected group, age 40+, leave and visa status",
+     "type": "detective",
+     "evidence": "HR Analytics report to ER"
+    },
+    {
+     "id": "C6",
+     "control": "No termination after a failed PIP without ER + Legal sign-off and, in China, prior union notification (LCL Art. 43)",
+     "type": "preventive",
+     "evidence": "Approval record; union notice copy"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "PIPs preceded by documented coaching",
+     "target": "100%",
+     "why": "Skipping coaching makes the PIP look like exit paperwork."
+    },
+    {
+     "name": "PIP success rate (met and retained 6 months later)",
+     "target": ">= 35%",
+     "why": "A near-zero rate signals PIPs used as a termination formality."
+    },
+    {
+     "name": "Weekly check-in documentation completeness",
+     "target": ">= 90%",
+     "why": "Gaps in the record are what lose disputes."
+    },
+    {
+     "name": "Post-PIP exits challenged (claims, charges, arbitrations)",
+     "target": "< 5%; none lost",
+     "why": "Measures defensibility of the process by country."
+    },
+    {
+     "name": "Adverse impact in PIP issuance",
+     "target": "No group below four-fifths without documented review",
+     "why": "Muldrow-era scrutiny extends to PIP outcomes."
+    }
+   ],
+   "considerations": [
+    "A PIP is a genuine improvement tool; if the exit decision is already made, use a negotiated separation (OF-04). Sham PIPs damage credibility with courts and with the team.",
+    "Timing traps: no PIP right after a complaint, leave request, accommodation request or pregnancy disclosure without ER review; California presumes retaliation within 90 days of certain protected activity.",
+    "Pause the PIP clock during protected leave and extend by the leave period; restart with re-baselined expectations after return.",
+    "Match the window to the work: a 30-day PIP for an engineer whose deliverable is a 10-week verification milestone is unfair; set interim, measurable outputs instead.",
+    "China: training or job adjustment is a statutory step, and renewed failure after adjustment needs fresh, objective evidence; skipping a step converts the exit into unlawful termination (2N or reinstatement).",
+    "Canada: poor performance rarely reaches just cause, so the realistic end-state is a without-cause termination with ESA and common-law notice; the PIP buys fairness and protects against bad-faith manner-of-dismissal damages, not notice savings.",
+    "India: for non-workers, termination simpliciter on contractual notice is possible if non-stigmatic; for workers, fair process and a documented opportunity to respond are essential, and mutual separation is often the cheaper path.",
+    "Most PIPs fail on manager documentation, not on the employee; HRBPs should supply the weekly summary template and review the first two summaries.",
+    "Flag visa holders to Immigration at PIP start so any exit handles LCA withdrawal, return transportation and the 60-day grace period correctly."
+   ],
+   "variations": [
+    {
+     "when": "Director and above",
+     "how": "90-day plan; Dept Head and CHRO involved; Legal often runs a parallel negotiated-exit option."
+    },
+    {
+     "when": "On or returning from protected leave",
+     "how": "Defer until 30 days after return (LV-03) and re-baseline goals."
+    },
+    {
+     "when": "Disability disclosed during the PIP",
+     "how": "Pause, run the interactive process (LV-02) and adjust goals or support as an accommodation before resuming."
+    },
+    {
+     "when": "Conduct rather than performance",
+     "how": "Use ER-04 corrective action and, in China/Taiwan, the work-rule-based disciplinary route."
+    },
+    {
+     "when": "Remote employee",
+     "how": "Video check-ins with written summaries; same standards and evidence as on-site staff."
+    },
+    {
+     "when": "Sales role on quota",
+     "how": "Use only if territory and quota were fair under the CO-04 plan; include pipeline and activity measures, not quota alone."
+    },
+    {
+     "when": "Karnataka IT-exemption establishment",
+     "how": "Report any resulting discharge or termination to the Deputy Labour Commissioner as the exemption conditions require."
+    }
+   ],
+   "countries": {
+    "us": "At-will employment allows termination without a PIP, but a documented plan is the best defense to discrimination and retaliation claims; check comparators and PIP outcomes for adverse impact (Muldrow 2024). Do not count FMLA, ADA or PWFA-protected absences or requests against the employee. Any release at exit for employees 40+ needs OWBPA terms (21 days to consider, 7 to revoke), and Montana requires good cause after probation.",
+    "us-ca": "Adverse action within 90 days of wage, whistleblower or equal-pay protected activity creates a rebuttable presumption of retaliation (LC 98.6, 1102.5), so ER must clear timing before issue. Keep a human decision-maker and documented rationale where any ADS input is used (CRD regs), hold a timely interactive process if disability or pregnancy surfaces (Gov Code 12940(m),(n)), and have final pay ready at any termination meeting (LC 201, 203).",
+    "ca": "There is no at-will: poor performance rarely amounts to just cause, which requires clear expectations, warnings, a real chance to improve and a proportionate response (McKinley), and Ontario ESA entitlements are lost only for wilful misconduct. The usual exit after a failed PIP is without cause with ESA plus common-law notice unless an enforceable termination clause applies. Demotion, pay cuts or indefinite suspension during a PIP without consent risk constructive dismissal (Potter 2015 SCC 10).",
+    "in": "There is no statutory PIP; non-workers can be terminated on contractual notice (termination simpliciter) if the letter is non-stigmatic and not punitive, and the Karnataka Shops Act s.39 requires reasonable cause and 1 month's notice after 6 months' service. For 'workers', follow natural justice (written gaps, opportunity to respond, fair documented process), because poor-performance exits can be challenged before the Industrial Tribunal. Mutual separation is often preferred, and full and final settlement is due within 2 working days of exit.",
+    "tw": "LSA Art. 11(5) incompetence is a last-resort ground: courts expect objective standards, coaching or training, a genuine improvement plan and consideration of reassignment before dismissal. If termination follows, give Art. 16 notice (10/20/30 days by tenure or pay in lieu), pay severance within 30 days (0.5 month per year, capped at 6 months) and file the 10-day layoff notification with the local authority. Provide PIP documents in Traditional Chinese.",
+    "cn": "LCL Art. 40(2) requires proven incompetence against objective, communicated standards, then training or job adjustment, then renewed failure; only then 30 days' written notice (or one month's pay in lieu) plus severance N, with the union notified in advance (Art. 43). Missing any step makes the termination unlawful (2N or reinstatement). Employees in Art. 42 protected categories (pregnancy, medical treatment period) cannot be dismissed under Art. 40."
+   },
+   "templates": [
+    "T-PIP",
+    "T-TERM-SCRIPT",
+    "T-ACCOMMODATION"
+   ],
+   "policies": [
+    "POL-42",
+    "POL-13",
+    "POL-36",
+    "POL-35",
+    "POL-53",
+    "POL-02"
+   ],
+   "related": [
+    "PD-01",
+    "PD-02",
+    "ER-04",
+    "LV-02",
+    "LV-03",
+    "OF-02",
+    "OF-04"
+   ]
+  },
+  {
+   "id": "PD-04",
+   "name": "Promotion",
+   "stage": "Grow",
+   "depth": "standard",
+   "summary": "Moves an employee to a higher job level based on sustained performance at the next level's criteria in the job architecture (PL-03), mainly in the annual cycle alongside CO-02 and off-cycle for genuine scope changes. Covers nomination, calibration, pricing, approval and the downstream checks a level change triggers (exempt status, export access, visa amendments, insider lists). Good looks like explainable decisions against published level criteria, consistent promotion rates across groups and clean, same-day system changes.",
+   "owner": "HRBP (process), Dept Head (approval), Total Rewards (pricing)",
+   "trigger": "Annual promotion window within the review cycle, or an off-cycle scope change nominated by the manager",
+   "outputs": [
+    "Promotion nomination with evidence against level criteria",
+    "Calibrated promotion slate by org",
+    "Priced increase and equity refresh recommendation",
+    "Job change transaction in Darwinbox",
+    "Signed promotion letter or contract amendment"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Performance module (Darwinbox)",
+    "Comp planning tool",
+    "Equity platform",
+    "E-signature"
+   ],
+   "sla": "Annual cycle: effective with CO-02 date; off-cycle: 30 days nomination to effective date",
+   "lanes": [
+    "Manager",
+    "HRBP",
+    "Total Rewards",
+    "Dept Head",
+    "People Ops",
+    "Employee"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Manager",
+     "type": "start",
+     "label": "Nominate for promotion",
+     "detail": "Submit a nomination in Darwinbox with evidence that the employee already performs at the next level's criteria (scope, complexity, influence), not tenure alone.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Validate against level criteria",
+     "detail": "Check evidence, time-in-level guidelines and peer consistency; run the promotion slate through org calibration and an adverse-impact check before decisions.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Total Rewards",
+     "type": "task",
+     "label": "Price increase and equity",
+     "detail": "Place pay in the new range (typical 8-12% increase), check pay equity against peers at the new level (CO-06) and recommend an equity refresh under EQ-01 guidelines.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Dept Head",
+     "type": "decision",
+     "label": "Approve promotion?",
+     "detail": "Dept Head approves within budget; exceptions above guideline need Total Rewards sign-off.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Approved"
+      },
+      {
+       "to": "s8",
+       "label": "Not now"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Process job change in Darwinbox",
+     "detail": "Update level, title, pay and manager; the transaction triggers checks for exempt status (MV-05), export re-screen for new technology access (Trade Compliance), H-1B amendment review (MV-06) and insider-list updates (EQ-04).",
+     "control": "Downstream trigger checklist completed before the effective date.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Communicate the promotion",
+     "detail": "Manager tells the employee first, then the team; issue the promotion letter or contract amendment via e-signature in the local language.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Sign promotion letter",
+     "detail": "Employee signs the letter or amendment; People Ops files it in the personnel record."
+    },
+    {
+     "id": "s8",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Give development feedback",
+     "detail": "Explain which criteria are not yet met, agree 2-3 development actions in PD-01 goals and set a review point.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "HRBP",
+     "type": "end",
+     "label": "Record outcome for next cycle",
+     "detail": "Log the decision and development plan so the next cycle starts from documented evidence."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Nomination and business case",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "Employee (after decision)"
+    },
+    {
+     "activity": "Level validation and calibration",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "HR Analytics",
+     "I": "Total Rewards"
+    },
+    {
+     "activity": "Pricing and equity refresh",
+     "R": "Total Rewards",
+     "A": "Total Rewards (Head of Comp)",
+     "C": "HRBP, FP&A",
+     "I": "Stock Admin"
+    },
+    {
+     "activity": "HRIS transaction and downstream checks",
+     "R": "People Ops",
+     "A": "HRBP",
+     "C": "Trade Compliance, Immigration, Stock Admin",
+     "I": "Payroll"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Promotion increases within approved guidelines; exceptions need Dept Head + Total Rewards approval",
+     "type": "preventive",
+     "evidence": "Comp planning tool approval log"
+    },
+    {
+     "id": "C2",
+     "control": "Annual promotion-rate analysis by gender, age 40+, race/ethnicity (US, where lawful), visa status and location",
+     "type": "detective",
+     "evidence": "HR Analytics report reviewed by CHRO"
+    },
+    {
+     "id": "C3",
+     "control": "Downstream checklist (exempt status, export access, visa amendment, insider list) completed before effective date",
+     "type": "preventive",
+     "evidence": "Darwinbox task completion record"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Promotion rate by level and function",
+     "target": "8-12% annually in engineering (benchmark)",
+     "why": "Too low drives attrition; too high inflates levels."
+    },
+    {
+     "name": "Promotion adverse impact ratio",
+     "target": ">= 0.8 for all tracked groups",
+     "why": "Promotion decisions are adverse-action risk under Muldrow."
+    },
+    {
+     "name": "Off-cycle nomination to effective date",
+     "target": "<= 30 days",
+     "why": "Slow promotions lose the retention value."
+    }
+   ],
+   "considerations": [
+    "Publish level criteria so decisions are explainable; with pay transparency laws and employees free to discuss pay, inconsistent promotion pay will surface.",
+    "Avoid title-only 'promotions' as retention tools; they break the level structure and the pay equity analysis.",
+    "A promotion to manager does not remove overtime coverage in Taiwan, and in India a move into a managerial or supervisory role above INR 18,000 a month can take the employee out of 'worker' status; record the duties change.",
+    "Check H-1B holders before the effective date: a material change in duties, SOC code or worksite can require an amended petition and a fresh I-129 Part 6 export attestation.",
+    "Equity refreshes for promotions follow the EQ-01 grant calendar; do not promise a grant date or size in the promotion conversation."
+   ],
+   "variations": [
+    {
+     "when": "Off-cycle promotion",
+     "how": "Requires Dept Head and Total Rewards approval and budget; counteroffer-driven moves go through CO-05."
+    },
+    {
+     "when": "Promotion into a people-manager role",
+     "how": "Assign manager training (L&D) and, in California, 2-hour supervisor harassment training within 6 months."
+    },
+    {
+     "when": "Executive or Section 16 officer",
+     "how": "Comp Committee approval under CO-07; Legal checks Form 8-K Item 5.02 and Section 16 implications (EQ-05)."
+    },
+    {
+     "when": "Promotion combined with a country move",
+     "how": "Run MV-02 or MV-03 first; the promotion takes effect in the host entity."
+    }
+   ],
+   "countries": {
+    "us": "Promotion denials are adverse actions after Muldrow (2024), so document criteria and review outcomes for adverse impact; NYC LL 144 bias audits apply to automated tools used to screen NYC promotion candidates. Recheck FLSA and state exempt status when duties change.",
+    "us-ca": "Newly promoted supervisors need 2 hours of interactive harassment training within 6 months (Gov Code 12950.1), and promotion pay must satisfy the Equal Pay Act, which from 2026 treats stock and benefits as wages (SB 642). CRD ADS rules cover AI tools used in promotion decisions.",
+    "ca": "Confirm in the promotion letter that the existing termination clause and equity terms continue; changing core terms without fresh consideration can undermine an enforceable termination clause. Ontario's Pay Equity Act and BC pay transparency reporting (50+ employees, first report by 1 Nov 2026) make promotion pay patterns visible.",
+    "in": "Update the appointment record (designation, wages) and check whether the new role changes 'worker' status, which affects overtime, retrenchment and standing-order protections. Keep basic plus DA at 50% or more of remuneration after the increase (Code on Wages s.2(y)).",
+    "tw": "Record the promotion in a written, bilingual contract amendment; it does not remove LSA overtime coverage unless the role is an MOL-designated Art. 84-1 position. Up to 10 days of sick leave a year cannot count against promotion decisions from 2026.",
+    "cn": "Changes to position and pay need written agreement (LCL Art. 35), so issue a signed amendment. Promotion into senior technical or management roles is the moment to add an eligible non-compete and confidentiality terms (LCL Arts. 23-24)."
+   },
+   "templates": [],
+   "policies": [
+    "POL-43",
+    "POL-23",
+    "POL-24",
+    "POL-27",
+    "POL-08"
+   ],
+   "related": [
+    "PL-03",
+    "PD-02",
+    "CO-02",
+    "CO-05",
+    "CO-06",
+    "EQ-01",
+    "MV-05",
+    "MV-06"
+   ]
+  },
+  {
+   "id": "PD-05",
+   "name": "Talent review & succession",
+   "stage": "Grow",
+   "depth": "standard",
+   "summary": "An annual talent review that assesses potential, readiness and flight risk after ratings close, names successors for critical roles and sets mitigation for key-person risk, especially in scarce chip-design skills. It rolls up from org reviews to an enterprise succession plan reviewed by the CEO and to CEO and executive succession reviewed by the Board. Good looks like real bench depth for critical roles, retention vehicles in place for key people and a current emergency CEO succession plan.",
+   "owner": "CHRO (enterprise plan), HRBPs (org reviews), Board Nominating/Governance Committee (CEO succession)",
+   "trigger": "Annual calendar after PD-02 ratings lock; ad hoc on a critical-role departure, acquisition or reorganization",
+   "outputs": [
+    "Critical-role list with key-person risk ratings",
+    "Successor slates (ready now / 1-2 years / 3+ years)",
+    "Individual development plans for successors and high-potentials",
+    "Enterprise succession plan and Board CEO succession materials",
+    "Retention actions for key people"
+   ],
+   "systems": [
+    "Performance module (Darwinbox)",
+    "BI / people analytics",
+    "Comp planning tool",
+    "Document management"
+   ],
+   "sla": "Org reviews complete within 6 weeks of rating lock; Board review annually",
+   "lanes": [
+    "HRBP",
+    "Manager",
+    "HR Analytics",
+    "Dept Head",
+    "CHRO",
+    "CEO",
+    "Board"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "HRBP",
+     "type": "start",
+     "label": "Launch talent review",
+     "detail": "Confirm the critical-role list with each Dept Head: chief architects, analog/mixed-signal and DFT leads, foundry/PDK owners, security leads and key-customer FAEs, plus all VP+ roles.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Assess potential and flight risk",
+     "detail": "For each direct report, assess potential against behavioral definitions, readiness, flight risk and impact of loss. Placements are confidential and never shared as '9-box' labels.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "HR Analytics",
+     "type": "task",
+     "label": "Prepare talent risk data",
+     "detail": "Provide attrition risk indicators, unvested equity coverage, single points of knowledge, bench strength by critical role and the demographic spread of high-potential nominations.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Dept Head",
+     "type": "task",
+     "label": "Calibrate org talent review",
+     "detail": "Calibrate potential across teams, name successors by readiness and set mitigations for key-person risks: knowledge transfer, pairing, retention grants (CO-05/EQ-01).",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "CHRO",
+     "type": "task",
+     "label": "Consolidate enterprise plan",
+     "detail": "Roll up critical-role coverage, cross-org moves and development investments; identify roles with no internal successor for external pipelining.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "CEO",
+     "type": "task",
+     "label": "Review executive slates",
+     "detail": "CEO reviews VP+ successor slates and confirms emergency interim designations for each executive role.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Board",
+     "type": "task",
+     "label": "Review CEO and exec succession",
+     "detail": "The Board (Nominating/Governance Committee) reviews planned and emergency CEO succession and executive bench annually; materials are confidential and minuted.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Launch development actions",
+     "detail": "Agree individual development plans with successors: stretch projects, rotations, international assignments (MV-02), mentoring.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "HR Analytics",
+     "type": "end",
+     "label": "Track actions and bench metrics",
+     "detail": "Report quarterly on development actions, successor readiness changes and regretted losses in critical roles."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Critical-role list and key-person risk",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "HR Analytics, Trade Compliance",
+     "I": "CEO"
+    },
+    {
+     "activity": "Potential and readiness assessment",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Enterprise succession plan",
+     "R": "CHRO",
+     "A": "CEO",
+     "C": "Dept Heads",
+     "I": "Board"
+    },
+    {
+     "activity": "CEO succession plan",
+     "R": "CHRO",
+     "A": "Board (Nominating/Governance Committee)",
+     "C": "CEO, Legal",
+     "I": "Comp Committee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Talent-review data restricted to calibrated leaders and HR; potential ratings not reused for RIF selection without re-validation",
+     "type": "preventive",
+     "evidence": "Darwinbox role permissions; DS-04 access review"
+    },
+    {
+     "id": "C2",
+     "control": "Board review of emergency and planned CEO succession at least annually",
+     "type": "detective",
+     "evidence": "Board or committee minutes"
+    },
+    {
+     "id": "C3",
+     "control": "Demographic review of high-potential and successor nominations before finalization",
+     "type": "detective",
+     "evidence": "HR Analytics summary reviewed by CHRO"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Critical roles with a ready-now or 1-2 year successor",
+     "target": ">= 80%",
+     "why": "Measures real bench depth where loss hurts most."
+    },
+    {
+     "name": "Regretted attrition of high-potentials and critical-role holders",
+     "target": "< 5% annually",
+     "why": "Shows whether retention actions work."
+    },
+    {
+     "name": "Critical-role holders with an unvested retention vehicle",
+     "target": ">= 90%",
+     "why": "Forward-vesting equity is the main retention lever in chip design."
+    }
+   ],
+   "considerations": [
+    "Treat the 9-box with caution: 'potential' is subjective and prone to affinity and age bias; define it behaviorally, calibrate it, never share box placement with employees and never use it as RIF selection criteria.",
+    "Key-person risk in chip design is concrete (a single analog lead, the only engineer who knows the foundry flow); mitigate with documentation and pairing, not just money.",
+    "Use forward-vesting RSUs or deferred cash for retention; in California, AB 692 bars repayment-style retention bonuses for agreements from 1 Jan 2026.",
+    "Before naming a foreign-national successor to a role with controlled-technology access, confirm with Trade Compliance and Immigration that the person can actually hold the role.",
+    "Talent-review notes are discoverable and may be reachable through CCPA, PIPL and (from May 2027) DPDP access requests; write defensible, job-related assessments."
+   ],
+   "variations": [
+    {
+     "when": "Emergency departure of an executive",
+     "how": "Activate the named interim; Legal assesses Form 8-K Item 5.02 filing within 4 business days for covered officers; OF-09 if the cause is death."
+    },
+    {
+     "when": "Acquisition",
+     "how": "Identify acquired key people within 30 days of close and put retention agreements in place."
+    },
+    {
+     "when": "Small orgs (under 10 people)",
+     "how": "Fold into the parent org's review to keep assessments comparable and confidential."
+    }
+   ],
+   "countries": {
+    "us": "No statutory requirement, but Board oversight of CEO succession is a core governance expectation and investors ask about it; covered officer departures and appointments need a Form 8-K within 4 business days. Keep potential assessments free of age-coded language ('runway', 'fresh blood') given ADEA exposure.",
+    "us-ca": "Talent-review records are CCPA personal information, and tools that score potential or flight risk are ADS under CRD rules (bias testing, 4-year records) and ADMT under CCPA from 1 Jan 2027. Retention for successors should vest forward rather than rely on repayment clauses barred by AB 692.",
+    "ca": "No statutory requirements. BC PIPA gives employees access to their personal information, which can include talent-review notes, so keep them job-related; in Ontario, assessments influenced by age, disability or family status create human rights exposure.",
+    "in": "No statutory requirements; with attrition in the low-to-mid teens and 60-90 day notice norms in Bengaluru GCCs, retention RSUs and visible career paths for VLSI and verification leads are the main levers. From 13 May 2027, DPDP access and correction rights may reach talent assessments (verify how s.7(i) applies).",
+    "tw": "Identify successors for roles touching national core key technologies and run knowledge transfer inside Trade Secrets Act 'reasonable protective measures'. Moving a successor into a new role must meet the LSA Art. 10-1 transfer principles.",
+    "cn": "No statutory rules; talent data sent to US HQ systems needs a PIPL notice and separate consent unless the HR-management exemption genuinely applies. Protect key-person knowledge with confidentiality terms and eligible-only paid non-competes (LCL Arts. 23-24; MOHRSS 2025 Guidelines)."
+   },
+   "templates": [],
+   "policies": [
+    "POL-42",
+    "POL-43",
+    "POL-46",
+    "POL-50"
+   ],
+   "related": [
+    "PD-02",
+    "PD-04",
+    "CO-05",
+    "CO-07",
+    "EQ-01",
+    "MV-02",
+    "OF-09"
+   ]
+  },
+  {
+   "id": "PD-06",
+   "name": "Compliance training & policy attestation",
+   "stage": "Grow",
+   "depth": "deep",
+   "summary": "Plans, assigns, tracks and evidences mandatory training and annual policy attestations: Code of Conduct certification, insider trading, anti-harassment on each jurisdiction's cadence, export control and deemed exports, data privacy, anti-bribery, security awareness and trade secrets. Assignment is rule-based from Darwinbox attributes (country, state, role, supervisor, insider and export flags) so it stays correct through hires, transfers and promotions. Good looks like 100% Code certification, on-time completion above 98%, export briefings completed before access, and audit-ready evidence for SOX, Nasdaq, RBA and customer audits in every language used.",
+   "owner": "Ethics & Compliance (program owner), Legal (legal cadence and content), Trade Compliance (export modules), L&D and People Ops (delivery and LMS)",
+   "trigger": "Annual compliance calendar (Q4 planning, Q1 launch); new hire, promotion into a supervisor role, transfer, or a change to an insider or export flag",
+   "outputs": [
+    "Annual curriculum matrix by role and jurisdiction",
+    "LMS assignment rules synced to Darwinbox",
+    "Completion and attestation records with content version",
+    "Code of Conduct certification results and exception log",
+    "Audit Committee and customer/RBA compliance reports",
+    "Escalation log for overdue items"
+   ],
+   "systems": [
+    "LMS",
+    "Darwinbox (HRIS)",
+    "E-signature",
+    "Case management / hotline",
+    "BI / people analytics",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "Document management"
+   ],
+   "sla": "New-hire bundle within 30 days of start; annual modules within 30 days of assignment; CA harassment within 6 months of hire or promotion; export briefing before access",
+   "lanes": [
+    "Ethics & Compliance",
+    "Legal",
+    "Trade Compliance",
+    "L&D",
+    "People Ops",
+    "Employee",
+    "Manager"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Ethics & Compliance",
+     "type": "start",
+     "label": "Set annual training plan",
+     "detail": "In Q4, build the curriculum matrix: Code of Conduct certification (all), insider trading (all; enhanced for designated insiders), anti-harassment, export control (role-based), data privacy, anti-bribery (sales, FAE, procurement, execs), security awareness and trade secrets. Approve with the compliance committee and report the plan to the Audit Committee.",
+     "sla": "Q4",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Map legal cadence by country",
+     "detail": "Maintain the jurisdiction rules table: CA SB 1343 (2h/1h within 6 months, every 2 years), NY and IL annual, CT/DE/ME rules, India POSH at induction and annually, China anti-harassment training, Taiwan harassment and bullying measures, Ontario OHS awareness and AODA, BC orientation.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Trade Compliance",
+     "type": "task",
+     "label": "Define export-control modules",
+     "detail": "Specify Technology Control Plan briefings for export-flagged roles, EAR 744.6 US-person training for staff supporting China-based customers or partners, and annual refreshers with attestation.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "L&D",
+     "type": "task",
+     "label": "Build and localize content",
+     "detail": "Produce short modules (15-25 minutes) with a role-based layer; localize into Traditional Chinese (TW) and Simplified Chinese (CN) and other languages as needed. CA harassment content must be interactive and cover abusive conduct, gender identity/expression and sexual orientation.",
+     "control": "Legal sign-off and version ID before any module is released.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Configure LMS assignment rules",
+     "detail": "Key rules to Darwinbox attributes (work country/state, job family, supervisor flag, designated-insider flag, export flag, sales/FAE, hire and promotion dates) with a daily HRIS-to-LMS sync; new hires get the bundle on day 1 with a 30-day due date.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Complete training and attest",
+     "detail": "Complete modules and e-sign attestations to the Code of Conduct, insider trading policy and TCP; answer the conflict-of-interest and outside-activity questions in the Code certification.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "People Ops",
+     "type": "decision",
+     "label": "Completed by the due date?",
+     "detail": "LMS status checked at the due date; automated reminders go out at day -7, 0 and +7.",
+     "branches": [
+      {
+       "to": "s11",
+       "label": "Yes"
+      },
+      {
+       "to": "s8",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Follow up on overdue items",
+     "detail": "Manager receives the overdue list at day +7 and confirms a completion date with each employee; employees on leave are paused, not counted overdue.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Ethics & Compliance",
+     "type": "decision",
+     "label": "Still overdue at day +30?",
+     "detail": "Ethics & Compliance reviews the residual overdue list by function and country.",
+     "branches": [
+      {
+       "to": "s10",
+       "label": "Yes"
+      },
+      {
+       "to": "s11",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Ethics & Compliance",
+     "type": "task",
+     "label": "Apply escalation consequences",
+     "detail": "Suspend controlled-technology access (IT) for missing export briefings, block trading pre-clearance for designated insiders, note non-completion in the review and bonus modifier where lawful, and refer persistent cases to ER-04.",
+     "control": "Access and pre-clearance gating tied to completion status.",
+     "next": [
+      "s11"
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "Ethics & Compliance",
+     "type": "task",
+     "label": "Review certification exceptions",
+     "detail": "Route 'yes' answers on conflicts, outside activities or foreign talent programs to ER-06 within 5 business days; refusals to certify go to ER; any executive or director Code waiver goes to the Board with 8-K/website disclosure.",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Retain completion evidence",
+     "detail": "Keep timestamped completion, content version and attestation text: CA harassment records 2 years, SB 513 training records in the personnel file, TCP records 5 years (EAR Part 762), and SOX/Nasdaq entity-level control evidence.",
+     "next": [
+      "s13"
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "Ethics & Compliance",
+     "type": "task",
+     "label": "Report to Audit Committee",
+     "detail": "Quarterly report on completion by country and function, overdue items, exceptions and hotline themes; the same data supports RBA and customer audit questionnaires.",
+     "next": [
+      "s14"
+     ]
+    },
+    {
+     "id": "s14",
+     "lane": "Legal",
+     "type": "end",
+     "label": "Update content for legal change",
+     "detail": "Annual content refresh plus event-driven updates (e.g., Taiwan bullying rules from 1 July 2026, new state harassment rules), feeding next year's plan."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Annual curriculum and matrix",
+     "R": "Ethics & Compliance",
+     "A": "Ethics & Compliance (Chief Compliance Officer)",
+     "C": "Legal, Trade Compliance, L&D, CHRO",
+     "I": "Board (Audit Committee)"
+    },
+    {
+     "activity": "Legal cadence mapping by jurisdiction",
+     "R": "Legal",
+     "A": "Legal (employment counsel)",
+     "C": "Ethics & Compliance, local HRBPs",
+     "I": "L&D"
+    },
+    {
+     "activity": "Export-control modules and TCP briefings",
+     "R": "Trade Compliance",
+     "A": "Trade Compliance (Empowered Official)",
+     "C": "Legal, Security",
+     "I": "Managers"
+    },
+    {
+     "activity": "Content development and localization",
+     "R": "L&D",
+     "A": "Ethics & Compliance",
+     "C": "Legal, local HR",
+     "I": "People Ops"
+    },
+    {
+     "activity": "LMS assignment rules and HRIS sync",
+     "R": "People Ops",
+     "A": "Ethics & Compliance",
+     "C": "IT",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Completion and attestation",
+     "R": "Employee",
+     "A": "Manager",
+     "C": "HRBP",
+     "I": "Ethics & Compliance"
+    },
+    {
+     "activity": "Overdue escalation and consequences",
+     "R": "Manager",
+     "A": "Ethics & Compliance",
+     "C": "HRBP, IT, Stock Admin",
+     "I": "Dept Head"
+    },
+    {
+     "activity": "Evidence retention and audit support",
+     "R": "People Ops",
+     "A": "Ethics & Compliance",
+     "C": "Internal Audit",
+     "I": "Finance (SOX)"
+    },
+    {
+     "activity": "Audit Committee reporting",
+     "R": "Ethics & Compliance",
+     "A": "Ethics & Compliance (Chief Compliance Officer)",
+     "C": "Legal",
+     "I": "Board"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Monthly HRIS-to-LMS reconciliation: every active employee holds the modules required by the matrix for their attributes",
+     "type": "detective",
+     "evidence": "Reconciliation report with exceptions closed"
+    },
+    {
+     "id": "C2",
+     "control": "Annual Code of Conduct certification by all employees and directors with exceptions tracked (Nasdaq 5610 / SOX 406 entity-level control)",
+     "type": "detective",
+     "evidence": "Certification records and exception log"
+    },
+    {
+     "id": "C3",
+     "control": "Export/TCP briefing completed before provisioning access to controlled technology",
+     "type": "preventive",
+     "evidence": "Identity-system gate log and LMS record"
+    },
+    {
+     "id": "C4",
+     "control": "Designated insiders hold current insider-trading training before pre-clearance is granted",
+     "type": "preventive",
+     "evidence": "EQ-04 pre-clearance log"
+    },
+    {
+     "id": "C5",
+     "control": "California harassment training cadence met (2h supervisors / 1h non-supervisors within 6 months and every 2 years)",
+     "type": "detective",
+     "evidence": "LMS compliance report; certificates retained 2 years"
+    },
+    {
+     "id": "C6",
+     "control": "Legal sign-off and version control before any module or attestation text is released",
+     "type": "preventive",
+     "evidence": "Approval log in document management"
+    },
+    {
+     "id": "C7",
+     "control": "Conflict-of-interest disclosures from the certification routed to ER-06 within 5 business days",
+     "type": "detective",
+     "evidence": "Case log timestamps"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Code of Conduct certification",
+     "target": "100% (>= 98% by deadline)",
+     "why": "Nasdaq and SOX expect a code with enforcement; gaps undermine investigations."
+    },
+    {
+     "name": "Annual mandatory training completion within 30 days of due date",
+     "target": ">= 98%",
+     "why": "Regulators judge a program by whether it reaches everyone."
+    },
+    {
+     "name": "New-hire compliance bundle completed within 30 days",
+     "target": ">= 95%",
+     "why": "The riskiest period for policy breaches is early tenure."
+    },
+    {
+     "name": "Export/TCP briefing completed before access",
+     "target": "100%",
+     "why": "Access before briefing is itself a control failure in an export audit."
+    },
+    {
+     "name": "Items overdue more than 30 days",
+     "target": "< 1% of population",
+     "why": "Measures whether escalation actually works."
+    },
+    {
+     "name": "First-attempt knowledge-check pass rate",
+     "target": ">= 85%",
+     "why": "Shows comprehension, not just clicks."
+    }
+   ],
+   "considerations": [
+    "Assign by attributes, never by spreadsheet lists; rules keyed to Darwinbox data keep assignments right after transfers and promotions, and lists fail silently.",
+    "Keep annual modules short and add role-based depth where the risk is (export for design and FAE teams, anti-bribery for sales in China and India); regulators look for risk-based training, not course hours.",
+    "Make consequences real but lawful: access gating and review consequences work everywhere, but wage deductions as discipline are not acceptable (RBA A4) and are restricted in Taiwan, China and India.",
+    "Build the Code certification as a questionnaire (conflicts, outside activities, foreign talent programs, awareness of violations) and treat every 'yes' as a case, not a checkbox.",
+    "Set a simple global standard: a short annual anti-harassment refresher for everyone plus the full California course on its 2-year cycle, instead of tracking a dozen cadences by hand.",
+    "Include contingent workers with system access in Code, security and export modules through vendor terms (PL-05); interns and visiting researchers are frequent export blind spots.",
+    "Insider trading training should use engineering examples: design wins, tape-out results and customer ramps are MNPI, and shadow trading in customers' or suppliers' stock is enforceable (SEC v. Panuwat).",
+    "In China, a policy can support Art. 39 discipline only if adopted through democratic procedure and acknowledged by the employee, so the attestation record is legal evidence, not administration.",
+    "Keep training content from discouraging external reporting: every module on confidentiality must carry the Rule 21F-17, NLRA and whistleblower carve-outs."
+   ],
+   "variations": [
+    {
+     "when": "New hires",
+     "how": "Bundle on day 1 due in 30 days (Code, insider trading, security, privacy, harassment per jurisdiction, export if flagged); California harassment within 6 months; Connecticut within 6 months."
+    },
+    {
+     "when": "Promotion into a supervisor role",
+     "how": "California 2-hour supervisor course within 6 months plus manager modules on anti-retaliation and handling complaints."
+    },
+    {
+     "when": "Designated insiders and Section 16 officers",
+     "how": "Enhanced insider-trading module and pre-clearance walkthrough before the first open window."
+    },
+    {
+     "when": "Sales, FAE and procurement; China and India staff",
+     "how": "Anti-bribery module with gifts and hospitality register, commercial bribery (China AUCL) and PCA s.9 'adequate procedures' content."
+    },
+    {
+     "when": "Export-flagged roles and US persons supporting China",
+     "how": "TCP briefing with signed acknowledgment before access; EAR 744.6 module; annual refresher."
+    },
+    {
+     "when": "Board directors",
+     "how": "Code certification and insider-trading training administered by the Corporate Secretary."
+    },
+    {
+     "when": "Acquired company employees",
+     "how": "60-day integration bundle; legacy training records mapped into the LMS."
+    },
+    {
+     "when": "Employees on leave",
+     "how": "Deadlines paused; assigned on return with a 30-day window."
+    }
+   ],
+   "countries": {
+    "us": "Harassment training is state-driven: New York requires annual interactive training, Illinois annual, Connecticut 2 hours within 6 months of hire (3+ employees), Delaware within 1 year (50+) and Maine within 1 year (15+). Annual Code certification and insider trading training support Nasdaq Rule 5610/SOX 406 and the Item 408 insider trading policy disclosure (Exhibit 19). Training and attestations must not impede reporting to the SEC, EEOC, NLRB or OSHA (Rule 21F-17).",
+    "us-ca": "SB 1343 (Gov Code 12950.1): employers with 5+ employees give supervisors 2 hours and non-supervisors 1 hour of interactive training within 6 months of hire or promotion and every 2 years, covering abusive conduct, gender identity/expression and sexual orientation; temporary staff within 30 days or 100 hours; keep records 2 years. SB 513 (2026) requires training records in the personnel file showing trainer or provider, date, duration, competencies and certification. WVPP training is annual and interactive (LC 6401.9).",
+    "ca": "Ontario requires OHS awareness training for workers and supervisors, information on the workplace violence and harassment program, and AODA training on the IASR and Human Rights Code for every employee with records kept. BC requires new-worker orientation covering bullying and harassment procedures, and those policies must be reviewed annually. Any Quebec-based remote employee triggers French-language training and a psychological harassment policy.",
+    "in": "POSH Act s.19 requires regular awareness programmes (run them at induction and annually) and orientation for Internal Committee members; refresh IC terms at year-end. A policy, training and gifts register support the 'adequate procedures' defence to the corporate offence under Prevention of Corruption Act s.9. Karnataka IT-exemption establishments must also run a GRC.",
+    "tw": "With 30+ employees, sexual harassment prevention measures, complaint procedures and disciplinary rules must be adopted and posted (Gender Equality in Employment Act), and the OSH Act workplace-bullying chapter (from 1 July 2026) adds prevention and complaint duties that also cover remote work. General OSH training for new hires (typically at least 3 hours, more for lab work) is required, and periodic trade-secret training supports 'reasonable protective measures'. Deliver in Traditional Chinese and give national core key technology notices to covered roles.",
+    "cn": "The Women's Rights Law (2022) Art. 25 requires anti-sexual-harassment rules and training, and commercial-bribery training for sales and FAE teams supports handbook-based discipline. Policies that will be enforced under LCL Art. 39 must go through democratic procedure and be acknowledged by each employee, so keep signed attestations. Work-safety training is mandatory for lab roles (Work Safety Law 2021)."
+   },
+   "templates": [
+    "T-POLICY"
+   ],
+   "policies": [
+    "POL-45",
+    "POL-01",
+    "POL-05",
+    "POL-09",
+    "POL-18",
+    "POL-04",
+    "POL-46",
+    "POL-48",
+    "POL-03"
+   ],
+   "related": [
+    "DS-08",
+    "EQ-04",
+    "ER-06",
+    "TA-06",
+    "ON-04",
+    "HS-03",
+    "ER-03"
+   ]
+  },
+  {
+   "id": "PD-07",
+   "name": "Learning programs & tuition assistance",
+   "stage": "Grow",
+   "depth": "standard",
+   "summary": "Approves and funds job-related external learning (degrees, certifications, conferences) and internal technical academies, with tax-efficient US tuition assistance under IRC 127 and country-specific rules on whether any repayment or service commitment is lawful. The process protects the company from unenforceable clawbacks (California AB 692) while using lawful service agreements where they exist (China, Taiwan, India). Good looks like fast approvals, accurate tax treatment and learning spend concentrated on scarce semiconductor skills.",
+   "owner": "L&D (program), Legal (agreement templates), Payroll (tax treatment)",
+   "trigger": "Employee request before enrolling in a program, or a manager-nominated development action from PD-01/PD-05",
+   "outputs": [
+    "Approved learning request with business rationale",
+    "Country-specific funding or service agreement where lawful",
+    "Reimbursement with correct tax treatment",
+    "Training record in the LMS and personnel file",
+    "Annual utilization and retention report"
+   ],
+   "systems": [
+    "LMS",
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "E-signature"
+   ],
+   "sla": "Approval decision within 10 business days of request; reimbursement within 15 business days of proof",
+   "lanes": [
+    "Employee",
+    "Manager",
+    "L&D",
+    "Legal",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Request program or tuition aid",
+     "detail": "Submit the request in Darwinbox/LMS before enrolling: program, provider, cost, dates, job relevance and time away from work.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Endorse business relevance",
+     "detail": "Confirm job-relatedness or career-path fit and workload cover. Required training for non-exempt staff is paid working time.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "L&D",
+     "type": "decision",
+     "label": "Eligible under policy?",
+     "detail": "Check tenure (e.g., 6 months), good standing, annual cap and whether an internal academy (analog design, DFT, verification methodology) covers the need first.",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Approved"
+      },
+      {
+       "to": "s8",
+       "label": "Declined"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Issue country-specific agreement",
+     "detail": "Apply the approved template: no repayment terms for California agreements unless an AB 692-compliant standalone transferable-credential tuition agreement; pro-rated repayment agreements elsewhere in the US; service-period agreement in China only for professional technical training with documented cost; Taiwan Art. 15-1 minimum service; reasonable pro-rated bond in India.",
+     "control": "Only Legal-approved template versions can be issued.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Complete course and submit proof",
+     "detail": "Upload completion certificate or grades and receipts within 60 days of course end.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "L&D",
+     "type": "task",
+     "label": "Approve reimbursement",
+     "detail": "Verify proof, apply caps and record the training in the LMS (trainer or provider, date, duration, competencies for California SB 513).",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Payroll",
+     "type": "end",
+     "label": "Reimburse and apply tax rules",
+     "detail": "Pay through payroll: US amounts up to the IRC 127 limit excluded, excess taxable unless it qualifies as a working-condition fringe; other countries per local tax treatment (verify)."
+    },
+    {
+     "id": "s8",
+     "lane": "L&D",
+     "type": "end",
+     "label": "Notify decision and alternatives",
+     "detail": "Explain the reason and offer alternatives such as internal academies or a later cycle."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Program catalog and budget",
+     "R": "L&D",
+     "A": "CHRO",
+     "C": "FP&A, Total Rewards",
+     "I": "Managers"
+    },
+    {
+     "activity": "Tuition and program approval",
+     "R": "Manager",
+     "A": "L&D",
+     "C": "HRBP",
+     "I": "Payroll"
+    },
+    {
+     "activity": "Repayment and service agreements",
+     "R": "Legal",
+     "A": "Legal (employment counsel)",
+     "C": "L&D, local HRBP",
+     "I": "Employee"
+    },
+    {
+     "activity": "Reimbursement and tax treatment",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "Total Rewards",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "California agreements from 1 Jan 2026 carry no repayment clause except an AB 692-compliant standalone transferable-credential tuition agreement",
+     "type": "preventive",
+     "evidence": "Legal-approved template versions"
+    },
+    {
+     "id": "C2",
+     "control": "IRC 127 annual cap tracked per employee; excess reported as taxable wages",
+     "type": "detective",
+     "evidence": "Payroll cap report"
+    },
+    {
+     "id": "C3",
+     "control": "China service-period agreements only with documented training cost (invoices) for professional technical training",
+     "type": "preventive",
+     "evidence": "Training cost file attached to agreement"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Approval cycle time",
+     "target": "<= 10 business days",
+     "why": "Slow approvals push employees to skip or self-fund."
+    },
+    {
+     "name": "Reimbursement cycle time",
+     "target": "<= 15 business days from proof",
+     "why": "Delays erode the benefit's value."
+    },
+    {
+     "name": "12-month retention of participants vs. matched non-participants",
+     "target": "Participants >= 5 pts higher",
+     "why": "Tests whether spend buys retention without clawbacks."
+    }
+   ],
+   "considerations": [
+    "After AB 692, do not rely on clawbacks in California; pay tuition as incurred and accept some attrition, or use a standalone agreement that fits the transferable-credential exception. AB 1697 would move AB 692's start date to 1 Jan 2027; track it.",
+    "IRC 127 needs a separate written plan and nondiscriminatory eligibility; tuition above the cap can still be excluded if it qualifies as job-related education under the working-condition fringe rules (verify per case).",
+    "Recovering training costs through payroll deductions is restricted in many places (NY Labor Law 193, IL, WA; India's 50% deduction cap); use a separate repayment agreement and invoice.",
+    "Prioritize internal technical academies and vendor EDA/foundry training over general degrees; scarce semiconductor skills are the retention and productivity lever.",
+    "Mandatory compliance and safety training (PD-06, HS-03) is never subject to repayment anywhere."
+   ],
+   "variations": [
+    {
+     "when": "Degree program",
+     "how": "Dept Head approval with multi-year budget; annual re-approval tied to satisfactory grades."
+    },
+    {
+     "when": "Foundry or EDA training abroad for China staff",
+     "how": "Service-period agreement with documented cost under LCL Art. 22; amortize liquidated damages over the service period."
+    },
+    {
+     "when": "US student-loan repayment benefit",
+     "how": "Paid under the IRC 127 plan within the combined annual cap."
+    },
+    {
+     "when": "Conference attendance",
+     "how": "Manager approval; travel under the expense policy; export review if presenting technical content."
+    }
+   ],
+   "countries": {
+    "us": "IRC 127 excludes up to $5,250 a year of educational assistance, including student-loan repayment, which OBBBA made permanent with the cap indexed after 2026. Several states restrict recovering training costs through wage deductions (e.g., NY Labor Law 193, IL, WA), so collect any repayment by separate agreement.",
+    "us-ca": "AB 692 (B&P 16608, LC 926) bars requiring repayment of training costs in agreements from 1 Jan 2026, except narrow standalone transferable-credential tuition agreements, with minimum damages of $5,000 per worker; AB 1697 on the Governor's desk would move the start date to 1 Jan 2027. Training records must be kept in the personnel file (SB 513).",
+    "ca": "No statute governs tuition assistance; repayment terms should be agreed in writing in advance, pro-rated and reasonable (verify enforceability case by case), and cannot be deducted from wages without written authorization and statutory permission (ON ESA s.13; BC ESA ss.21-22). Tuition paid for the employee's own benefit is generally a taxable benefit (verify CRA position).",
+    "in": "Training or minimum-service bonds are enforceable only as reasonable liquidated damages tied to actual cost and pro-rated (Contract Act s.74; Vijaya Bank v. Prashant Narnaware, SC 2025), and the agreement should be stamped (Karnataka e-stamp). Recovery from final pay is limited to authorised deductions within the 50% cap (Code on Wages s.18).",
+    "tw": "A minimum-service clause is valid only in return for employer-funded specialized training or reasonable compensation, for a reasonable period and in writing (LSA Art. 15-1; Enforcement Rules Art. 7-1 to 7-3). Keep training cost records to support any liquidated damages.",
+    "cn": "A service-period agreement is lawful only for employer-funded special professional technical training with documented cost (LCL Art. 22); liquidated damages are capped at the unamortized training cost and courts weigh actual loss and service completed (SPC Interpretation II Art. 12). Ordinary on-the-job or mandatory training cannot support a service period."
+   },
+   "templates": [],
+   "policies": [
+    "POL-44",
+    "POL-31",
+    "POL-45",
+    "POL-28"
+   ],
+   "related": [
+    "PD-06",
+    "PD-01",
+    "PD-05",
+    "PY-02",
+    "HS-03"
+   ]
+  },
+  {
+   "id": "EN-01",
+   "name": "Engagement survey & action planning",
+   "stage": "Engage",
+   "depth": "standard",
+   "summary": "Runs an annual engagement census and quarterly pulses through a third-party survey platform, with confidentiality thresholds, privacy and labor-law clearance by country, results released only to groups large enough to protect respondents, and 1-3 visible actions per team. Good looks like 80%+ participation, action plans in place within 45 days and employees reporting they saw action on the last survey.",
+   "owner": "HR Analytics (program), HRBPs (action planning), Legal (privacy and labor review)",
+   "trigger": "Annual survey calendar (census) and quarterly pulse schedule; ad hoc pulse after a reorganization, RIF or acquisition",
+   "outputs": [
+    "Approved survey instrument and confidentiality rules",
+    "Privacy notices and consents by country",
+    "Results dashboards for groups at or above the reporting threshold",
+    "Team and org action plans in Darwinbox",
+    "Executive summary for the CHRO and leadership team"
+   ],
+   "systems": [
+    "Survey platform",
+    "Darwinbox (HRIS)",
+    "BI / people analytics"
+   ],
+   "sla": "Survey window 2-3 weeks; results released within 10 business days of close; action plans within 45 days",
+   "lanes": [
+    "HR Analytics",
+    "Legal",
+    "Works Council/Union",
+    "Vendor",
+    "Employee",
+    "Manager",
+    "HRBP"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "HR Analytics",
+     "type": "start",
+     "label": "Design survey and hierarchy",
+     "detail": "Set items, driver model and optional demographic questions; load the org hierarchy from Darwinbox; fix confidentiality thresholds (minimum 5 responses, 7 for demographic cuts; no comment attribution).",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Clear privacy and labor review",
+     "detail": "Confirm notices and consents (CCPA notice at collection, PIPL separate consent for cross-border transfer, SPDI/DPDP consent in India), vendor DPA and transfer mechanism, and pause or adapt the survey if union organizing is known (NLRA solicitation-of-grievances risk).",
+     "control": "No launch until DS-06 vendor file and country notices are approved.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Works Council/Union",
+     "type": "task",
+     "label": "Brief employee representatives",
+     "detail": "Brief the China enterprise union (where one exists) and the Taiwan labor-management meeting on purpose, confidentiality and how results will be used; not a consent step, but it builds trust and avoids surprise.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Administer confidential survey",
+     "detail": "Vendor sends unique links, hosts responses in the agreed region, runs the survey in English, Traditional and Simplified Chinese and provides participation tracking at threshold level only.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Respond voluntarily",
+     "detail": "Employees respond during work time (non-exempt time is paid); participation is voluntary and managers must not pressure individuals or ask who responded.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "HR Analytics",
+     "type": "task",
+     "label": "Analyze and release results",
+     "detail": "Release dashboards only for groups at or above threshold, with driver analysis and themed comments; route comments indicating safety threats, harassment or misconduct to ER-01 under the pre-announced protocol.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Share results with team",
+     "detail": "Within 30 days, managers share results, discuss 1-2 priorities with the team and avoid any attempt to identify respondents.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Agree and track action plans",
+     "detail": "Record 1-3 actions per team and org-level themes in Darwinbox; leadership commits to 2-3 company-level actions and communicates them.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "HR Analytics",
+     "type": "end",
+     "label": "Measure progress via pulse",
+     "detail": "Quarterly pulses track the priority items and the 'I have seen action' score; results feed the next census design."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Survey design and confidentiality rules",
+     "R": "HR Analytics",
+     "A": "CHRO",
+     "C": "Legal, HRBP",
+     "I": "Works Council/Union"
+    },
+    {
+     "activity": "Privacy and labor-law clearance",
+     "R": "Legal (privacy counsel)",
+     "A": "Legal (General Counsel)",
+     "C": "HR Analytics, Vendor",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Administration and reporting",
+     "R": "Vendor",
+     "A": "HR Analytics",
+     "C": "People Ops",
+     "I": "Managers"
+    },
+    {
+     "activity": "Action planning and follow-through",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "Employees"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Reporting threshold (n >= 5; n >= 7 for demographic filters) enforced in the platform; no raw response data to managers",
+     "type": "preventive",
+     "evidence": "Platform configuration export"
+    },
+    {
+     "id": "C2",
+     "control": "Vendor DPA, cross-border transfer mechanism and China PIPIA completed before launch",
+     "type": "preventive",
+     "evidence": "DS-06 vendor file"
+    },
+    {
+     "id": "C3",
+     "control": "Comments flagged for threats, harassment or misconduct routed to ER-01 within 2 business days under a pre-announced protocol",
+     "type": "detective",
+     "evidence": "Triage log"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Participation rate",
+     "target": ">= 80%",
+     "why": "Low participation makes results unrepresentative."
+    },
+    {
+     "name": "Teams with an action plan within 45 days",
+     "target": ">= 90%",
+     "why": "Surveys without action lower engagement."
+    },
+    {
+     "name": "'I have seen action on the last survey'",
+     "target": ">= 60% favorable",
+     "why": "The best predictor of future participation."
+    }
+   ],
+   "considerations": [
+    "Promise confidentiality, not anonymity, unless the platform truly cannot link responses; say in advance what triggers follow-up (threats of harm, harassment).",
+    "Under the NLRA, surveys during union organizing can be an unlawful solicitation of grievances with implied promises; comments criticizing pay or management are protected concerted activity and cannot lead to discipline.",
+    "In China the survey platform usually sits outside the HR-management exemption, so collect separate consent for cross-border transfer and run a PIPIA, or host in-country.",
+    "Keep demographic questions optional and store them separately; never use them to identify individuals in small teams.",
+    "One to three visible actions beat a ten-item plan; share back within 30 days or skip the next pulse."
+   ],
+   "variations": [
+    {
+     "when": "Quarterly pulse",
+     "how": "5-10 items, 1-week window, same thresholds; no demographic cuts below org level."
+    },
+    {
+     "when": "Post-RIF or post-acquisition pulse",
+     "how": "Short, targeted pulse; Legal checks any litigation hold (ER-09) and WARN communications before release."
+    },
+    {
+     "when": "Teams below threshold",
+     "how": "Results roll up to the next level; managers get no team view."
+    }
+   ],
+   "countries": {
+    "us": "Non-supervisory employees' survey comments about pay, workload or management are NLRA Section 7 protected, and soliciting grievances while organizing is under way can be an unfair labor practice. Avoid questions about lawful off-duty conduct or political views, which several states protect.",
+    "us-ca": "Survey responses are CCPA personal information: give a notice at collection with purposes and retention, and handle access and deletion requests. Analytics that infer employee traits may need a CPPA risk assessment (rules effective 1 Jan 2026).",
+    "ca": "BC PIPA permits employee personal information handling reasonable for managing employment with notice, but a voluntary survey is safer on consent; Ontario has no private-sector employee privacy statute, though intrusion upon seclusion applies. Quebec-based employees need a French-language survey and Law 25 compliance.",
+    "in": "Until 13 May 2027 the SPDI Rules require written consent for sensitive personal data such as health questions; after that DPDP notice and consent duties apply, and voluntary surveys are best run on consent rather than the s.7(i) employment ground.",
+    "tw": "Give a PDPA notice at collection and get written consent for any health or other sensitive data. Sharing aggregate results at the quarterly labor-management meeting (LSA Art. 83) is good practice.",
+    "cn": "Survey processing needs a PIPL notice, and transfer to a US-hosted vendor needs separate consent, a PIPIA and a lawful cross-border pathway. Actions that change rules affecting employees' vital interests must go through democratic procedure (LCL Art. 4)."
+   },
+   "templates": [],
+   "policies": [
+    "POL-46",
+    "POL-02",
+    "POL-50",
+    "POL-15"
+   ],
+   "related": [
+    "EN-03",
+    "DS-06",
+    "DS-02",
+    "ER-01",
+    "ER-08",
+    "OF-07"
+   ]
+  },
+  {
+   "id": "EN-02",
+   "name": "Recognition & service awards",
+   "stage": "Engage",
+   "depth": "standard",
+   "summary": "Operates peer and manager spot awards and milestone service awards through a recognition vendor, with country-specific award values, payroll tax reporting of every award and anti-bribery guardrails that keep the program strictly internal. Good looks like broad, timely recognition, zero tax reporting gaps and no awards leaking to customers, officials or contractors.",
+   "owner": "People Ops (program administration), Total Rewards (design and budget), Payroll (tax), Ethics & Compliance (anti-bribery guardrails)",
+   "trigger": "Manager or peer nomination, or a service anniversary (5, 10, 15, 20+ years) generated from the Darwinbox hire date",
+   "outputs": [
+    "Award record with value and reason",
+    "Vendor fulfilment confirmation",
+    "Payroll tax entries for each award",
+    "Monthly vendor-to-payroll reconciliation",
+    "Recognition coverage report"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "BI / people analytics"
+   ],
+   "sla": "Spot awards fulfilled within 10 business days; service awards within 30 days of the anniversary",
+   "lanes": [
+    "Manager",
+    "People Ops",
+    "Ethics & Compliance",
+    "Vendor",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Manager",
+     "type": "start",
+     "label": "Nominate or trigger an award",
+     "detail": "Manager or peer nominates in the recognition platform with a specific reason; service anniversaries are triggered automatically from Darwinbox hire date (with prior-service rules applied).",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Validate eligibility and budget",
+     "detail": "Confirm the recipient is an employee (contractors are recognized via their vendor), the value fits the country award matrix and the org's budget.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "People Ops",
+     "type": "decision",
+     "label": "Above threshold or external link?",
+     "detail": "Flag awards above the country threshold or with any link to a customer, supplier or government official.",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Yes"
+      },
+      {
+       "to": "s5",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Ethics & Compliance",
+     "type": "task",
+     "label": "Review anti-bribery risk",
+     "detail": "Confirm the award is internal and not a disguised benefit to a customer, official or their relatives; anything external goes to the gifts and hospitality process instead.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Fulfil the award",
+     "detail": "Vendor delivers points, gift cards or catalog items localized by country; service awards include a tangible item and manager note.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Tax and report award value",
+     "detail": "Load award values from the vendor file each pay cycle and apply local tax treatment; non-discretionary awards are included in the regular rate for non-exempt overtime.",
+     "control": "Monthly reconciliation of vendor file to payroll entries.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Manager",
+     "type": "end",
+     "label": "Recognize publicly",
+     "detail": "Present the award in a team forum or all-hands, respecting the employee's preference on public recognition."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Program design and country award matrix",
+     "R": "People Ops",
+     "A": "Total Rewards",
+     "C": "Payroll, Ethics & Compliance, Legal",
+     "I": "Managers"
+    },
+    {
+     "activity": "Nomination and approval",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Anti-bribery review of flagged awards",
+     "R": "Ethics & Compliance",
+     "A": "Ethics & Compliance (Chief Compliance Officer)",
+     "C": "Legal",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Tax reporting and reconciliation",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "Total Rewards, Vendor",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Every award (cash, gift card, points, merchandise) reported through payroll; monthly vendor-to-payroll reconciliation",
+     "type": "detective",
+     "evidence": "Signed reconciliation"
+    },
+    {
+     "id": "C2",
+     "control": "Program restricted to employees; any recognition of customer, supplier or government personnel goes through the gifts and hospitality process",
+     "type": "preventive",
+     "evidence": "Program rules and Ethics review log"
+    },
+    {
+     "id": "C3",
+     "control": "Non-discretionary awards mapped to an earning code included in the non-exempt regular rate",
+     "type": "preventive",
+     "evidence": "Payroll earning-code configuration"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Employees recognized at least once a year",
+     "target": ">= 60%",
+     "why": "Recognition concentrated on a few people breeds resentment."
+    },
+    {
+     "name": "Service awards delivered within 30 days of the anniversary",
+     "target": ">= 95%",
+     "why": "Late milestone awards feel like an afterthought."
+    },
+    {
+     "name": "Tax reporting exceptions in reconciliation",
+     "target": "0",
+     "why": "Unreported awards create payroll tax exposure."
+    }
+   ],
+   "considerations": [
+    "Gift cards are cash equivalents and always taxable wages in the US; vendors often fail to pass values to payroll, so reconcile monthly.",
+    "Keep spot awards genuinely discretionary (no promised criteria), or include them in the regular rate for overtime of non-exempt technicians.",
+    "Localize values and formats: festival gifts in Taiwan often run through the Employee Welfare Committee, and India and China teams expect festival recognition; a single US catalog does not travel.",
+    "Do not create awards restricted by demographic group; keep eligibility open to all to avoid DEI legal risk.",
+    "Recognition feeds are a public forum: moderate for harassment, and do not discipline posts that are protected concerted activity."
+   ],
+   "variations": [
+    {
+     "when": "Service milestone awards",
+     "how": "Tangible award under a written plan (US IRC 274(j) qualified-plan treatment where available); prior service with acquired companies counted per policy."
+    },
+    {
+     "when": "Team awards (e.g., tape-out or first silicon)",
+     "how": "Equal per-person value, delivered through payroll with local tax; gross-up only under an approved rule."
+    },
+    {
+     "when": "Patent and invention awards",
+     "how": "Handled under the IP policy (POL-48) because China and Taiwan have statutory inventor remuneration rules."
+    }
+   ],
+   "countries": {
+    "us": "Cash and gift-card awards are taxable wages; tangible length-of-service or safety awards can be excluded up to $400, or $1,600 under a qualified written plan (IRC 74(c), 274(j); verify current limits). Non-discretionary awards must be included in the non-exempt regular rate (29 U.S.C. 207(e)).",
+    "us-ca": "Non-discretionary awards also feed California's regular rate for daily overtime and meal and rest premiums. Recognition data held by the vendor is CCPA personal information covered by the notice at collection.",
+    "ca": "CRA treats cash and near-cash awards as taxable and allows limited tax-free non-cash gifts and long-service awards within annual limits (verify current thresholds). Vacation pay (4%/6%) is calculated on non-discretionary bonuses, which can capture criteria-based awards.",
+    "in": "Gifts and awards are perquisites taxed through payroll TDS, with a small gift exemption (verify the limit under the Income-tax Act 2025). Keep a gifts register to support the anti-bribery 'adequate procedures' defence.",
+    "tw": "Festival gifts and bonuses (Dragon Boat, Mid-Autumn) are market practice and often funded through the Employee Welfare Committee; cash awards are taxable salary income (verify). Label discretionary awards clearly, because regular payments can be treated as 'wages' in severance and pension calculations.",
+    "cn": "Cash and in-kind awards are subject to IIT withholding through payroll (verify treatment of non-cash items). Commercial-bribery rules (Anti-Unfair Competition Law) mean the program must never extend to customer or partner staff."
+   },
+   "templates": [],
+   "policies": [
+    "POL-04",
+    "POL-23",
+    "POL-25",
+    "POL-28"
+   ],
+   "related": [
+    "EN-01",
+    "PY-02",
+    "CO-03",
+    "ER-06"
+   ]
+  },
+  {
+   "id": "EN-03",
+   "name": "Stay interviews & listening",
+   "stage": "Engage",
+   "depth": "standard",
+   "summary": "Structured stay interviews for critical-role holders and high performers, plus onboarding pulses at day 30 and 90, to surface retention risks early and act on them before a resignation. Themes are aggregated with engagement and exit data, and pay-related risks go through the normal off-cycle process. Good looks like annual stay interviews for all critical-role holders, actions closed within 60 days and lower regretted attrition among those interviewed.",
+   "owner": "HRBP (program), Managers (conduct interviews), HR Analytics (theme analysis)",
+   "trigger": "Annual schedule after PD-05 talent review; new-hire milestones (day 30 and 90); post-reorganization or after a key resignation on the team",
+   "outputs": [
+    "Completed T-STAY-INTERVIEW notes (restricted access)",
+    "T-ONBOARD-PULSE results for new hires",
+    "Individual retention actions with owners",
+    "Aggregated theme report by org",
+    "Referrals to CO-05, MV-06 or ER-01 where needed"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Survey platform",
+    "BI / people analytics",
+    "Comp planning tool"
+   ],
+   "sla": "Stay interview within 30 days of scheduling; follow-up actions within 60 days; onboarding pulse at day 30 and day 90",
+   "lanes": [
+    "HRBP",
+    "Manager",
+    "Employee",
+    "Total Rewards",
+    "HR Analytics"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "HRBP",
+     "type": "start",
+     "label": "Identify interview population",
+     "detail": "Select critical-role holders and successors from PD-05, high performers with high flight risk, and new hires due for onboarding pulses.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Schedule stay interview",
+     "detail": "Book 30-45 minutes, separate from review or pay discussions, using T-STAY-INTERVIEW questions (what keeps you, what might pull you away, what would you change).",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Share motivators and concerns",
+     "detail": "Employee discusses work, growth, manager support, flexibility and pay perception; participation is voluntary.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Record themes and commit actions",
+     "detail": "Record themes in the restricted Darwinbox field and agree 1-3 actions the manager controls; make no on-the-spot promises about pay, promotion or remote status.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "HRBP",
+     "type": "decision",
+     "label": "Flight risk or pay issue?",
+     "detail": "HRBP reviews the notes for high flight risk, pay concerns or immigration timing concerns.",
+     "branches": [
+      {
+       "to": "s6",
+       "label": "Yes"
+      },
+      {
+       "to": "s7",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Total Rewards",
+     "type": "task",
+     "label": "Assess retention response",
+     "detail": "Evaluate an off-cycle adjustment or equity refresh through CO-05 with a pay equity check; route green-card timing concerns to Immigration (MV-06).",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "HR Analytics",
+     "type": "task",
+     "label": "Aggregate themes across org",
+     "detail": "Combine stay-interview themes with onboarding pulse (T-ONBOARD-PULSE), engagement (EN-01) and exit data (OF-07) at org level; no individual attribution.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "HRBP",
+     "type": "end",
+     "label": "Follow up within 60 days",
+     "detail": "Confirm actions were delivered and schedule the next conversation; escalate stalled actions to the Dept Head."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Population selection and scheduling",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "Manager",
+     "I": "HR Analytics"
+    },
+    {
+     "activity": "Conducting interviews and agreeing actions",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "HR Analytics"
+    },
+    {
+     "activity": "Retention response for flight or pay risk",
+     "R": "Total Rewards",
+     "A": "Dept Head",
+     "C": "HRBP, FP&A",
+     "I": "Manager"
+    },
+    {
+     "activity": "Onboarding pulses and theme analysis",
+     "R": "HR Analytics",
+     "A": "HRBP",
+     "C": "People Ops",
+     "I": "CHRO"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Stay-interview notes held in a restricted field (manager and HRBP only) with guidance to exclude health, family and protected-category information",
+     "type": "preventive",
+     "evidence": "Access configuration and quarterly note sample"
+    },
+    {
+     "id": "C2",
+     "control": "Retention offers arising from stay interviews approved through CO-05 with a pay equity check",
+     "type": "preventive",
+     "evidence": "Comp approval log"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Critical-role holders with an annual stay interview",
+     "target": ">= 90%",
+     "why": "Coverage where losses hurt most."
+    },
+    {
+     "name": "Regretted attrition: interviewed vs. not interviewed",
+     "target": "Interviewed group at least 30% lower",
+     "why": "Shows whether the conversations change outcomes."
+    },
+    {
+     "name": "Onboarding pulse response rate",
+     "target": ">= 70%",
+     "why": "Early signals only help if people answer."
+    },
+    {
+     "name": "Actions closed within 60 days",
+     "target": ">= 80%",
+     "why": "Unkept commitments do more harm than no interview."
+    }
+   ],
+   "considerations": [
+    "A stay interview must not become a negotiation; managers who promise pay or promotions create inequity and, in Canada and China, possible contractual commitments.",
+    "Train managers not to probe family plans, health or immigration status; if the employee raises them, listen and route to the right process (LV-02, MV-06).",
+    "Green-card timing is one of the strongest retention levers for Indian and Chinese engineers in the US; route those concerns to Immigration quickly.",
+    "Onboarding pulses at day 30 and 90 catch manager and role-fit issues early; route any safety or harassment comment to ER-01 immediately."
+   ],
+   "variations": [
+    {
+     "when": "New hires",
+     "how": "T-ONBOARD-PULSE at day 30 and 90 in place of a full stay interview; HRBP follows up on low scores."
+    },
+    {
+     "when": "After a reorganization or RIF",
+     "how": "Stay interviews with key remaining talent within 30 days; coordinate messaging with Legal."
+    },
+    {
+     "when": "Low-engagement team",
+     "how": "Skip-level listening sessions or focus groups facilitated by the HRBP."
+    }
+   ],
+   "countries": {
+    "us": "Keep conversations away from protected characteristics and respect NLRA-protected discussion of pay and conditions; never tie benefits to staying out of union activity. Notes are discoverable in later disputes.",
+    "us-ca": "Notes are personnel records and CCPA personal information subject to access requests, and employees may lawfully disclose and discuss wages (LC 232), so do not discourage pay conversations.",
+    "ca": "A commitment made in a stay interview (promotion, remote status, pay) can become a term of employment or support a constructive dismissal claim if withdrawn, so managers should record actions, not promises.",
+    "in": "With 60-90 day notice norms and counter-offer culture in Bengaluru GCCs, schedule stay interviews for key VLSI and verification engineers one to two quarters before the increment cycle.",
+    "tw": "Benchmark concerns against TSMC and MediaTek profit-sharing bonuses and do not record sick-leave use as a retention issue, given the 2026 sick-leave protection rules.",
+    "cn": "Stay-interview notes are PIPL personal information and should stay in-country or be covered by cross-border consent; any agreed change to role, pay or location must be put in writing (LCL Art. 35)."
+   },
+   "templates": [
+    "T-STAY-INTERVIEW",
+    "T-ONBOARD-PULSE"
+   ],
+   "policies": [
+    "POL-42",
+    "POL-46",
+    "POL-43"
+   ],
+   "related": [
+    "EN-01",
+    "OF-07",
+    "CO-05",
+    "PD-05",
+    "ON-04",
+    "MV-06"
+   ]
+  },
+  {
+   "id": "MV-01",
+   "name": "Internal transfer & job change",
+   "stage": "Move",
+   "depth": "standard",
+   "summary": "Moves an employee to a different role, team or manager within the same employing entity and country, whether employee-applied through internal postings or manager-initiated. It bundles the checks a job change triggers: pay and level, exempt status, export-control re-screening, visa amendments, access clean-up and local consent rules. Good looks like fast, fair internal moves with no employee starting a new role before export and immigration checks are complete.",
+   "owner": "HRBP (process), receiving Manager (selection), People Ops (transaction)",
+   "trigger": "Employee applies to an internal posting, or a manager proposes a reassignment or team change",
+   "outputs": [
+    "Internal selection record (Greenhouse)",
+    "Approved transfer terms (level, pay, release date)",
+    "Export re-screen result and TCP briefing if needed",
+    "Immigration amendment filing where required",
+    "Job change transaction in Darwinbox and signed transfer letter"
+   ],
+   "systems": [
+    "Greenhouse (ATS)",
+    "Darwinbox (HRIS)",
+    "Export-control screening tool",
+    "Immigration case system",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "E-signature"
+   ],
+   "sla": "Selection to effective date within 30 days; sending manager release no later than 60 days",
+   "lanes": [
+    "Employee",
+    "Manager",
+    "HRBP",
+    "Trade Compliance",
+    "Immigration",
+    "People Ops"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Apply for internal role",
+     "detail": "Apply through the internal job board in Greenhouse and tell the current manager when invited to interview, per policy; manager-initiated moves start at step 2.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Select and propose the move",
+     "detail": "Receiving manager uses the structured interview process (TA-03) and proposes terms with the HRBP; document the business reason for any manager-initiated reassignment.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Check level, pay and terms",
+     "detail": "Map level and pay against the job architecture, agree a release date with the sending manager (maximum 60 days), and flag exempt-status or work-location changes (MV-05, MV-04).",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Trade Compliance",
+     "type": "task",
+     "label": "Re-screen export access",
+     "detail": "Check whether the new project involves different controlled technology or source code; confirm license coverage for foreign-person employees and deliver any new TCP briefing before access.",
+     "control": "No access to the new project's controlled technology until clearance is recorded.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Immigration",
+     "type": "decision",
+     "label": "Visa impact?",
+     "detail": "Review whether the change in duties, worksite, hours or pay affects work authorization.",
+     "branches": [
+      {
+       "to": "s6",
+       "label": "Yes"
+      },
+      {
+       "to": "s7",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Immigration",
+     "type": "task",
+     "label": "File amendment or new permit",
+     "detail": "Prepare a new LCA and amended H-1B petition (with fresh I-129 Part 6 attestation) for material changes, or update the Canadian, Taiwanese or Chinese permit; the move waits for filing or approval as counsel advises.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Process transfer in Darwinbox",
+     "detail": "Update job, manager, cost center and location; the change triggers LMS reassignment, insider-list review and an access change ticket to remove prior-role access within 5 business days.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Sign transfer letter",
+     "detail": "Employee e-signs the transfer letter or contract amendment in the local language; People Ops files it."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Internal posting and selection",
+     "R": "Manager (receiving)",
+     "A": "Dept Head",
+     "C": "Recruiter, HRBP",
+     "I": "Current manager"
+    },
+    {
+     "activity": "Terms, pay and release date",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "Total Rewards",
+     "I": "Employee"
+    },
+    {
+     "activity": "Export and immigration checks",
+     "R": "Trade Compliance, Immigration",
+     "A": "Legal",
+     "C": "HRBP",
+     "I": "People Ops"
+    },
+    {
+     "activity": "HRIS change and access clean-up",
+     "R": "People Ops",
+     "A": "HRBP",
+     "C": "IT",
+     "I": "Payroll"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Transfer cannot take effect until export re-screen and any required immigration filing are complete",
+     "type": "preventive",
+     "evidence": "Darwinbox transfer checklist"
+    },
+    {
+     "id": "C2",
+     "control": "Prior-role system access removed within 5 business days of the effective date",
+     "type": "detective",
+     "evidence": "Identity access report (DS-04)"
+    },
+    {
+     "id": "C3",
+     "control": "Written consent or contract amendment obtained where local law requires (China, Taiwan, Canada)",
+     "type": "preventive",
+     "evidence": "Signed transfer letter"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Internal fill rate",
+     "target": ">= 25% of openings",
+     "why": "Internal mobility is the cheapest retention tool."
+    },
+    {
+     "name": "Selection to effective date",
+     "target": "<= 30 days",
+     "why": "Long releases kill internal mobility."
+    },
+    {
+     "name": "Access clean-up within 5 business days",
+     "target": ">= 98%",
+     "why": "Leftover access is a SOX and trade-secret risk."
+    }
+   ],
+   "considerations": [
+    "Since Muldrow (2024), lateral transfers can support discrimination claims with 'some harm', so document legitimate reasons for manager-initiated moves.",
+    "Cap sending-manager holds at 60 days; managers who block moves lose talent to competitors instead.",
+    "Transfers are a classic export-control gap: a new project can involve a different ECCN, and foreign-person licenses are often project-specific.",
+    "Access accumulation across moves creates segregation-of-duties conflicts and insider risk; remove old access, don't just add new."
+   ],
+   "variations": [
+    {
+     "when": "Manager-initiated reassignment in a reorganization",
+     "how": "Run under PL-04; in China and Taiwan get consent or meet statutory transfer principles; in Canada assess constructive dismissal risk."
+    },
+    {
+     "when": "Transfer with domestic relocation",
+     "how": "Add ON-05 relocation support and MV-04 location rules."
+    },
+    {
+     "when": "Transfer to another country or legal entity",
+     "how": "Use MV-02 (assignment) or MV-03 (permanent transfer) instead."
+    }
+   ],
+   "countries": {
+    "us": "Document legitimate business reasons for involuntary transfers (Muldrow v. St. Louis, 2024) and recheck exempt status and state payroll if the work state changes. H-1B workers generally need a new LCA and amended petition before starting a materially changed role or a worksite outside the LCA's area.",
+    "us-ca": "A change to exempt status must meet CA's $70,304 (2026) salary floor and duties test, or $58.85/hr for computer professionals, and non-exempt employees must get written notice of wage changes within 7 days (LC 2810.5). New supervisors need 2-hour harassment training within 6 months.",
+    "ca": "A unilateral material change to duties, pay, reporting line or location can be constructive dismissal (Potter 2015 SCC 10), so get written consent with consideration or give working notice. Employer- or occupation-specific work permits may need changes before the move.",
+    "in": "Reasonable transfer clauses in appointment letters are generally enforced, but a move to another entity or state needs a new appointment letter and PF/ESI updates. For 'workers', changes to certain conditions of service require prior notice of change under the IR Code (verify the notice period).",
+    "tw": "Transfers must meet the five LSA Art. 10-1 principles: genuine business need, no worse wages and terms, suited to the employee's ability, help with any location change and consideration of family life. Record the change in a signed bilingual amendment.",
+    "cn": "Changes to position, pay or location need written agreement unless the contract reasonably permits them and the change is fair (LCL Art. 35); a Shanghai-Shenzhen move needs consent and new social insurance and housing fund registration in the new city."
+   },
+   "templates": [],
+   "policies": [
+    "POL-43",
+    "POL-18",
+    "POL-19",
+    "POL-23"
+   ],
+   "related": [
+    "TA-03",
+    "TA-06",
+    "MV-04",
+    "MV-05",
+    "MV-06",
+    "PL-04",
+    "DS-04",
+    "ON-05"
+   ]
+  },
+  {
+   "id": "MV-02",
+   "name": "International assignment",
+   "stage": "Move",
+   "depth": "deep",
+   "summary": "Sends an employee to work in another country for a defined period while keeping home employment: business-traveler checks, short-term (3-12 months), long-term (1-3+ years) and commuter assignments. The process gates every assignment on three approvals (host work authorization, export-control clearance, signed assignment terms) and manages tax equalization, shadow payroll, social security coverage, permanent-establishment risk, security briefings and repatriation. Good looks like zero status lapses or payroll penalties, accurate cost estimates and assignees who stay after they return.",
+   "owner": "Mobility (process), Finance/Tax (tax and PE), Immigration and Trade Compliance (gates), Payroll (home, host and shadow payroll)",
+   "trigger": "Manager request for cross-border work beyond a routine business trip (policy: over 30 days in a country in a year, or any hands-on work, requires Mobility intake)",
+   "outputs": [
+    "Assignment classification and approved cost estimate",
+    "Tax/PE assessment memo and export-control clearance or license",
+    "Host work authorization",
+    "Assignment letter plus host contract or secondment agreement where required",
+    "Home, host and shadow payroll set-up with certificates of coverage",
+    "Repatriation or localization plan"
+   ],
+   "systems": [
+    "Travel/mobility vendor",
+    "Immigration case system",
+    "Export-control screening tool",
+    "Payroll provider",
+    "Equity platform",
+    "Darwinbox (HRIS)",
+    "E-signature"
+   ],
+   "sla": "Business-traveler assessment 5 business days before travel; short-term assignment 6-8 weeks request to start; long-term 10-16 weeks (visa-dependent)",
+   "lanes": [
+    "Manager",
+    "Mobility",
+    "Finance",
+    "Trade Compliance",
+    "Immigration",
+    "Employee",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Manager",
+     "type": "start",
+     "label": "Request assignment with business case",
+     "detail": "Submit purpose, host country and site, duration, candidate and budget owner through Mobility intake; routine trips under 30 days with no hands-on work get a lighter pre-travel assessment.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Mobility",
+     "type": "task",
+     "label": "Classify assignment type",
+     "detail": "Classify as business travel, short-term, long-term or commuter; select the policy tier and whether home employment continues with a host secondment or a host local contract is needed.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Finance",
+     "type": "task",
+     "label": "Assess tax and PE risk",
+     "detail": "Tax reviews host income-tax exposure (183-day and treaty tests), dependent-agent or service PE risk from the assignee's activities in China, Taiwan or India, and the intercompany recharge.",
+     "control": "Tax memo required for assignments over 90 days or involving customer negotiation authority.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Trade Compliance",
+     "type": "decision",
+     "label": "Export clearance for host?",
+     "detail": "Check what controlled technology the assignee will access or carry, deemed-reexport licensing for third-country nationals, and EAR 744.6 limits on US persons supporting advanced-node Chinese fabs.",
+     "branches": [
+      {
+       "to": "s6",
+       "label": "Cleared"
+      },
+      {
+       "to": "s5",
+       "label": "License or limits needed"
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Trade Compliance",
+     "type": "task",
+     "label": "Obtain license or restrict scope",
+     "detail": "Apply for a license or restrict duties, data and device content; brief the assignee on what they may not do, share or carry.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Immigration",
+     "type": "task",
+     "label": "Obtain host work authorization",
+     "detail": "China work permit, Z visa and residence permit; Taiwan WDA permit or Gold Card plus ARC; India Employment visa and FRRO registration; Canada ICT or CUSMA permit; US L-1, H-1B or O-1 for inbound. No productive work on business visitor status.",
+     "control": "No assignment start without approved work authorization.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Mobility",
+     "type": "task",
+     "label": "Build cost estimate and package",
+     "detail": "Estimate full cost (allowances, housing, schooling, home leave, tax equalization gross-ups, vendor fees) and agree the package tier with the budget owner.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Mobility",
+     "type": "task",
+     "label": "Issue assignment letter",
+     "detail": "Assignment letter under home employment plus a host contract or secondment agreement where the permit requires; state duration, package, tax equalization, limits on signing authority and repatriation terms.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Accept terms and complete briefings",
+     "detail": "Sign documents and complete pre-departure briefings: travel security (HS-02), China device and counter-espionage guidance, TCP obligations, host-country conduct and family support.",
+     "next": [
+      "s10"
+     ]
+    },
+    {
+     "id": "s10",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Set up home, host and shadow payroll",
+     "detail": "Set up split or shadow payroll by the first host pay period, hypothetical tax deductions, social security coverage (certificate of coverage where an agreement exists) and equity-vesting sourcing feeds.",
+     "control": "Monthly reconciliation of assignee compensation, including equity, to each jurisdiction.",
+     "next": [
+      "s11"
+     ]
+    },
+    {
+     "id": "s11",
+     "lane": "Mobility",
+     "type": "task",
+     "label": "Track days and compliance",
+     "detail": "Monitor in-country days, permit expiries (120-day alerts), PE-relevant activities and assignment end dates; re-run export checks on project changes.",
+     "next": [
+      "s12"
+     ]
+    },
+    {
+     "id": "s12",
+     "lane": "Manager",
+     "type": "decision",
+     "label": "Extend, localize or repatriate?",
+     "detail": "Decide 6 months before the end date with Mobility and the HRBP.",
+     "branches": [
+      {
+       "to": "s3",
+       "label": "Extend"
+      },
+      {
+       "to": "s13",
+       "label": "Localize"
+      },
+      {
+       "to": "s14",
+       "label": "Repatriate"
+      }
+     ]
+    },
+    {
+     "id": "s13",
+     "lane": "Mobility",
+     "type": "end",
+     "label": "Hand off to MV-03 localization",
+     "detail": "Transfer the case to MV-03 with a plan to phase out assignment allowances."
+    },
+    {
+     "id": "s14",
+     "lane": "Mobility",
+     "type": "task",
+     "label": "Plan repatriation and return role",
+     "detail": "Confirm the home role, return move, host deregistration (permits, residence registration, social insurance) and the final tax-equalization timeline.",
+     "next": [
+      "s15"
+     ]
+    },
+    {
+     "id": "s15",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Close host payroll and true-up tax",
+     "detail": "Close host payroll, file host returns via the tax vendor, complete the tax-equalization settlement and source trailing equity vests correctly.",
+     "next": [
+      "s16"
+     ]
+    },
+    {
+     "id": "s16",
+     "lane": "Employee",
+     "type": "end",
+     "label": "Return and debrief",
+     "detail": "Assignee returns to the agreed role, shares knowledge and has a 90-day check-in with the HRBP."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Assignment request and business case",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "Mobility, FP&A",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Classification and policy tier",
+     "R": "Mobility",
+     "A": "Dept Head",
+     "C": "HRBP, Total Rewards",
+     "I": "Employee"
+    },
+    {
+     "activity": "Tax, PE and recharge assessment",
+     "R": "Finance (Tax)",
+     "A": "Finance (VP Tax)",
+     "C": "Legal, Vendor (tax provider)",
+     "I": "Mobility"
+    },
+    {
+     "activity": "Export-control clearance",
+     "R": "Trade Compliance",
+     "A": "Trade Compliance (Empowered Official)",
+     "C": "Legal, Security",
+     "I": "Manager"
+    },
+    {
+     "activity": "Host work authorization",
+     "R": "Immigration",
+     "A": "Legal",
+     "C": "Vendor (immigration counsel)",
+     "I": "Mobility"
+    },
+    {
+     "activity": "Package, assignment letter and host contract",
+     "R": "Mobility",
+     "A": "HRBP",
+     "C": "Legal, Total Rewards",
+     "I": "Employee"
+    },
+    {
+     "activity": "Home, host and shadow payroll; social security",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "Mobility, Vendor",
+     "I": "Employee"
+    },
+    {
+     "activity": "Day, permit and PE tracking",
+     "R": "Mobility",
+     "A": "Finance (Tax)",
+     "C": "Immigration",
+     "I": "Manager"
+    },
+    {
+     "activity": "Extension, localization or repatriation decision",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "Mobility, HRBP",
+     "I": "Payroll"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "'Three green lights': no assignment starts until work authorization, export clearance and signed assignment terms are all in place",
+     "type": "preventive",
+     "evidence": "Mobility case checklist"
+    },
+    {
+     "id": "C2",
+     "control": "Tax and PE review for assignments to China, Taiwan or India over 90 days or with customer negotiation authority",
+     "type": "preventive",
+     "evidence": "Tax memo on file"
+    },
+    {
+     "id": "C3",
+     "control": "Shadow payroll live by the first host pay period; monthly reconciliation including equity vests",
+     "type": "detective",
+     "evidence": "Payroll reconciliation"
+    },
+    {
+     "id": "C4",
+     "control": "Business-traveler day counting with alerts at 90 and 150 days in a host country",
+     "type": "detective",
+     "evidence": "Tracking report"
+    },
+    {
+     "id": "C5",
+     "control": "Certificate of coverage obtained before start where a social security agreement exists (e.g., US-Canada)",
+     "type": "preventive",
+     "evidence": "Certificate copy in case file"
+    },
+    {
+     "id": "C6",
+     "control": "Permit expiry alerts at 120 days with owner assigned",
+     "type": "preventive",
+     "evidence": "Immigration case system report"
+    },
+    {
+     "id": "C7",
+     "control": "Export re-screen at extension and on any project change",
+     "type": "preventive",
+     "evidence": "Trade Compliance record"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Assignments started with all approvals in place",
+     "target": "100%",
+     "why": "Starting early creates immigration, export and tax violations at once."
+    },
+    {
+     "name": "Cost estimate accuracy",
+     "target": "Within +/-10% of actual",
+     "why": "Assignments are expensive; bad estimates erode business support."
+    },
+    {
+     "name": "Payroll, filing or immigration penalties",
+     "target": "0",
+     "why": "Direct measure of compliance quality."
+    },
+    {
+     "name": "Assignee retention 12 months after return",
+     "target": ">= 85%",
+     "why": "Assignees without a return plan often leave, wasting the investment."
+    },
+    {
+     "name": "Business trips with a completed pre-travel assessment",
+     "target": ">= 95%",
+     "why": "Unmanaged 'long business trips' are where most exposure sits."
+    }
+   ],
+   "considerations": [
+    "Most failures come from extended business trips that are really assignments; enforce the rule that more than 30 days in a country in a year, or any hands-on work, requires Mobility intake.",
+    "Use tax equalization for long-term assignees; it keeps them whole, makes equity sourcing manageable and avoids assignees shopping for tax outcomes.",
+    "Equity is the hardest payroll item: RSUs vesting during or after an assignment are sourced across countries by workdays, so feed travel days and vest data from the equity platform to the tax vendor.",
+    "Social security: the US-Canada agreement allows certificates of coverage, but there is no US-India or US-China agreement, so contributions can be due in both countries, and no US-Taiwan agreement is in force (verify).",
+    "Assignees who negotiate or conclude customer contracts, or FAEs acting for the US parent, can create a permanent establishment; limit signing authority in the assignment letter.",
+    "Export control follows the person and the data: a release to a third-country national abroad is a deemed reexport, and US persons supporting advanced-node fabs in China need an EAR 744.6 review.",
+    "Security matters for China and Taiwan: clean devices, no controlled data on laptops, counter-espionage briefings, and travel approvals for Taiwan staff on core key technology projects.",
+    "Family issues sink assignments: check spouse work rights (Canada's spousal open work permit limits since Jan 2025) and schooling before offering.",
+    "Start repatriation planning 6 months before the end date; a guaranteed return role is the best retention tool."
+   ],
+   "variations": [
+    {
+     "when": "Business traveler (under 30 days, meetings only)",
+     "how": "Pre-travel assessment for visa, tax, PE and export; business visitor status only; no hands-on engineering or customer contract signing."
+    },
+    {
+     "when": "Short-term assignment (3-12 months)",
+     "how": "Home employment and payroll, host work permit, tax protection or equalization, certificate of coverage where available, limited allowances."
+    },
+    {
+     "when": "Long-term assignment (1-3+ years)",
+     "how": "Full package with family support, host contract or secondment agreement, tax equalization, shadow payroll and home-leave trips."
+    },
+    {
+     "when": "Commuter or rotator (e.g., Hsinchu to San Jose monthly)",
+     "how": "Day-count monitoring in both countries, dual payroll exposure and work authorization for each entry."
+    },
+    {
+     "when": "Foreign-national assignee into the US",
+     "how": "Deemed-export license or clearance before access; L-1, H-1B or O-1 with accurate I-129 Part 6 attestation."
+    },
+    {
+     "when": "US person assigned to support customers or partners in China",
+     "how": "Pre-assignment EAR 744.6 review and restricted duties agreed with Trade Compliance."
+    },
+    {
+     "when": "US employee on a short Canadian trip",
+     "how": "Regulation 102 waiver or Non-Resident Employer Certification; CUSMA or business visitor status as appropriate."
+    }
+   ],
+   "countries": {
+    "us": "US citizens and green-card holders remain taxable on worldwide income while abroad (foreign earned income exclusion or credits may apply; verify per case), and FICA generally continues for US-employer assignees, with US-Canada certificates of coverage available but no US-India or US-China totalization agreement and none in force with Taiwan (verify). Inbound assignees need L-1, H-1B or O-1 status with an accurate I-129 Part 6 export certification, and deemed-export licensing must be cleared before access. US persons assigned to support advanced-node fabs in China need an EAR 744.6 review.",
+    "us-ca": "California-based assignees may remain California tax residents depending on their ties and assignment length (verify with the tax provider). Assignment or relocation repayment clauses in agreements from 1 Jan 2026 are generally unenforceable under AB 692, and reimbursable business expenses abroad remain covered by LC 2802.",
+    "ca": "Canadian residents assigned abroad stay taxable in Canada unless they sever residency ties, and CPP/EI can continue under the US-Canada agreement with a certificate of coverage; check Canada's agreements for India or China assignments (verify). Inbound intra-company transferees need 1 year of service with a related entity in the last 3 years, and LMIA-exempt offers go through the IRCC Employer Portal with the C$230 fee. US employees on short Canadian trips need Regulation 102 waivers or Non-Resident Employer Certification.",
+    "in": "Inbound assignees need an Employment (E) visa, generally with salary above USD 25,000 a year, and FRRO registration within 14 days of arrival for stays of 180+ days under the Immigration and Foreigners Act 2025. International workers contribute to EPF on full salary from day one unless they hold a certificate of coverage from an SSA country, and there is no India-US agreement (subject to pending IW litigation). Assignee activity for the US parent can create PE exposure (verify with Tax).",
+    "tw": "Inbound assignees need a WDA work permit for specialized work (salary threshold about NT$47,971 a month; verify) or an Employment Gold Card, plus an ARC; residents (183+ days) are taxed under the withholding tables and non-residents at a flat 18%. Foreign special professionals may qualify for the 50% exemption on salary above NT$3M for 5 years. Staff on core key technology projects need approval to travel to mainland China, and there is no US-Taiwan totalization agreement in force (verify).",
+    "cn": "Inbound assignees need a Foreigner's Work Permit (A/B/C tier), Z visa and a residence permit within 30 days of entry before working, and must be enrolled in Chinese social insurance because there is no US-China totalization agreement; the pension account can be refunded on leaving China. Foreign assignees may choose tax-exempt housing, language and children's education allowances (through 31 Dec 2027) or special additional deductions, not both. Brief assignees on Counter-Espionage Law and data-transfer rules before travel."
+   },
+   "templates": [],
+   "policies": [
+    "POL-40",
+    "POL-41",
+    "POL-18",
+    "POL-19",
+    "POL-30",
+    "POL-31",
+    "POL-27"
+   ],
+   "related": [
+    "MV-03",
+    "MV-06",
+    "TA-06",
+    "TA-07",
+    "ON-05",
+    "HS-02",
+    "EQ-02",
+    "PY-01"
+   ]
+  },
+  {
+   "id": "MV-03",
+   "name": "Permanent cross-border transfer",
+   "stage": "Move",
+   "depth": "standard",
+   "summary": "Moves an employee permanently from one country entity to another (localization), either by terminating and rehiring or by an agreed employer substitution, with explicit decisions on service recognition, severance exposure, equity continuity, benefits and immigration. Good looks like no gap in employment or equity, statutory home-country exit steps completed on time, and a written service-recognition position that prevents later severance disputes.",
+   "owner": "Mobility (process), Legal (structure and documents), Stock Admin (equity continuity), Payroll (home exit and host set-up)",
+   "trigger": "Business need or employee request for a permanent move, or a decision in MV-02 to localize an assignee",
+   "outputs": [
+    "Transfer structure decision memo",
+    "Home-country separation or transfer agreement",
+    "Host-country offer with service-recognition clause",
+    "Host work authorization",
+    "Equity and benefits continuity confirmation",
+    "Home exit documents (certificates, final pay) and host hire record"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Immigration case system",
+    "Equity platform",
+    "Payroll provider",
+    "E-signature",
+    "Travel/mobility vendor"
+   ],
+   "sla": "Approval to host start within 90 days (visa-dependent); home exit documents on statutory timelines",
+   "lanes": [
+    "Manager",
+    "Mobility",
+    "Legal",
+    "Immigration",
+    "Stock Admin",
+    "Payroll",
+    "People Ops"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Manager",
+     "type": "start",
+     "label": "Request permanent transfer",
+     "detail": "Receiving manager confirms an approved position in the host entity (PL-02) and the business case; employee-initiated moves are flagged as local hires on local terms.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Mobility",
+     "type": "task",
+     "label": "Choose transfer structure",
+     "detail": "With Legal and Tax, choose terminate-and-rehire or agreed employer substitution, decide service recognition and set the effective date so there is no gap.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Draft separation and host offer",
+     "detail": "Prepare the home separation or tripartite transfer agreement and a host offer with an explicit service-recognition clause; confirm no home severance is triggered unintentionally.",
+     "control": "Legal approves the service-recognition wording in every host offer.",
+     "next": [
+      "s4"
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Immigration",
+     "type": "task",
+     "label": "Secure host work authorization",
+     "detail": "Obtain the host work permit or permanent residence route before the home employment ends; plan dependants' status.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Stock Admin",
+     "type": "task",
+     "label": "Confirm equity continuity",
+     "detail": "Confirm the plan treats an intra-group move as continuous service, update entity and tax jurisdiction in the equity platform and set up sourcing for vests that straddle the move; register China participants under SAFE Circular 7.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Close home and open host payroll",
+     "detail": "Pay home final entitlements on local deadlines (e.g., CA last day if terminated, India within 2 working days) and set up host payroll, benefits and social insurance from day 1.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Rehire in host entity in Darwinbox",
+     "detail": "Create the host-entity record linked to the original, keep the original hire date as the service date where recognized, and trigger host onboarding (ON-03).",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Mobility",
+     "type": "end",
+     "label": "Close transfer and relocation",
+     "detail": "Complete relocation support (ON-05), confirm all documents are signed and close the case."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Transfer structure decision",
+     "R": "Mobility",
+     "A": "Legal",
+     "C": "Finance (Tax), HRBP",
+     "I": "Manager"
+    },
+    {
+     "activity": "Home separation and host offer documents",
+     "R": "Legal",
+     "A": "HRBP",
+     "C": "Mobility, Total Rewards",
+     "I": "Employee"
+    },
+    {
+     "activity": "Equity continuity and tax sourcing",
+     "R": "Stock Admin",
+     "A": "Total Rewards",
+     "C": "Legal, Finance (Tax)",
+     "I": "Employee"
+    },
+    {
+     "activity": "Payroll, benefits and HRIS changes",
+     "R": "Payroll, People Ops",
+     "A": "Finance",
+     "C": "Mobility, Benefits",
+     "I": "Employee"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Written service-recognition clause in every host offer, approved by Legal",
+     "type": "preventive",
+     "evidence": "Signed host offer"
+    },
+    {
+     "id": "C2",
+     "control": "Equity platform updated on the effective date with no forfeiture event triggered",
+     "type": "detective",
+     "evidence": "Equity platform audit report"
+    },
+    {
+     "id": "C3",
+     "control": "Home-country exit obligations (final pay, certificates, social insurance transfer) completed on statutory timelines",
+     "type": "detective",
+     "evidence": "OF-05 checklist"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Transfers with no gap in employment, benefits or equity",
+     "target": "100%",
+     "why": "Gaps create forfeiture and coverage problems."
+    },
+    {
+     "name": "Approval to host start",
+     "target": "<= 90 days",
+     "why": "Long transfers stall projects and frustrate employees."
+    },
+    {
+     "name": "Post-transfer disputes over service or severance",
+     "target": "0",
+     "why": "Tests the quality of the service-recognition decision."
+    }
+   ],
+   "considerations": [
+    "Decide and document service recognition deliberately: Canadian courts count prior service with affiliates in reasonable notice, and Taiwan and China severance depends on recognized service.",
+    "An intra-group move is normally not a termination under the equity plan, but confirm the plan's service definition and make sure the equity platform does not trigger a forfeiture.",
+    "Retirement and social benefits do not travel: address 401(k) distributions, Canadian RRSP/pension, India PF withdrawal or transfer and China pension refunds in the transfer letter.",
+    "Never end home employment before host work authorization is approved; a gap can break visa continuity and benefit eligibility.",
+    "Localized employees move to host pay ranges; phase out any assignment allowances over 12-24 months with a written schedule."
+   ],
+   "variations": [
+    {
+     "when": "Employee-initiated move for personal reasons",
+     "how": "Local hire on host terms with no allowances; relocation support capped by policy."
+    },
+    {
+     "when": "Localization after an assignment (from MV-02)",
+     "how": "Phase out allowances, end tax equalization after a final year and convert to host benefits."
+    },
+    {
+     "when": "Transfer into China",
+     "how": "Employment by the PRC entity with a work permit, social insurance from day 1 and SAFE Circular 7 registration for equity."
+    }
+   ],
+   "countries": {
+    "us": "Leaving US employment ends US payroll and group benefits and may trigger COBRA (BN-06); a US citizen employed by a foreign affiliate may stop paying FICA unless a 3121(l) agreement applies (verify). Inbound transferees need US work authorization and a new Form I-9 at the US entity.",
+    "us-ca": "If California employment is terminated and the employee rehired abroad, all wages and accrued vacation are due on the last day (LC 201, 203, 227.3); an agreed employer substitution with no break avoids the dispute. Relocation-repayment clauses in agreements from 1 Jan 2026 are barred by AB 692.",
+    "ca": "Prior service with affiliates counts toward common-law reasonable notice, so address service recognition expressly; an outbound transfer ends Canadian employment, requires an ROE, and final pay follows provincial deadlines (Ontario: the later of 7 days or the next pay day).",
+    "in": "Issue a relieving letter and settle full and final dues within 2 working days (Code on Wages s.17(2)); gratuity continuity across group entities is not automatic, so either pay it or document recognition (verify). EPF can be transferred within India or withdrawn on leaving (verify international worker rules).",
+    "tw": "Issue a service certificate on request (LSA Art. 19) and record any agreed seniority recognition, because seniority drives annual leave (LSA Art. 38) and severance. A transfer that is really an employer-initiated termination may trigger severance unless the new employer recognizes service (verify).",
+    "cn": "Issue the termination certificate and complete personnel file and social insurance/housing fund transfer or suspension within 15 days; where the employer arranges the move, prior service generally carries over for severance purposes (verify LCL Implementing Regulations Art. 10). Update SAFE Circular 7 registration for equity."
+   },
+   "templates": [
+    "T-OFFBOARD-CHECKLIST"
+   ],
+   "policies": [
+    "POL-40",
+    "POL-27",
+    "POL-53",
+    "POL-19",
+    "POL-31"
+   ],
+   "related": [
+    "MV-02",
+    "MV-06",
+    "OF-01",
+    "OF-05",
+    "ON-03",
+    "ON-05",
+    "EQ-01",
+    "BN-06"
+   ]
+  },
+  {
+   "id": "MV-04",
+   "name": "Remote work & work-location change",
+   "stage": "Move",
+   "depth": "standard",
+   "summary": "Approves and administers remote or hybrid arrangements and any change in an employee's work location, because the work location, not HQ, drives payroll tax, wage-hour, leave, non-compete, WARN and export-control rules. Cross-border remote work is prohibited by default and allowed only through MV-02 or MV-03 or a short pre-approved workation. Good looks like every location change registered in payroll before the first pay date, remote agreements on file, and no controlled-technology access from unapproved locations.",
+   "owner": "HRBP (approval process), Payroll (registration), Trade Compliance and IT/Security (location controls)",
+   "trigger": "Employee request to work remotely or move, manager-proposed hybrid change, return-to-office decision, or a detected location mismatch",
+   "outputs": [
+    "Approved remote/hybrid agreement (revocable, policy-based)",
+    "Updated work location in Darwinbox",
+    "State/provincial payroll, tax and workers' comp registrations",
+    "Export and sanctions location check",
+    "Equipment and access configuration record"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "ITSM / identity (e.g. ServiceNow, Okta)",
+    "Export-control screening tool",
+    "E-signature"
+   ],
+   "sla": "Decision within 10 business days; payroll registration completed before the first pay date in the new location",
+   "lanes": [
+    "Employee",
+    "Manager",
+    "HRBP",
+    "Trade Compliance",
+    "Payroll",
+    "IT"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Employee",
+     "type": "start",
+     "label": "Request remote or location change",
+     "detail": "Submit the request in Darwinbox with the full address, start date, duration and reason; requests linked to a disability or pregnancy go to LV-02.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Assess role fit",
+     "detail": "Apply the role eligibility matrix: lab, validation and hardware roles are on-site; confirm collaboration needs and, for non-exempt staff, timekeeping arrangements.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "HRBP",
+     "type": "decision",
+     "label": "What kind of location change?",
+     "detail": "Classify the change to route the right checks.",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Cross-border"
+      },
+      {
+       "to": "s5",
+       "label": "New state or province"
+      },
+      {
+       "to": "s7",
+       "label": "Same jurisdiction"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Trade Compliance",
+     "type": "task",
+     "label": "Screen cross-border request",
+     "detail": "Default is decline; exceptions need Mobility, Tax and Legal approval. Sanctioned regions are always blocked, and controlled technology cannot be accessed from abroad without a license review.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Register payroll and tax",
+     "detail": "Register withholding, unemployment, PFML and local taxes and workers' comp in the new US state, or provincial payroll items in Canada (EHT, WSIB/WorkSafeBC), before the first pay date.",
+     "control": "Location change cannot take effect until Payroll confirms registration.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Apply local employment rules",
+     "detail": "Update pay range or geo-pay adjustment, exempt threshold, leave laws, state notices and restrictive covenants for the new location; confirm WARN and FMLA site attribution.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Sign remote work agreement",
+     "detail": "Agreement states it is policy-based and revocable, sets core hours, equipment, expense reimbursement or stipend, security and data rules, and any on-site days.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "IT",
+     "type": "task",
+     "label": "Configure access and equipment",
+     "detail": "Ship equipment, enforce VPN and geo-IP controls (block sanctioned regions) and restrict controlled-design data to approved secure environments.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "HRBP",
+     "type": "end",
+     "label": "Update work location record",
+     "detail": "Confirm the Darwinbox work location, which drives payroll tax, LMS assignments, postings, WARN counts and notices."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Eligibility and approval",
+     "R": "Manager",
+     "A": "Dept Head",
+     "C": "HRBP",
+     "I": "People Ops"
+    },
+    {
+     "activity": "Cross-border and export screening",
+     "R": "Trade Compliance",
+     "A": "Legal",
+     "C": "Mobility, Finance (Tax)",
+     "I": "HRBP"
+    },
+    {
+     "activity": "Payroll, tax and workers' comp registration",
+     "R": "Payroll",
+     "A": "Finance",
+     "C": "HRBP, Benefits",
+     "I": "Employee"
+    },
+    {
+     "activity": "Access, equipment and location controls",
+     "R": "IT",
+     "A": "Security",
+     "C": "Trade Compliance",
+     "I": "Manager"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Work-location change requires Payroll confirmation of tax, UI and workers' comp registration before the effective date",
+     "type": "preventive",
+     "evidence": "Darwinbox workflow approval"
+    },
+    {
+     "id": "C2",
+     "control": "Quarterly comparison of login geolocation with Darwinbox work location to detect unapproved work abroad",
+     "type": "detective",
+     "evidence": "IT/Security report with follow-up log"
+    },
+    {
+     "id": "C3",
+     "control": "California remote and hybrid expense reimbursement (LC 2802) configured as reimbursement or stipend",
+     "type": "preventive",
+     "evidence": "Payroll earning-code set-up"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Location changes registered before the first pay date",
+     "target": "100%",
+     "why": "Late registration creates tax penalties and wrong withholding."
+    },
+    {
+     "name": "Unapproved cross-border remote work cases resolved within 30 days",
+     "target": "100%",
+     "why": "Each case carries immigration, PE, payroll and export exposure."
+    },
+    {
+     "name": "Remote agreements on file for remote/hybrid employees",
+     "target": "100%",
+     "why": "The agreement is the evidence that arrangements are revocable."
+    }
+   ],
+   "considerations": [
+    "Default policy: no work from another country beyond a short pre-approved workation (e.g., 10 business days a year) and never from sanctioned regions; unapproved remote work abroad creates PE, payroll, immigration and export exposure at once.",
+    "The work state, not HQ, governs payroll registration, minimum wage, overtime, leave, final pay, non-competes and WARN counting; hiring or moving someone into a new state without registering is the most common multi-state error.",
+    "Decide the geo-pay rule up front (adjust or not on a move) and apply it consistently; pay transparency laws make inconsistencies visible.",
+    "In Canada, a remote arrangement written into the contract turns a later return-to-office mandate into a constructive dismissal risk; keep arrangements policy-based and revocable.",
+    "Engineers working with controlled design data from home need approved secure environments; home access is still 'release' if a foreign-person household member can see it."
+   ],
+   "variations": [
+    {
+     "when": "Short workation abroad",
+     "how": "Pre-approval checklist (immigration, tax, sanctions, no controlled data), capped days, company device only."
+    },
+    {
+     "when": "Remote work as an accommodation",
+     "how": "Run the interactive process under LV-02; a general in-office policy is not a reason to refuse."
+    },
+    {
+     "when": "Permanent domestic relocation",
+     "how": "Add ON-05 relocation support; H-1B holders need Immigration review first (MV-06)."
+    },
+    {
+     "when": "Return-to-office change",
+     "how": "Give reasonable notice; in Canada assess constructive dismissal risk for contractual remote arrangements."
+    }
+   ],
+   "countries": {
+    "us": "Register for withholding, UI, PFML and local taxes in the new work state before the first payroll, buy workers' comp there and give that state's notices; remote employees count toward FMLA and WARN at the site they report to. Apply the new state's minimum wage, exempt thresholds, leave and non-compete rules (void in MN, ND, OK and WY; WA from 30 Jun 2027).",
+    "us-ca": "Reimburse all necessary remote-work expenses, including a reasonable share of personal phone and internet (LC 2802), and remember that a move into California brings CA exempt thresholds, local minimum wages and B&P 16600 non-compete voidness. Postings for roles that may be filled remotely in CA need a good-faith pay scale (LC 432.3).",
+    "ca": "Ontario employers with 25+ employees must have a written disconnecting-from-work policy and an electronic monitoring policy, given to employees within 30 days; document hybrid arrangements as policy-based and revocable. A move to Quebec triggers French-language contracts and policies, QPP/QPIP payroll and Law 25.",
+    "in": "There is no statutory remote-work regime, though the model standing orders under the IR (Central) Rules 2026 address WFH for services; a move to another state changes Shops Act, professional tax and labour welfare fund registrations.",
+    "tw": "Remote hours must be recorded to the minute, including evening calls with US HQ (LSA Art. 30), because recorded time is presumed working time under the Labor Incident Act; the workplace-bullying rules from 1 July 2026 also cover remote work. A change of work location is a transfer subject to LSA Art. 10-1.",
+    "cn": "A change of work location needs written agreement unless the contract reasonably allows it (LCL Art. 35), and a move between Shanghai and Shenzhen changes social insurance, housing fund and local minimum wage rules. Monitoring of remote work requires prior notice under PIPL."
+   },
+   "templates": [
+    "T-ACCOMMODATION"
+   ],
+   "policies": [
+    "POL-38",
+    "POL-39",
+    "POL-30",
+    "POL-18",
+    "POL-47",
+    "POL-40"
+   ],
+   "related": [
+    "LV-02",
+    "ON-05",
+    "MV-01",
+    "MV-02",
+    "MV-06",
+    "PY-01",
+    "DS-04"
+   ]
+  },
+  {
+   "id": "MV-05",
+   "name": "Status & classification change",
+   "stage": "Move",
+   "depth": "standard",
+   "summary": "Changes an employee's employment status or classification: exempt to non-exempt (and back), full-time to part-time, fixed-term to indefinite, and contractor to employee. Each change gets a documented legal analysis, remediation decision where misclassification is found, and synchronized updates to Darwinbox, payroll, timekeeping and benefits. Good looks like no exempt employee below the applicable threshold, no long-tenured misclassified contractors and changes implemented within one pay period.",
+   "owner": "Total Rewards (classification analysis), Legal (sign-off and remediation), People Ops and Payroll (implementation)",
+   "trigger": "Manager or employee request, annual threshold change (e.g., California 1 January increase), classification audit finding, or contractor tenure review (PL-05)",
+   "outputs": [
+    "Classification analysis memo (duties and salary tests)",
+    "Legal sign-off and any back-pay remediation decision",
+    "Employee notice or contract amendment",
+    "Updated FLSA status, FT/PT and benefits eligibility in Darwinbox",
+    "Payroll and timekeeping configuration"
+   ],
+   "systems": [
+    "Darwinbox (HRIS)",
+    "Payroll provider",
+    "Timekeeping",
+    "Benefits admin platform",
+    "Comp planning tool"
+   ],
+   "sla": "Analysis within 10 business days; implemented within one pay period of approval",
+   "lanes": [
+    "Manager",
+    "Total Rewards",
+    "Legal",
+    "HRBP",
+    "People Ops",
+    "Payroll"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Manager",
+     "type": "start",
+     "label": "Request status change",
+     "detail": "Manager submits the request with the reason, or Total Rewards opens it from an audit, threshold change or contractor review.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Total Rewards",
+     "type": "task",
+     "label": "Run classification analysis",
+     "detail": "Apply salary and duties tests for the work location (FLSA, CA, other states; ON/BC hours exemptions; Taiwan Art. 84-1; India worker test) or the contractor tests (DOL, ABC, CRA and common law).",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Legal",
+     "type": "decision",
+     "label": "Change lawful and clean?",
+     "detail": "Employment counsel reviews the analysis and whether past treatment creates exposure.",
+     "branches": [
+      {
+       "to": "s5",
+       "label": "Yes"
+      },
+      {
+       "to": "s4",
+       "label": "Remediation needed"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Legal",
+     "type": "task",
+     "label": "Decide back-pay remediation",
+     "detail": "Under privilege, estimate unpaid overtime or benefits exposure, decide on voluntary remediation and the communication approach.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Communicate change to employee",
+     "detail": "Explain the change as legal compliance, not a demotion; for new non-exempt staff cover timekeeping, overtime approval and meal/rest rules; issue written notices or contract amendments.",
+     "next": [
+      "s6"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "People Ops",
+     "type": "task",
+     "label": "Update status in Darwinbox",
+     "detail": "Update FLSA status, FT/PT, contract type and standard hours; trigger benefits eligibility changes (BN-03) and timekeeping enrollment.",
+     "control": "Status fields changeable only through the approved workflow.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Payroll",
+     "type": "task",
+     "label": "Configure pay and timekeeping",
+     "detail": "Convert salary to an hourly rate where needed, enable overtime and W-2 code TT tracking, adjust benefits deductions; for contractor conversions end vendor payments and complete I-9 and onboarding.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Manager",
+     "type": "end",
+     "label": "Manage hours under new status",
+     "detail": "Manager approves overtime in advance, prevents off-the-clock work and reviews timecards each period."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Classification analysis",
+     "R": "Total Rewards",
+     "A": "Legal",
+     "C": "HRBP",
+     "I": "Manager"
+    },
+    {
+     "activity": "Remediation decision",
+     "R": "Legal (employment counsel)",
+     "A": "Legal (General Counsel)",
+     "C": "Finance, Payroll",
+     "I": "CHRO"
+    },
+    {
+     "activity": "Employee communication and documents",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "Legal",
+     "I": "Employee"
+    },
+    {
+     "activity": "HRIS, payroll, timekeeping and benefits updates",
+     "R": "Payroll",
+     "A": "People Ops",
+     "C": "Benefits",
+     "I": "Manager"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Annual pre-1 January audit of exempt employees against next year's federal and state thresholds (e.g., CA $72,384 for 2027)",
+     "type": "detective",
+     "evidence": "Audit workbook and remediation list"
+    },
+    {
+     "id": "C2",
+     "control": "Classification changes require Total Rewards analysis and Legal sign-off; no manager-only changes",
+     "type": "preventive",
+     "evidence": "Darwinbox workflow approvals"
+    },
+    {
+     "id": "C3",
+     "control": "Contractor engagements over 6 months reviewed for conversion or termination",
+     "type": "detective",
+     "evidence": "PL-05 contractor tenure report"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Exempt employees below the applicable threshold",
+     "target": "0",
+     "why": "Direct wage-hour exposure, amplified by PAGA in California."
+    },
+    {
+     "name": "Contractors with tenure over 12 months without a classification review",
+     "target": "0",
+     "why": "Long tenure is the strongest misclassification signal."
+    },
+    {
+     "name": "Changes implemented within one pay period of approval",
+     "target": "100%",
+     "why": "Delays extend the exposure period."
+    }
+   ],
+   "considerations": [
+    "When reclassifying exempt to non-exempt, set the hourly rate so expected annual earnings including typical overtime are close to the old salary, and position it as compliance, not demotion.",
+    "Lab technicians, test operators and new-grad support roles are usually non-exempt; the computer-professional exemption fits software and EDA roles but not hardware design as such.",
+    "Contractor conversion does not admit past liability, but decide remediation deliberately; Canadian dependent contractors can claim reasonable notice even without conversion.",
+    "Part-time changes affect benefits eligibility (ACA 30-hour rule), leave accruals and possibly equity vesting under plan terms; spell these out in writing.",
+    "India's 'worker' status follows the dominant nature of duties, not title or pay, so re-titling does not change classification."
+   ],
+   "variations": [
+    {
+     "when": "Full-time to part-time",
+     "how": "Written agreement with pro-rated pay and benefits; check local part-time rules and any equity plan pro-ration."
+    },
+    {
+     "when": "Contractor to employee",
+     "how": "Background check (TA-05), I-9 or local right-to-work, IP assignment, export screening (TA-06) and a clean start date."
+    },
+    {
+     "when": "Fixed-term to indefinite",
+     "how": "China: open-ended contract after two consecutive fixed terms (SPC Interpretation II Art. 10); Taiwan: conversion if renewals leave gaps of 30 days or less and service exceeds 90 days."
+    },
+    {
+     "when": "Annual threshold change",
+     "how": "Bulk review each Q4: raise salaries above the new floor or reclassify with notice before 1 January."
+    }
+   ],
+   "countries": {
+    "us": "FLSA exemption needs a salary of at least $684 a week ($35,568 a year; HCE $107,432; computer employees $27.63/hr) plus the duties test, proven by a preponderance of evidence (E.M.D. Sales v. Carrera, 2025), with higher state thresholds in CA, NY, WA and CO. From 2026 the FLSA overtime premium must be tracked for W-2 code TT, and DOL's Feb 2026 proposal would restore the 2021 core-factor contractor test.",
+    "us-ca": "Exempt status needs at least $70,304 (2026) or $72,384 (2027) plus California's stricter duties tests, or $58.85/hr ($122,573.13/yr in 2026) for computer professionals. Contractor status is judged under the ABC test (Labor Code 2775), and new non-exempt employees need an LC 2810.5 wage notice.",
+    "ca": "Ontario IT professionals and BC high-technology professionals (ESR s.37.8) are exempt from hours and overtime rules, but technicians and support staff usually are not, so confirm role by role. Long-term 'contractors' who work like employees face CRA CPP/EI assessments and reasonable-notice claims as dependent contractors (Keenan v. Canac Kitchens, 2016 ONCA 79).",
+    "in": "Anyone not mainly managerial or administrative, or a supervisor earning over INR 18,000 a month, is a 'worker' with double-rate overtime, retrenchment and standing-order protections regardless of title. Fixed-term employees must have parity with permanent staff and gratuity after 1 year.",
+    "tw": "There is no salary-based exemption: virtually all employees, including engineers and most managers, are covered by LSA hours and overtime unless in an MOL-designated Art. 84-1 role with an approved agreement. Fixed-term renewals with gaps of 30 days or less and combined service over 90 days convert to indefinite-term (LSA Art. 9).",
+    "cn": "Comprehensive or flexible working-hour systems for FAE, sales or shift roles need local HR bureau approval, otherwise standard overtime rules apply. SPC Interpretation II (Sept 2025) broadens when consecutive fixed-term contracts require an open-ended contract."
+   },
+   "templates": [],
+   "policies": [
+    "POL-29",
+    "POL-20",
+    "POL-23",
+    "POL-37"
+   ],
+   "related": [
+    "PL-05",
+    "PY-03",
+    "BN-03",
+    "MV-01",
+    "TA-05",
+    "TA-06"
+   ]
+  },
+  {
+   "id": "MV-06",
+   "name": "Immigration maintenance & green cards",
+   "stage": "Move",
+   "depth": "standard",
+   "summary": "Keeps sponsored employees in valid status after hire (extensions, amendments for job or worksite changes, permit renewals, public access files) and runs permanent residence sponsorship (US PERM, I-140 and I-485; Canadian PR support). It also gives Immigration a seat in RIF and job-change decisions, because layoffs now weigh on H-1B and LCA adjudications. Good looks like zero status lapses, amendments filed before changes take effect and a transparent green-card policy that supports retention.",
+   "owner": "Immigration (program owner), outside immigration counsel (filings), HRBP (sponsorship decisions)",
+   "trigger": "Status expiry within 180 days, a planned job, pay, hours or worksite change, a green-card eligibility date under policy, or a planned RIF",
+   "outputs": [
+    "Status and expiry register",
+    "LCA filings and public access files",
+    "Amended or extended petitions and permits",
+    "PERM, I-140 and I-485 filings",
+    "Immigration impact review for RIFs and job changes"
+   ],
+   "systems": [
+    "Immigration case system",
+    "Darwinbox (HRIS)",
+    "Export-control screening tool",
+    "Document management"
+   ],
+   "sla": "Extension filings at least 90 days before expiry (180-day alert); amendments filed before the change takes effect; PERM filed within 9 months of sponsorship approval",
+   "lanes": [
+    "Immigration",
+    "Manager",
+    "Trade Compliance",
+    "Vendor",
+    "HRBP",
+    "Employee"
+   ],
+   "steps": [
+    {
+     "id": "s1",
+     "lane": "Immigration",
+     "type": "start",
+     "label": "Track expiries and change events",
+     "detail": "The case system receives a daily Darwinbox feed of job, pay, manager and location changes for sponsored employees and raises 180-day expiry alerts.",
+     "next": [
+      "s2"
+     ]
+    },
+    {
+     "id": "s2",
+     "lane": "Manager",
+     "type": "task",
+     "label": "Notify planned job or site change",
+     "detail": "Managers notify Immigration before any change to duties, worksite (including remote moves), hours or pay for a sponsored employee; the change waits for Immigration's go-ahead.",
+     "control": "Darwinbox blocks effective-dating a change for a visa holder until Immigration approves.",
+     "next": [
+      "s3"
+     ]
+    },
+    {
+     "id": "s3",
+     "lane": "Immigration",
+     "type": "decision",
+     "label": "What action is needed?",
+     "detail": "Immigration and counsel determine whether the event needs an amendment or extension, starts a green-card case or needs no filing.",
+     "branches": [
+      {
+       "to": "s4",
+       "label": "Amend or extend"
+      },
+      {
+       "to": "s6",
+       "label": "Green card"
+      },
+      {
+       "to": "s9",
+       "label": "No action"
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "lane": "Trade Compliance",
+     "type": "task",
+     "label": "Refresh I-129 Part 6 attestation",
+     "detail": "Trade Compliance issues a written classification of the role's technology access for the new or extended petition; licenses are aligned with petition timing.",
+     "next": [
+      "s5"
+     ]
+    },
+    {
+     "id": "s5",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "File amendment or extension",
+     "detail": "Counsel certifies the LCA, posts notice at the worksite, builds the public access file and files the petition (premium processing as needed); Canada, Taiwan and China permits are renewed in parallel.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s6",
+     "lane": "HRBP",
+     "type": "task",
+     "label": "Approve green card sponsorship",
+     "detail": "Apply the published policy (e.g., eligible after 12 months in role with solid performance) and choose PERM, EB-1 or NIW with counsel; the company pays all PERM costs.",
+     "next": [
+      "s7"
+     ]
+    },
+    {
+     "id": "s7",
+     "lane": "Vendor",
+     "type": "task",
+     "label": "Run PERM, I-140 and I-485",
+     "detail": "Prevailing wage request, recruitment, layoff check for the occupation, PERM filing, I-140 and I-485 when the priority date is current; use AC21 extensions beyond the 6-year H-1B limit.",
+     "next": [
+      "s8"
+     ]
+    },
+    {
+     "id": "s8",
+     "lane": "Employee",
+     "type": "task",
+     "label": "Provide documents and maintain status",
+     "detail": "Employee supplies documents promptly, clears international travel with Immigration and understands the 60-day grace period and job portability rules.",
+     "next": [
+      "s9"
+     ]
+    },
+    {
+     "id": "s9",
+     "lane": "Immigration",
+     "type": "end",
+     "label": "Update records and retain files",
+     "detail": "Update the status register, I-9 reverification dates and public access files (retained per 20 CFR 655.760); feed status data into RIF planning."
+    }
+   ],
+   "raci": [
+    {
+     "activity": "Status tracking and change triggers",
+     "R": "Immigration",
+     "A": "Legal",
+     "C": "People Ops",
+     "I": "Manager"
+    },
+    {
+     "activity": "Amendments, extensions, LCA and public access file",
+     "R": "Vendor (immigration counsel)",
+     "A": "Immigration",
+     "C": "Trade Compliance, HRBP",
+     "I": "Employee"
+    },
+    {
+     "activity": "Green card sponsorship decision",
+     "R": "HRBP",
+     "A": "Dept Head",
+     "C": "Immigration, Total Rewards",
+     "I": "Employee"
+    },
+    {
+     "activity": "RIF and job-change immigration impact review",
+     "R": "Immigration",
+     "A": "Legal",
+     "C": "Employee Relations, HRBP",
+     "I": "CHRO"
+    }
+   ],
+   "controls": [
+    {
+     "id": "C1",
+     "control": "Job, pay, location and manager changes for visa holders blocked in Darwinbox until Immigration approves",
+     "type": "preventive",
+     "evidence": "Workflow log"
+    },
+    {
+     "id": "C2",
+     "control": "LCA notice posting and public access file completed and retained; annual file audit",
+     "type": "detective",
+     "evidence": "Public access file audit checklist"
+    },
+    {
+     "id": "C3",
+     "control": "I-129 Part 6 signed only with a written Trade Compliance classification",
+     "type": "preventive",
+     "evidence": "Classification memo in the case file"
+    },
+    {
+     "id": "C4",
+     "control": "RIF selection lists reviewed by Immigration before notices (LCA withdrawal, return transport, PERM layoff test)",
+     "type": "preventive",
+     "evidence": "RIF checklist sign-off"
+    }
+   ],
+   "kpis": [
+    {
+     "name": "Status lapses",
+     "target": "0",
+     "why": "A lapse can force an employee to stop working or leave the country."
+    },
+    {
+     "name": "Amendments filed before the change takes effect",
+     "target": "100%",
+     "why": "Late amendments create status violations and back-wage exposure."
+    },
+    {
+     "name": "Sponsorship approval to PERM filing",
+     "target": "<= 9 months",
+     "why": "Delay pushes priority dates back years for India- and China-born engineers."
+    }
+   ],
+   "considerations": [
+    "Green-card timing is a major retention lever for India- and China-born engineers facing long backlogs; publish objective sponsorship criteria to avoid favoritism and national-origin claims.",
+    "Layoffs now affect immigration directly: the Sept 18, 2026 EO tells agencies to weigh past-year and planned layoffs in LCA, petition and visa adjudications, and PERM requires notice to laid-off US workers in the occupation within the prior 6 months (verify); coordinate RIF timing with pending filings.",
+    "Remote work moves are the most common amendment miss: a worksite outside the LCA's area needs a new LCA and usually an amended petition before the move (MV-04).",
+    "PERM costs must be paid by the employer and cannot be recovered through clawbacks; California's AB 692 also bars repayment terms in new agreements.",
+    "On termination of an H-1B worker, withdraw the LCA, notify USCIS and offer return transportation; the worker has up to 60 days' grace to change status or employer."
+   ],
+   "variations": [
+    {
+     "when": "Remote or relocation move for an H-1B worker",
+     "how": "New LCA and amended petition before the move; post notice at the new worksite."
+    },
+    {
+     "when": "Promotion or role change during a green-card case",
+     "how": "Counsel assesses whether PERM or I-140 must restart; after I-485 has been pending 180 days, same-or-similar job portability may apply."
+    },
+    {
+     "when": "RIF affecting sponsored employees",
+     "how": "Bona fide termination steps, grace-period communication, and PERM and H-1B impact review under the Sept 2026 EO."
+    },
+    {
+     "when": "Canada, Taiwan and China renewals",
+     "how": "Canadian work permits renewed before expiry with PR planning; Taiwan Gold Card or WDA permit and ARC renewals; China work permit and residence permit renewals."
+    }
+   ],
+   "countries": {
+    "us": "Material changes such as a worksite outside the LCA's area need a new LCA and amended H-1B petition, with LCA notice and a public access file (20 CFR 655.760); on termination, withdraw the LCA, notify USCIS and offer return fare, and the worker has a 60-day grace period (8 CFR 214.1(l)(2)). The Sept 18, 2026 EO has agencies weigh layoffs in LCA and petition decisions, and DOL's proposed prevailing-wage increase (Level I-IV to the 34th/52nd/70th/88th percentiles) would raise H-1B and PERM wage floors.",
+    "us-ca": "No separate state immigration regime, but sponsored employees are covered by the same pay-scale, Equal Pay Act and AB 692 rules, so immigration-cost repayment terms in agreements from 1 Jan 2026 are unenforceable. A remote move within or out of California can still need a new LCA.",
+    "ca": "Employers of work-permit holders must keep wages and duties consistent with the permit, keep records 6 years and diarize expiries (9-series SINs expire with the permit); PGWPs cannot be extended, so start LMIA or PR planning early. IRCC consulted in Aug-Sep 2026 on an Express Entry category for H-1B holders, a potential recruiting channel for 2027.",
+    "in": "Foreign nationals on Employment visas must keep FRRO registration current under the Immigration and Foreigners Act 2025 (verify employer reporting duties). India has no employer-sponsored permanent residence route, so the main issue is supporting Indian engineers' US status and green-card timing.",
+    "tw": "The 2026 Foreign Professionals Act amendments allow faster APRC (1 year for high earners) and work rights for spouses; track WDA work-permit, Gold Card and ARC renewals. PRC nationals are effectively barred from employment in Taiwan.",
+    "cn": "Renew the Foreigner's Work Permit and residence permit before expiry and update them on job or employer changes; foreign employees' contracts run for at most 5 years. SPC Interpretation II Art. 4 recognizes employment only for foreigners with permanent residence or valid permits."
+   },
+   "templates": [],
+   "policies": [
+    "POL-19",
+    "POL-18",
+    "POL-54",
+    "POL-31"
+   ],
+   "related": [
+    "TA-07",
+    "MV-01",
+    "MV-02",
+    "MV-04",
+    "OF-02",
+    "OF-03",
+    "TA-06"
+   ]
+  }
+ ]
+}
