@@ -1,0 +1,131 @@
+1
+00:00:01,100 --> 00:00:02,533
+[Leo] Okay, the big question.
+
+2
+00:00:02,553 --> 00:00:04,302
+[Leo] Who actually clicks approve?
+
+3
+00:00:04,322 --> 00:00:05,884
+[Ava] The approval chain decides.
+
+4
+00:00:05,904 --> 00:00:09,144
+[Ava] It's the route an item takes, one sign-off at a time.
+
+5
+00:00:09,794 --> 00:00:13,288
+[Ava] There are five default chains: global policy, process,
+
+6
+00:00:13,308 --> 00:00:17,693
+[Ava] legal obligation, public company controls and project documents.
+
+7
+00:00:17,713 --> 00:00:20,313
+[Leo] Wait, can I create my own approval chain?
+
+8
+00:00:20,333 --> 00:00:20,941
+[Ava] Yes.
+
+9
+00:00:20,961 --> 00:00:24,789
+[Ava] Editors can change any default chain or build a brand new one.
+
+10
+00:00:25,439 --> 00:00:29,964
+[Ava] Open Approvals, edit a chain or click New chain, and name each step clearly.
+
+11
+00:00:29,984 --> 00:00:31,477
+[Leo] Then who signs each step?
+
+12
+00:00:31,497 --> 00:00:32,906
+[Leo] Can I just put Chip?
+
+13
+00:00:32,926 --> 00:00:34,169
+[Ava] Chip has no hands.
+
+14
+00:00:34,189 --> 00:00:37,603
+[Ava] Assign named people, then choose whether any or all must sign.
+
+15
+00:00:37,623 --> 00:00:41,923
+[Leo] So if my approver's on vacation, I add a backup and set it to any?
+
+16
+00:00:41,943 --> 00:00:42,766
+[Ava] Exactly.
+
+17
+00:00:42,786 --> 00:00:45,993
+[Ava] Mark steps optional too, like works council consultation,
+
+18
+00:00:46,013 --> 00:00:48,797
+[Ava] and skip them with a note where not needed.
+
+19
+00:00:50,047 --> 00:00:51,903
+[Ava] The owner clicks Submit for approval.
+
+20
+00:00:51,923 --> 00:00:54,836
+[Ava] Each approver, in turn, sees it under Waiting on you.
+
+21
+00:00:54,856 --> 00:00:57,598
+[Leo] So this is where someone actually clicks approve.
+
+22
+00:00:57,618 --> 00:00:58,338
+[Ava] Right here.
+
+23
+00:00:58,358 --> 00:01:02,056
+[Ava] Approve, or send it back with a reason the owner can act on.
+
+24
+00:01:03,306 --> 00:01:04,993
+[Leo] And if Legal sends it back?
+
+25
+00:01:05,013 --> 00:01:09,802
+[Ava] The owner fixes it and resubmits, and the chain carries on to final approval.
+
+26
+00:01:12,852 --> 00:01:15,876
+[Ava] Every approval, send-back and reason is time-stamped.
+
+27
+00:01:15,896 --> 00:01:17,780
+[Ava] That audit trail is your evidence.
+
+28
+00:01:17,800 --> 00:01:21,697
+[Leo] So when auditors ask who approved it, nobody digs through email.
+
+29
+00:01:21,717 --> 00:01:22,966
+[Leo] Chip's thrilled.
+
+30
+00:01:23,616 --> 00:01:26,758
+[Ava] Put named approvers on every chain by October 30,
+
+31
+00:01:26,778 --> 00:01:29,515
+[Ava] and run one test submission end to end.
+
+32
+00:01:29,535 --> 00:01:32,778
+[Leo] Next time, a policy goes live in 13 countries.
+
+33
+00:01:32,798 --> 00:01:34,284
+[Leo] Bring snacks.

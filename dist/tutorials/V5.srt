@@ -1,0 +1,147 @@
+1
+00:00:01,100 --> 00:00:03,861
+[Leo] POL-09, anti-harassment, is approved.
+
+2
+00:00:03,881 --> 00:00:05,134
+[Leo] So we're done, right?
+
+3
+00:00:05,154 --> 00:00:06,461
+[Ava] Approved isn't live.
+
+4
+00:00:06,481 --> 00:00:09,686
+[Ava] Thirteen countries take a little choreography first.
+
+5
+00:00:10,336 --> 00:00:13,335
+[Ava] Every policy is one global document plus country
+
+6
+00:00:13,355 --> 00:00:16,532
+[Ava] addenda that only cover what local law changes.
+
+7
+00:00:16,552 --> 00:00:20,649
+[Leo] So not thirteen separate copies, each called final_v7?
+
+8
+00:00:20,669 --> 00:00:21,270
+[Ava] Nope.
+
+9
+00:00:21,290 --> 00:00:25,332
+[Ava] One source, with local differences marked and translated where needed.
+
+10
+00:00:25,982 --> 00:00:27,449
+[Ava] Four countries add gates.
+
+11
+00:00:27,469 --> 00:00:30,655
+[Ava] In Germany, the works council co-determines conduct rules,
+
+12
+00:00:30,675 --> 00:00:32,331
+[Ava] so you need its agreement.
+
+13
+00:00:32,351 --> 00:00:33,197
+[Leo] And China?
+
+14
+00:00:33,217 --> 00:00:35,155
+[Leo] I'm guessing an email won't cut it.
+
+15
+00:00:35,175 --> 00:00:37,489
+[Ava] China needs democratic consultation.
+
+16
+00:00:37,509 --> 00:00:40,350
+[Ava] Vietnam registers internal labor regulations,
+
+17
+00:00:40,370 --> 00:00:44,088
+[Ava] and Taiwan files work rules with the labor authority.
+
+18
+00:00:44,738 --> 00:00:49,199
+[Ava] These gates take weeks, so plan backwards from your go-live date and start early.
+
+19
+00:00:49,219 --> 00:00:50,503
+[Leo] And mind the calendar.
+
+20
+00:00:50,523 --> 00:00:55,204
+[Leo] Year-end freeze, then Lunar New Year and Tet from February 5 to 14.
+
+21
+00:00:55,224 --> 00:00:55,850
+[Ava] Right.
+
+22
+00:00:55,870 --> 00:01:00,211
+[Ava] Finish China, Taiwan and Vietnam before that break, or your launch slips.
+
+23
+00:01:00,861 --> 00:01:04,627
+[Ava] On launch day, publish in the Policy guide with an effective date,
+
+24
+00:01:04,647 --> 00:01:06,760
+[Ava] then communicate, managers first.
+
+25
+00:01:06,780 --> 00:01:10,114
+[Leo] Then the hard part: getting people to actually read it.
+
+26
+00:01:10,134 --> 00:01:13,030
+[Ava] Collect acknowledgments, then file the evidence:
+
+27
+00:01:13,050 --> 00:01:16,863
+[Ava] acknowledgment reports, filings and consultation minutes.
+
+28
+00:01:17,513 --> 00:01:19,934
+[Leo] Wait, why is Vietnam still in review?
+
+29
+00:01:19,954 --> 00:01:22,011
+[Ava] It's waiting on the authority's receipt.
+
+30
+00:01:22,031 --> 00:01:24,268
+[Ava] Once that's attached, the gate is cleared.
+
+31
+00:01:24,288 --> 00:01:26,555
+[Leo] So now I can set everything to Live?
+
+32
+00:01:26,575 --> 00:01:29,417
+[Ava] Now you can: every country's evidence is filed.
+
+33
+00:01:29,437 --> 00:01:31,107
+[Ava] That's what auditors sample.
+
+34
+00:01:31,757 --> 00:01:35,611
+[Ava] One global policy, local gates planned early, evidence filed.
+
+35
+00:01:35,631 --> 00:01:36,915
+[Ava] That's what live means.
+
+36
+00:01:36,935 --> 00:01:38,071
+[Leo] That's the series.
+
+37
+00:01:38,091 --> 00:01:42,595
+[Leo] Now go update your items, and maybe rename final_v7.

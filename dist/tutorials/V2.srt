@@ -1,0 +1,159 @@
+1
+00:00:01,100 --> 00:00:04,598
+[Leo] Ava, there are 438 items in the Atlas.
+
+2
+00:00:04,618 --> 00:00:06,089
+[Leo] How do I find mine?
+
+3
+00:00:06,109 --> 00:00:07,004
+[Ava] Two filters.
+
+4
+00:00:07,024 --> 00:00:09,565
+[Ava] Open the Master checklist and I'll show you.
+
+5
+00:00:10,215 --> 00:00:11,716
+[Ava] First, filter by wave.
+
+6
+00:00:11,736 --> 00:00:13,091
+[Ava] Let's pick Wave 1.
+
+7
+00:00:13,111 --> 00:00:16,643
+[Leo] Then by workstream, which is my team, Talent Acquisition.
+
+8
+00:00:16,663 --> 00:00:17,941
+[Ava] Now it's a short list.
+
+9
+00:00:17,961 --> 00:00:20,294
+[Ava] Open one, like Background screening.
+
+10
+00:00:20,944 --> 00:00:22,561
+[Ava] Set yourself as the assignee.
+
+11
+00:00:22,581 --> 00:00:24,905
+[Ava] Type your name and pick yourself from the list.
+
+12
+00:00:24,925 --> 00:00:25,549
+[Leo] Done.
+
+13
+00:00:25,569 --> 00:00:26,939
+[Leo] It's officially mine.
+
+14
+00:00:26,959 --> 00:00:28,248
+[Leo] No take-backs.
+
+15
+00:00:28,268 --> 00:00:32,604
+[Ava] Now set the status to Drafting and a target date you actually believe in.
+
+16
+00:00:32,624 --> 00:00:34,507
+[Leo] Saved for everyone, instantly.
+
+17
+00:00:34,527 --> 00:00:36,907
+[Leo] Goodbye, emailing the tracker around.
+
+18
+00:00:37,557 --> 00:00:41,517
+[Ava] Then add a note: where the document lives, what's missing, your next step.
+
+19
+00:00:41,537 --> 00:00:43,113
+[Leo] So not just "working on it"?
+
+20
+00:00:43,133 --> 00:00:45,549
+[Leo] That's been my status since 2019.
+
+21
+00:00:45,569 --> 00:00:48,224
+[Ava] A good note means nobody has to chase you.
+
+22
+00:00:48,874 --> 00:00:50,888
+[Leo] How often do I need to do this?
+
+23
+00:00:50,908 --> 00:00:51,750
+[Ava] Every week.
+
+24
+00:00:51,770 --> 00:00:54,941
+[Ava] The status report is generated straight from the checklist,
+
+25
+00:00:54,961 --> 00:00:57,074
+[Ava] so leadership reads what you enter.
+
+26
+00:00:57,094 --> 00:01:00,442
+[Leo] Skip a week and the steering committee reads old news.
+
+27
+00:01:00,462 --> 00:01:01,461
+[Leo] Got it.
+
+28
+00:01:02,111 --> 00:01:02,838
+[Leo] Uh oh.
+
+29
+00:01:02,858 --> 00:01:04,268
+[Leo] Why is this one red?
+
+30
+00:01:04,288 --> 00:01:08,059
+[Ava] It's overdue: the target date has passed and the item isn't finished.
+
+31
+00:01:08,079 --> 00:01:10,107
+[Ava] Maybe the approver's on vacation.
+
+32
+00:01:10,127 --> 00:01:10,866
+[Leo] Classic.
+
+33
+00:01:10,886 --> 00:01:12,927
+[Leo] So do I just quietly move the date?
+
+34
+00:01:12,947 --> 00:01:13,913
+[Ava] Not quietly.
+
+35
+00:01:13,933 --> 00:01:18,446
+[Ava] Note what's blocking it, agree a new date with your workstream lead, then update it.
+
+36
+00:01:19,096 --> 00:01:23,068
+[Ava] Filter, open, assign yourself, update status and date, leave a note.
+
+37
+00:01:23,088 --> 00:01:24,039
+[Ava] Every week.
+
+38
+00:01:24,059 --> 00:01:26,727
+[Leo] A few minutes a week and nobody chases me?
+
+39
+00:01:26,747 --> 00:01:27,477
+[Leo] Sold.
+
+40
+00:01:27,497 --> 00:01:30,061
+[Leo] Next up, documenting a process.

@@ -1,0 +1,151 @@
+1
+00:00:01,100 --> 00:00:03,119
+[Leo] Ninety seconds for a whole program?
+
+2
+00:00:03,139 --> 00:00:05,922
+[Leo] I've had meetings take longer to find the dial-in.
+
+3
+00:00:05,942 --> 00:00:07,092
+[Ava] Then let's beat them.
+
+4
+00:00:07,112 --> 00:00:08,766
+[Ava] Chip's got the stopwatch.
+
+5
+00:00:09,416 --> 00:00:11,516
+[Ava] Over twelve months, we document,
+
+6
+00:00:11,536 --> 00:00:16,062
+[Ava] approve and launch every HR policy, process and legal obligation.
+
+7
+00:00:16,082 --> 00:00:17,975
+[Leo] Across 13 jurisdictions?
+
+8
+00:00:17,995 --> 00:00:20,079
+[Leo] That's 438 items.
+
+9
+00:00:20,099 --> 00:00:23,384
+[Leo] And we tracked them in a spreadsheet called final_v7?
+
+10
+00:00:23,404 --> 00:00:25,025
+[Ava] Which is exactly the problem.
+
+11
+00:00:25,045 --> 00:00:29,100
+[Ava] For a public company, every gap is audit or legal exposure.
+
+12
+00:00:29,750 --> 00:00:31,495
+[Ava] Mobilize starts October 12:
+
+13
+00:00:31,515 --> 00:00:35,461
+[Ava] four weeks to set up the team, tools and approval chains.
+
+14
+00:00:35,481 --> 00:00:36,566
+[Leo] Then the waves.
+
+15
+00:00:36,586 --> 00:00:38,724
+[Leo] Let me guess, scariest stuff first?
+
+16
+00:00:38,744 --> 00:00:39,305
+[Ava] Yep.
+
+17
+00:00:39,325 --> 00:00:41,862
+[Ava] Wave 1 tackles the riskiest must-haves,
+
+18
+00:00:41,882 --> 00:00:46,560
+[Ava] Waves 2 and 3 finish every required item, and Wave 4 makes it stick.
+
+19
+00:00:46,580 --> 00:00:49,333
+[Leo] Done by October 8, 2027.
+
+20
+00:00:49,353 --> 00:00:51,215
+[Leo] Blocking my calendar now.
+
+21
+00:00:51,865 --> 00:00:53,172
+[Leo] Who's doing all this?
+
+22
+00:00:53,192 --> 00:00:54,591
+[Leo] Please don't say me.
+
+23
+00:00:54,611 --> 00:00:57,023
+[Ava] Six workstreams, each with a named lead.
+
+24
+00:00:57,043 --> 00:01:00,876
+[Ava] Regional and country HR leads handle the local details.
+
+25
+00:01:00,896 --> 00:01:04,535
+[Leo] Good, because Germany doesn't exactly run like Texas.
+
+26
+00:01:05,185 --> 00:01:08,563
+[Ava] Every item moves through five stages: discover what exists,
+
+27
+00:01:08,583 --> 00:01:11,049
+[Ava] then draft it in the standard template.
+
+28
+00:01:11,069 --> 00:01:14,911
+[Leo] Then review and approve, where my emails usually go to die.
+
+29
+00:01:14,931 --> 00:01:15,649
+[Ava] Not here.
+
+30
+00:01:15,669 --> 00:01:17,265
+[Ava] Approvals run in the Atlas.
+
+31
+00:01:17,285 --> 00:01:20,842
+[Ava] Go live means published, communicated and evidence filed.
+
+32
+00:01:21,492 --> 00:01:22,366
+[Leo] Last thing.
+
+33
+00:01:22,386 --> 00:01:23,985
+[Leo] Where do I find my stuff?
+
+34
+00:01:24,005 --> 00:01:25,837
+[Ava] Project HQ for the big picture,
+
+35
+00:01:25,857 --> 00:01:30,089
+[Ava] the Master checklist for your items, and Approvals for sign-offs.
+
+36
+00:01:30,739 --> 00:01:36,474
+[Ava] That's Atlas: 438 items, five stages, four waves, one place to track them.
+
+37
+00:01:36,494 --> 00:01:38,307
+[Leo] Ninety seconds, give or take.
+
+38
+00:01:38,327 --> 00:01:41,459
+[Leo] Next time, we find and update your items.
