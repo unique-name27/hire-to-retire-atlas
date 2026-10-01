@@ -33,7 +33,7 @@ async () => {
   };
   for (const h of HOME_VIEWS) { PREFS = { ...PREFS, home: h[0] }; seen.delete("home"); visit("home"); }
   ["checklist", "processes", "policies", "templates", "countries", "compare", "global", "global.publicCompany", "global.semiconductor",
-   "global.globalFrameworks", "calendar", "changes", "changes.legal", "proposals",
+   "global.globalFrameworks", "calendar", "changes", "changes.legal", "proposals", "project", "charter", "plan", "approvals", "approvals.chains", "approvals.flight", "raid", "status", "governance", "training", "toolkit",
    ...DB.processes.map((p) => "process." + p.id), ...DB.policies.map((p) => "policy." + p.id), ...DB.templates.map((t) => "template." + t.id),
    ...DB.countries.map((c) => "country." + c.id), ...DB.register.map((x) => "item." + x.id), ...STAGES.map((s) => "processes." + s.key)].forEach(visit);
   buildIndex().forEach((x) => internal.add(x.route));
@@ -100,7 +100,7 @@ async def main():
         for key, label in [("bad", "Links to missing pages"), ("jumpsMissing", "On-page links with no target"), ("errors", "Render errors"), ("emptyLinks", "Empty links")]:
             if R[key]:
                 failed = True; print(f"FAIL {label}: {len(R[key])}"); [print("   ", x) for x in R[key][:20]]
-        routes = await page.evaluate("() => ['processes', ...DB.processes.map(p=>'process.'+p.id), ...DB.policies.map(p=>'policy.'+p.id), ...DB.templates.filter(t=>t.id!=='T-EXIT-SURVEY').map(t=>'template.'+t.id), ...DB.countries.map(c=>'country.'+c.id)]")
+        routes = await page.evaluate("() => ['processes', 'charter', 'governance', ...DB.processes.map(p=>'process.'+p.id), ...DB.policies.map(p=>'policy.'+p.id), ...DB.templates.filter(t=>t.id!=='T-EXIT-SURVEY').map(t=>'template.'+t.id), ...DB.countries.map(c=>'country.'+c.id)]")
         await page.close()
         for vw in [(1440, 900), (1024, 800)]:
             page = await browser.new_page(viewport={"width": vw[0], "height": vw[1]})
