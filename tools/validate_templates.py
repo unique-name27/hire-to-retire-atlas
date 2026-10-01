@@ -4,8 +4,8 @@ import json, sys, os, re
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(R, "tools"))
 JURS = ["us", "us-ca", "us-co", "us-nc", "us-tx", "us-wa", "ca", "de", "il", "in", "tw", "cn", "vn"]
-CATS = "Recruit Onboard Perform Reward Move Leave Safety Relations Data Governance Offboard".split()
-FMTS = "guide checklist form script matrix document survey letter".split()
+CATS = "Recruit Onboard Perform Reward Move Leave Safety Relations Data Governance Offboard Project".split()
+FMTS = "guide checklist form script matrix document survey letter agenda report".split()
 TYPES = "check prompt field say note question para".split()
 D = lambda f: json.load(open(os.path.join(R, "data", f)))
 pids = set()
