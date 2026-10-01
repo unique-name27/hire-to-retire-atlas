@@ -1,0 +1,1193 @@
+{
+  "raid": {
+    "risks": [
+      {
+        "id": "R01",
+        "title": "Germany works council co-determination delays",
+        "detail": "Where a works council exists at a German establishment, policies on conduct rules (BetrVG §87(1) no.1), working time (nos.2-3), technical tools able to monitor behaviour or performance such as the HRIS, M365 and DLP (no.6), pay and bonus principles (nos.10-11), mobile work (no.14) and health protection must be adopted as works agreements. The council can enjoin a unilateral rollout, and an unresolved dispute goes to the Einigungsstelle, which can push German effective dates months past the global date.",
+        "likelihood": "Medium",
+        "impact": "High",
+        "owner": "Regional HR lead (EMEA)",
+        "mitigation": "Confirm by 30 Oct 2026 whether a works council exists at each German establishment. Tag every co-determined item in Atlas at Discover. Brief the council on the Atlas scope in November, group co-determined topics into one framework works agreement with annexes, and open consultation on Wave 1 items by 29 Jan 2027 (M07). Publish global policies with a German addendum that names the sections applying only once the works agreement is signed.",
+        "trigger": "No agreement in principle 6 weeks after consultation opens, or the council asks for the Einigungsstelle.",
+        "status": "Open"
+      },
+      {
+        "id": "R02",
+        "title": "China democratic procedure not completed or not evidenced",
+        "detail": "Rules on pay, hours, leave, safety, discipline and training must be discussed with the employee congress or all employees, finalised after consultation with the union or employee representatives and publicised with signed acknowledgment (Labor Contract Law Art. 4). If a step is skipped or the records are missing, the handbook cannot support an Art. 39 dismissal. The Lunar New Year freeze (5 to 14 Feb 2027) removes the last two weeks of Wave 1.",
+        "likelihood": "Medium",
+        "impact": "High",
+        "owner": "Country HR lead, China",
+        "mitigation": "Run one consolidated democratic procedure per wave covering Shanghai and Shenzhen, not one per policy. Use a bilingual handbook with Chinese prevailing. Hold the Wave 1 procedure from 6 to 29 Jan 2027 and publish after the freeze. File meeting notices, sign-in sheets, the comment log, consultation minutes and signed acknowledgments in Atlas before the item can move to Go live.",
+        "trigger": "A China item reaches Approve without consultation records, or acknowledgment is below 95% two weeks after publication.",
+        "status": "Open"
+      },
+      {
+        "id": "R03",
+        "title": "Vietnam internal labour regulations registration delays",
+        "detail": "Rules on working time, discipline, sexual harassment, protection of secrets and material liability bind employees only once they sit in internal labour regulations (ILR) that were consulted with the grassroots union, registered with the provincial Department of Home Affairs within 10 days of issue and posted at the workplace. ILR take effect 15 days after the authority receives a complete dossier, and discipline is valid only on registered grounds. An incomplete dossier restarts the clock.",
+        "likelihood": "Medium",
+        "impact": "High",
+        "owner": "Country HR lead, Vietnam",
+        "mitigation": "Batch ILR changes into one registration per wave. Have local counsel pre-check the Vietnamese dossier before submission. Keep the current registered ILR in force until the new version takes effect, and schedule union consultation and submission outside the Tet freeze (5 to 14 Feb 2027).",
+        "trigger": "Dossier returned as incomplete, or no proof of receipt within 10 working days of submission.",
+        "status": "Open"
+      },
+      {
+        "id": "R04",
+        "title": "Taiwan work rules filing and approval",
+        "detail": "With 30 or more employees, work rules must be submitted to the local labor authority (the Science Park Bureau for Hsinchu Science Park sites) for approval, posted, and refiled on every amendment. Global policies are not enforceable locally unless they are incorporated. Overtime and flexible-hours changes also need consent at the quarterly labor-management meeting, so authority comments or a missed meeting can hold Taiwan launches past the wave date.",
+        "likelihood": "Medium",
+        "impact": "Medium",
+        "owner": "Country HR lead, Taiwan",
+        "mitigation": "Map each global policy to a work-rule chapter at Discover. File one consolidated Traditional Chinese amendment per wave, timed to the quarterly labor-management meeting. Ask local counsel to pre-review each filing, and keep the approved work rules as the local source of truth until the amendment is approved.",
+        "trigger": "The authority asks for revisions, or approval has not arrived 8 weeks after filing.",
+        "status": "Open"
+      },
+      {
+        "id": "R05",
+        "title": "Translation quality and lead time",
+        "detail": "Local versions are needed in at least German, Hebrew, Simplified Chinese, Traditional Chinese, Vietnamese, Kannada, Telugu and Spanish. In China, Taiwan and Vietnam the local text is what authorities and courts rely on. Translating drafts that later change, or using translators without HR and legal terminology, creates rework and legal exposure.",
+        "likelihood": "High",
+        "impact": "Medium",
+        "owner": "HR Change and Communications lead",
+        "mitigation": "Translate only after Legal review (policy chain step s3) is complete. Use one vendor with an HR and legal glossary and translation memory, and require in-country review by the Country HR lead within 5 business days. Plan 10 business days per batch and send batches weekly.",
+        "trigger": "More than 10% of translated documents come back with substantive errors, or a batch takes more than 10 business days.",
+        "status": "Open"
+      },
+      {
+        "id": "R06",
+        "title": "Legal review bottleneck",
+        "detail": "Employment counsel reviews every policy (policy chain step s3) and every legal obligation (obligation chain step s2). Wave 1 drafts all arrive before 18 Dec 2026, so the review queue peaks around the year-end freeze, when local counsel are also slow to respond.",
+        "likelihood": "High",
+        "impact": "High",
+        "owner": "Employment counsel",
+        "mitigation": "Tier reviews by risk so process documents without legal content get a light review. Build a clause library for repeated text (non-retaliation, NLRA savings clause, whistleblower carve-outs, privacy notices). Engage a local counsel panel on fixed-fee bundles per country. Set a 5-business-day review target and publish queue age in the weekly PMO status report.",
+        "trigger": "More than 40 items waiting for Legal review, or a median wait above 7 business days for two weeks in a row.",
+        "status": "Open"
+      },
+      {
+        "id": "R07",
+        "title": "SME availability during year-end, SOX testing and the annual cycle",
+        "detail": "Payroll, Stock Administration, Total Rewards and HRIS experts carry year-end payroll, W-2 and tax-year changes, Q4 SOX testing, the 10-K and the annual compensation cycle between December and March. Wave 1 drafting and approval fall in the same window.",
+        "likelihood": "High",
+        "impact": "Medium",
+        "owner": "Head of Total Rewards",
+        "mitigation": "Run WS4 and WS6 Discover workshops in November. Keep payroll and stock administration experts off Atlas drafting from 14 Dec 2026 to 29 Jan 2027 except for approvals. Agree backfill or contract writers for documentation, and move lower-risk WS4 items to Wave 2.",
+        "trigger": "More than 20% of scheduled SME workshops in a month are cancelled or moved.",
+        "status": "Open"
+      },
+      {
+        "id": "R08",
+        "title": "Holiday freezes compress Wave 1",
+        "detail": "The year-end freeze (21 Dec 2026 to 1 Jan 2027) allows no approvals or launches, and the Lunar New Year and Tet freeze (5 to 14 Feb 2027) covers the last two weeks before Wave 1 goes live on 12 Feb 2027. Any slip in December drafts pushes approvals into late January with no slack.",
+        "likelihood": "High",
+        "impact": "Medium",
+        "owner": "HR Program Manager",
+        "mitigation": "Hold the 18 Dec 2026 draft deadline (M06) and run a readiness check on 11 Dec. Book approver time in the first two weeks of January. Set China, Taiwan and Vietnam local effective dates after the Lunar New Year freeze from the start, so the 12 Feb milestone covers only global publication for those countries.",
+        "trigger": "More than 15% of Wave 1 drafts not submitted by 18 Dec 2026.",
+        "status": "Open"
+      },
+      {
+        "id": "R09",
+        "title": "Approver turnover or unavailability",
+        "detail": "Each chain step is held by a role. If an approver leaves, changes role or goes on leave, items stall, especially at steps with the 'all' rule such as Regional HR review in the policy chain, where all three regions must sign.",
+        "likelihood": "Medium",
+        "impact": "Medium",
+        "owner": "HR Program Manager",
+        "mitigation": "Name a primary and a delegate for every chain step. Reconcile the approver roster with HRIS org data monthly. Escalate any step idle for 5 business days to the workstream lead, then to the steering committee.",
+        "trigger": "An approval step is idle for more than 5 business days, or an approver's HRIS record shows a role change, leave or termination.",
+        "status": "Open"
+      },
+      {
+        "id": "R10",
+        "title": "Scope creep from new laws",
+        "detail": "Laws taking effect during the program will change items already in flight, for example California CCPA automated decision-making duties (1 Jan 2027), Colorado SB 26-189 AI notices (1 Jan 2027, replacing SB 24-205), India DPDP notice and consent duties (13 May 2027), the Washington noncompete ban (30 June 2027), California SB 947 (1 Jul 2027 if signed), Texas laws from the 2027 session (usually effective 1 Sep 2027) and German transposition of the EU Pay Transparency Directive, which missed the 7 June 2026 deadline with a bill expected in early 2027.",
+        "likelihood": "High",
+        "impact": "Medium",
+        "owner": "Employment counsel",
+        "mitigation": "Run a monthly legal change scan against the library watchlists. Add or reopen items only through a change request decided by the steering committee. Hold about 10% of Wave 3 and Wave 4 capacity for law changes, and give every item a review date so later changes go to business-as-usual owners.",
+        "trigger": "A new law or rule with an effective date before 8 Oct 2027 affects a live or in-flight item.",
+        "status": "Open"
+      },
+      {
+        "id": "R11",
+        "title": "Inconsistent current-state documents",
+        "detail": "Existing policies sit in several places (intranet pages, the HRIS document library, country shared drives, offer and handbook templates), often in conflicting versions. Owners may draft from an out-of-date source, and old copies left online contradict the approved version.",
+        "likelihood": "High",
+        "impact": "Medium",
+        "owner": "Workstream leads",
+        "mitigation": "At Discover, collect every version and record the source of truth in Atlas. Rate each item's current state on the standard scale. At Go live, retire or redirect superseded copies and file the retirement as evidence.",
+        "trigger": "More than 25% of Wave 1 items are rated as having conflicting current documents at Discover.",
+        "status": "Open"
+      },
+      {
+        "id": "R12",
+        "title": "HRIS (Darwinbox) configuration dependencies",
+        "detail": "Changes to leave, attendance, time recording, probation, letters and acknowledgments need Darwinbox configuration before a policy or process can go live. HRIS release windows and testing are not in the Atlas stage durations, and in Germany a change to a system able to monitor behaviour or performance may itself need a works agreement.",
+        "likelihood": "Medium",
+        "impact": "High",
+        "owner": "Director, HRIS and People Analytics",
+        "mitigation": "Flag 'system change needed' at Discover and open the HRIS ticket during Draft. Keep a joint backlog and align effective dates to the HRIS release calendar. Use the process chain publish step (s4) to confirm systems are ready before approval.",
+        "trigger": "An item reaches Approve with an HRIS ticket not scheduled before its planned effective date.",
+        "status": "Open"
+      },
+      {
+        "id": "R13",
+        "title": "Change fatigue",
+        "detail": "Four waves of policy changes, acknowledgments and manager briefings over 12 months, on top of the performance and compensation cycles, risk employees and managers ignoring Atlas communications.",
+        "likelihood": "Medium",
+        "impact": "Medium",
+        "owner": "HR Change and Communications lead",
+        "mitigation": "Bundle each wave into one launch message and one acknowledgment request. Limit all-employee asks to two per wave. Give managers a one-page summary of what changed and why for each wave, and use local languages for country launches.",
+        "trigger": "Manager briefing attendance below 60%, or wave acknowledgment below 85% two weeks after launch.",
+        "status": "Open"
+      },
+      {
+        "id": "R14",
+        "title": "Attestation non-completion",
+        "detail": "The global attestation campaign (M15, 10 Sep 2027) asks every employee to acknowledge the updated Code and core policies before the audit readiness review on 24 Sep 2027. Employees on leave, lab and operations staff with little desk time, and recent joiners pull completion down.",
+        "likelihood": "Medium",
+        "impact": "High",
+        "owner": "Head of Employee Relations",
+        "mitigation": "Run the campaign in local languages, give managers daily completion dashboards, send reminders on days 5 and 10 and escalate to HRBPs on day 12. Track employees on leave separately and attest them on return. In China and Vietnam, collect acknowledgments in the signed form the local process requires.",
+        "trigger": "Completion below 80% on day 10 of the campaign.",
+        "status": "Open"
+      },
+      {
+        "id": "R15",
+        "title": "Evidence gaps found at audit",
+        "detail": "Internal Audit will sample 40 items at the audit readiness review (M16, 24 Sep 2027). Missing approval records, unfiled consultation minutes or unposted notices would undercut the claim that items are live and could become findings on SOX-relevant HR controls.",
+        "likelihood": "Medium",
+        "impact": "High",
+        "owner": "HR Program Manager",
+        "mitigation": "Make evidence an exit criterion for every stage. From March 2027, spot-check 10% of live items each month using the Internal Audit sampling method, and run a mock sample of 20 items in August 2027.",
+        "trigger": "A monthly spot-check finds more than 5% of sampled live items with incomplete evidence.",
+        "status": "Open"
+      },
+      {
+        "id": "R16",
+        "title": "Deemed export process ownership disputes",
+        "detail": "Deemed export screening, license determinations, the export-control role flag and access deprovisioning involve Trade Compliance, Talent Acquisition, Immigration, HR Operations and IT Security. Without one accountable owner per control, these semiconductor items cannot leave Discover, and start dates or system access may be released without clearance.",
+        "likelihood": "Medium",
+        "impact": "High",
+        "owner": "Director, Talent Acquisition Operations",
+        "mitigation": "Agree a RACI for the deemed export items at the steering committee before 6 Nov 2026: Trade Compliance accountable for license determinations, Talent Acquisition for the role flag and start-date gate, HR Operations and IT Security for deprovisioning. Route the items through the public company and semiconductor chain with Trade Compliance at step s2.",
+        "trigger": "Any deemed export item still has no agreed accountable owner at the Mobilize gate (M04, 6 Nov 2026).",
+        "status": "Open"
+      },
+      {
+        "id": "R17",
+        "title": "Privacy of HR data held in Atlas",
+        "detail": "Evidence uploads (investigation files, signed acknowledgments, consultation minutes, sample letters) can bring employee personal data into Atlas, which is used from several countries. That raises cross-border transfer and retention questions under GDPR, China PIPL, Vietnam PDPL, Israel's Amendment 13 and India's DPDP rules.",
+        "likelihood": "Medium",
+        "impact": "High",
+        "owner": "Director, HRIS and People Analytics",
+        "mitigation": "Keep Atlas to policies, process documents and evidence of completion, and link to the system of record for personal data instead of uploading it. Redact samples. Set role-based access and a retention rule, and complete a privacy review with the Privacy Office before Wave 1 starts.",
+        "trigger": "A monthly scan finds personal data in an Atlas upload, or a country privacy lead raises a transfer concern.",
+        "status": "Open"
+      },
+      {
+        "id": "R18",
+        "title": "India labour codes transition",
+        "detail": "The four Labour Codes took effect on 21 Nov 2025 and central rules were finalised on 8 May 2026, but Karnataka and Telangana rules are largely still in draft, and the status of the Karnataka IT/ITeS standing-orders exemption under the IR Code is unconfirmed. India addenda drafted now may need rework when state rules are final.",
+        "likelihood": "High",
+        "impact": "Medium",
+        "owner": "Regional HR lead (APAC)",
+        "mitigation": "Draft India addenda against the central rules and the draft state rules, with a 'state rules pending' flag in Atlas. Have local counsel confirm worker versus employee classification for engineering roles. Recheck flagged items within 30 days of final state rules.",
+        "trigger": "Karnataka or Telangana publishes final rules under the Codes, or a notification on the IT/ITeS exemption is issued.",
+        "status": "Open"
+      },
+      {
+        "id": "R19",
+        "title": "Approval cycle time slower than plan",
+        "detail": "The global policy chain has six steps, including Regional HR review where all three regions must sign, and the plan allows two weeks for Approve. Sequential sign-offs and returned drafts can double that.",
+        "likelihood": "Medium",
+        "impact": "Medium",
+        "owner": "HR Program Manager",
+        "mitigation": "Have regional HR comment during Review so step s4 is a confirmation. Set a 3-business-day target per step, send automatic reminders and review an ageing report at the weekly workstream lead meeting.",
+        "trigger": "Median time in Approve above 15 business days in any wave.",
+        "status": "Open"
+      },
+      {
+        "id": "R20",
+        "title": "Workstream lead and owner capacity",
+        "detail": "Workstream leads and item owners keep their day jobs. The performance and compensation cycle, open requisitions and employee relations cases compete with Atlas work throughout the year.",
+        "likelihood": "Medium",
+        "impact": "High",
+        "owner": "Chief People Officer",
+        "mitigation": "Agree protected time for leads and owners in the charter. Track planned against actual hours monthly. Move lower-risk items to later waves before deadlines slip, and fund contract writers for process documentation.",
+        "trigger": "A workstream is more than 10% behind plan on items for three consecutive weeks.",
+        "status": "Open"
+      },
+      {
+        "id": "R21",
+        "title": "Israel collective agreement and Hebrew requirements",
+        "detail": "Where a collective agreement applies, policy changes affecting employment conditions must be negotiated, and Histadrut organizing in tech has grown. Statutory notices, the sexual harassment prevention bylaw and workplace postings should be in Hebrew.",
+        "likelihood": "Low",
+        "impact": "Medium",
+        "owner": "Country HR lead, Israel",
+        "mitigation": "Confirm in Mobilize whether any collective agreement or representative union covers the Israeli entity. Publish Hebrew versions of core policies alongside the English text, base the bylaw on the regulations' template, and avoid launch dates on Jewish holidays.",
+        "trigger": "A union gives notice of representation, or a Hebrew version is not ready on the wave live date.",
+        "status": "Open"
+      },
+      {
+        "id": "R22",
+        "title": "NLRA exposure in US handbook rules",
+        "detail": "Under Stericycle, which remains binding, confidentiality, social media, recording, civility and media-contact rules must be narrowly tailored and carry a Section 7 savings clause. The NLRB may overrule these precedents during the program, so US policies could need rework in either direction.",
+        "likelihood": "Medium",
+        "impact": "Medium",
+        "owner": "Employment counsel",
+        "mitigation": "Add an NLRA check to Legal review for every US policy with conduct rules, use a standard savings clause, and review the NLRB watchlist item in the monthly legal change scan.",
+        "trigger": "An NLRB decision overrules Stericycle or related precedent, or an unfair labor practice charge cites an Atlas policy.",
+        "status": "Open"
+      },
+      {
+        "id": "R23",
+        "title": "Low adoption of Atlas by contributors",
+        "detail": "If owners keep drafting in email and local files, Atlas status will be wrong, approvals will happen outside the chains and evidence will be missing at audit.",
+        "likelihood": "Medium",
+        "impact": "Medium",
+        "owner": "HR Program Manager",
+        "mitigation": "Make Atlas the only route to approval, with no sign-off by email. Train owners with V2 and V3 before Wave 1, hold weekly office hours and report each workstream's Atlas activity at status meetings.",
+        "trigger": "More than 20% of in-flight items show no Atlas activity for three weeks.",
+        "status": "Open"
+      }
+    ],
+    "assumptions": [
+      {
+        "id": "A01",
+        "text": "The 438 library items (57 policies, 97 processes, 284 legal obligations) are the full scope; new items enter only through change control.",
+        "owner": "HR Program Manager",
+        "validateBy": "2026-11-06"
+      },
+      {
+        "id": "A02",
+        "text": "Workstream leads and regional HR leads can give at least 20% of their time from kickoff to 13 Aug 2027, with the time protected in the charter.",
+        "owner": "Chief People Officer",
+        "validateBy": "2026-10-23"
+      },
+      {
+        "id": "A03",
+        "text": "Employment counsel, with a local counsel panel, can review 25 to 30 items a week at the Wave 1 peak.",
+        "owner": "Employment counsel",
+        "validateBy": "2026-11-06"
+      },
+      {
+        "id": "A04",
+        "text": "Whether an elected works council exists at each German establishment is confirmed in Mobilize; where none exists, German items skip policy chain step s5 with a note.",
+        "owner": "Country HR lead, Germany",
+        "validateBy": "2026-10-30"
+      },
+      {
+        "id": "A05",
+        "text": "Darwinbox stays the HRIS of record for the whole program, and the HRIS team can deliver configuration changes in monthly release windows.",
+        "owner": "Director, HRIS and People Analytics",
+        "validateBy": "2026-11-06"
+      },
+      {
+        "id": "A06",
+        "text": "Headcount thresholds that drive local duties are confirmed per entity and site, for example Taiwan 30+ (work rules filing), Israel 25+ (sexual harassment bylaw), Vietnam 10+ (registered internal labour regulations) and India 10+, 20+ and 300+ (POSH committee, grievance committee, standing orders).",
+        "owner": "Regional HR leads (Americas, EMEA, APAC)",
+        "validateBy": "2026-11-06"
+      },
+      {
+        "id": "A07",
+        "text": "One translation vendor can cover German, Hebrew, Simplified and Traditional Chinese, Vietnamese, Kannada, Telugu and Spanish within 10 business days per batch.",
+        "owner": "HR Change and Communications lead",
+        "validateBy": "2026-11-13"
+      },
+      {
+        "id": "A08",
+        "text": "Every employee, including lab and operations staff, has a corporate login that lets them read published policies and complete acknowledgments.",
+        "owner": "Director, HRIS and People Analytics",
+        "validateBy": "2026-11-20"
+      },
+      {
+        "id": "A09",
+        "text": "China and Vietnam entities have union or employee representative structures able to run consultation in January 2027.",
+        "owner": "Regional HR lead (APAC)",
+        "validateBy": "2026-11-20"
+      },
+      {
+        "id": "A10",
+        "text": "Internal Audit accepts Atlas approval records and published versions as evidence for SOX-relevant HR controls.",
+        "owner": "HR Program Manager",
+        "validateBy": "2026-12-11"
+      },
+      {
+        "id": "A11",
+        "text": "No reorganisation, acquisition or reduction in force during the program year is large enough to require re-sequencing the waves.",
+        "owner": "Chief People Officer",
+        "validateBy": "2027-02-12"
+      }
+    ],
+    "issues": [
+      {
+        "id": "I01",
+        "title": "Approver roster incomplete",
+        "detail": "Country HR lead steps for several jurisdictions and the delegates for Regional HR review have no confirmed incumbent, so the chains cannot be tested end to end before M03.",
+        "owner": "HR Program Manager",
+        "action": "Regional HR leads confirm a primary and a delegate for every country step; PMO runs the test submission as soon as the roster is complete.",
+        "due": "2026-10-28",
+        "priority": "High",
+        "status": "Open"
+      },
+      {
+        "id": "I02",
+        "title": "Current documents spread across many locations",
+        "detail": "Existing policies and procedures sit in intranet pages, the HRIS document library, country shared drives and email, with no index, which blocks the current-state rating needed for the baseline (M04).",
+        "owner": "HR Program Manager",
+        "action": "Run a two-week document sweep with each workstream and region and load every version found into Atlas against its item.",
+        "due": "2026-11-04",
+        "priority": "High",
+        "status": "Open"
+      },
+      {
+        "id": "I03",
+        "title": "No agreed owner for deemed export controls",
+        "detail": "Trade Compliance and Talent Acquisition each expect the other to own the export-control role flag and the start-date gate, so these semiconductor items have no owner for the baseline.",
+        "owner": "Director, Talent Acquisition Operations",
+        "action": "Bring a proposed RACI to the steering committee for decision, with Trade Compliance accountable for license determinations.",
+        "due": "2026-10-23",
+        "priority": "High",
+        "status": "Open"
+      },
+      {
+        "id": "I04",
+        "title": "Translation vendor not under contract",
+        "detail": "Procurement needs 4 to 6 weeks for a new vendor, but Wave 1 needs its first translated drafts in mid-January 2027.",
+        "owner": "HR Change and Communications lead",
+        "action": "Use the current vendor under its existing agreement for Wave 1 while procurement runs, and agree the glossary and turnaround in writing.",
+        "due": "2026-11-13",
+        "priority": "Medium",
+        "status": "Open"
+      },
+      {
+        "id": "I05",
+        "title": "Local counsel not engaged in Taiwan and Vietnam",
+        "detail": "Wave 1 includes a Taiwan work rules amendment and a Vietnam internal labour regulations registration, and neither country has engaged local counsel.",
+        "owner": "Employment counsel",
+        "action": "Engage local counsel in both countries on a fixed-fee bundle covering the work rules filing, the ILR dossier and Wave 1 addenda.",
+        "due": "2026-11-20",
+        "priority": "Medium",
+        "status": "Open"
+      }
+    ],
+    "decisions": [
+      {
+        "id": "D01",
+        "title": "Policy repository of record",
+        "detail": "Atlas is the single repository of record for every policy, process and obligation, with version history and approvals. Intranet pages and HRIS links point to the Atlas published version, and local copies are retired at Go live. Where a local text is the binding version (China handbook, Taiwan work rules, Vietnam internal labour regulations, Germany works agreements), Atlas holds it as the country document.",
+        "owner": "Chief People Officer",
+        "status": "Proposed",
+        "due": "2026-10-23"
+      },
+      {
+        "id": "D02",
+        "title": "Global policy with country addenda",
+        "detail": "Each policy is one global document with a country addendum wherever local law adds or changes requirements. Separate local documents are used only where the law requires them: Germany works agreements, the China employee handbook, Taiwan work rules, Vietnam internal labour regulations, India standing orders or service rules and the Israel sexual harassment prevention bylaw.",
+        "owner": "Employment counsel",
+        "status": "Proposed",
+        "due": "2026-10-23"
+      },
+      {
+        "id": "D03",
+        "title": "Approval chain design",
+        "detail": "Five role-based chains: global policy (6 steps), process document (4), legal obligation (3), public company and semiconductor control (3) and project document (3). Employee representative consultation is an optional policy step recorded with an outcome or a skip note. Every step has a named primary and delegate.",
+        "owner": "HR Program Manager",
+        "status": "Agreed",
+        "due": "2026-10-30"
+      },
+      {
+        "id": "D04",
+        "title": "Translation vendor and prevailing language",
+        "detail": "Select one translation vendor for German, Hebrew, Simplified and Traditional Chinese, Vietnamese, Kannada, Telugu and Spanish, working from an HR and legal glossary. English is the master text except in China, Taiwan and Vietnam, where the local text prevails because courts and authorities rely on it. The Country HR lead signs off each translation.",
+        "owner": "HR Change and Communications lead",
+        "status": "Proposed",
+        "due": "2026-11-06"
+      },
+      {
+        "id": "D05",
+        "title": "Wave sequencing method",
+        "detail": "Rank items by legal, public-company and semiconductor risk, then by current-state rating. Each workstream delivers about 40% of its required items in Wave 1, 35% in Wave 2 and 25% in Wave 3, and best-practice items go to Wave 4. Policies come before the processes, notices and controls that depend on them.",
+        "owner": "HR Program Manager",
+        "status": "Agreed",
+        "due": "2026-11-06"
+      },
+      {
+        "id": "D06",
+        "title": "Effective-date convention",
+        "detail": "Global effective dates fall on the 1st or 15th of a month, at least 10 business days after final approval and never inside a holiday freeze. Where consultation, filing or registration is required (Germany, China, Taiwan, Vietnam), the country addendum states a later local effective date and the policy applies there only from that date.",
+        "owner": "Employment counsel",
+        "status": "Proposed",
+        "due": "2026-10-30"
+      },
+      {
+        "id": "D07",
+        "title": "Attestation and acknowledgment tool",
+        "detail": "Choose between the Darwinbox acknowledgment workflow and a separate attestation platform for wave acknowledgments and the September 2027 global campaign. Criteria: reach to every employee including lab staff, local-language support, acknowledgment records accepted in China and Vietnam, manager reporting and an audit trail.",
+        "owner": "Director, HRIS and People Analytics",
+        "status": "Proposed",
+        "due": "2026-11-20"
+      },
+      {
+        "id": "D08",
+        "title": "Document template standard",
+        "detail": "Policies use the library policy template (T-POLICY) with purpose, scope, policy statements, roles, country addenda, related items, owner and review date. Processes use a map, steps, controls and a RACI. Obligations use the register fields: requirement, owner, cadence, citation and evidence. All documents use plain English, sentence case and roles rather than names.",
+        "owner": "HR Program Manager",
+        "status": "Agreed",
+        "due": "2026-10-30"
+      },
+      {
+        "id": "D09",
+        "title": "Item ownership model",
+        "detail": "Every item has one accountable owner role, one workstream and a backup. Obligations keep the functional owner shown in the register (for example Trade Compliance or Payroll), with the workstream lead as coordinator.",
+        "owner": "Chief People Officer",
+        "status": "Proposed",
+        "due": "2026-11-06"
+      },
+      {
+        "id": "D10",
+        "title": "Legal review tiering and local counsel model",
+        "detail": "Three tiers: full review with local counsel for items with addenda in Germany, Israel, India, Taiwan, China and Vietnam; full in-house review for US and Canada policies; light review for processes without legal content. Local counsel work on fixed-fee bundles per wave.",
+        "owner": "Employment counsel",
+        "status": "Proposed",
+        "due": "2026-11-06"
+      },
+      {
+        "id": "D11",
+        "title": "Germany works council approach",
+        "detail": "If a works council exists, agree one framework works agreement for Atlas with an annex per co-determined topic (conduct, working time and recording, IT and monitoring tools, pay and bonus principles, mobile work) rather than separate agreements per policy, and decide which existing works agreements stay in force.",
+        "owner": "Regional HR lead (EMEA)",
+        "status": "Proposed",
+        "due": "2026-11-27"
+      },
+      {
+        "id": "D12",
+        "title": "Evidence standard per stage",
+        "detail": "Define what closes each stage: current-state record (Discover), template-complete draft (Draft), resolved comment log (Review), approval chain record (Approve), and the published version with its communication, training or posting record, plus consultation minutes, filing receipt or registration where required (Go live). Internal Audit confirms it can sample against this standard.",
+        "owner": "HR Program Manager",
+        "status": "Proposed",
+        "due": "2026-11-06"
+      },
+      {
+        "id": "D13",
+        "title": "Personal data in Atlas",
+        "detail": "Atlas holds documents and completion evidence, not employee records. Evidence that contains personal data stays in the system of record and is linked, samples are redacted, access is role-based and a retention rule is agreed with the Privacy Office.",
+        "owner": "Director, HRIS and People Analytics",
+        "status": "Proposed",
+        "due": "2026-10-30"
+      },
+      {
+        "id": "D14",
+        "title": "Change control for scope and new laws",
+        "detail": "New items, or major rework caused by a law change, enter the plan only through a change request that shows the impact on wave dates and resourcing. The PMO reviews it and the steering committee decides, using the project document chain.",
+        "owner": "Chief People Officer",
+        "status": "Proposed",
+        "due": "2026-10-23"
+      }
+    ]
+  },
+  "comms": [
+    {
+      "id": "C01",
+      "date": "2026-10-12",
+      "wave": "W0",
+      "audience": "Sponsor, workstream leads, regional HR leads, Employment counsel and PMO",
+      "message": "Kickoff: purpose, scope (438 items in 13 jurisdictions), the five waves, roles and the four weeks of Mobilize.",
+      "channel": "Kickoff meeting (video, recorded)",
+      "owner": "Chief People Officer",
+      "type": "Announce"
+    },
+    {
+      "id": "C02",
+      "date": "2026-10-14",
+      "wave": "W0",
+      "audience": "All HR, Legal, Payroll and People Operations staff",
+      "message": "Project Atlas announced: what it is, why now, how the work runs in waves and what people will be asked to do. Watch V1.",
+      "channel": "Email from the Chief People Officer and HR all-hands",
+      "owner": "HR Change and Communications lead",
+      "type": "Announce"
+    },
+    {
+      "id": "C03",
+      "date": "2026-10-19",
+      "wave": "W0",
+      "audience": "Item owners",
+      "message": "You are the named owner for these items: confirm ownership, current documents and a backup by 30 Oct. Watch V2.",
+      "channel": "Atlas task notification and email",
+      "owner": "HR Program Manager",
+      "type": "Engage"
+    },
+    {
+      "id": "C04",
+      "date": "2026-10-21",
+      "wave": "W0",
+      "audience": "Approvers in all five chains",
+      "message": "Your chain steps, response targets and delegates, and the end-to-end test submission before 30 Oct (M03). Watch V4.",
+      "channel": "Approver briefing (video call)",
+      "owner": "HR Program Manager",
+      "type": "Train"
+    },
+    {
+      "id": "C05",
+      "date": "2026-10-27",
+      "wave": "W0",
+      "audience": "Regional and country HR leads",
+      "message": "Country gates: consultation, filing, language and lead time in each jurisdiction, and how they set local effective dates. Watch V5.",
+      "channel": "Regional HR calls (Americas, EMEA, APAC)",
+      "owner": "Regional HR leads (Americas, EMEA, APAC)",
+      "type": "Train"
+    },
+    {
+      "id": "C06",
+      "date": "2026-11-06",
+      "wave": "W0",
+      "audience": "Steering committee, workstream leads and regional HR leads",
+      "message": "Mobilize gate (M04): every item has an owner, a rating and a wave; plan v1.0 is baselined and the Wave 1 list is confirmed.",
+      "channel": "Steering committee meeting and status email",
+      "owner": "HR Program Manager",
+      "type": "Announce"
+    },
+    {
+      "id": "C07",
+      "date": "2026-11-09",
+      "wave": "W1",
+      "audience": "Wave 1 item owners and SMEs",
+      "message": "Wave 1 starts: Discover workshops over the next two weeks, drafts due 18 Dec. Watch V3.",
+      "channel": "Email and Atlas notifications",
+      "owner": "Workstream leads",
+      "type": "Announce"
+    },
+    {
+      "id": "C08",
+      "date": "2026-11-17",
+      "wave": "W1",
+      "audience": "German works council (where one exists)",
+      "message": "Information on the Atlas scope, the Wave 1 items that touch co-determined topics and a proposed timetable for a framework works agreement.",
+      "channel": "Works council meeting with a German written summary",
+      "owner": "Country HR lead, Germany",
+      "type": "Engage"
+    },
+    {
+      "id": "C09",
+      "date": "2026-12-07",
+      "wave": "W1",
+      "audience": "Wave 1 item owners, approvers and Legal reviewers",
+      "message": "Wave 1 drafts are due 18 Dec (M06). The year-end freeze runs 21 Dec to 1 Jan with no approvals or launches; approvals restart on 4 Jan.",
+      "channel": "Email and Atlas dashboard",
+      "owner": "HR Program Manager",
+      "type": "Remind"
+    },
+    {
+      "id": "C10",
+      "date": "2027-01-06",
+      "wave": "W1",
+      "audience": "Employees and employee representatives in China and Vietnam",
+      "message": "Consultation opens on Wave 1 changes: the China democratic procedure on handbook changes and Vietnam union consultation on internal labour regulations, with bilingual drafts and meeting dates.",
+      "channel": "Employee and union meetings with bilingual notices",
+      "owner": "Regional HR lead (APAC)",
+      "type": "Engage"
+    },
+    {
+      "id": "C11",
+      "date": "2027-01-13",
+      "wave": "W1",
+      "audience": "Taiwan labor-management meeting representatives",
+      "message": "Wave 1 items that need labor-management meeting consent (overtime and flexible hours) and the planned work rules amendment filing.",
+      "channel": "Labor-management meeting with Traditional Chinese materials",
+      "owner": "Country HR lead, Taiwan",
+      "type": "Engage"
+    },
+    {
+      "id": "C12",
+      "date": "2027-01-27",
+      "wave": "W1",
+      "audience": "All employees",
+      "message": "Coming in February: a refreshed Code of conduct and the first core policies in Atlas, what changes and what you will be asked to acknowledge.",
+      "channel": "Intranet news and email",
+      "owner": "HR Change and Communications lead",
+      "type": "Announce"
+    },
+    {
+      "id": "C13",
+      "date": "2027-02-01",
+      "wave": "W1",
+      "audience": "People managers",
+      "message": "Wave 1 manager toolkit: what changed, talking points, FAQ by country and how to track your team's acknowledgments.",
+      "channel": "Manager toolkit email and 30-minute live briefing",
+      "owner": "HR Change and Communications lead",
+      "type": "Train"
+    },
+    {
+      "id": "C14",
+      "date": "2027-02-03",
+      "wave": "W1",
+      "audience": "Employees in China, Taiwan and Vietnam",
+      "message": "Before Lunar New Year and Tet: Wave 1 policies are approved globally; local effective dates follow consultation, filing and registration and will be posted after the holiday.",
+      "channel": "Local email in Chinese and Vietnamese",
+      "owner": "Regional HR lead (APAC)",
+      "type": "Announce"
+    },
+    {
+      "id": "C15",
+      "date": "2027-02-11",
+      "wave": "W1",
+      "audience": "Employees in Israel",
+      "message": "Wave 1 is live in Israel with Hebrew versions, the reissued sexual harassment prevention bylaw and the commissioner's contact details.",
+      "channel": "Hebrew and English email, intranet and workplace postings",
+      "owner": "Country HR lead, Israel",
+      "type": "Announce"
+    },
+    {
+      "id": "C16",
+      "date": "2027-02-12",
+      "wave": "W1",
+      "audience": "All employees in the US, Canada and India, and in Germany for items outside co-determination",
+      "message": "Wave 1 is live (M08): global policies published with a summary of what changed and the acknowledgment request, due in two weeks. Country-specific items follow on the dates in each addendum.",
+      "channel": "Intranet, email and Atlas acknowledgment request",
+      "owner": "HR Change and Communications lead",
+      "type": "Announce"
+    },
+    {
+      "id": "C17",
+      "date": "2027-02-12",
+      "wave": "W1",
+      "audience": "Atlas contributors and steering committee",
+      "message": "Wave 1 done: thanks from the sponsor, results against plan and the invitation to the wave retrospective.",
+      "channel": "Email from the Chief People Officer and team call",
+      "owner": "Chief People Officer",
+      "type": "Celebrate"
+    },
+    {
+      "id": "C18",
+      "date": "2027-02-16",
+      "wave": "W2",
+      "audience": "Wave 2 item owners and SMEs",
+      "message": "Wave 2 starts: Discover workshops this week and next, drafts due 9 Apr (M10).",
+      "channel": "Email and Atlas notifications",
+      "owner": "Workstream leads",
+      "type": "Announce"
+    },
+    {
+      "id": "C19",
+      "date": "2027-02-24",
+      "wave": "W2",
+      "audience": "Employees in Ontario and British Columbia",
+      "message": "Canada-specific Wave 1 items live: updated Ontario disconnecting-from-work and electronic monitoring policies, harassment and violence policies posted, and the BC bullying and harassment policy.",
+      "channel": "Email with policy copies and site postings",
+      "owner": "Regional HR lead (Americas)",
+      "type": "Announce"
+    },
+    {
+      "id": "C20",
+      "date": "2027-03-03",
+      "wave": "W2",
+      "audience": "Employees in India (Karnataka and Telangana)",
+      "message": "India-specific Wave 1 items live: POSH policy and Internal Committee details displayed in English and Kannada or Telugu, grievance committee contacts and the updated leave and holiday policy.",
+      "channel": "Email, intranet and office notice boards",
+      "owner": "Country HR lead, India",
+      "type": "Announce"
+    },
+    {
+      "id": "C21",
+      "date": "2027-03-15",
+      "wave": "W2",
+      "audience": "Employees in China, Taiwan and Vietnam",
+      "message": "Wave 1 local launch: China handbook changes published for signed acknowledgment, Vietnam internal labour regulations in effect after registration and posted, Taiwan work rules posted once approved.",
+      "channel": "Local all-hands, bilingual notices and workplace postings",
+      "owner": "Regional HR lead (APAC)",
+      "type": "Announce"
+    },
+    {
+      "id": "C22",
+      "date": "2027-03-22",
+      "wave": "W2",
+      "audience": "Wave 2 item owners",
+      "message": "Reminder: Wave 2 drafts are due 9 Apr (M10); items needing translation or consultation should be in Review now.",
+      "channel": "Email and Atlas dashboard",
+      "owner": "HR Program Manager",
+      "type": "Remind"
+    },
+    {
+      "id": "C23",
+      "date": "2027-04-19",
+      "wave": "W2",
+      "audience": "Employees in Germany",
+      "message": "Where a works agreement was needed, co-determined Wave 1 policies (working time recording, IT and monitoring tools, mobile work) take effect on the date agreed with the works council, with German versions.",
+      "channel": "German email, intranet and works council notice",
+      "owner": "Country HR lead, Germany",
+      "type": "Announce"
+    },
+    {
+      "id": "C24",
+      "date": "2027-05-03",
+      "wave": "W2",
+      "audience": "People managers",
+      "message": "Wave 2 manager toolkit: core lifecycle processes going live and what changes for hiring, onboarding, leave and pay questions.",
+      "channel": "Manager toolkit email and 30-minute live briefing",
+      "owner": "HR Change and Communications lead",
+      "type": "Train"
+    },
+    {
+      "id": "C25",
+      "date": "2027-05-14",
+      "wave": "W2",
+      "audience": "All employees",
+      "message": "Wave 2 is live (M11): core lifecycle processes and country addenda published; acknowledgment requested only for changed policies.",
+      "channel": "Intranet, email and Atlas acknowledgment request",
+      "owner": "HR Change and Communications lead",
+      "type": "Announce"
+    },
+    {
+      "id": "C26",
+      "date": "2027-05-17",
+      "wave": "W3",
+      "audience": "Wave 3 item owners and SMEs",
+      "message": "Wave 3 starts: the last required items, drafts due 9 Jul (M13). Rewatch V3 for process documents.",
+      "channel": "Email and Atlas notifications",
+      "owner": "Workstream leads",
+      "type": "Announce"
+    },
+    {
+      "id": "C27",
+      "date": "2027-06-28",
+      "wave": "W3",
+      "audience": "Wave 3 item owners and approvers",
+      "message": "Reminder: Wave 3 drafts are due 9 Jul and approvals must close by early August for go-live on 13 Aug.",
+      "channel": "Email and Atlas dashboard",
+      "owner": "HR Program Manager",
+      "type": "Remind"
+    },
+    {
+      "id": "C28",
+      "date": "2027-08-02",
+      "wave": "W3",
+      "audience": "People managers",
+      "message": "Wave 3 manager toolkit: the remaining required policies going live and the plan for the September attestation campaign.",
+      "channel": "Manager toolkit email and 30-minute live briefing",
+      "owner": "HR Change and Communications lead",
+      "type": "Train"
+    },
+    {
+      "id": "C29",
+      "date": "2027-08-13",
+      "wave": "W3",
+      "audience": "All employees, Atlas contributors and steering committee",
+      "message": "Every legal, public-company and semiconductor item is live with evidence (M14): thanks and results.",
+      "channel": "Email from the Chief People Officer, intranet story and team celebration",
+      "owner": "Chief People Officer",
+      "type": "Celebrate"
+    },
+    {
+      "id": "C30",
+      "date": "2027-08-16",
+      "wave": "W4",
+      "audience": "Item owners and future business-as-usual owners",
+      "message": "Wave 4 starts: best-practice items, evidence clean-up, audit readiness and handover, and how annual reviews will work.",
+      "channel": "Email and owner call",
+      "owner": "HR Program Manager",
+      "type": "Announce"
+    },
+    {
+      "id": "C31",
+      "date": "2027-09-10",
+      "wave": "W4",
+      "audience": "All employees, in local languages",
+      "message": "Global attestation campaign (M15): acknowledge the updated Code of conduct and core policies by 24 Sep.",
+      "channel": "Attestation tool, email and intranet",
+      "owner": "Head of Employee Relations",
+      "type": "Announce"
+    },
+    {
+      "id": "C32",
+      "date": "2027-09-17",
+      "wave": "W4",
+      "audience": "Employees who have not attested, and their managers",
+      "message": "Reminder: attestation closes 24 Sep; managers have completion dashboards for their teams.",
+      "channel": "Email, manager dashboard and HRBP follow-up",
+      "owner": "Head of Employee Relations",
+      "type": "Remind"
+    },
+    {
+      "id": "C33",
+      "date": "2027-10-01",
+      "wave": "W4",
+      "audience": "Business-as-usual owners",
+      "message": "Handover complete (M17): your items, review dates and annual review calendar, and how to raise a change.",
+      "channel": "Email and Atlas owner view",
+      "owner": "HR Program Manager",
+      "type": "Engage"
+    },
+    {
+      "id": "C34",
+      "date": "2027-10-08",
+      "wave": "W4",
+      "audience": "Atlas contributors, steering committee and HR",
+      "message": "Project close (M18): close-out report, lessons learned and thanks from the sponsor.",
+      "channel": "Email from the Chief People Officer and closing call",
+      "owner": "Chief People Officer",
+      "type": "Celebrate"
+    }
+  ],
+  "training": {
+    "audiences": [
+      {
+        "audience": "Item owners (policy, process and obligation owners)",
+        "need": "Work items through the five stages in Atlas, write to the templates and file evidence that will pass audit.",
+        "modules": [
+          "TR1",
+          "TR2",
+          "TR3",
+          "TR4",
+          "TR11"
+        ],
+        "format": "Video, live demo and workshops",
+        "when": "TR1 and TR2 by 6 Nov 2026; TR3 and TR4 before the owner's first wave; TR11 in March 2027 and again in August 2027"
+      },
+      {
+        "audience": "Approvers",
+        "need": "Know their chain steps, how to approve, return or delegate, and the response target.",
+        "modules": [
+          "TR1",
+          "TR5"
+        ],
+        "format": "Video plus a 30-minute Q&A",
+        "when": "By 30 Oct 2026, before the chains are tested (M03)"
+      },
+      {
+        "audience": "Workstream leads",
+        "need": "Plan and run the workstream, coach owners, manage the RAID log and report status.",
+        "modules": [
+          "TR1",
+          "TR2",
+          "TR3",
+          "TR4",
+          "TR5",
+          "TR8"
+        ],
+        "format": "Live workshops",
+        "when": "Weeks of 12 and 19 Oct 2026, before the Mobilize gate"
+      },
+      {
+        "audience": "Regional and country HR leads",
+        "need": "Draft and check country addenda, run consultation, filing and translation, and set local effective dates.",
+        "modules": [
+          "TR1",
+          "TR4",
+          "TR5",
+          "TR6"
+        ],
+        "format": "Live sessions by region",
+        "when": "By 6 Nov 2026, with a refresher before each wave"
+      },
+      {
+        "audience": "Legal reviewers (employment counsel and local counsel)",
+        "need": "Review to tier and target time, use the clause library and record sign-off in the chains.",
+        "modules": [
+          "TR1",
+          "TR5",
+          "TR6",
+          "TR7"
+        ],
+        "format": "Live virtual sessions",
+        "when": "In-house counsel by 6 Nov 2026; local counsel at engagement"
+      },
+      {
+        "audience": "PMO",
+        "need": "Run the plan, RAID log, approval chains, status reporting and evidence checks.",
+        "modules": [
+          "TR1",
+          "TR8",
+          "TR11"
+        ],
+        "format": "Live workshop",
+        "when": "Week of 12 Oct 2026, refreshed at the start of Wave 4"
+      },
+      {
+        "audience": "People managers",
+        "need": "Explain each wave's changes to their teams and follow up on acknowledgments.",
+        "modules": [
+          "TR9"
+        ],
+        "format": "Live briefing per wave, recorded, with a toolkit",
+        "when": "About two weeks before each wave goes live (Feb, May and Aug 2027)"
+      },
+      {
+        "audience": "All employees",
+        "need": "Find policies, understand what changed and complete acknowledgments.",
+        "modules": [
+          "TR10"
+        ],
+        "format": "Micro-learning in local languages",
+        "when": "With each wave launch and the global attestation campaign from 10 Sep 2027"
+      }
+    ],
+    "modules": [
+      {
+        "id": "TR1",
+        "title": "Project Atlas orientation",
+        "audience": "Everyone working on Atlas: item owners, approvers, workstream leads, regional HR, Legal and PMO",
+        "length": "20 minutes",
+        "format": "Self-paced video with a five-question check",
+        "objectives": [
+          "Explain the goal: 438 items live in 13 jurisdictions by 8 Oct 2027",
+          "Name the five stages and the five waves with their dates",
+          "Know where to get help and how to raise a risk or issue"
+        ],
+        "video": "V1"
+      },
+      {
+        "id": "TR2",
+        "title": "Find and update your items",
+        "audience": "Item owners and workstream leads",
+        "length": "45 minutes",
+        "format": "Live virtual demo with practice tasks",
+        "objectives": [
+          "Find your items and filter by wave, workstream and jurisdiction",
+          "Update stage, status and current-state rating",
+          "Attach evidence and link related items"
+        ],
+        "video": "V2"
+      },
+      {
+        "id": "TR3",
+        "title": "Document a process in five steps",
+        "audience": "Process owners, SMEs and workstream leads",
+        "length": "60 minutes",
+        "format": "Workshop on a real Wave 1 process",
+        "objectives": [
+          "Map the process as it is actually done, including exceptions",
+          "Write steps, controls and a RACI in the standard template",
+          "Mark key and SOX-relevant controls for control review"
+        ],
+        "video": "V3"
+      },
+      {
+        "id": "TR4",
+        "title": "Write a policy and its country addenda",
+        "audience": "Policy owners, workstream leads and regional HR",
+        "length": "60 minutes",
+        "format": "Workshop using the policy template (T-POLICY)",
+        "objectives": [
+          "Use the template sections and the plain-English standard",
+          "Decide when a country addendum is needed, using the library research",
+          "Flag consultation, filing and translation needs before Review"
+        ],
+        "video": null
+      },
+      {
+        "id": "TR5",
+        "title": "Set up and run an approval chain",
+        "audience": "Approvers, workstream leads and Legal reviewers",
+        "length": "30 minutes",
+        "format": "Video plus live Q&A",
+        "objectives": [
+          "Know which chain applies to policies, processes, obligations, controls and project documents",
+          "Approve, return or delegate a step and record the reason",
+          "Meet the 3-business-day step target and escalate when blocked"
+        ],
+        "video": "V4"
+      },
+      {
+        "id": "TR6",
+        "title": "Take a policy live in 13 countries",
+        "audience": "Regional HR leads, country HR leads and Legal reviewers",
+        "length": "90 minutes",
+        "format": "Live session run by region (Americas, EMEA, APAC)",
+        "objectives": [
+          "Apply each jurisdiction's gate: consultation, filing, language and lead time",
+          "Plan local effective dates around consultation, registration and holiday freezes",
+          "File consultation minutes, filing receipts and translations as evidence"
+        ],
+        "video": "V5"
+      },
+      {
+        "id": "TR7",
+        "title": "Legal review in Atlas",
+        "audience": "Employment counsel and local counsel",
+        "length": "45 minutes",
+        "format": "Live virtual session",
+        "objectives": [
+          "Work the review queue by tier and target time",
+          "Use the clause library, including the NLRA savings clause and whistleblower carve-outs",
+          "Record legal sign-off and the next review date"
+        ],
+        "video": "V4"
+      },
+      {
+        "id": "TR8",
+        "title": "Running a workstream",
+        "audience": "Workstream leads and PMO",
+        "length": "2 hours",
+        "format": "Live workshop",
+        "objectives": [
+          "Plan items across waves and stages and keep dates current",
+          "Log risks, issues and decisions and escalate on triggers",
+          "Prepare weekly status and steering committee inputs"
+        ],
+        "video": null
+      },
+      {
+        "id": "TR9",
+        "title": "Explaining policy changes to your team",
+        "audience": "People managers",
+        "length": "30 minutes per wave",
+        "format": "Live briefing, recorded, with a one-page toolkit",
+        "objectives": [
+          "Explain what changed this wave and why",
+          "Answer common questions and know where to send the rest",
+          "Track your team's acknowledgments"
+        ],
+        "video": "V1"
+      },
+      {
+        "id": "TR10",
+        "title": "Your policies and how to acknowledge them",
+        "audience": "All employees",
+        "length": "10 minutes",
+        "format": "Micro-learning in local languages, linked from the acknowledgment request",
+        "objectives": [
+          "Find the Code of conduct and core policies in Atlas",
+          "Understand what an acknowledgment means and when it is due",
+          "Know how to ask a question or raise a concern, including through the speak-up hotline"
+        ],
+        "video": "V1"
+      },
+      {
+        "id": "TR11",
+        "title": "Evidence, audit readiness and handover",
+        "audience": "Item owners, control owners and PMO",
+        "length": "45 minutes",
+        "format": "Live virtual session with an evidence checklist",
+        "objectives": [
+          "Know what evidence closes each stage",
+          "Prepare for the Internal Audit sample on 24 Sep 2027",
+          "Set the owner, review date and annual review slot for business as usual"
+        ],
+        "video": null
+      }
+    ]
+  },
+  "countryGates": [
+    {
+      "jur": "us",
+      "consultation": "None required: there are no works councils. Check every handbook rule against NLRA Section 7: under Stericycle (still binding), confidentiality, social media, recording, civility and media-contact rules must be narrowly tailored with a savings clause, whether or not a union exists.",
+      "filing": "None for HR policies. Separate public-company duties: the Code of conduct must be publicly available with executive waivers disclosed (Nasdaq), and insider trading policies are filed with SEC reports or their absence explained.",
+      "language": "English. No federal language mandate for handbooks; English-only rules need business necessity. State rules decide translated notices.",
+      "leadTime": "1 to 2 weeks after final approval to publish, set up acknowledgment and brief managers. No statutory waiting period.",
+      "notes": "Federal floor only; the work state drives most addenda. Where a handbook exists it must describe FMLA rights (50+ employees). Evidence is the handbook acknowledgment with state addenda.",
+      "verify": false
+    },
+    {
+      "jur": "us-ca",
+      "consultation": "None (NLRA only, no works councils). The Workplace Violence Prevention Plan must be developed with employee involvement. The SB 399 captive-audience ban is preliminarily enjoined.",
+      "filing": "None for HR policies. The annual CRD pay data report (100+ employees, due the second Wednesday of May) is a separate obligation.",
+      "language": "Translate EEO and harassment policies into any language spoken by 10% or more of a facility's workforce (2 CCR 11023); Spanish is the likely trigger at some sites, depending on site workforce data (verify). Give the LC 2810.5 notice in the language normally used with the employee and the SB 294 notice in the employee's usual work language where a state template exists.",
+      "leadTime": "2 to 4 weeks, mainly for translation and acknowledgment. The Workplace Know Your Rights notice is due at hire and by 1 Feb each year.",
+      "notes": "Handbooks must describe CFRA and PDL rights (5+ employees). No non-competes or non-California law or forum clauses. Watch CCPA automated decision-making duties from 1 Jan 2027 and SB 947 (operative 1 Jul 2027 if signed).",
+      "verify": false
+    },
+    {
+      "jur": "us-co",
+      "consultation": "None (NLRA only, no works councils).",
+      "filing": "None for HR policies. State EEO-1 filing rules (HB 26-1207) are expected late 2026, with a first filing in 2027.",
+      "language": "Paid sick leave (HFWA) notice in English and any language spoken by 5% or more of the workforce; FAMLI notices in English and Spanish.",
+      "leadTime": "2 to 3 weeks, mainly for Spanish and other translations. Refresh COMPS and PAY CALC figures in the Colorado addendum each 1 January.",
+      "notes": "Colorado addenda cover the POWR Act harassment program and complaint repository, job posting and promotion notices, biometric and data-disposal policies. SB 26-189 AI notices apply from 1 Jan 2027 to tools that materially influence employment decisions.",
+      "verify": false
+    },
+    {
+      "jur": "us-nc",
+      "consultation": "None. Right-to-work state; the NLRA governs and there are no consultation duties.",
+      "filing": "None for HR policies.",
+      "language": "No statutory language requirement. NCDOL publishes Spanish posters; giving wage notices in a language the employee understands is best practice.",
+      "leadTime": "Wage-related policies (PTO, bonus, commission, deductions) must be given to employees in writing or posted before they can be enforced, and any change that reduces wages or wage benefits needs written notice at least one full pay period ahead. Plan 2 to 3 weeks.",
+      "notes": "State vacation forfeiture terms in writing. NC session laws often take effect on 1 Jul, 1 Oct or 1 Dec.",
+      "verify": false
+    },
+    {
+      "jur": "us-tx",
+      "consultation": "None. Right-to-work state; the NLRA governs and there are no consultation duties.",
+      "filing": "None for HR policies.",
+      "language": "Workers' compensation coverage notices posted in English, Spanish and any other language common to the workforce. Deduction authorizations and policies in a language the employee understands.",
+      "leadTime": "1 to 2 weeks. Vacation, holiday, sick and severance pay are owed only under a written agreement or policy, so publish the policy before relying on its terms.",
+      "notes": "Texas addenda cover the Payday Law, CUBI biometric notice, firearms in parking areas and the ban on COVID-19 vaccine mandates. The 2027 regular session runs Jan to Jun, and most new laws take effect 1 Sep 2027, inside Wave 4.",
+      "verify": false
+    },
+    {
+      "jur": "us-wa",
+      "consultation": "None (NLRA, no works councils). Mandatory meetings on unionization are banned (RCW 49.44.250). Locations with 11+ employees on the same shift need an elected safety committee; involve it in Accident Prevention Program changes.",
+      "filing": "None for HR policies.",
+      "language": "No translation mandate for contracts or handbooks. I-9 inspection notices (from 1 Oct 2026) go out in English and the five most common other languages in Washington.",
+      "leadTime": "1 to 2 weeks. New laws usually take effect about 90 days after the session and rates change each 1 January; the noncompete ban starts 30 June 2027.",
+      "notes": "Seattle addenda cover Paid Sick and Safe Time, SMC 14.04 protected classes and the commuter benefit. Agreements need Silenced No More carve-outs.",
+      "verify": false
+    },
+    {
+      "jur": "ca",
+      "consultation": "None outside unionized workplaces. The Ontario workplace harassment program is developed with the joint health and safety committee or representative (JHSC at 20+ workers); BC has a joint committee at 20+ workers.",
+      "filing": "None for HR policies.",
+      "language": "English for Ontario and BC. French only if there are Quebec-based employees, including remote staff: then contracts, policies and written communications must be in French (Bill 96), and 25+ Quebec employees triggers OQLF registration.",
+      "leadTime": "Ontario employers with 25+ employees on 1 Jan need disconnecting-from-work and electronic monitoring policies by 1 March, with copies to employees within 30 days. Harassment, violence and health and safety policies are posted and reviewed annually. Plan 3 to 5 weeks.",
+      "notes": "Toronto and Vancouver addenda. AODA accessibility policies must be documented at 50+ employees. BC requires a bullying and harassment policy with reporting and investigation procedures.",
+      "verify": false
+    },
+    {
+      "jur": "de",
+      "consultation": "Where a works council exists (possible at 5+ employees), policies on conduct rules, working time, IT and monitoring tools (including the HRIS, M365 and DLP), pay and bonus principles, mobile work and health protection must be adopted as works agreements (BetrVG §§77, 87(1) nos.1, 2, 3, 6, 10, 11, 14), not unilaterally. The council can enjoin a unilateral rollout, and disputes go to the Einigungsstelle.",
+      "filing": "None with an authority for HR policies. Works agreements must be made available to staff (§77(2) BetrVG), and statutory postings (ArbZG, AGG with the complaint office) go on the intranet or in the workplace.",
+      "language": "German or bilingual versions of core policies for employees who are not fluent in English. Works agreements and works council communications are in German.",
+      "leadTime": "Where a works agreement is needed, plan 8 to 16 weeks from opening consultation to signature (planning estimate), and longer if the Einigungsstelle is called. Otherwise 2 to 4 weeks for German translation. Wave 1 consultations start by 29 Jan 2027 (M07).",
+      "notes": "Confirm in Mobilize whether a works council exists at each establishment. Works agreements must meet GDPR in full (CJEU C-65/23; BAG 2025 Workday damages). German pay transparency law missed the 7 June 2026 deadline, with a bill expected early 2027; AI Act employment duties apply from 2 Dec 2027.",
+      "verify": false
+    },
+    {
+      "jur": "il",
+      "consultation": "No works councils. Where a collective agreement or representative union applies, policy changes affecting employment conditions must be negotiated. Avoid US-style messaging during any organizing, which courts treat as unlawful interference.",
+      "filing": "None for HR policies. The Section 102 equity sub-plan is filed with the Israel Tax Authority at least 30 days before the first grant (separate obligation).",
+      "language": "Hebrew for statutory notices, the sexual harassment prevention bylaw and workplace postings, with Arabic or another language where employees need it. English policies are valid if understood, but publish Hebrew versions of core policies.",
+      "leadTime": "3 to 5 weeks for Hebrew translation, posting and distribution; longer where a collective agreement requires negotiation. Avoid launch dates on Jewish holidays and Fridays.",
+      "notes": "Employers with 25+ employees must adopt a sexual harassment prevention bylaw based on the regulations' template, post it and give it to employees; every employer appoints a trained commissioner. Monitoring needs a written policy communicated in advance. The discipline policy needs a pre-dismissal hearing step.",
+      "verify": false
+    },
+    {
+      "jur": "in",
+      "consultation": "No works council. Standing orders are certified, or the model standing orders adopted, at 300+ workers; the Karnataka IT/ITeS exemption was issued under the repealed 1946 Act and its status under the IR Code is unconfirmed (verify). A Grievance Redressal Committee is needed at 20+ workers and a POSH Internal Committee at 10+ employees.",
+      "filing": "POSH annual report to the District Officer. Standing orders certification where 300+ workers and no valid exemption. Units using the Karnataka exemption report suspensions, terminations and other disciplinary actions to the Deputy Labour Commissioner.",
+      "language": "English for policies. Statutory notices and abstracts are displayed in English and the local language (Kannada in Karnataka, Telugu in Telangana), and the POSH policy and Internal Committee details are displayed in both.",
+      "leadTime": "4 to 6 weeks for local-language display and committee updates. Standing orders certification takes longer (verify). Karnataka and Telangana rules under the Codes are still largely in draft.",
+      "notes": "The Labour Codes took effect on 21 Nov 2025 and central rules were finalised on 8 May 2026. DPDP notice and consent duties start 13 May 2027, inside Wave 2. Whether engineers are 'workers' or 'employees' decides standing orders, grievance committee and retrenchment coverage.",
+      "verify": true
+    },
+    {
+      "jur": "tw",
+      "consultation": "Labor-management meetings must be held at least quarterly with equal numbers of elected employee representatives; their consent is needed for overtime, flexible working hours and shift-rest changes where there is no union.",
+      "filing": "With 30+ employees, work rules are submitted to the local labor authority (the Science Park Bureau for Hsinchu Science Park sites) for approval, posted, and refiled on every amendment. Global policies are not enforceable locally unless incorporated into the work rules.",
+      "language": "Traditional Chinese for work rules filed with the authority, notices and labor-management meeting materials. Bilingual policies are recommended; courts and inspectors rely on the Chinese version.",
+      "leadTime": "6 to 10 weeks for translation, the quarterly labor-management meeting where consent is needed and authority review; the authority's review time is not confirmed in the library (verify). Lunar New Year freeze 5 to 14 Feb 2027.",
+      "notes": "Sexual harassment and workplace bullying rules (complaint channel at 10+, prevention, complaint and discipline rules at 30+) belong in the work rules. File one consolidated amendment per wave.",
+      "verify": false
+    },
+    {
+      "jur": "cn",
+      "consultation": "Democratic procedure (Labor Contract Law Art. 4): rules on pay, hours, leave, safety, discipline and training are discussed with the employee congress or all employees, finalised after consultation with the union or employee representatives, and publicised with signed acknowledgment. Without it they cannot support an Art. 39 dismissal.",
+      "filing": "No authority filing for the handbook. Special working-hour systems need local HR bureau approval, and the overseas parent's equity plans need SAFE registration before employees participate (separate obligations).",
+      "language": "Bilingual handbook and policies with the Chinese text prevailing; labor bureaus, arbitration commissions and courts work in Chinese.",
+      "leadTime": "6 to 8 weeks per consolidated procedure (planning estimate) for discussion, consultation, publication and acknowledgment. Adopt annual changes before 1 Jan, and hold no meetings during the Lunar New Year freeze (5 to 14 Feb 2027).",
+      "notes": "Shanghai and Shenzhen rules differ on sick pay, leave and social insurance. Shanghai sick pay now follows contract or handbook terms after the old notices lapsed on 15 Aug 2026, which makes the sick leave policy a Wave 1 priority. Keep notices, sign-in sheets, comment logs, minutes and acknowledgments as evidence.",
+      "verify": false
+    },
+    {
+      "jur": "vn",
+      "consultation": "Consult the grassroots trade union (where one exists) before issuing or changing internal labour regulations (ILR), salary scales, bonus rules and performance criteria; workplace dialogue is also required before ILR changes.",
+      "filing": "Employers with 10+ employees register the ILR with the provincial Department of Home Affairs (Hanoi, Ho Chi Minh City) within 10 days of issue. ILR take effect 15 days after the authority receives a complete dossier and must be posted at the workplace; branches in other provinces send the registered ILR to their local authority.",
+      "language": "Vietnamese for ILR, labour contracts, disciplinary minutes and filings. Bilingual versions are allowed for foreign employees, but authorities and courts work from the Vietnamese text.",
+      "leadTime": "6 to 8 weeks: union consultation and dialogue, translation, registration within 10 days of issue and the 15-day period before effect. Tet freeze 5 to 14 Feb 2027.",
+      "notes": "Discipline is valid only on grounds in the registered ILR, so fold Code of conduct consequences, the sexual harassment section and secret-protection clauses into the ILR. Add a clause on cross-border HR data flows so the Decree 356 HR-management exemption applies.",
+      "verify": false
+    }
+  ]
+}

@@ -1,0 +1,1627 @@
+{
+ "videos": [
+  {
+   "id": "V1",
+   "title": "Project Atlas in 90 seconds",
+   "episode": "Episode 1",
+   "summary": "Why Project Atlas exists, how the twelve months run, who does the work, the five stages every item moves through and where to find things in the Atlas.",
+   "scenes": [
+    {
+     "id": "s1",
+     "type": "title",
+     "chip": "wave",
+     "params": {
+      "kicker": "Episode 1",
+      "title": "Project Atlas in 90 seconds",
+      "subtitle": "Why we're doing it, how the year runs and where everything lives"
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "Ninety seconds for a whole program? I've had meetings take longer to find the dial-in."
+      },
+      {
+       "who": "ava",
+       "text": "Then let's beat them. Chip's got the stopwatch."
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "type": "bigNumbers",
+     "chip": "alarm",
+     "params": {
+      "title": "What Atlas covers",
+      "items": [
+       {
+        "value": 57,
+        "label": "policies"
+       },
+       {
+        "value": 97,
+        "label": "processes"
+       },
+       {
+        "value": 284,
+        "label": "legal obligations"
+       },
+       {
+        "value": 13,
+        "label": "jurisdictions"
+       }
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Over twelve months, we document, approve and launch every HR policy, process and legal obligation.",
+       "show": 3
+      },
+      {
+       "who": "leo",
+       "text": "Across 13 jurisdictions? That's 438 items. And we tracked them in a spreadsheet called final_v7?",
+       "say": "Across thirteen jurisdictions? That's four hundred thirty-eight items. And we tracked them in a spreadsheet called final v seven?",
+       "show": 4
+      },
+      {
+       "who": "ava",
+       "text": "Which is exactly the problem. For a public company, every gap is audit or legal exposure.",
+       "show": 4
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "type": "timeline",
+     "params": {
+      "title": "Mobilize, then four waves",
+      "bars": [
+       {
+        "label": "Mobilize",
+        "start": "2026-10-12",
+        "end": "2026-11-06"
+       },
+       {
+        "label": "Wave 1: Must-haves",
+        "start": "2026-11-09",
+        "end": "2027-02-12"
+       },
+       {
+        "label": "Wave 2: Core lifecycle",
+        "start": "2027-02-15",
+        "end": "2027-05-14"
+       },
+       {
+        "label": "Wave 3: Complete coverage",
+        "start": "2027-05-17",
+        "end": "2027-08-13"
+       },
+       {
+        "label": "Wave 4: Embed and sustain",
+        "start": "2027-08-16",
+        "end": "2027-10-08"
+       }
+      ],
+      "markers": [
+       {
+        "date": "2026-10-12",
+        "label": "Kickoff"
+       },
+       {
+        "date": "2027-08-13",
+        "label": "All required items live"
+       },
+       {
+        "date": "2027-10-08",
+        "label": "Project close"
+       }
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Mobilize starts October 12: four weeks to set up the team, tools and approval chains.",
+       "say": "Mobilize starts October twelfth: four weeks to set up the team, tools and approval chains."
+      },
+      {
+       "who": "leo",
+       "text": "Then the waves. Let me guess, scariest stuff first?"
+      },
+      {
+       "who": "ava",
+       "text": "Yep. Wave 1 tackles the riskiest must-haves, Waves 2 and 3 finish every required item, and Wave 4 makes it stick."
+      },
+      {
+       "who": "leo",
+       "text": "Done by October 8, 2027. Blocking my calendar now.",
+       "say": "Done by October eighth, twenty twenty-seven. Blocking my calendar now."
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "type": "steps",
+     "params": {
+      "title": "Six workstreams, one team",
+      "steps": [
+       {
+        "title": "Governance and employee relations",
+        "detail": "Head of Employee Relations"
+       },
+       {
+        "title": "Talent acquisition",
+        "detail": "Director, TA Operations"
+       },
+       {
+        "title": "HR operations and lifecycle",
+        "detail": "Head of HR Operations"
+       },
+       {
+        "title": "Total rewards and payroll",
+        "detail": "Head of Total Rewards"
+       },
+       {
+        "title": "Talent, leave and engagement",
+        "detail": "Head of Talent Management"
+       },
+       {
+        "title": "HR data, safety and systems",
+        "detail": "Director, HRIS and People Analytics"
+       }
+      ]
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "Who's doing all this? Please don't say me."
+      },
+      {
+       "who": "ava",
+       "text": "Six workstreams, each with a named lead. Regional and country HR leads handle the local details."
+      },
+      {
+       "who": "leo",
+       "text": "Good, because Germany doesn't exactly run like Texas."
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "type": "steps",
+     "chip": "thumbs",
+     "params": {
+      "title": "Five stages for every item",
+      "steps": [
+       {
+        "title": "Discover",
+        "detail": "Find what exists, rate the gaps, confirm the owner"
+       },
+       {
+        "title": "Draft",
+        "detail": "Standard template, country addenda and controls"
+       },
+       {
+        "title": "Review",
+        "detail": "Expert, legal and country comments resolved"
+       },
+       {
+        "title": "Approve",
+        "detail": "Every sign-off recorded in the chain"
+       },
+       {
+        "title": "Go live",
+        "detail": "Published, communicated, evidence filed"
+       }
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Every item moves through five stages: discover what exists, then draft it in the standard template.",
+       "show": 2
+      },
+      {
+       "who": "leo",
+       "text": "Then review and approve, where my emails usually go to die.",
+       "show": 4
+      },
+      {
+       "who": "ava",
+       "text": "Not here. Approvals run in the Atlas. Go live means published, communicated and evidence filed.",
+       "show": 5
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "type": "callout",
+     "params": {
+      "label": "Where to look",
+      "text": "Project HQ for the big picture. Master checklist for your items. Approvals for sign-offs."
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "Last thing. Where do I find my stuff?"
+      },
+      {
+       "who": "ava",
+       "text": "Project HQ for the big picture, the Master checklist for your items, and Approvals for sign-offs.",
+       "say": "Project H Q for the big picture, the Master checklist for your items, and Approvals for sign-offs."
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "type": "outro",
+     "chip": "celebrate",
+     "params": {
+      "title": "438 items. Five stages. One Atlas.",
+      "next": "Episode 2: Find and update your items",
+      "where": "Project HQ, Master checklist and Approvals"
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "That's Atlas: 438 items, five stages, four waves, one place to track them."
+      },
+      {
+       "who": "leo",
+       "text": "Ninety seconds, give or take. Next time, we find and update your items."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V2",
+   "title": "Find and update your items",
+   "episode": "Episode 2",
+   "summary": "How to find your items in the Master checklist, take ownership, and keep status, target dates and notes current every week.",
+   "scenes": [
+    {
+     "id": "s1",
+     "type": "title",
+     "chip": "wave",
+     "params": {
+      "kicker": "Episode 2",
+      "title": "Find and update your items",
+      "subtitle": "A few minutes a week keeps the whole program honest"
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "Ava, there are 438 items in the Atlas. How do I find mine?"
+      },
+      {
+       "who": "ava",
+       "text": "Two filters. Open the Master checklist and I'll show you."
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "type": "appTable",
+     "params": {
+      "title": "Master checklist",
+      "columns": [
+       "ID",
+       "Item",
+       "Wave",
+       "Owner",
+       "Status"
+      ],
+      "rows": [
+       [
+        "POL-16",
+        "Recruitment and selection",
+        "Wave 1",
+        "Talent Acquisition",
+        "Drafting"
+       ],
+       [
+        "POL-17",
+        "Background screening",
+        "Wave 1",
+        "Talent Acquisition",
+        "Not started"
+       ],
+       [
+        "TA-01",
+        "Job posting and pay ranges",
+        "Wave 1",
+        "Talent Acquisition",
+        "In review"
+       ],
+       [
+        "TA-06",
+        "Export-control screening",
+        "Wave 1",
+        "Talent Acquisition",
+        "Not started"
+       ]
+      ],
+      "filters": []
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "First, filter by wave. Let's pick Wave 1.",
+       "ops": [
+        {
+         "op": "filter",
+         "value": "Wave 1"
+        }
+       ]
+      },
+      {
+       "who": "leo",
+       "text": "Then by workstream, which is my team, Talent Acquisition.",
+       "ops": [
+        {
+         "op": "filter",
+         "value": "Workstream: Talent Acquisition"
+        }
+       ]
+      },
+      {
+       "who": "ava",
+       "text": "Now it's a short list. Open one, like Background screening.",
+       "ops": [
+        {
+         "op": "highlight",
+         "row": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "type": "appTable",
+     "params": {
+      "title": "Master checklist",
+      "columns": [
+       "ID",
+       "Item",
+       "Assignee",
+       "Target date",
+       "Status"
+      ],
+      "rows": [
+       [
+        "POL-16",
+        "Recruitment and selection",
+        "Unassigned",
+        "Dec 18",
+        "Drafting"
+       ],
+       [
+        "POL-17",
+        "Background screening",
+        "Unassigned",
+        "Not set",
+        "Not started"
+       ],
+       [
+        "TA-01",
+        "Job posting and pay ranges",
+        "Unassigned",
+        "Dec 11",
+        "In review"
+       ],
+       [
+        "TA-06",
+        "Export-control screening",
+        "Unassigned",
+        "Not set",
+        "Not started"
+       ]
+      ],
+      "filters": [
+       "Wave 1",
+       "Workstream: Talent Acquisition"
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Set yourself as the assignee. Type your name and pick yourself from the list.",
+       "ops": [
+        {
+         "op": "highlight",
+         "row": 1
+        },
+        {
+         "op": "set",
+         "row": 1,
+         "col": 2,
+         "value": "Leo"
+        }
+       ]
+      },
+      {
+       "who": "leo",
+       "text": "Done. It's officially mine. No take-backs."
+      },
+      {
+       "who": "ava",
+       "text": "Now set the status to Drafting and a target date you actually believe in.",
+       "ops": [
+        {
+         "op": "set",
+         "row": 1,
+         "col": 4,
+         "value": "Drafting"
+        },
+        {
+         "op": "set",
+         "row": 1,
+         "col": 3,
+         "value": "Dec 18"
+        }
+       ]
+      },
+      {
+       "who": "leo",
+       "text": "Saved for everyone, instantly. Goodbye, emailing the tracker around.",
+       "ops": [
+        {
+         "op": "toast",
+         "value": "Saved for everyone"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "type": "versus",
+     "chip": "thumbs",
+     "params": {
+      "left": {
+       "title": "Not helpful",
+       "items": [
+        "Working on it",
+        "See my email",
+        "TBD"
+       ]
+      },
+      "right": {
+       "title": "Helpful",
+       "items": [
+        "Current doc: TA shared drive",
+        "Gap: no China or Taiwan addendum",
+        "Next: legal review by Dec 4"
+       ]
+      }
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Then add a note: where the document lives, what's missing, your next step."
+      },
+      {
+       "who": "leo",
+       "text": "So not just \"working on it\"? That's been my status since 2019."
+      },
+      {
+       "who": "ava",
+       "text": "A good note means nobody has to chase you."
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "type": "callout",
+     "params": {
+      "label": "Why weekly",
+      "text": "The status report is generated from the checklist. Update weekly and the report tells the truth."
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "How often do I need to do this?"
+      },
+      {
+       "who": "ava",
+       "text": "Every week. The status report is generated straight from the checklist, so leadership reads what you enter."
+      },
+      {
+       "who": "leo",
+       "text": "Skip a week and the steering committee reads old news. Got it."
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "type": "appTable",
+     "chip": "alarm",
+     "params": {
+      "title": "My items",
+      "columns": [
+       "ID",
+       "Item",
+       "Target date",
+       "Status"
+      ],
+      "rows": [
+       [
+        "TA-04",
+        "Offer approval and extension",
+        "Nov 27",
+        "Overdue"
+       ],
+       [
+        "POL-17",
+        "Background screening",
+        "Dec 18",
+        "Drafting"
+       ],
+       [
+        "TA-01",
+        "Job posting and pay ranges",
+        "Dec 11",
+        "In review"
+       ]
+      ],
+      "filters": [
+       "Assignee: me"
+      ]
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "Uh oh. Why is this one red?",
+       "ops": [
+        {
+         "op": "highlight",
+         "row": 0
+        }
+       ]
+      },
+      {
+       "who": "ava",
+       "text": "It's overdue: the target date has passed and the item isn't finished. Maybe the approver's on vacation."
+      },
+      {
+       "who": "leo",
+       "text": "Classic. So do I just quietly move the date?"
+      },
+      {
+       "who": "ava",
+       "text": "Not quietly. Note what's blocking it, agree a new date with your workstream lead, then update it.",
+       "ops": [
+        {
+         "op": "set",
+         "row": 0,
+         "col": 2,
+         "value": "Jan 15"
+        },
+        {
+         "op": "set",
+         "row": 0,
+         "col": 3,
+         "value": "In review"
+        },
+        {
+         "op": "toast",
+         "value": "Note added"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "type": "outro",
+     "chip": "celebrate",
+     "params": {
+      "title": "Filter. Open. Update. Note. Every week.",
+      "next": "Episode 3: Document a process in five steps",
+      "where": "Master checklist, filtered to your wave and team"
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Filter, open, assign yourself, update status and date, leave a note. Every week."
+      },
+      {
+       "who": "leo",
+       "text": "A few minutes a week and nobody chases me? Sold. Next up, documenting a process."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V3",
+   "title": "Document a process in five steps",
+   "episode": "Episode 3",
+   "summary": "How to turn a real process into an Atlas process document: discovery workshop, swimlane map, controls and evidence, country notes and submission for approval.",
+   "scenes": [
+    {
+     "id": "s1",
+     "type": "title",
+     "chip": "wave",
+     "params": {
+      "kicker": "Episode 3",
+      "title": "Document a process in five steps",
+      "subtitle": "From how it really works to an approved process map"
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "I just inherited TA-05, background checks. Where do I start?",
+       "say": "I just inherited T A five, background checks. Where do I start?"
+      },
+      {
+       "who": "ava",
+       "text": "Five steps, and the first one comes with coffee."
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "type": "steps",
+     "params": {
+      "title": "Five steps",
+      "steps": [
+       {
+        "title": "Workshop",
+        "detail": "90 minutes with the people who do the work"
+       },
+       {
+        "title": "Map",
+        "detail": "Swimlane: start, tasks, decisions, end"
+       },
+       {
+        "title": "Controls",
+        "detail": "What's checked, by whom, with what evidence"
+       },
+       {
+        "title": "Country notes",
+        "detail": "Only where local law changes a step"
+       },
+       {
+        "title": "Submit",
+        "detail": "Into the process approval chain"
+       }
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Here they are. Step one is a 90-minute workshop with the people who actually do the work.",
+       "show": 5
+      },
+      {
+       "who": "leo",
+       "text": "So not just the person who wrote the procedure in 2015?",
+       "show": 5
+      },
+      {
+       "who": "ava",
+       "text": "Right. Pro tip: walk one real, recent case from start to finish.",
+       "show": 5
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "type": "swimlane",
+     "params": {
+      "title": "TA-05 Background and reference checks",
+      "lanes": [
+       "Recruiter",
+       "Candidate",
+       "Vendor",
+       "Legal"
+      ],
+      "nodes": [
+       {
+        "lane": 0,
+        "label": "Offer accepted: start checks",
+        "kind": "start"
+       },
+       {
+        "lane": 1,
+        "label": "Sign disclosure and consent",
+        "kind": "task"
+       },
+       {
+        "lane": 2,
+        "label": "Run checks and references",
+        "kind": "task"
+       },
+       {
+        "lane": 0,
+        "label": "Report clear?",
+        "kind": "decision"
+       },
+       {
+        "lane": 3,
+        "label": "Individualized assessment",
+        "kind": "task"
+       },
+       {
+        "lane": 0,
+        "label": "Pre-adverse notice, then wait",
+        "kind": "task"
+       },
+       {
+        "lane": 3,
+        "label": "Proceed with hire?",
+        "kind": "decision"
+       },
+       {
+        "lane": 0,
+        "label": "Cleared to start",
+        "kind": "end"
+       }
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Step two: map a swimlane, one lane per role, starting with the trigger.",
+       "show": 1
+      },
+      {
+       "who": "leo",
+       "text": "Tasks are boxes, and every \"it depends\" becomes a decision?",
+       "show": 4
+      },
+      {
+       "who": "ava",
+       "text": "Exactly. Follow every branch to the end, even the awkward ones.",
+       "show": 8
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "type": "callout",
+     "chip": "alarm",
+     "params": {
+      "label": "Watch out",
+      "text": "Map what really happens today, not what the policy says should happen."
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Watch out for the classic trap: mapping the ideal, not what really happens."
+      },
+      {
+       "who": "leo",
+       "text": "Guilty. My last map had zero exceptions and a very happy unicorn."
+      },
+      {
+       "who": "ava",
+       "text": "If it really takes three weeks, write three weeks."
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "type": "checklist",
+     "chip": "thumbs",
+     "params": {
+      "title": "Controls and evidence",
+      "items": [
+       "No check before the offer and signed consent",
+       "No adverse decision without assessment and notice",
+       "Evidence named for every control",
+       "Key and SOX controls flagged for review"
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Step three: controls. What gets checked, by whom, with what evidence.",
+       "show": 1
+      },
+      {
+       "who": "leo",
+       "text": "Like no background check before the candidate signs consent?",
+       "show": 2
+      },
+      {
+       "who": "ava",
+       "text": "Yes, and the e-signature timestamp is the evidence. Key or SOX controls need a control review.",
+       "say": "Yes, and the e-signature timestamp is the evidence. Key or socks controls need a control review.",
+       "show": 4
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "type": "map",
+     "params": {
+      "title": "Country notes for TA-05",
+      "groups": [
+       {
+        "label": "No criminal check before the offer",
+        "codes": [
+         "us-ca"
+        ]
+       },
+       {
+        "label": "Written consent first",
+        "codes": [
+         "ca",
+         "in",
+         "tw"
+        ]
+       },
+       {
+        "label": "No official criminal records",
+        "codes": [
+         "cn"
+        ]
+       }
+      ],
+      "note": "Add a country note only where local law changes a step"
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Step four: country notes, only where local law changes a step."
+      },
+      {
+       "who": "leo",
+       "text": "Okay, give me a real example."
+      },
+      {
+       "who": "ava",
+       "text": "California bans criminal checks before a conditional offer. In China, private employers can't get official criminal records."
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "type": "chain",
+     "params": {
+      "title": "Process document chain",
+      "steps": [
+       {
+        "label": "Process owner sign-off",
+        "who": "Process owner"
+       },
+       {
+        "label": "Workstream review",
+        "who": "Workstream lead"
+       },
+       {
+        "label": "Control review, if needed",
+        "who": "Internal Audit or SOX PMO"
+       },
+       {
+        "label": "Publish approval",
+        "who": "Head of HR Operations"
+       }
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Step five: submit. The process chain ends with the Head of HR Operations."
+      },
+      {
+       "who": "leo",
+       "text": "So I refresh my inbox every four minutes?"
+      },
+      {
+       "who": "ava",
+       "text": "No need. The Approvals page shows which step it's on."
+      }
+     ]
+    },
+    {
+     "id": "s8",
+     "type": "outro",
+     "chip": "celebrate",
+     "params": {
+      "title": "Reality first, then improve it",
+      "next": "Episode 4: Set up and run an approval chain",
+      "where": "Processes and Templates"
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Workshop, map, controls, country notes, submit. Reality first, improvements second."
+      },
+      {
+       "who": "leo",
+       "text": "And no unicorns. Next time: who actually clicks approve?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V4",
+   "title": "Set up and run an approval chain",
+   "episode": "Episode 4",
+   "summary": "What an approval chain is, how editors change the defaults or build their own with named approvers, and how submitting, approving, sending back and the audit trail work.",
+   "scenes": [
+    {
+     "id": "s1",
+     "type": "title",
+     "chip": "wave",
+     "params": {
+      "kicker": "Episode 4",
+      "title": "Set up and run an approval chain",
+      "subtitle": "Who signs, in what order, with proof"
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "Okay, the big question. Who actually clicks approve?"
+      },
+      {
+       "who": "ava",
+       "text": "The approval chain decides. It's the route an item takes, one sign-off at a time."
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "type": "steps",
+     "chip": "think",
+     "params": {
+      "title": "Five default chains",
+      "steps": [
+       {
+        "title": "Global policy",
+        "detail": "Policies and country addenda"
+       },
+       {
+        "title": "Process document",
+        "detail": "Process maps, controls and RACI"
+       },
+       {
+        "title": "Legal obligation",
+        "detail": "Filings, notices, trainings and records"
+       },
+       {
+        "title": "Public company and semiconductor",
+        "detail": "SOX, SEC, insider trading, export control"
+       },
+       {
+        "title": "Project document",
+        "detail": "Charter, plan and change requests"
+       }
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "There are five default chains: global policy, process, legal obligation, public company controls and project documents.",
+       "show": 5
+      },
+      {
+       "who": "leo",
+       "text": "Wait, can I create my own approval chain?",
+       "show": 5
+      },
+      {
+       "who": "ava",
+       "text": "Yes. Editors can change any default chain or build a brand new one.",
+       "show": 5
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "type": "appTable",
+     "params": {
+      "title": "Approvals: Global policy chain",
+      "columns": [
+       "Step",
+       "Approvers",
+       "Must sign",
+       "Optional"
+      ],
+      "rows": [
+       [
+        "Owner sign-off",
+        "Policy owner",
+        "Any",
+        "No"
+       ],
+       [
+        "Workstream review",
+        "Workstream lead",
+        "Any",
+        "No"
+       ],
+       [
+        "Legal review",
+        "Employment counsel",
+        "Any",
+        "No"
+       ],
+       [
+        "Regional HR review",
+        "3 regional leads",
+        "All",
+        "No"
+       ],
+       [
+        "Works council consultation",
+        "Country HR lead",
+        "Any",
+        "No"
+       ],
+       [
+        "Final approval",
+        "Chief People Officer",
+        "Any",
+        "No"
+       ]
+      ],
+      "filters": []
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Open Approvals, edit a chain or click New chain, and name each step clearly.",
+       "ops": [
+        {
+         "op": "highlight",
+         "row": 0
+        }
+       ]
+      },
+      {
+       "who": "leo",
+       "text": "Then who signs each step? Can I just put Chip?"
+      },
+      {
+       "who": "ava",
+       "text": "Chip has no hands. Assign named people, then choose whether any or all must sign.",
+       "ops": [
+        {
+         "op": "set",
+         "row": 0,
+         "col": 1,
+         "value": "Leo"
+        },
+        {
+         "op": "highlight",
+         "row": 3
+        }
+       ]
+      },
+      {
+       "who": "leo",
+       "text": "So if my approver's on vacation, I add a backup and set it to any?"
+      },
+      {
+       "who": "ava",
+       "text": "Exactly. Mark steps optional too, like works council consultation, and skip them with a note where not needed.",
+       "ops": [
+        {
+         "op": "set",
+         "row": 4,
+         "col": 3,
+         "value": "Yes"
+        },
+        {
+         "op": "toast",
+         "value": "Chain saved"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "type": "appTable",
+     "params": {
+      "title": "Approvals",
+      "columns": [
+       "ID",
+       "Item",
+       "Your step",
+       "Status"
+      ],
+      "rows": [
+       [
+        "POL-09",
+        "Anti-harassment",
+        "Legal review",
+        "In review"
+       ],
+       [
+        "TA-05",
+        "Background checks",
+        "Workstream review",
+        "In review"
+       ],
+       [
+        "POL-45",
+        "Mandatory training",
+        "Final approval",
+        "In review"
+       ]
+      ],
+      "filters": []
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "The owner clicks Submit for approval. Each approver, in turn, sees it under Waiting on you.",
+       "ops": [
+        {
+         "op": "filter",
+         "value": "Waiting on you"
+        }
+       ]
+      },
+      {
+       "who": "leo",
+       "text": "So this is where someone actually clicks approve.",
+       "ops": [
+        {
+         "op": "highlight",
+         "row": 0
+        }
+       ]
+      },
+      {
+       "who": "ava",
+       "text": "Right here. Approve, or send it back with a reason the owner can act on.",
+       "ops": [
+        {
+         "op": "set",
+         "row": 0,
+         "col": 3,
+         "value": "Approved"
+        },
+        {
+         "op": "toast",
+         "value": "Approved and logged"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "type": "chain",
+     "chip": "alarm",
+     "params": {
+      "title": "POL-09 Anti-harassment",
+      "steps": [
+       {
+        "label": "Owner sign-off",
+        "who": "Policy owner"
+       },
+       {
+        "label": "Workstream review",
+        "who": "Workstream lead"
+       },
+       {
+        "label": "Legal review",
+        "who": "Employment counsel"
+       },
+       {
+        "label": "Regional HR review",
+        "who": "Americas, EMEA and APAC"
+       },
+       {
+        "label": "Works council consultation",
+        "who": "Country HR lead"
+       },
+       {
+        "label": "Final approval",
+        "who": "Chief People Officer"
+       }
+      ],
+      "reject": 2
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "And if Legal sends it back?"
+      },
+      {
+       "who": "ava",
+       "text": "The owner fixes it and resubmits, and the chain carries on to final approval."
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "type": "callout",
+     "params": {
+      "label": "Audit evidence",
+      "text": "Every approval, send-back, reason and timestamp is recorded. The audit trail is your evidence."
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Every approval, send-back and reason is time-stamped. That audit trail is your evidence."
+      },
+      {
+       "who": "leo",
+       "text": "So when auditors ask who approved it, nobody digs through email. Chip's thrilled."
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "type": "outro",
+     "chip": "celebrate",
+     "params": {
+      "title": "Name it, staff it, run it, prove it",
+      "next": "Episode 5: Take a policy live in 13 countries",
+      "where": "Approvals"
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Put named approvers on every chain by October 30, and run one test submission end to end.",
+       "say": "Put named approvers on every chain by October thirtieth, and run one test submission end to end."
+      },
+      {
+       "who": "leo",
+       "text": "Next time, a policy goes live in 13 countries. Bring snacks."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "V5",
+   "title": "Take a policy live in 13 countries",
+   "episode": "Episode 5",
+   "summary": "How a global policy and its country addenda clear local gates, then get published, communicated, acknowledged and evidenced in all 13 jurisdictions.",
+   "scenes": [
+    {
+     "id": "s1",
+     "type": "title",
+     "chip": "wave",
+     "params": {
+      "kicker": "Episode 5",
+      "title": "Take a policy live in 13 countries",
+      "subtitle": "One global policy, local addenda, no surprises"
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "POL-09, anti-harassment, is approved. So we're done, right?",
+       "say": "Policy nine, anti-harassment, is approved. So we're done, right?"
+      },
+      {
+       "who": "ava",
+       "text": "Approved isn't live. Thirteen countries take a little choreography first."
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "type": "versus",
+     "chip": "thumbs",
+     "params": {
+      "left": {
+       "title": "Global policy",
+       "items": [
+        "Same core rules everywhere",
+        "One owner, one approval chain"
+       ]
+      },
+      "right": {
+       "title": "Country addendum",
+       "items": [
+        "Only what local law changes",
+        "Local language where needed"
+       ]
+      }
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Every policy is one global document plus country addenda that only cover what local law changes."
+      },
+      {
+       "who": "leo",
+       "text": "So not thirteen separate copies, each called final_v7?",
+       "say": "So not thirteen separate copies, each called final v seven?"
+      },
+      {
+       "who": "ava",
+       "text": "Nope. One source, with local differences marked and translated where needed."
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "type": "map",
+     "params": {
+      "title": "Countries with extra gates",
+      "groups": [
+       {
+        "label": "Works council co-determination",
+        "codes": [
+         "de"
+        ]
+       },
+       {
+        "label": "Democratic consultation",
+        "codes": [
+         "cn"
+        ]
+       },
+       {
+        "label": "Registration and filing",
+        "codes": [
+         "vn",
+         "tw"
+        ]
+       }
+      ],
+      "note": "Plus local language versions, for example German, Chinese and Vietnamese"
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "Four countries add gates. In Germany, the works council co-determines conduct rules, so you need its agreement."
+      },
+      {
+       "who": "leo",
+       "text": "And China? I'm guessing an email won't cut it."
+      },
+      {
+       "who": "ava",
+       "text": "China needs democratic consultation. Vietnam registers internal labor regulations, and Taiwan files work rules with the labor authority."
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "type": "timeline",
+     "chip": "alarm",
+     "params": {
+      "title": "Plan backwards from go-live",
+      "bars": [
+       {
+        "label": "Germany works council",
+        "start": "2026-12-01",
+        "end": "2027-01-29"
+       },
+       {
+        "label": "China consultation",
+        "start": "2026-12-07",
+        "end": "2027-01-22"
+       },
+       {
+        "label": "Translations",
+        "start": "2027-01-04",
+        "end": "2027-01-22"
+       },
+       {
+        "label": "Vietnam and Taiwan: consult and file",
+        "start": "2026-12-07",
+        "end": "2027-02-04"
+       },
+       {
+        "label": "Publish and acknowledge",
+        "start": "2027-02-01",
+        "end": "2027-02-12"
+       }
+      ],
+      "markers": [
+       {
+        "date": "2026-12-21",
+        "label": "Year-end freeze"
+       },
+       {
+        "date": "2027-02-05",
+        "label": "Lunar New Year and Tet"
+       },
+       {
+        "date": "2027-02-12",
+        "label": "Wave 1 live"
+       }
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "These gates take weeks, so plan backwards from your go-live date and start early."
+      },
+      {
+       "who": "leo",
+       "text": "And mind the calendar. Year-end freeze, then Lunar New Year and Tet from February 5 to 14.",
+       "say": "And mind the calendar. Year-end freeze, then Lunar New Year and Tet from February fifth to fourteenth."
+      },
+      {
+       "who": "ava",
+       "text": "Right. Finish China, Taiwan and Vietnam before that break, or your launch slips."
+      }
+     ]
+    },
+    {
+     "id": "s5",
+     "type": "steps",
+     "params": {
+      "title": "Launch in four moves",
+      "steps": [
+       {
+        "title": "Publish",
+        "detail": "Policy guide updated, effective date set"
+       },
+       {
+        "title": "Communicate",
+        "detail": "Managers first, then everyone, in local languages"
+       },
+       {
+        "title": "Acknowledge",
+        "detail": "Every employee confirms they've read it"
+       },
+       {
+        "title": "File evidence",
+        "detail": "Acknowledgments, filings and consultation records"
+       }
+      ]
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "On launch day, publish in the Policy guide with an effective date, then communicate, managers first.",
+       "show": 2
+      },
+      {
+       "who": "leo",
+       "text": "Then the hard part: getting people to actually read it.",
+       "show": 3
+      },
+      {
+       "who": "ava",
+       "text": "Collect acknowledgments, then file the evidence: acknowledgment reports, filings and consultation minutes.",
+       "show": 4
+      }
+     ]
+    },
+    {
+     "id": "s6",
+     "type": "appTable",
+     "chip": "celebrate",
+     "params": {
+      "title": "POL-09 Anti-harassment by country",
+      "columns": [
+       "Item",
+       "Gate",
+       "Evidence",
+       "Status"
+      ],
+      "rows": [
+       [
+        "POL-09 Germany",
+        "Works council",
+        "Signed agreement",
+        "Approved"
+       ],
+       [
+        "POL-09 China",
+        "Consultation",
+        "Meeting minutes",
+        "Approved"
+       ],
+       [
+        "POL-09 Vietnam",
+        "Registration",
+        "Authority receipt",
+        "In review"
+       ],
+       [
+        "POL-09 Taiwan",
+        "Work rules filing",
+        "Filing approval",
+        "Approved"
+       ],
+       [
+        "POL-09 Global",
+        "Acknowledgments",
+        "Campaign report",
+        "Approved"
+       ]
+      ],
+      "filters": []
+     },
+     "lines": [
+      {
+       "who": "leo",
+       "text": "Wait, why is Vietnam still in review?",
+       "ops": [
+        {
+         "op": "highlight",
+         "row": 2
+        }
+       ]
+      },
+      {
+       "who": "ava",
+       "text": "It's waiting on the authority's receipt. Once that's attached, the gate is cleared.",
+       "ops": [
+        {
+         "op": "set",
+         "row": 2,
+         "col": 3,
+         "value": "Approved"
+        }
+       ]
+      },
+      {
+       "who": "leo",
+       "text": "So now I can set everything to Live?"
+      },
+      {
+       "who": "ava",
+       "text": "Now you can: every country's evidence is filed. That's what auditors sample.",
+       "ops": [
+        {
+         "op": "set",
+         "row": 0,
+         "col": 3,
+         "value": "Live"
+        },
+        {
+         "op": "set",
+         "row": 1,
+         "col": 3,
+         "value": "Live"
+        },
+        {
+         "op": "set",
+         "row": 2,
+         "col": 3,
+         "value": "Live"
+        },
+        {
+         "op": "set",
+         "row": 3,
+         "col": 3,
+         "value": "Live"
+        },
+        {
+         "op": "set",
+         "row": 4,
+         "col": 3,
+         "value": "Live"
+        },
+        {
+         "op": "toast",
+         "value": "Evidence filed"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "s7",
+     "type": "outro",
+     "params": {
+      "title": "Global policy, local gates, real evidence",
+      "next": "Rewatch any episode from Project HQ",
+      "where": "Policy guide and Countries"
+     },
+     "lines": [
+      {
+       "who": "ava",
+       "text": "One global policy, local gates planned early, evidence filed. That's what live means."
+      },
+      {
+       "who": "leo",
+       "text": "That's the series. Now go update your items, and maybe rename final_v7.",
+       "say": "That's the series. Now go update your items, and maybe rename final v seven."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

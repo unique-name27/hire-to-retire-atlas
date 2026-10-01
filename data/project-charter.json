@@ -1,0 +1,1369 @@
+{
+  "charter": {
+    "purpose": "Project Atlas will document, approve, launch and assign an owner to every HR policy, process and legal obligation the company needs: 438 items in 13 jurisdictions, between Oct 12, 2026 and Oct 8, 2027. It turns the Atlas library from a researched working draft into the company's approved and evidenced set of HR rules. Employees and managers will know which rules apply to them and in which language, HR will run each process the same way in every country, Legal and Internal Audit will be able to show compliance item by item, and every item will have an owner who keeps it current after the program closes.",
+    "problem": "The company has grown into 13 jurisdictions faster than its HR documentation. Policies and procedures sit in different places and versions, many local requirements are met informally or through individual knowledge, and there is no single list of who owns each filing, notice, posting and control. Employment law in the company's footprint is changing fast: India's final Labour Code rules were notified in May 2026, Taiwan's workplace bullying rules took effect in July 2026, California banned stay-or-pay clauses from January 2026, and Washington voids all noncompetes from June 30, 2027. As a Nasdaq-listed semiconductor company, it also carries SOX-relevant HR controls, Board-approved Code, clawback and insider trading policies, and export-control duties for employees. Without a program the likely failures are missed filings and postings with fines, policies that cannot be enforced in Germany, China, Taiwan or Vietnam because consultation, filing or translation was skipped, discipline and dismissals that fail when challenged, audit findings on HR controls, and inconsistent decisions by managers. Each of these costs more the longer it waits.",
+    "objectives": [
+      {
+        "id": "O1",
+        "text": "Take every legally required, public-company and semiconductor item live with evidence.",
+        "measure": "Share of the 421 required items (366 legal, 34 public-company, 21 semiconductor) at Go live in the Atlas with evidence linked.",
+        "target": "100% by Aug 13, 2027 (M14), with roughly 40% by Feb 12, 2027 (M08) and 75% by May 14, 2027 (M11)."
+      },
+      {
+        "id": "O2",
+        "text": "Give every item one accountable owner and a place in the annual review calendar.",
+        "measure": "Share of the 438 items with an owner role and named assignee, a next review date and a review-calendar slot.",
+        "target": "100% have an owner by Nov 6, 2026 (M04); 100% have a review date and calendar slot by Oct 1, 2027 (M17)."
+      },
+      {
+        "id": "O3",
+        "text": "Make approvals fast and predictable.",
+        "measure": "Business days from submission to final sign-off in each approval chain, excluding time spent in employee-representative consultation.",
+        "target": "Median of 8 business days or less and 90% within 10 business days; no approval step open more than 3 business days without escalation."
+      },
+      {
+        "id": "O4",
+        "text": "Make each item enforceable in every jurisdiction where it applies.",
+        "measure": "Share of live items whose country addenda, translations, consultation and filing evidence were complete before the local effective date.",
+        "target": "100%, with no local effective date in Germany, China, Taiwan, Vietnam or India set before that country's gate was complete."
+      },
+      {
+        "id": "O5",
+        "text": "Make sure employees know and acknowledge the rules that apply to them.",
+        "measure": "Completion of the global attestation of the updated Code of Conduct and core policies launched on Sep 10, 2027 (M15).",
+        "target": "95% by Oct 8, 2027 (day 28) and 98% by Oct 25, 2027 (day 45) under business-as-usual follow-up."
+      },
+      {
+        "id": "O6",
+        "text": "Leave the company audit-ready and able to keep the library current.",
+        "measure": "Pass rate of Internal Audit's 40-item evidence sample at M16, and items past their review date at handover.",
+        "target": "At least 38 of 40 items pass (95%) on Sep 24, 2027, no high-rated findings on SOX-relevant HR controls, and 0 items past their review date on Oct 1, 2027."
+      }
+    ],
+    "inScope": [
+      "All 438 items in the Atlas: 57 policies, 97 processes and 284 legal obligations.",
+      "The 13 jurisdictions: US federal; California, Colorado, North Carolina, Texas and Washington; Canada (Ontario and British Columbia); Germany with the EU layer; Israel; India; Taiwan; China; Vietnam.",
+      "Global policies and the country addenda each jurisdiction needs, written once and localized rather than forked.",
+      "Translations needed for enforceability or understanding: German, Hebrew, Simplified and Traditional Chinese and Vietnamese, plus local-language notices in India and the US where the law requires them.",
+      "Employee-representative information, consultation and co-determination, and the filings or registrations needed before an item takes effect locally.",
+      "Process documentation, including embedded controls and agreement of SOX-relevant HR controls with the SOX PMO.",
+      "Evidence that each legal obligation is met, with an owner, a cadence and the next due date.",
+      "Communications, manager toolkits, training and the global attestation campaign for new or changed items.",
+      "Updates to the 48 Atlas templates where an in-scope item changes them.",
+      "Approval chains, status tracking and evidence in the Atlas, and handover to business-as-usual owners with an annual review calendar."
+    ],
+    "outOfScope": [
+      "Redesigning pay, bonus, equity or benefit plans. The program documents approved practice; design changes go through normal reward governance.",
+      "Negotiating collective agreements or works agreements beyond what a specific item needs to take effect locally.",
+      "New HR systems or reconfiguring Darwinbox, Greenhouse or the LMS, beyond publication links, assignments and acknowledgment reports.",
+      "Jurisdictions outside the 13, including Quebec and any new country or entity. Adding one needs an approved change request.",
+      "Non-HR policies such as finance, IT security and procurement, except the HR sections or links that in-scope items need.",
+      "Running the processes day to day, such as case handling, payroll runs or filings that fall due after handover.",
+      "Remediating past non-compliance such as back pay or late filings. Gaps found are logged and handed to Legal under privilege, and remediation is funded separately.",
+      "New features in the Atlas, which is already built. The program covers configuration and data upkeep only.",
+      "Legal opinions on questions not tied to an in-scope item."
+    ],
+    "deliverables": [
+      {
+        "name": "Approved charter and governance model",
+        "detail": "This document, approved through the project document chain by the steering committee and the sponsor on Oct 23, 2026 (M02)."
+      },
+      {
+        "name": "Baselined plan and rated inventory",
+        "detail": "All 438 items with an owner, a current-state rating, an approval chain and a wave; plan v1.0 baselined on Nov 6, 2026 (M04)."
+      },
+      {
+        "name": "Configured approval chains",
+        "detail": "The five chains (global policy, process document, legal obligation, public company and semiconductor control, project document) set up in the Atlas with named approvers and tested end to end by Oct 30, 2026 (M03)."
+      },
+      {
+        "name": "57 approved global policies with country addenda",
+        "detail": "Each in the T-POLICY template, with addenda for every jurisdiction where local law differs, required translations and any Board approvals (Code, clawback, insider trading), published in the policy repository."
+      },
+      {
+        "name": "97 approved process documents",
+        "detail": "Swimlane, steps, controls, KPIs and country variations for each process, a full RACI for the 22 deep dives, and key and SOX-relevant controls agreed with the SOX PMO."
+      },
+      {
+        "name": "284 evidenced legal obligations",
+        "detail": "Each filing, notice, program, training, record, committee and control shown as met, with an owner, evidence and the next due date in the compliance calendar."
+      },
+      {
+        "name": "Country launch packs for 13 jurisdictions",
+        "detail": "Per country: addenda, translations, consultation records, filing receipts, posting evidence and local effective dates, kept current by the country implementation forum."
+      },
+      {
+        "name": "Change, communications and training kit",
+        "detail": "Communications calendar, manager toolkits, 8 to 12 training modules and the five Atlas tutorial videos (V1 to V5), localized where required."
+      },
+      {
+        "name": "Global attestation campaign",
+        "detail": "All employees asked to acknowledge the updated Code and core policies from Sep 10, 2027 (M15), with completion reported by country and manager."
+      },
+      {
+        "name": "Audit-ready evidence file",
+        "detail": "Evidence for every item linked from the Atlas, plus the readiness pack for Internal Audit's 40-item sample on Sep 24, 2027 (M16)."
+      },
+      {
+        "name": "Business-as-usual handover pack",
+        "detail": "Owner register, annual review calendar, the policy lifecycle governance process (DS-08) as the operating procedure and quarterly governance metrics, handed over by Oct 1, 2027 (M17)."
+      },
+      {
+        "name": "Close-out report",
+        "detail": "Results against objectives, budget actuals, open risks and lessons learned, approved by the steering committee on Oct 8, 2027 (M18)."
+      }
+    ],
+    "successMeasures": [
+      {
+        "kpi": "Required items live with evidence",
+        "baseline": "0 of 421 meet the full Atlas standard (approved, evidenced, owned); M04 rating shows how many have a usable current document",
+        "target": "421 of 421 (100%)",
+        "when": "Aug 13, 2027 (M14); interim checks at M08 (about 40%) and M11 (about 75%)"
+      },
+      {
+        "kpi": "Items with a confirmed owner and assignee",
+        "baseline": "No single owner list today; measured at the M04 baseline",
+        "target": "438 of 438 by M04; 438 of 438 with a next review date by M17",
+        "when": "Nov 6, 2026 and Oct 1, 2027"
+      },
+      {
+        "kpi": "Approval cycle time (submission to final sign-off, excluding consultation)",
+        "baseline": "Not measured today; for reference, the DS-08 design standard is 45 business days from intake to publication",
+        "target": "Median 8 business days or less; 90% within 10",
+        "when": "Reported biweekly from the first Wave 1 approvals in Jan 2027"
+      },
+      {
+        "kpi": "Overdue in-flight items (more than 5 business days past a planned stage end)",
+        "baseline": "Not applicable until Wave 1 starts on Nov 9, 2026",
+        "target": "5% or fewer at every steering committee; none overdue more than 15 business days without an approved recovery plan",
+        "when": "Every steering committee from Nov 20, 2026"
+      },
+      {
+        "kpi": "Local gates complete before the local effective date",
+        "baseline": "Not tracked; consultation and filing evidence is held locally",
+        "target": "100% of items live in Germany, China, Taiwan, Vietnam and India",
+        "when": "At each go-live; confirmed at M08, M11 and M14"
+      },
+      {
+        "kpi": "Attestation completion for the Code and core policies",
+        "baseline": "Code acknowledgment collected at hire only; completion not reported",
+        "target": "95% by day 28 and 98% by day 45",
+        "when": "Oct 8, 2027 and Oct 25, 2027"
+      },
+      {
+        "kpi": "Internal Audit sample pass rate",
+        "baseline": "No HR documentation sample on record",
+        "target": "At least 38 of 40 items pass; no high-rated findings on SOX-relevant HR controls",
+        "when": "Sep 24, 2027 (M16)"
+      },
+      {
+        "kpi": "Items past their review date",
+        "baseline": "Unknown; most items have no recorded review date",
+        "target": "0 at handover",
+        "when": "Oct 1, 2027 (M17)"
+      }
+    ],
+    "approach": [
+      "Risk first, in waves. Mobilize (Oct 12 to Nov 6, 2026) sets up the team, chains and a rated baseline. Waves 1 to 3 then take roughly 40%, 35% and 25% of each workstream's required items, ranked by legal and audit risk, which is about 170, 145 and 105 items. Policies go first in each wave so the processes, notices and controls that depend on them follow. Wave 4 covers the 17 best-practice items, the attestation campaign, audit readiness and handover.",
+      "One path for every item. Each item moves through Discover (2 weeks), Draft (3), Review (2), Approve (2) and Go live (1), and each stage has a definition of done. Start dates are staggered so every workstream has items in each stage at once and reviewers see a steady flow instead of a single peak.",
+      "Workstreams own content; cross-cutting teams make it work everywhere. Six workstreams organized by lifecycle domain own the items. Country implementation, legal review, change and communications, and the PMO serve all six, so local requirements, legal points and launch needs are built in during Draft rather than added at the end.",
+      "Start from the Atlas, not a blank page. Owners draft from the Atlas wording, templates, country notes and research, and from current company documents found in Discover. Contract writers and the policy editor put content into the standard template, which shortens drafting and keeps the style consistent.",
+      "Global text, local addenda, gates planned backwards. The English master is never forked by country; addenda carry the local differences. The country implementation forum plans consultation, filing and translation lead times back from each local effective date, and German works council information starts in Discover for any item that touches co-determination.",
+      "Work to the calendar. There are no approvals or launches in the year-end freeze (Dec 21, 2026 to Jan 1, 2027), so Wave 1 drafts are complete by Dec 18. APAC reviews and launches avoid Feb 5 to 14, 2027. The legal review board meets weekly during each wave's review peak. Legally mandated changes due before their planned wave, such as Vietnam's Culture Day holiday on Nov 24, 2026 or Washington's noncompete ban from June 30, 2027, take a fast-track path with the same approvals.",
+      "The Atlas is the single source of truth. Status, owners, approvals and evidence links live in the Atlas and the PMO reports straight from it. Final approved documents live in the policy repository. There are no side trackers.",
+      "Build for business as usual from day one. Each item owner is the long-term owner, each item gets a review date when it goes live, and the policy lifecycle governance process (DS-08) becomes the operating model. The attestation campaign and Internal Audit's sample test that this works before the program closes."
+    ],
+    "assumptions": [
+      "Workstream leads, item owners and reviewers can give the time in the resourcing plan from Nov 9, 2026, and their managers have agreed to it.",
+      "The budget is approved at M02 on Oct 23, 2026, and the contractors and translation vendor are engaged by Nov 6, 2026; local counsel are engaged on existing panel terms.",
+      "The Atlas content (research completed in September 2026) is a usable starting draft, and local counsel can confirm points marked 'verify' without major rework.",
+      "Current company documents exist for most items and can be found during Discover; items with no document still fit the 3-week Draft stage.",
+      "Approvers act within 3 business days per step, and the CHRO can approve policies in batches.",
+      "Board committees meet at least quarterly and can approve the Code, clawback and insider trading policies at scheduled meetings or by written consent.",
+      "Darwinbox, the LMS and the e-signature tool can support publication links, assignments and acknowledgment reporting without a system project.",
+      "Employee representatives engage in good faith within normal timelines, and no Wave 1 item needs a conciliation board (Einigungsstelle) in Germany.",
+      "No acquisition, divestiture, new country entry or large restructuring changes the 438-item, 13-jurisdiction scope; if one happens it goes through change control.",
+      "The translation vendor returns a policy-length document in 5 to 7 business days per language, plus up to 3 business days for legal back-check."
+    ],
+    "constraints": [
+      "Fixed dates: every legally required, public-company and semiconductor item is live with evidence by Aug 13, 2027 (M14), and the program closes on Oct 8, 2027 (M18).",
+      "Year-end freeze from Dec 21, 2026 to Jan 1, 2027: no approvals or launches. Wave 1 drafts must be in review by Dec 18, 2026 (M06).",
+      "Lunar New Year and Tet, Feb 5 to 14, 2027: China, Taiwan and Vietnam reviewers are away, so APAC Wave 1 launches finish by Feb 4 or need a steering committee deferral.",
+      "Local gates set the earliest local effective date: Germany's co-determination under §87 BetrVG (working time, monitoring tools, pay principles, bonus schemes, mobile work); China's democratic procedure and acknowledgment; Taiwan's work-rule filing (30+ employees) and labor-management meeting approvals; Vietnam's union consultation and registration of internal labour regulations; India's standing orders (300+ workers) where they apply.",
+      "The Board approves the Code of Conduct, clawback and insider trading policies. The insider trading and clawback policies are filed as Exhibits 19 and 97 to the Form 10-K, due about Mar 1 to Mar 31 depending on filer status, so approvals must fit the filing calendar.",
+      "Statutory effective dates do not move. A legally mandated change must be live by the law's effective date even if that is earlier than the item's wave.",
+      "Legal advice and local counsel memos stay privileged with Legal. The Atlas and the policy repository record only that legal review is complete, its date and its outcome.",
+      "Employment counsel is available at 0.5 FTE (0.7 in review peaks). There is no new permanent headcount; the PMO analyst, policy editor and writers are fixed-term contractors.",
+      "External spend stays within the approved envelope of USD 1.2 to 1.95 million including contingency; any increase needs sponsor and CFO approval.",
+      "The Atlas is the system of record for status and approval evidence, and documents are published only through the policy repository and Darwinbox links."
+    ],
+    "resourcing": [
+      {
+        "role": "Executive sponsor (Chief People Officer)",
+        "fte": "0.05",
+        "source": "Existing executive",
+        "notes": "About 2 hours a week: chairs the steering committee and gives final approval of global policies."
+      },
+      {
+        "role": "HR Program Manager (PMO lead)",
+        "fte": "1.0",
+        "source": "Existing HR Operations headcount, dedicated full time",
+        "notes": "In seat by Oct 12, 2026; day-to-day duties reassigned for 12 months. Owns plan, RAID, chains, budget tracking and document control."
+      },
+      {
+        "role": "PMO analyst",
+        "fte": "1.0",
+        "source": "Contractor, Oct 2026 to Oct 2027",
+        "notes": "Atlas data quality, weekly status, evidence checks before items are marked live, decision log and approval queue follow-up."
+      },
+      {
+        "role": "Workstream leads (WS1 to WS6)",
+        "fte": "6 x 0.3 (1.8 total)",
+        "source": "Existing leaders named in the plan",
+        "notes": "Rises to 0.4 during Draft and Review peaks. Workstream review step in the policy and process chains."
+      },
+      {
+        "role": "Item owners and subject matter experts",
+        "fte": "About 4.0 total",
+        "source": "Existing staff in HR, Payroll, Stock Administration, Ethics and Compliance, Security, EHS and Trade Compliance",
+        "notes": "Spread across about 50 to 60 people at 0.05 to 0.15 each, peaking while their items are in Draft and Review."
+      },
+      {
+        "role": "Regional HR leads (Americas, EMEA, APAC)",
+        "fte": "3 x 0.25 (0.75 total)",
+        "source": "Existing",
+        "notes": "Lead country implementation (CC1), chair the country forum on rotation and sign the regional review step."
+      },
+      {
+        "role": "Country HR leads and US HR operations",
+        "fte": "8 x 0.15 (1.2 total)",
+        "source": "Existing, for Canada, Germany, Israel, India, Taiwan, China, Vietnam and the US",
+        "notes": "Higher during consultation, filing and launch. Run local employee-representative steps and confirm local completion."
+      },
+      {
+        "role": "Employment counsel (CC2 lead)",
+        "fte": "0.5",
+        "source": "Legal department",
+        "notes": "Rises to 0.7 in review peaks. Chairs the legal review board and manages local counsel."
+      },
+      {
+        "role": "Compliance and privacy counsel, legal operations",
+        "fte": "0.5 combined",
+        "source": "Legal, Ethics and Compliance, Privacy Office",
+        "notes": "Public-company, privacy and AI items; tracks local counsel engagements, filings and privileged files."
+      },
+      {
+        "role": "Local counsel",
+        "fte": "About 0.6 equivalent (900 to 1,200 hours)",
+        "source": "External panel firms covering the non-US jurisdictions and selected US states",
+        "notes": "Scoped per country by employment counsel; heaviest in Germany and China."
+      },
+      {
+        "role": "Senior policy editor",
+        "fte": "1.0",
+        "source": "Contractor, Oct 26, 2026 to Sep 2027",
+        "notes": "Template compliance, plain language, consistency across items, translation-ready masters and accessibility checks; manages the writers."
+      },
+      {
+        "role": "Policy and process writers",
+        "fte": "2.0",
+        "source": "Contractors, Nov 2026 to Jul 2027",
+        "notes": "Convert Atlas content and current documents into the standard templates; ramp down before Wave 4."
+      },
+      {
+        "role": "Translation vendor",
+        "fte": "External (per-word contract)",
+        "source": "Vendor with legal back-check service",
+        "notes": "German, Hebrew, Simplified and Traditional Chinese, Vietnamese, Kannada or Telugu notices, Spanish postings; French only if Quebec is added."
+      },
+      {
+        "role": "HR Change and Communications lead (CC3)",
+        "fte": "0.5",
+        "source": "Existing HR Communications",
+        "notes": "Rises to 0.8 from Aug to Oct 2027 for the attestation campaign and handover."
+      },
+      {
+        "role": "Learning designer and LMS administrator",
+        "fte": "0.5",
+        "source": "Learning and Development team",
+        "notes": "Training modules, LMS assignments and attestation reporting."
+      },
+      {
+        "role": "HRIS support",
+        "fte": "0.3",
+        "source": "HRIS team under the Director, HRIS and People Analytics",
+        "notes": "Darwinbox handbook links, acknowledgment workflows, Atlas access and any process-driven system changes."
+      },
+      {
+        "role": "Internal Audit advisor",
+        "fte": "0.1",
+        "source": "Internal Audit",
+        "notes": "Advisory only, to keep independence. Rises to 0.3 in Sep 2027 for the 40-item sample (M16)."
+      },
+      {
+        "role": "SOX PMO and Trade Compliance reviewers",
+        "fte": "0.2 combined",
+        "source": "Finance and Legal",
+        "notes": "Compliance review step in the public company and semiconductor control chain."
+      }
+    ],
+    "budget": [
+      {
+        "line": "External counsel: US federal and five states",
+        "estimate": "USD 90,000 to 150,000",
+        "notes": "In-house employment counsel covers most US review. External hours focus on California, Washington and Colorado changes and securities counsel review of the insider trading and clawback policies."
+      },
+      {
+        "line": "External local counsel: seven non-US jurisdictions",
+        "estimate": "USD 260,000 to 430,000",
+        "notes": "About USD 30,000 to 50,000 each for Canada, Israel, India, Taiwan and Vietnam; USD 60,000 to 100,000 for Germany (works council and co-determination); USD 50,000 to 80,000 for China (democratic procedure and handbook)."
+      },
+      {
+        "line": "Translation and legal back-check",
+        "estimate": "USD 110,000 to 200,000",
+        "notes": "About 600,000 to 800,000 words across German, Hebrew, Simplified and Traditional Chinese, Vietnamese and local-language notices, at USD 0.18 to 0.25 per word including back-check; translation memory cuts repeat content."
+      },
+      {
+        "line": "Contract senior policy editor and two writers",
+        "estimate": "USD 370,000 to 500,000",
+        "notes": "Editor for about 1,800 hours at USD 90 to 120 per hour; writers for about 3,000 hours combined at USD 70 to 95 per hour."
+      },
+      {
+        "line": "Contract PMO analyst",
+        "estimate": "USD 120,000 to 170,000",
+        "notes": "About 2,000 hours at USD 60 to 85 per hour over 12 months."
+      },
+      {
+        "line": "Training, communications and attestation production",
+        "estimate": "USD 110,000 to 220,000",
+        "notes": "8 to 12 e-learning and manager modules localized into up to five languages, manager toolkits, poster and intranet design. The five Atlas tutorial videos are made in-house."
+      },
+      {
+        "line": "Tooling and licences",
+        "estimate": "USD 15,000 to 40,000",
+        "notes": "No build cost: the Atlas already exists. Covers extra e-signature volume, a translation management portal, an accessibility checker and document-management storage."
+      },
+      {
+        "line": "Filings, certified translations and statutory postings",
+        "estimate": "USD 10,000 to 30,000",
+        "notes": "Taiwan work-rule filings, Vietnam internal labour regulation registration, Indian standing orders where they apply, certified translations, courier and local agent fees, and printed postings for about 15 sites."
+      },
+      {
+        "line": "Contingency",
+        "estimate": "USD 130,000 to 210,000",
+        "notes": "12% of the lines above, released by the steering committee; most likely uses are extra counsel time and retranslation after late changes."
+      },
+      {
+        "line": "Total external spend",
+        "estimate": "USD 1,215,000 to 1,950,000",
+        "notes": "Excludes internal staff time of about 11 FTE, which is absorbed by existing budgets. About 80% of spend falls in Waves 1 to 3."
+      }
+    ],
+    "stakeholders": [
+      {
+        "group": "Chief People Officer and HR leadership team",
+        "interest": "On-time delivery, HR credibility with the Board and auditors, and a workload HR can carry alongside daily work.",
+        "influence": "High",
+        "engagement": "Sponsor chairs the steering committee; monthly sponsor check-in; monthly update at the HR leadership team meeting."
+      },
+      {
+        "group": "General Counsel and the Legal department",
+        "interest": "Legal defensibility, privilege, employment counsel capacity and external counsel spend.",
+        "influence": "High",
+        "engagement": "Steering committee seat; legal review board; review peaks agreed in advance in the plan."
+      },
+      {
+        "group": "Board of Directors and its Audit, Compensation and Nominating and Governance committees",
+        "interest": "Approval of the Code, clawback and insider trading policies, and oversight of compliance and human capital risk.",
+        "influence": "High",
+        "engagement": "Approvals scheduled into quarterly meetings through the General Counsel and Corporate Secretary; Audit Committee briefed on audit readiness in Q3 2027."
+      },
+      {
+        "group": "Finance: Corporate Controller, SOX PMO, FP&A and Payroll",
+        "interest": "SOX-relevant HR controls, payroll and equity processes, and program budget.",
+        "influence": "High",
+        "engagement": "Steering committee seat for the Controller or SOX PMO lead; reviewers on the public company chain; monthly budget report."
+      },
+      {
+        "group": "Executive leadership team and business leaders",
+        "interest": "Clear rules for managers, little disruption, and reasonable demands on their experts' time.",
+        "influence": "Medium",
+        "engagement": "Quarterly update from the sponsor; requests to release subject matter experts; executive message for the attestation campaign."
+      },
+      {
+        "group": "Workstream leads and HR centers of excellence",
+        "interest": "Manageable workload and clear ownership after go live.",
+        "influence": "High",
+        "engagement": "Workstream lead role; weekly PMO and workstream leads meeting; wave retrospectives."
+      },
+      {
+        "group": "Regional and country HR leads and HR business partners",
+        "interest": "Policies that work locally, enough time for translation and consultation, and launch workload.",
+        "influence": "High",
+        "engagement": "Country implementation forum every two weeks; HRBP briefing before each wave goes live."
+      },
+      {
+        "group": "People managers",
+        "interest": "Knowing what changed and what to do differently, with practical toolkits.",
+        "influence": "Medium",
+        "engagement": "Manager toolkits and short briefings each wave; manager module in training."
+      },
+      {
+        "group": "Employees in all 13 jurisdictions",
+        "interest": "Clear, accessible policies in a language they understand, fair treatment and reasonable time to acknowledge.",
+        "influence": "Medium",
+        "engagement": "Wave communications, policy portal, a question channel and the global attestation campaign."
+      },
+      {
+        "group": "Employee representatives where they exist (German works councils, China and Vietnam grassroots unions, Taiwan labor-management meeting, India grievance and internal committees, an Israeli union if representative)",
+        "interest": "Information, consultation and co-determination rights respected, with enough time and documents.",
+        "influence": "High",
+        "engagement": "Early information during Discover, a consultation plan per country, and formal sessions with minutes and outcomes recorded."
+      },
+      {
+        "group": "Internal Audit",
+        "interest": "Evidence and control design that meet audit standards, while keeping its independence.",
+        "influence": "Medium",
+        "engagement": "Advisory role; evidence standard agreed in Mobilize; 40-item sample at M16."
+      },
+      {
+        "group": "Ethics and Compliance, Privacy Office, Information Security and Trade Compliance",
+        "interest": "Consistency with the Code, speak-up, privacy and export-control programs they own.",
+        "influence": "Medium",
+        "engagement": "Partners in WS1, WS2 and WS6; reviewers in the public company chain; standing invite to the legal review board."
+      },
+      {
+        "group": "External auditor",
+        "interest": "No surprise changes or gaps in SOX-relevant HR controls.",
+        "influence": "Medium",
+        "engagement": "Informed through the Corporate Controller of any change to key controls; no direct program role."
+      },
+      {
+        "group": "Labor authorities and regulators",
+        "interest": "Complete and timely filings, registrations and postings.",
+        "influence": "Medium",
+        "engagement": "Handled by country HR leads and local counsel; every filing tracked in the country gate tracker."
+      }
+    ]
+  },
+  "governance": {
+    "bodies": [
+      {
+        "name": "Executive sponsor",
+        "members": "Chief People Officer (CHRO), supported by the HR Program Manager",
+        "cadence": "Monthly 30-minute check-in, plus a decision within 3 business days of any level 4 escalation",
+        "purpose": "Owns the outcome, chairs the steering committee, approves project documents and global policies, and clears blockers that need executive peers or the Board.",
+        "decisions": [
+          "Approve the charter, plan baseline and close-out report (project document chain)",
+          "Final approval and effective date of each global policy (policy chain step s6)",
+          "Any increase to the total budget, with the CFO",
+          "Any change to the M14 or M18 dates",
+          "Level 4 escalations"
+        ],
+        "inputs": [
+          "Monthly sponsor brief from the PMO",
+          "Steering committee decision log",
+          "Escalation notes with options and a recommendation"
+        ]
+      },
+      {
+        "name": "Steering committee",
+        "members": "Chief People Officer (chair); Deputy General Counsel, Employment; Chief Compliance Officer; Corporate Controller or SOX PMO lead; VP, HR Business Partners; Head of HR Operations; one regional HR lead on rotation. HR Program Manager as secretary and Internal Audit as observer, both non-voting. Quorum is the chair or delegate, Legal and two other members.",
+        "cadence": "Biweekly on Fridays, 60 minutes, from Oct 23, 2026 to Oct 8, 2027; extra session on May 14, 2027 for the Wave 2 gate; the Jan 1, 2027 session is cancelled for the freeze",
+        "purpose": "Directs the program, makes gate decisions, approves changes outside PMO tolerance, resolves cross-functional conflicts and accepts residual risk.",
+        "decisions": [
+          "Gate decisions at M02, M04, M07, M08, M11, M14, M16 and M18",
+          "Change requests that move a required item to a later wave, shift a milestone by more than 5 business days or move more than 10% of a budget line",
+          "Local deferrals where a country gate will not be complete by the wave's go-live date",
+          "Going live with an open legal point, on employment counsel's written recommendation",
+          "Priority calls when workstreams compete for the same reviewers or counsel"
+        ],
+        "inputs": [
+          "Status dashboard from the Atlas by wave, workstream, stage and jurisdiction",
+          "Top 10 risks and open issues from the RAID log",
+          "Change requests with impact analysis",
+          "Budget spend against plan",
+          "Escalations from the legal review board and country forum"
+        ]
+      },
+      {
+        "name": "PMO and workstream leads",
+        "members": "HR Program Manager (chair), PMO analyst, the six workstream leads, employment counsel, one regional HR lead, HR Change and Communications lead, senior policy editor",
+        "cadence": "Weekly on Tuesdays, 60 minutes",
+        "purpose": "Runs delivery: tracks every in-flight item, balances workload, clears cross-workstream dependencies and prepares steering committee decisions.",
+        "decisions": [
+          "Move items within a wave and re-sequence stage dates within tolerance",
+          "Assign editor and writer capacity across workstreams",
+          "Approve minor exceptions to documentation standards",
+          "Open, assign and close RAID entries",
+          "Decide what goes to the steering committee"
+        ],
+        "inputs": [
+          "Atlas stage report and overdue list",
+          "Approval queue age by chain and step",
+          "RAID log",
+          "Capacity plan for writers, editor and reviewers"
+        ]
+      },
+      {
+        "name": "Country implementation forum",
+        "members": "Regional HR leads for the Americas, EMEA and APAC (chair rotates), country HR leads for Canada, Germany, Israel, India, Taiwan, China and Vietnam, US HR operations, employment counsel or delegate, translation coordinator, HR Change and Communications lead, PMO analyst",
+        "cadence": "Biweekly on Wednesdays, as two 45-minute sessions to cover time zones (EMEA with APAC, and Americas with EMEA)",
+        "purpose": "Makes every item work locally: country addenda, translations, employee-representative steps, filings, postings and local launch dates in all 13 jurisdictions.",
+        "decisions": [
+          "Translation scope and languages per item and country",
+          "Consultation and filing plans, with dates worked back from local effective dates",
+          "Local launch dates and sequencing around holidays and freezes",
+          "Requests to the steering committee for local deferral",
+          "Recommendations to employment counsel on engaging local counsel"
+        ],
+        "inputs": [
+          "Country gate tracker (consultation, filing, language, lead time)",
+          "Items reaching Review in the next 4 weeks",
+          "Translation vendor status",
+          "Local changes from the Atlas legal watchlist"
+        ]
+      },
+      {
+        "name": "Legal review board",
+        "members": "Employment counsel (chair), compliance counsel, privacy counsel, legal operations; SOX PMO lead and Trade Compliance as needed; workstream leads for items on the agenda",
+        "cadence": "Weekly, 60 minutes, from 2 weeks before each drafts-complete milestone (M06, M10, M13) until that wave's approvals close; biweekly otherwise",
+        "purpose": "Gives consistent legal sign-off in Review, decides when local counsel, consultation or filing are needed, and closes the points marked 'verify' in the research.",
+        "decisions": [
+          "Legal sign-off for the Review stage and the legal steps in each chain",
+          "Whether to engage local counsel, and the scope of work",
+          "Whether a change needs consultation or a filing before the local effective date",
+          "Closing 'verify' points, or recommending that the steering committee accept residual risk",
+          "Standard carve-out wording for all policies (NLRA Section 7, SEC Rule 21F-17)"
+        ],
+        "inputs": [
+          "Review queue with drafts, redlines and open questions",
+          "Local counsel advice",
+          "Country gate tracker",
+          "Legal change watchlist from the Atlas"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "role": "Executive sponsor",
+        "who": "Chief People Officer (CHRO)",
+        "responsibilities": [
+          "Chair the steering committee",
+          "Approve the charter, plan baseline and close-out report",
+          "Give final approval and set effective dates for global policies",
+          "Secure executive and Board time",
+          "Decide level 4 escalations"
+        ],
+        "timeCommitment": "About 2 hours a week (0.05 FTE)"
+      },
+      {
+        "role": "Steering committee member",
+        "who": "Deputy General Counsel (Employment), Chief Compliance Officer, Corporate Controller or SOX PMO lead, VP HR Business Partners, Head of HR Operations, a regional HR lead on rotation",
+        "responsibilities": [
+          "Attend, or send a delegate who can decide",
+          "Make gate and change decisions",
+          "Resolve conflicts within their function",
+          "Release their people's time as planned",
+          "Champion launches in their function"
+        ],
+        "timeCommitment": "2 hours every 2 weeks, including pre-read"
+      },
+      {
+        "role": "HR Program Manager (PMO lead)",
+        "who": "HR Program Manager",
+        "responsibilities": [
+          "Own the plan, RAID log and budget tracking",
+          "Configure approval chains and watch queue age",
+          "Run the weekly PMO meeting and prepare steering committee packs",
+          "Run document control and change control",
+          "Lead handover and close-out"
+        ],
+        "timeCommitment": "1.0 FTE"
+      },
+      {
+        "role": "PMO analyst",
+        "who": "Contract PMO analyst",
+        "responsibilities": [
+          "Keep Atlas data accurate and complete",
+          "Produce the weekly status report",
+          "Check evidence before an item is marked live",
+          "Keep the decision log and meeting actions",
+          "Chase approvals that pass their step SLA"
+        ],
+        "timeCommitment": "1.0 FTE"
+      },
+      {
+        "role": "Workstream lead",
+        "who": "The six leads named in the plan (Head of Employee Relations; Director, Talent Acquisition Operations; Head of HR Operations; Head of Total Rewards; Head of Talent Management; Director, HRIS and People Analytics)",
+        "responsibilities": [
+          "Deliver the workstream's items to plan",
+          "Assign and support item owners",
+          "Sign the workstream review step in the policy and process chains",
+          "Balance subject matter expert time",
+          "Escalate blockers early"
+        ],
+        "timeCommitment": "0.3 FTE, 0.4 during Draft and Review peaks"
+      },
+      {
+        "role": "Item owner",
+        "who": "The policy, process, control or obligation owner named in the Atlas for each item",
+        "responsibilities": [
+          "Take the item through all five stages",
+          "Write or approve the draft and resolve comments",
+          "File evidence and update status weekly",
+          "Own the item after handover, including its annual review"
+        ],
+        "timeCommitment": "About 4 hours a week while an item is in Draft or Review; 1 hour otherwise"
+      },
+      {
+        "role": "Employment counsel",
+        "who": "Employment counsel (CC2 lead)",
+        "responsibilities": [
+          "Review policies and legally required items",
+          "Chair the legal review board",
+          "Engage and manage local counsel",
+          "Sign legal steps in the policy and obligation chains",
+          "Protect privilege over legal advice"
+        ],
+        "timeCommitment": "0.5 FTE, 0.7 in review peaks"
+      },
+      {
+        "role": "Local counsel",
+        "who": "External panel firms in each non-US jurisdiction and selected US states",
+        "responsibilities": [
+          "Review country addenda and translated legal terms",
+          "Advise on consultation, filing and posting duties",
+          "Confirm or correct 'verify' points",
+          "Give written advice to employment counsel"
+        ],
+        "timeCommitment": "Scoped per engagement; about 900 to 1,200 hours in total"
+      },
+      {
+        "role": "Regional HR lead",
+        "who": "Regional HR leads for the Americas, EMEA and APAC (CC1)",
+        "responsibilities": [
+          "Own country addenda and translations for the region",
+          "Sign the regional HR review step (all three regions must sign)",
+          "Chair the country implementation forum on rotation",
+          "Plan local launches and request deferrals when needed"
+        ],
+        "timeCommitment": "0.25 FTE"
+      },
+      {
+        "role": "Country HR lead",
+        "who": "HR leads for Canada, Germany, Israel, India, Taiwan, China and Vietnam, and US HR operations",
+        "responsibilities": [
+          "Run consultation with works councils, unions or employee representatives",
+          "Make filings and put up postings",
+          "Confirm local completion in the obligation chain",
+          "Deliver local communications and training"
+        ],
+        "timeCommitment": "0.15 FTE, more during consultation and launch"
+      },
+      {
+        "role": "HR Change and Communications lead",
+        "who": "HR Change and Communications lead (CC3)",
+        "responsibilities": [
+          "Own the communications calendar and manager toolkits",
+          "Plan training with Learning and Development",
+          "Run the global attestation campaign (M15)",
+          "Report reach and completion"
+        ],
+        "timeCommitment": "0.5 FTE, 0.8 from Aug to Oct 2027"
+      },
+      {
+        "role": "Senior policy editor",
+        "who": "Contract senior policy editor",
+        "responsibilities": [
+          "Check every draft against the template and plain-language standard",
+          "Keep terms and style consistent across items",
+          "Prepare translation-ready masters",
+          "Run accessibility checks before publication",
+          "Direct the contract writers"
+        ],
+        "timeCommitment": "1.0 FTE"
+      },
+      {
+        "role": "HRIS support",
+        "who": "HRIS team under the Director, HRIS and People Analytics",
+        "responsibilities": [
+          "Set up Darwinbox handbook links and acknowledgment workflows",
+          "Create LMS assignments and completion reports",
+          "Manage Atlas access",
+          "Make system changes that processes need"
+        ],
+        "timeCommitment": "0.3 FTE"
+      },
+      {
+        "role": "Internal Audit advisor",
+        "who": "Internal Audit manager",
+        "responsibilities": [
+          "Advise on evidence standards and control documentation",
+          "Sample 40 items at the audit readiness review (M16)",
+          "Report independently to the steering committee and Audit Committee",
+          "Stay out of approval and ownership roles"
+        ],
+        "timeCommitment": "0.1 FTE, 0.3 in Sep 2027"
+      }
+    ],
+    "raci": {
+      "roles": [
+        "Sponsor",
+        "SteerCo",
+        "PMO",
+        "WS lead",
+        "Item owner",
+        "Legal",
+        "Regional HR",
+        "Comms",
+        "Internal Audit"
+      ],
+      "rows": [
+        {
+          "activity": "Approve charter, scope, budget and governance (M02)",
+          "cells": {
+            "Sponsor": "A",
+            "SteerCo": "R",
+            "PMO": "R",
+            "WS lead": "C",
+            "Item owner": "I",
+            "Legal": "C",
+            "Regional HR": "C",
+            "Comms": "I",
+            "Internal Audit": "I"
+          }
+        },
+        {
+          "activity": "Maintain plan, RAID log and status reporting",
+          "cells": {
+            "Sponsor": "I",
+            "SteerCo": "I",
+            "PMO": "R/A",
+            "WS lead": "C",
+            "Item owner": "I",
+            "Legal": "C",
+            "Regional HR": "C",
+            "Comms": "I",
+            "Internal Audit": "I"
+          }
+        },
+        {
+          "activity": "Configure and test approval chains (M03)",
+          "cells": {
+            "Sponsor": "I",
+            "SteerCo": "I",
+            "PMO": "R/A",
+            "WS lead": "C",
+            "Item owner": "I",
+            "Legal": "C",
+            "Regional HR": "C",
+            "Comms": "",
+            "Internal Audit": "C"
+          }
+        },
+        {
+          "activity": "Confirm owners, current-state ratings and waves (M04)",
+          "cells": {
+            "Sponsor": "I",
+            "SteerCo": "C",
+            "PMO": "R",
+            "WS lead": "A",
+            "Item owner": "R",
+            "Legal": "C",
+            "Regional HR": "C",
+            "Comms": "I",
+            "Internal Audit": "I"
+          }
+        },
+        {
+          "activity": "Discover: find current documents and rate gaps",
+          "cells": {
+            "Sponsor": "",
+            "SteerCo": "",
+            "PMO": "I",
+            "WS lead": "C",
+            "Item owner": "R/A",
+            "Legal": "C",
+            "Regional HR": "R",
+            "Comms": "",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Draft global text in the standard template",
+          "cells": {
+            "Sponsor": "",
+            "SteerCo": "",
+            "PMO": "I",
+            "WS lead": "C",
+            "Item owner": "R/A",
+            "Legal": "C",
+            "Regional HR": "C",
+            "Comms": "I",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Draft country addenda and arrange translation",
+          "cells": {
+            "Sponsor": "",
+            "SteerCo": "",
+            "PMO": "I",
+            "WS lead": "I",
+            "Item owner": "C",
+            "Legal": "C",
+            "Regional HR": "R/A",
+            "Comms": "I",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Legal review and local counsel engagement",
+          "cells": {
+            "Sponsor": "",
+            "SteerCo": "",
+            "PMO": "I",
+            "WS lead": "I",
+            "Item owner": "C",
+            "Legal": "R/A",
+            "Regional HR": "C",
+            "Comms": "",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Employee-representative consultation and local filings",
+          "cells": {
+            "Sponsor": "",
+            "SteerCo": "I",
+            "PMO": "I",
+            "WS lead": "I",
+            "Item owner": "C",
+            "Legal": "C",
+            "Regional HR": "R/A",
+            "Comms": "C",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Final approval of global policies and effective dates",
+          "cells": {
+            "Sponsor": "A",
+            "SteerCo": "I",
+            "PMO": "I",
+            "WS lead": "R",
+            "Item owner": "R",
+            "Legal": "R",
+            "Regional HR": "R",
+            "Comms": "I",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Publish approval of process documents (Head of HR Operations)",
+          "cells": {
+            "Sponsor": "",
+            "SteerCo": "",
+            "PMO": "I",
+            "WS lead": "R/A",
+            "Item owner": "R",
+            "Legal": "C",
+            "Regional HR": "C",
+            "Comms": "I",
+            "Internal Audit": "C"
+          }
+        },
+        {
+          "activity": "Sign-off of legal obligation evidence",
+          "cells": {
+            "Sponsor": "",
+            "SteerCo": "",
+            "PMO": "I",
+            "WS lead": "I",
+            "Item owner": "R",
+            "Legal": "A",
+            "Regional HR": "R",
+            "Comms": "",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Approval of public-company and semiconductor controls (General Counsel or delegate)",
+          "cells": {
+            "Sponsor": "",
+            "SteerCo": "I",
+            "PMO": "I",
+            "WS lead": "C",
+            "Item owner": "R",
+            "Legal": "A",
+            "Regional HR": "",
+            "Comms": "",
+            "Internal Audit": "C"
+          }
+        },
+        {
+          "activity": "Publish, communicate and mark items live",
+          "cells": {
+            "Sponsor": "",
+            "SteerCo": "",
+            "PMO": "R",
+            "WS lead": "C",
+            "Item owner": "A",
+            "Legal": "I",
+            "Regional HR": "R",
+            "Comms": "R",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Communications calendar, manager toolkits and training",
+          "cells": {
+            "Sponsor": "I",
+            "SteerCo": "",
+            "PMO": "C",
+            "WS lead": "C",
+            "Item owner": "C",
+            "Legal": "I",
+            "Regional HR": "C",
+            "Comms": "R/A",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Global attestation campaign (M15)",
+          "cells": {
+            "Sponsor": "C",
+            "SteerCo": "I",
+            "PMO": "R",
+            "WS lead": "I",
+            "Item owner": "C",
+            "Legal": "C",
+            "Regional HR": "R",
+            "Comms": "A",
+            "Internal Audit": "I"
+          }
+        },
+        {
+          "activity": "Approve change requests outside PMO tolerance",
+          "cells": {
+            "Sponsor": "C",
+            "SteerCo": "A",
+            "PMO": "R",
+            "WS lead": "C",
+            "Item owner": "I",
+            "Legal": "C",
+            "Regional HR": "C",
+            "Comms": "I",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Audit readiness review (M16)",
+          "cells": {
+            "Sponsor": "I",
+            "SteerCo": "I",
+            "PMO": "R",
+            "WS lead": "C",
+            "Item owner": "C",
+            "Legal": "C",
+            "Regional HR": "",
+            "Comms": "",
+            "Internal Audit": "R/A"
+          }
+        },
+        {
+          "activity": "Handover to business as usual (M17)",
+          "cells": {
+            "Sponsor": "I",
+            "SteerCo": "I",
+            "PMO": "A",
+            "WS lead": "R",
+            "Item owner": "R",
+            "Legal": "",
+            "Regional HR": "C",
+            "Comms": "I",
+            "Internal Audit": ""
+          }
+        },
+        {
+          "activity": "Close-out report and lessons learned (M18)",
+          "cells": {
+            "Sponsor": "A",
+            "SteerCo": "R",
+            "PMO": "R",
+            "WS lead": "C",
+            "Item owner": "I",
+            "Legal": "C",
+            "Regional HR": "C",
+            "Comms": "C",
+            "Internal Audit": "C"
+          }
+        }
+      ]
+    },
+    "cadence": [
+      {
+        "meeting": "Steering committee",
+        "when": "Biweekly, Fridays 08:00 to 09:00 Pacific, from Oct 23, 2026; pack issued the Wednesday before",
+        "length": "60 minutes",
+        "attendees": "Steering committee members, HR Program Manager, Internal Audit observer",
+        "agenda": [
+          "Decisions due: gates, change requests, deferrals",
+          "Progress against milestones",
+          "Top risks and escalations",
+          "Budget spend",
+          "Launches and communications in the next 4 weeks"
+        ],
+        "outputs": [
+          "Decision log entries",
+          "Approved or rejected change requests",
+          "Actions with owners and dates"
+        ]
+      },
+      {
+        "meeting": "PMO and workstream leads",
+        "when": "Weekly, Tuesdays 08:00 Pacific",
+        "length": "60 minutes",
+        "attendees": "HR Program Manager, PMO analyst, workstream leads, employment counsel, a regional HR lead, Change and Communications lead, senior policy editor",
+        "agenda": [
+          "Overdue items and approval queue age",
+          "Items entering Review and Approve in the next 2 weeks",
+          "Cross-workstream dependencies",
+          "Writer and reviewer capacity",
+          "RAID updates and items for steering committee"
+        ],
+        "outputs": [
+          "Updated plan and RAID log",
+          "Capacity assignments",
+          "Escalations to steering committee"
+        ]
+      },
+      {
+        "meeting": "Workstream working session",
+        "when": "Weekly, set by each workstream lead",
+        "length": "45 minutes",
+        "attendees": "Workstream lead, item owners with active items, assigned writer, PMO analyst as needed",
+        "agenda": [
+          "Stage check for each active item",
+          "Drafts and comments due this week",
+          "Blockers and help needed"
+        ],
+        "outputs": [
+          "Atlas status updated",
+          "Blockers logged or escalated"
+        ]
+      },
+      {
+        "meeting": "Country implementation forum",
+        "when": "Biweekly, Wednesdays, two sessions: EMEA with APAC at 08:00 CET and Americas with EMEA at 08:00 Pacific",
+        "length": "45 minutes each",
+        "attendees": "Regional HR leads, country HR leads, US HR operations, employment counsel or delegate, translation coordinator, Change and Communications lead, PMO analyst",
+        "agenda": [
+          "Country gate tracker by jurisdiction",
+          "Translation status",
+          "Consultation and filing dates",
+          "Local launch plan and holidays",
+          "Deferral requests"
+        ],
+        "outputs": [
+          "Updated country gate tracker",
+          "Translation orders",
+          "Deferral requests to steering committee"
+        ]
+      },
+      {
+        "meeting": "Legal review board",
+        "when": "Thursdays: weekly in review peaks (from 2 weeks before M06, M10 and M13 until approvals close), biweekly otherwise",
+        "length": "60 minutes",
+        "attendees": "Employment counsel, compliance and privacy counsel, legal operations, SOX PMO and Trade Compliance as needed, workstream leads for agenda items",
+        "agenda": [
+          "Items awaiting legal sign-off",
+          "Local counsel advice received",
+          "Consultation and filing calls",
+          "Open 'verify' points"
+        ],
+        "outputs": [
+          "Legal sign-offs recorded in the Atlas",
+          "Local counsel instructions",
+          "Risk acceptance recommendations to steering committee"
+        ]
+      },
+      {
+        "meeting": "Sponsor check-in",
+        "when": "Monthly, first Monday",
+        "length": "30 minutes",
+        "attendees": "Chief People Officer, HR Program Manager, Head of HR Operations",
+        "agenda": [
+          "Overall status and outlook",
+          "Decisions coming to steering committee",
+          "Executive or Board support needed"
+        ],
+        "outputs": [
+          "Sponsor actions",
+          "Agenda for the next steering committee"
+        ]
+      },
+      {
+        "meeting": "Weekly status report",
+        "when": "Thursdays by 17:00 Pacific (written, no meeting)",
+        "length": "One page",
+        "attendees": "Steering committee, workstream leads, regional HR leads, employment counsel",
+        "agenda": [
+          "Progress by wave, workstream and stage",
+          "Items more than 5 business days late",
+          "Approval queue age",
+          "Top risks and decisions needed"
+        ],
+        "outputs": [
+          "Status report generated from Atlas data",
+          "Status rating by workstream and jurisdiction"
+        ]
+      },
+      {
+        "meeting": "Wave retrospective",
+        "when": "Within 5 business days after M04, M08, M11 and M14, and before close (M18)",
+        "length": "90 minutes",
+        "attendees": "PMO, workstream leads, regional HR leads, employment counsel, Change and Communications lead, policy editor",
+        "agenda": [
+          "What worked and what slowed items down",
+          "Approval and review cycle times",
+          "Evidence spot check of 5 items",
+          "Changes for the next wave"
+        ],
+        "outputs": [
+          "Lessons log",
+          "Plan and standard changes for the next wave"
+        ]
+      }
+    ],
+    "decisionRights": [
+      {
+        "decision": "Charter, scope baseline, budget envelope and governance model",
+        "owner": "Executive sponsor, on steering committee recommendation",
+        "consulted": "General Counsel, CFO delegate, workstream leads",
+        "escalateTo": "CEO"
+      },
+      {
+        "decision": "Gate pass or fail (M02, M04, M07, M08, M11, M14, M16, M18)",
+        "owner": "Steering committee",
+        "consulted": "PMO, workstream leads, Internal Audit for M16",
+        "escalateTo": "Executive sponsor"
+      },
+      {
+        "decision": "Item owner assignment and reassignment",
+        "owner": "Workstream lead",
+        "consulted": "Proposed owner and their manager, PMO",
+        "escalateTo": "Steering committee, if functions disagree"
+      },
+      {
+        "decision": "Moving an item within its wave or changing stage dates inside the wave",
+        "owner": "HR Program Manager",
+        "consulted": "Workstream lead, item owner, regional HR lead",
+        "escalateTo": "Steering committee"
+      },
+      {
+        "decision": "Moving a required item to a later wave, or moving any milestone by more than 5 business days",
+        "owner": "Steering committee",
+        "consulted": "PMO, workstream lead, employment counsel",
+        "escalateTo": "Executive sponsor (always for M14 or M18)"
+      },
+      {
+        "decision": "Budget reallocation",
+        "owner": "HR Program Manager up to 10% of a line; steering committee above that",
+        "consulted": "HR Finance business partner",
+        "escalateTo": "Executive sponsor with the CFO for any increase to the total"
+      },
+      {
+        "decision": "Global policy content and effective date",
+        "owner": "Executive sponsor (policy chain step s6) after owner, workstream, legal and regional sign-off",
+        "consulted": "Item owner, employment counsel, regional HR leads",
+        "escalateTo": "Board or its committee for the Code, clawback and insider trading policies; otherwise steering committee"
+      },
+      {
+        "decision": "Publishing a process document",
+        "owner": "Head of HR Operations (process chain step s4)",
+        "consulted": "Process owner, workstream lead, Internal Audit or SOX PMO for key controls",
+        "escalateTo": "Steering committee"
+      },
+      {
+        "decision": "Approving a public-company or semiconductor control",
+        "owner": "General Counsel or delegate (public company chain step s3)",
+        "consulted": "Control owner, SOX PMO or Trade Compliance, Internal Audit as advisor",
+        "escalateTo": "Audit Committee, through the General Counsel"
+      },
+      {
+        "decision": "Whether local counsel, consultation or a filing is needed before a local effective date",
+        "owner": "Employment counsel, with the country HR lead",
+        "consulted": "Local counsel, regional HR lead",
+        "escalateTo": "Legal review board, then General Counsel"
+      },
+      {
+        "decision": "Translation scope and languages",
+        "owner": "Regional HR lead",
+        "consulted": "Employment counsel, country HR lead, Change and Communications lead",
+        "escalateTo": "Country implementation forum, then steering committee"
+      },
+      {
+        "decision": "Going live with an open legal point or a local deferral",
+        "owner": "Steering committee, on employment counsel's written recommendation",
+        "consulted": "Item owner, regional HR lead, Change and Communications lead",
+        "escalateTo": "Executive sponsor and General Counsel jointly"
+      },
+      {
+        "decision": "Launch timing, channels and whether training or attestation is needed",
+        "owner": "HR Change and Communications lead",
+        "consulted": "Workstream lead, regional HR leads, Learning and Development",
+        "escalateTo": "Steering committee"
+      },
+      {
+        "decision": "Exceptions to templates and documentation standards",
+        "owner": "HR Program Manager (document control)",
+        "consulted": "Senior policy editor, employment counsel",
+        "escalateTo": "Steering committee"
+      }
+    ],
+    "escalation": [
+      {
+        "level": 1,
+        "who": "Item owner with the workstream lead",
+        "when": "A blocker on one item: missing input, an unresolved comment, an approver silent for 3 business days, or a stage at risk of finishing up to 5 business days late.",
+        "sla": "Logged in the Atlas or RAID log within 1 business day; resolved within 3 business days or raised to level 2."
+      },
+      {
+        "level": 2,
+        "who": "HR Program Manager with the affected workstream, regional HR and legal leads",
+        "when": "Not resolved at level 1 within 3 business days; a dependency across workstreams or countries; an item more than 5 business days late; a reviewer capacity conflict.",
+        "sla": "Resolved within 5 business days at the weekly PMO meeting or an ad hoc call, with the decision recorded in the RAID log; otherwise raised to level 3."
+      },
+      {
+        "level": 3,
+        "who": "Steering committee",
+        "when": "Not resolved at level 2 within 5 business days; a gate milestone at risk; a change outside PMO tolerance; a budget line more than 10% over; a local deferral; residual legal risk to accept.",
+        "sla": "Decided at the next biweekly meeting, or within 3 business days by ad hoc meeting or written decision when a milestone is less than 2 weeks away."
+      },
+      {
+        "level": 4,
+        "who": "Executive sponsor (CHRO), with the General Counsel or CFO where their authority is needed",
+        "when": "The steering committee cannot agree; M14, M18 or a statutory deadline is at risk; the total budget must increase; action is needed from the CEO or the Board.",
+        "sla": "Decided within 3 business days; Board matters go to the next committee meeting or to written consent."
+      }
+    ],
+    "definitionOfDone": [
+      {
+        "stage": "Discover",
+        "criteria": [
+          "Item owner role and named assignee confirmed in the Atlas, with a backup.",
+          "Existing company documents and local versions found and linked for each in-scope jurisdiction, or 'none found' recorded.",
+          "Current-state rating and a gap list against the Atlas content and research recorded.",
+          "Country gates (consultation, filing, language), dependencies and the target effective date identified.",
+          "Approval chain selected and approvers confirmed as available in the planned Approve window.",
+          "Points marked 'verify' in the research listed for Legal."
+        ],
+        "evidence": "Discover record in the Atlas (owner, rating, links to current documents, gap list, gates, chain) and workshop notes in the project folder."
+      },
+      {
+        "stage": "Draft",
+        "criteria": [
+          "Draft complete in the standard template with every required field filled.",
+          "Country addenda drafted for each jurisdiction where local law differs, with the global text unchanged.",
+          "Controls identified, and SOX-relevant controls flagged to the SOX PMO.",
+          "Policy editor check passed for plain language, defined terms and links to related items.",
+          "Redline against the current document, change summary and open questions for Legal attached."
+        ],
+        "evidence": "Draft version 0.x in the project folder, with redline and change summary, and open questions logged against the item in the Atlas."
+      },
+      {
+        "stage": "Review",
+        "criteria": [
+          "SME, workstream and regional HR comments logged, and each one accepted or rejected with a reason.",
+          "Employment counsel sign-off recorded, with local counsel advice received where engaged.",
+          "'Verify' points closed, or a risk acceptance recommendation raised.",
+          "Need for consultation or filing decided for each jurisdiction and scheduled back from the local effective date.",
+          "English master frozen and translation ordered for the agreed languages."
+        ],
+        "evidence": "Comment log with resolutions, legal sign-off date and outcome in the Atlas (advice itself held by Legal), and the consultation and filing plan in the country gate tracker."
+      },
+      {
+        "stage": "Approve",
+        "criteria": [
+          "Every required step in the chain signed in order, and optional steps completed or skipped with a recorded reason.",
+          "Approvers saw the final text, redline, legal sign-off and any consultation evidence.",
+          "Employee-representative consultation complete, or started with a completion date before the local effective date.",
+          "Board or committee approval obtained where required (Code, clawback, insider trading).",
+          "Global and local effective dates set, and version 1.0 (or the next major version) locked."
+        ],
+        "evidence": "Atlas approval record (step, approver role, date, decision, comments), the locked approved version in the policy repository and any Board resolution extract."
+      },
+      {
+        "stage": "Go live",
+        "criteria": [
+          "Published in the policy repository at the approved version and effective date, with the prior version archived read-only and Darwinbox links updated.",
+          "Translations published with the prevailing-language statement where needed.",
+          "Filings made and postings displayed where required, or a steering committee deferral recorded for that country.",
+          "Communication sent, and training and attestation assigned in the LMS where needed.",
+          "Next review date set, and Atlas status changed to Live by the PMO analyst after the evidence check."
+        ],
+        "evidence": "Evidence pack linked from the Atlas: published link and version, archive record, translations, filing receipts, posting photos, communication copy with send date and the LMS assignment report."
+      }
+    ],
+    "docStandards": [
+      {
+        "topic": "Source of truth",
+        "standard": "The Atlas is the system of record for each item's status, stage, owner, approval chain, approvals and evidence links. The policy repository (document management system and policy portal) holds final approved documents and translations. Working drafts live in the project folder in the repository. Status is never tracked in separate spreadsheets or email."
+      },
+      {
+        "topic": "Templates",
+        "standard": "Policies use T-POLICY, including the header block, change log and addendum placeholders. Processes use the Atlas process structure: summary, trigger, swimlane, steps with timings, controls, RACI for deep dives, KPIs, variations and country notes. Obligations use the evidence record: requirement, citation, owner, cadence, evidence and next due date. Any departure from a template needs PMO approval, recorded in the Atlas."
+      },
+      {
+        "topic": "Identifiers and file names",
+        "standard": "Keep the Atlas ids: POL-NN for policies, process ids such as OF-01, and R-NNN or R-CC-NN for obligations. Country addenda add the jurisdiction code, for example POL-09-DE. File names follow ID_short-title_language_vVERSION_status, for example POL-09_anti-harassment_de_v1.0_approved.pdf, using the language codes en, de, he, zh-Hans, zh-Hant, vi, kn, te, es and fr."
+      },
+      {
+        "topic": "Versioning",
+        "standard": "Drafts are 0.1, 0.2 and so on, and the first approved version is 1.0. Editorial fixes that do not change meaning become 1.1, 1.2 and need only owner and PMO document-control sign-off. Any change to rights, duties, eligibility, amounts or process steps is a new major version (2.0) and runs the full chain. Every document keeps a change log with version, date, summary and approver."
+      },
+      {
+        "topic": "Effective dates",
+        "standard": "Each document shows its approval date and global effective date, and each addendum shows its local effective date. A local effective date is never earlier than publication, translation and any consultation or filing for that country. Legally mandated changes take effect on or before the statutory date. No effective dates fall in the Dec 21, 2026 to Jan 1, 2027 freeze."
+      },
+      {
+        "topic": "Review cycles",
+        "standard": "Policies are reviewed at least every 12 months (DS-08), processes at least every 2 years or after a system or organization change, and obligations on their statutory cadence. A change in law flagged on the Atlas watchlist triggers an earlier review. The next review date is set at Go live and appears in the annual review calendar."
+      },
+      {
+        "topic": "Approval evidence retention",
+        "standard": "Approval records, redlines, comment logs, consultation minutes, filing receipts and attestation reports are kept for at least 7 years after the document is superseded, or longer where the records retention schedule (DS-03, POL-49) or a legal hold requires. Superseded versions are archived read-only, never deleted."
+      },
+      {
+        "topic": "Language versions",
+        "standard": "English is the master. A professional vendor translates with a legal back-check, and each translation carries the master's version number and is published by the local effective date. Prevailing-language clauses follow the addendum: Chinese prevails in China, the Traditional Chinese version is the one relied on in Taiwan, and Vietnamese governs internal labour regulations in Vietnam. Minimum sets: German or bilingual core policies for non-English speakers and German postings in Germany, Hebrew notices and harassment bylaw in Israel, English plus Kannada or Telugu notices in India, and California EEO and harassment policies in any language spoken by 10% or more of a facility's workforce."
+      },
+      {
+        "topic": "Plain language",
+        "standard": "Write for the employee who must follow the rule. Use sentence case, active voice and sentences averaging under 20 words. Use 'must' for requirements and 'should' for guidance, define each term once, and keep policy statements separate from procedure steps. The policy editor checks every draft before Review, with a target reading level of grade 10 or below for employee-facing text."
+      },
+      {
+        "topic": "Accessibility",
+        "standard": "Published documents meet WCAG 2.2 AA: real headings, tagged PDFs, alt text for diagrams with a text step list for every swimlane, enough contrast and no meaning carried by color alone. Accessible or alternate formats are provided on request, which Ontario's AODA requires (verify)."
+      },
+      {
+        "topic": "Change control",
+        "standard": "After approval, every change goes through a change request in the Atlas, classed as editorial (owner and PMO), minor (owner, workstream lead, and Legal if legal content changes) or material (full chain, communication and re-attestation where needed). Changes to project scope, milestones or budget follow the decision rights and the project document chain."
+      },
+      {
+        "topic": "Document control",
+        "standard": "Only the current version is live in the policy repository and linked from Darwinbox. Copies on team sites, shared drives or intranet pages are replaced with links. Printed or downloaded copies are marked 'uncontrolled when printed'. Each document is classified Public, Internal or Confidential."
+      },
+      {
+        "topic": "Evidence standard",
+        "standard": "Each piece of evidence is linked from the item in the Atlas, named to the file convention, dated and shows who did what: approval records, published link and version, filing receipts, posting photos with date and location, communication copy and send date, and LMS assignment and completion reports. An auditor must be able to confirm the item without asking the owner."
+      },
+      {
+        "topic": "Privilege and personal data",
+        "standard": "Legal advice and local counsel memos stay in Legal's privileged files; the Atlas records only that legal review is complete, its date and its outcome. The Atlas holds no employee personal data beyond owner and assignee names, and acknowledgments stay in the LMS and HRIS."
+      }
+    ]
+  }
+}

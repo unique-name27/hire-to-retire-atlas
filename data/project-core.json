@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "name": "Project Atlas",
+    "title": "HR policy and process documentation program",
+    "tagline": "Every HR policy, process and legal obligation documented, approved, live and owned in 13 jurisdictions within 12 months.",
+    "start": "2026-10-12",
+    "end": "2027-10-08",
+    "sponsor": "Chief People Officer (CHRO)",
+    "pm": "HR Program Manager (PMO lead)",
+    "planVersion": "1.0",
+    "holidayFreezes": [
+      { "start": "2026-12-21", "end": "2027-01-01", "label": "Year-end freeze: no approvals or launches" },
+      { "start": "2027-02-05", "end": "2027-02-14", "label": "Lunar New Year and Tet: China, Taiwan and Vietnam reviewers away" }
+    ]
+  },
+  "waves": [
+    { "id": "W0", "name": "Mobilize", "start": "2026-10-12", "end": "2026-11-06", "goal": "Team, charter, tooling, approval chains and a rated baseline of all 438 items.", "scope": "Setup only; no items go live." },
+    { "id": "W1", "name": "Wave 1: Must-haves", "start": "2026-11-09", "end": "2027-02-12", "goal": "The highest-risk legally required, public-company and semiconductor items in every workstream: policies first, then the programs, notices and controls that depend on them.", "scope": "About 40% of each workstream's legally required, public-company and semiconductor items, ranked by risk." },
+    { "id": "W2", "name": "Wave 2: Core lifecycle", "start": "2027-02-15", "end": "2027-05-14", "goal": "The next tranche of required items, with the bulk of process documentation and country addenda.", "scope": "The next 35% of each workstream's required items." },
+    { "id": "W3", "name": "Wave 3: Complete coverage", "start": "2027-05-17", "end": "2027-08-13", "goal": "The remaining required items, so every legal, public-company and semiconductor item is live.", "scope": "The remaining 25% of each workstream's required items." },
+    { "id": "W4", "name": "Wave 4: Embed and sustain", "start": "2027-08-16", "end": "2027-10-08", "goal": "Best-practice items, the global attestation campaign, audit readiness and handover to business-as-usual owners.", "scope": "All best-practice items plus close-out activities." }
+  ],
+  "workstreams": [
+    { "id": "WS1", "name": "Governance, Ethics and Employee Relations", "domains": ["Governance", "Relations"], "lead": "Head of Employee Relations", "partners": "Employment counsel; Ethics and Compliance; Internal Audit", "scope": "Code of conduct, harassment, whistleblowing, investigations, discipline, inclusion, corporate governance and insider trading items." },
+    { "id": "WS2", "name": "Talent Acquisition", "domains": ["Plan", "Recruit"], "lead": "Director, Talent Acquisition Operations", "partners": "FP&A; Trade Compliance; Immigration counsel", "scope": "Workforce planning, requisitions, sourcing, selection, background checks, offers and deemed-export screening." },
+    { "id": "WS3", "name": "HR Operations and Employee Lifecycle", "domains": ["Onboard", "Move", "Offboard"], "lead": "Head of HR Operations", "partners": "IT; Facilities; Trade Compliance; Payroll", "scope": "Onboarding, I-9 and right-to-work, transfers and mobility, international assignments, separations and exits." },
+    { "id": "WS4", "name": "Total Rewards and Payroll", "domains": ["Pay", "Reward", "Equity", "Benefits"], "lead": "Head of Total Rewards", "partners": "Payroll; Stock Administration; Finance; Benefits brokers", "scope": "Pay practices, payroll compliance, salary structures, bonus and sales compensation, equity administration and benefits." },
+    { "id": "WS5", "name": "Talent, Leave and Engagement", "domains": ["Leave", "Grow", "Engage"], "lead": "Head of Talent Management", "partners": "Benefits; Learning; HRBPs", "scope": "Leave and accommodation, performance, development, promotion, engagement and listening." },
+    { "id": "WS6", "name": "HR Data, Safety and Systems", "domains": ["Data", "Safety"], "lead": "Director, HRIS and People Analytics", "partners": "Privacy Office; Information Security; EHS", "scope": "HR data governance, privacy, records retention, HR systems controls, health and safety programs and crisis response." }
+  ],
+  "crossCutting": [
+    { "id": "CC1", "name": "Country implementation", "lead": "Regional HR leads (Americas, EMEA, APAC)", "scope": "Country addenda, translations, employee-representative consultation, filings and local launch in all 13 jurisdictions." },
+    { "id": "CC2", "name": "Legal and compliance review", "lead": "Employment counsel", "scope": "Legal review of every policy and legally required item; local counsel engagement; regulator filings." },
+    { "id": "CC3", "name": "Change, communications and training", "lead": "HR Change and Communications lead", "scope": "Stakeholder engagement, communications calendar, manager toolkits, training and attestation." },
+    { "id": "CC4", "name": "Program management office", "lead": "HR Program Manager", "scope": "Plan, RAID log, approval chains, status reporting, steering committee and document control." }
+  ],
+  "stages": [
+    { "key": "discover", "label": "Discover", "weeks": 2, "done": "Current state captured: existing documents found, gaps rated, owner confirmed." },
+    { "key": "draft", "label": "Draft", "weeks": 3, "done": "Draft complete in the standard template, with country addenda and controls." },
+    { "key": "review", "label": "Review", "weeks": 2, "done": "SME, legal and country review comments resolved." },
+    { "key": "approve", "label": "Approve", "weeks": 2, "done": "Approval chain complete, with every sign-off recorded." },
+    { "key": "live", "label": "Go live", "weeks": 1, "done": "Published, communicated, trained where needed and evidence filed." }
+  ],
+  "milestones": [
+    { "id": "M01", "date": "2026-10-12", "name": "Project kickoff", "wave": "W0", "type": "event", "criteria": "Kickoff held with sponsor, workstream leads, regional HR leads and Legal." },
+    { "id": "M02", "date": "2026-10-23", "name": "Charter approved", "wave": "W0", "type": "gate", "criteria": "Steering committee approves charter, scope, resourcing and governance." },
+    { "id": "M03", "date": "2026-10-30", "name": "Approval chains configured", "wave": "W0", "type": "deliverable", "criteria": "Every chain has named approvers; test submission run end to end." },
+    { "id": "M04", "date": "2026-11-06", "name": "Baseline complete and Mobilize gate", "wave": "W0", "type": "gate", "criteria": "All 438 items have an owner, a current-state rating and a wave; plan v1.0 baselined." },
+    { "id": "M05", "date": "2026-11-09", "name": "Wave 1 starts", "wave": "W1", "type": "event", "criteria": "Wave 1 items in Discover; workshops scheduled." },
+    { "id": "M06", "date": "2026-12-18", "name": "Wave 1 drafts complete", "wave": "W1", "type": "deliverable", "criteria": "All Wave 1 drafts submitted for review before the year-end freeze." },
+    { "id": "M07", "date": "2027-01-29", "name": "Wave 1 approvals complete", "wave": "W1", "type": "gate", "criteria": "Every Wave 1 approval chain closed; works council consultations started where required." },
+    { "id": "M08", "date": "2027-02-12", "name": "Wave 1 live", "wave": "W1", "type": "gate", "criteria": "Wave 1 published, communicated and evidenced; wave retrospective held." },
+    { "id": "M09", "date": "2027-02-15", "name": "Wave 2 starts", "wave": "W2", "type": "event", "criteria": "Wave 2 items in Discover." },
+    { "id": "M10", "date": "2027-04-09", "name": "Wave 2 drafts complete", "wave": "W2", "type": "deliverable", "criteria": "All Wave 2 drafts submitted for review." },
+    { "id": "M11", "date": "2027-05-14", "name": "Wave 2 live", "wave": "W2", "type": "gate", "criteria": "Wave 2 published, communicated and evidenced." },
+    { "id": "M12", "date": "2027-05-17", "name": "Wave 3 starts", "wave": "W3", "type": "event", "criteria": "Wave 3 items in Discover." },
+    { "id": "M13", "date": "2027-07-09", "name": "Wave 3 drafts complete", "wave": "W3", "type": "deliverable", "criteria": "All Wave 3 drafts submitted for review." },
+    { "id": "M14", "date": "2027-08-13", "name": "Wave 3 live: all required items done", "wave": "W3", "type": "gate", "criteria": "Every legal, public-company and semiconductor item is live with evidence." },
+    { "id": "M15", "date": "2027-09-10", "name": "Global attestation campaign launched", "wave": "W4", "type": "event", "criteria": "All employees asked to acknowledge the updated Code and core policies." },
+    { "id": "M16", "date": "2027-09-24", "name": "Audit readiness review", "wave": "W4", "type": "gate", "criteria": "Internal Audit samples 40 items and confirms evidence is complete." },
+    { "id": "M17", "date": "2027-10-01", "name": "Handover to business as usual", "wave": "W4", "type": "deliverable", "criteria": "Every item has a named owner, a review date and a place in the annual review calendar." },
+    { "id": "M18", "date": "2027-10-08", "name": "Project close", "wave": "W4", "type": "gate", "criteria": "Close-out report and lessons learned approved by the steering committee." }
+  ],
+  "chains": [
+    { "id": "policy", "name": "Global policy", "appliesTo": "Policies", "description": "For every global policy and its country addenda.", "steps": [
+      { "id": "s1", "name": "Owner sign-off", "role": "Policy owner", "rule": "any", "optional": false, "guidance": "Confirms the draft is complete, uses the standard template and has every country addendum." },
+      { "id": "s2", "name": "Workstream review", "role": "Workstream lead", "rule": "any", "optional": false, "guidance": "Checks consistency with related policies and processes." },
+      { "id": "s3", "name": "Legal review", "role": "Employment counsel", "rule": "any", "optional": false, "guidance": "Confirms legal requirements are met in every jurisdiction; engages local counsel where needed." },
+      { "id": "s4", "name": "Regional HR review", "role": "Regional HR leads (Americas, EMEA, APAC)", "rule": "all", "optional": false, "guidance": "Each region confirms the addenda are workable and flags consultation or filing needs." },
+      { "id": "s5", "name": "Employee representative consultation", "role": "Country HR lead", "rule": "any", "optional": true, "guidance": "Required where works councils or employee representatives have rights (Germany, China, Vietnam, Taiwan filings). Record the outcome; skip with a note where not needed." },
+      { "id": "s6", "name": "Final approval", "role": "Chief People Officer", "rule": "any", "optional": false, "guidance": "Approves publication and the effective date." }
+    ] },
+    { "id": "process", "name": "Process document", "appliesTo": "Processes", "description": "For process maps, steps, controls and RACI.", "steps": [
+      { "id": "s1", "name": "Process owner sign-off", "role": "Process owner", "rule": "any", "optional": false, "guidance": "Confirms the flow matches how work is actually done, including exceptions." },
+      { "id": "s2", "name": "Workstream review", "role": "Workstream lead", "rule": "any", "optional": false, "guidance": "Checks hand-offs with other processes and the governing policy." },
+      { "id": "s3", "name": "Control review", "role": "Internal Audit or SOX PMO", "rule": "any", "optional": true, "guidance": "Required when the process contains a key or SOX-relevant control." },
+      { "id": "s4", "name": "Publish approval", "role": "Head of HR Operations", "rule": "any", "optional": false, "guidance": "Approves publication and confirms systems and training are ready." }
+    ] },
+    { "id": "obligation", "name": "Legal obligation", "appliesTo": "Filings, notices, programs, trainings, records and committees", "description": "For legally required items in the obligations register.", "steps": [
+      { "id": "s1", "name": "Owner sign-off", "role": "Item owner", "rule": "any", "optional": false, "guidance": "Confirms the obligation is met and evidence is filed." },
+      { "id": "s2", "name": "Legal and compliance review", "role": "Employment counsel or Compliance", "rule": "any", "optional": false, "guidance": "Confirms the evidence satisfies the requirement and the next due date is set." },
+      { "id": "s3", "name": "Country HR confirmation", "role": "Country HR lead", "rule": "any", "optional": false, "guidance": "Confirms local completion, language and posting or filing." }
+    ] },
+    { "id": "public", "name": "Public company and semiconductor control", "appliesTo": "Public-company and semiconductor items", "description": "For SOX, SEC, Nasdaq, insider trading and export-control items.", "steps": [
+      { "id": "s1", "name": "Owner sign-off", "role": "Control owner", "rule": "any", "optional": false, "guidance": "Confirms design and evidence." },
+      { "id": "s2", "name": "Compliance review", "role": "SOX PMO or Trade Compliance", "rule": "any", "optional": false, "guidance": "Confirms the control is designed effectively and testable." },
+      { "id": "s3", "name": "Executive approval", "role": "General Counsel or delegate", "rule": "any", "optional": false, "guidance": "Approves for audit and disclosure purposes." }
+    ] },
+    { "id": "project", "name": "Project document", "appliesTo": "Charter, plan and change requests", "description": "For project governance documents.", "steps": [
+      { "id": "s1", "name": "PMO review", "role": "HR Program Manager", "rule": "any", "optional": false, "guidance": "Confirms the document is complete and consistent with the plan." },
+      { "id": "s2", "name": "Steering committee", "role": "Steering committee members", "rule": "any", "optional": false, "guidance": "Any steering committee member may record the committee's decision." },
+      { "id": "s3", "name": "Sponsor approval", "role": "Chief People Officer", "rule": "any", "optional": false, "guidance": "Final approval." }
+    ] }
+  ]
+}

@@ -1,6 +1,106 @@
 {
  "releases": [
   {
+   "version": 9,
+   "date": "2026-09-30",
+   "title": "Project Atlas: plan, approval chains and video tutorials",
+   "summary": "Everything needed to run the program that documents and launches the library, including configurable approval chains and five narrated tutorials.",
+   "items": [
+    {
+     "type": "added",
+     "text": "Project Atlas: a 12-month program to document, approve and launch all 438 items, with Project HQ, a charter, an integrated plan, approvals, a RAID log, a weekly status report, team and governance, training and a toolkit."
+    },
+    {
+     "type": "added",
+     "text": "Integrated plan: every item scheduled into Mobilize and four waves across six workstreams, with dated discover, draft, review, approve and go-live stages that skip the year-end freeze; overdue tracking and a plan export."
+    },
+    {
+     "type": "added",
+     "text": "Approval chains: five default chains (global policy, process document, legal obligation, public company and semiconductor control, project document). Editors can edit them or create new ones, name approvers per step, require any or all approvers, and mark steps optional."
+    },
+    {
+     "type": "added",
+     "text": "Approvals workflow: submit any policy, process, obligation, template or project document; approvers see Waiting on you, approve or send back with a reason, and owners resubmit. Every decision is time-stamped and the approval record downloads as audit evidence."
+    },
+    {
+     "type": "added",
+     "text": "Five narrated video tutorials with two hosts, burned-in subtitles and transcripts: Project Atlas in 90 seconds, Find and update your items, Document a process in five steps, Set up and run an approval chain, and Take a policy live in 13 countries."
+    },
+    {
+     "type": "added",
+     "text": "RAID log with 23 risks, 11 assumptions, 5 issues and 14 decisions, a risk heat map and shared status updates; country gates for all 13 jurisdictions; communications calendar and training plan."
+    },
+    {
+     "type": "changed",
+     "text": "Master checklist: Wave, Workstream and Overdue filters, a go-live column, and a new Live status after Approved. Policy, process, obligation and template pages show their plan dates and approval state with a Submit for approval button."
+    },
+    {
+     "type": "changed",
+     "text": "Search now covers project pages, milestones, RAID entries and the video tutorials."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-KICKOFF",
+     "text": "New program template: Project kickoff agenda and run sheet."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-BASELINE",
+     "text": "New program template: Current-state baseline assessment."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-WORKSHOP",
+     "text": "New program template: Process discovery workshop guide."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-POLICY-REVIEW",
+     "text": "New program template: Policy review checklist."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-APPROVAL-RECORD",
+     "text": "New program template: Approval and sign-off record."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-STATUS",
+     "text": "New program template: Weekly status report."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-STEERCO",
+     "text": "New program template: Steering committee pack and agenda."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-CHANGE-REQUEST",
+     "text": "New program template: Change request form."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-COUNTRY-LAUNCH",
+     "text": "New program template: Country launch checklist."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-LAUNCH-COMMS",
+     "text": "New program template: Policy launch email and manager talking points."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-RETRO",
+     "text": "New program template: Wave retrospective guide."
+    },
+    {
+     "type": "added",
+     "ref": "T-PM-CLOSEOUT",
+     "text": "New program template: Close-out report and business-as-usual handover."
+    }
+   ]
+  },
+  {
    "version": 8,
    "date": "2026-09-23",
    "title": "32 new templates and a library change log",

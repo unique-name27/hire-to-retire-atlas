@@ -1,0 +1,3777 @@
+{
+ "templates": [
+  {
+   "id": "T-PM-KICKOFF",
+   "name": "Project kickoff agenda and run sheet",
+   "category": "Project",
+   "format": "agenda",
+   "purpose": "Runs the Project Atlas kickoff (milestone M01, Monday 12 October 2026) that launches the 12-month program with the sponsor, workstream leads, regional HR leads and Legal. It sets out preparation, a timed three-hour plenary agenda, sponsor lines, breakout prompts, the on-the-day run sheet and the outputs the PMO must capture before the charter goes to the steering committee on 23 October 2026 (M02).",
+   "audience": "HR Program Manager (runs it); Chief People Officer (sponsor and opener); the six workstream leads (WS1 to WS6); cross-cutting leads for country implementation, legal review, change and communications, and the PMO (CC1 to CC4); regional HR leads (Americas, EMEA, APAC); country HR leads in all 13 jurisdictions; observers from Internal Audit, the SOX PMO, Trade Compliance and the Privacy Office.",
+   "when": "Preparation from T-10 business days (28 September 2026); plenary on 12 October 2026, 07:00 to 10:00 Pacific; APAC session on 13 October 2026, 09:00 Taipei and Shanghai time; follow-up within 2 business days.",
+   "owner": "Program management office (CC4), with HR Change and Communications (CC3)",
+   "sections": [
+    {
+     "title": "Preparation (T-10 to T-1)",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Send the calendar hold for 12 October 2026, 07:00 to 10:00 Pacific, with the video link, the HQ room and a dial-in number; send a separate hold for the APAC session on 13 October at 09:00 Taipei time.",
+       "owner": "PMO analyst",
+       "when": "T-10"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "Confirm attendance: the sponsor, all six workstream leads and their deputies, the four cross-cutting leads, the three regional HR leads, a country HR lead for each of the 13 jurisdictions, and the Internal Audit, SOX PMO, Trade Compliance and Privacy Office observers.",
+       "detail": "If a workstream lead cannot attend, their deputy attends with authority to commit time and name owners.",
+       "owner": "HR Program Manager",
+       "when": "T-10"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "Preload the Master checklist with all 438 items (57 policies, 97 processes, 284 legal obligations), each with a provisional workstream, provisional owner role and tier from the catalog.",
+       "owner": "PMO analyst",
+       "when": "T-7"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "Give every attendee access to Project HQ, Plan, Approvals, RAID log and Master checklist, and test that each workstream lead can filter the Master checklist to their own items.",
+       "owner": "HRIS lead",
+       "when": "T-3"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Circulate the pre-read: charter draft v0.9, plan on a page (waves W0 to W4 and milestones M01 to M18), the approval chain summary and the link to video V1 'Project Atlas in 90 seconds'.",
+       "owner": "HR Program Manager",
+       "when": "T-5"
+      },
+      {
+       "id": "i6",
+       "type": "check",
+       "text": "Build the deck: why now, scope and numbers, waves and milestones, the five stages and definition of done, approval chains, country gates, governance and cadence, and the asks.",
+       "detail": "No more than 20 slides; every number must match project-core and the Master checklist.",
+       "owner": "HR Program Manager",
+       "when": "T-5"
+      },
+      {
+       "id": "i7",
+       "type": "check",
+       "text": "Brief the sponsor for 30 minutes: the three messages, the asks of leads, and the likely objections (capacity during year-end close and compensation review, local consultation timelines).",
+       "owner": "HR Program Manager",
+       "when": "T-3"
+      },
+      {
+       "id": "i8",
+       "type": "check",
+       "text": "Set up the RAID log with sections for kickoff decisions, actions, risks and a parking lot so the scribe can capture live.",
+       "owner": "PMO analyst",
+       "when": "T-2"
+      },
+      {
+       "id": "i9",
+       "type": "check",
+       "text": "Assign breakout rooms by workstream, name a facilitator and a note taker for each, and send them the breakout prompts.",
+       "owner": "PMO analyst",
+       "when": "T-2"
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "Check the date against local calendars: 12 October 2026 is after the Israeli autumn holidays and before Diwali (around 8 November 2026) (verify both), and there is no national holiday in the other 12 jurisdictions that day except where local HR says otherwise.",
+       "owner": "Regional HR leads",
+       "when": "T-10"
+      }
+     ]
+    },
+    {
+     "title": "Plenary agenda: 12 October 2026, 07:00 to 10:00 Pacific",
+     "intro": "Times are Pacific. On 12 October 2026 that is 16:00 Berlin, 17:00 Tel Aviv, 19:30 Bengaluru, 22:00 Taipei and Shanghai, 21:00 Hanoi, 10:00 Toronto and Raleigh, 09:00 Austin and 08:00 Denver.",
+     "items": [
+      {
+       "id": "i11",
+       "type": "check",
+       "text": "07:00-07:10 Welcome, purpose of the session and ways of working: questions go in chat, the scribe logs decisions, actions and risks live in the RAID log, and parked items are answered within 2 business days.",
+       "owner": "HR Program Manager",
+       "when": "07:00"
+      },
+      {
+       "id": "i12",
+       "type": "check",
+       "text": "07:10-07:25 Why Atlas and why now: 438 items across 13 jurisdictions; what goes wrong without them (rules that cannot be enforced locally, missing SOX and Nasdaq evidence, inconsistent manager practice, audit findings); what success looks like on 8 October 2027.",
+       "owner": "Chief People Officer",
+       "when": "07:10"
+      },
+      {
+       "id": "i13",
+       "type": "check",
+       "text": "07:25-07:50 Scope, waves and milestones: Mobilize to 6 November 2026; Wave 1 from 9 November 2026 to 12 February 2027; Wave 2 to 14 May 2027; Wave 3 to 13 August 2027; Wave 4 to 8 October 2027; freezes 21 December to 1 January and 5 to 14 February. Walk the Plan page.",
+       "detail": "Highlight the gate milestones: M02 charter (23 Oct), M04 baseline (6 Nov), M07 Wave 1 approvals (29 Jan), M08 Wave 1 live (12 Feb), M11 (14 May), M14 all required items live (13 Aug), M16 audit readiness (24 Sep), M18 close (8 Oct 2027).",
+       "owner": "HR Program Manager",
+       "when": "07:25"
+      },
+      {
+       "id": "i14",
+       "type": "check",
+       "text": "07:50-08:10 How every item moves: Discover (2 weeks), Draft (3), Review (2), Approve (2), Go live (1); the definition of done for each stage; the standard templates used at each stage.",
+       "detail": "Show where this toolkit fits: T-PM-BASELINE in Mobilize, T-PM-WORKSHOP in Discover, T-POLICY in Draft, T-PM-POLICY-REVIEW in Review, T-PM-APPROVAL-RECORD in Approve, T-PM-COUNTRY-LAUNCH and T-PM-LAUNCH-COMMS in Go live.",
+       "owner": "HR Program Manager and Employment counsel",
+       "when": "07:50"
+      },
+      {
+       "id": "i15",
+       "type": "check",
+       "text": "08:10-08:25 Approval chains: the five default chains (global policy, process document, legal obligation, public company and semiconductor control, project document); named approvers are needed for every step by 30 October 2026 (M03). Demo an approval on the Approvals page.",
+       "owner": "HR Program Manager",
+       "when": "08:10"
+      },
+      {
+       "id": "i16",
+       "type": "check",
+       "text": "08:25-08:35 Break.",
+       "when": "08:25"
+      },
+      {
+       "id": "i17",
+       "type": "check",
+       "text": "08:35-08:55 Country implementation and local gates: works council co-determination in Germany, democratic procedure in China, internal labor regulation registration in Vietnam, work rules filing and labor-management meetings in Taiwan, standing orders and bilingual displays in India, Hebrew versions in Israel, French for any Quebec-based staff; how lead times feed the Plan.",
+       "owner": "Regional HR leads",
+       "when": "08:35"
+      },
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "08:55-09:30 Workstream breakouts (six rooms) using the breakout prompts below.",
+       "detail": "Regional HR leads and Employment counsel move between rooms. Each room produces: confirmed scope, owner gaps, top three risks, candidate Wave 1 items and capacity concerns.",
+       "owner": "Workstream leads",
+       "when": "08:55"
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "09:30-09:45 Readouts: each workstream lead has 2 minutes for owners confirmed, biggest risk and one ask.",
+       "owner": "Workstream leads",
+       "when": "09:30"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "09:45-09:55 Governance and cadence: weekly status report (published Fridays), workstream stand-ups, monthly steering committee plus gate meetings, RAID log discipline, change control after plan v1.0 (T-PM-CHANGE-REQUEST), time commitments.",
+       "owner": "HR Program Manager",
+       "when": "09:45"
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "09:55-10:00 Close: decisions made, actions and owners, next dates (charter to steering committee 23 October, approvers named 30 October, baseline complete 6 November).",
+       "owner": "Chief People Officer",
+       "when": "09:55"
+      }
+     ]
+    },
+    {
+     "title": "Sponsor opening lines",
+     "intro": "The sponsor delivers these in the 07:10 block, adapted to their own words.",
+     "items": [
+      {
+       "id": "i22",
+       "type": "say",
+       "text": "Thank you for being here. Project Atlas has one goal: every HR policy, process and legal obligation we have documented, approved, live and owned in all 13 jurisdictions by 8 October 2027."
+      },
+      {
+       "id": "i23",
+       "type": "say",
+       "text": "Today we have 438 items. Some are well documented, some live in one person's inbox, and some don't exist yet. In 12 months every one will have an owner, a current version, a review date and evidence."
+      },
+      {
+       "id": "i24",
+       "type": "say",
+       "text": "This is not a writing exercise. A rule that hasn't been through the works council in Germany, democratic procedure in China, filing in Taiwan or registration in Vietnam can't be relied on there, so local launch is part of done."
+      },
+      {
+       "id": "i25",
+       "type": "say",
+       "text": "I'm asking each workstream lead for [x] hours a week and each owner to treat their Atlas items as part of their job, not extra to it. I will clear conflicts with your leaders."
+      },
+      {
+       "id": "i26",
+       "type": "say",
+       "text": "Raise risks early. A red status in week 3 is useful; a surprise in week 12 is not."
+      }
+     ]
+    },
+    {
+     "title": "Breakout prompts (35 minutes)",
+     "intro": "The room facilitator keeps to time and the note taker records answers in the RAID log or a shared sheet linked from Project HQ.",
+     "items": [
+      {
+       "id": "i27",
+       "type": "question",
+       "text": "Which items in your workstream would worry you most if an auditor or regulator asked for them tomorrow?",
+       "detail": "List item ids. These are candidate Wave 1 items for the baseline."
+      },
+      {
+       "id": "i28",
+       "type": "question",
+       "text": "Who actually owns each item today, and which role should own it after October 2027?",
+       "detail": "Flag items with no owner or disputed ownership; the workstream lead resolves them by 23 October."
+      },
+      {
+       "id": "i29",
+       "type": "question",
+       "text": "Where do the current documents live (Darwinbox, intranet, SharePoint, Confluence, LMS, local drives, email), and who can collect them by 30 October?"
+      },
+      {
+       "id": "i30",
+       "type": "question",
+       "text": "Which items depend on another workstream or a cross-cutting team, such as Legal, Country implementation or Communications?"
+      },
+      {
+       "id": "i31",
+       "type": "question",
+       "text": "What capacity do you really have between now and 18 December, given year-end close, the compensation cycle and holidays?",
+       "detail": "Capture as hours per week per role. Gaps go to the RAID log as resource risks."
+      },
+      {
+       "id": "i32",
+       "type": "question",
+       "text": "Which country gates (consultation, filing, translation) touch your likely Wave 1 items, and how long do they take?"
+      }
+     ]
+    },
+    {
+     "title": "Run sheet: on the day",
+     "items": [
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Open the bridge at 06:45 Pacific; host and co-host admit attendees, test screen share, live captions and breakout rooms.",
+       "owner": "PMO analyst",
+       "when": "06:45"
+      },
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "At 07:00 announce that the session is recorded and why, and offer to pause recording for any discussion; store the recording on Project HQ with access limited to the program team for 90 days.",
+       "detail": "California requires consent of all parties to record confidential communications (Penal Code 632); give the GDPR notice for German attendees and the equivalent notice elsewhere.",
+       "owner": "HR Program Manager",
+       "when": "07:00"
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Scribe captures decisions, actions (owner role and due date) and risks directly in the RAID log during the session, not afterwards.",
+       "owner": "PMO analyst"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "Timekeeper gives a 5-minute warning at the end of each block and moves parked topics to the parking lot.",
+       "owner": "PMO analyst"
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Open breakout rooms at 08:55 with pre-assigned attendees; regional HR leads and Employment counsel join rooms on request.",
+       "owner": "PMO analyst",
+       "when": "08:55"
+      },
+      {
+       "id": "i38",
+       "type": "check",
+       "text": "Read back the parking lot at 09:55 and assign an owner to each item.",
+       "owner": "HR Program Manager",
+       "when": "09:55"
+      },
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "Run the 60-minute APAC session on 13 October at 09:00 Taipei and Shanghai (08:00 Hanoi): sponsor video clip, waves and stages, country gates, and a Q&A led by the APAC regional HR lead.",
+       "owner": "APAC regional HR lead",
+       "when": "13 Oct 09:00 Taipei"
+      }
+     ]
+    },
+    {
+     "title": "Outputs and follow-up (T+1 to T+2)",
+     "items": [
+      {
+       "id": "i40",
+       "type": "field",
+       "text": "Decisions made",
+       "detail": "Each decision logged in the RAID log with a decision id (D01 onwards), owner role and date."
+      },
+      {
+       "id": "i41",
+       "type": "field",
+       "text": "Actions",
+       "detail": "Owner role, due date and status; reviewed at the first weekly status on 16 October 2026."
+      },
+      {
+       "id": "i42",
+       "type": "field",
+       "text": "Risks and issues raised",
+       "detail": "Logged with likelihood, impact and owner; resourcing and capacity risks flagged for the charter."
+      },
+      {
+       "id": "i43",
+       "type": "field",
+       "text": "Workstream leads and deputies confirmed",
+       "detail": "One row per WS1 to WS6 and CC1 to CC4."
+      },
+      {
+       "id": "i44",
+       "type": "field",
+       "text": "Approver nominations per chain step",
+       "detail": "Due 30 October 2026 (M03); missing nominations escalate to the sponsor on 27 October."
+      },
+      {
+       "id": "i45",
+       "type": "field",
+       "text": "Country gate lead-time inputs",
+       "detail": "Per jurisdiction: consultation body, filing or registration, languages, realistic lead time in weeks. Due from regional HR leads by 21 October for the charter."
+      },
+      {
+       "id": "i46",
+       "type": "check",
+       "text": "Send the kickoff summary within 1 business day: decisions, actions, recording link, next dates and the link to the baseline form.",
+       "owner": "HR Program Manager",
+       "when": "T+1"
+      },
+      {
+       "id": "i47",
+       "type": "check",
+       "text": "Update Project HQ, the Plan and the Master checklist with confirmed leads, owners and any scope notes.",
+       "owner": "PMO analyst",
+       "when": "T+2"
+      },
+      {
+       "id": "i48",
+       "type": "check",
+       "text": "Send a 3-question feedback pulse: clarity of goals (1 to 5), clarity of my role (1 to 5), biggest concern (free text).",
+       "owner": "HR Change and Communications lead",
+       "when": "T+1"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "The kickoff is for commitment, not information. Leave with named leads, deputies, approvers and time commitments; without them Mobilize slips and the 6 November baseline gate fails.",
+    "Send the charter draft and plan on a page as a pre-read and keep slides short, so the plenary is spent on scope questions, risks and breakouts.",
+    "Show each workstream its own list in the Master checklist. Seeing 60 to 90 named items makes the scale real in a way that totals do not.",
+    "No single slot works for 13 jurisdictions. Record the plenary, run a separate APAC session and give India a local follow-up, rather than asking APAC staff to join at 22:00.",
+    "Don't promise local launch dates at the kickoff. Country gate lead times come from the regional HR leads and go into the charter and Plan at M02.",
+    "Log everything live in the RAID log so the first weekly status report on 16 October already shows kickoff decisions, actions and risks."
+   ],
+   "countryNotes": {
+    "us": "No consultation duty applies. Bring the SOX PMO and Stock Administration into the WS4 breakout because many Wave 1 public-company items (clawback, Section 16, insider trading controls) sit in the US, and keep program messages consistent with NLRA Section 7 rights.",
+    "us-ca": "Announce recording at the start: California requires all-party consent to record confidential communications (Penal Code 632). Invite the HQ HRBP, since California items with fixed dates, such as the SB 294 notice by 1 February, are early Wave 1 candidates.",
+    "us-co": "Include the Colorado site HR contact in the WS1 and WS2 breakouts: pay transparency posting and promotion notices (C.R.S. 8-5-201) and the POWR Act carry per-violation penalties and are likely Wave 1 items.",
+    "us-nc": "Include the North Carolina site HR contact. Flag early that any policy change reducing pay, PTO or bonus terms needs written notice at least one full pay period before it takes effect (G.S. 95-25.13).",
+    "us-tx": "Include the Texas site HR contact. Texas has few state-specific items, so it can serve as a pilot site for US launch sequencing.",
+    "us-wa": "The kickoff itself is fine, but later employee meetings about the program must stay off political, religious and union topics, which RCW 49.44.250 makes voluntary. Invite Washington HR because session laws often change requirements mid-year.",
+    "ca": "Invite Toronto and Vancouver HR. Brief them on the Ontario written-policy duties at 25+ employees (disconnecting from work, electronic monitoring) and confirm whether any Quebec-based remote staff need French versions (Bill 96).",
+    "de": "Inform the works council chair about the program before or at the kickoff and offer a separate briefing; early information under §80(2) BetrVG avoids later delays on co-determined items (§87). Get consent before recording German attendees and give a GDPR notice.",
+    "il": "The Israeli work week runs Sunday to Thursday and 12 October 2026 falls after the autumn holidays (verify). Plan a short Hebrew summary for the local team and allow for reserve-duty absences in capacity planning.",
+    "in": "The plenary runs 19:30 to 22:30 in Bengaluru; offer the recording and a local follow-up the next day. Diwali (around 8 November 2026, verify) falls in the last week of Mobilize, so set baseline deadlines before it.",
+    "tw": "The plenary is at 22:00 Taipei, so Taiwan joins the APAC session the next morning. Flag items that touch hours, leave or discipline, because they will need work rules filing and, for hours flexibilities, labor-management meeting approval.",
+    "cn": "China joins the APAC session. Brief the union contact or employee representatives that rule changes will go through democratic procedure, and name who will keep minutes, sign-in sheets and acknowledgment records.",
+    "vn": "Vietnam joins the APAC session at 08:00 Hanoi time. Brief the grassroots union chair that changes to internal labor regulations will need consultation and registration, and plan Vietnamese summaries."
+   },
+   "processes": [
+    "DS-08"
+   ],
+   "policies": []
+  },
+  {
+   "id": "T-PM-BASELINE",
+   "name": "Current-state baseline assessment",
+   "category": "Project",
+   "format": "form",
+   "purpose": "Rates the current state of each of the 438 Atlas items during Mobilize: whether a document exists, where it lives, how current it is, who owns it, what the gaps are, how risky they are and which wave should fix them. The completed records give every item an owner, a rating and a proposed wave for the Mobilize gate on 6 November 2026 (M04) and feed plan v1.0, the Master checklist and the RAID log.",
+   "audience": "Item owners and workstream leads (complete the record); country HR leads (jurisdiction details and local adoption evidence); Employment counsel (checks every High rating); PMO (prefills, consolidates and balances waves); steering committee (approves the wave allocation at M04).",
+   "when": "Mobilize: prefilled by 16 October 2026; completed by owners 19 October to 30 October; workstream calibration 2 to 4 November; PMO consolidation 5 November; Mobilize gate 6 November 2026 (M04). Reused for items added later by change request.",
+   "owner": "Program management office (CC4), with workstream leads",
+   "sections": [
+    {
+     "title": "Item identification",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Item id",
+       "detail": "Prefilled from the Master checklist: POL-xx for policies, process ids such as ER-02 or PY-01, R-xxx for register obligations."
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Item name",
+       "detail": "Prefilled. Do not rename here; propose a rename in the gaps section."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Item type",
+       "detail": "Prefilled: Policy / Process / Program / Notice / Filing / Training / Control / Committee / Record."
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Tier",
+       "detail": "Prefilled: Legally required / Public-company driven / Semiconductor-specific / Best practice. The owner confirms or challenges with a reason; Employment counsel decides challenges to a legal tier."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Workstream",
+       "detail": "WS1 Governance, Ethics and ER / WS2 Talent Acquisition / WS3 HR Operations and Lifecycle / WS4 Total Rewards and Payroll / WS5 Talent, Leave and Engagement / WS6 HR Data, Safety and Systems."
+      },
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Jurisdictions in scope",
+       "detail": "Tick all that apply: us, us-ca, us-co, us-nc, us-tx, us-wa, ca, de, il, in, tw, cn, vn. For a global item, complete the jurisdiction rows in the local adoption field for each country where local adoption is needed."
+      },
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Assessor role and date assessed"
+      }
+     ]
+    },
+    {
+     "title": "Existing documentation",
+     "items": [
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Does a current document exist?",
+       "detail": "Yes, current and approved / Yes, but outdated or never formally approved / Partial: covers some jurisdictions or steps only / No document, but a consistent practice exists / No document and no consistent practice / Not applicable (give the reason, for example below threshold headcount)."
+      },
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Where does it live?",
+       "detail": "Darwinbox / intranet or SharePoint / Confluence / LMS / shared drive / email or personal files / local country file / vendor portal / other. Paste the link; if it cannot be shared, say who holds it."
+      },
+      {
+       "id": "i10",
+       "type": "field",
+       "text": "Version and last approval date",
+       "detail": "Version number if any; date of the last formal approval and the approver's role. 'Unknown' is a valid answer and counts as a gap."
+      },
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Last reviewed against current law",
+       "detail": "Date and by whom (role). Older than 12 months for a legally required item, or older than the last relevant law change in the country file, is a gap."
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Languages available",
+       "detail": "English / German / Hebrew / Arabic / Traditional Chinese / Simplified Chinese / Vietnamese / French / Spanish / Kannada / Telugu / other. Note which version prevails."
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Local adoption evidence",
+       "detail": "Per jurisdiction where required: signed works agreement (de) / democratic procedure minutes and signed acknowledgments (cn) / filed and approved work rules with approval letter (tw) / registered internal labor regulations with receipt (vn) / certified or model standing orders (in) / none / not required."
+      },
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Does practice match the document?",
+       "detail": "Consistent / Minor differences / Material differences (describe) / Unknown. Material differences usually mean the process needs a discovery workshop (T-PM-WORKSHOP)."
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "Evidence that it was communicated and acknowledged",
+       "detail": "Launch email, LMS acknowledgment report, posting photo or screenshot, training record, none."
+      }
+     ]
+    },
+    {
+     "title": "Ownership",
+     "items": [
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Current owner (role)",
+       "detail": "The role that maintains the item today, even informally."
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "Proposed business-as-usual owner (role)",
+       "detail": "The role that will own it after handover on 1 October 2027 (M17). Use roles, never names."
+      },
+      {
+       "id": "i18",
+       "type": "field",
+       "text": "Ownership status",
+       "detail": "Confirmed / Not confirmed / Disputed. Disputed items go to the workstream lead to resolve by 30 October and to the RAID log if still open."
+      },
+      {
+       "id": "i19",
+       "type": "field",
+       "text": "Approval chain",
+       "detail": "Global policy / Process document / Legal obligation / Public company and semiconductor control. Prefilled from item type; change only with a reason."
+      },
+      {
+       "id": "i20",
+       "type": "field",
+       "text": "Subject-matter experts and partners",
+       "detail": "Roles and functions to involve in Discover and Review, for example Payroll, Stock Administration, Trade Compliance, Privacy Office, EHS."
+      },
+      {
+       "id": "i21",
+       "type": "field",
+       "text": "Country HR lead per jurisdiction",
+       "detail": "Role per jurisdiction ticked above."
+      }
+     ]
+    },
+    {
+     "title": "Gaps and risk rating",
+     "items": [
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "Gap types",
+       "detail": "Tick all that apply: no document / outdated for current law / missing country addendum / no owner / not communicated / no acknowledgment / no control or no control evidence / not translated / not locally adopted, filed or registered / practice differs from document / conflicts with another policy or process / below required standard for public-company or customer audit."
+      },
+      {
+       "id": "i23",
+       "type": "field",
+       "text": "Gap description",
+       "detail": "Two or three sentences in plain language. Link privileged legal analysis rather than copying it here."
+      },
+      {
+       "id": "i24",
+       "type": "field",
+       "text": "Impact if the gap is exposed (1 to 5)",
+       "detail": "5 Severe: statutory breach with penalties, rule unenforceable for discipline or dismissal, SOX key control or SEC disclosure gap. 4 Major: likely claim, regulator or audit finding, or affects a whole country. 3 Moderate: inconsistent practice, employee relations or customer audit finding. 2 Minor: outdated text but compliant practice. 1 Negligible: best-practice improvement only."
+      },
+      {
+       "id": "i25",
+       "type": "field",
+       "text": "Likelihood of exposure in the next 12 months (1 to 5)",
+       "detail": "5 Almost certain: external deadline, active audit or known incident. 4 Likely. 3 Possible. 2 Unlikely. 1 Rare."
+      },
+      {
+       "id": "i26",
+       "type": "field",
+       "text": "Risk score and rating",
+       "detail": "Impact x likelihood (1 to 25). High 15 to 25; Medium 8 to 14; Low 1 to 7. Every High needs an Employment counsel check before 4 November."
+      },
+      {
+       "id": "i27",
+       "type": "field",
+       "text": "External deadline",
+       "detail": "Statutory or business date the item must meet, for example the California SB 294 notice by 1 February, Ontario written policies by 1 March after a 1 January headcount of 25+, the BC pay transparency report by 1 November, the 10-K filing date."
+      },
+      {
+       "id": "i28",
+       "type": "field",
+       "text": "Audit, regulator or customer interest",
+       "detail": "SOX key control / SEC or Nasdaq requirement / external auditor request / RBA or customer audit / regulator inquiry / prior internal audit finding / none."
+      },
+      {
+       "id": "i29",
+       "type": "field",
+       "text": "Effort estimate",
+       "detail": "S up to 5 person-days / M 6 to 15 / L 16 to 30 / XL over 30 (split the item or plan it across two waves)."
+      },
+      {
+       "id": "i30",
+       "type": "field",
+       "text": "Country gates needed",
+       "detail": "Per jurisdiction: consultation body, filing or registration, translation, and realistic lead time in weeks. Use the country gate list on the Countries page; mark (verify) where unconfirmed."
+      }
+     ]
+    },
+    {
+     "title": "Proposed wave and next step",
+     "items": [
+      {
+       "id": "i31",
+       "type": "field",
+       "text": "Proposed wave",
+       "detail": "W1 / W2 / W3 / W4. Rules: required items (legal, public-company or semiconductor tier) rated High, or with an external deadline before 31 March 2027, go to W1, policies before the programs, notices and controls that depend on them; Medium required items to W2; Low required items to W3; best-practice items to W4. Target split of each workstream's required items: about 40% W1, 35% W2, 25% W3."
+      },
+      {
+       "id": "i32",
+       "type": "field",
+       "text": "Rationale for the proposed wave",
+       "detail": "One sentence, for example 'High risk; unenforceable in China without democratic procedure; must precede ER-04 discipline process'."
+      },
+      {
+       "id": "i33",
+       "type": "field",
+       "text": "Dependencies",
+       "detail": "Item ids that must be done first or in the same wave."
+      },
+      {
+       "id": "i34",
+       "type": "field",
+       "text": "Earliest feasible local go-live",
+       "detail": "Allow for the 10-week stage cycle plus country gate lead times and the freeze windows (21 December to 1 January; 5 to 14 February for China, Taiwan and Vietnam)."
+      },
+      {
+       "id": "i35",
+       "type": "field",
+       "text": "RAID entry needed",
+       "detail": "Yes: risk or issue id / No. Required for every High that cannot start in W1."
+      },
+      {
+       "id": "i36",
+       "type": "field",
+       "text": "Workstream lead decision",
+       "detail": "Agree / Change wave to [W] with reason / Escalate to PMO. Recorded during calibration, 2 to 4 November."
+      },
+      {
+       "id": "i37",
+       "type": "field",
+       "text": "Employment counsel check (High items only)",
+       "detail": "Agree rating / Change rating to [x] / Needs local counsel. Role and date."
+      }
+     ]
+    },
+    {
+     "title": "Rating rules and quality checks",
+     "items": [
+      {
+       "id": "i38",
+       "type": "note",
+       "text": "Rate what exists today, not what should exist. A practice that runs consistently without a document is 'No document, but a consistent practice exists', not a pass."
+      },
+      {
+       "id": "i39",
+       "type": "note",
+       "text": "A document is not locally effective just because it exists. In China, Taiwan, Vietnam, India and Germany, missing adoption evidence is itself a gap rated at least 4 for impact where the rule is used for discipline, hours or pay."
+      },
+      {
+       "id": "i40",
+       "type": "check",
+       "text": "PMO checks before consolidation: every item has an owner status, a risk rating, a proposed wave and a rationale; no High is missing a counsel check; no item is marked Not applicable without a reason.",
+       "owner": "PMO analyst",
+       "when": "5 Nov 2026"
+      },
+      {
+       "id": "i41",
+       "type": "check",
+       "text": "PMO balances waves against capacity and the 40/35/25 target, records moves with reasons, and presents the allocation at the Mobilize gate on 6 November 2026 (M04).",
+       "owner": "HR Program Manager",
+       "when": "6 Nov 2026"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Prefill everything the catalog already knows (id, name, type, tier, workstream, jurisdictions, default chain) so owners spend their 20 to 30 minutes per item on judgment, not data entry.",
+    "Spread the load: 438 items across about 40 owners is roughly 11 each. Owners with more than 20 items get a PMO analyst to pair with them.",
+    "Calibrate before consolidating. Each workstream lead runs a 60-minute session to compare scores across owners; uncalibrated ratings make Wave 1 a list of the most anxious owners' items.",
+    "The proposed wave is a proposal. The PMO balances capacity and dependencies, and the steering committee approves the allocation at M04; after that, moves need a change request.",
+    "Do not paste legal advice or personal data into the baseline. Link privileged memos held by Legal and describe gaps at the level of the rule, not individual cases.",
+    "Treat 'Unknown' as a finding. Unknown version, owner or approval date is the most common gap and should be rated, not left blank.",
+    "The baseline is reused: Wave 2 to 4 owners update their records at the start of Discover, and items added by change request get a new record."
+   ],
+   "countryNotes": {
+    "us": "Record the status of federal postings (EEOC Know Your Rights, FLSA, FMLA, USERRA, EPPA, OSHA) and electronic access for remote staff. Rate conduct, confidentiality and social media rules for NLRA Section 7 (Stericycle) and Rule 21F-17 risk, and mark SOX key controls.",
+    "us-ca": "Check whether EEO and harassment policies are translated into any language spoken by 10%+ of a facility (2 CCR 11023), and whether the pay scale procedure (LC 432.3) and SB 294 notice exist. Items with a 1 February deadline belong in Wave 1.",
+    "us-co": "Check HFWA notices in English and any language spoken by 5%+ of the workforce, pay range and promotion-notice procedures (C.R.S. 8-5-201) and POWR Act wording; each defective posting is a separate violation, which raises likelihood.",
+    "us-nc": "Confirm that written wage, PTO forfeiture and bonus rules were given to employees in advance (G.S. 95-25.12, 95-25.13). A forfeiture rule with no proof of advance notice is a gap.",
+    "us-tx": "Few state-specific items. Check workers' compensation coverage notices in English and Spanish (28 TAC 110.101) and that the harassment policy reflects liability for employers of 1+ and individual supervisors (Labor Code 21.141-21.142).",
+    "us-wa": "Check pay ranges and benefits descriptions in postings (RCW 49.58.110), PFML notices, the I-9 inspection notice duty from 1 October 2026 and the mini-WARN procedure. Washington changes often mid-year, so record the law date each item reflects.",
+    "ca": "Rate Ontario and BC separately. Record the 1 January headcount that triggers Ontario's 25+ duties (disconnecting, electronic monitoring, job postings) and BC's 50+ pay transparency report due 1 November; flag any Quebec-based staff.",
+    "de": "For each item, record whether a works agreement exists or is needed (§87 BetrVG), whether a German version exists and whether statutory postings are current. An English-only rule on a co-determined matter is rated not locally adopted.",
+    "il": "Record Hebrew versions (and Arabic where employees need them), the sexual-harassment bylaw and its posting, and whether any collective agreement or extension order applies to the item (verify).",
+    "in": "Record whether standing orders are certified or model standing orders adopted (300+ workers), the status of the Karnataka IT exemption (verify), the GRC and POSH Internal Committee, and bilingual display in English and Kannada or Telugu.",
+    "tw": "Record whether the item is covered by work rules filed with the local labor authority (the Science Park Bureau for Hsinchu Science Park sites), the approval date and letter number, and whether hours flexibilities rely on labor-management meeting resolutions.",
+    "cn": "For each rule-type item, record democratic procedure evidence: discussion with the employee congress or all employees, consultation with the union or employee representatives, publication and signed acknowledgments. No evidence means it cannot support an Art. 39 dismissal.",
+    "vn": "Record whether the item is in the registered internal labor regulations, the registration receipt date, union consultation and the Vietnamese version. Discipline based on rules outside the registered regulations is void."
+   },
+   "processes": [
+    "DS-08"
+   ],
+   "policies": []
+  },
+  {
+   "id": "T-PM-WORKSHOP",
+   "name": "Process discovery workshop guide",
+   "category": "Project",
+   "format": "guide",
+   "purpose": "A 90-minute facilitated workshop that captures how a process really runs today: trigger and outcome, swimlanes and hand-offs, decisions, controls and evidence, systems, exceptions and country variations. It gives the Draft stage a validated as-is map to work from, instead of an idealized version written from an old procedure.",
+   "audience": "Facilitator (trained workstream analyst or HRBP who does not own the process); scribe; process owner; 4 to 8 practitioners who do the work; one country HR representative per region; Internal Audit or the SOX PMO when the process contains a key control; partners such as Payroll, IT or Trade Compliance where they hold a lane.",
+   "when": "Discover stage (weeks 1 and 2 of an item's 10-week cycle), once per process in scope; Wave 1 workshops start 9 November 2026 (M05). Re-run for a process when its baseline says practice differs materially from the document.",
+   "owner": "Workstream lead (accountable for the item); PMO facilitator pool",
+   "sections": [
+    {
+     "title": "Before the workshop",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Fix the scope in one line: the trigger that starts the process and the output that ends it, and the neighboring processes on either side.",
+       "owner": "Facilitator",
+       "when": "Day -5"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "Send the baseline record (T-PM-BASELINE), existing procedure documents and the catalog entry for the process to all participants.",
+       "owner": "Facilitator",
+       "when": "Day -5"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "Invite the people who do the work, not only their managers: at least one practitioner per lane and one country HR representative per region.",
+       "owner": "Process owner",
+       "when": "Day -5"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "Ask each participant to bring two recent real cases with names removed, and screenshots of the system screens they use.",
+       "detail": "No personal data, health information or case names on the whiteboard or in the notes.",
+       "owner": "Facilitator",
+       "when": "Day -5"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Prepare a blank swimlane board with draft lanes (role or system) and the four shapes: start, task, decision, end.",
+       "owner": "Scribe",
+       "when": "Day -2"
+      },
+      {
+       "id": "i6",
+       "type": "check",
+       "text": "Book 90 minutes for the workshop plus 30 minutes for the facilitator and scribe to tidy the map straight after.",
+       "owner": "Facilitator",
+       "when": "Day -5"
+      },
+      {
+       "id": "i7",
+       "type": "check",
+       "text": "Invite Internal Audit or the SOX PMO when the process touches payroll, equity, financial reporting or a known key control.",
+       "owner": "Process owner",
+       "when": "Day -5"
+      }
+     ]
+    },
+    {
+     "title": "Opening (0:00 to 0:10)",
+     "items": [
+      {
+       "id": "i8",
+       "type": "say",
+       "text": "Thanks for coming. In the next 90 minutes we're going to map how [process] really works today, including the workarounds, so the documentation matches reality."
+      },
+      {
+       "id": "i9",
+       "type": "say",
+       "text": "There are no wrong answers. If what you do differs from the written procedure, that's exactly what we need to know, and nobody will be blamed for it."
+      },
+      {
+       "id": "i10",
+       "type": "say",
+       "text": "We'll use real recent cases with names removed. Please don't mention individual employees or their circumstances."
+      },
+      {
+       "id": "i11",
+       "type": "say",
+       "text": "Improvement ideas are welcome, but we'll park them on a separate list so we map the current process first. By the end we'll have a draft map, a list of controls and exceptions, and open questions with owners."
+      }
+     ]
+    },
+    {
+     "title": "Trigger, scope and outcome (0:10 to 0:20)",
+     "items": [
+      {
+       "id": "i12",
+       "type": "prompt",
+       "text": "What starts this process? Walk me through the last time it started.",
+       "detail": "Probes: Who noticed first? Was it a Darwinbox or Greenhouse event, an email request, a ticket, a calendar date? Is there more than one trigger?"
+      },
+      {
+       "id": "i13",
+       "type": "prompt",
+       "text": "Where does it end? What does 'done' look like, and who knows it's done?",
+       "detail": "Probes: What record, notification or system status shows completion? Who receives the output?"
+      },
+      {
+       "id": "i14",
+       "type": "prompt",
+       "text": "What happens just before and just after this process that belongs to someone else?",
+       "detail": "Capture the hand-offs in and out and the neighboring process ids, so lanes and controls are not duplicated."
+      },
+      {
+       "id": "i15",
+       "type": "prompt",
+       "text": "How many cases a year, and how long does one take from start to finish?",
+       "detail": "Probes: typical and worst case; volume by country; peak periods such as year-end, the compensation cycle or campus season."
+      }
+     ]
+    },
+    {
+     "title": "Walk the real flow (0:20 to 0:50)",
+     "items": [
+      {
+       "id": "i16",
+       "type": "prompt",
+       "text": "Take the most recent real case. What happened first, and who did it?",
+       "detail": "Write each step as verb plus object ('Validate offer approvals') in the lane of the role that does it. Probe: 'Is that what always happens, or what happened this time?'"
+      },
+      {
+       "id": "i17",
+       "type": "prompt",
+       "text": "Then what? Who gets it next, and how do they find out?",
+       "detail": "Probes: email, ticket, Darwinbox workflow, chat message, meeting. What do they need from the previous step that is sometimes missing?"
+      },
+      {
+       "id": "i18",
+       "type": "prompt",
+       "text": "Where does the work wait, and what is it waiting for?",
+       "detail": "Probes: approvals, documents from the employee, a vendor, a payroll cut-off, a country authority. How long is the typical wait?"
+      },
+      {
+       "id": "i19",
+       "type": "prompt",
+       "text": "Which systems do you touch at this step, and what do you enter or check?",
+       "detail": "Probes: Darwinbox, Greenhouse, payroll provider, LMS, stock administration platform, benefits portals, spreadsheets. Is anything re-keyed by hand? Who has access?"
+      },
+      {
+       "id": "i20",
+       "type": "prompt",
+       "text": "Where do spreadsheets, personal trackers or other workarounds come in?",
+       "detail": "Probes: Who owns that spreadsheet? Where is it stored? What happens when that person is on leave?"
+      },
+      {
+       "id": "i21",
+       "type": "prompt",
+       "text": "Here is what the current procedure says for this step. Which is right: the document or what you just described?",
+       "detail": "Record each difference as 'documented vs actual'. Do not resolve it in the room; it becomes an open question for the process owner."
+      },
+      {
+       "id": "i22",
+       "type": "prompt",
+       "text": "Where does work get sent back or redone, and why?",
+       "detail": "Probes: the top three reasons, how often, and who fixes it. Rework points are often where a control is missing."
+      }
+     ]
+    },
+    {
+     "title": "Decisions, controls and evidence (0:50 to 1:05)",
+     "items": [
+      {
+       "id": "i23",
+       "type": "prompt",
+       "text": "Where does someone make a decision or judgment call? What are the options, and who decides?",
+       "detail": "Draw a decision diamond with labeled exits. Probe: are the criteria written down or in someone's head?"
+      },
+      {
+       "id": "i24",
+       "type": "prompt",
+       "text": "Who approves, and what exactly do they check before approving?",
+       "detail": "Probes: delegation of authority and thresholds; what happens when the approver is away; can the requester approve their own request?"
+      },
+      {
+       "id": "i25",
+       "type": "prompt",
+       "text": "What stops a mistake getting through, and how would you know if something went wrong?",
+       "detail": "Classify each control as preventive or detective, and manual or automated. Note the frequency and who performs it."
+      },
+      {
+       "id": "i26",
+       "type": "prompt",
+       "text": "What evidence is left behind that this step happened correctly? Could you show an auditor in 10 minutes?",
+       "detail": "Probes: system log, signed form, approval record, email, report. Where is it stored and for how long?"
+      },
+      {
+       "id": "i27",
+       "type": "prompt",
+       "text": "Which legal deadlines or notices apply, and how do you track them?",
+       "detail": "Examples: I-9 Section 2 within 3 business days, final pay timing, statutory notices, works council hearing, union notification. Check against the country files."
+      },
+      {
+       "id": "i28",
+       "type": "prompt",
+       "text": "Who sees personal or sensitive data in this process, and should they?",
+       "detail": "Probes: health or family data, compensation, investigations; cross-border transfers to US reviewers (China PIPL, Vietnam PDPL, GDPR)."
+      }
+     ]
+    },
+    {
+     "title": "Exceptions and country variations (1:05 to 1:20)",
+     "items": [
+      {
+       "id": "i29",
+       "type": "prompt",
+       "text": "What are the most common exceptions, and how are they handled?",
+       "detail": "Probes: executives, Section 16 officers, interns, contingent workers, employees on leave, rehires, employees in a second country."
+      },
+      {
+       "id": "i30",
+       "type": "prompt",
+       "text": "Tell me about a case in the last year that went badly. What happened, and what changed afterwards?",
+       "detail": "No names. Look for missing controls, unclear ownership and legal near-misses."
+      },
+      {
+       "id": "i31",
+       "type": "prompt",
+       "text": "What is different in your country? Walk me through the steps that change.",
+       "detail": "Ask each country representative in turn. Probes: local approvals, forms and language, timing, authority filings, statutory registers."
+      },
+      {
+       "id": "i32",
+       "type": "prompt",
+       "text": "Which steps need a works council, union, employee representative or authority?",
+       "detail": "Probes: Germany §87, §99 and §102 BetrVG; China union notification before unilateral termination; Vietnam union in disciplinary meetings; Taiwan labor-management meeting approvals; India GRC or standing orders."
+      },
+      {
+       "id": "i33",
+       "type": "prompt",
+       "text": "If you could change one thing about this process, what would it be?",
+       "detail": "Record on the improvement list, not on the as-is map."
+      }
+     ]
+    },
+    {
+     "title": "Close and capture (1:20 to 1:30) and after",
+     "items": [
+      {
+       "id": "i34",
+       "type": "say",
+       "text": "Here's what I heard: the process starts when [trigger] and ends when [outcome]. It runs through [n] steps across [lanes], with [n] decisions and [n] controls. What did I get wrong or leave out?"
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Read back the open questions and the documented-versus-actual differences, each with an owner and a due date.",
+       "owner": "Facilitator",
+       "when": "1:25"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "Agree validation: the draft map goes out within 3 business days and participants comment within 5 business days.",
+       "owner": "Facilitator",
+       "when": "1:28"
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Clean the swimlane into standard notation (start, task, decision, end; one verb per task; every decision with labeled exits) and load it to the process record on the Processes page.",
+       "owner": "Scribe",
+       "when": "Day +2"
+      },
+      {
+       "id": "i38",
+       "type": "check",
+       "text": "Log missing controls, legal gaps and ownership disputes in the RAID log, and link them to the item.",
+       "owner": "Facilitator",
+       "when": "Day +2"
+      },
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "Set the item's Discover stage to done in the Master checklist only when the process owner has confirmed the validated map.",
+       "owner": "Process owner",
+       "when": "Day +8"
+      },
+      {
+       "id": "i40",
+       "type": "note",
+       "text": "The most common failure is documenting the ideal process instead of the real one. If the map has no exceptions, no waits and no workarounds, it is probably wrong."
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Ninety minutes is enough for one process if the scope is fixed beforehand. Split any process with more than about 25 steps or more than six lanes into two workshops.",
+    "Invite the people who do the work. Managers tend to describe the process as designed; practitioners describe the process as run.",
+    "The facilitator should not own the process. A neutral facilitator can ask 'why' without defending the current design.",
+    "Map the as-is first and keep improvements on a separate list. The Draft stage decides which improvements to adopt, with the owner and Legal.",
+    "Run by video with a shared whiteboard. For APAC or Israel variations, hold a short follow-up in local working hours rather than asking people to join late at night.",
+    "Use real cases with names removed and keep personal data out of the notes and board; the workshop record is a program document, not an HR case file.",
+    "Capture controls and evidence in the room. They are what Internal Audit samples at the audit readiness review on 24 September 2027 (M16)."
+   ],
+   "countryNotes": {
+    "us": "Capture federal timing controls (I-9 Section 2 within 3 business days, FMLA notices within 5 business days, COBRA notices) and steps where NLRA Section 7 rights affect conduct or confidentiality handling. Involve the SOX PMO for payroll, equity and disclosure processes.",
+    "us-ca": "Capture California variations such as final pay timing (Labor Code 201-203), meal and rest rules, paid sick leave, CCPA notice at collection and the harassment training cadence.",
+    "us-co": "Capture Colorado steps: same-day notice of promotional opportunities, post-selection notices within 30 days, HFWA documentation limits and FAMLI handling.",
+    "us-nc": "Capture where written advance notice of pay or policy changes is given (G.S. 95-25.13) and how WARN notices reach NC Commerce and local officials.",
+    "us-tx": "Capture Texas final pay timing (Labor Code 61.014) and the Texas Workforce Commission as the WARN dislocated-worker unit; otherwise the federal flow usually applies.",
+    "us-wa": "Capture pay ranges in postings, PFML notices within 5 business days, the 21-day personnel file and discharge-reason statement on request (HB 1308), and the I-9 inspection notice steps.",
+    "ca": "Map Ontario and BC variations separately where they differ: ESA notices, the Ontario 45-day response to interviewed applicants, joint health and safety committees, and BC pay transparency.",
+    "de": "Mark every step where the works council has rights (§87 co-determination, §99 consent to hires and transfers, §102 hearing before dismissal) and every wet-ink requirement (§623 BGB, fixed-term clauses). Keep workshop records anonymous so they are not used to assess individuals.",
+    "il": "Capture the pre-dismissal hearing, Hebrew-language documents and notices, reserve-duty protections and Form 101 at hire (verify details against the country file). Hold Israel follow-ups Sunday to Thursday.",
+    "in": "Capture Karnataka or Telangana state variations, domestic enquiry steps for discipline, full and final settlement within 2 working days under the Labour Codes, and POSH Internal Committee timelines.",
+    "tw": "Capture steps that need labor-management meeting approval (overtime, flexible hours), references to the filed work rules, Traditional Chinese forms and the LSA Art. 16 notice scale.",
+    "cn": "Capture union notification before unilateral termination (LCL Art. 43), democratic procedure for rule changes, social insurance and housing fund steps, Chinese-language forms and separate PIPL consent for transfers to US reviewers.",
+    "vn": "Capture union participation in disciplinary meetings for members, references to the registered internal labor regulations, Vietnamese minutes, provincial authority notices and PDPL handling of cross-border data."
+   },
+   "processes": [
+    "DS-08"
+   ],
+   "policies": []
+  },
+  {
+   "id": "T-PM-POLICY-REVIEW",
+   "name": "Policy review checklist",
+   "category": "Project",
+   "format": "checklist",
+   "purpose": "The checklist every reviewer uses in the Review stage to test a policy draft for completeness, legal accuracy, consistency, plain language, country addenda, controls, accessibility and a workable effective date. A draft enters its approval chain only when every applicable line is marked Pass or carries a logged exception with an owner and date.",
+   "audience": "Policy owner (runs the review and resolves comments); workstream lead (consistency); Employment counsel and local counsel (legal lines); regional and country HR leads (addenda and local gates); HR Change and Communications (plain language); accessibility reviewer; Privacy Office where personal data is processed.",
+   "when": "Review stage (2 weeks) after the draft is submitted. Wave 1 drafts are due 18 December 2026 (M06) and are reviewed 4 to 15 January 2027 so approvals close by 29 January (M07); Wave 2 and 3 drafts are reviewed after M10 (9 April 2027) and M13 (9 July 2027).",
+   "owner": "Employment counsel (legal lines, CC2); policy owner (overall completion); PMO (checks the record before the approval chain opens)",
+   "sections": [
+    {
+     "title": "Completeness and structure",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "The draft uses the standard policy template (T-POLICY) with every section completed or marked 'not applicable' with a reason."
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "The header shows policy id, title, version, owner role, approver role, tier, effective date, next review date and the jurisdictions covered."
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "Purpose and scope state who is covered (employees, interns, contingent workers, directors) and who is not."
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "Defined terms are used consistently and match the library glossary."
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Roles and responsibilities are written as roles, and each 'must' has an owner."
+      },
+      {
+       "id": "i6",
+       "type": "check",
+       "text": "Related policies, processes and register obligations are linked by id (for example POL-09, ER-03, R-xxx) and the links work."
+      },
+      {
+       "id": "i7",
+       "type": "check",
+       "text": "A redline against the previous version and a short summary of changes are attached; for a new policy, the summary explains what it replaces."
+      }
+     ]
+    },
+    {
+     "title": "Legal and regulatory",
+     "items": [
+      {
+       "id": "i8",
+       "type": "check",
+       "text": "Each jurisdiction's legal requirements for this topic are mapped to a clause, with the citation from the country file; any '(verify)' point is confirmed by local counsel or logged as an exception.",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i9",
+       "type": "check",
+       "text": "Every linked legally required register obligation (R-xxx) is met by the policy or by a named process.",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "Conduct, confidentiality, social media, recording and monitoring rules have been checked against NLRA Section 7 (Stericycle) for the US.",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i11",
+       "type": "check",
+       "text": "Confidentiality wording keeps the required carve-outs: SEC Rule 21F-17, DTSA immunity notice, California Gov Code 12964.5, Colorado POWR Act and Washington Silenced No More (RCW 49.44.211).",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i12",
+       "type": "check",
+       "text": "A non-retaliation statement and at least one reporting channel other than the direct manager are included where the topic allows complaints.",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i13",
+       "type": "check",
+       "text": "Where the policy processes personal data, a privacy notice reference is included for each regime that applies (GDPR, PIPL, DPDP, Vietnam PDPL, Israel privacy law, CCPA, BC PIPA).",
+       "owner": "Privacy Office"
+      },
+      {
+       "id": "i14",
+       "type": "check",
+       "text": "Public-company requirements are met where relevant: consistency with SEC filings (for example insider trading policy as 10-K Exhibit 19, clawback policy as Exhibit 97), Nasdaq rules and disclosure controls.",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i15",
+       "type": "check",
+       "text": "Export-control, data security and semiconductor-specific obligations that interact with this topic are referenced (for example deemed-export screening for hiring or access policies).",
+       "owner": "Trade Compliance"
+      }
+     ]
+    },
+    {
+     "title": "Consistency",
+     "items": [
+      {
+       "id": "i16",
+       "type": "check",
+       "text": "No conflict with the Code of Business Conduct (POL-01) or any other live policy; overlapping rules are cross-referenced rather than repeated.",
+       "owner": "Workstream lead"
+      },
+      {
+       "id": "i17",
+       "type": "check",
+       "text": "The steps the policy describes match the documented process (same roles, approvals, thresholds and timelines).",
+       "owner": "Workstream lead"
+      },
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "Approval thresholds match the delegation of authority, and HR systems (Darwinbox, Greenhouse, payroll, LMS) can support what the policy requires.",
+       "owner": "Workstream lead"
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "No conflict with existing works agreements, collective agreements, filed work rules, registered internal labor regulations or standing orders; where there is a conflict, the change route is identified.",
+       "owner": "Regional HR leads"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "Terms that affect pay, leave or benefits match plan documents, payroll configuration and offer letter templates.",
+       "owner": "Workstream lead"
+      }
+     ]
+    },
+    {
+     "title": "Plain language",
+     "items": [
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "Most sentences are under 25 words, in active voice, and the text reads at about a grade 9 to 10 level.",
+       "owner": "HR Change and Communications lead"
+      },
+      {
+       "id": "i22",
+       "type": "check",
+       "text": "'Must' is used for requirements and 'may' for permissions, consistently; 'should' is used only for guidance.",
+       "owner": "HR Change and Communications lead"
+      },
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "The hardest rules have a short example, and headings tell the reader what the section answers.",
+       "owner": "HR Change and Communications lead"
+      },
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "Procedural detail that changes often (forms, system steps, contacts) is moved to the process or a guideline, so the policy stays stable.",
+       "owner": "HR Change and Communications lead"
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "After plain-language edits, Employment counsel has re-checked that legal meaning did not change.",
+       "owner": "Employment counsel"
+      }
+     ]
+    },
+    {
+     "title": "Country addenda",
+     "items": [
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "For each of the 13 jurisdictions, there is either a country addendum or a recorded decision that none is needed.",
+       "owner": "Regional HR leads"
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "Each addendum says that it prevails over the global text where it gives more rights or where local law requires.",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Local language versions needed are listed (for example German, Hebrew, Traditional and Simplified Chinese, Vietnamese, French for Quebec, California 10%+ languages, Kannada or Telugu displays) with the prevailing language stated.",
+       "owner": "Country HR leads"
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "Every local gate is flagged with lead time: works council (de), democratic procedure (cn), internal labor regulation consultation and registration (vn), work rules filing and labor-management meeting (tw), standing orders (in), union or representative consultation (il, where applicable).",
+       "owner": "Country HR leads"
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "Local effective dates are set for jurisdictions where gates make them later than the global date.",
+       "owner": "Country HR leads"
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "Local counsel sign-off is recorded where the country file or Employment counsel requires it.",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "A bilingual reviewer has checked one translated version against the source for legal terms before all translations are ordered.",
+       "owner": "Country HR leads"
+      }
+     ]
+    },
+    {
+     "title": "Controls, evidence and accessibility",
+     "items": [
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Controls are defined for the key requirements: who checks what, how often, and what evidence is kept.",
+       "owner": "Policy owner"
+      },
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "Acknowledgment and training needs are stated (who, by when, which LMS assignment) and match the mandatory training matrix (POL-45).",
+       "owner": "Policy owner"
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Records created under the policy have retention periods consistent with HR Records Retention (POL-49).",
+       "owner": "Policy owner"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "The published version meets WCAG 2.1 AA: real headings, alt text for images and diagrams, sufficient contrast, simple tables and tagged PDFs.",
+       "owner": "Accessibility reviewer"
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Employees without regular computer access can get the policy (printed copy, posting, kiosk or manager briefing), consistent with Accessibility and Inclusion (POL-57).",
+       "owner": "Country HR leads"
+      }
+     ]
+    },
+    {
+     "title": "Effective date and readiness",
+     "items": [
+      {
+       "id": "i38",
+       "type": "check",
+       "text": "The effective date allows for every local gate, notice period and translation, and does not fall in a freeze window (21 December to 1 January; 5 to 14 February for China, Taiwan and Vietnam).",
+       "owner": "Policy owner"
+      },
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "Transition rules cover in-flight cases (for example open leave requests, pending investigations or bonus plan years already started).",
+       "owner": "Policy owner"
+      },
+      {
+       "id": "i40",
+       "type": "check",
+       "text": "Launch communications and manager talking points are drafted (T-PM-LAUNCH-COMMS) and the country launch checklists (T-PM-COUNTRY-LAUNCH) are opened.",
+       "owner": "HR Change and Communications lead"
+      },
+      {
+       "id": "i41",
+       "type": "check",
+       "text": "Documents to be retired on publication are listed, with their locations.",
+       "owner": "Policy owner"
+      },
+      {
+       "id": "i42",
+       "type": "check",
+       "text": "The next review date is no more than 12 months after the effective date, or earlier where law requires.",
+       "owner": "Policy owner"
+      },
+      {
+       "id": "i43",
+       "type": "check",
+       "text": "All review comments in Atlas are resolved or logged as exceptions with an owner and date, and each reviewer has recorded Pass in the item record.",
+       "owner": "PMO analyst"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Mark each line Pass, Fix or N/A. A Fix must be resolved, or logged as an exception with owner and date, before the item enters its approval chain; N/A needs a one-line reason.",
+    "Review in parallel, not in sequence. Legal, country, plain-language and accessibility reviewers all work in the same 2-week window and comment on the same draft.",
+    "Comment in Atlas, not by email, so comments and their resolution form part of the evidence record.",
+    "Privileged legal advice goes in a separate memo held by Legal. The checklist records only that the legal review was done and by which role.",
+    "Use the country files and the obligations register as the baseline of local requirements. Anything still marked '(verify)' at the end of Review needs local counsel or an exception.",
+    "Protect reviewer time in January: Wave 1 drafts arrive on 18 December, the year-end freeze runs to 1 January, and approvals must close by 29 January (M07)."
+   ],
+   "countryNotes": {
+    "us": "Check conduct and confidentiality rules against NLRA Section 7 (Stericycle), keep the Rule 21F-17 and DTSA language, confirm at-will statements are consistent across policies and offer letters, and check references to federal postings.",
+    "us-ca": "Confirm FEHA protected categories and the complaint-process elements of 2 CCR 11023, translation where 10%+ of a facility speaks another language, the Gov Code 12964.5 carve-out, LC 432.3 pay scale rules and the CCPA notice at collection.",
+    "us-co": "Confirm the POWR Act confidentiality carve-out (C.R.S. 24-34-407), EPEWA posting and promotion rules, HFWA terms and that HFWA notices are planned in English and any language spoken by 5%+ of the workforce.",
+    "us-nc": "Confirm that PTO forfeiture and bonus conditions are written and will be given in advance (G.S. 95-25.12, 95-25.13), and that any reduction in pay has at least one full pay period of written notice.",
+    "us-tx": "Confirm that the harassment policy reflects liability for employers of 1+ and for individual supervisors (Labor Code 21.141-21.142) and that deduction authorizations are in a language the employee understands.",
+    "us-wa": "Confirm the Silenced No More carve-out (RCW 49.44.211), the captive-audience rule (RCW 49.44.250), noncompete limits including ESHB 1155 from 30 June 2027, and pay transparency wording.",
+    "ca": "Review Ontario and BC addenda: Ontario disconnecting-from-work and electronic monitoring policy content, the OHSA harassment program (including virtual harassment), AODA, BC PIPA notices, and French versions for any Quebec-based staff (Bill 96).",
+    "de": "Identify co-determined content (§87(1) BetrVG, for example conduct rules, working time, monitoring tools, pay principles) and send it to the works council before approval. Require a German version, the AGG complaint office, the HinSchG channel and a GDPR Art. 13 notice.",
+    "il": "Require a Hebrew version, the sexual-harassment bylaw elements, the Amendment 13 privacy notice, and a check of any collective agreement or extension order that covers the topic (verify).",
+    "in": "Check consistency with certified or model standing orders, POSH Act policy elements and Internal Committee details, DPDP notice, the Labour Codes 'wages' definition where pay is involved, and bilingual display needs.",
+    "tw": "Require a Traditional Chinese version, flag content that must sit in the filed work rules (LSA Art. 70), note hours flexibilities that need labor-management meeting approval, and check the PDPA and the 2026 workplace bullying measures.",
+    "cn": "Require a Simplified Chinese version that prevails, flag rules affecting employees' vital interests for democratic procedure (LCL Art. 4), check separate PIPL consent for cross-border transfers, and make disciplinary grounds specific enough to support Art. 39.",
+    "vn": "Require a Vietnamese version, flag content that must be in the internal labor regulations for union consultation and registration (LC Arts. 118-119), include the sexual harassment section, and confirm there are no fines or pay cuts as discipline."
+   },
+   "processes": [
+    "DS-08"
+   ],
+   "policies": [
+    "POL-57",
+    "POL-49",
+    "POL-45"
+   ]
+  },
+  {
+   "id": "T-PM-APPROVAL-RECORD",
+   "name": "Approval and sign-off record",
+   "category": "Project",
+   "format": "form",
+   "purpose": "The evidence record for an item's approval chain: which version was approved, by whom, in what role, when, under which chain and step, with what conditions, and the outcome of any employee representative consultation or authority filing. It is generated from the Approvals page, completed where Atlas cannot capture a step, and exported as the evidence Internal Audit samples at the audit readiness review on 24 September 2027 (M16).",
+   "audience": "PMO document control (opens, checks and locks the record); approvers at each chain step; country HR leads (consultation and filing outcome); Employment counsel; Internal Audit and the external auditor (reviewers of evidence).",
+   "when": "Opened when an item moves from Review to Approve; each step completed within the 2-week Approve stage; consultation and filing fields completed before the local effective date; record locked when the final step closes and the approved version is published.",
+   "owner": "Program management office document control (CC4); business-as-usual owner after 1 October 2027: HR Policy and Governance (DS-08)",
+   "sections": [
+    {
+     "title": "Item and version",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Item id and name",
+       "detail": "Prefilled from the Master checklist."
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Item type and tier",
+       "detail": "Prefilled: type (Policy, Process, Program, Notice, Filing, Training, Control, Committee, Record) and tier (Legally required, Public-company driven, Semiconductor-specific, Best practice)."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Approval chain",
+       "detail": "Global policy / Process document / Legal obligation / Public company and semiconductor control / Project document. A change of chain after submission needs a PMO note with the reason."
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Version submitted",
+       "detail": "Version label (for example v2.0 RC1), link to the exact file and its document fingerprint (hash) generated by Atlas, so the approved and published versions can be matched."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Redline and summary of changes",
+       "detail": "Links to the redline against the previous approved version and the change summary."
+      },
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Jurisdictions and addenda included",
+       "detail": "List of the 13 jurisdiction ids covered, with the addenda and language versions attached to this submission."
+      },
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Review stage record",
+       "detail": "Link to the completed policy review checklist (T-PM-POLICY-REVIEW) or process validation; list open exceptions with owner and date."
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Submitted by (role) and date",
+       "detail": "Normally the item owner. Submission date starts the 2-week Approve stage clock."
+      }
+     ]
+    },
+    {
+     "title": "Step log",
+     "intro": "One block per step. Atlas fills most fields automatically; the PMO completes any manual fields.",
+     "items": [
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Step id and name",
+       "detail": "Prefilled from the chain, for example policy s3 'Legal review'."
+      },
+      {
+       "id": "i10",
+       "type": "field",
+       "text": "Approver role and approver",
+       "detail": "Role from the chain plus the named approver configured at M03. Names live in Atlas user records, not in this template."
+      },
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Delegate and delegation reference",
+       "detail": "Only where a delegate acts: delegation document or Atlas delegation entry, with its start and end dates."
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Decision",
+       "detail": "Approved / Approved with conditions / Sent back (reason required) / Recused (conflict of interest, delegate named) / Skipped (optional steps only, reason required)."
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Date and time (UTC) and method",
+       "detail": "Atlas e-approval / email approval attached by the PMO with full headers within 2 business days / wet-ink signature where local law requires it (scan attached)."
+      },
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Conditions and comments",
+       "detail": "Conditions must be specific, with owner and due date. Do not record legal advice here; reference the privileged memo held by Legal."
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "Rule 'all' steps: decision per region",
+       "detail": "For policy s4 (Regional HR review), one decision each from Americas, EMEA and APAC; the step completes only when all three approve."
+      },
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Conflict of interest declared",
+       "detail": "Yes / No. An approver who drafted the item or is personally affected recuses and a delegate approves."
+      }
+     ]
+    },
+    {
+     "title": "What each approver confirms",
+     "intro": "Approvers confirm these points by approving. The chain definitions come from project-core and are configured on the Approvals page.",
+     "items": [
+      {
+       "id": "i17",
+       "type": "check",
+       "text": "Global policy s1, Owner sign-off (Policy owner): the draft is complete, uses the standard template and includes every country addendum."
+      },
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "Global policy s2, Workstream review (Workstream lead): consistent with related policies and processes."
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "Global policy s3, Legal review (Employment counsel): legal requirements met in every jurisdiction; local counsel engaged where needed."
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "Global policy s4, Regional HR review (Regional HR leads, all): addenda are workable and consultation or filing needs are flagged."
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "Global policy s5, Employee representative consultation (Country HR lead, optional): outcome recorded in the consultation section, or step skipped with a note where not needed."
+      },
+      {
+       "id": "i22",
+       "type": "check",
+       "text": "Global policy s6, Final approval (Chief People Officer): approves publication and the global and local effective dates."
+      },
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "Process document s1 to s4: process owner confirms the flow matches how work is done, including exceptions; workstream lead checks hand-offs and the governing policy; Internal Audit or the SOX PMO reviews key or SOX-relevant controls (optional otherwise); Head of HR Operations approves publication and confirms systems and training are ready."
+      },
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "Legal obligation s1 to s3: item owner confirms the obligation is met and evidence is filed; Employment counsel or Compliance confirms the evidence satisfies the requirement and the next due date is set; country HR lead confirms local completion, language and posting or filing."
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "Public company and semiconductor control s1 to s3: control owner confirms design and evidence; SOX PMO or Trade Compliance confirms the control is designed effectively and testable; General Counsel or delegate approves for audit and disclosure purposes."
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "Project document s1 to s3: HR Program Manager confirms completeness and consistency with the plan; any steering committee member records the committee's decision; Chief People Officer gives final approval."
+      }
+     ]
+    },
+    {
+     "title": "Employee representative consultation and filings",
+     "intro": "Completed by the country HR lead for policy step s5, and for any other item that needs consultation or a filing before it takes effect locally.",
+     "items": [
+      {
+       "id": "i27",
+       "type": "field",
+       "text": "Consultation required?",
+       "detail": "Yes / No, with reason (for example 'no works council at this site', 'not a co-determined matter', 'not a rule affecting vital interests') / Not yet determined. Employment counsel confirms 'No' for de, cn, vn and tw."
+      },
+      {
+       "id": "i28",
+       "type": "field",
+       "text": "Jurisdiction and body",
+       "detail": "Works council (de) / employee congress or all employees, plus the union or employee representatives (cn) / grassroots trade union (vn) / labor-management meeting (tw) / GRC, works committee or union (in) / representative union under a collective agreement (il, where one exists) / joint health and safety committee (ca, safety items) / other."
+      },
+      {
+       "id": "i29",
+       "type": "field",
+       "text": "Legal basis",
+       "detail": "For example §87(1) no. 1 or no. 6 BetrVG; LCL Art. 4; LC 2019 Arts. 118-119; LSA Art. 70 and Art. 83; IR Code standing orders; Collective Agreements Law 1957. Mark '(verify)' if unconfirmed."
+      },
+      {
+       "id": "i30",
+       "type": "field",
+       "text": "Information provided",
+       "detail": "Date, documents and language version given to the body."
+      },
+      {
+       "id": "i31",
+       "type": "field",
+       "text": "Meetings held",
+       "detail": "Dates, attendee roles, minutes reference; for China include the sign-in sheet; for Vietnam the union's written opinion."
+      },
+      {
+       "id": "i32",
+       "type": "field",
+       "text": "Outcome",
+       "detail": "Agreed / Agreed with changes / Opinion recorded (no agreement required) / Objection: escalated / Conciliation board (Einigungsstelle) or arbitration / Pending."
+      },
+      {
+       "id": "i33",
+       "type": "field",
+       "text": "Changes made as a result",
+       "detail": "Link to the redline; if the changes are substantive, the chain restarts from the affected step."
+      },
+      {
+       "id": "i34",
+       "type": "field",
+       "text": "Filing or registration",
+       "detail": "Authority, date submitted, receipt or approval number, approval date. Taiwan: work rules filed with the local labor authority or Science Park Bureau. Vietnam: internal labor regulations registered with the provincial labor authority within 10 days of issuance, effective 15 days after the authority receives a complete dossier. India: standing orders certification where required."
+      },
+      {
+       "id": "i35",
+       "type": "field",
+       "text": "Publication and acknowledgment evidence",
+       "detail": "Posting photo or intranet notice, signed or electronic acknowledgment report. Required for China (publicity under democratic procedure) and Vietnam (posting at the workplace)."
+      },
+      {
+       "id": "i36",
+       "type": "field",
+       "text": "Local effective date",
+       "detail": "Cannot be earlier than consultation completion, filing or registration effect, and publication. Atlas blocks a Live status before this date."
+      }
+     ]
+    },
+    {
+     "title": "Final approval and publication",
+     "items": [
+      {
+       "id": "i37",
+       "type": "field",
+       "text": "Final decision and effective dates",
+       "detail": "Global effective date and each local effective date that differs."
+      },
+      {
+       "id": "i38",
+       "type": "field",
+       "text": "Published version and location",
+       "detail": "Version label and fingerprint must match the approved version; link to the Policy guide or Processes page."
+      },
+      {
+       "id": "i39",
+       "type": "field",
+       "text": "Superseded documents retired",
+       "detail": "List with locations and the date each was archived read-only."
+      },
+      {
+       "id": "i40",
+       "type": "field",
+       "text": "Retention",
+       "detail": "Kept for the period set in HR Records Retention (POL-49) for policy and approval records; prior versions archived read-only."
+      }
+     ]
+    },
+    {
+     "title": "Record integrity checks",
+     "items": [
+      {
+       "id": "i41",
+       "type": "check",
+       "text": "Every mandatory step is complete; every optional step is completed or skipped with a recorded reason.",
+       "owner": "PMO document control"
+      },
+      {
+       "id": "i42",
+       "type": "check",
+       "text": "No approver approved their own draft, and every delegate has a valid delegation reference.",
+       "owner": "PMO document control"
+      },
+      {
+       "id": "i43",
+       "type": "check",
+       "text": "No approval or launch is dated inside a freeze window unless the sponsor approved an exception, and the exception is attached.",
+       "owner": "PMO document control"
+      },
+      {
+       "id": "i44",
+       "type": "check",
+       "text": "The published file matches the approved fingerprint; any later change, other than non-substantive corrections logged by the PMO with the owner's agreement, restarted the chain.",
+       "owner": "PMO document control"
+      },
+      {
+       "id": "i45",
+       "type": "check",
+       "text": "Email approvals and wet-ink scans are attached within 2 business days of the decision.",
+       "owner": "PMO document control"
+      },
+      {
+       "id": "i46",
+       "type": "check",
+       "text": "The record is locked, exported as PDF to the evidence folder named by item id and jurisdiction, and the item is flagged for possible Internal Audit sampling.",
+       "owner": "PMO document control"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "The Atlas audit trail is the primary evidence. This template defines what the trail must contain and the export format for audit; do not keep a parallel spreadsheet of approvals.",
+    "Approvers approve a specific version. Any substantive change after a step restarts the chain from the earliest affected step; the PMO decides what is non-substantive and logs it with the owner's agreement.",
+    "Rule 'all' steps need a decision from each region, not one person speaking for all three.",
+    "Optional steps are completed or skipped with a reason. A silent skip of the employee representative consultation step is the finding auditors and local regulators look for first.",
+    "Keep consultation minutes in the original language with an English summary, and store filing receipts as issued. The local-language document is what an authority or court will read.",
+    "Email approvals are a fallback for approvers who cannot reach Atlas; attach the original message with headers, not a forwarded copy.",
+    "Internal Audit samples 40 items at M16. A record that passes the integrity checks at the time of approval avoids a scramble in September 2027."
+   ],
+   "countryNotes": {
+    "us": "There is no consultation step: mark s5 'Not required: no representative body'. For public-company items, the General Counsel step and SOX evidence standards apply, so keep the record ready for the external auditor's testing.",
+    "us-ca": "Mark s5 'Not required'. Attach evidence of translated versions where 2 CCR 11023 applies and the distribution and acknowledgment record for EEO and harassment policies.",
+    "us-co": "Mark s5 'Not required'. Keep training and acknowledgment records linked to POWR Act prevention steps for at least 5 years.",
+    "us-nc": "Mark s5 'Not required'. Record the date written notice of any pay, PTO or bonus change was given, at least one full pay period before the change took effect (G.S. 95-25.13).",
+    "us-tx": "Mark s5 'Not required'. Record the languages used for workers' compensation notices where the item covers them (28 TAC 110.101).",
+    "us-wa": "Mark s5 'Not required' unless a union represents the affected employees. Record that any employee meeting used to launch the item was not mandatory where it touched topics covered by RCW 49.44.250.",
+    "ca": "Mark s5 'Not required' outside unionized workplaces. For health and safety items, record consultation with the joint health and safety committee (20+ workers) or the health and safety representative, and the Ontario annual review date.",
+    "de": "Record the works council steps: date information was given, the co-determination right engaged (§87 BetrVG), the signed works agreement or regulation agreement, or the Einigungsstelle decision. The local effective date follows signature, and the works agreement must be made available in the workplace (§77(2)).",
+    "il": "Record whether a representative union exists for the bargaining unit and whether the item needs negotiation or consultation under a collective agreement (verify). Record the approved Hebrew version.",
+    "in": "Record standing orders certification or adoption of model standing orders where 300+ workers are employed, any GRC or works committee consultation, Internal Committee notification for POSH items, and bilingual display evidence.",
+    "tw": "Record the labor-management meeting resolution (date and minutes) where hours flexibilities are involved, the work rules filing date, the authority (local labor bureau or Science Park Bureau), the approval letter number and posting evidence.",
+    "cn": "Record each democratic procedure step: draft circulated to the employee congress or all employees, comments received, consultation with the union or employee representatives (minutes and sign-in sheets), final text, publication and signed acknowledgments. The Chinese version prevails.",
+    "vn": "Record union consultation minutes or written opinion, the registration dossier submitted to the provincial labor authority within 10 days of issuance, the receipt date, the effective date 15 days after a complete dossier is received, and workplace posting evidence."
+   },
+   "processes": [
+    "DS-08",
+    "ER-08"
+   ],
+   "policies": [
+    "POL-49"
+   ]
+  },
+  {
+   "id": "T-PM-STATUS",
+   "name": "Weekly status report",
+   "category": "Project",
+   "format": "report",
+   "purpose": "The weekly one-page report from the PMO to the sponsor, workstream leads and regional HR leads: overall RAG, progress by wave and workstream, approvals pending, overdue items, top risks and issues, decisions needed and next week's plan. Counts are generated from the Master checklist, Approvals and RAID log, and leads add short commentary, so there is one version of the truth that also feeds the steering committee pack.",
+   "audience": "Chief People Officer (sponsor); workstream leads (WS1 to WS6); cross-cutting leads (CC1 to CC4); regional and country HR leads; steering committee members (read-only); item owners (see their own overdue items).",
+   "when": "Weekly from 16 October 2026. Owners update the Master checklist by Wednesday close of business local time; PMO data snapshot Thursday 08:00 Pacific; lead commentary by Thursday 14:00 Pacific; published on Project HQ Friday 08:00 Pacific. Short reports only on 25 December 2026 and 1 January 2027 (year-end freeze).",
+   "owner": "HR Program Manager (CC4)",
+   "sections": [
+    {
+     "title": "Header and overall status",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Report date and week",
+       "detail": "For example 'Friday 22 January 2027; Wave 1, week 11 of 14'."
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Overall RAG",
+       "detail": "Green: next milestone on track. Amber: next milestone at risk, with a recovery plan that keeps it within the current wave. Red: a milestone will be missed without a sponsor or steering committee decision, extra resource or a change request."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Trend since last week",
+       "detail": "Improving / Stable / Worsening, with one reason."
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Headline",
+       "detail": "Three sentences at most: what moved, what is at risk, what is needed."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Next milestone and confidence",
+       "detail": "Milestone id, date and the measure, for example 'M06 Wave 1 drafts complete, 18 Dec 2026: 82% of Wave 1 drafts submitted, forecast 95% by the date'."
+      },
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Milestones in the next 8 weeks",
+       "detail": "Id, date, status (On track / At risk / Late / Done)."
+      }
+     ]
+    },
+    {
+     "title": "Progress by wave and workstream",
+     "items": [
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Items by stage for the current wave",
+       "detail": "Counts per workstream: Not started / Discover / Drafting / In review / In approval / Approved / Live / Not applicable. Generated from the Master checklist."
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Planned versus actual",
+       "detail": "Items that should have reached each stage by now under the Plan versus items that have, per workstream; shown as a percentage and a burn-up chart."
+      },
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Throughput this week",
+       "detail": "Items that moved forward a stage, items that moved back (sent back from review or approval)."
+      },
+      {
+       "id": "i10",
+       "type": "field",
+       "text": "Workstream RAG",
+       "detail": "WS1 to WS6, each with a one-line reason written by the lead. Amber or Red must name the recovery action and date."
+      },
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Cross-cutting RAG",
+       "detail": "CC1 Country implementation, CC2 Legal and compliance review, CC3 Change, communications and training, CC4 PMO."
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Country gate tracker",
+       "detail": "For the 13 jurisdictions: consultations not started / in progress / complete; filings or registrations submitted / approved; translations ordered / delivered; acknowledgment rate for items launched."
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Later waves",
+       "detail": "Readiness of the next wave: owners confirmed, workshops scheduled, baseline records refreshed."
+      }
+     ]
+    },
+    {
+     "title": "Approvals and overdue items",
+     "items": [
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Approvals pending",
+       "detail": "Count by chain and step; list every step waiting more than 5 business days with the approver role and days waiting."
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "Sent back this week",
+       "detail": "Item id, step and reason category (legal issue, missing addendum, inconsistency, incomplete template, other)."
+      },
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Overdue items",
+       "detail": "Item id, owner role, current stage, target date for the stage, days overdue and recovery date. Overdue means the target date for the current stage has passed without a status change."
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "At risk next week",
+       "detail": "Items whose stage target falls in the next 5 business days and have had no update in 5 business days."
+      },
+      {
+       "id": "i18",
+       "type": "field",
+       "text": "Stale records",
+       "detail": "Items with no update in the Master checklist for 10 or more business days, by workstream."
+      }
+     ]
+    },
+    {
+     "title": "Risks, issues and decisions",
+     "items": [
+      {
+       "id": "i19",
+       "type": "field",
+       "text": "Top risks",
+       "detail": "Up to five from the RAID log: id, title, likelihood and impact, trend, mitigation status, owner role."
+      },
+      {
+       "id": "i20",
+       "type": "field",
+       "text": "Top issues",
+       "detail": "Id, impact on milestones, action, owner role, due date."
+      },
+      {
+       "id": "i21",
+       "type": "field",
+       "text": "Decisions needed",
+       "detail": "What, options, PMO recommendation, who decides (HR Program Manager, sponsor or steering committee) and by when. Anything needed before the next steering committee goes to the sponsor this week."
+      },
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "Decisions made this week",
+       "detail": "RAID decision id, decision, who decided."
+      },
+      {
+       "id": "i23",
+       "type": "field",
+       "text": "Change requests",
+       "detail": "Raised, approved, rejected this week and open; link each to its form (T-PM-CHANGE-REQUEST)."
+      }
+     ]
+    },
+    {
+     "title": "Next week and asks",
+     "items": [
+      {
+       "id": "i24",
+       "type": "field",
+       "text": "Key activities next week",
+       "detail": "Discovery workshops, review deadlines, approvals due, consultations and filings, launches and briefings."
+      },
+      {
+       "id": "i25",
+       "type": "field",
+       "text": "External and local dates in the next 8 weeks",
+       "detail": "Statutory deadlines, authority meetings, works council meeting dates, freeze windows and local holidays."
+      },
+      {
+       "id": "i26",
+       "type": "field",
+       "text": "Asks of the sponsor and leads",
+       "detail": "Specific and dated, for example 'Sponsor: confirm Regional HR lead APAC backfill by 29 January'."
+      },
+      {
+       "id": "i27",
+       "type": "field",
+       "text": "Communications going out",
+       "detail": "From the communications calendar: audience, message, date."
+      }
+     ]
+    },
+    {
+     "title": "Production checklist",
+     "items": [
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Wednesday: PMO sends a reminder to owners with stage dates in the next 10 business days.",
+       "owner": "PMO analyst",
+       "when": "Wednesday"
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "Thursday 08:00 Pacific: take the data snapshot from the Master checklist, Approvals and RAID log; do not edit counts by hand.",
+       "owner": "PMO analyst",
+       "when": "Thursday"
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "Check each RAG against the definitions; challenge any workstream that stays Green while its overdue count rises.",
+       "owner": "HR Program Manager",
+       "when": "Thursday"
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "Confirm that every Red has been discussed with the sponsor before publication. There are no surprise Reds.",
+       "owner": "HR Program Manager",
+       "when": "Thursday"
+      },
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "Keep the body to one page; detail goes in the appendix generated from Atlas.",
+       "owner": "HR Program Manager",
+       "when": "Friday"
+      },
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Publish on Project HQ at 08:00 Pacific Friday, notify the distribution list, and archive the PDF with the week number.",
+       "owner": "PMO analyst",
+       "when": "Friday"
+      },
+      {
+       "id": "i34",
+       "type": "note",
+       "text": "Use roles and item ids in overdue lists. The report goes to a wide audience and is not a performance tool for individuals."
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "The report is only as good as the Master checklist. If owners don't update by Wednesday, the counts are wrong; the Wednesday reminder and the stale-record list are how the PMO keeps data current.",
+    "RAG is by definition, not by mood. Amber and Red always come with a recovery action and a date, and the PMO can override a workstream's self-assessed RAG with a note.",
+    "Watch for 'watermelon' reporting: green on the outside, red inside. Rising overdue counts, long approval waits or stalled country gates under a Green RAG are challenged before publication.",
+    "Executives read the headline and the decisions needed. Put the ask in the first five lines.",
+    "Use the same snapshot for the steering committee pack (T-PM-STEERCO) so there is never a second set of numbers.",
+    "During the freezes (21 December to 1 January, and 5 to 14 February for China, Taiwan and Vietnam), publish a short report focused on what resumes after the freeze."
+   ],
+   "countryNotes": {
+    "us": "Show public-company deadlines (10-K human capital disclosure, proxy, Form 4, SOX testing windows) as fixed external dates, and flag any SOX key control item that will not be ready for the external auditor's testing.",
+    "us-ca": "List California external dates in the next-8-weeks section: SB 294 notice by 1 February, Cal/OSHA 300A posting 1 February to 30 April, the pay data report in May and 1 January law changes.",
+    "us-co": "Show Colorado effective dates as external deadlines: 1 January rate and poster changes and, for bills without a safety clause, about 90 days after adjournment (12 August in 2026; verify the 2027 date).",
+    "us-nc": "Flag any planned launch that reduces pay, PTO or bonus terms, because written notice must go out at least one full pay period before it takes effect; otherwise report North Carolina within the US roll-up.",
+    "us-tx": "Report Texas within the US roll-up unless an item is at risk; Texas has few state-specific deadlines.",
+    "us-wa": "Show Washington effective dates (session laws usually in June or July, rate changes on 1 January) and the end of the pay-posting cure period on 27 July 2027.",
+    "ca": "Report Ontario and BC gates separately; show 1 March for Ontario written policies when the 1 January headcount is 25+, and 1 November for the BC pay transparency report.",
+    "de": "Show works council status for each German item (not started, informed, in negotiation, agreed, Einigungsstelle) and the dates of the next works council meetings.",
+    "il": "Collect Israel updates by Wednesday, since the work week ends on Thursday, and show holiday impacts (Passover in late April 2027 and the autumn holidays from early October 2027; verify dates).",
+    "in": "Show India bilingual display and standing-order items, and note Diwali and Karnataka or Telangana state holidays in the next-8-weeks section.",
+    "tw": "Show work rules filing status (drafted, filed, under review, approved, posted) and the next quarterly labor-management meeting; flag the Lunar New Year freeze from 5 to 14 February 2027.",
+    "cn": "Show the democratic procedure stage for each rule (draft circulated, consultation held, published, acknowledgment rate) and the Lunar New Year freeze.",
+    "vn": "Show internal labor regulation status (union consulted, dossier submitted, receipt date, effective date) and the Tet freeze from 5 to 14 February 2027."
+   },
+   "processes": [],
+   "policies": []
+  },
+  {
+   "id": "T-PM-STEERCO",
+   "name": "Steering committee pack and agenda",
+   "category": "Project",
+   "format": "agenda",
+   "purpose": "The standard pack and 90-minute agenda for the Project Atlas steering committee, built so the committee takes decisions on gates, change requests, red risks and escalations rather than hearing updates. It also sets the gate criteria for each gate milestone and the minimum content of minutes.",
+   "audience": "Steering committee members as set in the charter (typically the Chief People Officer as chair and sponsor, General Counsel or delegate, the Chief Compliance Officer, a Finance delegate, the HRIS director and the regional HR leads, with Internal Audit as observer); HR Program Manager (secretary); workstream leads and Employment counsel by invitation.",
+   "when": "Monthly, plus gate meetings at M02 (23 October 2026), M04 (6 November 2026), M07 (29 January 2027), M08 (12 February 2027), M11 (14 May 2027), M14 (13 August 2027), M16 (24 September 2027) and M18 (8 October 2027). No meetings 21 December to 1 January. Pack issued 3 business days before each meeting.",
+   "owner": "HR Program Manager (CC4), on behalf of the sponsor",
+   "sections": [
+    {
+     "title": "Pack preparation (T-5 to T-3)",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Take the pack data from the latest weekly status snapshot; do not run a separate data collection.",
+       "owner": "PMO analyst",
+       "when": "T-5"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "Ask each lead with a decision on the agenda for a one-page decision paper: issue, two or three options, impact on scope, schedule, cost and risk, recommendation, and what happens if no decision is made.",
+       "owner": "HR Program Manager",
+       "when": "T-5"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "Hold a 30-minute pre-brief with the sponsor to agree the agenda, the decisions sought and any sensitive items.",
+       "owner": "HR Program Manager",
+       "when": "T-4"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "Mark legal content that is privileged, keep the advice in a counsel memo, and make sure Employment counsel attends when it is discussed.",
+       "owner": "Employment counsel",
+       "when": "T-4"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Issue the pack on Project HQ 3 business days before the meeting and send the link; late papers move to the next meeting unless the chair agrees.",
+       "owner": "PMO analyst",
+       "when": "T-3"
+      },
+      {
+       "id": "i6",
+       "type": "check",
+       "text": "Confirm quorum: the chair or delegate plus at least half of members, including Legal for any decision that accepts legal risk.",
+       "owner": "PMO analyst",
+       "when": "T-1"
+      }
+     ]
+    },
+    {
+     "title": "Pack contents",
+     "items": [
+      {
+       "id": "i7",
+       "type": "check",
+       "text": "One-page summary: overall RAG, milestone confidence, decisions sought."
+      },
+      {
+       "id": "i8",
+       "type": "check",
+       "text": "Milestone tracker M01 to M18: planned date, forecast, status and gate criteria."
+      },
+      {
+       "id": "i9",
+       "type": "check",
+       "text": "Progress by wave and workstream: items by stage, planned versus actual, burn-up."
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "Country gate tracker for all 13 jurisdictions: consultations, filings and registrations, translations, local effective dates."
+      },
+      {
+       "id": "i11",
+       "type": "check",
+       "text": "Approvals pending over 5 business days and overdue items by workstream."
+      },
+      {
+       "id": "i12",
+       "type": "check",
+       "text": "Red and rising Amber risks with mitigation status, and issues needing escalation."
+      },
+      {
+       "id": "i13",
+       "type": "check",
+       "text": "Change requests for decision, each with its impact assessment (T-PM-CHANGE-REQUEST)."
+      },
+      {
+       "id": "i14",
+       "type": "check",
+       "text": "Resourcing and budget: FTE plan versus actual, spend versus budget, vendor usage (translation, local counsel)."
+      },
+      {
+       "id": "i15",
+       "type": "check",
+       "text": "Decision log since the last meeting and open actions."
+      }
+     ]
+    },
+    {
+     "title": "Standard agenda (90 minutes)",
+     "items": [
+      {
+       "id": "i16",
+       "type": "check",
+       "text": "0:00-0:05 Opening: quorum, conflicts of interest, approval of previous minutes, open actions.",
+       "owner": "Chair (Chief People Officer)",
+       "when": "0:00"
+      },
+      {
+       "id": "i17",
+       "type": "check",
+       "text": "0:05-0:15 Program status and milestone confidence; questions on the pack only, no re-presentation.",
+       "owner": "HR Program Manager",
+       "when": "0:05"
+      },
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "0:15-0:40 Gate decision (at gate meetings) or deep dive on one wave, workstream or country (at monthly meetings).",
+       "owner": "HR Program Manager and relevant lead",
+       "when": "0:15"
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "0:40-0:55 Change requests for decision.",
+       "owner": "HR Program Manager",
+       "when": "0:40"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "0:55-1:10 Red risks and escalations, including stalled consultations or filings.",
+       "owner": "Risk owners",
+       "when": "0:55"
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "1:10-1:20 Legal and regulatory changes affecting scope (new laws, rescissions, court decisions).",
+       "owner": "Employment counsel",
+       "when": "1:10"
+      },
+      {
+       "id": "i22",
+       "type": "check",
+       "text": "1:20-1:25 Resourcing and budget.",
+       "owner": "HR Program Manager",
+       "when": "1:20"
+      },
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "1:25-1:30 Recap of decisions and actions, and the key messages members cascade to their teams.",
+       "owner": "Chair (Chief People Officer)",
+       "when": "1:25"
+      }
+     ]
+    },
+    {
+     "title": "Gate criteria",
+     "items": [
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "M02 Charter approved (23 October 2026): scope, resourcing, budget and governance agreed; workstream leads and deputies named; country gate lead times included."
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "M04 Mobilize gate (6 November 2026): all 438 items have an owner, a current-state rating and a wave; plan v1.0 baselined; approval chains configured and tested (M03)."
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "M07 Wave 1 approvals complete (29 January 2027): every Wave 1 approval chain closed; works council and other consultations started where required."
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "M08 Wave 1 live (12 February 2027): Wave 1 published, communicated and evidenced in every jurisdiction or with an approved local date; wave retrospective held."
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "M11 Wave 2 live (14 May 2027) and M14 all required items live (13 August 2027): every legal, public-company and semiconductor item is live with evidence, or covered by an approved change request."
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "M16 Audit readiness review (24 September 2027): Internal Audit has sampled 40 items and confirmed evidence is complete, or the remediation plan is agreed."
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "M18 Project close (8 October 2027): close-out report and lessons learned approved; handover to business as usual complete (M17)."
+      },
+      {
+       "id": "i31",
+       "type": "note",
+       "text": "Gate decision options: Go / Go with conditions (each with owner and date) / Hold (named gap to close, new decision date) / Re-plan (change request required). Record the option and reasons in the minutes."
+      }
+     ]
+    },
+    {
+     "title": "Questions members should ask",
+     "items": [
+      {
+       "id": "i32",
+       "type": "question",
+       "text": "Which required items are we least confident will be live with evidence by 13 August 2027, and what would it take to change that?"
+      },
+      {
+       "id": "i33",
+       "type": "question",
+       "text": "Where are we waiting on an authority or employee representative body, and what is our fallback if that takes longer than planned?"
+      },
+      {
+       "id": "i34",
+       "type": "question",
+       "text": "Are any of the reported Greens hiding long approval waits, stale records or overdue reviews?"
+      },
+      {
+       "id": "i35",
+       "type": "question",
+       "text": "What legal risk are we accepting by deferring this item, who accepted it and is that documented?"
+      },
+      {
+       "id": "i36",
+       "type": "question",
+       "text": "Are owners and approvers getting the time they were promised, and which leader needs to hear from the sponsor?"
+      },
+      {
+       "id": "i37",
+       "type": "question",
+       "text": "Will each item have a business-as-usual owner and review date by 1 October 2027?"
+      }
+     ]
+    },
+    {
+     "title": "Minutes and follow-up",
+     "items": [
+      {
+       "id": "i38",
+       "type": "field",
+       "text": "Attendees and quorum",
+       "detail": "Roles present, apologies, delegates; whether quorum was met."
+      },
+      {
+       "id": "i39",
+       "type": "field",
+       "text": "Decisions",
+       "detail": "Each with a RAID decision id, the option chosen, conditions, and who decided. Decisions on the charter, plan and change requests are also recorded as step s2 of the project approval chain."
+      },
+      {
+       "id": "i40",
+       "type": "field",
+       "text": "Gate outcome",
+       "detail": "Go / Go with conditions / Hold / Re-plan, with conditions, owners and dates."
+      },
+      {
+       "id": "i41",
+       "type": "field",
+       "text": "Change request decisions",
+       "detail": "CR id and outcome; conditions."
+      },
+      {
+       "id": "i42",
+       "type": "field",
+       "text": "Actions",
+       "detail": "Owner role, due date; reviewed at the next meeting."
+      },
+      {
+       "id": "i43",
+       "type": "field",
+       "text": "Messages to cascade",
+       "detail": "Two or three sentences members share with their teams; HR Change and Communications adds them to the communications calendar."
+      },
+      {
+       "id": "i44",
+       "type": "check",
+       "text": "Circulate draft minutes within 2 business days; the chair approves them, and they are filed on Project HQ.",
+       "owner": "HR Program Manager",
+       "when": "T+2"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Decide, don't narrate. Issue the pack 3 business days ahead, assume it has been read, and spend at least 50 of the 90 minutes on decisions.",
+    "Every decision paper fits on one page and shows the option of doing nothing. If there is no decision, it belongs in the status report, not the agenda.",
+    "Gate meetings use the milestone criteria in project-core. 'Go with conditions' is acceptable only when each condition has an owner and a date that comes back to the committee.",
+    "Deferring a legally required item is a risk acceptance, not a scheduling choice. Employment counsel states the exposure in writing and the committee minutes who accepted it.",
+    "Plan around the calendar: no meeting during the year-end freeze, and the M08 gate on 12 February 2027 falls inside the Lunar New Year freeze, so APAC gives a written update by 4 February.",
+    "Use the same numbers as the weekly status report. A second set of numbers in the pack destroys trust in both."
+   ],
+   "countryNotes": {
+    "us": "Report public-company items (SOX controls, SEC disclosures, Nasdaq rules, insider trading, clawback) as their own line, given General Counsel and Audit Committee interest, and flag anything that affects the 10-K or proxy timetable.",
+    "us-ca": "Report California items with fixed dates (SB 294 notice by 1 February, pay data report in May) and items with high litigation exposure, such as wage and hour items with PAGA risk, as gate considerations.",
+    "us-co": "Report Colorado pay transparency and POWR Act items separately while open, because penalties apply per posting or violation.",
+    "us-nc": "Escalate North Carolina only when a pay, PTO or bonus change risks breaching the advance written notice rule; otherwise include it in the US roll-up.",
+    "us-tx": "Include Texas in the US roll-up; there is no state-level gate to report.",
+    "us-wa": "Report Washington pay-posting exposure (class actions since Branson, 2025) and mid-year law changes as standing risks until the relevant items are live.",
+    "ca": "Report Ontario and BC readiness separately, and bring any decision on French versions for Quebec-based staff (Bill 96) to the committee.",
+    "de": "Report the works council status of each German item. The committee decides escalations when negotiations stall, including accepting a later local effective date or going to the Einigungsstelle.",
+    "il": "Report Hebrew versions and any union or collective agreement constraints (verify), and the effect of reserve duty and holidays on capacity.",
+    "in": "Report standing-order status and changes to state rules under the Labour Codes (Karnataka, Telangana) as legal-change risks.",
+    "tw": "Report work rules filing and approval status. The committee accepts that Taiwan's local effective date follows authority approval and posting.",
+    "cn": "Report democratic procedure status. The committee must not approve a China effective date before the procedure, publication and acknowledgments are complete.",
+    "vn": "Report internal labor regulation consultation and registration status. The local effective date is 15 days after the authority receives a complete dossier, so the committee plans Vietnam launches accordingly."
+   },
+   "processes": [],
+   "policies": []
+  },
+  {
+   "id": "T-PM-CHANGE-REQUEST",
+   "name": "Change request form",
+   "category": "Project",
+   "format": "form",
+   "purpose": "Controls changes to Project Atlas scope, schedule, resources or budget once plan v1.0 is baselined at the Mobilize gate on 6 November 2026 (M04). Each request is described, assessed for impact, consulted on and decided at the right level, and the decision is applied to the Plan, Master checklist and RAID log.",
+   "audience": "Anyone on the program can raise a request; the PMO assesses; workstream leads, Employment counsel, regional HR leads and Finance are consulted; the HR Program Manager, Chief People Officer or steering committee decides, according to the thresholds below.",
+   "when": "Any time after 6 November 2026 that a change is proposed to baselined scope, wave allocation, milestone dates, resourcing, budget or approach, including when a new law, audit finding or business change adds, removes or alters an item. PMO assessment within 5 business days (2 if urgent).",
+   "owner": "Program management office (CC4); decisions follow the project approval chain",
+   "sections": [
+    {
+     "title": "Request",
+     "items": [
+      {
+       "id": "i1",
+       "type": "field",
+       "text": "Change request id",
+       "detail": "CR-001 onwards, assigned by the PMO."
+      },
+      {
+       "id": "i2",
+       "type": "field",
+       "text": "Title",
+       "detail": "Short and specific, for example 'Move POL-38 country addenda for de and cn from W1 to W2'."
+      },
+      {
+       "id": "i3",
+       "type": "field",
+       "text": "Raised by (role) and date"
+      },
+      {
+       "id": "i4",
+       "type": "field",
+       "text": "Type of change",
+       "detail": "Scope: add / remove / split / merge items, or change jurisdiction coverage. Schedule: move items between waves, move a milestone, change stage dates. Resource: add, remove or reallocate people, local counsel or translation capacity. Budget. Approach or tooling."
+      },
+      {
+       "id": "i5",
+       "type": "field",
+       "text": "Description",
+       "detail": "What changes, from what to what, in plain language."
+      },
+      {
+       "id": "i6",
+       "type": "field",
+       "text": "Reason and trigger",
+       "detail": "New law or legal change / audit or regulator finding / business change (acquisition, new site, reorganization) / dependency slip / capacity / consultation or filing delay / error in the baseline / other."
+      },
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Items affected",
+       "detail": "Item ids, workstreams and jurisdictions."
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Decision needed by",
+       "detail": "Date and why, for example 'before the Wave 2 start on 15 February 2027' or 'before the works council meeting on [date]'."
+      }
+     ]
+    },
+    {
+     "title": "Impact assessment",
+     "items": [
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Scope impact",
+       "detail": "Number of items added, removed or moved, by wave and tier."
+      },
+      {
+       "id": "i10",
+       "type": "field",
+       "text": "Schedule impact",
+       "detail": "Milestones affected (M-ids), effect on stage dates and the critical path, and country gate lead times."
+      },
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Resource impact",
+       "detail": "Person-days by role and workstream; vendor hours (translation, local counsel)."
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Budget impact",
+       "detail": "USD estimate; within or outside the approved contingency."
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Legal and compliance risk",
+       "detail": "Exposure if the change is approved and if it is not; required for any change that removes or defers a legally required, public-company or semiconductor item."
+      },
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Country impact",
+       "detail": "Jurisdictions affected; whether consultation, filing, registration or translation must be redone."
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "Dependencies",
+       "detail": "Other items, other change requests, system changes."
+      },
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Options considered",
+       "detail": "At least: do nothing, the proposed change, and one alternative, each with pros and cons."
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "PMO recommendation",
+       "detail": "Approve / Approve with conditions / Reject / Defer, with a one-paragraph rationale."
+      }
+     ]
+    },
+    {
+     "title": "Consultation",
+     "items": [
+      {
+       "id": "i18",
+       "type": "field",
+       "text": "Workstream lead view",
+       "detail": "Required for every request affecting the workstream's items."
+      },
+      {
+       "id": "i19",
+       "type": "field",
+       "text": "Employment counsel view",
+       "detail": "Required for removing or deferring any required item, and for scope changes driven by law."
+      },
+      {
+       "id": "i20",
+       "type": "field",
+       "text": "Regional HR lead view",
+       "detail": "Required for any change to jurisdiction coverage or to local dates."
+      },
+      {
+       "id": "i21",
+       "type": "field",
+       "text": "Finance view",
+       "detail": "Required for budget changes."
+      },
+      {
+       "id": "i22",
+       "type": "field",
+       "text": "Internal Audit or SOX PMO view",
+       "detail": "Required for changes to control items or to the audit readiness scope at M16."
+      }
+     ]
+    },
+    {
+     "title": "Decision authority",
+     "items": [
+      {
+       "id": "i23",
+       "type": "note",
+       "text": "HR Program Manager decides: moves within a wave that do not affect a milestone, swaps of items of similar effort, and changes of up to 5 person-days."
+      },
+      {
+       "id": "i24",
+       "type": "note",
+       "text": "Chief People Officer decides: moving items between waves, a milestone slip of up to 2 weeks that does not move a gate milestone, and budget changes within the approved contingency."
+      },
+      {
+       "id": "i25",
+       "type": "note",
+       "text": "Steering committee decides: any change to a gate milestone (M02, M04, M07, M08, M11, M14, M16, M18), removing a required item or deferring it beyond 13 August 2027 (M14), budget beyond contingency, and adding or removing a jurisdiction."
+      },
+      {
+       "id": "i26",
+       "type": "note",
+       "text": "Urgent changes: the sponsor may approve an interim decision by email; the steering committee ratifies it at its next meeting."
+      }
+     ]
+    },
+    {
+     "title": "Decision",
+     "items": [
+      {
+       "id": "i27",
+       "type": "field",
+       "text": "Decision",
+       "detail": "Approved / Approved with conditions / Rejected / Deferred to [date] / Withdrawn."
+      },
+      {
+       "id": "i28",
+       "type": "field",
+       "text": "Decided by (role) and date",
+       "detail": "For steering committee decisions, the minutes reference and RAID decision id."
+      },
+      {
+       "id": "i29",
+       "type": "field",
+       "text": "Conditions",
+       "detail": "Each with an owner role and date."
+      },
+      {
+       "id": "i30",
+       "type": "field",
+       "text": "Rationale",
+       "detail": "One or two sentences, including any accepted legal risk and who accepted it."
+      },
+      {
+       "id": "i31",
+       "type": "field",
+       "text": "Approval chain record",
+       "detail": "Link to the project chain record (PMO review, steering committee, sponsor approval) where the change alters the charter or plan baseline."
+      }
+     ]
+    },
+    {
+     "title": "Implementation",
+     "items": [
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "Update the Plan and re-baseline with a new plan version number (v1.1, v1.2 and so on) where dates move.",
+       "owner": "PMO analyst"
+      },
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Update the Master checklist: wave, owner, target stage dates and scope notes for every affected item.",
+       "owner": "PMO analyst"
+      },
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "Update the RAID log: close or add risks, record the decision, and link the change request.",
+       "owner": "PMO analyst"
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Adjust approval chains, country launch checklists and the communications calendar if affected.",
+       "owner": "HR Program Manager"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "Tell affected owners, approvers and regional HR leads within 2 business days of the decision.",
+       "owner": "HR Program Manager"
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Show the change in the next weekly status report and close the request once all updates are done.",
+       "owner": "PMO analyst"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Baseline first. Before plan v1.0 is approved at M04, changes are made directly; after 6 November 2026, any change to wave, milestone, scope, resources or budget needs a change request.",
+    "Keep decisions at the lowest level that can make them. The thresholds exist so that most requests are decided within a week without waiting for the steering committee.",
+    "Removing or deferring a legally required item is a decision to accept risk. Employment counsel describes the exposure in writing, and the steering committee minutes who accepted it.",
+    "A new law that adds an obligation is a change request, not an issue. Legal changes flagged in the library's research watchlist should arrive here with the item ids they affect.",
+    "Batch small requests for the monthly steering committee; use the urgent route only when waiting would cause a missed legal deadline or a gate failure.",
+    "Keep the change log on Project HQ. The count of requests raised, approved and open is part of the weekly status report and the close-out report."
+   ],
+   "countryNotes": {
+    "us": "Federal rule changes and rescissions (for example EEO-1 reporting, verify current status) and new SEC or Nasdaq requirements arrive as change requests; assess public-company items with the General Counsel's delegate.",
+    "us-ca": "California laws usually take effect on 1 January; raise change requests for new California requirements by October so items can be updated before the effective date.",
+    "us-co": "Colorado bills without a safety clause take effect about 90 days after the session ends (12 August in 2026; verify for 2027). Raise the request when the bill is signed, not when it takes effect.",
+    "us-nc": "Any change that moves the effective date of a pay, PTO or bonus rule must still allow at least one full pay period of written advance notice (G.S. 95-25.13).",
+    "us-tx": "The Texas legislature meets in odd years, and the 2027 regular session runs from January to late May; new laws commonly take effect on 1 September (verify), so expect any resulting requests in Wave 3.",
+    "us-wa": "Washington session laws usually take effect in June or July; plan for requests to adjust Wave 3 items after the 2027 session.",
+    "ca": "Ontario's Working for Workers acts and BC changes arrive regularly; raise a scope request if Quebec headcount appears, because French-language requirements and OQLF registration at 25+ employees would then apply.",
+    "de": "A change to a co-determined item after the works council has agreed it reopens consultation; include the additional works council lead time in the schedule impact.",
+    "il": "Assess schedule impacts against Israeli holidays and reserve-duty absences, and include Hebrew re-translation effort in the resource impact.",
+    "in": "State rules under the four Labour Codes (Karnataka, Telangana) are still being notified; expect requests when rules or the Karnataka IT exemption status change (verify).",
+    "tw": "A change after the work rules have been filed requires refiling the amended rules and waiting for authority approval; include that time in the schedule impact.",
+    "cn": "A change to a rule after democratic procedure means repeating the procedure for the changed provisions, then publishing again and collecting acknowledgments; include that lead time.",
+    "vn": "A change after registration means consulting the union again and re-registering the internal labor regulations, which take effect 15 days after the authority receives a complete dossier."
+   },
+   "processes": [],
+   "policies": []
+  },
+  {
+   "id": "T-PM-COUNTRY-LAUNCH",
+   "name": "Country launch checklist",
+   "category": "Project",
+   "format": "checklist",
+   "purpose": "Takes an approved policy, process or obligation live in one jurisdiction: local plan, employee representative consultation, translation, filing or registration, posting, acknowledgment, local manager briefing and evidence. An item is Live in a jurisdiction only when every applicable line here is done or marked not applicable with a reason.",
+   "audience": "Country HR leads (complete one checklist per item per jurisdiction); regional HR leads (assure); Employment counsel and local counsel; HR Change and Communications; LMS administrators; PMO (checks evidence before setting the item to Live).",
+   "when": "Opened when an item enters Review (long-lead gates such as works council consultation, democratic procedure, work rules filing and internal labor regulation registration start then); completed in the Go live week. Wave live milestones: 12 February 2027 (M08), 14 May 2027 (M11), 13 August 2027 (M14).",
+   "owner": "Country implementation (CC1), led by the regional HR leads",
+   "sections": [
+    {
+     "title": "Plan the local launch",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Confirm the local scope: which entity, sites and employee groups are covered, and whether the item applies at the local headcount (for example Ontario 25+, Taiwan work rules 30+, Vietnam internal labor regulations 10+, India standing orders 300+).",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "Confirm the country addendum and the global text approved in the approval record (T-PM-APPROVAL-RECORD).",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "Decide whether the change is less favorable to employees in any respect; if so, get Employment counsel's view on consent, notice or consultation before going further.",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "List the local gates that apply (consultation, filing or registration, translation, posting) with their lead times, and record them on the Countries page.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Work back from the target date to set the local effective date, allowing for each gate, notice periods, freeze windows (21 December to 1 January; 5 to 14 February for China, Taiwan and Vietnam) and local holidays.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i6",
+       "type": "check",
+       "text": "Set up the LMS assignment rule for the jurisdiction (population, language version, due date) and test it with one record.",
+       "owner": "LMS administrator"
+      },
+      {
+       "id": "i7",
+       "type": "check",
+       "text": "Confirm who in the country signs off each line of this checklist and who holds the evidence.",
+       "owner": "Regional HR lead"
+      }
+     ]
+    },
+    {
+     "title": "Consultation and employee representatives",
+     "items": [
+      {
+       "id": "i8",
+       "type": "check",
+       "text": "Germany: inform the works council early; where a §87 BetrVG right applies, negotiate and sign a works agreement (or obtain an Einigungsstelle decision) before the item takes effect; observe the §99 or §102 process where hires, transfers or dismissals are involved.",
+       "owner": "Country HR lead de"
+      },
+      {
+       "id": "i9",
+       "type": "check",
+       "text": "China: run democratic procedure for rules affecting employees' vital interests: discussion by the employee congress or all employees, consultation with the union or employee representatives, final text, then publication with signed acknowledgments.",
+       "owner": "Country HR lead cn"
+      },
+      {
+       "id": "i10",
+       "type": "check",
+       "text": "Vietnam: consult the grassroots union (where one exists) on content that belongs in the internal labor regulations, salary scales, bonus rules or performance criteria, and keep its written opinion.",
+       "owner": "Country HR lead vn"
+      },
+      {
+       "id": "i11",
+       "type": "check",
+       "text": "Taiwan: obtain a labor-management meeting resolution where the item changes overtime, flexible hours or other LSA flexibilities, and keep the minutes.",
+       "owner": "Country HR lead tw"
+      },
+      {
+       "id": "i12",
+       "type": "check",
+       "text": "India: consult the Grievance Redressal Committee or works committee where the item affects their remit, and notify the POSH Internal Committee for harassment items.",
+       "owner": "Country HR lead in"
+      },
+      {
+       "id": "i13",
+       "type": "check",
+       "text": "Israel: confirm whether a representative union or collective agreement covers the affected employees and, if so, complete any required negotiation or consultation (verify).",
+       "owner": "Country HR lead il"
+      },
+      {
+       "id": "i14",
+       "type": "check",
+       "text": "Canada: for health and safety items, consult the joint health and safety committee (20+ workers) or the health and safety representative.",
+       "owner": "Country HR lead ca"
+      },
+      {
+       "id": "i15",
+       "type": "check",
+       "text": "Record the outcome, meeting dates and minutes in the consultation section of the approval record before setting a local effective date.",
+       "owner": "Country HR lead"
+      }
+     ]
+    },
+    {
+     "title": "Translation and language versions",
+     "items": [
+      {
+       "id": "i16",
+       "type": "check",
+       "text": "Order translations only after the source text is legally approved, using the program glossary and an approved vendor.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i17",
+       "type": "check",
+       "text": "Produce the required versions: German (de), Hebrew and Arabic where employees need it (il), Traditional Chinese (tw), Simplified Chinese (cn), Vietnamese (vn), French for any Quebec-based staff (ca), California languages spoken by 10%+ of a facility for EEO and harassment policies (us-ca), English plus Kannada or Telugu for Indian statutory displays (in).",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i18",
+       "type": "check",
+       "text": "Have a bilingual HR reviewer and, for legal terms, local counsel check the translation against the source.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "State which language version prevails, consistent with local law (for example Chinese in China, Vietnamese in Vietnam).",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "Load each language version to the Policy guide and LMS with the same version number as the source.",
+       "owner": "LMS administrator"
+      }
+     ]
+    },
+    {
+     "title": "Filing, registration and posting",
+     "items": [
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "Taiwan: file amended work rules with the local labor authority (the Science Park Bureau for Hsinchu Science Park sites), record the approval letter number and post the approved rules.",
+       "owner": "Country HR lead tw"
+      },
+      {
+       "id": "i22",
+       "type": "check",
+       "text": "Vietnam: register the internal labor regulations with the provincial labor authority within 10 days of issuance; the regulations take effect 15 days after the authority receives a complete dossier; branches in other provinces send the registered regulations to their local authority.",
+       "owner": "Country HR lead vn"
+      },
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "India: certify standing orders or adopt the model standing orders where 300+ workers are employed (verify the Karnataka IT exemption status), and display statutory abstracts in English and the local language.",
+       "owner": "Country HR lead in"
+      },
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "Germany: make works agreements available in the workplace or on the intranet (§77(2) BetrVG) and update statutory postings (ArbZG, AGG, MuSchG) in German.",
+       "owner": "Country HR lead de"
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "US federal and state: update required posters and electronic postings for remote employees, including state notices for each state where staff work.",
+       "owner": "Country HR lead us"
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "Ontario: give employees a copy of new or changed written policies required under the ESA (disconnecting from work, electronic monitoring) within 30 days (verify), and post OHSA policies where required.",
+       "owner": "Country HR lead ca"
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "China and Vietnam: post the published rules at the workplace and on the intranet, and keep dated photos or screenshots as evidence.",
+       "owner": "Country HR lead"
+      }
+     ]
+    },
+    {
+     "title": "Publish, acknowledge and brief",
+     "items": [
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Publish the local version on the Policy guide or Processes page and archive the superseded local documents read-only.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "Send the launch email (T-PM-LAUNCH-COMMS) in the local language, in local working hours, not on a public holiday or a Friday afternoon.",
+       "owner": "HR Change and Communications lead"
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "Brief local managers 2 business days before the employee email, in the local language where needed, using the manager talking points.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "Assign the acknowledgment in the LMS; target 98% within 30 days, with escalation to managers at 30 days and to the regional HR lead at 45 days.",
+       "owner": "LMS administrator"
+      },
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "Collect signed acknowledgments where local law or practice needs them (China, Vietnam), using e-signature where acceptable and wet ink where not.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Give employees without regular computer access a printed copy or briefing and record it.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "Hold an HRBP drop-in or Q&A within 2 weeks and feed new questions into the FAQ.",
+       "owner": "Country HR lead"
+      }
+     ]
+    },
+    {
+     "title": "Evidence and close",
+     "items": [
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "File the evidence pack in the evidence folder named by item id and jurisdiction: approval record, consultation minutes, filing receipts, translations, posting photos or screenshots, briefing attendance and acknowledgment report.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "Regional HR lead reviews the evidence pack and confirms it is complete.",
+       "owner": "Regional HR lead"
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Set the item to Live for this jurisdiction in the Master checklist, with the local effective date.",
+       "owner": "PMO analyst"
+      },
+      {
+       "id": "i38",
+       "type": "check",
+       "text": "Log any open point (for example acknowledgment below target, authority approval pending) in the RAID log with owner and date.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "Set the local review date and name the local business-as-usual owner in the item record.",
+       "owner": "Country HR lead"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Start long-lead gates during Review, not after approval. Works council negotiations, democratic procedure, work rules filing and internal labor regulation registration can each take longer than the 1-week Go live stage.",
+    "Approval is global; going live is local. Atlas shows an item as Live in a jurisdiction only when this checklist is complete there, and the master status rolls up from the 13 jurisdictions.",
+    "Never announce a local effective date before the local gates are complete. In China, Taiwan and Vietnam a rule that skipped its gate cannot support discipline.",
+    "Wave 1 goes live on 12 February 2027, inside the Lunar New Year and Tet freeze. Plan China, Taiwan and Vietnam Wave 1 launches to complete by 4 February 2027 or to start on 15 February with an approved local date.",
+    "Translate once, from the approved source. Translating drafts that later change is the most common cause of rework and mismatched versions.",
+    "Evidence is the deliverable. Internal Audit samples 40 items at M16, and a missing receipt or minutes file counts as not done."
+   ],
+   "countryNotes": {
+    "us": "No consultation is required. Update federal postings (EEOC Know Your Rights, FLSA, FMLA, USERRA, EPPA, OSHA) with electronic access for remote staff, keep rules consistent with NLRA Section 7, and use electronic acknowledgment.",
+    "us-ca": "Translate EEO and harassment policies into any language spoken by 10%+ of a facility (2 CCR 11023), distribute them with acknowledgment, and give the LC 2810.5 and SB 294 notices in the required languages.",
+    "us-co": "Give HFWA notices in English and any language spoken by 5%+ of the workforce, update the COMPS and Workplace Public Health Rights posters, and keep acknowledgment records for at least 5 years to support the POWR Act defense.",
+    "us-nc": "Give written notice of any pay, PTO or bonus change at least one full pay period before it takes effect (G.S. 95-25.13) and keep signed or electronic acknowledgments; Spanish posters are available from NCDOL.",
+    "us-tx": "Post workers' compensation notices in English, Spanish and any other language common to the workforce (28 TAC 110.101); otherwise follow the US federal steps.",
+    "us-wa": "Keep manager briefings to policy content: meetings on political, religious or union topics must be voluntary (RCW 49.44.250). Post I-9 inspection notices in English and the five most common other Washington languages from 1 October 2026, and update L&I and ESD posters.",
+    "ca": "English is fine for Ontario and BC, but Quebec-based staff need French versions (Bill 96). Give Ontario employees copies of required written policies within 30 days (verify), post OHSA documents, and give BC PIPA notices where personal data is involved.",
+    "de": "Involve the works council early and allow 8 to 12 weeks for consultation and a possible Einigungsstelle (verify for each topic). Publish in German, make works agreements available (§77(2) BetrVG), and do not go live on a co-determined matter before agreement.",
+    "il": "Provide Hebrew versions (Arabic where employees need them), post the sexual-harassment bylaw summary in Hebrew, and schedule launches Sunday to Thursday outside the Jewish holidays (verify dates).",
+    "in": "Display statutory abstracts, the POSH policy and Internal Committee details in English and Kannada or Telugu, keep standing orders consistent (verify the Karnataka IT exemption), and avoid launching in Diwali week.",
+    "tw": "File amended work rules with the local labor authority or the Science Park Bureau and post them, get labor-management meeting resolutions for hours flexibilities, publish a Traditional Chinese version, and avoid 5 to 14 February 2027.",
+    "cn": "Complete democratic procedure (employee congress or all employees, consultation with the union or representatives), publish with signed acknowledgments, keep minutes and sign-in sheets, make the Simplified Chinese version prevail, and avoid the Lunar New Year freeze.",
+    "vn": "Consult the grassroots union, register the internal labor regulations within 10 days of issuance (effective 15 days after a complete dossier is received), post them at the workplace, publish a Vietnamese version, and avoid the Tet freeze."
+   },
+   "processes": [
+    "DS-08",
+    "ER-08",
+    "PD-06"
+   ],
+   "policies": [
+    "POL-45"
+   ]
+  },
+  {
+   "id": "T-PM-LAUNCH-COMMS",
+   "name": "Policy launch email and manager talking points",
+   "category": "Project",
+   "format": "script",
+   "purpose": "The standard launch package for an approved policy: the employee email, manager talking points, what managers should not say and the employee FAQ, with [Placeholders] to complete for each policy and country. It makes every launch consistent, plain and legally safe, and it drives the acknowledgment that counts as evidence.",
+   "audience": "HR Change and Communications lead (prepares and localizes); policy owner and Employment counsel (approve the summary and FAQ answers); people managers (deliver talking points); country HR leads (local versions and timing); all employees in scope (receive the email).",
+   "when": "Go live stage, after final approval and after local gates are complete. Managers are briefed 2 business days before the employee email; the email goes out on the local effective date or up to 5 business days before it; reminders at day 14 and day 30.",
+   "owner": "HR Change and Communications (CC3), with the policy owner",
+   "sections": [
+    {
+     "title": "Before sending",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Policy owner and Employment counsel approve the change summary, FAQ answers and any country-specific lines.",
+       "owner": "Policy owner"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "Country HR leads confirm local gates are complete and the local effective date, and provide localized versions.",
+       "owner": "Country HR lead"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "Schedule the send for local working hours on a working day, not a Friday afternoon, a public holiday or a freeze window.",
+       "owner": "HR Change and Communications lead"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "Brief managers 2 business days before the employee email, and share the talking points and FAQ.",
+       "owner": "HRBP"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "Confirm the LMS acknowledgment assignment is live and the link in the email opens the right language version.",
+       "owner": "LMS administrator"
+      }
+     ]
+    },
+    {
+     "title": "Launch email to employees",
+     "items": [
+      {
+       "id": "i6",
+       "type": "para",
+       "text": "Subject: [Policy name]: updated policy effective [effective date]. Please read and acknowledge by [due date]."
+      },
+      {
+       "id": "i7",
+       "type": "para",
+       "text": "Hello [all employees in [country or team]],"
+      },
+      {
+       "id": "i8",
+       "type": "para",
+       "text": "As part of Project Atlas, our program to document and update every HR policy and process across the company, we have [published a new / updated our] [Policy name]. It takes effect on [effective date] for employees in [jurisdictions]."
+      },
+      {
+       "id": "i9",
+       "type": "para",
+       "text": "What is changing: [two to four short points describing the most important changes in plain language]. What is not changing: [the main points that stay the same]."
+      },
+      {
+       "id": "i10",
+       "type": "para",
+       "text": "Why we are making this change: [one or two sentences, for example a change in law, making our approach consistent across countries, or making the rules clearer]."
+      },
+      {
+       "id": "i11",
+       "type": "para",
+       "text": "What you need to do: read the policy and the addendum for your country, then confirm you have read it in [LMS name] by [due date]. It takes about [x] minutes."
+      },
+      {
+       "id": "i12",
+       "type": "para",
+       "text": "Where to find it: the policy is in the Policy guide at [link], available in [languages]. [Where local law requires: If the language versions differ, the [language] version prevails.]"
+      },
+      {
+       "id": "i13",
+       "type": "para",
+       "text": "Questions: talk to your manager, contact your HR business partner at [contact], or use [HR help channel]. Managers will cover the change in team meetings over the next two weeks."
+      },
+      {
+       "id": "i14",
+       "type": "para",
+       "text": "Nothing in this policy limits your right to report possible violations of law to a government agency, to discuss your pay or working conditions where the law protects that, or to raise a concern through [Speak Up channel] without retaliation.",
+       "detail": "Fixed text approved by Legal; keep it in every language version."
+      },
+      {
+       "id": "i15",
+       "type": "para",
+       "text": "Thank you, [Policy owner role] and [Chief People Officer]"
+      }
+     ]
+    },
+    {
+     "title": "Manager talking points",
+     "intro": "Use in a regular team meeting within two weeks of launch. Keep to the approved summary.",
+     "items": [
+      {
+       "id": "i16",
+       "type": "say",
+       "text": "I want to take five minutes on an HR policy update that affects our team: [Policy name], which takes effect on [date]."
+      },
+      {
+       "id": "i17",
+       "type": "say",
+       "text": "It's part of Project Atlas, which is bringing all our HR policies and processes up to date in every country where we work."
+      },
+      {
+       "id": "i18",
+       "type": "say",
+       "text": "The main change for us is [change 1]. In practice that means [example relevant to the team]."
+      },
+      {
+       "id": "i19",
+       "type": "say",
+       "text": "The second change is [change 2], so from [date] we will [what employees do differently]."
+      },
+      {
+       "id": "i20",
+       "type": "say",
+       "text": "What isn't changing: [main points that stay the same]."
+      },
+      {
+       "id": "i21",
+       "type": "say",
+       "text": "Everyone needs to read the policy and confirm it in [LMS name] by [due date]. It takes about [x] minutes."
+      },
+      {
+       "id": "i22",
+       "type": "say",
+       "text": "If you have a question I can't answer today, I'll come back to you by [date], or you can contact [HRBP or HR help channel] directly."
+      },
+      {
+       "id": "i23",
+       "type": "say",
+       "text": "If you're ever worried about how this or any policy is being applied, you can raise it with me, with HR or through [Speak Up channel], and you won't face retaliation for doing so."
+      },
+      {
+       "id": "i24",
+       "type": "say",
+       "text": "What questions do you have?"
+      }
+     ]
+    },
+    {
+     "title": "What managers should not say",
+     "items": [
+      {
+       "id": "i25",
+       "type": "note",
+       "text": "Don't interpret the policy beyond the approved summary or promise exceptions. Refer individual situations to the HRBP."
+      },
+      {
+       "id": "i26",
+       "type": "note",
+       "text": "Don't describe the change as box-ticking or suggest people can ignore it; that undermines the policy and the acknowledgment."
+      },
+      {
+       "id": "i27",
+       "type": "note",
+       "text": "Don't use the briefing to discuss union membership, political or religious matters, or employees' views on representation. In Washington such meetings must be voluntary (RCW 49.44.250)."
+      },
+      {
+       "id": "i28",
+       "type": "note",
+       "text": "Don't track who asked questions or what they asked. Acknowledgment is tracked only through the LMS."
+      }
+     ]
+    },
+    {
+     "title": "Employee FAQ",
+     "intro": "Answers in detail are the approved text; complete the [Placeholders] for each policy.",
+     "items": [
+      {
+       "id": "i29",
+       "type": "question",
+       "text": "Why is this policy changing now?",
+       "detail": "Approved answer: [reason]. Project Atlas is updating every HR policy and process in waves through October 2027, so you may see other updates too."
+      },
+      {
+       "id": "i30",
+       "type": "question",
+       "text": "Does this apply to me?",
+       "detail": "It applies to [scope, for example all employees and interns in the listed countries]. [Contingent workers follow [contract or supplier terms].] Check the addendum for your country."
+      },
+      {
+       "id": "i31",
+       "type": "question",
+       "text": "What changes for me in practice?",
+       "detail": "[Two or three concrete examples written for the employee, for example how to request leave or report a concern under the new policy.]"
+      },
+      {
+       "id": "i32",
+       "type": "question",
+       "text": "Is my country's version different?",
+       "detail": "Your country addendum sets out local differences. Where local law gives you more rights, the local rule applies."
+      },
+      {
+       "id": "i33",
+       "type": "question",
+       "text": "Can I read it in my language?",
+       "detail": "It is available in [languages] in the Policy guide. [Where local law requires: the [language] version prevails.]"
+      },
+      {
+       "id": "i34",
+       "type": "question",
+       "text": "What happens if I don't acknowledge it by the due date?",
+       "detail": "You'll get reminders at 14 and 30 days, and your manager will be told at 30 days. Acknowledging confirms you received and read the policy. The policy applies from its effective date whether or not you acknowledge it."
+      },
+      {
+       "id": "i35",
+       "type": "question",
+       "text": "Does this change my pay, benefits, leave balance or contract?",
+       "detail": "[Approved answer.] If it does, you will receive [individual notice] at least [notice period] before the change."
+      },
+      {
+       "id": "i36",
+       "type": "question",
+       "text": "Were employee representatives consulted?",
+       "detail": "[Germany: The works council agreed the policy on [date]. China: The policy was discussed with employees and the union through democratic procedure on [dates]. Vietnam: The union was consulted and the internal labor regulations were registered on [date]. Taiwan: The work rules were filed and approved on [date]. Elsewhere: Not required.]"
+      },
+      {
+       "id": "i37",
+       "type": "question",
+       "text": "Where can I see exactly what changed?",
+       "detail": "A summary of changes is at the top of the policy page, and the previous version is available from [HR help channel] on request."
+      },
+      {
+       "id": "i38",
+       "type": "question",
+       "text": "I think the policy conflicts with my contract or local practice. What should I do?",
+       "detail": "Contact your HRBP. Where your contract or local law gives you a better term, that term applies."
+      },
+      {
+       "id": "i39",
+       "type": "question",
+       "text": "How do I raise a concern about how the policy is applied?",
+       "detail": "Talk to your manager or HRBP, or use [Speak Up channel], which allows anonymous reports where local law permits. Retaliation for raising a concern in good faith is prohibited."
+      }
+     ]
+    },
+    {
+     "title": "Follow-up",
+     "items": [
+      {
+       "id": "i40",
+       "type": "check",
+       "text": "Send reminders to employees who have not acknowledged at day 14 and day 30.",
+       "owner": "LMS administrator",
+       "when": "Day 14 and 30"
+      },
+      {
+       "id": "i41",
+       "type": "check",
+       "text": "Send managers a list of their team members not yet acknowledged at day 30; escalate to the regional HR lead at day 45.",
+       "owner": "LMS administrator",
+       "when": "Day 30 and 45"
+      },
+      {
+       "id": "i42",
+       "type": "check",
+       "text": "Review questions from HR channels weekly for the first month and update the FAQ when the same question appears three times.",
+       "owner": "HR Change and Communications lead",
+       "when": "Weekly"
+      },
+      {
+       "id": "i43",
+       "type": "check",
+       "text": "Report the acknowledgment rate by jurisdiction in the weekly status report until it reaches 98%.",
+       "owner": "PMO analyst",
+       "when": "Weekly"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Lead with what changes for the employee and what they need to do. The reason for the change comes second and fits in two sentences.",
+    "Managers hear it first. A manager who learns about a policy from the all-employee email cannot answer questions or reinforce it.",
+    "The protected-rights paragraph is fixed text approved by Legal. Do not shorten or translate it freely; use the approved translation in each language.",
+    "Localize, don't just translate: local effective dates, consultation statements and prevailing-language lines differ by country and must match the approval record.",
+    "Do not send the email in a country until its local gates are complete. In China and Vietnam the email and acknowledgment are part of the publication evidence.",
+    "Keep the FAQ alive for a month. Repeated questions show where the policy or the summary is unclear and feed the wave retrospective."
+   ],
+   "countryNotes": {
+    "us": "Keep the protected-rights paragraph (NLRA Section 7, SEC whistleblower rights) in every US version, and do not use mandatory meetings to discuss union matters.",
+    "us-ca": "Provide translated versions where 2 CCR 11023 applies (EEO and harassment policies, languages spoken by 10%+ of a facility). SB 399's captive-audience ban is enjoined (2025), but keep briefings to policy content.",
+    "us-co": "Keep confidentiality-related wording consistent with the POWR Act, and give HFWA-related notices in English and any language spoken by 5%+ of the workforce.",
+    "us-nc": "Where the policy reduces pay, PTO or bonus terms, the email can serve as the written notice, so send it at least one full pay period before the effective date and keep proof of delivery.",
+    "us-tx": "Use the standard US version; offer a Spanish version where part of the workforce prefers it.",
+    "us-wa": "Briefings must not become mandatory meetings on political, religious or union topics (RCW 49.44.250), and confidentiality-related policies keep the Silenced No More carve-out.",
+    "ca": "English for Ontario and BC; French for Quebec-based staff (Bill 96). For Ontario written policies required under the ESA, the email can serve as the copy given to employees if the policy is attached or linked (verify).",
+    "de": "Send a German or bilingual version, mention the works council agreement where the topic is co-determined, and agree the timing with the works council; it may want to send its own message alongside.",
+    "il": "Send Hebrew versions (Arabic where needed) Sunday to Thursday, avoiding holiday weeks.",
+    "in": "English is standard for the email; display statutory policy content bilingually and avoid Diwali week and state holidays.",
+    "tw": "Send a Traditional Chinese version and, where the change is in the work rules, state the authority approval date and where the rules are posted.",
+    "cn": "Send a Simplified Chinese version and keep delivery and acknowledgment records: they are part of the publication step of democratic procedure and the evidence for later disciplinary use.",
+    "vn": "Send a Vietnamese version stating the registration of the internal labor regulations and the date they take effect, and post the regulations at the workplace."
+   },
+   "processes": [
+    "PD-06",
+    "DS-08"
+   ],
+   "policies": [
+    "POL-45",
+    "POL-02"
+   ]
+  },
+  {
+   "id": "T-PM-RETRO",
+   "name": "Wave retrospective guide",
+   "category": "Project",
+   "format": "guide",
+   "purpose": "A two-hour, blameless retrospective at the end of each wave that uses data and the experience of owners, approvers and country teams to agree no more than five changes for the next wave. It turns delivery problems into concrete changes to the plan, templates, approval chains and ways of working.",
+   "audience": "Neutral facilitator (for example the HR Change and Communications lead or a trained facilitator outside the PMO); workstream leads; regional and country HR leads; a sample of item owners and approvers; Employment counsel; PMO (presents data and owns actions).",
+   "when": "Final week of each wave: Wave 1 by 11 February 2027 (required for M08), Wave 2 by 13 May 2027, Wave 3 by 12 August 2027; Wave 4 learning is captured in the close-out report by 1 October 2027. A shorter 60-minute Mobilize retrospective is held after M04.",
+   "owner": "Program management office (CC4), with HR Change and Communications (CC3) facilitating",
+   "sections": [
+    {
+     "title": "Prepare (5 business days before)",
+     "items": [
+      {
+       "id": "i1",
+       "type": "check",
+       "text": "Send the pulse survey to all item owners, approvers and country HR leads in the wave, with 3 business days to respond.",
+       "owner": "PMO analyst",
+       "when": "Day -5"
+      },
+      {
+       "id": "i2",
+       "type": "check",
+       "text": "Build the data pack: planned versus actual time in each stage (target 2, 3, 2, 2 and 1 weeks), send-back rate in Review and Approve, approval wait time by step, overdue rate, country gate lead times planned versus actual, change requests raised, acknowledgment rates.",
+       "owner": "PMO analyst",
+       "when": "Day -3"
+      },
+      {
+       "id": "i3",
+       "type": "check",
+       "text": "Review the actions from the previous retrospective and mark each done, in progress or dropped, with evidence.",
+       "owner": "HR Program Manager",
+       "when": "Day -3"
+      },
+      {
+       "id": "i4",
+       "type": "check",
+       "text": "Invite 12 to 16 people across workstreams and regions; hold a second session in APAC hours if needed.",
+       "owner": "Facilitator",
+       "when": "Day -5"
+      },
+      {
+       "id": "i5",
+       "type": "check",
+       "text": "For Wave 1, collect China, Taiwan and Vietnam input in writing by 4 February 2027, before the Lunar New Year and Tet freeze.",
+       "owner": "APAC regional HR lead",
+       "when": "4 Feb 2027"
+      }
+     ]
+    },
+    {
+     "title": "Pulse survey",
+     "intro": "Anonymous, five questions, under 5 minutes. Results are shown in aggregate only.",
+     "items": [
+      {
+       "id": "i6",
+       "type": "question",
+       "text": "How clear was the definition of done at each stage for your items? (1 to 5)"
+      },
+      {
+       "id": "i7",
+       "type": "question",
+       "text": "How well did the templates and Atlas pages help you do the work? (1 to 5) What would you change?"
+      },
+      {
+       "id": "i8",
+       "type": "question",
+       "text": "How long did approvals take compared with what you expected, and where did items wait longest?"
+      },
+      {
+       "id": "i9",
+       "type": "question",
+       "text": "Which country gate (consultation, translation, filing, posting) took longer than planned, and why?"
+      },
+      {
+       "id": "i10",
+       "type": "question",
+       "text": "What one thing should we start, stop and continue in the next wave?"
+      }
+     ]
+    },
+    {
+     "title": "Open and frame (0:00 to 0:15)",
+     "items": [
+      {
+       "id": "i11",
+       "type": "say",
+       "text": "Thanks for making time. This is a blameless review: we assume everyone did the best they could with what they knew and the time they had."
+      },
+      {
+       "id": "i12",
+       "type": "say",
+       "text": "We're looking at the system, meaning the plan, templates, approval chains, tools and handoffs, not at individuals."
+      },
+      {
+       "id": "i13",
+       "type": "say",
+       "text": "By the end we want at most five changes for [next wave], each with an owner and a date. Anything else goes on a list for later."
+      },
+      {
+       "id": "i14",
+       "type": "say",
+       "text": "First, here's what we said we'd change after the last wave, and whether it worked."
+      }
+     ]
+    },
+    {
+     "title": "Look at the data (0:15 to 0:35)",
+     "items": [
+      {
+       "id": "i15",
+       "type": "prompt",
+       "text": "What stands out in the stage times? Where did items spend longer than planned?",
+       "detail": "Probes: Was it waiting or working time? Which workstreams or item types? Were drafts late or were reviews slow?"
+      },
+      {
+       "id": "i16",
+       "type": "prompt",
+       "text": "Where were items sent back, and what were the most common reasons?",
+       "detail": "Probes: missing addenda, legal issues found late, inconsistency with another policy, incomplete templates. Could the issue have been caught earlier?"
+      },
+      {
+       "id": "i17",
+       "type": "prompt",
+       "text": "How did the country gates perform against plan?",
+       "detail": "Probes: works council, democratic procedure, work rules filing, internal labor regulation registration, translation turnaround; which estimates were wrong and by how much."
+      },
+      {
+       "id": "i18",
+       "type": "prompt",
+       "text": "What does the pulse survey tell us that the numbers don't?"
+      }
+     ]
+    },
+    {
+     "title": "What worked and what didn't (0:35 to 1:10)",
+     "items": [
+      {
+       "id": "i19",
+       "type": "prompt",
+       "text": "Discover: did the baseline and discovery workshops give drafters what they needed?",
+       "detail": "Probes: were maps validated on time; did workshops capture the real process; what was missing when drafting started?"
+      },
+      {
+       "id": "i20",
+       "type": "prompt",
+       "text": "Draft and Review: what made drafting faster or slower, and did parallel review work?",
+       "detail": "Probes: template fit, access to SMEs, legal turnaround, plain-language edits that caused rework."
+      },
+      {
+       "id": "i21",
+       "type": "prompt",
+       "text": "Approve: where did approvals stall, and why?",
+       "detail": "Probes: approver availability, delegation, 'all' steps waiting on one region, optional steps skipped without reasons, email approvals."
+      },
+      {
+       "id": "i22",
+       "type": "prompt",
+       "text": "Go live: did communications, manager briefings and acknowledgments land?",
+       "detail": "Probes: acknowledgment rate at day 30; questions received; local launch timing; evidence completeness."
+      },
+      {
+       "id": "i23",
+       "type": "prompt",
+       "text": "Atlas and reporting: did the Master checklist, Approvals page and status report help or create extra work?"
+      },
+      {
+       "id": "i24",
+       "type": "prompt",
+       "text": "What should we keep doing exactly as it is?"
+      }
+     ]
+    },
+    {
+     "title": "Root causes and changes (1:10 to 1:45)",
+     "items": [
+      {
+       "id": "i25",
+       "type": "prompt",
+       "text": "For the top three problems, ask 'why' until you reach something we control.",
+       "detail": "Stop at a cause the program can change: a template, a rule in the plan, an approver setup, a lead time, a resourcing decision."
+      },
+      {
+       "id": "i26",
+       "type": "prompt",
+       "text": "What would we change, specifically, so this doesn't happen in the next wave?",
+       "detail": "Each change must be concrete enough to check later, for example 'start Germany works council information at Draft, not Review'."
+      },
+      {
+       "id": "i27",
+       "type": "prompt",
+       "text": "Vote: each person has three votes across the proposed changes. Which five do we commit to?"
+      },
+      {
+       "id": "i28",
+       "type": "prompt",
+       "text": "Who owns each change, and by when will it be in place?",
+       "detail": "Changes to plan dates or scope need a change request (T-PM-CHANGE-REQUEST); template changes go to the PMO."
+      }
+     ]
+    },
+    {
+     "title": "Close and follow through (1:45 to 2:00)",
+     "items": [
+      {
+       "id": "i29",
+       "type": "check",
+       "text": "Read back the agreed changes, owners and dates, and the 'later' list.",
+       "owner": "Facilitator",
+       "when": "1:45"
+      },
+      {
+       "id": "i30",
+       "type": "check",
+       "text": "Publish the retrospective summary on Project HQ within 2 business days: data highlights, agreed changes, later list.",
+       "owner": "PMO analyst",
+       "when": "Day +2"
+      },
+      {
+       "id": "i31",
+       "type": "check",
+       "text": "Add each agreed change to the RAID log as an action and track it in the weekly status report until done.",
+       "owner": "HR Program Manager",
+       "when": "Day +2"
+      },
+      {
+       "id": "i32",
+       "type": "check",
+       "text": "Raise change requests for any plan or scope changes and update templates in the Templates page with a version note.",
+       "owner": "HR Program Manager",
+       "when": "Day +5"
+      },
+      {
+       "id": "i33",
+       "type": "check",
+       "text": "Add the lessons to the lessons register used for the close-out report (T-PM-CLOSEOUT).",
+       "owner": "PMO analyst",
+       "when": "Day +5"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Keep it blameless. Name system causes (a template gap, a missing approver, an unrealistic lead time), not people. Individual performance issues go to the line manager, not the retrospective.",
+    "The facilitator should not be the HR Program Manager. The PMO presents data and owns actions but should not also steer the discussion about its own plan.",
+    "Bring numbers. Stage times against the 2-3-2-2-1 week plan, send-back reasons and gate lead times turn opinions into a shared picture.",
+    "Commit to five changes at most. Programs that agree twenty changes implement none.",
+    "Include country voices. Variance in local gates usually explains more schedule slippage than drafting speed.",
+    "Close the loop. Start each retrospective by reviewing the last one's actions; changes that were never made are themselves a finding."
+   ],
+   "countryNotes": {
+    "us": "Capture lessons on public-company and SOX items, such as how control design reviews and external auditor timing affected approvals, and on keeping US poster updates in step with launches.",
+    "us-ca": "Capture translation turnaround for California's 10%+ languages and any late findings from California-specific legal review.",
+    "us-co": "Capture how Colorado posting and promotion-notice items moved between Talent Acquisition and HR Operations, and whether penalty exposure changed priorities.",
+    "us-nc": "Capture whether the advance written notice for pay, PTO or bonus changes was planned early enough.",
+    "us-tx": "Capture whether Texas worked well as a pilot site for US launches and what should be reused.",
+    "us-wa": "Capture how quickly items were updated after Washington law changes and whether briefings stayed clear of the captive-audience rule.",
+    "ca": "Capture whether separate Ontario and BC addenda worked, and any Quebec questions that arose.",
+    "de": "Compare actual works council lead times with the plan and record what helped (early information, joint drafting, regular meetings), so the next wave's German schedule is realistic.",
+    "il": "Capture Hebrew translation turnaround and the impact of holidays and reserve duty; hold the session Sunday to Thursday.",
+    "in": "Capture lessons on bilingual displays, standing orders and changes to state rules, and offer a session time that suits Indian working hours.",
+    "tw": "Record the work rules filing turnaround by authority and the impact of the Lunar New Year freeze on Wave 1.",
+    "cn": "Record how long democratic procedure took, the acknowledgment rate achieved and the impact of the Lunar New Year freeze.",
+    "vn": "Record the time from dossier submission to registration receipt, union consultation lessons and the impact of the Tet freeze."
+   },
+   "processes": [],
+   "policies": []
+  },
+  {
+   "id": "T-PM-CLOSEOUT",
+   "name": "Close-out report and business-as-usual handover",
+   "category": "Project",
+   "format": "report",
+   "purpose": "The final report that shows what Project Atlas delivered against its charter, records open items, residual risks and lessons, and hands every item to a named business-as-usual owner with a review date. It is the evidence for the handover milestone on 1 October 2027 (M17) and is approved by the steering committee at project close on 8 October 2027 (M18).",
+   "audience": "Steering committee and Chief People Officer (approve); General Counsel and Internal Audit (assurance); business-as-usual owners of policies, processes and obligations; HR Policy and Governance (runs the policy lifecycle after close, DS-08); regional and country HR leads.",
+   "when": "Drafting starts 13 September 2027, after the attestation campaign launch (M15); data frozen 29 September 2027; handover sign-offs complete 1 October 2027 (M17); report approved 8 October 2027 (M18).",
+   "owner": "HR Program Manager (CC4); receiving owner: HR Policy and Governance",
+   "sections": [
+    {
+     "title": "Executive summary",
+     "items": [
+      {
+       "id": "i1",
+       "type": "para",
+       "text": "Project Atlas ran from 12 October 2026 to [close date]. Of the 438 items in scope, [n] are live with evidence, [n] are approved and waiting for a local effective date, [n] were removed by approved change request, and [n] are carried into business as usual with an agreed plan."
+      },
+      {
+       "id": "i2",
+       "type": "para",
+       "text": "All legally required, public-company and semiconductor items were [live by 13 August 2027 (M14) / live except the following, each with an owner and date: [list]]."
+      },
+      {
+       "id": "i3",
+       "type": "para",
+       "text": "Internal Audit sampled 40 items at the audit readiness review on 24 September 2027 (M16) and found [result, for example 38 complete and 2 with minor evidence gaps, both since closed]."
+      },
+      {
+       "id": "i4",
+       "type": "para",
+       "text": "The global attestation campaign launched on 10 September 2027 (M15) and reached [x]% completion by [date]."
+      },
+      {
+       "id": "i5",
+       "type": "para",
+       "text": "The program spent [USD x] against a budget of [USD y] and used [n] FTE-months against a plan of [m]. [Main variances and reasons.]"
+      },
+      {
+       "id": "i6",
+       "type": "para",
+       "text": "The steering committee is asked to approve this report, accept the [n] open items and their owners, and close the program."
+      }
+     ]
+    },
+    {
+     "title": "Delivery against the charter",
+     "items": [
+      {
+       "id": "i7",
+       "type": "field",
+       "text": "Objectives",
+       "detail": "For each charter objective (O1 onwards): measure, target, actual, status (Met / Partly met / Not met) and a one-line explanation."
+      },
+      {
+       "id": "i8",
+       "type": "field",
+       "text": "Items by type, tier and status",
+       "detail": "Policies, processes and obligations by tier: Live, Approved (awaiting local date), Descoped, Carried over. Generated from the Master checklist at the data freeze."
+      },
+      {
+       "id": "i9",
+       "type": "field",
+       "text": "Jurisdiction coverage",
+       "detail": "Matrix of the 13 jurisdictions by item type, showing local gates completed (consultations, filings, registrations, translations) and any pending."
+      },
+      {
+       "id": "i10",
+       "type": "field",
+       "text": "Milestones",
+       "detail": "M01 to M18: planned date, actual date, variance and reason."
+      },
+      {
+       "id": "i11",
+       "type": "field",
+       "text": "Success measures",
+       "detail": "Each charter KPI with baseline, target and actual."
+      },
+      {
+       "id": "i12",
+       "type": "field",
+       "text": "Change requests",
+       "detail": "Count raised, approved, rejected; the five with the largest impact on scope or schedule."
+      },
+      {
+       "id": "i13",
+       "type": "field",
+       "text": "Budget and resources",
+       "detail": "Spend by line versus budget; FTE plan versus actual by role; vendor spend (translation, local counsel)."
+      }
+     ]
+    },
+    {
+     "title": "Open items and residual risk",
+     "items": [
+      {
+       "id": "i14",
+       "type": "field",
+       "text": "Items not live",
+       "detail": "Item id, jurisdiction, reason, business-as-usual owner, target date and interim control."
+      },
+      {
+       "id": "i15",
+       "type": "field",
+       "text": "Pending local gates",
+       "detail": "For example an Einigungsstelle in Germany, a work rules approval in Taiwan or an internal labor regulation registration in Vietnam, with expected dates."
+      },
+      {
+       "id": "i16",
+       "type": "field",
+       "text": "Risks transferred",
+       "detail": "RAID risks still open, moved to the HR risk register with owner and review date."
+      },
+      {
+       "id": "i17",
+       "type": "field",
+       "text": "Issues and actions open",
+       "detail": "Owner and due date for each."
+      },
+      {
+       "id": "i18",
+       "type": "field",
+       "text": "Legal changes in progress",
+       "detail": "Known upcoming changes from the research watchlist and which items they will affect."
+      }
+     ]
+    },
+    {
+     "title": "Business-as-usual handover",
+     "items": [
+      {
+       "id": "i19",
+       "type": "check",
+       "text": "Every item has a business-as-usual owner (role) who has accepted it in Atlas.",
+       "owner": "Workstream leads",
+       "when": "1 Oct 2027"
+      },
+      {
+       "id": "i20",
+       "type": "check",
+       "text": "Every item has a next review date and appears in the annual review calendar, with legal deadlines on the compliance calendar.",
+       "owner": "HR Policy and Governance",
+       "when": "1 Oct 2027"
+      },
+      {
+       "id": "i21",
+       "type": "check",
+       "text": "Policy changes after close follow Policy lifecycle governance (DS-08), including local consultation and filing gates.",
+       "owner": "HR Policy and Governance"
+      },
+      {
+       "id": "i22",
+       "type": "check",
+       "text": "Atlas editing rights, the Approvals configuration and approval chains are transferred from the PMO to HR Policy and Governance.",
+       "owner": "HRIS lead"
+      },
+      {
+       "id": "i23",
+       "type": "check",
+       "text": "The evidence repository has an owner, an access model and retention set under HR Records Retention (POL-49).",
+       "owner": "HR Policy and Governance"
+      },
+      {
+       "id": "i24",
+       "type": "check",
+       "text": "The training and annual attestation cycle is owned by Ethics and Compliance under Compliance training and policy attestation (PD-06).",
+       "owner": "Ethics and Compliance"
+      },
+      {
+       "id": "i25",
+       "type": "check",
+       "text": "The legal research watchlist and country files have a named owner and an update cadence.",
+       "owner": "Employment counsel"
+      },
+      {
+       "id": "i26",
+       "type": "check",
+       "text": "The quarterly register completeness check (every item has owner, version, citations and review dates) is scheduled, with the first run in January 2028.",
+       "owner": "HR Policy and Governance"
+      },
+      {
+       "id": "i27",
+       "type": "check",
+       "text": "Each workstream has held a 30-minute handover session with its business-as-usual owners, and each region with its country HR leads.",
+       "owner": "Workstream leads and regional HR leads"
+      },
+      {
+       "id": "i28",
+       "type": "check",
+       "text": "Regional HR leads accept the country gate calendar: works agreements and their notice dates, filed work rules, registered internal labor regulations, standing orders and statutory committees.",
+       "owner": "Regional HR leads"
+      }
+     ]
+    },
+    {
+     "title": "Lessons learned",
+     "items": [
+      {
+       "id": "i29",
+       "type": "field",
+       "text": "What worked",
+       "detail": "Top five, with evidence, from the wave retrospectives and the close-out survey."
+      },
+      {
+       "id": "i30",
+       "type": "field",
+       "text": "What didn't",
+       "detail": "Top five, with the cause and what was changed or should change next time."
+      },
+      {
+       "id": "i31",
+       "type": "field",
+       "text": "Country gate lessons",
+       "detail": "Actual lead times by jurisdiction versus plan; what to tell the next program."
+      },
+      {
+       "id": "i32",
+       "type": "field",
+       "text": "Template and tool improvements",
+       "detail": "Changes recommended for the standard templates, Atlas pages and approval chains."
+      },
+      {
+       "id": "i33",
+       "type": "field",
+       "text": "Recommendations",
+       "detail": "Three to five recommendations for business as usual and future programs, each with a proposed owner."
+      }
+     ]
+    },
+    {
+     "title": "Closure",
+     "items": [
+      {
+       "id": "i34",
+       "type": "check",
+       "text": "Close vendor contracts and purchase orders (translation, local counsel, contractors) and confirm final invoices.",
+       "owner": "HR Program Manager"
+      },
+      {
+       "id": "i35",
+       "type": "check",
+       "text": "Remove project-only access and roles in Atlas and shared folders, keeping business-as-usual roles.",
+       "owner": "HRIS lead"
+      },
+      {
+       "id": "i36",
+       "type": "check",
+       "text": "Archive project records read-only: Project HQ, Plan versions, RAID log, change requests, status reports, steering committee packs and minutes.",
+       "owner": "PMO analyst"
+      },
+      {
+       "id": "i37",
+       "type": "check",
+       "text": "Thank and release the team: recognition for contributors, release letters to line managers, input for performance reviews.",
+       "owner": "Chief People Officer"
+      },
+      {
+       "id": "i38",
+       "type": "check",
+       "text": "Send the close announcement to stakeholders, with where to find policies and who owns them now.",
+       "owner": "HR Change and Communications lead"
+      },
+      {
+       "id": "i39",
+       "type": "check",
+       "text": "Approve the report through the project chain: PMO review, steering committee decision and sponsor approval.",
+       "owner": "HR Program Manager",
+       "when": "8 Oct 2027"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "Report what is true. List unfinished items with an owner, date and interim control rather than rounding them into a success figure; the steering committee accepts them explicitly.",
+    "Handover is an acceptance, not an email. Each business-as-usual owner accepts their items in Atlas and attends a short handover session.",
+    "Record ownership by role, so the register survives reorganizations and departures.",
+    "Freeze the data on 29 September 2027 and reconcile every number in the report to the Master checklist on that date.",
+    "Use the Internal Audit result from M16 as independent evidence of completeness; do not restate it in softer terms.",
+    "Schedule Israeli handovers before Rosh Hashanah (around 2 to 3 October 2027, verify) and APAC handovers in local hours.",
+    "Lessons are only useful if someone owns them. Each recommendation names a proposed owner in business as usual."
+   ],
+   "countryNotes": {
+    "us": "Hand over SOX and public-company items to their control owners with the SOX PMO, and confirm the annual calendar: 10-K human capital disclosure, proxy, Form 4 monitoring and EEO-1 (verify current status).",
+    "us-ca": "Hand over California annual dates: SB 294 notice by 1 February, Cal/OSHA 300A posting 1 February to 30 April, the pay data report in May, the biennial harassment training cadence and 1 January law changes.",
+    "us-co": "Hand over Colorado annual dates (1 January rates and COMPS poster, mid-August effective dates for many bills) and the 5-year retention of POWR-related training and acknowledgment records.",
+    "us-nc": "Hand over the rule that pay, PTO and bonus changes need written advance notice of at least one full pay period, and the poster calendar.",
+    "us-tx": "Hand over the few Texas items (workers' compensation notice languages, harassment policy coverage) and the odd-year legislative calendar.",
+    "us-wa": "Hand over monitoring of Washington's mid-year law changes, PFML notices, pay-posting rules and the I-9 inspection notice procedure.",
+    "ca": "Hand over Ontario annual items (1 January headcount check for the 25+ duties, annual OHSA policy review, ESA poster) and the BC pay transparency report due 1 November.",
+    "de": "Hand over the list of works agreements with their notice and termination dates, the owner of the works council relationship and the 2030 works council election timetable.",
+    "il": "Hand over Hebrew version control, monitoring of any collective agreement or extension order (verify), and complete the handover before Rosh Hashanah.",
+    "in": "Hand over standing orders status, the GRC and POSH Internal Committee annual reporting, bilingual displays and the watch on state rules under the Labour Codes.",
+    "tw": "Hand over the filed work rules version with its approval reference, the quarterly labor-management meeting calendar and the annual review of the workplace bullying measures.",
+    "cn": "Hand over democratic procedure records and acknowledgment files for every rule, and the year-end practice of adopting handbook changes through democratic procedure before 1 January.",
+    "vn": "Hand over the registered internal labor regulations (version, receipt and effective date), the annual employee conference and workplace dialogue calendar, and union contacts."
+   },
+   "processes": [
+    "DS-08",
+    "DS-03",
+    "PD-06"
+   ],
+   "policies": [
+    "POL-49",
+    "POL-45"
+   ]
+  }
+ ]
+}
