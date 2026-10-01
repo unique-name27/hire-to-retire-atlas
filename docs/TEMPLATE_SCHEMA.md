@@ -10,8 +10,8 @@ mark anything unconfirmed "(verify)". Process & policy ids: see the catalog in d
 ## A) Templates  →  {"templates": [TEMPLATE, ...]}
 TEMPLATE = {
   "id": "T-...", "name": "...",
-  "category": "Recruit|Onboard|Perform|Reward|Move|Leave|Safety|Relations|Data|Governance|Offboard",
-  "format": "guide|checklist|form|script|matrix|document|survey|letter",
+  "category": "Recruit|Onboard|Perform|Reward|Move|Leave|Safety|Relations|Data|Governance|Offboard|Project",
+  "format": "guide|checklist|form|script|matrix|document|survey|letter|agenda|report",
   "purpose": "2 sentences", "audience": "who uses it", "when": "timing / trigger", "owner": "function",
   "sections": [ {"title": "...", "intro": "optional 1-2 sentences",
                  "items": [ {"id":"i1", "type":"check|prompt|field|say|note|question|para",
