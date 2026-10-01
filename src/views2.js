@@ -46,6 +46,7 @@ function viewPolicy(id) {
     <div class="phead"><div class="title-row"><div class="stack" style="gap:8px"><div class="row">${idTag(p.id)}${tierTag(p.tier)}<span class="chip">${esc(p.structure)}</span></div><h1>${esc(p.name)}</h1></div>
       <div class="actions"><button class="btn" data-propose="${encodeURIComponent(JSON.stringify({ ...base, path: "purpose", label: `${p.id} ${p.name} · Purpose`, current: p.purpose }))}">${icon("edit", 16)}Propose change</button><button class="btn ghost" data-comment>${icon("comment", 16)}Comment</button><button class="btn ghost" data-copylink="policy.${attr(p.id)}">${icon("link", 16)}Copy link</button><button class="btn ghost" data-md="policy:${attr(p.id)}">${icon("down", 16)}Markdown</button></div></div>
       <p class="lead">${esc(p.purpose)}</p><div><button class="pcount" data-pkey="${attr(propKey(p.id, "purpose"))}" hidden></button></div>
+      ${approvalBox(p.id)}
       <div class="meta-grid">
         <div><span class="eyebrow">Owner</span><span class="v">${esc(p.owner)}</span></div>
         <div><span class="eyebrow">Approver</span><span class="v">${esc(p.approver)}</span></div>
@@ -95,6 +96,7 @@ function viewPolicy(id) {
       box.addEventListener("focusout", (e) => { const c = e.target.closest("[data-dchoice]"); if (c && c.value !== (C.decisions.get(c.dataset.dchoice)?.choice || "")) setDecision(c.dataset.dchoice, { choice: c.value.slice(0, 2000) }); });
       onLive(draw);
       drawHistoryLive(root); onLive(() => drawHistoryLive(root));
+      drawApprovalBoxes(root); onLive(() => drawApprovalBoxes(root));
     },
   };
 }
@@ -105,8 +107,8 @@ function relevantMandatory(m, p) {
 }
 
 /* ---------- TEMPLATES ---------- */
-const TPL_CATS = ["Recruit", "Onboard", "Perform", "Reward", "Move", "Leave", "Safety", "Relations", "Data", "Governance", "Offboard"];
-const TPL_CAT_LABEL = { Recruit: "Recruiting and hiring", Onboard: "Onboarding", Perform: "Performance and growth", Reward: "Pay and rewards", Move: "Mobility and job changes", Leave: "Leave and accommodation", Safety: "Health and safety", Relations: "Employee relations", Data: "HR data and privacy", Governance: "Governance and policy", Offboard: "Offboarding" };
+const TPL_CATS = ["Recruit", "Onboard", "Perform", "Reward", "Move", "Leave", "Safety", "Relations", "Data", "Governance", "Offboard", "Project"];
+const TPL_CAT_LABEL = { Recruit: "Recruiting and hiring", Onboard: "Onboarding", Perform: "Performance and growth", Reward: "Pay and rewards", Move: "Mobility and job changes", Leave: "Leave and accommodation", Safety: "Health and safety", Relations: "Employee relations", Data: "HR data and privacy", Governance: "Governance and policy", Offboard: "Offboarding", Project: "Program toolkit (Project Atlas)" };
 const TPL_NEW = new Set(RELEASES.length ? RELEASES[0].items.filter((it) => it.type === "added" && TPL[it.ref]).map((it) => it.ref) : []);
 function viewTemplates() {
   const cats = [...new Set(DB.templates.map((t) => t.category))].sort((a, b) => (TPL_CATS.indexOf(a) + 99) % 99 - (TPL_CATS.indexOf(b) + 99) % 99 || a.localeCompare(b));
@@ -178,6 +180,7 @@ function viewTemplate(id) {
     <div class="phead"><div class="title-row"><div class="stack" style="gap:8px"><div class="row">${idTag(t.id)}<span class="chip">${esc(t.format)}</span><span class="chip">${esc(TPL_CAT_LABEL[t.category] || t.category)}</span>${TPL_NEW.has(t.id) ? '<span class="chip ok">New</span>' : ""}</div><h1>${esc(t.name)}</h1></div>
       <div class="actions"><button class="btn" data-propose="${encodeURIComponent(JSON.stringify({ ...base, path: "purpose", label: `${t.id} ${t.name} · Purpose`, current: t.purpose }))}">${icon("edit", 16)}Propose change</button><button class="btn ghost" id="tpl-copy">${icon("copy", 16)}Copy text</button><button class="btn ghost" data-copylink="template.${attr(t.id)}">${icon("link", 16)}Copy link</button><button class="btn ghost" data-md="template:${attr(t.id)}">${icon("down", 16)}Markdown</button></div></div>
       <p class="lead">${esc(t.purpose)}</p><div><button class="pcount" data-pkey="${attr(propKey(t.id, "purpose"))}" hidden></button></div>
+      ${approvalBox(t.id)}
       <div class="meta-grid"><div><span class="eyebrow">Used by</span><span class="v">${esc(t.audience)}</span></div><div><span class="eyebrow">When</span><span class="v">${esc(t.when)}</span></div><div><span class="eyebrow">Owner</span><span class="v">${esc(t.owner)}</span></div>${(t.policies || []).length ? `<div><span class="eyebrow">Policies</span><span class="v row" style="gap:4px">${t.policies.map((x) => POL[x] ? `<a href="#policy.${attr(x)}">${idTag(x)}</a>` : "").join("")}</span></div>` : ""}</div></div>
     <nav class="localnav" aria-label="On this page">${secs.map(([k, l]) => `<a href="#template.${attr(t.id)}" data-jump="sec-${k}">${esc(l)}</a>`).join("")}</nav>
     ${t.format === "letter" ? `<div class="callout info small">Replace everything in [square brackets]. Have Legal approve the final wording for each country before first use; the country notes below list the local changes.</div>` : ""}
@@ -193,6 +196,7 @@ function viewTemplate(id) {
       bindCountryTabs(root);
       $("#tpl-copy", root).addEventListener("click", () => copyText(templateText(t), "Template text copied"));
       drawHistoryLive(root); onLive(() => drawHistoryLive(root));
+      drawApprovalBoxes(root); onLive(() => drawApprovalBoxes(root));
     },
   };
 }

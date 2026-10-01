@@ -82,6 +82,7 @@ const STATUS = {
   drafting: { label: "Drafting", color: "var(--s-draft)" },
   review: { label: "In review", color: "var(--s-review)" },
   approved: { label: "Approved", color: "var(--s-approved)" },
+  live: { label: "Live", color: "var(--s-live)" },
   na: { label: "Not applicable", color: "var(--s-na)" },
 };
 const RATING_DIMS = [
@@ -239,6 +240,7 @@ async function saveFile(filename, data) {
 const C = {
   db: null, user: null, comments: null, downloads: null, me: null, canEdit: false, canWrite: null, readOnly: false, ready: false,
   proposals: new Map(), reviews: new Map(), votes: new Map(), discussion: new Map(), status: new Map(), decisions: new Map(),
+  chains: new Map(), requests: new Map(), signoffs: new Map(), raid: new Map(), report: new Map(),
   hooks: new Set(),
 };
 const onLive = (fn) => C.hooks.add(fn);
@@ -262,6 +264,11 @@ async function initCollab() {
     sub("discussion", (s) => (C.discussion = new Map(s.docs.map((d) => [d.id, d.data()]))));
     sub("status", (s) => (C.status = new Map(s.docs.map((d) => [d.id, d.data()]))));
     sub("decisions", (s) => (C.decisions = new Map(s.docs.map((d) => [d.id, d.data()]))));
+    sub("chains", (s) => (C.chains = new Map(s.docs.map((d) => [d.id, d.data()]))));
+    sub("requests", (s) => (C.requests = new Map(s.docs.map((d) => [d.id, d.data()]))));
+    sub("signoffs", (s) => (C.signoffs = new Map(s.docs.map((d) => [d.id, d.data()]))));
+    sub("raid", (s) => (C.raid = new Map(s.docs.map((d) => [d.id, d.data()]))));
+    sub("report", (s) => (C.report = new Map(s.docs.map((d) => [d.id, d.data()]))));
   }
   C.ready = true;
   renderMe();

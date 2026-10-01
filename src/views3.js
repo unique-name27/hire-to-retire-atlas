@@ -266,9 +266,10 @@ function viewItem(id) {
     <div class="phead"><div class="title-row"><div class="stack" style="gap:8px"><div class="row">${idTag(r.id)}<span class="chip">${esc(r.type)}</span>${tierTag(r.tier)}</div><h1>${esc(r.name)}</h1></div>
       <div class="actions">${statusSelect(r.id)}<button class="btn" data-propose="${encodeURIComponent(JSON.stringify({ type: "register", id: r.id, path: "requirement", label: `${r.id} ${r.name}`, current: r.requirement, route: "item." + r.id }))}">${icon("edit", 16)}Propose change</button><button class="btn ghost" data-copylink="item.${attr(r.id)}">${icon("link", 16)}Copy link</button></div></div>
       <p class="lead">${esc(r.requirement)}</p><div><button class="pcount" data-pkey="${attr(propKey(r.id, "requirement"))}" hidden></button></div>
+      ${approvalBox(r.id)}
       <div class="meta-grid"><div><span class="eyebrow">Scope</span><span class="v">${esc(r.scope)}</span></div><div><span class="eyebrow">Jurisdictions</span><span class="v row" style="gap:4px">${jurChips(r.countries)}</span></div><div><span class="eyebrow">Owner</span><span class="v">${esc(r.owner)}</span></div><div><span class="eyebrow">Cadence</span><span class="v">${esc(r.cadence)}</span></div><div><span class="eyebrow">Legal basis</span><span class="v mono small">${esc(r.cite)}</span></div><div><span class="eyebrow">Domain</span><span class="v">${esc(STAGE[r.domain]?.label || r.domain)}</span></div></div></div>
     <section class="section">${sectionHead("Related processes")}<div class="stack">${(r.processes || []).map((x) => `<div>${linkTo(x)}</div>`).join("") || '<span class="muted">None</span>'}</div></section></div>`;
-  return { html, mount(root) { root.addEventListener("change", (e) => { const s = e.target.closest("[data-status-for]"); if (s) { s.dataset.s = s.value; setItemStatus(s.dataset.statusFor, { status: s.value }); } }); } };
+  return { html, mount(root) { root.addEventListener("change", (e) => { const s = e.target.closest("[data-status-for]"); if (s) { s.dataset.s = s.value; setItemStatus(s.dataset.statusFor, { status: s.value }); } }); drawApprovalBoxes(root); onLive(() => drawApprovalBoxes(root)); } };
 }
 
 /* ===== proposals ===== */
@@ -410,7 +411,10 @@ function buildIndex() {
   DB.countries.forEach((c) => { add("Countries", c.name, c.region, "country." + c.id, c.summary); c.keyFacts.forEach((f) => add("Country facts", `${JMAP[c.id].name}: ${f.label}`, f.value.slice(0, 120), "country." + c.id, f.value)); c.mandatoryPolicies.forEach((m) => add("Country facts", `${JMAP[c.id].name}: ${m.name}`, m.source, "country." + c.id, m.requirement)); });
   DB.register.forEach((r) => add("Obligations", `${r.id} ${r.name}`, `${r.type} · ${r.scope}`, "item." + r.id, r.requirement + " " + r.cite));
   ["publicCompany", "semiconductor", "globalFrameworks"].forEach((k) => DB.global[k].forEach((it) => add("Public co. & semiconductor", it.title, it.rule, "global." + k, it.requirement)));
-  [["checklist", "Master checklist"], ["calendar", "Compliance calendar"], ["changes", "What's changed: library change log"], ["changes.legal", "What's changed: legal changes"], ["compare", "Compare jurisdictions"], ["proposals", "Proposed changes"]].forEach(([r, t]) => add("Pages", t, "", r, ""));
+  [["project", "Project HQ"], ["charter", "Project charter"], ["plan", "Integrated plan"], ["approvals", "Approvals"], ["approvals.chains", "Approval chains"], ["raid", "RAID log"], ["status", "Status report"], ["governance", "Team and governance"], ["training", "Training and video tutorials"], ["toolkit", "Program toolkit"], ["checklist", "Master checklist"], ["calendar", "Compliance calendar"], ["changes", "What's changed: library change log"], ["changes.legal", "What's changed: legal changes"], ["compare", "Compare jurisdictions"], ["proposals", "Proposed changes"]].forEach(([r, t]) => add("Pages", t, "", r, ""));
+  PRJ.milestones.forEach((m) => add("Project", `${m.id} ${m.name}`, m.date, "plan", m.criteria));
+  ["risks", "issues", "decisions"].forEach((k) => (PRJ.raid[k] || []).forEach((x) => add("Project", `${x.id} ${x.title}`, "RAID log", "raid", x.detail || "")));
+  PRJ.videos.forEach((v) => add("Project", `${v.episode}: ${v.title}`, "Video tutorial", "training", v.summary));
   RELEASES.forEach((r) => add("Library changes", `v${r.version} ${r.title}`, relDate(r), "changes", r.summary + " " + r.items.map((it) => it.text).join(" ")));
   DB.templates.forEach((t) => t.sections.forEach((s) => add("Template sections", s.title, `${t.id} ${t.name}`, "template." + t.id, s.items.map((it) => it.text).join(" ").slice(0, 600))));
   return ix;
@@ -422,7 +426,7 @@ function openSearch() {
   const draw = () => {
     const terms = q.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
     hits = terms.length ? SEARCH_INDEX.filter((x) => terms.every((t) => x.hay.includes(t))).slice(0, 60) : [];
-    const score = (x) => (x.title.toLowerCase().includes(terms.join(" ")) ? 0 : 1) + ["Pages", "Processes", "Policies", "Templates", "Countries", "Obligations", "Public co. & semiconductor", "Country facts", "Process steps", "Template sections", "Library changes"].indexOf(x.group) * 0.01;
+    const score = (x) => (x.title.toLowerCase().includes(terms.join(" ")) ? 0 : 1) + ["Pages", "Processes", "Policies", "Templates", "Countries", "Obligations", "Public co. & semiconductor", "Country facts", "Process steps", "Template sections", "Library changes", "Project"].indexOf(x.group) * 0.01;
     hits.sort((a, b) => score(a) - score(b)); sel = 0;
     let g = ""; out.innerHTML = hits.map((h, i) => { const head = h.group !== g ? `<div class="pal-group">${esc(h.group)}</div>` : ""; g = h.group; return head + `<a class="pal-item ${i === sel ? "sel" : ""}" href="#${attr(h.route)}" data-i="${i}"><span class="t">${esc(h.title)}</span><span class="s">${esc(h.sub || "")}</span></a>`; }).join("") || (terms.length ? `<div class="empty" style="margin:8px">No matches</div>` : `<div class="small muted" style="padding:12px">Search ${DB.processes.length} processes, their steps, ${DB.policies.length} policies, templates, country rules and obligations.</div>`);
   };
@@ -437,20 +441,23 @@ function openSearch() {
 
 /* ===== shell, nav, router ===== */
 const NAV = [
+  ["Project Atlas", [["project", "Project HQ", "flow"], ["plan", "Plan", "cal"], ["approvals", "Approvals", "check", "appr"], ["raid", "RAID log", "pulse"], ["status", "Status report", "list"], ["training", "Training", "spark"]]],
   ["Library", [["home", "Overview", "home"], ["checklist", "Master checklist", "check", () => ITEMS.length], ["processes", "Processes", "flow", () => DB.processes.length], ["policies", "Policy guide", "book", () => DB.policies.length], ["templates", "Templates", "file", () => DB.templates.length]]],
   ["Requirements", [["countries", "Countries", "globe", () => DB.countries.length], ["compare", "Compare", "grid"], ["global", "Public co. & semi", "chip"], ["calendar", "Compliance calendar", "cal"], ["changes", "What's changed", "pulse"]]],
   ["Collaborate", [["proposals", "Proposed changes", "inbox", "props"]]],
 ];
 function renderNav() {
-  $("#sidenav").innerHTML = NAV.map(([g, links]) => `<div class="nav-group"><span class="eyebrow">${g}</span>${links.map(([r, l, ic, cnt]) => `<a class="nav-link" href="#${r}" data-nav="${r}">${icon(ic, 17)}<span>${l}</span>${cnt === "props" ? `<span class="count" id="nav-props"></span>` : cnt ? `<span class="count">${cnt()}</span>` : ""}</a>`).join("")}</div>`).join("") +
+  $("#sidenav").innerHTML = NAV.map(([g, links]) => `<div class="nav-group"><span class="eyebrow">${g}</span>${links.map(([r, l, ic, cnt]) => `<a class="nav-link" href="#${r}" data-nav="${r}">${icon(ic, 17)}<span>${l}</span>${cnt === "props" ? `<span class="count" id="nav-props"></span>` : cnt === "appr" ? `<span class="count" id="nav-appr"></span>` : cnt ? `<span class="count">${cnt()}</span>` : ""}</a>`).join("")}</div>`).join("") +
     `<div class="nav-foot">Jurisdictions: ${JUR.map((j) => `<a href="#country.${j.id}">${esc(j.short)}</a>`).join(" · ")}<br><span class="faint">Research verified ${esc(RAW.meta.verified)}. Not legal advice.</span></div>`;
 }
 function updateNavCounts() {
-  const el = $("#nav-props"); if (!el) return; const n = proposalsList().filter((p) => p.status === "open").length;
-  el.textContent = n || ""; el.classList.toggle("hot", n > 0);
+  const el = $("#nav-props"); if (el) { const n = proposalsList().filter((p) => p.status === "open").length; el.textContent = n || ""; el.classList.toggle("hot", n > 0); }
+  const ea = $("#nav-appr"); if (ea) { const n = waitingCount(); ea.textContent = n || ""; ea.classList.toggle("hot", n > 0); }
+  fillWaitCounts();
 }
-const ROUTES = { home: viewHome, checklist: viewChecklist, processes: viewProcesses, process: viewProcess, policies: viewPolicies, policy: viewPolicy, templates: viewTemplates, template: viewTemplate, countries: viewCountries, country: viewCountry, compare: viewCompare, global: viewGlobal, calendar: viewCalendar, changes: viewChanges, proposals: viewProposals, proposal: viewProposal, item: viewItem };
-const NAV_OF = { process: "processes", policy: "policies", template: "templates", country: "countries", proposal: "proposals", item: "checklist" };
+const ROUTES = { home: viewHome, checklist: viewChecklist, processes: viewProcesses, process: viewProcess, policies: viewPolicies, policy: viewPolicy, templates: viewTemplates, template: viewTemplate, countries: viewCountries, country: viewCountry, compare: viewCompare, global: viewGlobal, calendar: viewCalendar, changes: viewChanges, proposals: viewProposals, proposal: viewProposal, item: viewItem,
+  project: viewProject, charter: viewCharter, plan: viewPlan, approvals: viewApprovals, approval: viewApproval, raid: viewRaid, status: viewStatus, governance: viewGovernance, training: viewTraining, toolkit: viewToolkit };
+const NAV_OF = { process: "processes", policy: "policies", template: "templates", country: "countries", proposal: "proposals", item: "checklist", approval: "approvals", charter: "project", governance: "project", toolkit: "project" };
 function parseHash() { const h = decodeURIComponent(location.hash.slice(1)) || "home"; const i = h.indexOf("."); return i < 0 ? { view: h, arg: null } : { view: h.slice(0, i), arg: h.slice(i + 1) }; }
 let LAST_VIEW = "";
 function render() {

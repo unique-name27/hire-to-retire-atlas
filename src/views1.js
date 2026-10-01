@@ -1,5 +1,5 @@
 /* ===== views: home, checklist, processes ===== */
-const UI = { waferMode: "tier", clFilter: { q: "", type: "", domain: "", tier: "", jur: "", status: "" }, clOpen: new Set(), procQ: "", procDepth: "all", polQ: "", polTier: "", propFilter: { status: "open", jur: "", q: "", key: "", sort: "new" }, calJur: new Set(), chgJur: "", chgImpact: "", libChg: { type: "", area: "", q: "" }, tplQ: "", tplFmt: "" };
+const UI = { waferMode: "tier", clFilter: { q: "", type: "", domain: "", tier: "", jur: "", status: "", wave: "", ws: "" }, clOpen: new Set(), procQ: "", procDepth: "all", polQ: "", polTier: "", propFilter: { status: "open", jur: "", q: "", key: "", sort: "new" }, calJur: new Set(), chgJur: "", chgImpact: "", libChg: { type: "", area: "", q: "" }, tplQ: "", tplFmt: "" };
 
 function sectionHead(title, right = "", id = "") { return `<div class="section-head"${id ? ` id="${id}"` : ""}><h2>${title}</h2>${right ? `<div class="row">${right}</div>` : ""}</div>`; }
 
@@ -140,7 +140,7 @@ function homeWorkspace() {
     </div>
   </div>
   <section class="section">${sectionHead("Progress by domain", `<span class="small muted" id="ws-overall"></span>`)}<div class="ws-bars" id="ws-bars"></div>
-    <div class="wafer-legend" style="justify-content:flex-start">${["approved", "review", "drafting", "na", "none"].map((k) => `<span><i style="background:${STATUS[k].color}"></i>${STATUS[k].label}</span>`).join("")}</div></section>
+    <div class="wafer-legend" style="justify-content:flex-start">${["live", "approved", "review", "drafting", "na", "none"].map((k) => `<span><i style="background:${STATUS[k].color}"></i>${STATUS[k].label}</span>`).join("")}</div></section>
 </div>`;
   return {
     html, mount(root) {
@@ -155,7 +155,7 @@ function homeWorkspace() {
         const doms = STAGES.filter((s) => ITEMS.some((i) => i.domain === s.key));
         $("#ws-bars").innerHTML = doms.map((d) => {
           const its = ITEMS.filter((i) => i.domain === d.key); const c = {}; its.forEach((i) => { const s = itemStatus(i.id); c[s] = (c[s] || 0) + 1; });
-          return `<a class="ws-bar" href="#checklist"><span class="lbl">${esc(d.label)}</span><span class="stackbar">${["approved", "review", "drafting", "na"].map((k) => c[k] ? `<i style="width:${(c[k] / its.length) * 100}%;background:${STATUS[k].color}"></i>` : "").join("")}</span><span class="cnt">${c.approved || 0}/${its.length}</span></a>`;
+          return `<a class="ws-bar" href="#checklist"><span class="lbl">${esc(d.label)}</span><span class="stackbar">${["live", "approved", "review", "drafting", "na"].map((k) => c[k] ? `<i style="width:${(c[k] / its.length) * 100}%;background:${STATUS[k].color}"></i>` : "").join("")}</span><span class="cnt">${(c.approved || 0) + (c.live || 0)}/${its.length}</span></a>`;
         }).join("");
         fillPeople(root);
       };
@@ -168,7 +168,8 @@ function homeWorkspace() {
 function clFiltered() {
   const f = UI.clFilter; const q = f.q.toLowerCase();
   return ITEMS.filter((i) => (!f.type || (f.type === "Obligation" ? !["Policy", "Process"].includes(i.type) : i.type === f.type)) && (!f.domain || i.domain === f.domain) && (!f.tier || i.tier === f.tier)
-    && (!f.jur || i.jur.includes(f.jur)) && (!f.status || itemStatus(i.id) === f.status)
+    && (!f.jur || i.jur.includes(f.jur)) && (!f.status || (f.status === "overdue" ? isOverdue(i.id) : itemStatus(i.id) === f.status))
+    && (f.wave === "" || String(planOf(i.id)?.wave) === String(f.wave)) && (f.ws === "" || String(planOf(i.id)?.ws) === String(f.ws))
     && (!q || (i.id + " " + i.name + " " + (i.owner || "")).toLowerCase().includes(q)));
 }
 function statusSelect(id) {
@@ -197,23 +198,25 @@ function viewChecklist() {
       <select class="select" id="cl-domain" aria-label="Domain">${opt(domains.map((s) => [s.key, s.label]), f.domain, "All domains")}</select>
       <select class="select" id="cl-tier" aria-label="Tier">${opt(Object.entries(TIERS).map(([k, v]) => [k, v.label]), f.tier, "All tiers")}</select>
       <select class="select" id="cl-jur" aria-label="Jurisdiction">${opt(JUR.map((j) => [j.id, j.name]), f.jur, "All jurisdictions")}</select>
-      <select class="select" id="cl-status" aria-label="Status">${opt(Object.entries(STATUS).map(([k, v]) => [k, v.label]), f.status, "Any status")}</select>
+      <select class="select" id="cl-status" aria-label="Status">${opt([...Object.entries(STATUS).map(([k, v]) => [k, v.label]), ["overdue", "Overdue"]], f.status, "Any status")}</select>
+      <select class="select" id="cl-wave" aria-label="Wave">${opt(WAVES.slice(1).map((w, i) => [String(i + 1), w.name.split(":")[0]]), f.wave, "All waves")}</select>
+      <select class="select" id="cl-ws" aria-label="Workstream">${opt(WSS.map((w, i) => [String(i), w.name]), f.ws, "All workstreams")}</select>
       <span class="small muted" id="cl-count"></span>
       <span style="flex:1"></span>
       <button class="btn sm" id="cl-csv">${icon("down", 15)}Export CSV</button>
       <button class="btn sm" data-propose="${encodeURIComponent(JSON.stringify({ type: "checklist", id: "CHECKLIST", path: "new", label: "Checklist: suggest a missing item", current: "", route: "checklist" }))}">${icon("edit", 15)}Suggest a missing item</button>
     </div>
-    <div class="table-wrap"><table class="t" id="cl-table"><thead><tr><th>Status</th><th>ID</th><th>Item</th><th>Type</th><th>Domain</th><th>Tier</th><th>Owner</th><th></th></tr></thead><tbody id="cl-body"></tbody></table></div>
+    <div class="table-wrap"><table class="t" id="cl-table"><thead><tr><th>Status</th><th>ID</th><th>Item</th><th>Type</th><th>Domain</th><th>Wave</th><th>Go live</th><th>Owner</th><th></th></tr></thead><tbody id="cl-body"></tbody></table></div>
   </section></div>`;
   return {
     html, mount(root) {
       const drawProg = () => {
-        const all = ITEMS; const done = all.filter((i) => itemStatus(i.id) === "approved").length;
+        const all = ITEMS; const done = all.filter((i) => ["approved", "live"].includes(itemStatus(i.id))).length;
         $("#cl-overall").textContent = `${done} of ${all.length} approved (${Math.round((done / all.length) * 100)}%)`;
         $("#cl-prog").innerHTML = domains.map((d) => {
           const its = all.filter((i) => i.domain === d.key); const by = {}; its.forEach((i) => { const s = itemStatus(i.id); by[s] = (by[s] || 0) + 1; });
-          const bar = ["approved", "review", "drafting", "na"].map((k) => by[k] ? `<i style="width:${(by[k] / its.length) * 100}%;background:${STATUS[k].color}" title="${STATUS[k].label}: ${by[k]}"></i>` : "").join("");
-          return `<a href="#checklist" data-dom="${d.key}" aria-pressed="${f.domain === d.key}"><div class="row between" style="flex-wrap:nowrap"><b style="font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${attr(d.label)}">${esc(d.label)}</b><span class="mono muted" style="flex:none">${by.approved || 0}/${its.length}</span></div><div class="stackbar">${bar}</div></a>`;
+          const bar = ["live", "approved", "review", "drafting", "na"].map((k) => by[k] ? `<i style="width:${(by[k] / its.length) * 100}%;background:${STATUS[k].color}" title="${STATUS[k].label}: ${by[k]}"></i>` : "").join("");
+          return `<a href="#checklist" data-dom="${d.key}" aria-pressed="${f.domain === d.key}"><div class="row between" style="flex-wrap:nowrap"><b style="font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${attr(d.label)}">${esc(d.label)}</b><span class="mono muted" style="flex:none">${(by.approved || 0) + (by.live || 0)}/${its.length}</span></div><div class="stackbar">${bar}</div></a>`;
         }).join("");
       };
       const drawRows = () => {
@@ -221,21 +224,22 @@ function viewChecklist() {
         $("#cl-count").textContent = `${rows.length} shown`;
         $("#cl-body").innerHTML = rows.map((i) => {
           const open = UI.clOpen.has(i.id); const st = C.status.get(i.id) || {};
-          const main = `<tr class="cl-row"><td>${statusSelect(i.id)}</td><td>${idTag(i.id)}</td><td><a class="nm" href="#${attr(i.route)}">${esc(i.name)}</a>${i.depth === "deep" ? ' <span class="chip depth-deep" style="height:18px;font-size:10.5px">Deep dive</span>' : ""}${st.assigneeId ? `<div style="margin-top:4px">${personHtml(st.assigneeId)}</div>` : ""}</td><td class="nowrap">${esc(i.type)}</td><td class="nowrap small">${esc(STAGE[i.domain]?.label || i.domain)}</td><td>${tierTag(i.tier)}</td><td class="small" style="min-width:180px">${esc(st.owner || i.owner || "")}</td><td><button class="icon-btn" data-clx="${attr(i.id)}" aria-expanded="${open}" aria-label="Details for ${attr(i.id)}">${icon(open ? "up" : "down", 16)}</button></td></tr>`;
+          const main = `<tr class="cl-row"><td>${statusSelect(i.id)}</td><td>${idTag(i.id)}</td><td><a class="nm" href="#${attr(i.route)}">${esc(i.name)}</a>${i.depth === "deep" ? ' <span class="chip depth-deep" style="height:18px;font-size:10.5px">Deep dive</span>' : ""}${st.assigneeId ? `<div style="margin-top:4px">${personHtml(st.assigneeId)}</div>` : ""}</td><td class="nowrap">${esc(i.type)}</td><td class="nowrap small">${esc(STAGE[i.domain]?.label || i.domain)}</td><td class="nowrap small">${planOf(i.id) ? waveShort(planOf(i.id).wave) : ""}</td><td class="nowrap small">${fmtD(dueOf(i.id))}${isOverdue(i.id) ? ' <span class="chip bad">Overdue</span>' : ""}</td><td class="small" style="min-width:160px">${esc(st.owner || i.owner || "")}</td><td><button class="icon-btn" data-clx="${attr(i.id)}" aria-expanded="${open}" aria-label="Details for ${attr(i.id)}">${icon(open ? "up" : "down", 16)}</button></td></tr>`;
           if (!open) return main;
-          return main + `<tr class="cl-extra"><td colspan="8"><div class="stack" style="gap:10px;padding:4px 0 6px">
+          return main + `<tr class="cl-extra"><td colspan="9"><div class="stack" style="gap:10px;padding:4px 0 6px">
             <p class="small" style="max-width:90ch">${esc(itemSummary(i))}</p>
+            ${approvalBox(i.id)}
             <div class="row small muted">${i.cadence ? `<span><b>Cadence:</b> ${esc(i.cadence)}</span>` : ""}${i.jur?.length && i.jur.length < JUR.length ? `<span>·</span>${jurChips(i.jur)}` : ""}</div>
             <div class="grid-3">
               <div class="field"><label for="own-${attr(i.id)}">Owner (team or function)</label><input class="input" id="own-${attr(i.id)}" data-own="${attr(i.id)}" value="${attr(st.owner || "")}" placeholder="${attr(i.owner || "")}" ${canPropose() ? "" : "disabled"}></div>
               <div class="field"><label for="asg-${attr(i.id)}">Assignee</label><div style="position:relative"><input class="input" id="asg-${attr(i.id)}" data-asg="${attr(i.id)}" placeholder="Search people" autocomplete="off" ${canPropose() && C.user ? "" : "disabled"}><div class="asg-menu panel tight" hidden style="position:absolute;z-index:5;left:0;right:0;top:36px;padding:4px"></div></div></div>
-              <div class="field"><label for="due-${attr(i.id)}">Target date</label><input class="input" type="date" id="due-${attr(i.id)}" data-due="${attr(i.id)}" value="${attr(st.due || "")}" ${canPropose() ? "" : "disabled"}></div>
+              <div class="field"><label for="due-${attr(i.id)}">Go-live date <span class="muted">(plan: ${fmtD(planOf(i.id)?.live, true)})</span></label><input class="input" type="date" id="due-${attr(i.id)}" data-due="${attr(i.id)}" value="${attr(st.due || "")}" ${canPropose() ? "" : "disabled"}></div>
             </div>
             <div class="field"><label for="note-${attr(i.id)}">Notes</label><textarea class="textarea" style="min-height:56px" id="note-${attr(i.id)}" data-note="${attr(i.id)}" placeholder="Where the current document lives, gaps, next step…" ${canPropose() ? "" : "disabled"}>${esc(st.note || "")}</textarea></div>
             ${st.at ? `<div class="tiny muted">Last updated ${esc(fmtRel(st.at))}${st.updatedBy ? " by " : ""}${st.updatedBy ? personHtml(st.updatedBy) : ""}</div>` : ""}
           </div></td></tr>`;
-        }).join("") || `<tr><td colspan="8"><div class="empty">No items match these filters.</div></td></tr>`;
-        fillPeople($("#cl-body"));
+        }).join("") || `<tr><td colspan="9"><div class="empty">No items match these filters.</div></td></tr>`;
+        fillPeople($("#cl-body")); drawApprovalBoxes($("#cl-body"));
       };
       drawProg(); drawRows();
       let wmode = "status";
@@ -246,7 +250,7 @@ function viewChecklist() {
         const w = e.target.closest("[data-wmode]"); if (w) { wmode = w.dataset.wmode; $$("[data-wmode]", root).forEach((x) => x.setAttribute("aria-pressed", x === w)); drawMap(); }
       });
       const bindF = (id, key) => $(id, root).addEventListener(id === "#cl-q" ? "input" : "change", (e) => { UI.clFilter[key] = e.target.value; drawRows(); if (key === "domain") drawProg(); });
-      bindF("#cl-q", "q"); bindF("#cl-type", "type"); bindF("#cl-domain", "domain"); bindF("#cl-tier", "tier"); bindF("#cl-jur", "jur"); bindF("#cl-status", "status");
+      bindF("#cl-q", "q"); bindF("#cl-type", "type"); bindF("#cl-domain", "domain"); bindF("#cl-tier", "tier"); bindF("#cl-jur", "jur"); bindF("#cl-status", "status"); bindF("#cl-wave", "wave"); bindF("#cl-ws", "ws");
       $("#cl-prog", root).addEventListener("click", (e) => { const a = e.target.closest("[data-dom]"); if (!a) return; e.preventDefault(); UI.clFilter.domain = UI.clFilter.domain === a.dataset.dom ? "" : a.dataset.dom; $("#cl-domain").value = UI.clFilter.domain; drawProg(); drawRows(); });
       const body = $("#cl-body", root);
       body.addEventListener("change", (e) => {
@@ -359,6 +363,7 @@ function viewProcess(id) {
     <div class="phead propable"><div class="title-row"><div class="stack" style="gap:8px"><div class="row">${idTag(p.id)}${p.depth === "deep" ? '<span class="chip depth-deep">Deep dive</span>' : '<span class="chip">Standard</span>'}${tierTag(p.tier)}</div><h1>${esc(p.name)}</h1></div>
       <div class="actions"><button class="btn" data-propose="${encodeURIComponent(JSON.stringify({ ...base, path: "summary", label: `${p.id} ${p.name} · Summary`, current: p.summary }))}">${icon("edit", 16)}Propose change</button><button class="btn ghost" data-comment title="Comment on this process">${icon("comment", 16)}Comment</button><button class="btn ghost" data-copylink="process.${attr(p.id)}">${icon("link", 16)}Copy link</button><button class="btn ghost" data-md="process:${attr(p.id)}">${icon("down", 16)}Markdown</button></div></div>
       <p class="lead">${esc(p.summary)}</p><div><button class="pcount" data-pkey="${attr(propKey(p.id, "summary"))}" hidden></button></div>
+      ${approvalBox(p.id)}
       <div class="meta-grid">
         <div><span class="eyebrow">Owner</span><span class="v">${esc(p.owner)}</span></div>
         <div><span class="eyebrow">Trigger</span><span class="v">${esc(p.trigger)}</span></div>
@@ -425,6 +430,7 @@ function viewProcess(id) {
       root.addEventListener("mouseover", (e) => { const c = e.target.closest("[data-stepcard]"); if (c) { $$(".fnode.hl", root).forEach((x) => x.classList.remove("hl")); $$(`.fnode[data-step="${c.dataset.stepcard}"]`, root).forEach((n) => n.classList.add("hl")); } });
       bindCountryTabs(root);
       drawHistoryLive(root); onLive(() => drawHistoryLive(root));
+      drawApprovalBoxes(root); onLive(() => drawApprovalBoxes(root));
     },
   };
 }
